@@ -1,0 +1,1337 @@
+[
+  {
+    "task_id": "TASK_2026_09_01_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-01",
+    "day_number": 1,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_001",
+      "CHI_BASIC_002",
+      "CHI_BASIC_003"
+    ],
+    "group_id": "CHI_V2_G001",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "existing_candidate_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "existing_candidate_needs_rule_check",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "can_run_as_candidate"
+  },
+  {
+    "task_id": "TASK_2026_09_02_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-02",
+    "day_number": 2,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_004",
+      "CHI_BASIC_005",
+      "CHI_BASIC_006"
+    ],
+    "group_id": "CHI_V2_G002",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "existing_candidate_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "existing_candidate_needs_rule_check",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "can_run_as_candidate"
+  },
+  {
+    "task_id": "TASK_2026_09_03_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-03",
+    "day_number": 3,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_007",
+      "CHI_BASIC_008",
+      "CHI_BASIC_009"
+    ],
+    "group_id": "CHI_V2_G003",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "existing_candidate_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "existing_candidate_needs_rule_check",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "DAY01_WRONGS_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "can_run_as_candidate"
+  },
+  {
+    "task_id": "TASK_2026_09_04_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-04",
+    "day_number": 4,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_010",
+      "CHI_BASIC_011",
+      "CHI_BASIC_012"
+    ],
+    "group_id": "CHI_V2_G004",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "existing_candidate_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "existing_candidate_needs_rule_check",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "DAY02_WRONGS_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "can_run_as_candidate"
+  },
+  {
+    "task_id": "TASK_2026_09_05_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-05",
+    "day_number": 5,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_013",
+      "CHI_BASIC_014",
+      "CHI_BASIC_015"
+    ],
+    "group_id": "CHI_V2_G005",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "existing_candidate_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "existing_candidate_needs_rule_check",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "DAY03_WRONGS_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "can_run_as_candidate"
+  },
+  {
+    "task_id": "TASK_2026_09_06_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-06",
+    "day_number": 6,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_016",
+      "CHI_BASIC_017",
+      "CHI_BASIC_018"
+    ],
+    "group_id": "CHI_V2_G006",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "existing_candidate_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "existing_candidate_needs_rule_check",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "can_run_as_candidate"
+  },
+  {
+    "task_id": "TASK_2026_09_07_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-07",
+    "day_number": 7,
+    "week_number": 1,
+    "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_019",
+      "CHI_BASIC_020",
+      "CHI_BASIC_021"
+    ],
+    "group_id": "CHI_V2_G007",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_08_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-08",
+    "day_number": 8,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_022",
+      "CHI_BASIC_023",
+      "CHI_BASIC_024"
+    ],
+    "group_id": "CHI_V2_G008",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "WEEK01_REVIEW_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_09_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-09",
+    "day_number": 9,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_025",
+      "CHI_BASIC_026",
+      "CHI_BASIC_027"
+    ],
+    "group_id": "CHI_V2_G009",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_10_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-10",
+    "day_number": 10,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_028",
+      "CHI_BASIC_029",
+      "CHI_BASIC_030"
+    ],
+    "group_id": "CHI_V2_G010",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "DAY08_WRONGS_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_11_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-11",
+    "day_number": 11,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_031",
+      "CHI_BASIC_032",
+      "CHI_BASIC_033"
+    ],
+    "group_id": "CHI_V2_G011",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_12_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-12",
+    "day_number": 12,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_034",
+      "CHI_BASIC_035",
+      "CHI_BASIC_036"
+    ],
+    "group_id": "CHI_V2_G012",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_13_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-13",
+    "day_number": 13,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_037",
+      "CHI_BASIC_038",
+      "CHI_BASIC_039"
+    ],
+    "group_id": "CHI_V2_G013",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_14_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-14",
+    "day_number": 14,
+    "week_number": 2,
+    "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_040",
+      "CHI_BASIC_041",
+      "CHI_BASIC_042"
+    ],
+    "group_id": "CHI_V2_G014",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "existing_bank"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_15_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-15",
+    "day_number": 15,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_043",
+      "CHI_BASIC_TODO_044",
+      "CHI_BASIC_TODO_045"
+    ],
+    "group_id": "CHI_V2_G015",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "WEEK02_REVIEW_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_16_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-16",
+    "day_number": 16,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_046",
+      "CHI_BASIC_TODO_047",
+      "CHI_BASIC_TODO_048"
+    ],
+    "group_id": "CHI_V2_G016",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_17_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-17",
+    "day_number": 17,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_049",
+      "CHI_BASIC_TODO_050",
+      "CHI_BASIC_TODO_051"
+    ],
+    "group_id": "CHI_V2_G017",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_18_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-18",
+    "day_number": 18,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_052",
+      "CHI_BASIC_TODO_053",
+      "CHI_BASIC_TODO_054"
+    ],
+    "group_id": "CHI_V2_G018",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_19_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-19",
+    "day_number": 19,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_055",
+      "CHI_BASIC_TODO_056",
+      "CHI_BASIC_TODO_057"
+    ],
+    "group_id": "CHI_V2_G019",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_20_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-20",
+    "day_number": 20,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_058",
+      "CHI_BASIC_TODO_059",
+      "CHI_BASIC_TODO_060"
+    ],
+    "group_id": "CHI_V2_G020",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_21_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-21",
+    "day_number": 21,
+    "week_number": 3,
+    "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_061",
+      "CHI_BASIC_TODO_062",
+      "CHI_BASIC_TODO_063"
+    ],
+    "group_id": "CHI_V2_G021",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_22_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-22",
+    "day_number": 22,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_064",
+      "CHI_BASIC_TODO_065",
+      "CHI_BASIC_TODO_066"
+    ],
+    "group_id": "CHI_V2_G022",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "WEEK03_REVIEW_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_23_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-23",
+    "day_number": 23,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_067",
+      "CHI_BASIC_TODO_068",
+      "CHI_BASIC_TODO_069"
+    ],
+    "group_id": "CHI_V2_G023",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_24_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-24",
+    "day_number": 24,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_070",
+      "CHI_BASIC_TODO_071",
+      "CHI_BASIC_TODO_072"
+    ],
+    "group_id": "CHI_V2_G024",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_25_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-25",
+    "day_number": 25,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_073",
+      "CHI_BASIC_TODO_074",
+      "CHI_BASIC_TODO_075"
+    ],
+    "group_id": "CHI_V2_G025",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_26_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-26",
+    "day_number": 26,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_076",
+      "CHI_BASIC_TODO_077",
+      "CHI_BASIC_TODO_078"
+    ],
+    "group_id": "CHI_V2_G026",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_27_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-27",
+    "day_number": 27,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_079",
+      "CHI_BASIC_TODO_080",
+      "CHI_BASIC_TODO_081"
+    ],
+    "group_id": "CHI_V2_G027",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_28_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-28",
+    "day_number": 28,
+    "week_number": 4,
+    "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
+    "task_type": "daily_short_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_082",
+      "CHI_BASIC_TODO_083",
+      "CHI_BASIC_TODO_084"
+    ],
+    "group_id": "CHI_V2_G028",
+    "review_question_ids": [],
+    "estimated_minutes": 45,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 0,
+        "source": "none"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_29_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-29",
+    "day_number": 29,
+    "week_number": 5,
+    "weekly_focus": "收束檢查：整理錯題與下月題庫缺口",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_085",
+      "CHI_BASIC_TODO_086",
+      "CHI_BASIC_TODO_087"
+    ],
+    "group_id": "CHI_V2_G029",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "WEEK04_REVIEW_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "needs_bank_items_before_app_use"
+  },
+  {
+    "task_id": "TASK_2026_09_30_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-30",
+    "day_number": 30,
+    "week_number": 5,
+    "weekly_focus": "收束檢查：整理錯題與下月題庫缺口",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": [
+      "CHI_BASIC_TODO_088",
+      "CHI_BASIC_TODO_089",
+      "CHI_BASIC_TODO_090"
+    ],
+    "group_id": "CHI_V2_G030",
+    "review_question_ids": [],
+    "estimated_minutes": 32,
+    "planned_sections": [
+      {
+        "section": "基礎短練",
+        "count": 3,
+        "source": "needs_new_basic_drills"
+      },
+      {
+        "section": "閱讀題組",
+        "count": 5,
+        "source": "planned_new_group"
+      },
+      {
+        "section": "錯題複習",
+        "count": 1,
+        "source": "review_due_slots"
+      }
+    ],
+    "bank_readiness": "planned_slot_needs_question_writing",
+    "status": "planned",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null,
+    "review_due_slots": [
+      {
+        "slot_id": "MONTH_REVIEW_DUE",
+        "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
+      }
+    ],
+    "app_readiness": "needs_bank_items_before_app_use"
+  }
+]

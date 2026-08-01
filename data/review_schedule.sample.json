@@ -1,0 +1,35 @@
+[
+  {
+    "review_id": "REVIEW_2026_09_03_001",
+    "student_id": "student_001",
+    "source_wrong_id": "WRONG_2026_09_01_001",
+    "knowledge_code": "K03",
+    "review_type": "two_day_retry",
+    "scheduled_date": "2026-09-03",
+    "question_strategy": "basic_drill",
+    "assigned_question_id": "CHI_BASIC_023",
+    "status": "scheduled"
+  },
+  {
+    "review_id": "REVIEW_2026_09_03_002",
+    "student_id": "student_001",
+    "source_wrong_id": "WRONG_2026_09_01_002",
+    "knowledge_code": "K10",
+    "review_type": "two_day_retry",
+    "scheduled_date": "2026-09-03",
+    "question_strategy": "same_knowledge_variant",
+    "assigned_question_id": "CHI_V2_G001_Q04",
+    "status": "scheduled"
+  },
+  {
+    "review_id": "REVIEW_2026_09_03_003",
+    "student_id": "student_001",
+    "source_wrong_id": "WRONG_2026_09_01_003",
+    "knowledge_code": "K15",
+    "review_type": "two_day_retry",
+    "scheduled_date": "2026-09-03",
+    "question_strategy": "short_answer_retry",
+    "assigned_question_id": "CHI_V2_G001_Q05",
+    "status": "scheduled"
+  }
+]

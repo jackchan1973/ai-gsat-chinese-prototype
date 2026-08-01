@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜國文作答</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">國文今日任務</p>
+          <h1>作答頁</h1>
+        </div>
+        <a class="text-link" href="../index.html">回今日任務</a>
+      </header>
+
+      <section class="panel wide-panel">
+        <div class="section-title">
+          <h2 id="practiceTitle">讀取中</h2>
+          <span id="practiceMeta">--</span>
+        </div>
+        <p class="muted-text" id="practiceDescription">請稍候，正在讀取今日任務。</p>
+      </section>
+
+      <form id="practiceForm">
+        <section class="practice-layout">
+          <article class="panel passage-panel">
+            <div class="section-title">
+              <h2>閱讀材料</h2>
+              <span id="groupBadge">--</span>
+            </div>
+            <div class="passage-box tall" id="passageBox"></div>
+          </article>
+
+          <article class="panel questions-panel">
+            <div class="section-title">
+              <h2>題目</h2>
+              <span id="questionBadge">0 題</span>
+            </div>
+            <div class="question-stack" id="questionStack"></div>
+            <div class="sticky-submit">
+              <button class="primary-action" type="submit">交卷看解析</button>
+              <a class="secondary-link" href="../index.html">先回首頁</a>
+            </div>
+          </article>
+        </section>
+      </form>
+    </main>
+
+    <script src="../assets/js/practice.js?v=20260801-original-bank"></script>
+  </body>
+</html>

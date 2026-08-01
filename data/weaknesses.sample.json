@@ -1,0 +1,44 @@
+[
+  {
+    "weakness_id": "WEAK_student_001_K03",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "knowledge_code": "K03",
+    "knowledge_name": "文言字義",
+    "wrong_count_total": 1,
+    "wrong_count_week": 1,
+    "last_wrong_date": "2026-09-01",
+    "next_review_date": "2026-09-03",
+    "review_weight": 1,
+    "status": "active"
+  },
+  {
+    "weakness_id": "WEAK_student_001_K10",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "knowledge_code": "K10",
+    "knowledge_name": "古今轉用與跨情境判斷",
+    "wrong_count_total": 1,
+    "wrong_count_week": 1,
+    "last_wrong_date": "2026-09-01",
+    "next_review_date": "2026-09-03",
+    "review_weight": 1,
+    "status": "watching"
+  },
+  {
+    "weakness_id": "WEAK_student_001_K15",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "knowledge_code": "K15",
+    "knowledge_name": "短答統整",
+    "wrong_count_total": 2,
+    "wrong_count_week": 1,
+    "last_wrong_date": "2026-09-01",
+    "next_review_date": "2026-09-03",
+    "review_weight": 3,
+    "status": "active"
+  }
+]

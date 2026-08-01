@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜國文錯題弱點</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">國文今日任務</p>
+          <h1>錯題 / 弱點</h1>
+        </div>
+        <a class="text-link" href="../index.html">回今日任務</a>
+      </header>
+
+      <section class="summary-grid wrongs-summary" aria-label="錯題弱點摘要">
+        <article class="summary-panel main-summary">
+          <div class="panel-heading">
+            <p class="label">目前狀態</p>
+            <strong id="wrongsStatus">讀取中</strong>
+          </div>
+          <div class="hero-task">
+            <h2>先把會反覆錯的地方抓出來</h2>
+            <p id="wrongsMeta">讀取錯題、弱點與複習排程</p>
+          </div>
+        </article>
+        <article class="summary-panel metric-panel">
+          <p class="label">錯題</p>
+          <strong id="wrongTotal">--</strong>
+          <span>題</span>
+        </article>
+        <article class="summary-panel metric-panel">
+          <p class="label">弱點</p>
+          <strong id="weaknessTotal">--</strong>
+          <span>項</span>
+        </article>
+        <article class="summary-panel metric-panel">
+          <p class="label">待複習</p>
+          <strong id="scheduleTotal">--</strong>
+          <span>題</span>
+        </article>
+      </section>
+
+      <section class="content-grid wrongs-layout">
+        <article class="panel">
+          <div class="section-title">
+            <h2>錯題列表</h2>
+            <span id="wrongListStatus">--</span>
+          </div>
+          <div class="wrong-stack" id="wrongStack"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-title">
+            <h2>弱點權重</h2>
+            <span id="weaknessStatus">--</span>
+          </div>
+          <div class="weakness-stack" id="weaknessStack"></div>
+        </article>
+      </section>
+
+      <section class="panel wide-panel">
+        <div class="section-title">
+          <h2>複習排程</h2>
+          <span id="scheduleStatus">--</span>
+        </div>
+        <div class="schedule-grid" id="scheduleGrid"></div>
+      </section>
+    </main>
+
+    <script src="../assets/js/wrongs.js?v=20260731-no-codes"></script>
+  </body>
+</html>

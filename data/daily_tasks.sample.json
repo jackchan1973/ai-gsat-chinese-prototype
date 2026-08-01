@@ -1,0 +1,50 @@
+[
+  {
+    "task_id": "TASK_2026_09_01_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-01",
+    "task_type": "daily_short_review",
+    "basic_question_ids": ["CHI_BASIC_031", "CHI_BASIC_032", "CHI_BASIC_033"],
+    "group_id": "CHI_V2_G001",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "status": "completed",
+    "started_at": "2026-09-01 20:10",
+    "completed_at": "2026-09-01 20:37",
+    "actual_minutes": 27
+  },
+  {
+    "task_id": "TASK_2026_09_02_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-02",
+    "task_type": "daily_short_review",
+    "basic_question_ids": ["CHI_BASIC_034", "CHI_BASIC_035", "CHI_BASIC_036"],
+    "group_id": "CHI_V2_G002",
+    "review_question_ids": [],
+    "estimated_minutes": 28,
+    "status": "completed",
+    "started_at": "2026-09-02 20:05",
+    "completed_at": "2026-09-02 20:34",
+    "actual_minutes": 29
+  },
+  {
+    "task_id": "TASK_2026_09_03_CHI",
+    "student_id": "student_001",
+    "subject": "國文",
+    "mode": "學測模式",
+    "task_date": "2026-09-03",
+    "task_type": "daily_short_review_with_review",
+    "basic_question_ids": ["CHI_BASIC_037", "CHI_BASIC_038", "CHI_BASIC_039"],
+    "group_id": "CHI_V2_G003",
+    "review_question_ids": ["CHI_BASIC_023", "CHI_V2_G001_Q04", "CHI_V2_G001_Q05"],
+    "estimated_minutes": 30,
+    "status": "not_started",
+    "started_at": null,
+    "completed_at": null,
+    "actual_minutes": null
+  }
+]

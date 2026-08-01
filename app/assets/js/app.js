@@ -1,0 +1,354 @@
+const DATA_ROOT = "../data";
+const DATA_FILES = {
+  tasks: "daily_tasks.30_days.json",
+  groups: "question_groups.jsonl",
+  drills: "basic_drills.jsonl",
+  wrongs: "wrong_questions.sample.jsonl",
+  reviewSchedules: "review_schedule.sample.json",
+  parentReport: "parent_weekly_report.sample.json",
+};
+const SELECTED_TASK_KEY = "chi_v1_selected_task_id";
+
+const statusLabel = {
+  planned: "已規劃",
+  not_started: "未開始",
+  in_progress: "作答中",
+  completed: "已完成",
+  partial: "部分完成",
+  missed: "未完成",
+};
+
+const knowledgeLabels = {
+  K01: "字音字形",
+  K02: "詞語語境與成語辨析",
+  K03: "文言字義",
+  K05: "文意推論",
+  K06: "概念理解",
+  K08: "跨材料比較",
+  K09: "推論判斷",
+  K10: "古今轉用與跨情境判斷",
+  K14: "論證判斷",
+  K15: "短答統整",
+};
+
+const strategyLabels = {
+  basic_drill: "基礎短練",
+  same_knowledge_variant: "同知識點變化題",
+  short_answer_retry: "短答重練",
+};
+
+const taskTypeLabels = {
+  daily_short_review: "每日短練",
+  daily_short_review_with_review: "每日短練＋錯題複習",
+};
+
+const contentStatusLabels = {
+  draft_for_preview: "候選題",
+  revised_after_feedback: "已修訂候選題",
+  validated_by_student: "學生已試做",
+  rule_checked: "規則已檢查",
+  approved_for_app: "正式題",
+};
+
+function readJson(path) {
+  return fetch(path).then((response) => {
+    if (!response.ok) throw new Error(`讀取失敗：${path}`);
+    return response.json();
+  });
+}
+
+async function readJsonl(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`讀取失敗：${path}`);
+  const text = await response.text();
+  return text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => JSON.parse(line));
+}
+
+function byId(items, key) {
+  return new Map(items.map((item) => [item[key], item]));
+}
+
+function countGroupQuestions(group) {
+  return Array.isArray(group?.questions) ? group.questions.length : 0;
+}
+
+function pickDisplayTask(tasks) {
+  const selectedTaskId = localStorage.getItem(SELECTED_TASK_KEY);
+  return tasks.find((task) => task.task_id === selectedTaskId) || tasks.find((task) => task.app_readiness === "can_run_as_candidate") || tasks[0];
+}
+
+function formatStatus(status) {
+  return statusLabel[status] || status || "--";
+}
+
+function formatKnowledge(code) {
+  return knowledgeLabels[code] || "知識點待確認";
+}
+
+function formatStrategy(strategy) {
+  return strategyLabels[strategy] || "同知識點複習";
+}
+
+function formatTaskType(type) {
+  return taskTypeLabels[type] || "每日練習";
+}
+
+function formatContentStatus(status) {
+  return contentStatusLabels[status] || "候選題";
+}
+
+function setText(id, text) {
+  document.getElementById(id).textContent = text;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function createTaskItem(title, body, tags = []) {
+  const node = document.createElement("article");
+  node.className = "task-item";
+  const tagHtml = tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+  node.innerHTML = `
+    <strong>${escapeHtml(title)}</strong>
+    <p>${escapeHtml(body)}</p>
+    ${tags.length ? `<div class="task-meta">${tagHtml}</div>` : ""}
+  `;
+  return node;
+}
+
+function renderBasics(task, drillMap) {
+  const summary = document.getElementById("basicSummary");
+  const ids = task.basic_question_ids || [];
+  setText("basicCount", `${ids.length} 題`);
+  const knowledgeNames = ids
+    .map((id) => drillMap.get(id))
+    .filter(Boolean)
+    .map((drill) => formatKnowledge(drill.knowledge_code));
+  const uniqueNames = [...new Set(knowledgeNames)];
+
+  summary.innerHTML = `
+    <h2>基礎短練</h2>
+    <p>第 1 段先做 ${escapeHtml(ids.length)} 題短練，優先練字音字形與文言字義，作答頁會放在最前面。</p>
+    <div class="task-meta">
+      ${["基礎短練", ...uniqueNames].map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
+    </div>
+  `;
+}
+
+function renderGroup(task, groupMap) {
+  const group = groupMap.get(task.group_id);
+  const summary = document.getElementById("groupSummary");
+  if (!group) {
+    setText("groupStatus", "待檢查");
+    summary.innerHTML = `<div class="error-box">今天的閱讀題組暫時讀取不到。</div>`;
+    return;
+  }
+
+  const questionCount = countGroupQuestions(group);
+  setText("groupStatus", formatContentStatus(group.status));
+  summary.innerHTML = `
+    <h2>閱讀題組</h2>
+    <h3 class="group-title">${escapeHtml(group.title)}</h3>
+    <p>第 2 段進入 ${escapeHtml(group.material_type || "學測型閱讀題組")}，共 ${questionCount} 題。材料與題目會在作答頁分區顯示。</p>
+    <div class="task-meta">
+      ${(group.knowledge_codes || []).map((code) => `<span class="tag">${escapeHtml(formatKnowledge(code))}</span>`).join("")}
+    </div>
+  `;
+}
+
+function renderReviews(task, wrongMap, reviewSchedules) {
+  const summary = document.getElementById("reviewSummary");
+  const ids = task.review_question_ids || [];
+  const dueSlots = task.review_due_slots || [];
+  const scheduled = reviewSchedules.filter((item) => ids.includes(item.assigned_question_id));
+  const scheduleMap = byId(scheduled, "assigned_question_id");
+  setText("reviewStatus", ids.length || dueSlots.length ? "今日安排" : "今日無");
+
+  if (!ids.length && !dueSlots.length) {
+    summary.innerHTML = `
+      <h2>錯題複習</h2>
+      <p>今天沒有安排錯題複習，維持一般練習節奏。</p>
+      <div class="task-meta"><span class="tag">今日無</span></div>
+    `;
+    return;
+  }
+
+  if (!ids.length && dueSlots.length) {
+    summary.innerHTML = `
+      <h2>錯題複習</h2>
+      <p>這一天有 ${escapeHtml(dueSlots.length)} 個錯題回流位置；實際題目會依孩子前 2 天答錯內容安排。</p>
+      <div class="task-meta">
+        <span class="tag">2 天後複習</span>
+        <span class="tag">測試版先記錄排程</span>
+      </div>
+    `;
+    return;
+  }
+
+  const reviewTags = ids
+    .map((id) => scheduleMap.get(id))
+    .filter(Boolean)
+    .map((item) => formatKnowledge(item.knowledge_code));
+  const uniqueTags = [...new Set(reviewTags)];
+  summary.innerHTML = `
+    <h2>錯題複習</h2>
+    <p>第 3 段排入 ${escapeHtml(ids.length)} 題錯題複習，來源是前次錯題 2 天後回流。</p>
+    <div class="task-meta">
+      ${["2 天後複習", ...uniqueTags].map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
+    </div>
+  `;
+}
+
+function renderFlowSummary(task, groupQuestionCount) {
+  const basicCount = (task.basic_question_ids || []).length;
+  const reviewCount = (task.review_question_ids || []).length || (task.review_due_slots || []).length;
+  const reviewText = reviewCount ? `、錯題複習 ${reviewCount} 題` : "";
+  return `今日流程：基礎短練 ${basicCount} 題 → 閱讀題組 ${groupQuestionCount} 題${reviewText}`;
+}
+
+function isTaskRunnable(task, groupMap, drillMap) {
+  const hasGroup = groupMap.has(task.group_id);
+  const hasAllBasics = (task.basic_question_ids || []).every((id) => drillMap.has(id));
+  return task.app_readiness === "can_run_as_candidate" && hasGroup && hasAllBasics;
+}
+
+function readinessText(task, runnable) {
+  if (runnable) return "這一天可以測試完整作答流程。";
+  if (task.app_readiness === "needs_bank_items_before_app_use") return "這一天已排進度，但題庫還沒補齊，暫時不能作答。";
+  return "這一天資料還需要檢查後才能測試。";
+}
+
+function renderTaskSelector(tasks, selectedTask, groupMap, drillMap, onChange) {
+  const selector = document.getElementById("taskSelector");
+  if (!selector) return;
+  selector.innerHTML = tasks
+    .map((task) => {
+      const runnable = isTaskRunnable(task, groupMap, drillMap);
+      const suffix = runnable ? "可測" : "待補題庫";
+      return `<option value="${escapeHtml(task.task_id)}">${escapeHtml(`第 ${task.day_number} 天｜${task.task_date}｜${suffix}`)}</option>`;
+    })
+    .join("");
+  selector.value = selectedTask.task_id;
+  selector.addEventListener("change", () => onChange(selector.value));
+}
+
+function renderTask(data, selectedTaskId) {
+  const { tasks, groups, drills, wrongs, reviewSchedules, report } = data;
+  const groupMap = byId(groups, "group_id");
+  const drillMap = byId(drills, "question_id");
+  const wrongMap = byId(wrongs, "wrong_id");
+  const task = tasks.find((item) => item.task_id === selectedTaskId) || pickDisplayTask(tasks);
+  const group = groupMap.get(task.group_id);
+  const runnable = isTaskRunnable(task, groupMap, drillMap);
+  const reviewCount = (task.review_question_ids || []).length || (task.review_due_slots || []).length;
+  const totalQuestionCount = (task.basic_question_ids || []).length + countGroupQuestions(group) + (task.review_question_ids || []).length;
+
+  localStorage.setItem(SELECTED_TASK_KEY, task.task_id);
+
+  setText("taskDate", `第 ${task.day_number} 天｜${task.task_date}`);
+  setText("taskTitle", group?.title || task.group_id);
+  setText("taskMeta", `${task.subject}｜${task.mode}｜${formatTaskType(task.task_type)}｜${renderFlowSummary(task, countGroupQuestions(group))}`);
+  setText("estimatedMinutes", task.estimated_minutes);
+  setText("questionCount", totalQuestionCount);
+  setText("reviewCount", reviewCount);
+  setText("taskStatus", runnable ? "可測試" : "待補題庫");
+  setText("taskReadiness", readinessText(task, runnable));
+
+  const statusNode = document.getElementById("taskStatus");
+  statusNode.classList.toggle("completed", false);
+  statusNode.classList.toggle("not-started", runnable);
+  statusNode.classList.toggle("blocked", !runnable);
+
+  document.getElementById("startButton").disabled = !runnable;
+  document.getElementById("startButton").textContent = runnable ? "開始今天練習" : "這天題庫尚未補齊";
+
+  renderBasics(task, drillMap);
+  renderGroup(task, groupMap);
+  renderReviews(task, wrongMap, reviewSchedules);
+  renderWeekSummary(report);
+}
+
+function renderWeekSummary(report) {
+  const node = document.getElementById("weekSummary");
+  node.innerHTML = `
+    <h2>本週狀態</h2>
+    <p>${escapeHtml(report.parent_message)}</p>
+    <div class="task-meta">
+      <span class="tag">完成 ${escapeHtml(report.completed_days)} 天</span>
+      <span class="tag">答對率 ${escapeHtml(Math.round(report.correct_rate * 100))}%</span>
+      <span class="tag">${escapeHtml(report.weakness_summary)}</span>
+    </div>
+  `;
+}
+
+function renderDataStatus(data) {
+  setText("dataStatus", "正常");
+  const grid = document.getElementById("dataGrid");
+  const groupQuestionCount = data.groups.reduce((sum, group) => sum + countGroupQuestions(group), 0);
+  const cards = [
+    ["閱讀題組", data.groups.length, "候選題庫"],
+    ["題組題目", groupQuestionCount, "閱讀理解"],
+    ["基礎短練", data.drills.length, "高中程度"],
+    ["錯題排程", data.reviewSchedules.length, "2 天後複習"],
+  ];
+  grid.innerHTML = cards
+    .map(
+      ([label, value, detail]) => `
+        <article class="data-card">
+          <span>${escapeHtml(label)}</span>
+          <strong>${escapeHtml(value)}</strong>
+          <span>${escapeHtml(detail)}</span>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function wireButtons(data) {
+  document.getElementById("startButton").addEventListener("click", () => {
+    window.location.href = "./pages/practice.html";
+  });
+  document.getElementById("reviewButton").addEventListener("click", () => {
+    window.location.href = "./pages/wrongs.html";
+  });
+  const groupMap = byId(data.groups, "group_id");
+  const drillMap = byId(data.drills, "question_id");
+  renderTaskSelector(data.tasks, pickDisplayTask(data.tasks), groupMap, drillMap, (taskId) => renderTask(data, taskId));
+}
+
+async function main() {
+  try {
+    const [tasks, groups, drills, wrongs, reviewSchedules, report] = await Promise.all([
+      readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),
+      readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),
+      readJsonl(`${DATA_ROOT}/${DATA_FILES.drills}`),
+      readJsonl(`${DATA_ROOT}/${DATA_FILES.wrongs}`),
+      readJson(`${DATA_ROOT}/${DATA_FILES.reviewSchedules}`),
+      readJson(`${DATA_ROOT}/${DATA_FILES.parentReport}`),
+    ]);
+
+    const data = { tasks, groups, drills, wrongs, reviewSchedules, report };
+    wireButtons(data);
+    renderTask(data, pickDisplayTask(tasks).task_id);
+  } catch (error) {
+    document.querySelector(".app-shell").innerHTML = `
+      <section class="error-box">
+        <h1>資料讀取失敗</h1>
+        <p>${error.message}</p>
+        <p>請用本機伺服器開啟此原型頁面。</p>
+      </section>
+    `;
+  }
+}
+
+main();

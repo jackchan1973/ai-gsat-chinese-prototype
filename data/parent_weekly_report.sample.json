@@ -1,0 +1,17 @@
+{
+  "report_id": "REPORT_2026_W36_CHI",
+  "student_id": "student_001",
+  "subject": "國文",
+  "mode": "學測模式",
+  "week_start": "2026-09-01",
+  "week_end": "2026-09-07",
+  "completed_days": 2,
+  "missed_days": 0,
+  "total_questions": 16,
+  "correct_rate": 0.72,
+  "main_weaknesses": ["K03", "K10", "K15"],
+  "weakness_summary": "文言字義、跨材料比較與短答統整需要加強。",
+  "review_done_summary": "9/1 錯題已排入 9/3 今日任務，等待複習完成後更新。",
+  "next_week_plan": "不增加每日總時間，仍控制 20-30 分鐘；提高文言字義短練、跨文本多選與短答統整比例。",
+  "parent_message": "本週國文複習已能穩定完成任務。單選表現較穩，主要失分在文言字義、多選漏選與短答統整。系統已將錯題排到 2 天後複習，下週會提高相關弱點的出題比例。"
+}

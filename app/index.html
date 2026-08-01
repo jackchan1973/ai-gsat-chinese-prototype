@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜國文今日任務</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell student-home-shell">
+      <header class="topbar student-home-topbar">
+        <div>
+          <p class="eyebrow">AI學測考總複習</p>
+          <h1>今日國文練習</h1>
+        </div>
+        <div class="status-pill" id="taskStatus">讀取中</div>
+      </header>
+
+      <section class="student-today-card" aria-label="今日練習">
+        <div class="panel-heading">
+          <p class="label">今天進度</p>
+          <strong id="taskDate">--</strong>
+        </div>
+        <div class="student-task-main">
+          <h2 id="taskTitle">今日任務載入中</h2>
+          <p id="taskMeta">請稍候</p>
+        </div>
+        <div class="day-picker" aria-label="選擇練習天數">
+          <label for="taskSelector">選擇測試天數</label>
+          <select id="taskSelector"></select>
+          <p id="taskReadiness">讀取中</p>
+        </div>
+        <div class="student-metrics" aria-label="任務數據">
+          <div>
+            <span>預估</span>
+            <strong><span id="estimatedMinutes">--</span> 分鐘</strong>
+          </div>
+          <div>
+            <span>今天</span>
+            <strong><span id="questionCount">--</span> 題</strong>
+          </div>
+          <div>
+            <span>複習</span>
+            <strong><span id="reviewCount">--</span> 題</strong>
+          </div>
+        </div>
+        <button class="primary-action student-start-action" type="button" id="startButton">開始今天練習</button>
+      </section>
+
+      <section class="student-plan-stack" aria-label="今日安排">
+        <article class="student-plan-card">
+          <span id="basicCount">0 題</span>
+          <div id="basicSummary"></div>
+        </article>
+
+        <article class="student-plan-card">
+          <span id="groupStatus">--</span>
+          <div id="groupSummary"></div>
+        </article>
+
+        <article class="student-plan-card">
+          <span id="reviewStatus">--</span>
+          <div id="reviewSummary"></div>
+        </article>
+      </section>
+
+      <section class="student-secondary-panel" aria-label="其他入口">
+        <div id="weekSummary"></div>
+        <div class="student-link-row">
+          <button class="secondary-action" type="button" id="reviewButton">查看錯題</button>
+          <a class="secondary-action link-action" href="./pages/parent-report.html">家長週報</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/js/app.js?v=20260801-online-test"></script>
+  </body>
+</html>
