@@ -3,7 +3,7 @@
   "subject": "國文",
   "mode": "學測模式",
   "days": 30,
-  "updated_at": "2026-08-01",
+  "updated_at": "2026-08-02",
   "principle": "先建立完整題庫與進度表，孩子每天依既定進度使用；不在每日開啟時即時出題。",
   "source_policy": {
     "allowed_basis": [
@@ -40,7 +40,7 @@
         "group_id": "CHI_V2_G001",
         "planned_day": 1,
         "title": "學習與從師：師說與AI學習情境",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "古今轉用情境題",
         "knowledge_codes": [
@@ -49,13 +49,15 @@
           "K10",
           "K14",
           "K15"
-        ]
+        ],
+        "teacher_review_status": "teacher_revised_for_gsat_practice",
+        "teacher_reviewed_at": "2026-08-02"
       },
       {
         "group_id": "CHI_V2_G002",
         "planned_day": 2,
         "title": "利害與納才：燭之武、李斯與現代協商情境",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "雙古文取段比較＋校園協商情境",
         "knowledge_codes": [
@@ -64,13 +66,15 @@
           "K10",
           "K14",
           "K15"
-        ]
+        ],
+        "teacher_review_status": "teacher_revised_for_gsat_practice",
+        "teacher_reviewed_at": "2026-08-02"
       },
       {
         "group_id": "CHI_V2_G003",
         "planned_day": 3,
         "title": "觀看與理解：晚遊六橋待月記、現代觀光評論與圖像資料",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "評論文章＋古文材料＋非連續文本",
         "knowledge_codes": [
@@ -80,13 +84,15 @@
           "K09",
           "K12",
           "K15"
-        ]
+        ],
+        "teacher_review_status": "teacher_revised_for_gsat_practice",
+        "teacher_reviewed_at": "2026-08-02"
       },
       {
         "group_id": "CHI_V2_G004",
         "planned_day": 4,
         "title": "空間如何保存記憶：項脊軒志、現代記憶研究與生活場域",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "學術說明文＋古文證據＋現代情境",
         "knowledge_codes": [
@@ -96,13 +102,15 @@
           "K09",
           "K12",
           "K15"
-        ]
+        ],
+        "teacher_review_status": "teacher_revised_for_gsat_practice",
+        "teacher_reviewed_at": "2026-08-02"
       },
       {
         "group_id": "CHI_V2_G005",
         "planned_day": 5,
         "title": "進退與取捨：桃花源記、赤壁賦與現代選擇情境",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "古文雙篇小段比較＋現代情境",
         "knowledge_codes": [
@@ -111,13 +119,15 @@
           "K09",
           "K10",
           "K15"
-        ]
+        ],
+        "teacher_review_status": "teacher_revised_for_gsat_practice",
+        "teacher_reviewed_at": "2026-08-02"
       },
       {
         "group_id": "CHI_V2_G006",
         "planned_day": 6,
         "title": "話語如何形成力量：出師表、現代公共溝通與說服策略",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "生活情境＋古文觀點＋公告意見表",
         "knowledge_codes": [
@@ -127,7 +137,9 @@
           "K10",
           "K12",
           "K15"
-        ]
+        ],
+        "teacher_review_status": "teacher_revised_for_gsat_practice",
+        "teacher_reviewed_at": "2026-08-02"
       }
     ],
     "basic_drills_by_knowledge": {
@@ -138,7 +150,9 @@
       "K10": 3,
       "K08": 2,
       "K01": 12
-    }
+    },
+    "basic_drills_teacher_reviewed": 42,
+    "basic_drills_teacher_review_status": "teacher_revised_for_gsat_basic_drill"
   },
   "gap_summary": {
     "reading_groups_ready_as_candidate": 6,
@@ -146,8 +160,10 @@
     "basic_drills_ready": 42,
     "basic_drills_still_needed": 48,
     "formal_approved_groups": 0,
-    "note": "現有題組仍是候選題，可供原型流程測試；正式使用前需逐組 rule_checked。",
-    "basic_drill_slots_planned": 48
+    "note": "現有6組閱讀題組與42題基礎短練已完成老師審題修訂，可供前6天原型練習；正式使用前仍建議經學生實測後再升級 approved_for_app。",
+    "basic_drill_slots_planned": 48,
+    "reading_groups_rule_checked": 6,
+    "basic_drills_teacher_reviewed": 42
   },
   "target_basic_drills": {
     "total_for_30_days": 90,

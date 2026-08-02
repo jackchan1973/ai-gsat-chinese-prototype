@@ -34,13 +34,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_teacher_revised_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_02_CHI",
@@ -77,13 +79,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_teacher_revised_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_03_CHI",
@@ -120,7 +124,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_teacher_revised_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -131,7 +135,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_04_CHI",
@@ -168,7 +174,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_teacher_revised_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -179,7 +185,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_05_CHI",
@@ -216,7 +224,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_teacher_revised_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -227,7 +235,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_06_CHI",
@@ -264,13 +274,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_teacher_revised_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_07_CHI",
