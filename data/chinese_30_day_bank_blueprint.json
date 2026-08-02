@@ -132,8 +132,8 @@
       {
         "group_id": "CHI_V2_G007",
         "planned_day": 7,
-        "title": "現代散文與生活觀察：細節、視角與主旨推論",
-        "status": "draft_for_preview",
+        "title": "雨後街角的菜攤：現代散文細節與視角",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "現代散文＋評論短文",
         "knowledge_codes": [
@@ -146,10 +146,10 @@
       {
         "group_id": "CHI_V2_G008",
         "planned_day": 8,
-        "title": "史傳人物判斷：行動、動機與評價",
-        "status": "draft_for_preview",
+        "title": "史傳人物的進退：行動、動機與評價",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "文言敘事＋史傳評論",
+        "material_type": "文言敘事改寫＋史傳評論",
         "knowledge_codes": [
           "K05",
           "K08",
@@ -160,12 +160,12 @@
       {
         "group_id": "CHI_V2_G009",
         "planned_day": 9,
-        "title": "公告與圖表判讀：規則、限制與例外",
-        "status": "draft_for_preview",
+        "title": "圖書館座位公告：規則、例外與表格判讀",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "公告＋表格＋情境判讀",
         "knowledge_codes": [
-          "K11",
+          "K12",
           "K08",
           "K14",
           "K15"
@@ -174,10 +174,10 @@
       {
         "group_id": "CHI_V2_G010",
         "planned_day": 10,
-        "title": "詩文意象比較：景物、情感與語氣",
-        "status": "draft_for_preview",
+        "title": "秋聲與歸途：詩文意象、情感與語氣",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "古典詩文＋現代短評",
+        "material_type": "古典詩意材料＋現代短評",
         "knowledge_codes": [
           "K09",
           "K08",
@@ -188,8 +188,8 @@
       {
         "group_id": "CHI_V2_G011",
         "planned_day": 11,
-        "title": "校園公共議題：立場、證據與反駁",
-        "status": "draft_for_preview",
+        "title": "校園午餐提案：立場、證據與反駁",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "論說文＋留言資料",
         "knowledge_codes": [
@@ -201,8 +201,8 @@
       {
         "group_id": "CHI_V2_G012",
         "planned_day": 12,
-        "title": "科技與學習：工具使用、判斷與責任",
-        "status": "draft_for_preview",
+        "title": "AI筆記與自主學習：工具、查證與責任",
+        "status": "rule_checked",
         "question_count": 5,
         "material_type": "現代評論＋案例材料",
         "knowledge_codes": [
@@ -215,25 +215,26 @@
       {
         "group_id": "CHI_V2_G013",
         "planned_day": 13,
-        "title": "文言勸諫策略：語氣、利害與對象",
-        "status": "draft_for_preview",
+        "title": "勸諫語氣的分寸：對象、利害與可接受度",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "文言小段＋現代溝通情境",
+        "material_type": "文言觀點＋現代溝通情境",
         "knowledge_codes": [
-          "K14",
+          "K10",
           "K08",
+          "K14",
           "K15"
         ]
       },
       {
         "group_id": "CHI_V2_G014",
         "planned_day": 14,
-        "title": "非連續文本閱讀：流程圖、表格與結論",
-        "status": "draft_for_preview",
+        "title": "社區路線圖：流程、條件與資訊判讀",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "流程圖＋說明文字",
+        "material_type": "流程圖＋公告說明",
         "knowledge_codes": [
-          "K11",
+          "K12",
           "K08",
           "K14",
           "K15"
@@ -242,10 +243,10 @@
       {
         "group_id": "CHI_V2_G015",
         "planned_day": 15,
-        "title": "小說敘事觀點：人物、線索與隱含態度",
-        "status": "draft_for_preview",
+        "title": "小說中的沉默：敘事觀點與人物心理",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "現代小說新材料",
+        "material_type": "小說片段＋讀者札記",
         "knowledge_codes": [
           "K09",
           "K08",
@@ -256,10 +257,10 @@
       {
         "group_id": "CHI_V2_G016",
         "planned_day": 16,
-        "title": "古今價值轉用：義利、責任與取捨",
-        "status": "draft_for_preview",
+        "title": "義利之辨的現代轉用：選擇、責任與代價",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "文言觀點＋現代選擇情境",
+        "material_type": "古今轉用情境題",
         "knowledge_codes": [
           "K10",
           "K08",
@@ -270,23 +271,24 @@
       {
         "group_id": "CHI_V2_G017",
         "planned_day": 17,
-        "title": "資料評論：數據、樣本與推論界線",
-        "status": "draft_for_preview",
+        "title": "問卷數據的陷阱：樣本、比例與推論界線",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "數據表＋評論文章",
+        "material_type": "資料評論＋表格",
         "knowledge_codes": [
-          "K14",
+          "K12",
           "K08",
+          "K14",
           "K15"
         ]
       },
       {
         "group_id": "CHI_V2_G018",
         "planned_day": 18,
-        "title": "文化記憶與地方書寫：空間、時間與認同",
-        "status": "draft_for_preview",
+        "title": "地方記憶與展覽：空間、時間與認同",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "散文＋地方資料",
+        "material_type": "地方書寫＋展覽說明",
         "knowledge_codes": [
           "K06",
           "K08",
@@ -297,12 +299,12 @@
       {
         "group_id": "CHI_V2_G019",
         "planned_day": 19,
-        "title": "文言人物對話：言外之意與說服效果",
-        "status": "draft_for_preview",
+        "title": "文言對話的言外之意：稱謂、轉折與說服",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "文言對話＋情境轉用",
+        "material_type": "文言對話改寫＋解析",
         "knowledge_codes": [
-          "K05",
+          "K03",
           "K08",
           "K14",
           "K15"
@@ -311,10 +313,10 @@
       {
         "group_id": "CHI_V2_G020",
         "planned_day": 20,
-        "title": "閱讀策略比較：摘要、推論與文本證據",
-        "status": "draft_for_preview",
+        "title": "摘要與推論：閱讀策略的有效與失效",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "學習情境＋短文比較",
+        "material_type": "閱讀策略比較材料",
         "knowledge_codes": [
           "K06",
           "K08",
@@ -325,11 +327,12 @@
       {
         "group_id": "CHI_V2_G021",
         "planned_day": 21,
-        "title": "詩詞與現代影像：意象轉換與詮釋限制",
-        "status": "draft_for_preview",
+        "title": "影像改編古詩：意象轉換與詮釋限制",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "詩詞新材料＋影像說明",
+        "material_type": "詩詞意象＋影像說明",
         "knowledge_codes": [
+          "K09",
           "K08",
           "K14",
           "K15"
@@ -338,12 +341,12 @@
       {
         "group_id": "CHI_V2_G022",
         "planned_day": 22,
-        "title": "政策文字判讀：目的、對象與例外條件",
-        "status": "draft_for_preview",
+        "title": "政策文字中的對象：目的、限制與例外",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "規章＋討論紀錄",
+        "material_type": "政策說明＋案例",
         "knowledge_codes": [
-          "K11",
+          "K12",
           "K08",
           "K14",
           "K15"
@@ -352,10 +355,10 @@
       {
         "group_id": "CHI_V2_G023",
         "planned_day": 23,
-        "title": "文言議論結構：破題、立論與譬喻",
-        "status": "draft_for_preview",
+        "title": "議論文的破題與譬喻：立論如何展開",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "文言議論＋白話說明",
+        "material_type": "文言議論＋現代說明",
         "knowledge_codes": [
           "K14",
           "K08",
@@ -365,10 +368,10 @@
       {
         "group_id": "CHI_V2_G024",
         "planned_day": 24,
-        "title": "現代評論雙文本：共同問題與不同立場",
-        "status": "draft_for_preview",
+        "title": "雙文本評論：共同問題與不同立場",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "雙評論＋情境題",
+        "material_type": "現代評論雙文本",
         "knowledge_codes": [
           "K08",
           "K14",
@@ -378,12 +381,12 @@
       {
         "group_id": "CHI_V2_G025",
         "planned_day": 25,
-        "title": "閱讀圖像資料：海報、標語與隱含訊息",
-        "status": "draft_for_preview",
+        "title": "海報標語的隱含訊息：圖像與文字整合",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "海報文字＋圖表說明",
+        "material_type": "海報說明＋標語判讀",
         "knowledge_codes": [
-          "K11",
+          "K12",
           "K08",
           "K14",
           "K15"
@@ -392,12 +395,12 @@
       {
         "group_id": "CHI_V2_G026",
         "planned_day": 26,
-        "title": "古典抒情與人生觀：限制、轉念與表達",
-        "status": "draft_for_preview",
+        "title": "困境中的轉念：古典抒情與人生觀",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "古文概念＋現代抉擇",
+        "material_type": "古典抒情材料＋短評",
         "knowledge_codes": [
-          "K10",
+          "K09",
           "K08",
           "K14",
           "K15"
@@ -406,10 +409,10 @@
       {
         "group_id": "CHI_V2_G027",
         "planned_day": 27,
-        "title": "媒體識讀：標題、摘要與資訊落差",
-        "status": "draft_for_preview",
+        "title": "標題與內文落差：媒體識讀與資訊判斷",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "新聞摘要＋讀者回應",
+        "material_type": "新聞標題＋摘要比較",
         "knowledge_codes": [
           "K14",
           "K08",
@@ -419,10 +422,10 @@
       {
         "group_id": "CHI_V2_G028",
         "planned_day": 28,
-        "title": "跨篇整合：同一主題的不同材料證據",
-        "status": "draft_for_preview",
+        "title": "同一主題的不同證據：跨篇整合",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "三材料整合題組",
+        "material_type": "三材料整合題",
         "knowledge_codes": [
           "K08",
           "K14",
@@ -432,23 +435,23 @@
       {
         "group_id": "CHI_V2_G029",
         "planned_day": 29,
-        "title": "月末綜合一：文言、現代文與圖表混合",
-        "status": "draft_for_preview",
+        "title": "月末綜合一：文言、現代文與表格混合",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "綜合混合題組",
+        "material_type": "綜合材料題",
         "knowledge_codes": [
-          "K15",
           "K08",
-          "K14"
+          "K14",
+          "K15"
         ]
       },
       {
         "group_id": "CHI_V2_G030",
         "planned_day": 30,
         "title": "月末綜合二：多選與短答統整加強",
-        "status": "draft_for_preview",
+        "status": "rule_checked",
         "question_count": 5,
-        "material_type": "綜合混合題組",
+        "material_type": "混合文本＋後設閱讀",
         "knowledge_codes": [
           "K15",
           "K08",
@@ -466,18 +469,19 @@
       "K01": 24
     },
     "basic_drills_teacher_reviewed": 42,
-    "basic_drills_teacher_review_status": "teacher_revised_for_gsat_basic_drill"
+    "basic_drills_teacher_review_status": "teacher_revised_for_gsat_basic_drill",
+    "basic_drills": {
+      "count": 90,
+      "status": "reviewed_revised_for_30_day_practice",
+      "note": "第7-30天已刪除舊版模板化題庫並重製。"
+    }
   },
   "gap_summary": {
-    "reading_groups_ready_as_candidate": 30,
-    "reading_groups_still_needed": 0,
-    "basic_drills_ready": 90,
-    "basic_drills_still_needed": 0,
-    "formal_approved_groups": 0,
-    "note": "30 天題庫已補成候選題，可供原型測試；正式使用前仍需逐組 rule_checked。",
-    "basic_drill_slots_planned": 0,
-    "reading_groups_rule_checked": 6,
-    "basic_drills_teacher_reviewed": 42
+    "status": "filled_for_candidate_review",
+    "reading_groups_gap": 0,
+    "reading_questions_gap": 0,
+    "basic_drills_gap": 0,
+    "note": "已補齊30天候選題庫；學生試做後再升為approved_for_app。"
   },
   "target_basic_drills": {
     "total_for_30_days": 90,

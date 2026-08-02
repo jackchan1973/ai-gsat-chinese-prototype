@@ -306,12 +306,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -319,13 +319,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_08_CHI",
@@ -349,12 +351,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -362,7 +364,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -373,7 +375,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_09_CHI",
@@ -392,17 +396,17 @@
     ],
     "group_id": "CHI_V2_G009",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -410,13 +414,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_10_CHI",
@@ -440,12 +446,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -453,7 +459,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -464,7 +470,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_11_CHI",
@@ -483,17 +491,17 @@
     ],
     "group_id": "CHI_V2_G011",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -501,13 +509,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_12_CHI",
@@ -526,17 +536,17 @@
     ],
     "group_id": "CHI_V2_G012",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -544,13 +554,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_13_CHI",
@@ -569,17 +581,17 @@
     ],
     "group_id": "CHI_V2_G013",
     "review_question_ids": [],
-    "estimated_minutes": 45,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -587,13 +599,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_14_CHI",
@@ -617,12 +631,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -630,13 +644,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_15_CHI",
@@ -660,12 +676,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -673,7 +689,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -684,7 +700,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_16_CHI",
@@ -703,17 +721,17 @@
     ],
     "group_id": "CHI_V2_G016",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -721,13 +739,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_17_CHI",
@@ -746,17 +766,17 @@
     ],
     "group_id": "CHI_V2_G017",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -764,13 +784,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_18_CHI",
@@ -789,17 +811,17 @@
     ],
     "group_id": "CHI_V2_G018",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -807,13 +829,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_19_CHI",
@@ -832,17 +856,17 @@
     ],
     "group_id": "CHI_V2_G019",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -850,13 +874,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_20_CHI",
@@ -875,17 +901,17 @@
     ],
     "group_id": "CHI_V2_G020",
     "review_question_ids": [],
-    "estimated_minutes": 45,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -893,13 +919,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_21_CHI",
@@ -923,12 +951,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -936,13 +964,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_22_CHI",
@@ -966,12 +996,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -979,7 +1009,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -990,7 +1020,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_23_CHI",
@@ -1009,17 +1041,17 @@
     ],
     "group_id": "CHI_V2_G023",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1027,13 +1059,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_24_CHI",
@@ -1052,17 +1086,17 @@
     ],
     "group_id": "CHI_V2_G024",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1070,13 +1104,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_25_CHI",
@@ -1095,17 +1131,17 @@
     ],
     "group_id": "CHI_V2_G025",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1113,13 +1149,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_26_CHI",
@@ -1138,17 +1176,17 @@
     ],
     "group_id": "CHI_V2_G026",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1156,13 +1194,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_27_CHI",
@@ -1181,17 +1221,17 @@
     ],
     "group_id": "CHI_V2_G027",
     "review_question_ids": [],
-    "estimated_minutes": 45,
+    "estimated_minutes": 32,
     "planned_sections": [
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1199,13 +1239,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_28_CHI",
@@ -1229,12 +1271,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1242,13 +1284,15 @@
         "source": "none"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
     "actual_minutes": null,
     "review_due_slots": [],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_29_CHI",
@@ -1272,12 +1316,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1285,7 +1329,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -1296,7 +1340,9 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   },
   {
     "task_id": "TASK_2026_09_30_CHI",
@@ -1320,12 +1366,12 @@
       {
         "section": "基礎短練",
         "count": 3,
-        "source": "existing_bank"
+        "source": "reviewed_bank"
       },
       {
         "section": "閱讀題組",
         "count": 5,
-        "source": "existing_candidate_group"
+        "source": "reviewed_question_group"
       },
       {
         "section": "錯題複習",
@@ -1333,7 +1379,7 @@
         "source": "review_due_slots"
       }
     ],
-    "bank_readiness": "existing_candidate_needs_rule_check",
+    "bank_readiness": "existing_bank_rule_checked",
     "status": "planned",
     "started_at": null,
     "completed_at": null,
@@ -1344,6 +1390,8 @@
         "rule": "依前 2 天錯題與弱點排入既有題或同能力變化題"
       }
     ],
-    "app_readiness": "can_run_as_candidate"
+    "app_readiness": "can_run_as_candidate",
+    "teacher_review_status": "teacher_revised_for_gsat_practice",
+    "teacher_reviewed_at": "2026-08-02"
   }
 ]
