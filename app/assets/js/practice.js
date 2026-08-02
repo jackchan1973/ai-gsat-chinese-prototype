@@ -1,5 +1,5 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260802-reviewed-bank";
+const DATA_VERSION = "20260802-k01-cards";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -247,7 +247,7 @@ function renderQuestion(question, index) {
 
 function renderQuestionSectionBreak(section, count) {
   const sectionNotes = {
-    基礎短練: "先把字音字形、文言字義等短題完成。",
+    基礎短練: "先完成不需閱讀文章的字音字形暖身。",
     今日題組: "閱讀左側材料後，逐題回到文本找依據。",
     錯題複習: "這些題目來自前次錯題，答完會更新弱點與下次複習日。",
   };
@@ -260,7 +260,7 @@ function renderQuestionSectionBreak(section, count) {
   `;
 }
 
-function renderQuestionStack(questions) {
+function renderQuestionStack(questions, startIndex = 0, showSectionBreak = true) {
   const counts = questions.reduce((acc, question) => {
     acc[question.source_section] = (acc[question.source_section] || 0) + 1;
     return acc;
@@ -269,9 +269,9 @@ function renderQuestionStack(questions) {
   return questions
     .map((question, index) => {
       const section = question.source_section || "題目";
-      const sectionHtml = section !== lastSection ? renderQuestionSectionBreak(section, counts[section]) : "";
+      const sectionHtml = showSectionBreak && section !== lastSection ? renderQuestionSectionBreak(section, counts[section]) : "";
       lastSection = section;
-      return `${sectionHtml}${renderQuestion(question, index)}`;
+      return `${sectionHtml}${renderQuestion(question, startIndex + index)}`;
     })
     .join("");
 }
@@ -593,10 +593,12 @@ async function main() {
   }
   localStorage.setItem(SELECTED_TASK_KEY, task.task_id);
   const questions = makeQuestionList(task, groupMap, drillMap, questionMap);
+  const basicQuestions = questions.filter((question) => question.source_section === "基礎短練");
+  const readingQuestions = questions.filter((question) => question.source_section !== "基礎短練");
   const basicCount = (task.basic_question_ids || []).length;
   const reviewCount = (task.review_question_ids || []).length || (task.review_due_slots || []).length;
   const groupQuestionCount = group?.questions?.length || 0;
-  const flowTags = [`基礎短練 ${basicCount} 題`, `閱讀題組 ${groupQuestionCount} 題`];
+  const flowTags = [`字音字形短練 ${basicCount} 題`, `閱讀題組 ${groupQuestionCount} 題`];
   if (reviewCount) flowTags.push(`錯題複習 ${reviewCount} 題`);
 
   document.getElementById("practiceTitle").textContent = group?.title || task.group_id;
@@ -606,11 +608,13 @@ async function main() {
     <span>短答第一版先保存答案，解析頁會顯示參考答案與評分原則。</span>
   `;
   document.getElementById("groupBadge").textContent = formatContentStatus(group?.status);
-  document.getElementById("questionBadge").textContent = `${questions.length} 題`;
+  document.getElementById("basicBadge").textContent = `${basicQuestions.length} 題`;
+  document.getElementById("questionBadge").textContent = `${readingQuestions.length} 題`;
   document.getElementById("passageBox").textContent = group?.passage || "找不到今日題組材料。";
   const questionNav = document.getElementById("questionNav");
   if (questionNav) questionNav.innerHTML = renderQuestionNav(questions);
-  document.getElementById("questionStack").innerHTML = renderQuestionStack(questions);
+  document.getElementById("basicQuestionStack").innerHTML = renderQuestionStack(basicQuestions, 0, false);
+  document.getElementById("readingQuestionStack").innerHTML = renderQuestionStack(readingQuestions, basicQuestions.length, true);
 
   const practiceForm = document.getElementById("practiceForm");
   wirePracticeTools(practiceForm, questions);

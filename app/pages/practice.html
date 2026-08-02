@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜國文作答</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260802-day-grid" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260802-k01-cards" />
   </head>
   <body class="practice-page">
     <main class="app-shell practice-shell">
@@ -25,7 +25,15 @@
         <p class="muted-text" id="practiceDescription">請稍候，正在讀取今日任務。</p>
       </section>
 
-      <form id="practiceForm">
+      <form id="practiceForm" class="practice-form-stack">
+        <section class="panel basic-drill-panel">
+          <div class="section-title">
+            <h2>字音字形短練</h2>
+            <span id="basicBadge">0 題</span>
+          </div>
+          <div class="question-stack compact-question-stack" id="basicQuestionStack"></div>
+        </section>
+
         <section class="practice-layout">
           <article class="panel passage-panel">
             <div class="section-title">
@@ -48,7 +56,7 @@
               <div class="progress-track"><span id="progressFill"></span></div>
               <div class="question-nav" id="questionNav" aria-label="題號快速跳轉"></div>
             </div>
-            <div class="question-stack" id="questionStack"></div>
+            <div class="question-stack" id="readingQuestionStack"></div>
             <div class="sticky-submit">
               <button class="primary-action" type="submit">交卷看解析</button>
               <a class="secondary-link" href="../index.html">返回主頁</a>
@@ -58,6 +66,6 @@
       </form>
     </main>
 
-    <script src="../assets/js/practice.js?v=20260802-day-grid"></script>
+    <script src="../assets/js/practice.js?v=20260802-k01-cards"></script>
   </body>
 </html>

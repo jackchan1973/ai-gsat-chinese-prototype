@@ -621,6 +621,19 @@ h2 {
   align-items: start;
 }
 
+.practice-form-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.basic-drill-panel {
+  margin-top: 14px;
+}
+
+.compact-question-stack {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .passage-panel {
   position: sticky;
   top: 14px;
@@ -1853,12 +1866,14 @@ body {
 }
 
 .practice-page .passage-panel,
-.practice-page .questions-panel {
+.practice-page .questions-panel,
+.practice-page .basic-drill-panel {
   overflow: hidden;
 }
 
 .practice-page .passage-panel .section-title,
-.practice-page .questions-panel .section-title {
+.practice-page .questions-panel .section-title,
+.practice-page .basic-drill-panel .section-title {
   margin: -18px -18px 16px;
   padding: 16px 18px;
   background: #0d2538;
@@ -1931,7 +1946,8 @@ body {
 @media (max-width: 900px) {
   .login-screen,
   .student-plan-stack,
-  .practice-page .practice-layout {
+  .practice-page .practice-layout,
+  .compact-question-stack {
     grid-template-columns: 1fr;
   }
 
