@@ -1457,3 +1457,448 @@ h2 {
     display: block;
   }
 }
+
+/* Visual hero refresh for the student-facing Chinese practice app. */
+:root {
+  --bg: #07131f;
+  --surface: #ffffff;
+  --surface-muted: #eef5f8;
+  --ink: #17212b;
+  --muted: #657482;
+  --line: #d6e2ea;
+  --primary: #00a7c8;
+  --primary-dark: #036079;
+  --accent: #f07c28;
+  --warn: #b7791f;
+  --ok: #287452;
+  --deep: #07131f;
+  --cyan-soft: #dff8ff;
+  --violet-soft: #ebe7ff;
+  --paper: #fffaf0;
+  --shadow: 0 24px 70px rgba(7, 19, 31, 0.18);
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(0, 167, 200, 0.22), transparent 28rem),
+    radial-gradient(circle at 86% 18%, rgba(240, 124, 40, 0.16), transparent 24rem),
+    linear-gradient(180deg, #07131f 0, #102235 360px, #f3f7fb 360px, #f3f7fb 100%);
+}
+
+.student-home-shell {
+  max-width: 1120px;
+}
+
+.login-screen {
+  min-height: calc(100vh - 56px);
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.58fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: #07131f;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+.login-brand {
+  position: relative;
+  min-height: 620px;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.98) 0%, rgba(7, 19, 31, 0.86) 38%, rgba(7, 19, 31, 0.18) 76%),
+    url("../images/chinese-study-hero.png") center / cover no-repeat;
+  box-shadow: none;
+  color: #fff;
+}
+
+.login-brand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(transparent 95%, rgba(255, 255, 255, 0.16) 96%) 0 0 / 100% 34px,
+    linear-gradient(90deg, transparent 95%, rgba(255, 255, 255, 0.08) 96%) 0 0 / 34px 100%;
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.login-brand > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-brand .eyebrow {
+  color: var(--cyan-soft);
+  font-weight: 800;
+}
+
+.login-brand h1 {
+  max-width: 540px;
+  margin-top: 10px;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.login-brand p:last-child {
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.12rem;
+}
+
+.login-card {
+  align-self: stretch;
+  align-content: center;
+  border: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  padding: clamp(22px, 4vw, 38px);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: none;
+}
+
+.login-card-heading h2 {
+  margin: 0 0 4px;
+  color: var(--primary-dark);
+  font-size: 1.35rem;
+}
+
+.login-card-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.login-card input {
+  background: #f7fbfd;
+}
+
+.student-dashboard {
+  position: relative;
+}
+
+.student-home-topbar {
+  min-height: 118px;
+  margin-bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  padding: 22px;
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.96) 0%, rgba(7, 19, 31, 0.76) 45%, rgba(7, 19, 31, 0.18) 100%),
+    url("../images/chinese-study-hero.png") center / cover no-repeat;
+  color: #fff;
+}
+
+.student-home-topbar .eyebrow {
+  color: var(--cyan-soft);
+}
+
+.student-home-topbar h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.student-home-topbar .secondary-action {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.student-today-card {
+  border-radius: 0 0 8px 8px;
+  border-color: rgba(255, 255, 255, 0.12);
+  padding: clamp(18px, 3vw, 28px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(223, 248, 255, 0.9)),
+    var(--surface);
+}
+
+.student-task-main h2 {
+  max-width: 760px;
+  color: #092235;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-wrap: balance;
+}
+
+.student-message {
+  border-color: rgba(0, 167, 200, 0.28);
+  background: #e8fbff;
+  color: #075265;
+  font-weight: 800;
+}
+
+.student-metrics div,
+.student-plan-card,
+.student-secondary-panel,
+.mission-step {
+  border-color: rgba(3, 96, 121, 0.13);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.student-metrics div {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.student-metrics strong {
+  color: var(--primary-dark);
+}
+
+.mission-road {
+  margin-top: 16px;
+}
+
+.mission-step {
+  transform: translateY(0);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.mission-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(7, 19, 31, 0.14);
+}
+
+.mission-step.current {
+  border-color: rgba(0, 167, 200, 0.45);
+  background: linear-gradient(180deg, #ffffff, #eefbff);
+}
+
+.mission-step-index {
+  background: linear-gradient(135deg, var(--primary), #7c5cff);
+  box-shadow: 0 8px 18px rgba(0, 167, 200, 0.24);
+}
+
+.student-plan-stack {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.student-plan-card {
+  padding: 18px;
+}
+
+.student-plan-card h2 {
+  color: var(--primary-dark);
+}
+
+.student-start-action {
+  min-height: 58px;
+  background: linear-gradient(135deg, #00a7c8, #0f6f8d 58%, #f07c28);
+  font-size: 1.05rem;
+}
+
+.progress-track {
+  background: rgba(3, 96, 121, 0.1);
+}
+
+.progress-track span {
+  background: linear-gradient(90deg, var(--primary), #7c5cff, var(--accent));
+}
+
+.practice-page {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(0, 167, 200, 0.2), transparent 22rem),
+    linear-gradient(180deg, #07131f 0, #102235 260px, #f3f7fb 260px, #f3f7fb 100%);
+}
+
+.practice-shell {
+  width: min(1280px, calc(100% - 32px));
+}
+
+.practice-topbar {
+  min-height: 128px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 22px;
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.96), rgba(7, 19, 31, 0.68), rgba(7, 19, 31, 0.08)),
+    url("../images/chinese-study-hero.png") center 44% / cover no-repeat;
+  color: #fff;
+}
+
+.practice-topbar .eyebrow,
+.practice-topbar .text-link {
+  color: var(--cyan-soft);
+}
+
+.practice-topbar h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.practice-page .wide-panel {
+  margin-top: 14px;
+  border: 0;
+  background: linear-gradient(135deg, #ffffff, #eefbff);
+}
+
+.practice-page .wide-panel .section-title span {
+  border-color: rgba(3, 96, 121, 0.18);
+  background: #ffffff;
+  color: var(--primary-dark);
+}
+
+.practice-page .practice-layout {
+  grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.18fr);
+  gap: 18px;
+}
+
+.practice-page .panel {
+  border-color: rgba(3, 96, 121, 0.14);
+}
+
+.practice-page .passage-panel,
+.practice-page .questions-panel {
+  overflow: hidden;
+}
+
+.practice-page .passage-panel .section-title,
+.practice-page .questions-panel .section-title {
+  margin: -18px -18px 16px;
+  padding: 16px 18px;
+  background: #0d2538;
+  color: #fff;
+}
+
+.practice-page .section-title h2 {
+  color: inherit;
+}
+
+.practice-page .section-title span {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.practice-page .passage-box {
+  border-color: rgba(3, 96, 121, 0.16);
+  background:
+    linear-gradient(90deg, rgba(0, 167, 200, 0.05), transparent 90px),
+    var(--paper);
+  color: #263846;
+  font-size: 1.02rem;
+}
+
+.practice-tools {
+  border-color: rgba(0, 167, 200, 0.24);
+  background: linear-gradient(135deg, #eefbff, #f7f3ff);
+}
+
+.question-card,
+.review-card,
+.wrong-card,
+.weakness-card,
+.schedule-card {
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(7, 19, 31, 0.08);
+}
+
+.question-number {
+  background: linear-gradient(135deg, var(--primary), #7c5cff);
+}
+
+.question-card h3 {
+  color: #102235;
+  font-size: 1.08rem;
+}
+
+.choice-row {
+  border-color: rgba(3, 96, 121, 0.16);
+  background: #f9fcfd;
+}
+
+.choice-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(7, 19, 31, 0.08);
+}
+
+.choice-row.selected {
+  border-color: rgba(0, 167, 200, 0.65);
+  background: linear-gradient(135deg, #e8fbff, #f4f0ff);
+  box-shadow: inset 4px 0 0 var(--primary);
+}
+
+.sticky-submit {
+  border-top: 1px solid rgba(3, 96, 121, 0.1);
+  background: linear-gradient(to top, #fff 76%, rgba(255, 255, 255, 0));
+}
+
+@media (max-width: 900px) {
+  .login-screen,
+  .student-plan-stack,
+  .practice-page .practice-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    min-height: 440px;
+  }
+
+  .login-card {
+    border-left: 0;
+    border-top: 1px solid rgba(7, 19, 31, 0.08);
+  }
+
+  .student-home-topbar,
+  .practice-topbar {
+    background-position: 62% center;
+  }
+}
+
+@media (max-width: 520px) {
+  body,
+  .practice-page {
+    background: linear-gradient(180deg, #07131f 0, #102235 220px, #f3f7fb 220px, #f3f7fb 100%);
+  }
+
+  .app-shell,
+  .practice-shell {
+    width: min(100% - 20px, 1280px);
+  }
+
+  .login-screen {
+    border-radius: 8px;
+  }
+
+  .login-brand {
+    min-height: 360px;
+    background:
+      linear-gradient(180deg, rgba(7, 19, 31, 0.9), rgba(7, 19, 31, 0.42)),
+      url("../images/chinese-study-hero.png") center / cover no-repeat;
+  }
+
+  .login-brand h1 {
+    font-size: 2.35rem;
+  }
+
+  .student-home-topbar,
+  .practice-topbar {
+    min-height: 160px;
+    background:
+      linear-gradient(180deg, rgba(7, 19, 31, 0.92), rgba(7, 19, 31, 0.5)),
+      url("../images/chinese-study-hero.png") center / cover no-repeat;
+  }
+
+  .student-home-topbar h1,
+  .practice-topbar h1 {
+    font-size: 2.15rem;
+  }
+
+  .student-task-main h2 {
+    font-size: 1.7rem;
+  }
+
+  .student-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-page .passage-panel .section-title,
+  .practice-page .questions-panel .section-title {
+    margin: -14px -14px 14px;
+    padding: 14px;
+  }
+}
