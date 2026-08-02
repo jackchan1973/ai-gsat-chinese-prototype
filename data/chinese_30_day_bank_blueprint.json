@@ -49,9 +49,7 @@
           "K10",
           "K14",
           "K15"
-        ],
-        "teacher_review_status": "teacher_revised_for_gsat_practice",
-        "teacher_reviewed_at": "2026-08-02"
+        ]
       },
       {
         "group_id": "CHI_V2_G002",
@@ -66,9 +64,7 @@
           "K10",
           "K14",
           "K15"
-        ],
-        "teacher_review_status": "teacher_revised_for_gsat_practice",
-        "teacher_reviewed_at": "2026-08-02"
+        ]
       },
       {
         "group_id": "CHI_V2_G003",
@@ -84,9 +80,7 @@
           "K09",
           "K12",
           "K15"
-        ],
-        "teacher_review_status": "teacher_revised_for_gsat_practice",
-        "teacher_reviewed_at": "2026-08-02"
+        ]
       },
       {
         "group_id": "CHI_V2_G004",
@@ -102,9 +96,7 @@
           "K09",
           "K12",
           "K15"
-        ],
-        "teacher_review_status": "teacher_revised_for_gsat_practice",
-        "teacher_reviewed_at": "2026-08-02"
+        ]
       },
       {
         "group_id": "CHI_V2_G005",
@@ -119,9 +111,7 @@
           "K09",
           "K10",
           "K15"
-        ],
-        "teacher_review_status": "teacher_revised_for_gsat_practice",
-        "teacher_reviewed_at": "2026-08-02"
+        ]
       },
       {
         "group_id": "CHI_V2_G006",
@@ -137,39 +127,363 @@
           "K10",
           "K12",
           "K15"
-        ],
-        "teacher_review_status": "teacher_revised_for_gsat_practice",
-        "teacher_reviewed_at": "2026-08-02"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G007",
+        "planned_day": 7,
+        "title": "現代散文與生活觀察：細節、視角與主旨推論",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "現代散文＋評論短文",
+        "knowledge_codes": [
+          "K06",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G008",
+        "planned_day": 8,
+        "title": "史傳人物判斷：行動、動機與評價",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "文言敘事＋史傳評論",
+        "knowledge_codes": [
+          "K05",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G009",
+        "planned_day": 9,
+        "title": "公告與圖表判讀：規則、限制與例外",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "公告＋表格＋情境判讀",
+        "knowledge_codes": [
+          "K11",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G010",
+        "planned_day": 10,
+        "title": "詩文意象比較：景物、情感與語氣",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "古典詩文＋現代短評",
+        "knowledge_codes": [
+          "K09",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G011",
+        "planned_day": 11,
+        "title": "校園公共議題：立場、證據與反駁",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "論說文＋留言資料",
+        "knowledge_codes": [
+          "K14",
+          "K08",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G012",
+        "planned_day": 12,
+        "title": "科技與學習：工具使用、判斷與責任",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "現代評論＋案例材料",
+        "knowledge_codes": [
+          "K10",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G013",
+        "planned_day": 13,
+        "title": "文言勸諫策略：語氣、利害與對象",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "文言小段＋現代溝通情境",
+        "knowledge_codes": [
+          "K14",
+          "K08",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G014",
+        "planned_day": 14,
+        "title": "非連續文本閱讀：流程圖、表格與結論",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "流程圖＋說明文字",
+        "knowledge_codes": [
+          "K11",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G015",
+        "planned_day": 15,
+        "title": "小說敘事觀點：人物、線索與隱含態度",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "現代小說新材料",
+        "knowledge_codes": [
+          "K09",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G016",
+        "planned_day": 16,
+        "title": "古今價值轉用：義利、責任與取捨",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "文言觀點＋現代選擇情境",
+        "knowledge_codes": [
+          "K10",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G017",
+        "planned_day": 17,
+        "title": "資料評論：數據、樣本與推論界線",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "數據表＋評論文章",
+        "knowledge_codes": [
+          "K14",
+          "K08",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G018",
+        "planned_day": 18,
+        "title": "文化記憶與地方書寫：空間、時間與認同",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "散文＋地方資料",
+        "knowledge_codes": [
+          "K06",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G019",
+        "planned_day": 19,
+        "title": "文言人物對話：言外之意與說服效果",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "文言對話＋情境轉用",
+        "knowledge_codes": [
+          "K05",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G020",
+        "planned_day": 20,
+        "title": "閱讀策略比較：摘要、推論與文本證據",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "學習情境＋短文比較",
+        "knowledge_codes": [
+          "K06",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G021",
+        "planned_day": 21,
+        "title": "詩詞與現代影像：意象轉換與詮釋限制",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "詩詞新材料＋影像說明",
+        "knowledge_codes": [
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G022",
+        "planned_day": 22,
+        "title": "政策文字判讀：目的、對象與例外條件",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "規章＋討論紀錄",
+        "knowledge_codes": [
+          "K11",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G023",
+        "planned_day": 23,
+        "title": "文言議論結構：破題、立論與譬喻",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "文言議論＋白話說明",
+        "knowledge_codes": [
+          "K14",
+          "K08",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G024",
+        "planned_day": 24,
+        "title": "現代評論雙文本：共同問題與不同立場",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "雙評論＋情境題",
+        "knowledge_codes": [
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G025",
+        "planned_day": 25,
+        "title": "閱讀圖像資料：海報、標語與隱含訊息",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "海報文字＋圖表說明",
+        "knowledge_codes": [
+          "K11",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G026",
+        "planned_day": 26,
+        "title": "古典抒情與人生觀：限制、轉念與表達",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "古文概念＋現代抉擇",
+        "knowledge_codes": [
+          "K10",
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G027",
+        "planned_day": 27,
+        "title": "媒體識讀：標題、摘要與資訊落差",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "新聞摘要＋讀者回應",
+        "knowledge_codes": [
+          "K14",
+          "K08",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G028",
+        "planned_day": 28,
+        "title": "跨篇整合：同一主題的不同材料證據",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "三材料整合題組",
+        "knowledge_codes": [
+          "K08",
+          "K14",
+          "K15"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G029",
+        "planned_day": 29,
+        "title": "月末綜合一：文言、現代文與圖表混合",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "綜合混合題組",
+        "knowledge_codes": [
+          "K15",
+          "K08",
+          "K14"
+        ]
+      },
+      {
+        "group_id": "CHI_V2_G030",
+        "planned_day": 30,
+        "title": "月末綜合二：多選與短答統整加強",
+        "status": "draft_for_preview",
+        "question_count": 5,
+        "material_type": "綜合混合題組",
+        "knowledge_codes": [
+          "K15",
+          "K08",
+          "K14"
+        ]
       }
     ],
     "basic_drills_by_knowledge": {
-      "K02": 8,
-      "K03": 9,
-      "K14": 2,
-      "K05": 6,
-      "K10": 3,
-      "K08": 2,
-      "K01": 12
+      "K02": 16,
+      "K03": 18,
+      "K14": 7,
+      "K05": 12,
+      "K10": 7,
+      "K08": 6,
+      "K01": 24
     },
     "basic_drills_teacher_reviewed": 42,
     "basic_drills_teacher_review_status": "teacher_revised_for_gsat_basic_drill"
   },
   "gap_summary": {
-    "reading_groups_ready_as_candidate": 6,
-    "reading_groups_still_needed": 24,
-    "basic_drills_ready": 42,
-    "basic_drills_still_needed": 48,
+    "reading_groups_ready_as_candidate": 30,
+    "reading_groups_still_needed": 0,
+    "basic_drills_ready": 90,
+    "basic_drills_still_needed": 0,
     "formal_approved_groups": 0,
-    "note": "現有6組閱讀題組與42題基礎短練已完成老師審題修訂，可供前6天原型練習；正式使用前仍建議經學生實測後再升級 approved_for_app。",
-    "basic_drill_slots_planned": 48,
+    "note": "30 天題庫已補成候選題，可供原型測試；正式使用前仍需逐組 rule_checked。",
+    "basic_drill_slots_planned": 0,
     "reading_groups_rule_checked": 6,
     "basic_drills_teacher_reviewed": 42
   },
   "target_basic_drills": {
     "total_for_30_days": 90,
     "per_day": "2-3 題，第一版每日固定 3 題",
-    "current_total": 42,
-    "needed_new_items": 48,
+    "current_total": 90,
+    "needed_new_items": 0,
     "target_distribution": {
       "K01": 30,
       "K02": 18,
@@ -180,1356 +494,6 @@
       "K14": 8
     }
   },
-  "planned_new_reading_groups": [
-    {
-      "group_id": "CHI_V2_G007",
-      "title": "現代散文與生活觀察：細節、視角與主旨推論",
-      "material_type": "現代散文＋評論短文",
-      "planned_day": 7,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K07",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "K07",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G008",
-      "title": "史傳人物判斷：行動、動機與評價",
-      "material_type": "文言敘事＋史傳評論",
-      "planned_day": 8,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K03",
-        "K05",
-        "K09",
-        "K15"
-      ],
-      "knowledge_names": [
-        "文言詞義",
-        "文言與文本理解",
-        "文學作品理解",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G009",
-      "title": "公告與圖表判讀：規則、限制與例外",
-      "material_type": "公告＋表格＋情境判讀",
-      "planned_day": 9,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K11",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "圖表與非連續文本判讀",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G010",
-      "title": "詩文意象比較：景物、情感與語氣",
-      "material_type": "古典詩文＋現代短評",
-      "planned_day": 10,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K05",
-        "K08",
-        "K09",
-        "K15"
-      ],
-      "knowledge_names": [
-        "文言與文本理解",
-        "跨材料比較",
-        "文學作品理解",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G011",
-      "title": "校園公共議題：立場、證據與反駁",
-      "material_type": "論說文＋留言資料",
-      "planned_day": 11,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K10",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "古今轉用與跨情境判斷",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G012",
-      "title": "科技與學習：工具使用、判斷與責任",
-      "material_type": "現代評論＋案例材料",
-      "planned_day": 12,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K10",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "古今轉用與跨情境判斷",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G013",
-      "title": "文言勸諫策略：語氣、利害與對象",
-      "material_type": "文言小段＋現代溝通情境",
-      "planned_day": 13,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K03",
-        "K05",
-        "K10",
-        "K14"
-      ],
-      "knowledge_names": [
-        "文言詞義",
-        "文言與文本理解",
-        "古今轉用與跨情境判斷",
-        "論證與文本特色"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G014",
-      "title": "非連續文本閱讀：流程圖、表格與結論",
-      "material_type": "流程圖＋說明文字",
-      "planned_day": 14,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K11",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "圖表與非連續文本判讀",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G015",
-      "title": "小說敘事觀點：人物、線索與隱含態度",
-      "material_type": "現代小說節選式新材料",
-      "planned_day": 15,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K07",
-        "K09",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "K07",
-        "文學作品理解",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G016",
-      "title": "古今價值轉用：義利、責任與取捨",
-      "material_type": "文言觀點＋現代選擇情境",
-      "planned_day": 16,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K05",
-        "K08",
-        "K10",
-        "K15"
-      ],
-      "knowledge_names": [
-        "文言與文本理解",
-        "跨材料比較",
-        "古今轉用與跨情境判斷",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G017",
-      "title": "資料評論：數據、樣本與推論界線",
-      "material_type": "數據表＋評論文章",
-      "planned_day": 17,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K11",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "圖表與非連續文本判讀",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G018",
-      "title": "文化記憶與地方書寫：空間、時間與認同",
-      "material_type": "散文＋地方資料",
-      "planned_day": 18,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K08",
-        "K09",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "跨材料比較",
-        "文學作品理解",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G019",
-      "title": "文言人物對話：言外之意與說服效果",
-      "material_type": "文言對話＋情境轉用",
-      "planned_day": 19,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K03",
-        "K05",
-        "K10",
-        "K14"
-      ],
-      "knowledge_names": [
-        "文言詞義",
-        "文言與文本理解",
-        "古今轉用與跨情境判斷",
-        "論證與文本特色"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G020",
-      "title": "閱讀策略比較：摘要、推論與文本證據",
-      "material_type": "學習情境＋短文比較",
-      "planned_day": 20,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K08",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "跨材料比較",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G021",
-      "title": "詩詞與現代影像：意象轉換與詮釋限制",
-      "material_type": "詩詞新材料＋影像說明",
-      "planned_day": 21,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K09",
-        "K10",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "文學作品理解",
-        "古今轉用與跨情境判斷",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G022",
-      "title": "政策文字判讀：目的、對象與例外條件",
-      "material_type": "規章＋討論紀錄",
-      "planned_day": 22,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K11",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "圖表與非連續文本判讀",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G023",
-      "title": "文言議論結構：破題、立論與譬喻",
-      "material_type": "文言議論＋白話說明",
-      "planned_day": 23,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K03",
-        "K05",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "文言詞義",
-        "文言與文本理解",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G024",
-      "title": "現代評論雙文本：共同問題與不同立場",
-      "material_type": "雙評論＋情境題",
-      "planned_day": 24,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K08",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "跨材料比較",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G025",
-      "title": "閱讀圖像資料：海報、標語與隱含訊息",
-      "material_type": "海報文字＋圖表說明",
-      "planned_day": 25,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K11",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "圖表與非連續文本判讀",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G026",
-      "title": "古典抒情與人生觀：限制、轉念與表達",
-      "material_type": "古文概念＋現代抉擇",
-      "planned_day": 26,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K05",
-        "K09",
-        "K10",
-        "K15"
-      ],
-      "knowledge_names": [
-        "文言與文本理解",
-        "文學作品理解",
-        "古今轉用與跨情境判斷",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G027",
-      "title": "媒體識讀：標題、摘要與資訊落差",
-      "material_type": "新聞摘要＋讀者回應",
-      "planned_day": 27,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K08",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "跨材料比較",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G028",
-      "title": "跨篇整合：同一主題的不同材料證據",
-      "material_type": "三材料整合題組",
-      "planned_day": 28,
-      "target_question_count": 5,
-      "target_minutes": 28,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K08",
-        "K10",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "跨材料比較",
-        "古今轉用與跨情境判斷",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G029",
-      "title": "月末綜合一：文言、現代文與圖表混合",
-      "material_type": "綜合混合題組",
-      "planned_day": 29,
-      "target_question_count": 5,
-      "target_minutes": 35,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K03",
-        "K05",
-        "K08",
-        "K11",
-        "K15"
-      ],
-      "knowledge_names": [
-        "文言詞義",
-        "文言與文本理解",
-        "跨材料比較",
-        "圖表與非連續文本判讀",
-        "短答統整"
-      ]
-    },
-    {
-      "group_id": "CHI_V2_G030",
-      "title": "月末綜合二：多選與短答統整加強",
-      "material_type": "綜合混合題組",
-      "planned_day": 30,
-      "target_question_count": 5,
-      "target_minutes": 35,
-      "target_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "材料需有足夠長度與層次",
-        "至少一題跨材料或整體理解",
-        "多選干擾需合理",
-        "短答需有30-50字評分原則"
-      ],
-      "knowledge_codes": [
-        "K06",
-        "K08",
-        "K10",
-        "K14",
-        "K15"
-      ],
-      "knowledge_names": [
-        "現代文主旨",
-        "跨材料比較",
-        "古今轉用與跨情境判斷",
-        "論證與文本特色",
-        "短答統整"
-      ]
-    }
-  ],
-  "planned_new_basic_drill_slots": [
-    {
-      "question_id": "CHI_BASIC_TODO_043",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_044",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_045",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_046",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_047",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_048",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_049",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_050",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_051",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_052",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_053",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_054",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_055",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_056",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_057",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_058",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_059",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_060",
-      "knowledge_code": "K01",
-      "knowledge_name": "字音字形",
-      "drill_type": "字音字形",
-      "question_type": "single_choice",
-      "target_difficulty": "中",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_061",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_062",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_063",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_064",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_065",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_066",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_067",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_068",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_069",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_070",
-      "knowledge_code": "K02",
-      "knowledge_name": "詞語語境與成語辨析",
-      "drill_type": "詞語語境與成語辨析",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_071",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_072",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_073",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_074",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_075",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_076",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_077",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_078",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_079",
-      "knowledge_code": "K03",
-      "knowledge_name": "文言詞義",
-      "drill_type": "文言詞義",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_080",
-      "knowledge_code": "K05",
-      "knowledge_name": "文意推論",
-      "drill_type": "文意推論",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_081",
-      "knowledge_code": "K05",
-      "knowledge_name": "文意推論",
-      "drill_type": "文意推論",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_082",
-      "knowledge_code": "K08",
-      "knowledge_name": "跨材料比較",
-      "drill_type": "跨材料比較短練",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_083",
-      "knowledge_code": "K08",
-      "knowledge_name": "跨材料比較",
-      "drill_type": "跨材料比較短練",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_084",
-      "knowledge_code": "K10",
-      "knowledge_name": "古今轉用與跨情境判斷",
-      "drill_type": "古今轉用短練",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_085",
-      "knowledge_code": "K14",
-      "knowledge_name": "論證與文本特色",
-      "drill_type": "論證判斷",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_086",
-      "knowledge_code": "K14",
-      "knowledge_name": "論證與文本特色",
-      "drill_type": "論證判斷",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_087",
-      "knowledge_code": "K14",
-      "knowledge_name": "論證與文本特色",
-      "drill_type": "論證判斷",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_088",
-      "knowledge_code": "K14",
-      "knowledge_name": "論證與文本特色",
-      "drill_type": "論證判斷",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_089",
-      "knowledge_code": "K14",
-      "knowledge_name": "論證與文本特色",
-      "drill_type": "論證判斷",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    },
-    {
-      "question_id": "CHI_BASIC_TODO_090",
-      "knowledge_code": "K14",
-      "knowledge_name": "論證與文本特色",
-      "drill_type": "論證判斷",
-      "question_type": "single_choice",
-      "target_difficulty": "中偏難",
-      "source_status": "to_be_written_from_rules",
-      "required_checks": [
-        "不得照抄或改寫歷屆原題",
-        "需有答案、解析、錯因與複習建議",
-        "手機上單題可在一屏內完成"
-      ]
-    }
-  ]
+  "planned_new_reading_groups": [],
+  "planned_new_basic_drill_slots": []
 }
