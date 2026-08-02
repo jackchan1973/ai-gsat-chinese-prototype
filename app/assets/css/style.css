@@ -1742,6 +1742,107 @@ body {
   color: var(--primary-dark);
 }
 
+.day-picker-title {
+  margin: 0;
+  color: var(--primary-dark);
+  font-weight: 900;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.day-button {
+  display: grid;
+  gap: 2px;
+  align-content: center;
+  min-width: 0;
+  min-height: 58px;
+  border: 1px solid rgba(3, 96, 121, 0.18);
+  border-radius: 8px;
+  padding: 8px 6px;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.day-button strong,
+.day-button span {
+  display: block;
+  min-width: 0;
+}
+
+.day-button strong {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.day-button span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.15;
+}
+
+.day-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: rgba(0, 167, 200, 0.5);
+  box-shadow: 0 10px 24px rgba(7, 19, 31, 0.08);
+}
+
+.day-button.active {
+  border-color: rgba(0, 167, 200, 0.72);
+  background: linear-gradient(135deg, #00a7c8, #0f6f8d);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0, 167, 200, 0.22);
+}
+
+.day-button.active span {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.day-button.pending {
+  background: #fff8ef;
+}
+
+.day-button.empty {
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.52);
+  color: #8a98a5;
+  cursor: not-allowed;
+}
+
+.home-return-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0d2538;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.home-return-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
 .practice-page .practice-layout {
   grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.18fr);
   gap: 18px;
@@ -1894,6 +1995,28 @@ body {
 
   .student-metrics {
     grid-template-columns: 1fr;
+  }
+
+  .day-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .day-button {
+    min-height: 54px;
+    padding: 7px 4px;
+  }
+
+  .day-button strong {
+    font-size: 0.95rem;
+  }
+
+  .day-button span {
+    font-size: 0.72rem;
+  }
+
+  .home-return-action {
+    width: 100%;
   }
 
   .practice-page .passage-panel .section-title,

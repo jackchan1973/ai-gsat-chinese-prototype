@@ -280,18 +280,46 @@ function renderMissionProgress(task, group, reviewCount) {
   });
 }
 
+function setActiveDayButton(selectedTaskId) {
+  document.querySelectorAll(".day-button").forEach((button) => {
+    const active = button.dataset.taskId === selectedTaskId;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
 function renderTaskSelector(tasks, selectedTask, groupMap, drillMap, onChange) {
   const selector = document.getElementById("taskSelector");
   if (!selector) return;
-  selector.innerHTML = tasks
-    .map((task) => {
+  const taskByDay = new Map(tasks.map((task) => [Number(task.day_number), task]));
+  selector.innerHTML = Array.from({ length: 31 }, (_, index) => {
+    const dayNumber = index + 1;
+    const task = taskByDay.get(dayNumber);
+    if (!task) {
+      return `
+        <button class="day-button empty" type="button" disabled role="listitem" aria-label="${dayNumber} 號尚未開放">
+          <strong>${dayNumber}號</strong>
+          <span>待開放</span>
+        </button>
+      `;
+    }
       const runnable = isTaskRunnable(task, groupMap, drillMap);
       const suffix = runnable ? "可測" : "待補題庫";
-      return `<option value="${escapeHtml(task.task_id)}">${escapeHtml(`第 ${task.day_number} 天｜${task.task_date}｜${suffix}`)}</option>`;
+      return `
+        <button class="day-button${runnable ? "" : " pending"}" type="button" role="listitem" data-task-id="${escapeHtml(task.task_id)}" aria-pressed="false">
+          <strong>${escapeHtml(dayNumber)}號</strong>
+          <span>${escapeHtml(suffix)}</span>
+        </button>
+      `;
     })
     .join("");
-  selector.value = selectedTask.task_id;
-  selector.addEventListener("change", () => onChange(selector.value));
+  selector.addEventListener("click", (event) => {
+    const button = event.target.closest(".day-button[data-task-id]");
+    if (!button) return;
+    setActiveDayButton(button.dataset.taskId);
+    onChange(button.dataset.taskId);
+  });
+  setActiveDayButton(selectedTask.task_id);
 }
 
 function renderTask(data, selectedTaskId) {
@@ -316,6 +344,7 @@ function renderTask(data, selectedTaskId) {
   setText("taskStatus", runnable ? "可測試" : "待補題庫");
   setText("taskReadiness", readinessText(task, runnable));
   renderMissionProgress(task, group, reviewCount);
+  setActiveDayButton(task.task_id);
 
   const statusNode = document.getElementById("taskStatus");
   statusNode?.classList.toggle("completed", readStoredAttempt()?.task_id === task.task_id);
