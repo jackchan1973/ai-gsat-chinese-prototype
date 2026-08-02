@@ -6,11 +6,13 @@ const DATA_FILES = {
   drills: "basic_drills.jsonl",
 };
 const SELECTED_TASK_KEY = "chi_v1_selected_task_id";
+const AUTH_KEY = "chi_v1_authenticated";
 const ATTEMPT_KEY = "chi_v1_last_attempt";
 const ANSWER_RECORDS_KEY = "chi_v1_answer_records";
 const WRONG_QUESTIONS_KEY = "chi_v1_wrong_questions";
 const WEAKNESSES_KEY = "chi_v1_weaknesses";
 const REVIEW_SCHEDULE_KEY = "chi_v1_review_schedule";
+const MARKED_QUESTIONS_KEY = "chi_v1_marked_questions";
 const STUDENT_ID = "student_001";
 
 const knowledgeLabels = {
@@ -127,6 +129,14 @@ function readStoredArray(key) {
   }
 }
 
+function writeStoredArray(key, items) {
+  localStorage.setItem(key, JSON.stringify(items));
+}
+
+function isLoggedIn() {
+  return localStorage.getItem(AUTH_KEY) === "yes";
+}
+
 function mergeById(existing, incoming, key) {
   const map = new Map(existing.map((item) => [item[key], item]));
   incoming.forEach((item) => map.set(item[key], item));
@@ -226,6 +236,7 @@ function renderQuestion(question, index) {
         <span class="tag">${escapeHtml(question.source_section)}</span>
         <span class="tag">${escapeHtml(questionTypeLabel(question.question_type))}</span>
         <span class="tag">${escapeHtml(formatKnowledge(question.knowledge_code))}</span>
+        <button class="mark-question-button" type="button" data-mark="${escapeHtml(question.question_id)}">標記</button>
       </div>
       <h3>${escapeHtml(question.prompt)}</h3>
       <p class="question-hint">${escapeHtml(promptHint)}</p>
@@ -266,10 +277,11 @@ function renderQuestionStack(questions) {
 }
 
 function renderQuestionNav(questions) {
+  const marked = new Set(readStoredArray(MARKED_QUESTIONS_KEY));
   return questions
     .map(
       (question, index) => `
-        <button class="question-nav-button" type="button" data-target="${escapeHtml(question.question_id)}" aria-label="前往第 ${index + 1} 題">
+        <button class="question-nav-button${marked.has(question.question_id) ? " marked" : ""}" type="button" data-target="${escapeHtml(question.question_id)}" aria-label="前往第 ${index + 1} 題">
           ${index + 1}
         </button>
       `,
@@ -308,6 +320,13 @@ function setQuestionAnsweredState(question, index, answered) {
   }
 }
 
+function setChoiceStates(form) {
+  form.querySelectorAll(".choice-row").forEach((row) => {
+    const input = row.querySelector("input");
+    row.classList.toggle("selected", Boolean(input?.checked));
+  });
+}
+
 function updateCharCounts(form) {
   document.querySelectorAll(".char-count").forEach((node) => {
     const name = node.dataset.for;
@@ -336,6 +355,7 @@ function updateProgress(form, questions) {
   if (unansweredCount) unansweredCount.textContent = `未作答 ${unanswered} 題`;
   if (progressFill) progressFill.style.width = `${percent}%`;
   updateCharCounts(form);
+  setChoiceStates(form);
 }
 
 function unansweredIndexes(form, questions) {
@@ -355,6 +375,30 @@ function wirePracticeTools(form, questions) {
     card.scrollIntoView({ behavior: "smooth", block: "start" });
     const input = card.querySelector("input, textarea");
     input?.focus({ preventScroll: true });
+  });
+  form.addEventListener("click", (event) => {
+    const button = event.target.closest(".mark-question-button");
+    if (!button) return;
+    const questionId = button.dataset.mark;
+    const marked = new Set(readStoredArray(MARKED_QUESTIONS_KEY));
+    if (marked.has(questionId)) marked.delete(questionId);
+    else marked.add(questionId);
+    writeStoredArray(MARKED_QUESTIONS_KEY, [...marked]);
+
+    const card = button.closest(".question-card");
+    const navButton = document.querySelector(`.question-nav-button[data-target="${CSS.escape(questionId)}"]`);
+    const isMarked = marked.has(questionId);
+    button.textContent = isMarked ? "已標記" : "標記";
+    card?.classList.toggle("marked", isMarked);
+    navButton?.classList.toggle("marked", isMarked);
+  });
+  const marked = new Set(readStoredArray(MARKED_QUESTIONS_KEY));
+  questions.forEach((question) => {
+    const isMarked = marked.has(question.question_id);
+    const card = document.querySelector(`[data-question-id="${CSS.escape(question.question_id)}"]`);
+    const button = document.querySelector(`.mark-question-button[data-mark="${CSS.escape(question.question_id)}"]`);
+    card?.classList.toggle("marked", isMarked);
+    if (button) button.textContent = isMarked ? "已標記" : "標記";
   });
   updateProgress(form, questions);
 }
@@ -515,6 +559,17 @@ function saveFormalRecords({ answerRecords, wrongs, weaknesses, schedules }) {
 }
 
 async function main() {
+  if (!isLoggedIn()) {
+    document.querySelector(".app-shell").innerHTML = `
+      <section class="error-box">
+        <h1>請先登入</h1>
+        <p>回首頁使用帳戶與密碼登入後，再開始今日練習。</p>
+        <p><a class="text-link" href="../index.html">回首頁登入</a></p>
+      </section>
+    `;
+    return;
+  }
+
   const [tasks, groups, drills] = await Promise.all([
     readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),
     readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),

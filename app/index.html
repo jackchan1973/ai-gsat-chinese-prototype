@@ -9,68 +9,125 @@
   </head>
   <body>
     <main class="app-shell student-home-shell">
-      <header class="topbar student-home-topbar">
-        <div>
+      <section class="login-screen" id="loginScreen" aria-label="登入">
+        <div class="login-brand">
           <p class="eyebrow">AI學測考總複習</p>
-          <h1>今日國文練習</h1>
+          <h1>登入後開始今天的國文練習</h1>
+          <p>用一小段時間完成今日任務，系統會保留你的作答進度與錯題紀錄。</p>
         </div>
-        <div class="status-pill" id="taskStatus">讀取中</div>
-      </header>
-
-      <section class="student-today-card" aria-label="今日練習">
-        <div class="panel-heading">
-          <p class="label">今天進度</p>
-          <strong id="taskDate">--</strong>
-        </div>
-        <div class="student-task-main">
-          <h2 id="taskTitle">今日任務載入中</h2>
-          <p id="taskMeta">請稍候</p>
-        </div>
-        <div class="day-picker" aria-label="選擇練習天數">
-          <label for="taskSelector">選擇測試天數</label>
-          <select id="taskSelector"></select>
-          <p id="taskReadiness">讀取中</p>
-        </div>
-        <div class="student-metrics" aria-label="任務數據">
+        <form class="login-card" id="loginForm">
           <div>
-            <span>預估</span>
-            <strong><span id="estimatedMinutes">--</span> 分鐘</strong>
+            <label for="accountInput">帳戶</label>
+            <input id="accountInput" name="account" type="text" autocomplete="username" value="admin" />
           </div>
           <div>
-            <span>今天</span>
-            <strong><span id="questionCount">--</span> 題</strong>
+            <label for="passwordInput">密碼</label>
+            <input id="passwordInput" name="password" type="password" autocomplete="current-password" value="admin" />
           </div>
-          <div>
-            <span>複習</span>
-            <strong><span id="reviewCount">--</span> 題</strong>
-          </div>
-        </div>
-        <button class="primary-action student-start-action" type="button" id="startButton">開始今天練習</button>
+          <p class="login-error" id="loginError" role="alert"></p>
+          <button class="primary-action student-start-action" type="submit">登入</button>
+        </form>
       </section>
 
-      <section class="student-plan-stack" aria-label="今日安排">
-        <article class="student-plan-card">
-          <span id="basicCount">0 題</span>
-          <div id="basicSummary"></div>
-        </article>
+      <section class="student-dashboard" id="dashboard" hidden>
+        <header class="topbar student-home-topbar">
+          <div>
+            <p class="eyebrow">AI學測考總複習</p>
+            <h1>今日國文練習</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="status-pill" id="taskStatus">讀取中</div>
+            <button class="secondary-action compact-action" type="button" id="logoutButton">登出</button>
+          </div>
+        </header>
 
-        <article class="student-plan-card">
-          <span id="groupStatus">--</span>
-          <div id="groupSummary"></div>
-        </article>
+        <section class="student-today-card" aria-label="今日練習">
+          <div class="panel-heading">
+            <p class="label">今天進度</p>
+            <strong id="taskDate">--</strong>
+          </div>
+          <div class="student-task-main">
+            <p class="student-message" id="studentMessage">準備讀取今日任務。</p>
+            <h2 id="taskTitle">今日任務載入中</h2>
+            <p id="taskMeta">請稍候</p>
+          </div>
+          <div class="mission-progress" aria-label="今日完成度">
+            <div class="progress-row">
+              <strong id="missionProgressText">0 / 3 關</strong>
+              <span id="missionProgressLabel">未開始</span>
+            </div>
+            <div class="progress-track"><span id="missionProgressFill"></span></div>
+          </div>
+          <div class="day-picker" aria-label="選擇練習天數">
+            <label for="taskSelector">選擇測試天數</label>
+            <select id="taskSelector"></select>
+            <p id="taskReadiness">讀取中</p>
+          </div>
+          <div class="student-metrics" aria-label="任務數據">
+            <div>
+              <span>預估</span>
+              <strong><span id="estimatedMinutes">--</span> 分鐘</strong>
+            </div>
+            <div>
+              <span>今天</span>
+              <strong><span id="questionCount">--</span> 題</strong>
+            </div>
+            <div>
+              <span>複習</span>
+              <strong><span id="reviewCount">--</span> 題</strong>
+            </div>
+          </div>
+          <button class="primary-action student-start-action" type="button" id="startButton">開始今天練習</button>
+        </section>
 
-        <article class="student-plan-card">
-          <span id="reviewStatus">--</span>
-          <div id="reviewSummary"></div>
-        </article>
-      </section>
+        <section class="mission-road" aria-label="今日三關">
+          <article class="mission-step" id="basicStep">
+            <span class="mission-step-index">1</span>
+            <div>
+              <strong>基礎短練</strong>
+              <p id="basicStepText">讀取中</p>
+            </div>
+            <span id="basicCount">0 題</span>
+          </article>
+          <article class="mission-step" id="groupStep">
+            <span class="mission-step-index">2</span>
+            <div>
+              <strong>閱讀題組</strong>
+              <p id="groupStepText">讀取中</p>
+            </div>
+            <span id="groupStatus">--</span>
+          </article>
+          <article class="mission-step" id="reviewStep">
+            <span class="mission-step-index">3</span>
+            <div>
+              <strong>錯題回鍋</strong>
+              <p id="reviewStepText">讀取中</p>
+            </div>
+            <span id="reviewStatus">--</span>
+          </article>
+        </section>
 
-      <section class="student-secondary-panel" aria-label="其他入口">
-        <div id="weekSummary"></div>
-        <div class="student-link-row">
-          <button class="secondary-action" type="button" id="reviewButton">查看錯題</button>
-          <a class="secondary-action link-action" href="./pages/parent-report.html">家長週報</a>
-        </div>
+        <section class="student-plan-stack" aria-label="今日安排">
+          <article class="student-plan-card">
+            <div id="basicSummary"></div>
+          </article>
+
+          <article class="student-plan-card">
+            <div id="groupSummary"></div>
+          </article>
+
+          <article class="student-plan-card">
+            <div id="reviewSummary"></div>
+          </article>
+        </section>
+
+        <section class="student-secondary-panel" aria-label="其他入口">
+          <div id="weekSummary"></div>
+          <div class="student-link-row">
+            <button class="secondary-action" type="button" id="reviewButton">查看錯題</button>
+            <a class="secondary-action link-action" href="./pages/parent-report.html">家長週報</a>
+          </div>
+        </section>
       </section>
     </main>
 

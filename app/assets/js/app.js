@@ -9,6 +9,10 @@ const DATA_FILES = {
   parentReport: "parent_weekly_report.sample.json",
 };
 const SELECTED_TASK_KEY = "chi_v1_selected_task_id";
+const AUTH_KEY = "chi_v1_authenticated";
+const ATTEMPT_KEY = "chi_v1_last_attempt";
+const LOGIN_ACCOUNT = "admin";
+const LOGIN_PASSWORD = "admin";
 
 const statusLabel = {
   planned: "已規劃",
@@ -109,7 +113,8 @@ function formatContentStatus(status) {
 }
 
 function setText(id, text) {
-  document.getElementById(id).textContent = text;
+  const node = document.getElementById(id);
+  if (node) node.textContent = text;
 }
 
 function escapeHtml(value) {
@@ -137,6 +142,7 @@ function renderBasics(task, drillMap) {
   const summary = document.getElementById("basicSummary");
   const ids = task.basic_question_ids || [];
   setText("basicCount", `${ids.length} 題`);
+  setText("basicStepText", `${ids.length} 題暖身，先把基本分拿穩。`);
   const knowledgeNames = ids
     .map((id) => drillMap.get(id))
     .filter(Boolean)
@@ -163,6 +169,7 @@ function renderGroup(task, groupMap) {
 
   const questionCount = countGroupQuestions(group);
   setText("groupStatus", formatContentStatus(group.status));
+  setText("groupStepText", `${questionCount} 題閱讀挑戰，回到文本找答案依據。`);
   summary.innerHTML = `
     <h2>閱讀題組</h2>
     <h3 class="group-title">${escapeHtml(group.title)}</h3>
@@ -180,6 +187,8 @@ function renderReviews(task, wrongMap, reviewSchedules) {
   const scheduled = reviewSchedules.filter((item) => ids.includes(item.assigned_question_id));
   const scheduleMap = byId(scheduled, "assigned_question_id");
   setText("reviewStatus", ids.length || dueSlots.length ? "今日安排" : "今日無");
+  const reviewAmount = ids.length || dueSlots.length;
+  setText("reviewStepText", reviewAmount ? `${reviewAmount} 題弱點回鍋，做完就更新錯題紀錄。` : "今天沒有錯題回鍋，照一般節奏完成。");
 
   if (!ids.length && !dueSlots.length) {
     summary.innerHTML = `
@@ -235,6 +244,42 @@ function readinessText(task, runnable) {
   return "這一天資料還需要檢查後才能測試。";
 }
 
+function readStoredAttempt() {
+  try {
+    return JSON.parse(localStorage.getItem(ATTEMPT_KEY) || "null");
+  } catch {
+    return null;
+  }
+}
+
+function missionMessage(task, group, reviewCount, completed) {
+  if (completed) return "今天這回合已完成，可以查看解析或換一天再練。";
+  if (reviewCount) return "今天有錯題回鍋，先把弱點補起來，再挑戰閱讀題組。";
+  if ((task.basic_question_ids || []).length) return "今天先拿下基礎題，再進入閱讀題組。";
+  return `今天主題是「${group?.title || "閱讀理解"}」，抓準題幹再作答。`;
+}
+
+function renderMissionProgress(task, group, reviewCount) {
+  const attempt = readStoredAttempt();
+  const completed = attempt?.task_id === task.task_id;
+  const doneCount = completed ? 3 : 0;
+  const percent = Math.round((doneCount / 3) * 100);
+
+  setText("missionProgressText", `${doneCount} / 3 關`);
+  setText("missionProgressLabel", completed ? "已完成" : "未開始");
+  setText("studentMessage", missionMessage(task, group, reviewCount, completed));
+
+  const fill = document.getElementById("missionProgressFill");
+  if (fill) fill.style.width = `${percent}%`;
+
+  ["basicStep", "groupStep", "reviewStep"].forEach((id) => {
+    const node = document.getElementById(id);
+    if (!node) return;
+    node.classList.toggle("complete", completed);
+    node.classList.toggle("current", !completed && id === "basicStep");
+  });
+}
+
 function renderTaskSelector(tasks, selectedTask, groupMap, drillMap, onChange) {
   const selector = document.getElementById("taskSelector");
   if (!selector) return;
@@ -270,11 +315,12 @@ function renderTask(data, selectedTaskId) {
   setText("reviewCount", reviewCount);
   setText("taskStatus", runnable ? "可測試" : "待補題庫");
   setText("taskReadiness", readinessText(task, runnable));
+  renderMissionProgress(task, group, reviewCount);
 
   const statusNode = document.getElementById("taskStatus");
-  statusNode.classList.toggle("completed", false);
-  statusNode.classList.toggle("not-started", runnable);
-  statusNode.classList.toggle("blocked", !runnable);
+  statusNode?.classList.toggle("completed", readStoredAttempt()?.task_id === task.task_id);
+  statusNode?.classList.toggle("not-started", runnable && readStoredAttempt()?.task_id !== task.task_id);
+  statusNode?.classList.toggle("blocked", !runnable);
 
   document.getElementById("startButton").disabled = !runnable;
   document.getElementById("startButton").textContent = runnable ? "開始今天練習" : "這天題庫尚未補齊";
@@ -333,8 +379,48 @@ function wireButtons(data) {
   renderTaskSelector(data.tasks, pickDisplayTask(data.tasks), groupMap, drillMap, (taskId) => renderTask(data, taskId));
 }
 
+function isLoggedIn() {
+  return localStorage.getItem(AUTH_KEY) === "yes";
+}
+
+function showDashboard() {
+  document.getElementById("loginScreen").hidden = true;
+  document.getElementById("dashboard").hidden = false;
+}
+
+function showLogin() {
+  document.getElementById("loginScreen").hidden = false;
+  document.getElementById("dashboard").hidden = true;
+}
+
+function wireLogin() {
+  const form = document.getElementById("loginForm");
+  const error = document.getElementById("loginError");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const account = form.elements.account.value.trim();
+    const password = form.elements.password.value;
+    if (account !== LOGIN_ACCOUNT || password !== LOGIN_PASSWORD) {
+      error.textContent = "帳戶或密碼不正確。";
+      return;
+    }
+    localStorage.setItem(AUTH_KEY, "yes");
+    error.textContent = "";
+    showDashboard();
+  });
+
+  document.getElementById("logoutButton").addEventListener("click", () => {
+    localStorage.removeItem(AUTH_KEY);
+    showLogin();
+  });
+}
+
 async function main() {
   try {
+    wireLogin();
+    if (isLoggedIn()) showDashboard();
+    else showLogin();
+
     const [tasks, groups, drills, wrongs, reviewSchedules, report] = await Promise.all([
       readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),
       readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),
