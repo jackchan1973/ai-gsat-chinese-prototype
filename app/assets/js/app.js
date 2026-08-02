@@ -1,4 +1,5 @@
 const DATA_ROOT = "../data";
+const DATA_VERSION = "20260802-reviewed-bank";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -27,6 +28,7 @@ const knowledgeLabels = {
   K08: "跨材料比較",
   K09: "推論判斷",
   K10: "古今轉用與跨情境判斷",
+  K12: "非連續文本與圖表判讀",
   K14: "論證判斷",
   K15: "短答統整",
 };
@@ -50,15 +52,20 @@ const contentStatusLabels = {
   approved_for_app: "正式題",
 };
 
+function withDataVersion(path) {
+  const joiner = path.includes("?") ? "&" : "?";
+  return `${path}${joiner}v=${DATA_VERSION}`;
+}
+
 function readJson(path) {
-  return fetch(path).then((response) => {
+  return fetch(withDataVersion(path)).then((response) => {
     if (!response.ok) throw new Error(`讀取失敗：${path}`);
     return response.json();
   });
 }
 
 async function readJsonl(path) {
-  const response = await fetch(path);
+  const response = await fetch(withDataVersion(path));
   if (!response.ok) throw new Error(`讀取失敗：${path}`);
   const text = await response.text();
   return text
