@@ -1,6 +1,7 @@
 (() => {
   const AUTH_KEY = "chi_v1_authenticated";
   const CURRENT_USER_KEY = "chi_v1_current_user";
+  const PORTAL_KEY = "chi_v1_active_portal";
   const CLASS_ID = "1105";
   const numerals = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
 
@@ -52,23 +53,36 @@
     }
   }
 
-  function login(account, password) {
+  function login(account, password, portal = "student") {
     const normalizedAccount = String(account || "").trim();
     const normalizedPassword = String(password || "");
-    if (normalizedAccount === "admin" && normalizedPassword === "admin") {
+    const activePortal = ["student", "parent", "teacher"].includes(portal) ? portal : "student";
+
+    if (activePortal === "teacher" && normalizedAccount === "admin" && normalizedPassword === "admin") {
+      localStorage.setItem(PORTAL_KEY, activePortal);
       saveUser(teacher);
       return teacher;
     }
 
     const student = studentMap.get(normalizedAccount);
     if (!student || student.password !== normalizedPassword) return null;
-    saveUser(student);
-    return student;
+    const user = activePortal === "parent"
+      ? {
+          ...student,
+          role: "parent",
+          name: `${student.name}家長`,
+          nickname: `${student.name}家長`,
+        }
+      : student;
+    localStorage.setItem(PORTAL_KEY, activePortal);
+    saveUser(user);
+    return user;
   }
 
   function logout() {
     localStorage.removeItem(AUTH_KEY);
     localStorage.removeItem(CURRENT_USER_KEY);
+    localStorage.removeItem(PORTAL_KEY);
   }
 
   function isLoggedIn() {
@@ -88,7 +102,12 @@
   function displayName(user = getCurrentUser()) {
     if (!user) return "";
     if (user.role === "teacher") return `${user.class_id}班｜導師模式`;
+    if (user.role === "parent") return `${user.class_id}班｜${user.seat_no}號｜${user.nickname}`;
     return `${user.class_id}班｜${user.seat_no}號｜${user.name}`;
+  }
+
+  function activePortal() {
+    return localStorage.getItem(PORTAL_KEY) || getCurrentUser()?.role || "student";
   }
 
   window.ChiAuth = {
@@ -101,5 +120,6 @@
     storageKey,
     storageKeyForUser,
     displayName,
+    activePortal,
   };
 })();

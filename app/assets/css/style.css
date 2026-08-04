@@ -1587,6 +1587,79 @@ body {
   background: #f7fbfd;
 }
 
+.portal-switch {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.portal-option {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  min-height: 92px;
+  border: 1px solid rgba(3, 96, 121, 0.18);
+  border-radius: 8px;
+  padding: 12px 10px;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.portal-option strong,
+.portal-option span {
+  min-width: 0;
+}
+
+.portal-option strong {
+  color: var(--primary-dark);
+  font-size: 1.12rem;
+  line-height: 1.15;
+}
+
+.portal-option span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.portal-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(7, 19, 31, 0.1);
+}
+
+.portal-option.active {
+  border-color: rgba(0, 167, 200, 0.7);
+  background: linear-gradient(135deg, #e8fbff, #f5f1ff);
+  box-shadow: inset 0 0 0 2px rgba(0, 167, 200, 0.16);
+}
+
+.teacher-portal-option {
+  border-color: rgba(240, 124, 40, 0.4);
+  background: #fff7ed;
+}
+
+.teacher-portal-option strong {
+  color: #a34508;
+}
+
+.teacher-portal-option.active {
+  border-color: rgba(240, 124, 40, 0.8);
+  background: linear-gradient(135deg, #fff7ed, #ffe4cc);
+  box-shadow: inset 0 0 0 2px rgba(240, 124, 40, 0.18);
+}
+
+.login-submit-action {
+  margin-top: 4px;
+}
+
 .student-dashboard {
   position: relative;
 }
@@ -1871,11 +1944,9 @@ body {
   white-space: nowrap;
 }
 
-.teacher-link-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+.teacher-page {
+  background:
+    linear-gradient(180deg, #101721 0, #182331 270px, #eef4f8 270px, #eef4f8 100%);
 }
 
 .teacher-shell {
@@ -1883,13 +1954,11 @@ body {
 }
 
 .teacher-topbar {
-  min-height: 132px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 22px;
-  background:
-    linear-gradient(90deg, rgba(7, 19, 31, 0.96), rgba(7, 19, 31, 0.72), rgba(7, 19, 31, 0.1)),
-    url("../images/chinese-study-hero.png") center 46% / cover no-repeat;
+  background: linear-gradient(135deg, #111b27, #1e3142 58%, #263f4f);
   color: #fff;
 }
 
@@ -1898,11 +1967,54 @@ body {
   color: #fff;
 }
 
+.teacher-topbar h1 {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+}
+
+.teacher-topbar-note {
+  max-width: 520px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.teacher-command-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.teacher-command {
+  min-height: 50px;
+  border: 1px solid rgba(3, 96, 121, 0.18);
+  border-radius: 8px;
+  padding: 0 18px;
+  background: #ffffff;
+  color: #102235;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(7, 19, 31, 0.1);
+}
+
+.teacher-command.primary {
+  border-color: rgba(240, 124, 40, 0.72);
+  background: linear-gradient(135deg, #f07c28, #b64a0f);
+  color: #fff;
+}
+
+.copy-status {
+  min-height: 24px;
+  color: #0f6f8d;
+  font-weight: 900;
+}
+
 .teacher-alert {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin: 14px 0;
+  margin: 14px 0 0;
   border: 1px solid rgba(240, 124, 40, 0.3);
   border-radius: 8px;
   padding: 12px 14px;
@@ -1961,6 +2073,17 @@ body {
   align-items: center;
   gap: 14px;
   margin-bottom: 14px;
+  background: #ffffff;
+}
+
+.teacher-tools h2 {
+  margin: 0 0 4px;
+  color: #102235;
+}
+
+.teacher-tools p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .teacher-filter-group {
@@ -2175,6 +2298,7 @@ body {
 
 @media (max-width: 900px) {
   .login-screen,
+  .portal-switch,
   .student-plan-stack,
   .teacher-summary-grid,
   .practice-page .practice-layout,
@@ -2198,7 +2322,8 @@ body {
   }
 
   .teacher-tools,
-  .teacher-alert {
+  .teacher-alert,
+  .teacher-command-strip {
     align-items: stretch;
     flex-direction: column;
   }
@@ -2232,6 +2357,10 @@ body {
 
   .login-brand h1 {
     font-size: 2.35rem;
+  }
+
+  .portal-option {
+    min-height: 68px;
   }
 
   .student-home-topbar,

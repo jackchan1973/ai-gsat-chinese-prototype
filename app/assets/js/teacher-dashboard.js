@@ -144,6 +144,49 @@ function wireFilters() {
   document.getElementById("studentSearch").addEventListener("input", renderRows);
 }
 
+function copyText(text) {
+  if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+  document.body.append(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+  return Promise.resolve();
+}
+
+function buildAccountList() {
+  return window.ChiAuth.students
+    .map((student) => `${student.seat_no} ${student.name}｜帳號 ${student.seat_no}｜密碼 ${student.password}`)
+    .join("\n");
+}
+
+function wireTeacherActions() {
+  document.getElementById("attentionShortcut").addEventListener("click", () => {
+    activeFilter = "attention";
+    document.querySelectorAll(".teacher-filter").forEach((button) => {
+      const active = button.dataset.filter === "attention";
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    document.getElementById("studentSearch").value = "";
+    renderRows();
+    document.querySelector(".teacher-table-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  document.getElementById("copyAccountsButton").addEventListener("click", async () => {
+    const status = document.getElementById("copyStatus");
+    await copyText(buildAccountList());
+    status.textContent = "已複製 50 位帳號";
+    window.setTimeout(() => {
+      status.textContent = "";
+    }, 2200);
+  });
+}
+
 function requireTeacher() {
   if (!window.ChiAuth?.isLoggedIn()) return false;
   return window.ChiAuth.getCurrentUser()?.role === "teacher";
@@ -169,6 +212,7 @@ function main() {
   studentRows = buildStudentRows();
   renderSummary(studentRows);
   wireFilters();
+  wireTeacherActions();
   renderRows();
 }
 

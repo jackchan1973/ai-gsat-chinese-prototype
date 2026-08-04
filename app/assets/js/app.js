@@ -258,9 +258,6 @@ function readStoredAttempt() {
 
 function renderCurrentUser() {
   setText("userIdentity", window.ChiAuth?.displayName() || "尚未登入");
-  const teacherLink = document.getElementById("teacherDashboardLink");
-  const currentUser = window.ChiAuth?.getCurrentUser();
-  if (teacherLink) teacherLink.hidden = currentUser?.role !== "teacher";
 }
 
 function missionMessage(task, group, reviewCount, completed) {
@@ -435,20 +432,90 @@ function showLogin() {
   document.getElementById("dashboard").hidden = true;
 }
 
+function portalCopy(portal) {
+  const copy = {
+    student: {
+      title: "學生登入",
+      hint: "用座號與個人密碼進入今日任務。",
+      accountLabel: "學生座號",
+      accountValue: "01",
+      accountPlaceholder: "例如 01",
+      passwordValue: "100501",
+      button: "進入今日任務",
+    },
+    parent: {
+      title: "家長登入",
+      hint: "帳號密碼同學生，用來查看孩子週報。",
+      accountLabel: "孩子座號",
+      accountValue: "01",
+      accountPlaceholder: "例如 01",
+      passwordValue: "100501",
+      button: "查看家長週報",
+    },
+    teacher: {
+      title: "導師登入",
+      hint: "導師帳號 admin / admin，登入後直接進班級後台。",
+      accountLabel: "導師帳號",
+      accountValue: "admin",
+      accountPlaceholder: "admin",
+      passwordValue: "admin",
+      button: "進入導師後台",
+    },
+  };
+  return copy[portal] || copy.student;
+}
+
+function setPortal(portal) {
+  const selected = portalCopy(portal);
+  document.getElementById("portalInput").value = portal;
+  setText("loginTitle", selected.title);
+  setText("loginHint", selected.hint);
+  setText("accountLabel", selected.accountLabel);
+  setText("loginSubmitButton", selected.button);
+  const accountInput = document.getElementById("accountInput");
+  const passwordInput = document.getElementById("passwordInput");
+  accountInput.value = selected.accountValue;
+  accountInput.placeholder = selected.accountPlaceholder;
+  passwordInput.value = selected.passwordValue;
+  document.querySelectorAll(".portal-option").forEach((button) => {
+    const active = button.dataset.portal === portal;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  document.getElementById("loginError").textContent = "";
+}
+
+function routeUser(user) {
+  if (user?.role === "teacher") {
+    window.location.href = "./pages/teacher-dashboard.html";
+    return true;
+  }
+  if (user?.role === "parent") {
+    window.location.href = "./pages/parent-report.html";
+    return true;
+  }
+  return false;
+}
+
 function wireLogin() {
   const form = document.getElementById("loginForm");
   const error = document.getElementById("loginError");
+  document.querySelectorAll(".portal-option").forEach((button) => {
+    button.addEventListener("click", () => setPortal(button.dataset.portal || "student"));
+  });
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const portal = form.elements.portal.value || "student";
     const account = form.elements.account.value.trim();
     const password = form.elements.password.value;
-    const user = window.ChiAuth ? window.ChiAuth.login(account, password) : null;
-    if (!user && (account !== LOGIN_ACCOUNT || password !== LOGIN_PASSWORD)) {
+    const user = window.ChiAuth ? window.ChiAuth.login(account, password, portal) : null;
+    if (!user && (window.ChiAuth || account !== LOGIN_ACCOUNT || password !== LOGIN_PASSWORD)) {
       error.textContent = "帳戶或密碼不正確。";
       return;
     }
     if (!user) localStorage.setItem(AUTH_KEY, "yes");
     error.textContent = "";
+    if (routeUser(user)) return;
     showDashboard();
   });
 
@@ -462,8 +529,14 @@ function wireLogin() {
 async function main() {
   try {
     wireLogin();
-    if (isLoggedIn()) showDashboard();
-    else showLogin();
+    if (isLoggedIn()) {
+      const user = window.ChiAuth?.getCurrentUser();
+      if (routeUser(user)) return;
+      showDashboard();
+    } else {
+      showLogin();
+      setPortal("student");
+    }
 
     const [tasks, groups, drills, wrongs, reviewSchedules, report] = await Promise.all([
       readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),

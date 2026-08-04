@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜1105班導師儀表板</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260804-teacher-dashboard" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260804-portal-login" />
   </head>
-  <body>
+  <body class="teacher-page">
     <main class="app-shell teacher-shell">
       <header class="topbar teacher-topbar">
         <div>
-          <p class="eyebrow">AI學測考總複習</p>
-          <h1>1105班導師儀表板</h1>
+          <p class="eyebrow">1105 班級管理</p>
+          <h1>導師控制台</h1>
+          <p class="teacher-topbar-note">只保留導師需要看的班級進度、關注名單與帳號發放資訊。</p>
         </div>
         <div class="topbar-actions">
           <div class="user-identity-pill" id="teacherIdentity">導師模式</div>
@@ -20,9 +21,10 @@
         </div>
       </header>
 
-      <section class="teacher-alert" id="teacherAlert">
-        <strong>目前是靜態測試版</strong>
-        <span>這裡讀取的是同一台裝置瀏覽器內的學生紀錄；未來接資料庫後，才能跨裝置看全班真實進度。</span>
+      <section class="teacher-command-strip" aria-label="導師操作">
+        <button class="teacher-command primary" type="button" id="attentionShortcut">查看需關注學生</button>
+        <button class="teacher-command" type="button" id="copyAccountsButton">複製全班帳號</button>
+        <span id="copyStatus" class="copy-status" role="status"></span>
       </section>
 
       <section class="teacher-summary-grid" aria-label="班級摘要">
@@ -49,6 +51,10 @@
       </section>
 
       <section class="teacher-tools panel" aria-label="導師工具">
+        <div>
+          <h2>班級名單</h2>
+          <p>同一台瀏覽器中的登入與作答紀錄</p>
+        </div>
         <div class="teacher-filter-group" role="tablist" aria-label="篩選學生">
           <button class="teacher-filter active" type="button" data-filter="all">全部</button>
           <button class="teacher-filter" type="button" data-filter="logged">已登入</button>
@@ -59,6 +65,11 @@
           <span>搜尋</span>
           <input id="studentSearch" type="search" placeholder="輸入座號或姓名" autocomplete="off" />
         </label>
+      </section>
+
+      <section class="teacher-alert" id="teacherAlert">
+        <strong>靜態測試版限制</strong>
+        <span>目前讀取同一台裝置瀏覽器內的學生紀錄；接資料庫後才能跨手機、跨電腦看全班真實進度。</span>
       </section>
 
       <section class="panel teacher-table-panel" aria-label="學生進度表">
@@ -86,7 +97,7 @@
       </section>
     </main>
 
-    <script src="../assets/js/session.js?v=20260804-teacher-dashboard"></script>
-    <script src="../assets/js/teacher-dashboard.js?v=20260804-teacher-dashboard"></script>
+    <script src="../assets/js/session.js?v=20260804-portal-login"></script>
+    <script src="../assets/js/teacher-dashboard.js?v=20260804-portal-login"></script>
   </body>
 </html>
