@@ -12,16 +12,21 @@
     "basic_question_ids": [
       "CHI_BASIC_001",
       "CHI_BASIC_002",
-      "CHI_BASIC_003"
+      "CHI_BASIC_003",
+      "CHI_BASIC_004",
+      "CHI_BASIC_005",
+      "CHI_BASIC_006",
+      "CHI_BASIC_007",
+      "CHI_BASIC_008"
     ],
     "group_id": "CHI_V2_G001",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "existing_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -42,7 +47,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_02_CHI",
@@ -55,18 +60,23 @@
     "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_004",
-      "CHI_BASIC_005",
-      "CHI_BASIC_006"
+      "CHI_BASIC_009",
+      "CHI_BASIC_010",
+      "CHI_BASIC_011",
+      "CHI_BASIC_012",
+      "CHI_BASIC_013",
+      "CHI_BASIC_014",
+      "CHI_BASIC_015",
+      "CHI_BASIC_016"
     ],
     "group_id": "CHI_V2_G002",
     "review_question_ids": [],
-    "estimated_minutes": 28,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "existing_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -87,7 +97,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_03_CHI",
@@ -100,18 +110,23 @@
     "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_007",
-      "CHI_BASIC_008",
-      "CHI_BASIC_009"
+      "CHI_BASIC_017",
+      "CHI_BASIC_018",
+      "CHI_BASIC_019",
+      "CHI_BASIC_020",
+      "CHI_BASIC_021",
+      "CHI_BASIC_022",
+      "CHI_BASIC_023",
+      "CHI_BASIC_024"
     ],
     "group_id": "CHI_V2_G003",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "existing_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -137,7 +152,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_04_CHI",
@@ -150,18 +165,23 @@
     "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_010",
-      "CHI_BASIC_011",
-      "CHI_BASIC_012"
+      "CHI_BASIC_025",
+      "CHI_BASIC_026",
+      "CHI_BASIC_027",
+      "CHI_BASIC_028",
+      "CHI_BASIC_029",
+      "CHI_BASIC_030",
+      "CHI_BASIC_031",
+      "CHI_BASIC_032"
     ],
     "group_id": "CHI_V2_G004",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "existing_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -187,7 +207,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_05_CHI",
@@ -200,18 +220,23 @@
     "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_013",
-      "CHI_BASIC_014",
-      "CHI_BASIC_015"
+      "CHI_BASIC_033",
+      "CHI_BASIC_034",
+      "CHI_BASIC_035",
+      "CHI_BASIC_036",
+      "CHI_BASIC_037",
+      "CHI_BASIC_038",
+      "CHI_BASIC_039",
+      "CHI_BASIC_040"
     ],
     "group_id": "CHI_V2_G005",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "existing_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -237,7 +262,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_06_CHI",
@@ -250,9 +275,14 @@
     "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_016",
-      "CHI_BASIC_017",
-      "CHI_BASIC_018"
+      "CHI_BASIC_041",
+      "CHI_BASIC_042",
+      "CHI_BASIC_043",
+      "CHI_BASIC_044",
+      "CHI_BASIC_045",
+      "CHI_BASIC_046",
+      "CHI_BASIC_047",
+      "CHI_BASIC_048"
     ],
     "group_id": "CHI_V2_G006",
     "review_question_ids": [],
@@ -260,8 +290,8 @@
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "existing_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -282,7 +312,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_07_CHI",
@@ -295,9 +325,14 @@
     "weekly_focus": "建立節奏：字音字形、詞語語境、文言詞義與古今轉用",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_019",
-      "CHI_BASIC_020",
-      "CHI_BASIC_021"
+      "CHI_BASIC_049",
+      "CHI_BASIC_050",
+      "CHI_BASIC_051",
+      "CHI_BASIC_052",
+      "CHI_BASIC_053",
+      "CHI_BASIC_054",
+      "CHI_BASIC_055",
+      "CHI_BASIC_056"
     ],
     "group_id": "CHI_V2_G007",
     "review_question_ids": [],
@@ -305,8 +340,8 @@
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -327,7 +362,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_08_CHI",
@@ -340,18 +375,23 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_022",
-      "CHI_BASIC_023",
-      "CHI_BASIC_024"
+      "CHI_BASIC_057",
+      "CHI_BASIC_058",
+      "CHI_BASIC_059",
+      "CHI_BASIC_060",
+      "CHI_BASIC_061",
+      "CHI_BASIC_062",
+      "CHI_BASIC_063",
+      "CHI_BASIC_064"
     ],
     "group_id": "CHI_V2_G008",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -377,7 +417,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_09_CHI",
@@ -390,18 +430,23 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_025",
-      "CHI_BASIC_026",
-      "CHI_BASIC_027"
+      "CHI_BASIC_065",
+      "CHI_BASIC_066",
+      "CHI_BASIC_067",
+      "CHI_BASIC_068",
+      "CHI_BASIC_069",
+      "CHI_BASIC_070",
+      "CHI_BASIC_071",
+      "CHI_BASIC_072"
     ],
     "group_id": "CHI_V2_G009",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -422,7 +467,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_10_CHI",
@@ -435,18 +480,23 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_028",
-      "CHI_BASIC_029",
-      "CHI_BASIC_030"
+      "CHI_BASIC_073",
+      "CHI_BASIC_074",
+      "CHI_BASIC_075",
+      "CHI_BASIC_076",
+      "CHI_BASIC_077",
+      "CHI_BASIC_078",
+      "CHI_BASIC_079",
+      "CHI_BASIC_080"
     ],
     "group_id": "CHI_V2_G010",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -472,7 +522,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_11_CHI",
@@ -485,18 +535,23 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_031",
-      "CHI_BASIC_032",
-      "CHI_BASIC_033"
+      "CHI_BASIC_081",
+      "CHI_BASIC_082",
+      "CHI_BASIC_083",
+      "CHI_BASIC_084",
+      "CHI_BASIC_085",
+      "CHI_BASIC_086",
+      "CHI_BASIC_087",
+      "CHI_BASIC_088"
     ],
     "group_id": "CHI_V2_G011",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -517,7 +572,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_12_CHI",
@@ -530,18 +585,23 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_034",
-      "CHI_BASIC_035",
-      "CHI_BASIC_036"
+      "CHI_BASIC_089",
+      "CHI_BASIC_090",
+      "CHI_BASIC_091",
+      "CHI_BASIC_092",
+      "CHI_BASIC_093",
+      "CHI_BASIC_094",
+      "CHI_BASIC_095",
+      "CHI_BASIC_096"
     ],
     "group_id": "CHI_V2_G012",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -562,7 +622,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_13_CHI",
@@ -575,18 +635,23 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_037",
-      "CHI_BASIC_038",
-      "CHI_BASIC_039"
+      "CHI_BASIC_097",
+      "CHI_BASIC_098",
+      "CHI_BASIC_099",
+      "CHI_BASIC_100",
+      "CHI_BASIC_101",
+      "CHI_BASIC_102",
+      "CHI_BASIC_103",
+      "CHI_BASIC_104"
     ],
     "group_id": "CHI_V2_G013",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -607,7 +672,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_14_CHI",
@@ -620,9 +685,14 @@
     "weekly_focus": "加強閱讀：現代文主旨、文言文意、跨材料比較",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_040",
-      "CHI_BASIC_041",
-      "CHI_BASIC_042"
+      "CHI_BASIC_105",
+      "CHI_BASIC_106",
+      "CHI_BASIC_107",
+      "CHI_BASIC_108",
+      "CHI_BASIC_109",
+      "CHI_BASIC_110",
+      "CHI_BASIC_111",
+      "CHI_BASIC_112"
     ],
     "group_id": "CHI_V2_G014",
     "review_question_ids": [],
@@ -630,8 +700,8 @@
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -652,7 +722,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_15_CHI",
@@ -665,18 +735,23 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_043",
-      "CHI_BASIC_044",
-      "CHI_BASIC_045"
+      "CHI_BASIC_113",
+      "CHI_BASIC_114",
+      "CHI_BASIC_115",
+      "CHI_BASIC_116",
+      "CHI_BASIC_117",
+      "CHI_BASIC_118",
+      "CHI_BASIC_119",
+      "CHI_BASIC_120"
     ],
     "group_id": "CHI_V2_G015",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -702,7 +777,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_16_CHI",
@@ -715,18 +790,23 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_046",
-      "CHI_BASIC_047",
-      "CHI_BASIC_048"
+      "CHI_BASIC_121",
+      "CHI_BASIC_122",
+      "CHI_BASIC_123",
+      "CHI_BASIC_124",
+      "CHI_BASIC_125",
+      "CHI_BASIC_126",
+      "CHI_BASIC_127",
+      "CHI_BASIC_128"
     ],
     "group_id": "CHI_V2_G016",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -747,7 +827,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_17_CHI",
@@ -760,18 +840,23 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_049",
-      "CHI_BASIC_050",
-      "CHI_BASIC_051"
+      "CHI_BASIC_129",
+      "CHI_BASIC_130",
+      "CHI_BASIC_131",
+      "CHI_BASIC_132",
+      "CHI_BASIC_133",
+      "CHI_BASIC_134",
+      "CHI_BASIC_135",
+      "CHI_BASIC_136"
     ],
     "group_id": "CHI_V2_G017",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -792,7 +877,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_18_CHI",
@@ -805,18 +890,23 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_052",
-      "CHI_BASIC_053",
-      "CHI_BASIC_054"
+      "CHI_BASIC_137",
+      "CHI_BASIC_138",
+      "CHI_BASIC_139",
+      "CHI_BASIC_140",
+      "CHI_BASIC_141",
+      "CHI_BASIC_142",
+      "CHI_BASIC_143",
+      "CHI_BASIC_144"
     ],
     "group_id": "CHI_V2_G018",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -837,7 +927,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_19_CHI",
@@ -850,18 +940,23 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_055",
-      "CHI_BASIC_056",
-      "CHI_BASIC_057"
+      "CHI_BASIC_145",
+      "CHI_BASIC_146",
+      "CHI_BASIC_147",
+      "CHI_BASIC_148",
+      "CHI_BASIC_149",
+      "CHI_BASIC_150",
+      "CHI_BASIC_151",
+      "CHI_BASIC_152"
     ],
     "group_id": "CHI_V2_G019",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -882,7 +977,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_20_CHI",
@@ -895,18 +990,23 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_058",
-      "CHI_BASIC_059",
-      "CHI_BASIC_060"
+      "CHI_BASIC_153",
+      "CHI_BASIC_154",
+      "CHI_BASIC_155",
+      "CHI_BASIC_156",
+      "CHI_BASIC_157",
+      "CHI_BASIC_158",
+      "CHI_BASIC_159",
+      "CHI_BASIC_160"
     ],
     "group_id": "CHI_V2_G020",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -927,7 +1027,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_21_CHI",
@@ -940,9 +1040,14 @@
     "weekly_focus": "提高難度：圖表判讀、多選完整判斷、短答統整",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_061",
-      "CHI_BASIC_062",
-      "CHI_BASIC_063"
+      "CHI_BASIC_161",
+      "CHI_BASIC_162",
+      "CHI_BASIC_163",
+      "CHI_BASIC_164",
+      "CHI_BASIC_165",
+      "CHI_BASIC_166",
+      "CHI_BASIC_167",
+      "CHI_BASIC_168"
     ],
     "group_id": "CHI_V2_G021",
     "review_question_ids": [],
@@ -950,8 +1055,8 @@
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -972,7 +1077,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_22_CHI",
@@ -985,18 +1090,23 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_064",
-      "CHI_BASIC_065",
-      "CHI_BASIC_066"
+      "CHI_BASIC_169",
+      "CHI_BASIC_170",
+      "CHI_BASIC_171",
+      "CHI_BASIC_172",
+      "CHI_BASIC_173",
+      "CHI_BASIC_174",
+      "CHI_BASIC_175",
+      "CHI_BASIC_176"
     ],
     "group_id": "CHI_V2_G022",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1022,7 +1132,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_23_CHI",
@@ -1035,18 +1145,23 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_067",
-      "CHI_BASIC_068",
-      "CHI_BASIC_069"
+      "CHI_BASIC_177",
+      "CHI_BASIC_178",
+      "CHI_BASIC_179",
+      "CHI_BASIC_180",
+      "CHI_BASIC_181",
+      "CHI_BASIC_182",
+      "CHI_BASIC_183",
+      "CHI_BASIC_184"
     ],
     "group_id": "CHI_V2_G023",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1067,7 +1182,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_24_CHI",
@@ -1080,18 +1195,23 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_070",
-      "CHI_BASIC_071",
-      "CHI_BASIC_072"
+      "CHI_BASIC_185",
+      "CHI_BASIC_186",
+      "CHI_BASIC_187",
+      "CHI_BASIC_188",
+      "CHI_BASIC_189",
+      "CHI_BASIC_190",
+      "CHI_BASIC_191",
+      "CHI_BASIC_192"
     ],
     "group_id": "CHI_V2_G024",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1112,7 +1232,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_25_CHI",
@@ -1125,18 +1245,23 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_073",
-      "CHI_BASIC_074",
-      "CHI_BASIC_075"
+      "CHI_BASIC_193",
+      "CHI_BASIC_194",
+      "CHI_BASIC_195",
+      "CHI_BASIC_196",
+      "CHI_BASIC_197",
+      "CHI_BASIC_198",
+      "CHI_BASIC_199",
+      "CHI_BASIC_200"
     ],
     "group_id": "CHI_V2_G025",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1157,7 +1282,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_26_CHI",
@@ -1170,18 +1295,23 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_076",
-      "CHI_BASIC_077",
-      "CHI_BASIC_078"
+      "CHI_BASIC_201",
+      "CHI_BASIC_202",
+      "CHI_BASIC_203",
+      "CHI_BASIC_204",
+      "CHI_BASIC_205",
+      "CHI_BASIC_206",
+      "CHI_BASIC_207",
+      "CHI_BASIC_208"
     ],
     "group_id": "CHI_V2_G026",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1202,7 +1332,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_27_CHI",
@@ -1215,18 +1345,23 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_079",
-      "CHI_BASIC_080",
-      "CHI_BASIC_081"
+      "CHI_BASIC_209",
+      "CHI_BASIC_210",
+      "CHI_BASIC_211",
+      "CHI_BASIC_212",
+      "CHI_BASIC_213",
+      "CHI_BASIC_214",
+      "CHI_BASIC_215",
+      "CHI_BASIC_216"
     ],
     "group_id": "CHI_V2_G027",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1247,7 +1382,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_28_CHI",
@@ -1260,9 +1395,14 @@
     "weekly_focus": "月末整合：混合題組、弱點回補、短答表達",
     "task_type": "daily_short_review",
     "basic_question_ids": [
-      "CHI_BASIC_082",
-      "CHI_BASIC_083",
-      "CHI_BASIC_084"
+      "CHI_BASIC_217",
+      "CHI_BASIC_218",
+      "CHI_BASIC_219",
+      "CHI_BASIC_220",
+      "CHI_BASIC_221",
+      "CHI_BASIC_222",
+      "CHI_BASIC_223",
+      "CHI_BASIC_224"
     ],
     "group_id": "CHI_V2_G028",
     "review_question_ids": [],
@@ -1270,8 +1410,8 @@
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1292,7 +1432,7 @@
     "review_due_slots": [],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_29_CHI",
@@ -1305,18 +1445,23 @@
     "weekly_focus": "收束檢查：整理錯題與下月題庫缺口",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_085",
-      "CHI_BASIC_086",
-      "CHI_BASIC_087"
+      "CHI_BASIC_225",
+      "CHI_BASIC_226",
+      "CHI_BASIC_227",
+      "CHI_BASIC_228",
+      "CHI_BASIC_229",
+      "CHI_BASIC_230",
+      "CHI_BASIC_231",
+      "CHI_BASIC_232"
     ],
     "group_id": "CHI_V2_G029",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1342,7 +1487,7 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   },
   {
     "task_id": "TASK_2026_09_30_CHI",
@@ -1355,18 +1500,23 @@
     "weekly_focus": "收束檢查：整理錯題與下月題庫缺口",
     "task_type": "daily_short_review_with_review",
     "basic_question_ids": [
-      "CHI_BASIC_088",
-      "CHI_BASIC_089",
-      "CHI_BASIC_090"
+      "CHI_BASIC_233",
+      "CHI_BASIC_234",
+      "CHI_BASIC_235",
+      "CHI_BASIC_236",
+      "CHI_BASIC_237",
+      "CHI_BASIC_238",
+      "CHI_BASIC_239",
+      "CHI_BASIC_240"
     ],
     "group_id": "CHI_V2_G030",
     "review_question_ids": [],
-    "estimated_minutes": 32,
+    "estimated_minutes": 45,
     "planned_sections": [
       {
         "section": "基礎短練",
-        "count": 3,
-        "source": "reviewed_bank"
+        "count": 8,
+        "source": "reviewed_k01_four_type_bank"
       },
       {
         "section": "閱讀題組",
@@ -1392,6 +1542,6 @@
     ],
     "app_readiness": "can_run_as_candidate",
     "teacher_review_status": "teacher_revised_for_gsat_practice",
-    "teacher_reviewed_at": "2026-08-02"
+    "teacher_reviewed_at": "2026-08-04"
   }
 ]

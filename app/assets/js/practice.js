@@ -1,5 +1,5 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260802-k01-cards";
+const DATA_VERSION = "20260804-k01-four-types";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -236,6 +236,7 @@ function renderQuestion(question, index) {
         <span class="tag">${escapeHtml(question.source_section)}</span>
         <span class="tag">${escapeHtml(questionTypeLabel(question.question_type))}</span>
         <span class="tag">${escapeHtml(formatKnowledge(question.knowledge_code))}</span>
+        ${question.sub_drill_type ? `<span class="tag">${escapeHtml(question.sub_drill_type)}</span>` : ""}
         <button class="mark-question-button" type="button" data-mark="${escapeHtml(question.question_id)}">標記</button>
       </div>
       <h3>${escapeHtml(question.prompt)}</h3>

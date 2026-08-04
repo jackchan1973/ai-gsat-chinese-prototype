@@ -26,12 +26,12 @@
       "到期錯題 0-3 題"
     ],
     "review_rule": "錯題答錯後第 2 天回流；若同知識點一週錯 2 次以上，下週提高該知識點比例。",
-    "basic_drills": "每日3題字音字形，皆使用台灣注音符號，難度以高中學測常見誤讀、形近誤寫與破音字辨析為準。"
+    "basic_drills": "每日8題字音字形：字音辨識2題、字形辨正2題、音形綜合2題、語境辨字2題。"
   },
   "target_bank_size": {
     "reading_groups": 30,
     "reading_questions": 150,
-    "basic_drills": 90,
+    "basic_drills": 240,
     "minimum_short_answer_groups": 18,
     "minimum_multiple_choice_groups": 24
   },
@@ -471,15 +471,15 @@
     },
     "basic_drills_teacher_reviewed": 42,
     "basic_drills_teacher_review_status": "teacher_revised_for_gsat_basic_drill",
-    "basic_drills": 90,
-    "basic_drills_k01": 90
+    "basic_drills": 240,
+    "basic_drills_k01": 240
   },
   "gap_summary": {
     "status": "filled_for_candidate_review",
     "reading_groups_gap": 0,
     "reading_questions_gap": 0,
     "basic_drills_gap": 0,
-    "note": "已補齊30天候選題庫；每日基礎短練調整為至少3題高中程度字音字形。學生試做後再升為approved_for_app。"
+    "note": "已補齊30天候選題庫；每日基礎短練調整為8題高中程度字音字形，涵蓋四大類。學生試做後再升為approved_for_app。"
   },
   "target_basic_drills": {
     "total_for_30_days": 90,
