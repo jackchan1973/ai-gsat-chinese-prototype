@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜1105班導師儀表板</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260804-teacher-dashboard" />
+  </head>
+  <body>
+    <main class="app-shell teacher-shell">
+      <header class="topbar teacher-topbar">
+        <div>
+          <p class="eyebrow">AI學測考總複習</p>
+          <h1>1105班導師儀表板</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="user-identity-pill" id="teacherIdentity">導師模式</div>
+          <a class="home-return-action" href="../index.html">返回主頁</a>
+        </div>
+      </header>
+
+      <section class="teacher-alert" id="teacherAlert">
+        <strong>目前是靜態測試版</strong>
+        <span>這裡讀取的是同一台裝置瀏覽器內的學生紀錄；未來接資料庫後，才能跨裝置看全班真實進度。</span>
+      </section>
+
+      <section class="teacher-summary-grid" aria-label="班級摘要">
+        <article class="teacher-summary-card">
+          <span>已登入</span>
+          <strong id="loggedInCount">--</strong>
+          <small>50 位學生</small>
+        </article>
+        <article class="teacher-summary-card">
+          <span>已完成練習</span>
+          <strong id="completedCount">--</strong>
+          <small>有作答紀錄</small>
+        </article>
+        <article class="teacher-summary-card">
+          <span>平均答對率</span>
+          <strong id="averageRate">--</strong>
+          <small>只統計已作答</small>
+        </article>
+        <article class="teacher-summary-card attention">
+          <span>需要關注</span>
+          <strong id="attentionCount">--</strong>
+          <small>未登入或錯題偏多</small>
+        </article>
+      </section>
+
+      <section class="teacher-tools panel" aria-label="導師工具">
+        <div class="teacher-filter-group" role="tablist" aria-label="篩選學生">
+          <button class="teacher-filter active" type="button" data-filter="all">全部</button>
+          <button class="teacher-filter" type="button" data-filter="logged">已登入</button>
+          <button class="teacher-filter" type="button" data-filter="completed">已完成</button>
+          <button class="teacher-filter" type="button" data-filter="attention">需關注</button>
+        </div>
+        <label class="teacher-search">
+          <span>搜尋</span>
+          <input id="studentSearch" type="search" placeholder="輸入座號或姓名" autocomplete="off" />
+        </label>
+      </section>
+
+      <section class="panel teacher-table-panel" aria-label="學生進度表">
+        <div class="section-title">
+          <h2>學生進度</h2>
+          <span id="visibleCount">--</span>
+        </div>
+        <div class="teacher-table-wrap">
+          <table class="teacher-table">
+            <thead>
+              <tr>
+                <th>座號</th>
+                <th>姓名</th>
+                <th>狀態</th>
+                <th>最新任務</th>
+                <th>答對率</th>
+                <th>錯題</th>
+                <th>最後登入</th>
+                <th>帳號密碼</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/session.js?v=20260804-teacher-dashboard"></script>
+    <script src="../assets/js/teacher-dashboard.js?v=20260804-teacher-dashboard"></script>
+  </body>
+</html>

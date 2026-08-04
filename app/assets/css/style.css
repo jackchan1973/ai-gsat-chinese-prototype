@@ -1871,6 +1871,221 @@ body {
   white-space: nowrap;
 }
 
+.teacher-link-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.teacher-shell {
+  width: min(1240px, calc(100% - 32px));
+}
+
+.teacher-topbar {
+  min-height: 132px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 22px;
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.96), rgba(7, 19, 31, 0.72), rgba(7, 19, 31, 0.1)),
+    url("../images/chinese-study-hero.png") center 46% / cover no-repeat;
+  color: #fff;
+}
+
+.teacher-topbar .eyebrow,
+.teacher-topbar h1 {
+  color: #fff;
+}
+
+.teacher-alert {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0;
+  border: 1px solid rgba(240, 124, 40, 0.3);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fff7ed;
+  color: #7c3c08;
+}
+
+.teacher-alert strong {
+  white-space: nowrap;
+}
+
+.teacher-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.teacher-summary-card {
+  display: grid;
+  gap: 6px;
+  min-height: 132px;
+  border: 1px solid rgba(3, 96, 121, 0.14);
+  border-radius: 8px;
+  padding: 18px;
+  background: linear-gradient(180deg, #ffffff, #eefbff);
+  box-shadow: 0 18px 46px rgba(7, 19, 31, 0.1);
+}
+
+.teacher-summary-card span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.teacher-summary-card strong {
+  color: var(--primary-dark);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.teacher-summary-card small {
+  color: var(--muted);
+}
+
+.teacher-summary-card.attention {
+  background: linear-gradient(180deg, #ffffff, #fff3e8);
+}
+
+.teacher-summary-card.attention strong {
+  color: var(--accent);
+}
+
+.teacher-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.teacher-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.teacher-filter {
+  min-height: 40px;
+  border: 1px solid rgba(3, 96, 121, 0.18);
+  border-radius: 8px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.teacher-filter.active {
+  border-color: rgba(0, 167, 200, 0.68);
+  background: linear-gradient(135deg, #00a7c8, #0f6f8d);
+  color: #fff;
+}
+
+.teacher-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: min(320px, 100%);
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.teacher-search input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #f7fbfd;
+  color: var(--ink);
+  font: inherit;
+}
+
+.teacher-table-panel {
+  overflow: hidden;
+}
+
+.teacher-table-wrap {
+  overflow-x: auto;
+}
+
+.teacher-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+}
+
+.teacher-table th,
+.teacher-table td {
+  border-bottom: 1px solid rgba(3, 96, 121, 0.12);
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.teacher-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #0d2538;
+  color: #fff;
+  font-weight: 900;
+}
+
+.teacher-table tr:hover td {
+  background: #f4fbfd;
+}
+
+.teacher-table tr.needs-attention td:first-child {
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+
+.teacher-table small {
+  color: var(--muted);
+}
+
+.teacher-table code {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background: #eef5f8;
+  color: #0d2538;
+  font-size: 0.88rem;
+}
+
+.teacher-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.teacher-status.done {
+  background: #e8f7ef;
+  color: var(--ok);
+}
+
+.teacher-status.active {
+  background: #e8fbff;
+  color: var(--primary-dark);
+}
+
+.teacher-status.idle {
+  background: #fff3e8;
+  color: var(--accent);
+}
+
 .practice-page .practice-layout {
   grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.18fr);
   gap: 18px;
@@ -1961,6 +2176,7 @@ body {
 @media (max-width: 900px) {
   .login-screen,
   .student-plan-stack,
+  .teacher-summary-grid,
   .practice-page .practice-layout,
   .compact-question-stack {
     grid-template-columns: 1fr;
@@ -1976,8 +2192,19 @@ body {
   }
 
   .student-home-topbar,
-  .practice-topbar {
+  .practice-topbar,
+  .teacher-topbar {
     background-position: 62% center;
+  }
+
+  .teacher-tools,
+  .teacher-alert {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .teacher-search {
+    width: 100%;
   }
 }
 
@@ -2008,7 +2235,8 @@ body {
   }
 
   .student-home-topbar,
-  .practice-topbar {
+  .practice-topbar,
+  .teacher-topbar {
     min-height: 160px;
     background:
       linear-gradient(180deg, rgba(7, 19, 31, 0.92), rgba(7, 19, 31, 0.5)),
@@ -2016,8 +2244,17 @@ body {
   }
 
   .student-home-topbar h1,
-  .practice-topbar h1 {
+  .practice-topbar h1,
+  .teacher-topbar h1 {
     font-size: 2.15rem;
+  }
+
+  .teacher-shell {
+    width: min(100% - 20px, 1240px);
+  }
+
+  .teacher-summary-card {
+    min-height: 110px;
   }
 
   .student-task-main h2 {

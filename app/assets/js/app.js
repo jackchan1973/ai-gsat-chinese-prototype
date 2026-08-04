@@ -258,6 +258,9 @@ function readStoredAttempt() {
 
 function renderCurrentUser() {
   setText("userIdentity", window.ChiAuth?.displayName() || "尚未登入");
+  const teacherLink = document.getElementById("teacherDashboardLink");
+  const currentUser = window.ChiAuth?.getCurrentUser();
+  if (teacherLink) teacherLink.hidden = currentUser?.role !== "teacher";
 }
 
 function missionMessage(task, group, reviewCount, completed) {

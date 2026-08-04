@@ -41,6 +41,7 @@
   function saveUser(user) {
     localStorage.setItem(AUTH_KEY, "yes");
     localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user));
+    localStorage.setItem(storageKeyForUser("chi_v1_last_login", user), new Date().toISOString());
   }
 
   function getCurrentUser() {
@@ -76,6 +77,10 @@
 
   function storageKey(baseKey) {
     const user = getCurrentUser();
+    return storageKeyForUser(baseKey, user);
+  }
+
+  function storageKeyForUser(baseKey, user) {
     if (!user?.storage_namespace) return baseKey;
     return baseKey.replace(/^chi_v1_/, `chi_v1_${user.storage_namespace}_`);
   }
@@ -94,6 +99,7 @@
     isLoggedIn,
     getCurrentUser,
     storageKey,
+    storageKeyForUser,
     displayName,
   };
 })();
