@@ -36,11 +36,19 @@ function byId(items, key) {
 
 function readStoredArray(key) {
   try {
-    const parsed = JSON.parse(localStorage.getItem(key) || "[]");
+    const parsed = JSON.parse(localStorage.getItem(storageKey(key)) || "[]");
     return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
   }
+}
+
+function storageKey(key) {
+  return window.ChiAuth?.storageKey(key) || key;
+}
+
+function isLoggedIn() {
+  return window.ChiAuth ? window.ChiAuth.isLoggedIn() : true;
 }
 
 function preferGeneratedData(sample, key) {
@@ -249,6 +257,17 @@ function renderSchedule(schedules, wrongMap, weaknessMap) {
 }
 
 async function main() {
+  if (!isLoggedIn()) {
+    document.querySelector(".app-shell").innerHTML = `
+      <section class="error-box">
+        <h1>請先登入</h1>
+        <p>回首頁使用座號或導師帳號登入後，再查看錯題。</p>
+        <p><a class="text-link" href="../index.html">回首頁登入</a></p>
+      </section>
+    `;
+    return;
+  }
+
   const [sampleWrongs, sampleWeaknesses, sampleSchedules] = await Promise.all([
     readJsonl(`${DATA_ROOT}/wrong_questions.sample.jsonl`),
     readJson(`${DATA_ROOT}/weaknesses.sample.json`),

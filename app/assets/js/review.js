@@ -62,6 +62,14 @@ function byId(items, key) {
   return new Map(items.map((item) => [item[key], item]));
 }
 
+function storageKey(key) {
+  return window.ChiAuth?.storageKey(key) || key;
+}
+
+function isLoggedIn() {
+  return window.ChiAuth ? window.ChiAuth.isLoggedIn() : true;
+}
+
 function flattenGroupQuestions(groups) {
   return groups.flatMap((group) =>
     (group.questions || []).map((question) => ({
@@ -142,7 +150,18 @@ function renderReviewItem(answer, question) {
 }
 
 async function main() {
-  const rawAttempt = localStorage.getItem(ATTEMPT_KEY);
+  if (!isLoggedIn()) {
+    document.querySelector(".app-shell").innerHTML = `
+      <section class="error-box">
+        <h1>請先登入</h1>
+        <p>回首頁使用座號或導師帳號登入後，再查看解析。</p>
+        <p><a class="text-link" href="../index.html">回首頁登入</a></p>
+      </section>
+    `;
+    return;
+  }
+
+  const rawAttempt = localStorage.getItem(storageKey(ATTEMPT_KEY));
   if (!rawAttempt) {
     document.querySelector(".app-shell").innerHTML = `
       <section class="error-box">

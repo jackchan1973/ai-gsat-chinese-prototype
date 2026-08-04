@@ -122,7 +122,7 @@ function addDays(dateText, days) {
 
 function readStoredArray(key) {
   try {
-    const parsed = JSON.parse(localStorage.getItem(key) || "[]");
+    const parsed = JSON.parse(localStorage.getItem(storageKey(key)) || "[]");
     return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
@@ -130,11 +130,20 @@ function readStoredArray(key) {
 }
 
 function writeStoredArray(key, items) {
-  localStorage.setItem(key, JSON.stringify(items));
+  localStorage.setItem(storageKey(key), JSON.stringify(items));
+}
+
+function storageKey(key) {
+  return window.ChiAuth?.storageKey(key) || key;
 }
 
 function isLoggedIn() {
+  if (window.ChiAuth) return window.ChiAuth.isLoggedIn();
   return localStorage.getItem(AUTH_KEY) === "yes";
+}
+
+function currentStudentId(task) {
+  return window.ChiAuth?.getCurrentUser()?.student_id || task.student_id || STUDENT_ID;
 }
 
 function mergeById(existing, incoming, key) {
@@ -144,7 +153,7 @@ function mergeById(existing, incoming, key) {
 }
 
 function pickDisplayTask(tasks) {
-  const selectedTaskId = localStorage.getItem(SELECTED_TASK_KEY);
+  const selectedTaskId = localStorage.getItem(storageKey(SELECTED_TASK_KEY));
   return tasks.find((task) => task.task_id === selectedTaskId) || tasks.find((task) => task.app_readiness === "can_run_as_candidate") || tasks[0];
 }
 
@@ -428,10 +437,11 @@ function scoreAnswer(question, studentAnswer) {
 
 function buildAnswerRecords(task, questions, answers, submittedAt) {
   const taskKey = safeId(task.task_id || task.task_date);
+  const studentId = currentStudentId(task);
   return answers.map((answer, index) => ({
     answer_id: `ANS_${taskKey}_${String(index + 1).padStart(3, "0")}`,
     task_id: task.task_id,
-    student_id: task.student_id || STUDENT_ID,
+    student_id: studentId,
     question_id: answer.question_id,
     group_id: answer.group_id,
     question_type: answer.question_type,
@@ -456,13 +466,14 @@ function errorReasonFor(question) {
 
 function buildWrongQuestions(task, questions, answerRecords) {
   const taskKey = safeId(task.task_id || task.task_date);
+  const studentId = currentStudentId(task);
   return answerRecords
     .map((record, index) => ({ record, question: questions[index] }))
     .filter(({ record }) => record.result_status === "wrong")
     .map(({ record, question }, index) => ({
       wrong_id: `WRONG_${taskKey}_${String(index + 1).padStart(3, "0")}`,
       answer_id: record.answer_id,
-      student_id: task.student_id || STUDENT_ID,
+      student_id: studentId,
       question_id: record.question_id,
       group_id: record.group_id,
       wrong_date: task.task_date,
@@ -495,6 +506,7 @@ function knowledgeNameFor(code, question) {
 
 function buildWeaknesses(task, questions, wrongs) {
   const questionMap = byId(questions, "question_id");
+  const studentId = currentStudentId(task);
   const groups = new Map();
   wrongs.forEach((wrong) => {
     const current = groups.get(wrong.knowledge_code) || [];
@@ -509,8 +521,8 @@ function buildWeaknesses(task, questions, wrongs) {
       Math.max(1, Math.round(items.reduce((sum, wrong) => sum + (questionMap.get(wrong.question_id)?.review_weight || 1), 0))),
     );
     return {
-      weakness_id: `WEAK_${task.student_id || STUDENT_ID}_${code}`,
-      student_id: task.student_id || STUDENT_ID,
+      weakness_id: `WEAK_${studentId}_${code}`,
+      student_id: studentId,
       subject: task.subject,
       mode: task.mode,
       knowledge_code: code,
@@ -536,11 +548,12 @@ function strategyFor(question) {
 function buildReviewSchedule(task, questions, wrongs) {
   const taskKey = safeId(task.task_id || task.task_date);
   const questionMap = byId(questions, "question_id");
+  const studentId = currentStudentId(task);
   return wrongs.map((wrong, index) => {
     const question = questionMap.get(wrong.question_id) || {};
     return {
       review_id: `REVIEW_${taskKey}_${String(index + 1).padStart(3, "0")}`,
-      student_id: task.student_id || STUDENT_ID,
+      student_id: studentId,
       source_wrong_id: wrong.wrong_id,
       knowledge_code: wrong.knowledge_code,
       review_type: "two_day_retry",
@@ -553,10 +566,10 @@ function buildReviewSchedule(task, questions, wrongs) {
 }
 
 function saveFormalRecords({ answerRecords, wrongs, weaknesses, schedules }) {
-  localStorage.setItem(ANSWER_RECORDS_KEY, JSON.stringify(mergeById(readStoredArray(ANSWER_RECORDS_KEY), answerRecords, "answer_id")));
-  localStorage.setItem(WRONG_QUESTIONS_KEY, JSON.stringify(mergeById(readStoredArray(WRONG_QUESTIONS_KEY), wrongs, "wrong_id")));
-  localStorage.setItem(WEAKNESSES_KEY, JSON.stringify(mergeById(readStoredArray(WEAKNESSES_KEY), weaknesses, "weakness_id")));
-  localStorage.setItem(REVIEW_SCHEDULE_KEY, JSON.stringify(mergeById(readStoredArray(REVIEW_SCHEDULE_KEY), schedules, "review_id")));
+  localStorage.setItem(storageKey(ANSWER_RECORDS_KEY), JSON.stringify(mergeById(readStoredArray(ANSWER_RECORDS_KEY), answerRecords, "answer_id")));
+  localStorage.setItem(storageKey(WRONG_QUESTIONS_KEY), JSON.stringify(mergeById(readStoredArray(WRONG_QUESTIONS_KEY), wrongs, "wrong_id")));
+  localStorage.setItem(storageKey(WEAKNESSES_KEY), JSON.stringify(mergeById(readStoredArray(WEAKNESSES_KEY), weaknesses, "weakness_id")));
+  localStorage.setItem(storageKey(REVIEW_SCHEDULE_KEY), JSON.stringify(mergeById(readStoredArray(REVIEW_SCHEDULE_KEY), schedules, "review_id")));
 }
 
 async function main() {
@@ -592,7 +605,7 @@ async function main() {
     `;
     return;
   }
-  localStorage.setItem(SELECTED_TASK_KEY, task.task_id);
+  localStorage.setItem(storageKey(SELECTED_TASK_KEY), task.task_id);
   const questions = makeQuestionList(task, groupMap, drillMap, questionMap);
   const basicQuestions = questions.filter((question) => question.source_section === "基礎短練");
   const readingQuestions = questions.filter((question) => question.source_section !== "基礎短練");
@@ -668,7 +681,7 @@ async function main() {
       answers,
     };
 
-    localStorage.setItem(ATTEMPT_KEY, JSON.stringify(attempt));
+    localStorage.setItem(storageKey(ATTEMPT_KEY), JSON.stringify(attempt));
     saveFormalRecords({ answerRecords, wrongs, weaknesses, schedules });
     window.location.href = "./review.html";
   });

@@ -18,11 +18,11 @@
         <form class="login-card" id="loginForm">
           <div class="login-card-heading">
             <h2>今日任務登入</h2>
-            <p>帳密預設 admin / admin</p>
+            <p>導師 admin / admin；學生用座號與個人密碼。</p>
           </div>
           <div>
-            <label for="accountInput">帳戶</label>
-            <input id="accountInput" name="account" type="text" autocomplete="username" value="admin" />
+            <label for="accountInput">座號或導師帳號</label>
+            <input id="accountInput" name="account" type="text" autocomplete="username" value="admin" placeholder="例如 01 或 admin" />
           </div>
           <div>
             <label for="passwordInput">密碼</label>
@@ -40,6 +40,7 @@
             <h1>國文任務艙</h1>
           </div>
           <div class="topbar-actions">
+            <div class="user-identity-pill" id="userIdentity">尚未登入</div>
             <div class="status-pill" id="taskStatus">讀取中</div>
             <button class="secondary-action compact-action" type="button" id="logoutButton">登出</button>
           </div>
@@ -135,6 +136,7 @@
       </section>
     </main>
 
-    <script src="./assets/js/app.js?v=20260802-day-grid"></script>
+    <script src="./assets/js/session.js?v=20260804-class-1105"></script>
+    <script src="./assets/js/app.js?v=20260804-class-1105"></script>
   </body>
 </html>

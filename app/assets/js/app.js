@@ -87,8 +87,12 @@ function countGroupQuestions(group) {
   return Array.isArray(group?.questions) ? group.questions.length : 0;
 }
 
+function storageKey(key) {
+  return window.ChiAuth?.storageKey(key) || key;
+}
+
 function pickDisplayTask(tasks) {
-  const selectedTaskId = localStorage.getItem(SELECTED_TASK_KEY);
+  const selectedTaskId = localStorage.getItem(storageKey(SELECTED_TASK_KEY));
   return tasks.find((task) => task.task_id === selectedTaskId) || tasks.find((task) => task.app_readiness === "can_run_as_candidate") || tasks[0];
 }
 
@@ -246,10 +250,14 @@ function readinessText(task, runnable) {
 
 function readStoredAttempt() {
   try {
-    return JSON.parse(localStorage.getItem(ATTEMPT_KEY) || "null");
+    return JSON.parse(localStorage.getItem(storageKey(ATTEMPT_KEY)) || "null");
   } catch {
     return null;
   }
+}
+
+function renderCurrentUser() {
+  setText("userIdentity", window.ChiAuth?.displayName() || "尚未登入");
 }
 
 function missionMessage(task, group, reviewCount, completed) {
@@ -333,7 +341,7 @@ function renderTask(data, selectedTaskId) {
   const reviewCount = (task.review_question_ids || []).length || (task.review_due_slots || []).length;
   const totalQuestionCount = (task.basic_question_ids || []).length + countGroupQuestions(group) + (task.review_question_ids || []).length;
 
-  localStorage.setItem(SELECTED_TASK_KEY, task.task_id);
+  localStorage.setItem(storageKey(SELECTED_TASK_KEY), task.task_id);
 
   setText("taskDate", `第 ${task.day_number} 天｜${task.task_date}`);
   setText("taskTitle", group?.title || task.group_id);
@@ -409,12 +417,14 @@ function wireButtons(data) {
 }
 
 function isLoggedIn() {
+  if (window.ChiAuth) return window.ChiAuth.isLoggedIn();
   return localStorage.getItem(AUTH_KEY) === "yes";
 }
 
 function showDashboard() {
   document.getElementById("loginScreen").hidden = true;
   document.getElementById("dashboard").hidden = false;
+  renderCurrentUser();
 }
 
 function showLogin() {
@@ -429,17 +439,19 @@ function wireLogin() {
     event.preventDefault();
     const account = form.elements.account.value.trim();
     const password = form.elements.password.value;
-    if (account !== LOGIN_ACCOUNT || password !== LOGIN_PASSWORD) {
+    const user = window.ChiAuth ? window.ChiAuth.login(account, password) : null;
+    if (!user && (account !== LOGIN_ACCOUNT || password !== LOGIN_PASSWORD)) {
       error.textContent = "帳戶或密碼不正確。";
       return;
     }
-    localStorage.setItem(AUTH_KEY, "yes");
+    if (!user) localStorage.setItem(AUTH_KEY, "yes");
     error.textContent = "";
     showDashboard();
   });
 
   document.getElementById("logoutButton").addEventListener("click", () => {
-    localStorage.removeItem(AUTH_KEY);
+    if (window.ChiAuth) window.ChiAuth.logout();
+    else localStorage.removeItem(AUTH_KEY);
     showLogin();
   });
 }

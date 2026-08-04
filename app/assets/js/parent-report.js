@@ -28,11 +28,19 @@ function byId(items, key) {
 
 function readStoredArray(key) {
   try {
-    const parsed = JSON.parse(localStorage.getItem(key) || "[]");
+    const parsed = JSON.parse(localStorage.getItem(storageKey(key)) || "[]");
     return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
   }
+}
+
+function storageKey(key) {
+  return window.ChiAuth?.storageKey(key) || key;
+}
+
+function isLoggedIn() {
+  return window.ChiAuth ? window.ChiAuth.isLoggedIn() : true;
 }
 
 function formatDateRange(start, end) {
@@ -167,7 +175,7 @@ function wireClearProgressButton() {
   button.addEventListener("click", () => {
     const confirmed = window.confirm("要清除這台瀏覽器目前保存的作答、錯題、弱點與複習排程嗎？");
     if (!confirmed) return;
-    LOCAL_PROGRESS_KEYS.forEach((key) => localStorage.removeItem(key));
+    LOCAL_PROGRESS_KEYS.forEach((key) => localStorage.removeItem(storageKey(key)));
     window.location.reload();
   });
 }
@@ -288,6 +296,17 @@ function renderNextPlan(report) {
 }
 
 async function main() {
+  if (!isLoggedIn()) {
+    document.querySelector(".app-shell").innerHTML = `
+      <section class="error-box">
+        <h1>請先登入</h1>
+        <p>回首頁使用座號或導師帳號登入後，再查看週報。</p>
+        <p><a class="text-link" href="../index.html">回首頁登入</a></p>
+      </section>
+    `;
+    return;
+  }
+
   wireClearProgressButton();
   const [sampleReport, sampleWeaknesses, sampleSchedules] = await Promise.all([
     readJson(`${DATA_ROOT}/parent_weekly_report.sample.json`),
