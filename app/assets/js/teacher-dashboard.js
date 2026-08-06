@@ -1,7 +1,19 @@
 const ATTEMPT_KEY = "chi_v1_last_attempt";
 const ANSWER_RECORDS_KEY = "chi_v1_answer_records";
 const WRONG_QUESTIONS_KEY = "chi_v1_wrong_questions";
+const WEAKNESSES_KEY = "chi_v1_weaknesses";
+const REVIEW_SCHEDULE_KEY = "chi_v1_review_schedule";
+const SELECTED_TASK_KEY = "chi_v1_selected_task_id";
 const LAST_LOGIN_KEY = "chi_v1_last_login";
+const STUDENT_RECORD_KEYS = [
+  ATTEMPT_KEY,
+  ANSWER_RECORDS_KEY,
+  WRONG_QUESTIONS_KEY,
+  WEAKNESSES_KEY,
+  REVIEW_SCHEDULE_KEY,
+  SELECTED_TASK_KEY,
+  LAST_LOGIN_KEY,
+];
 
 let studentRows = [];
 let activeFilter = "all";
@@ -164,6 +176,21 @@ function buildAccountList() {
     .join("\n");
 }
 
+function clearAllStudentRecords() {
+  window.ChiAuth.students.forEach((student) => {
+    STUDENT_RECORD_KEYS.forEach((key) => {
+      localStorage.removeItem(window.ChiAuth.storageKeyForUser(key, student));
+    });
+  });
+}
+
+function refreshDashboard(statusText = "") {
+  studentRows = buildStudentRows();
+  renderSummary(studentRows);
+  renderRows();
+  document.getElementById("copyStatus").textContent = statusText;
+}
+
 function wireTeacherActions() {
   document.getElementById("attentionShortcut").addEventListener("click", () => {
     activeFilter = "attention";
@@ -184,6 +211,23 @@ function wireTeacherActions() {
     window.setTimeout(() => {
       status.textContent = "";
     }, 2200);
+  });
+
+  document.getElementById("clearAllRecordsButton").addEventListener("click", () => {
+    const confirmed = window.confirm("確定要清除 1105 班所有學生在這台瀏覽器中的登入、作答、錯題與週報紀錄嗎？此動作不能復原。");
+    if (!confirmed) return;
+    clearAllStudentRecords();
+    activeFilter = "all";
+    document.querySelectorAll(".teacher-filter").forEach((button) => {
+      const active = button.dataset.filter === "all";
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    document.getElementById("studentSearch").value = "";
+    refreshDashboard("已清除所有學生記錄");
+    window.setTimeout(() => {
+      document.getElementById("copyStatus").textContent = "";
+    }, 2600);
   });
 }
 

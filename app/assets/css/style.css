@@ -2004,6 +2004,17 @@ body {
   color: #fff;
 }
 
+.teacher-command.danger {
+  border-color: rgba(178, 34, 34, 0.42);
+  background: #fff1f1;
+  color: #9f1d1d;
+}
+
+.teacher-command.danger:hover {
+  border-color: rgba(178, 34, 34, 0.72);
+  background: #ffe4e4;
+}
+
 .copy-status {
   min-height: 24px;
   color: #0f6f8d;
