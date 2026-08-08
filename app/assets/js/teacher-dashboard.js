@@ -192,6 +192,11 @@ function refreshDashboard(statusText = "") {
 }
 
 function wireTeacherActions() {
+  document.getElementById("returnLoginButton").addEventListener("click", () => {
+    window.ChiAuth.logout();
+    window.location.href = "../index.html";
+  });
+
   document.getElementById("attentionShortcut").addEventListener("click", () => {
     activeFilter = "attention";
     document.querySelectorAll(".teacher-filter").forEach((button) => {
