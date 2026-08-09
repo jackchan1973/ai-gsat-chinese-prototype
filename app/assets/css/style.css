@@ -1499,7 +1499,7 @@ body {
 }
 
 .student-home-shell {
-  max-width: 1120px;
+  max-width: 1280px;
 }
 
 .login-screen {
@@ -1664,50 +1664,223 @@ body {
   position: relative;
 }
 
-.subject-entry-panel {
+.exam-command-hero {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.78fr);
+  gap: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(21, 94, 117, 0.16);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 34px);
+  background:
+    linear-gradient(135deg, rgba(10, 31, 44, 0.98), rgba(15, 68, 85, 0.92) 54%, rgba(194, 65, 12, 0.88)),
+    #0f4455;
+  box-shadow: 0 28px 74px rgba(7, 19, 31, 0.22);
+  color: #fff;
+}
+
+.exam-command-hero::before {
+  content: "GSAT";
+  position: absolute;
+  right: -18px;
+  bottom: -48px;
+  color: rgba(255, 255, 255, 0.07);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(6rem, 17vw, 13rem);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0;
+  pointer-events: none;
+}
+
+.exam-command-copy,
+.exam-command-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.exam-command-copy {
+  display: grid;
+  align-content: center;
   gap: 14px;
+}
+
+.exam-command-copy .eyebrow {
+  color: #9ee7f5;
+  font-weight: 900;
+}
+
+.exam-command-copy h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.6rem, 5.2vw, 4.9rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
+.exam-command-copy p:not(.eyebrow) {
+  max-width: 610px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
+}
+
+.exam-hero-actions,
+.exam-user-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.exam-command-panel {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.exam-user-row {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exam-command-panel .user-identity-pill,
+.exam-command-panel .secondary-action {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.exam-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.exam-status-grid div {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.exam-status-grid span,
+.weekly-subject-strip span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+}
+
+.exam-status-grid strong {
+  display: block;
+  margin-top: 4px;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.weekly-subject-strip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.weekly-subject-strip span {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 8px 6px;
+  background: rgba(255, 255, 255, 0.08);
+  line-height: 1.25;
+  text-align: center;
+}
+
+.weekly-subject-strip strong {
+  display: block;
+  color: #fff;
+  font-size: 1.04rem;
+}
+
+.subject-command-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
   margin: 16px 0;
 }
 
-.subject-entry-card {
+.subject-command-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: center;
+  gap: 10px;
+  align-content: start;
   min-width: 0;
+  min-height: 190px;
   border: 1px solid rgba(3, 96, 121, 0.13);
   border-radius: 8px;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.94);
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow);
 }
 
-.subject-entry-card h2,
-.subject-entry-card p {
+.subject-command-card h2,
+.subject-command-card p {
   margin: 0;
 }
 
-.subject-entry-card h2 {
-  margin-top: 4px;
-  color: var(--primary-dark);
-  font-size: 1.35rem;
+.subject-command-card h2 {
+  color: #102235;
+  font-size: 1.2rem;
 }
 
-.subject-entry-card p:last-child {
-  margin-top: 6px;
+.subject-command-card p {
   color: var(--muted);
+  font-size: 0.92rem;
 }
 
-.social-entry-card {
-  border-color: rgba(240, 124, 40, 0.28);
-  background: linear-gradient(135deg, #ffffff, #fff7ed);
+.subject-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-.subject-entry-action {
-  min-width: 152px;
-  text-align: center;
+.subject-card-head span {
+  color: var(--primary-dark);
+  font-weight: 950;
+  font-size: 1.25rem;
+}
+
+.subject-card-head strong {
+  border: 1px solid rgba(3, 96, 121, 0.14);
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+.subject-command-card.chinese {
+  border-color: rgba(0, 167, 200, 0.34);
+  background: linear-gradient(180deg, #ffffff, #edfaff);
+}
+
+.subject-command-card.social {
+  border-color: rgba(240, 124, 40, 0.32);
+  background: linear-gradient(180deg, #ffffff, #fff5ec);
+}
+
+.subject-command-card.pending {
+  background: linear-gradient(180deg, #ffffff, #f4f7fb);
+}
+
+.subject-command-card.pending .subject-card-head span,
+.subject-command-card.pending h2 {
+  color: #5e6b77;
 }
 
 .student-home-topbar {
@@ -1739,8 +1912,8 @@ body {
 }
 
 .student-today-card {
-  border-radius: 0 0 8px 8px;
-  border-color: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  border-color: rgba(3, 96, 121, 0.13);
   padding: clamp(18px, 3vw, 28px);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(223, 248, 255, 0.9)),
@@ -2358,14 +2531,24 @@ body {
   .portal-switch,
   .student-plan-stack,
   .subject-entry-panel,
+  .exam-command-hero,
   .teacher-summary-grid,
   .practice-page .practice-layout,
   .compact-question-stack {
     grid-template-columns: 1fr;
   }
 
-  .subject-entry-card {
+  .subject-entry-card,
+  .exam-status-grid {
     grid-template-columns: 1fr;
+  }
+
+  .subject-command-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .weekly-subject-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .login-brand {
@@ -2438,6 +2621,36 @@ body {
   .practice-topbar h1,
   .teacher-topbar h1 {
     font-size: 2.15rem;
+  }
+
+  .exam-command-hero {
+    padding: 20px;
+  }
+
+  .exam-command-copy h1 {
+    font-size: 2.35rem;
+  }
+
+  .exam-command-copy p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .exam-hero-actions,
+  .exam-user-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .subject-command-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-command-card {
+    min-height: 0;
+  }
+
+  .weekly-subject-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .teacher-shell {

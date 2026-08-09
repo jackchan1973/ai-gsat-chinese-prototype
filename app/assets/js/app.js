@@ -411,8 +411,10 @@ function wireButtons(data) {
   document.getElementById("reviewButton").addEventListener("click", () => {
     window.location.href = "./pages/wrongs.html";
   });
-  document.getElementById("chineseFocusButton")?.addEventListener("click", () => {
-    document.getElementById("chineseTaskPanel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  ["chineseFocusButton", "chineseCardButton"].forEach((id) => {
+    document.getElementById(id)?.addEventListener("click", () => {
+      document.getElementById("chineseTaskPanel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   });
   const groupMap = byId(data.groups, "group_id");
   const drillMap = byId(data.drills, "question_id");
@@ -427,6 +429,7 @@ function isLoggedIn() {
 function showDashboard() {
   document.getElementById("loginScreen").hidden = true;
   document.getElementById("dashboard").hidden = false;
+  window.scrollTo({ top: 0, left: 0 });
   renderCurrentUser();
 }
 
