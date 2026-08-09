@@ -1521,7 +1521,7 @@ body {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(7, 19, 31, 0.98) 0%, rgba(7, 19, 31, 0.84) 42%, rgba(7, 19, 31, 0.18) 78%),
-    url("../images/gsat-challenge-hero.png") center / cover no-repeat;
+    url("../images/gsat-challenge-hero.jpg") center / cover no-repeat;
   box-shadow: none;
   color: #fff;
 }
@@ -1675,7 +1675,7 @@ body {
   padding: clamp(22px, 4vw, 34px);
   background:
     linear-gradient(90deg, rgba(7, 19, 31, 0.98) 0%, rgba(7, 19, 31, 0.88) 39%, rgba(7, 19, 31, 0.38) 70%, rgba(194, 65, 12, 0.22) 100%),
-    url("../images/gsat-challenge-hero.png") center / cover no-repeat,
+    url("../images/gsat-challenge-hero.jpg") center / cover no-repeat,
     #0f4455;
   box-shadow: 0 28px 74px rgba(7, 19, 31, 0.22);
   color: #fff;
@@ -1893,7 +1893,7 @@ body {
   padding: 22px;
   background:
     linear-gradient(90deg, rgba(7, 19, 31, 0.96) 0%, rgba(7, 19, 31, 0.76) 45%, rgba(7, 19, 31, 0.18) 100%),
-    url("../images/chinese-study-hero.png") center / cover no-repeat;
+    url("../images/chinese-study-hero.jpg") center / cover no-repeat;
   color: #fff;
 }
 
@@ -2022,7 +2022,7 @@ body {
   padding: 22px;
   background:
     linear-gradient(90deg, rgba(7, 19, 31, 0.96), rgba(7, 19, 31, 0.68), rgba(7, 19, 31, 0.08)),
-    url("../images/chinese-study-hero.png") center 44% / cover no-repeat;
+    url("../images/chinese-study-hero.jpg") center 44% / cover no-repeat;
   color: #fff;
 }
 
@@ -2598,7 +2598,7 @@ body {
     min-height: 360px;
     background:
       linear-gradient(180deg, rgba(7, 19, 31, 0.94), rgba(7, 19, 31, 0.62)),
-      url("../images/gsat-challenge-hero.png") 58% center / cover no-repeat;
+      url("../images/gsat-challenge-hero.jpg") 58% center / cover no-repeat;
   }
 
   .login-brand h1 {
@@ -2615,7 +2615,7 @@ body {
     min-height: 160px;
     background:
       linear-gradient(180deg, rgba(7, 19, 31, 0.92), rgba(7, 19, 31, 0.5)),
-      url("../images/chinese-study-hero.png") center / cover no-repeat;
+      url("../images/chinese-study-hero.jpg") center / cover no-repeat;
   }
 
   .student-home-topbar h1,
@@ -2753,7 +2753,7 @@ body {
   min-height: 150px;
   background:
     linear-gradient(90deg, rgba(7, 19, 31, 0.97), rgba(7, 19, 31, 0.72), rgba(240, 124, 40, 0.2)),
-    url("../images/gsat-challenge-hero.png") center / cover no-repeat;
+    url("../images/gsat-challenge-hero.jpg") center / cover no-repeat;
 }
 
 .social-practice-summary div {
