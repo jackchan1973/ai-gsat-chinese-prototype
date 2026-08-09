@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260802-reviewed-bank";
+const DATA_VERSION = "20260809-multi-subject";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -410,6 +410,9 @@ function wireButtons(data) {
   });
   document.getElementById("reviewButton").addEventListener("click", () => {
     window.location.href = "./pages/wrongs.html";
+  });
+  document.getElementById("chineseFocusButton")?.addEventListener("click", () => {
+    document.getElementById("chineseTaskPanel")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
   const groupMap = byId(data.groups, "group_id");
   const drillMap = byId(data.drills, "question_id");

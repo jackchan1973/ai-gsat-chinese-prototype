@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜社會科正式練習</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-social-practice" />
+    <style>
+      .social-practice-page {
+        background: linear-gradient(180deg, #102235 0, #16344b 220px, #f3f7fb 220px, #f3f7fb 100%);
+      }
+
+      .social-practice-shell {
+        max-width: 1120px;
+      }
+
+      .social-practice-page .topbar {
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(7, 19, 31, 0.96), rgba(22, 52, 75, 0.88));
+        color: #fff;
+      }
+
+      .social-practice-page .topbar h1,
+      .social-practice-page .topbar .eyebrow {
+        color: #fff;
+      }
+
+      .social-practice-page .topbar .muted-text {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .social-practice-page .topbar .secondary-action {
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+      }
+
+      .social-practice-summary,
+      .social-day-tabs,
+      .social-material,
+      .social-question-card,
+      .social-score-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .social-practice-summary {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin: 16px 0;
+        padding: 14px;
+      }
+
+      .social-practice-summary div {
+        border: 1px solid rgba(3, 96, 121, 0.12);
+        border-radius: 8px;
+        padding: 12px;
+        background: #f7fbfd;
+      }
+
+      .social-practice-summary span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .social-practice-summary strong {
+        display: block;
+        margin-top: 4px;
+        color: var(--primary-dark);
+        font-size: 1.4rem;
+      }
+
+      .social-day-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding: 12px;
+      }
+
+      .social-day-tab {
+        min-height: 44px;
+        border: 1px solid rgba(3, 96, 121, 0.18);
+        border-radius: 8px;
+        padding: 8px 12px;
+        background: #fff;
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .social-day-tab.active {
+        border-color: rgba(0, 167, 200, 0.7);
+        background: linear-gradient(135deg, #00a7c8, #0f6f8d);
+        color: #fff;
+      }
+
+      .social-status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        border: 1px solid rgba(21, 94, 117, 0.24);
+        border-radius: 999px;
+        padding: 4px 10px;
+        background: #edf7fb;
+        color: var(--primary);
+        font-size: 0.86rem;
+      }
+
+      .social-material {
+        margin-bottom: 14px;
+        padding: 16px;
+      }
+
+      .social-material h3 {
+        margin-top: 0;
+      }
+
+      .social-material table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+        font-size: 0.94rem;
+      }
+
+      .social-material th,
+      .social-material td {
+        border: 1px solid var(--line);
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .social-question-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .social-question-card {
+        padding: 16px;
+      }
+
+      .social-question-card.correct {
+        border-color: rgba(22, 163, 74, 0.4);
+      }
+
+      .social-question-card.incorrect {
+        border-color: rgba(220, 38, 38, 0.38);
+      }
+
+      .social-question-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .social-option-list {
+        display: grid;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .social-option {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: #f7fbfd;
+      }
+
+      .social-option input {
+        margin-top: 4px;
+      }
+
+      .social-written {
+        width: 100%;
+        min-height: 92px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        resize: vertical;
+        font: inherit;
+      }
+
+      .social-answer-panel {
+        display: none;
+        margin-top: 12px;
+        border: 1px solid rgba(3, 96, 121, 0.14);
+        border-radius: 8px;
+        padding: 12px;
+        background: #f7fbfd;
+      }
+
+      .social-practice-page.answered .social-answer-panel {
+        display: block;
+      }
+
+      .social-score-panel {
+        display: none;
+        margin: 16px 0;
+        padding: 16px;
+      }
+
+      .social-score-panel.show {
+        display: block;
+      }
+
+      .social-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px 0;
+      }
+
+      @media (max-width: 760px) {
+        .social-practice-summary {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .social-practice-page .topbar,
+        .social-question-header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body class="social-practice-page">
+    <main class="app-shell social-practice-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI學測考總複習｜社會科</p>
+          <h1>第一週正式練習</h1>
+          <p class="muted-text">週二、週四、週六三回合；週六含文字作答。</p>
+        </div>
+        <a class="secondary-action link-action" href="../index.html">返回主頁</a>
+      </header>
+
+      <section class="social-practice-summary" id="summaryStats" aria-label="練習統計"></section>
+      <section class="social-day-tabs" id="dayTabs" aria-label="選擇社會科練習日"></section>
+      <section id="materials"></section>
+      <form id="socialPracticeForm">
+        <section class="social-question-list" id="questionList" aria-live="polite"></section>
+        <div class="social-actions">
+          <button class="primary-action" type="submit">提交並看解析</button>
+          <button class="secondary-action" type="button" id="resetButton">重新作答</button>
+          <a class="secondary-action link-action" href="./social-formal-candidates.html?v=20260809-batch01">查看完整題庫</a>
+        </div>
+      </form>
+      <section class="social-score-panel" id="scorePanel" aria-live="polite"></section>
+    </main>
+
+    <script>
+      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-social-practice";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260809-social-practice";
+      const taskTypeLabels = {
+        concept_and_material_reading: "概念與資料判讀",
+        cross_domain_and_chart_reading: "跨科整合與圖表判讀",
+        weekly_synthesis: "週總結與深度表達"
+      };
+
+      let days = [];
+      let activeDayId = "";
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function answerText(answer) {
+        return Array.isArray(answer) ? answer.join("、") : String(answer || "");
+      }
+
+      function getDataUrls() {
+        return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL];
+      }
+
+      async function loadData() {
+        const errors = [];
+        for (const url of getDataUrls()) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return await response.json();
+          } catch (error) {
+            errors.push(`${url}: ${error.message}`);
+          }
+        }
+        throw new Error(errors.join("；"));
+      }
+
+      function renderStats() {
+        const questions = days.flatMap((day) => day.question_slots || []);
+        const written = questions.filter((question) => question.requires_written_response).length;
+        const stats = [
+          ["任務日", days.length],
+          ["總題數", questions.length],
+          ["選擇題", questions.length - written],
+          ["文字作答", written]
+        ];
+        document.getElementById("summaryStats").innerHTML = stats
+          .map(([label, value]) => `<div><span>${label}</span><strong>${value}</strong></div>`)
+          .join("");
+      }
+
+      function renderTabs() {
+        document.getElementById("dayTabs").innerHTML = days
+          .map((day) => `
+            <button class="social-day-tab${day.day_id === activeDayId ? " active" : ""}" type="button" data-day-id="${escapeHtml(day.day_id)}">
+              ${escapeHtml(day.label)}｜${escapeHtml((day.question_slots || []).length)} 題
+            </button>
+          `)
+          .join("");
+      }
+
+      function renderMaterial(material) {
+        if (material.type === "table" && Array.isArray(material.rows)) {
+          const [head = [], ...rows] = material.rows;
+          return `
+            <article class="social-material">
+              <h3>${escapeHtml(material.title || "資料表")}</h3>
+              <table>
+                <thead><tr>${head.map((cell) => `<th>${escapeHtml(cell)}</th>`).join("")}</tr></thead>
+                <tbody>${rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
+              </table>
+            </article>
+          `;
+        }
+        return `
+          <article class="social-material">
+            <h3>${escapeHtml(material.title || "材料")}</h3>
+            <p>${escapeHtml(material.content || "")}</p>
+          </article>
+        `;
+      }
+
+      function renderQuestion(question, index) {
+        const name = `question_${index}`;
+        const isMultiple = Array.isArray(question.answer) && question.answer.length > 1;
+        const options = question.options?.length
+          ? `<div class="social-option-list">${question.options.map((option) => `
+              <label class="social-option">
+                <input type="${isMultiple ? "checkbox" : "radio"}" name="${escapeHtml(name)}" value="${escapeHtml(option.key)}" />
+                <span><strong>${escapeHtml(option.key)}.</strong> ${escapeHtml(option.text)}</span>
+              </label>
+            `).join("")}</div>`
+          : `<textarea class="social-written" name="${escapeHtml(name)}" placeholder="請輸入你的答案。"></textarea>`;
+        return `
+          <article class="social-question-card" data-question-index="${index}">
+            <div class="social-question-header">
+              <div class="social-tags">
+                <span class="tag">第 ${index + 1} 題</span>
+                <span class="tag">${escapeHtml(question.question_type)}</span>
+                <span class="tag">${escapeHtml(question.difficulty)}</span>
+              </div>
+              <span class="social-status">${question.requires_written_response ? "文字作答" : "選擇題"}</span>
+            </div>
+            <p>${escapeHtml(question.stem)}</p>
+            ${options}
+            <div class="social-answer-panel">
+              <p><strong>參考答案：</strong>${escapeHtml(answerText(question.answer))}</p>
+              ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
+              <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
+              <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderActiveDay() {
+        const day = days.find((item) => item.day_id === activeDayId) || days[0];
+        if (!day) return;
+        activeDayId = day.day_id;
+        document.body.classList.remove("answered");
+        document.getElementById("scorePanel").classList.remove("show");
+        document.getElementById("scorePanel").innerHTML = "";
+        renderTabs();
+        document.getElementById("materials").innerHTML = `
+          <article class="social-material">
+            <h3>${escapeHtml(day.label)}｜${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h3>
+            <p>${escapeHtml(day.planned_focus || "依材料判讀與社會科概念作答。")}</p>
+          </article>
+          ${(day.day_materials || []).map(renderMaterial).join("")}
+        `;
+        document.getElementById("questionList").innerHTML = (day.question_slots || []).map(renderQuestion).join("");
+      }
+
+      function getSelectedValues(form, index) {
+        return Array.from(form.querySelectorAll(`[name="question_${index}"]:checked`)).map((input) => input.value).sort();
+      }
+
+      function scoreChoice(question, selected) {
+        const answer = [...(Array.isArray(question.answer) ? question.answer : [question.answer])].map(String).sort();
+        return selected.length === answer.length && selected.every((value, index) => value === answer[index]);
+      }
+
+      function submitAnswers(event) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const day = days.find((item) => item.day_id === activeDayId);
+        const questions = day?.question_slots || [];
+        let autoScored = 0;
+        let correct = 0;
+        let written = 0;
+
+        questions.forEach((question, index) => {
+          const card = document.querySelector(`[data-question-index="${index}"]`);
+          card?.classList.remove("correct", "incorrect");
+          if (question.requires_written_response || !question.options?.length) {
+            written += 1;
+            return;
+          }
+          autoScored += 1;
+          const ok = scoreChoice(question, getSelectedValues(form, index));
+          if (ok) correct += 1;
+          card?.classList.add(ok ? "correct" : "incorrect");
+        });
+
+        document.body.classList.add("answered");
+        const scorePanel = document.getElementById("scorePanel");
+        scorePanel.classList.add("show");
+        scorePanel.innerHTML = `
+          <h2>本回合結果</h2>
+          <p>選擇題自動判分：${correct} / ${autoScored} 題。${written ? `文字作答 ${written} 題請對照參考答案與評分規準。` : ""}</p>
+        `;
+        scorePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function wireEvents() {
+        document.getElementById("dayTabs").addEventListener("click", (event) => {
+          const button = event.target.closest("[data-day-id]");
+          if (!button) return;
+          activeDayId = button.dataset.dayId;
+          renderActiveDay();
+        });
+        document.getElementById("socialPracticeForm").addEventListener("submit", submitAnswers);
+        document.getElementById("resetButton").addEventListener("click", () => renderActiveDay());
+      }
+
+      async function init() {
+        const data = await loadData();
+        days = (data.weeks || []).flatMap((week) => week.days || []);
+        activeDayId = days[0]?.day_id || "";
+        renderStats();
+        renderActiveDay();
+        wireEvents();
+      }
+
+      init().catch((error) => {
+        document.querySelector(".social-practice-shell").innerHTML = `
+          <section class="error-box">
+            <h1>社會科題庫讀取失敗</h1>
+            <p>${escapeHtml(error.message)}</p>
+            <p>請改用 GitHub Pages 線上網址，或重新整理後再試。</p>
+          </section>
+        `;
+      });
+    </script>
+  </body>
+</html>

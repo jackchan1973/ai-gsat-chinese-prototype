@@ -1664,6 +1664,52 @@ body {
   position: relative;
 }
 
+.subject-entry-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.subject-entry-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid rgba(3, 96, 121, 0.13);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.subject-entry-card h2,
+.subject-entry-card p {
+  margin: 0;
+}
+
+.subject-entry-card h2 {
+  margin-top: 4px;
+  color: var(--primary-dark);
+  font-size: 1.35rem;
+}
+
+.subject-entry-card p:last-child {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.social-entry-card {
+  border-color: rgba(240, 124, 40, 0.28);
+  background: linear-gradient(135deg, #ffffff, #fff7ed);
+}
+
+.subject-entry-action {
+  min-width: 152px;
+  text-align: center;
+}
+
 .student-home-topbar {
   min-height: 118px;
   margin-bottom: 0;
@@ -2311,9 +2357,14 @@ body {
   .login-screen,
   .portal-switch,
   .student-plan-stack,
+  .subject-entry-panel,
   .teacher-summary-grid,
   .practice-page .practice-layout,
   .compact-question-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-entry-card {
     grid-template-columns: 1fr;
   }
 

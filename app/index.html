@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜國文今日任務</title>
+    <title>AI學測考總複習｜今日任務</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./assets/css/style.css?v=20260804-portal-login" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=20260809-multi-subject" />
   </head>
   <body>
     <main class="app-shell student-home-shell">
       <section class="login-screen" id="loginScreen" aria-label="登入">
         <div class="login-brand">
           <p class="eyebrow">AI學測考總複習</p>
-          <h1>國文學測任務艙</h1>
-          <p>每天一回合，從基礎短練、閱讀題組到錯題回鍋，把練習變成可追蹤的任務。</p>
+          <h1>學測總複習任務艙</h1>
+          <p>國文已進入每日任務，社會科今天加入第一週正式練習入口；每科分開練、進度一起追蹤。</p>
         </div>
         <form class="login-card" id="loginForm">
           <div class="login-card-heading">
@@ -52,7 +52,7 @@
         <header class="topbar student-home-topbar">
           <div>
             <p class="eyebrow">AI學測考總複習</p>
-            <h1>國文任務艙</h1>
+            <h1>學測總複習任務艙</h1>
           </div>
           <div class="topbar-actions">
             <div class="user-identity-pill" id="userIdentity">尚未登入</div>
@@ -61,9 +61,28 @@
           </div>
         </header>
 
-        <section class="student-today-card" aria-label="今日練習">
+        <section class="subject-entry-panel" aria-label="科目入口">
+          <article class="subject-entry-card active">
+            <div>
+              <p class="label">國文</p>
+              <h2>每日任務</h2>
+              <p>字音字形、閱讀題組、錯題回鍋已接入正式流程。</p>
+            </div>
+            <button class="secondary-action compact-action" type="button" id="chineseFocusButton">查看國文任務</button>
+          </article>
+          <article class="subject-entry-card social-entry-card">
+            <div>
+              <p class="label">社會</p>
+              <h2>第一週正式練習</h2>
+              <p>週二、週四、週六共 16 題，包含資料判讀、多選與週六文字作答。</p>
+            </div>
+            <a class="primary-action link-action subject-entry-action" href="./pages/social-practice.html">開始社會科練習</a>
+          </article>
+        </section>
+
+        <section class="student-today-card" id="chineseTaskPanel" aria-label="國文今日練習">
           <div class="panel-heading">
-            <p class="label">今天進度</p>
+            <p class="label">國文今天進度</p>
             <strong id="taskDate">--</strong>
           </div>
           <div class="student-task-main">
@@ -151,7 +170,7 @@
       </section>
     </main>
 
-    <script src="./assets/js/session.js?v=20260804-portal-login"></script>
-    <script src="./assets/js/app.js?v=20260804-portal-login"></script>
+    <script src="./assets/js/session.js?v=20260809-multi-subject"></script>
+    <script src="./assets/js/app.js?v=20260809-multi-subject"></script>
   </body>
 </html>
