@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜社會科試題預覽</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-social-trial" />
+    <style>
+      .social-preview-shell {
+        max-width: 1040px;
+      }
+
+      .social-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+        gap: 18px;
+        align-items: stretch;
+        margin-bottom: 18px;
+      }
+
+      .social-hero-main,
+      .social-stat,
+      .social-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .social-hero-main {
+        padding: 22px;
+      }
+
+      .social-hero-main p {
+        color: var(--muted);
+      }
+
+      .social-stat {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        background: var(--line);
+      }
+
+      .social-stat div {
+        padding: 16px;
+        background: var(--surface);
+      }
+
+      .social-stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .social-stat strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 1.5rem;
+      }
+
+      .social-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 16px;
+      }
+
+      .social-filter {
+        min-height: 40px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 12px;
+        background: var(--surface);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .social-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .social-card {
+        padding: 18px;
+      }
+
+      .social-card-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .social-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .social-status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 0.86rem;
+        border: 1px solid var(--line);
+      }
+
+      .social-status.approved_for_app {
+        border-color: rgba(37, 97, 72, 0.22);
+        background: #edf6f1;
+        color: var(--ok);
+      }
+
+      .social-status.needs_revision {
+        border-color: rgba(139, 94, 24, 0.26);
+        background: #fff7e8;
+        color: var(--warn);
+      }
+
+      .social-status.excluded {
+        border-color: rgba(194, 65, 12, 0.28);
+        background: #fff2ee;
+        color: var(--accent);
+      }
+
+      .social-stem {
+        margin-bottom: 14px;
+        font-size: 1.03rem;
+      }
+
+      .social-options {
+        display: grid;
+        gap: 8px;
+        margin: 0 0 14px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .social-options li,
+      .social-answer,
+      .social-review {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: var(--surface-muted);
+      }
+
+      .social-options strong {
+        margin-right: 8px;
+      }
+
+      .social-answer {
+        margin-top: 12px;
+        background: #f8fbfd;
+      }
+
+      .social-answer h3,
+      .social-review h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+
+      .social-review {
+        margin-top: 10px;
+        color: var(--muted);
+      }
+
+      .social-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 14px;
+        font-size: 0.94rem;
+      }
+
+      .social-table th,
+      .social-table td {
+        border: 1px solid var(--line);
+        padding: 8px;
+        text-align: left;
+      }
+
+      .social-table th {
+        background: var(--surface-muted);
+      }
+
+      .social-empty {
+        padding: 18px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 760px) {
+        .social-hero {
+          grid-template-columns: 1fr;
+        }
+
+        .social-stat {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .social-card {
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app-shell social-preview-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI學測考總複習</p>
+          <h1>社會科試題預覽</h1>
+        </div>
+        <a class="secondary-action link-action" href="../index.html">返回主頁</a>
+      </header>
+
+      <section class="social-hero" aria-label="試跑摘要">
+        <div class="social-hero-main">
+          <p class="label">v0.2 第二批測試題</p>
+          <h2>線上檢查用，尚未接入正式每日任務</h2>
+          <p>
+            這批題目依照「出題 Agent -> 審題 Agent -> 入庫 Gatekeeper」流程產生。
+            題目狀態會清楚標示，待修正與排除題只供檢查，不會放進正式任務。
+          </p>
+        </div>
+        <div class="social-stat" id="summaryStats" aria-label="題目狀態統計"></div>
+      </section>
+
+      <section class="social-toolbar" aria-label="篩選">
+        <select class="social-filter" id="statusFilter" aria-label="狀態篩選">
+          <option value="all">全部狀態</option>
+          <option value="approved_for_app">已核准</option>
+          <option value="needs_revision">待修正</option>
+          <option value="excluded">排除</option>
+        </select>
+        <select class="social-filter" id="typeFilter" aria-label="題型篩選">
+          <option value="all">全部題型</option>
+        </select>
+      </section>
+
+      <section class="social-list" id="questionList" aria-live="polite"></section>
+    </main>
+
+    <script>
+      const DATA_URL = "../../data/social_v0_2_trial.jsonl?v=20260809-v2";
+      const statusLabels = {
+        approved_for_app: "已核准",
+        needs_revision: "待修正",
+        excluded: "排除"
+      };
+
+      const gradeLabels = {
+        A: "A 可入庫",
+        B: "B 小修",
+        C: "C 重寫",
+        D: "D 排除"
+      };
+
+      let questions = [];
+
+      function parseJsonl(text) {
+        return text
+          .split("\n")
+          .map((line) => line.trim())
+          .filter(Boolean)
+          .map((line) => JSON.parse(line));
+      }
+
+      function countBy(items, key) {
+        return items.reduce((acc, item) => {
+          const value = item[key] || "未標記";
+          acc[value] = (acc[value] || 0) + 1;
+          return acc;
+        }, {});
+      }
+
+      function renderStats() {
+        const statusCounts = countBy(questions, "status");
+        const stats = [
+          ["總題數", questions.length],
+          ["已核准", statusCounts.approved_for_app || 0],
+          ["待修正", statusCounts.needs_revision || 0],
+          ["排除", statusCounts.excluded || 0]
+        ];
+        document.getElementById("summaryStats").innerHTML = stats
+          .map(([label, value]) => `<div><span>${label}</span><strong>${value}</strong></div>`)
+          .join("");
+      }
+
+      function renderTypeFilter() {
+        const typeFilter = document.getElementById("typeFilter");
+        const types = Array.from(new Set(questions.map((q) => q.question_type))).sort();
+        typeFilter.innerHTML = '<option value="all">全部題型</option>' + types
+          .map((type) => `<option value="${type}">${type}</option>`)
+          .join("");
+      }
+
+      function renderMaterials(materials = []) {
+        return materials.map((material) => {
+          if (material.type !== "table" || !Array.isArray(material.rows)) return "";
+          const [head = [], ...rows] = material.rows;
+          return `
+            <table class="social-table">
+              <caption>${material.title || "資料表"}</caption>
+              <thead><tr>${head.map((cell) => `<th>${cell}</th>`).join("")}</tr></thead>
+              <tbody>${rows.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody>
+            </table>
+          `;
+        }).join("");
+      }
+
+      function renderQuestion(question, index) {
+        const options = Array.isArray(question.options) && question.options.length
+          ? `<ul class="social-options">${question.options.map((option) => `<li><strong>${option.key}</strong>${option.text}</li>`).join("")}</ul>`
+          : '<p class="social-empty">短答題，無選項。</p>';
+        const tags = [
+          question.id,
+          question.question_type,
+          question.difficulty,
+          gradeLabels[question.review_grade] || question.review_grade,
+          `相似風險：${question.similarity_risk || "未標記"}`
+        ];
+
+        return `
+          <article class="social-card" data-status="${question.status}" data-type="${question.question_type}">
+            <div class="social-card-header">
+              <div class="social-tags">${tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
+              <span class="social-status ${question.status}">${statusLabels[question.status] || question.status}</span>
+            </div>
+            <p class="label">第 ${index + 1} 題</p>
+            <div class="social-stem">${question.stem}</div>
+            ${renderMaterials(question.materials)}
+            ${options}
+            <details class="social-answer">
+              <summary>查看答案與解析</summary>
+              <h3>答案：${Array.isArray(question.answer) ? question.answer.join("、") : question.answer}</h3>
+              <p>${question.explanation || "尚無解析"}</p>
+              <p><strong>複習建議：</strong>${question.review_advice || "尚無"}</p>
+            </details>
+            <div class="social-review">
+              <h3>審題紀錄</h3>
+              <p>${question.review_notes || "尚無審題紀錄"}</p>
+              <p><strong>錯誤分類：</strong>${question.error_codes && question.error_codes.length ? question.error_codes.join("、") : "無"}</p>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderList() {
+        const status = document.getElementById("statusFilter").value;
+        const type = document.getElementById("typeFilter").value;
+        const filtered = questions.filter((question) => {
+          return (status === "all" || question.status === status) && (type === "all" || question.question_type === type);
+        });
+        document.getElementById("questionList").innerHTML = filtered.length
+          ? filtered.map(renderQuestion).join("")
+          : '<div class="social-empty">沒有符合條件的題目。</div>';
+      }
+
+      async function init() {
+        const response = await fetch(DATA_URL);
+        const text = await response.text();
+        questions = parseJsonl(text);
+        renderStats();
+        renderTypeFilter();
+        renderList();
+        document.getElementById("statusFilter").addEventListener("change", renderList);
+        document.getElementById("typeFilter").addEventListener("change", renderList);
+      }
+
+      init().catch((error) => {
+        document.getElementById("questionList").innerHTML = `<div class="social-empty">讀取失敗：${error.message}</div>`;
+      });
+    </script>
+  </body>
+</html>
