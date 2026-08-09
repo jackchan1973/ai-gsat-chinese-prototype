@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜國文解析</title>
+    <title>AI學測考總複習｜國文通關結算</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-quest-mode" />
   </head>
   <body>
     <main class="app-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">國文今日任務</p>
-          <h1>作答解析</h1>
+          <p class="eyebrow">國文主線</p>
+          <h1>通關結算</h1>
         </div>
-        <a class="text-link" href="../index.html">回今日任務</a>
+        <a class="text-link" href="../index.html">回闖關地圖</a>
       </header>
 
       <section class="summary-grid review-summary" aria-label="作答摘要">
@@ -26,20 +26,21 @@
           <div class="hero-task">
             <h2 id="reviewTitle">讀取作答結果</h2>
             <p id="reviewMeta">請稍候</p>
+            <div class="quest-result-line" id="questResultLine">結算中</div>
           </div>
         </article>
         <article class="summary-panel metric-panel">
-          <p class="label">自動評分</p>
+          <p class="label">通關星等</p>
           <strong id="autoScore">--</strong>
-          <span>題答對</span>
+          <span id="autoScoreLabel">自動判分</span>
         </article>
         <article class="summary-panel metric-panel">
-          <p class="label">待 AI 評分</p>
+          <p class="label">待評分</p>
           <strong id="pendingScore">--</strong>
           <span>題短答</span>
         </article>
         <article class="summary-panel metric-panel">
-          <p class="label">錯題</p>
+          <p class="label">復活關</p>
           <strong id="wrongCount">--</strong>
           <span>題</span>
         </article>
@@ -47,14 +48,14 @@
 
       <section class="panel wide-panel">
         <div class="section-title">
-          <h2>逐題解析</h2>
+          <h2>逐題修復情報</h2>
           <span id="reviewStatus">--</span>
         </div>
         <div class="review-stack" id="reviewStack"></div>
       </section>
     </main>
 
-    <script src="../assets/js/session.js?v=20260804-portal-login"></script>
-    <script src="../assets/js/review.js?v=20260804-class-1105"></script>
+    <script src="../assets/js/session.js?v=20260809-quest-mode"></script>
+    <script src="../assets/js/review.js?v=20260809-quest-mode"></script>
   </body>
 </html>

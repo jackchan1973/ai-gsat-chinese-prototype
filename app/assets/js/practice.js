@@ -1,5 +1,5 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260804-k01-four-types";
+const DATA_VERSION = "20260809-quest-mode";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -257,9 +257,9 @@ function renderQuestion(question, index) {
 
 function renderQuestionSectionBreak(section, count) {
   const sectionNotes = {
-    基礎短練: "先完成不需閱讀文章的字音字形暖身。",
+    基礎短練: "先完成不需閱讀文章的基礎暖身。",
     今日題組: "閱讀左側材料後，逐題回到文本找依據。",
-    錯題複習: "這些題目來自前次錯題，答完會更新弱點與下次複習日。",
+    錯題複習: "這些題目來自前次錯題，完成後會更新復活關排程。",
   };
   return `
     <div class="question-section-break">
@@ -599,8 +599,8 @@ async function main() {
     document.querySelector(".app-shell").innerHTML = `
       <section class="error-box">
         <h1>這一天還不能作答</h1>
-        <p>第 ${escapeHtml(task.day_number || "--")} 天已排進度，但題庫還沒補齊。請先回首頁選擇標示「可測」的天數。</p>
-        <p><a class="text-link" href="../index.html">回今日任務</a></p>
+        <p>第 ${escapeHtml(task.day_number || "--")} 天已排進度，但這一關還沒開放。</p>
+        <p><a class="text-link" href="../index.html">回闖關地圖</a></p>
       </section>
     `;
     return;
@@ -612,14 +612,14 @@ async function main() {
   const basicCount = (task.basic_question_ids || []).length;
   const reviewCount = (task.review_question_ids || []).length || (task.review_due_slots || []).length;
   const groupQuestionCount = group?.questions?.length || 0;
-  const flowTags = [`字音字形短練 ${basicCount} 題`, `閱讀題組 ${groupQuestionCount} 題`];
-  if (reviewCount) flowTags.push(`錯題複習 ${reviewCount} 題`);
+  const flowTags = [`第 1 關基礎暖身 ${basicCount} 題`, `第 2 關閱讀挑戰 ${groupQuestionCount} 題`];
+  if (reviewCount) flowTags.push(`第 3 關復活關 ${reviewCount} 題`);
 
   document.getElementById("practiceTitle").textContent = group?.title || task.group_id;
   document.getElementById("practiceMeta").textContent = `${task.task_date}｜${questions.length} 題｜${task.estimated_minutes} 分鐘`;
   document.getElementById("practiceDescription").innerHTML = `
-    <span>今日流程：${flowTags.map(escapeHtml).join(" → ")}。</span>
-    <span>短答第一版先保存答案，解析頁會顯示參考答案與評分原則。</span>
+    <span>今日闖關：${flowTags.map(escapeHtml).join(" → ")}。</span>
+    <span>短答會先保存答案，結算頁顯示參考答案與評分原則。</span>
   `;
   document.getElementById("groupBadge").textContent = formatContentStatus(group?.status);
   document.getElementById("basicBadge").textContent = `${basicQuestions.length} 題`;

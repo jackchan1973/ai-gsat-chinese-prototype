@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜今日任務</title>
+    <title>AI學測考總複習｜闖關地圖</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./assets/css/style.css?v=20260809-challenge-hero" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=20260809-quest-mode" />
   </head>
   <body>
     <main class="app-shell student-home-shell">
       <section class="login-screen" id="loginScreen" aria-label="登入">
         <div class="login-brand">
           <p class="eyebrow">AI學測考總複習</p>
-          <h1>學測總複習任務艙</h1>
-          <p>國文已進入每日任務，社會科今天加入第一週正式練習入口；每科分開練、進度一起追蹤。</p>
+          <h1>學測闖關任務艙</h1>
+          <p>每天完成一個關卡，把五科複習變成可追蹤的挑戰路線。</p>
         </div>
         <form class="login-card" id="loginForm">
           <div class="login-card-heading">
@@ -23,7 +23,7 @@
           <div class="portal-switch" role="radiogroup" aria-label="選擇登入身分">
             <button class="portal-option active" type="button" data-portal="student" aria-pressed="true">
               <strong>學生</strong>
-              <span>開始今日任務</span>
+              <span>開始今日闖關</span>
             </button>
             <button class="portal-option" type="button" data-portal="parent" aria-pressed="false">
               <strong>家長</strong>
@@ -44,7 +44,7 @@
             <input id="passwordInput" name="password" type="password" autocomplete="current-password" value="100501" />
           </div>
           <p class="login-error" id="loginError" role="alert"></p>
-          <button class="primary-action student-start-action login-submit-action" id="loginSubmitButton" type="submit">進入今日任務</button>
+          <button class="primary-action student-start-action login-submit-action" id="loginSubmitButton" type="submit">進入闖關地圖</button>
         </form>
       </section>
 
@@ -52,11 +52,11 @@
         <header class="exam-command-hero">
           <div class="exam-command-copy">
             <p class="eyebrow">AI學測考總複習</p>
-            <h1>五科總複習控制台</h1>
-            <p>國文每日任務已運作，社會科第一週練習已上線；接下來英文、數學、自然會依同一套排程接入。</p>
+            <h1>五科闖關控制台</h1>
+            <p>國文主線已運作，社會科第一週三關已上線；接下來英文、數學、自然會依同一套闖關路線接入。</p>
             <div class="exam-hero-actions">
-              <a class="primary-action link-action" href="./pages/social-practice.html">開始社會科練習</a>
-              <button class="secondary-action compact-action" type="button" id="chineseFocusButton">查看國文今日任務</button>
+              <a class="primary-action link-action" href="./pages/social-practice.html">開始社會科闖關</a>
+              <button class="secondary-action compact-action" type="button" id="chineseFocusButton">查看國文今日關卡</button>
             </div>
           </div>
           <div class="exam-command-panel" aria-label="總複習狀態">
@@ -70,7 +70,7 @@
                 <strong>2 科</strong>
               </div>
               <div>
-                <span>本週任務</span>
+                <span>本週關卡</span>
                 <strong>8 天次</strong>
               </div>
               <div>
@@ -96,18 +96,18 @@
               <span>國文</span>
               <strong>已開放</strong>
             </div>
-            <h2>每日任務</h2>
-            <p>字音字形、閱讀題組、錯題回鍋已接入正式流程。</p>
-            <button class="secondary-action compact-action" type="button" id="chineseCardButton">查看任務</button>
+            <h2>國文主線</h2>
+            <p>今日三關：基礎暖身、閱讀挑戰、復活關。</p>
+            <button class="secondary-action compact-action" type="button" id="chineseCardButton">查看關卡</button>
           </article>
           <article class="subject-command-card social">
             <div class="subject-card-head">
               <span>社會</span>
               <strong>已開放</strong>
             </div>
-            <h2>第一週正式練習</h2>
-            <p>週二、週四、週六共 16 題，含資料判讀、多選與文字作答。</p>
-            <a class="primary-action link-action" href="./pages/social-practice.html">開始練習</a>
+            <h2>社會主線</h2>
+            <p>第一週三關：資料判讀、跨科圖表、週六文字作答。</p>
+            <a class="primary-action link-action" href="./pages/social-practice.html">開始闖關</a>
           </article>
           <article class="subject-command-card pending">
             <div class="subject-card-head">
@@ -115,7 +115,7 @@
               <strong>準備中</strong>
             </div>
             <h2>閱讀與寫作</h2>
-            <p>將先分析近三年題型，再接入每日練習。</p>
+            <p>將先分析近三年題型，再接入每日關卡。</p>
           </article>
           <article class="subject-command-card pending">
             <div class="subject-card-head">
@@ -123,7 +123,7 @@
               <strong>準備中</strong>
             </div>
             <h2>觀念與題型</h2>
-            <p>週二、週四、週六、週日安排練習節奏。</p>
+            <p>週二、週四、週六、週日安排關卡節奏。</p>
           </article>
           <article class="subject-command-card pending">
             <div class="subject-card-head">
@@ -135,14 +135,14 @@
           </article>
         </section>
 
-        <section class="student-today-card" id="chineseTaskPanel" aria-label="國文今日練習">
+        <section class="student-today-card quest-today-card" id="chineseTaskPanel" aria-label="國文今日關卡">
           <div class="panel-heading">
-            <p class="label">國文今天進度</p>
+            <p class="label">國文今日關卡</p>
             <strong id="taskDate">--</strong>
           </div>
           <div class="student-task-main">
-            <p class="student-message" id="studentMessage">準備讀取今日任務。</p>
-            <h2 id="taskTitle">今日任務載入中</h2>
+            <p class="student-message" id="studentMessage">準備讀取今日關卡。</p>
+            <h2 id="taskTitle">今日關卡載入中</h2>
             <p id="taskMeta">請稍候</p>
           </div>
           <div class="mission-progress" aria-label="今日完成度">
@@ -152,33 +152,28 @@
             </div>
             <div class="progress-track"><span id="missionProgressFill"></span></div>
           </div>
-          <div class="day-picker" aria-label="選擇練習天數">
-            <p class="day-picker-title">選擇測試天數</p>
-            <div class="day-grid" id="taskSelector" role="list" aria-label="選擇 1 到 31 號"></div>
-            <p id="taskReadiness">讀取中</p>
-          </div>
-          <div class="student-metrics" aria-label="任務數據">
+          <div class="student-metrics quest-intel" aria-label="闖關情報">
             <div>
-              <span>預估</span>
+              <span>挑戰時間</span>
               <strong><span id="estimatedMinutes">--</span> 分鐘</strong>
             </div>
             <div>
-              <span>今天</span>
+              <span>今日總題數</span>
               <strong><span id="questionCount">--</span> 題</strong>
             </div>
             <div>
-              <span>複習</span>
+              <span>復活關</span>
               <strong><span id="reviewCount">--</span> 題</strong>
             </div>
           </div>
-          <button class="primary-action student-start-action" type="button" id="startButton">開始今天練習</button>
+          <button class="primary-action student-start-action" type="button" id="startButton">開始今日闖關</button>
         </section>
 
         <section class="mission-road" aria-label="今日三關">
           <article class="mission-step" id="basicStep">
             <span class="mission-step-index">1</span>
             <div>
-              <strong>基礎短練</strong>
+              <strong>第 1 關｜基礎暖身</strong>
               <p id="basicStepText">讀取中</p>
             </div>
             <span id="basicCount">0 題</span>
@@ -186,7 +181,7 @@
           <article class="mission-step" id="groupStep">
             <span class="mission-step-index">2</span>
             <div>
-              <strong>閱讀題組</strong>
+              <strong>第 2 關｜閱讀挑戰</strong>
               <p id="groupStepText">讀取中</p>
             </div>
             <span id="groupStatus">--</span>
@@ -194,7 +189,7 @@
           <article class="mission-step" id="reviewStep">
             <span class="mission-step-index">3</span>
             <div>
-              <strong>錯題回鍋</strong>
+              <strong>第 3 關｜復活關</strong>
               <p id="reviewStepText">讀取中</p>
             </div>
             <span id="reviewStatus">--</span>
@@ -218,14 +213,14 @@
         <section class="student-secondary-panel" aria-label="其他入口">
           <div id="weekSummary"></div>
           <div class="student-link-row">
-            <button class="secondary-action" type="button" id="reviewButton">查看錯題</button>
+            <button class="secondary-action" type="button" id="reviewButton">進入復活關</button>
             <a class="secondary-action link-action" href="./pages/parent-report.html">家長週報</a>
           </div>
         </section>
       </section>
     </main>
 
-    <script src="./assets/js/session.js?v=20260809-exam-dashboard"></script>
-    <script src="./assets/js/app.js?v=20260809-exam-dashboard"></script>
+    <script src="./assets/js/session.js?v=20260809-quest-mode"></script>
+    <script src="./assets/js/app.js?v=20260809-quest-mode"></script>
   </body>
 </html>

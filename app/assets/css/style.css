@@ -2698,3 +2698,117 @@ body {
     padding: 14px;
   }
 }
+
+.quest-today-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.quest-today-card::after {
+  content: "CLEAR";
+  position: absolute;
+  right: -8px;
+  bottom: -18px;
+  color: rgba(0, 167, 200, 0.08);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(4rem, 13vw, 8rem);
+  font-weight: 950;
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+.quest-intel div {
+  border-color: rgba(0, 167, 200, 0.2);
+  background: linear-gradient(180deg, #ffffff, #eefbff);
+}
+
+.quest-result-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 12px;
+  border: 1px solid rgba(240, 124, 40, 0.26);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #fff7ed, #e8fbff);
+  color: #a34508;
+  font-size: 1.45rem;
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+.quest-result-line span {
+  color: #0d2538;
+  font-size: 1rem;
+}
+
+.social-practice-page {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(0, 167, 200, 0.2), transparent 22rem),
+    linear-gradient(180deg, #07131f 0, #102235 280px, #f3f7fb 280px, #f3f7fb 100%);
+}
+
+.social-practice-page .topbar {
+  min-height: 150px;
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.97), rgba(7, 19, 31, 0.72), rgba(240, 124, 40, 0.2)),
+    url("../images/gsat-challenge-hero.png") center / cover no-repeat;
+}
+
+.social-practice-summary div {
+  background: linear-gradient(180deg, #ffffff, #eefbff);
+}
+
+.social-day-tab {
+  display: grid;
+  gap: 2px;
+  align-content: center;
+  min-width: 160px;
+  min-height: 78px;
+  text-align: left;
+  font-weight: 900;
+}
+
+.social-day-tab span,
+.social-day-tab small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.social-day-tab strong {
+  display: block;
+  color: inherit;
+  line-height: 1.2;
+}
+
+.social-day-tab.active span,
+.social-day-tab.active small {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.social-material:first-child {
+  border-color: rgba(0, 167, 200, 0.24);
+  background: linear-gradient(135deg, #ffffff, #eefbff);
+}
+
+.social-question-card.correct {
+  box-shadow: inset 4px 0 0 rgba(37, 116, 82, 0.64), 0 14px 34px rgba(7, 19, 31, 0.08);
+}
+
+.social-question-card.incorrect {
+  box-shadow: inset 4px 0 0 rgba(240, 124, 40, 0.72), 0 14px 34px rgba(7, 19, 31, 0.08);
+}
+
+.social-score-panel.show {
+  background: linear-gradient(135deg, #ffffff, #fff7ed);
+}
+
+@media (max-width: 760px) {
+  .social-day-tab {
+    min-width: min(100%, 220px);
+    flex: 1 1 180px;
+  }
+}

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜社會科正式練習</title>
+    <title>AI學測考總複習｜社會科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-social-practice" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-quest-mode" />
     <style>
       .social-practice-page {
         background: linear-gradient(180deg, #102235 0, #16344b 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -242,11 +242,11 @@
     <main class="app-shell social-practice-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">AI學測考總複習｜社會科</p>
-          <h1>第一週正式練習</h1>
-          <p class="muted-text">週二、週四、週六三回合；週六含文字作答。</p>
+          <p class="eyebrow">社會主線</p>
+          <h1>第一週三關挑戰</h1>
+          <p class="muted-text">完成資料判讀、跨科圖表、週末文字關，累積星等與徽章。</p>
         </div>
-        <a class="secondary-action link-action" href="../index.html">返回主頁</a>
+        <a class="secondary-action link-action" href="../index.html">回闖關地圖</a>
       </header>
 
       <section class="social-practice-summary" id="summaryStats" aria-label="練習統計"></section>
@@ -255,9 +255,9 @@
       <form id="socialPracticeForm">
         <section class="social-question-list" id="questionList" aria-live="polite"></section>
         <div class="social-actions">
-          <button class="primary-action" type="submit">提交並看解析</button>
-          <button class="secondary-action" type="button" id="resetButton">重新作答</button>
-          <a class="secondary-action link-action" href="./social-formal-candidates.html?v=20260809-batch01">查看完整題庫</a>
+          <button class="primary-action" type="submit">完成本關看結算</button>
+          <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
+          <a class="secondary-action link-action" href="./social-formal-candidates.html?v=20260809-batch01">查看題庫情報</a>
         </div>
       </form>
       <section class="social-score-panel" id="scorePanel" aria-live="polite"></section>
@@ -267,9 +267,14 @@
       const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-social-practice";
       const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260809-social-practice";
       const taskTypeLabels = {
-        concept_and_material_reading: "概念與資料判讀",
-        cross_domain_and_chart_reading: "跨科整合與圖表判讀",
-        weekly_synthesis: "週總結與深度表達"
+        concept_and_material_reading: "資料判讀關",
+        cross_domain_and_chart_reading: "跨科圖表關",
+        weekly_synthesis: "週末文字關"
+      };
+      const badgeLabels = {
+        concept_and_material_reading: "資料判讀徽章",
+        cross_domain_and_chart_reading: "跨科圖表徽章",
+        weekly_synthesis: "週末整合徽章"
       };
 
       let days = [];
@@ -309,10 +314,10 @@
         const questions = days.flatMap((day) => day.question_slots || []);
         const written = questions.filter((question) => question.requires_written_response).length;
         const stats = [
-          ["任務日", days.length],
+          ["關卡", days.length],
           ["總題數", questions.length],
-          ["選擇題", questions.length - written],
-          ["文字作答", written]
+          ["選擇挑戰", questions.length - written],
+          ["文字關", written]
         ];
         document.getElementById("summaryStats").innerHTML = stats
           .map(([label, value]) => `<div><span>${label}</span><strong>${value}</strong></div>`)
@@ -321,9 +326,11 @@
 
       function renderTabs() {
         document.getElementById("dayTabs").innerHTML = days
-          .map((day) => `
+          .map((day, index) => `
             <button class="social-day-tab${day.day_id === activeDayId ? " active" : ""}" type="button" data-day-id="${escapeHtml(day.day_id)}">
-              ${escapeHtml(day.label)}｜${escapeHtml((day.question_slots || []).length)} 題
+              <span>第 ${index + 1} 關</span>
+              <strong>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}</strong>
+              <small>${escapeHtml((day.question_slots || []).length)} 題挑戰</small>
             </button>
           `)
           .join("");
@@ -365,11 +372,11 @@
           <article class="social-question-card" data-question-index="${index}">
             <div class="social-question-header">
               <div class="social-tags">
-                <span class="tag">第 ${index + 1} 題</span>
+                <span class="tag">挑戰 ${index + 1}</span>
                 <span class="tag">${escapeHtml(question.question_type)}</span>
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
               </div>
-              <span class="social-status">${question.requires_written_response ? "文字作答" : "選擇題"}</span>
+              <span class="social-status">${question.requires_written_response ? "文字關" : "選擇挑戰"}</span>
             </div>
             <p>${escapeHtml(question.stem)}</p>
             ${options}
@@ -393,8 +400,8 @@
         renderTabs();
         document.getElementById("materials").innerHTML = `
           <article class="social-material">
-            <h3>${escapeHtml(day.label)}｜${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h3>
-            <p>${escapeHtml(day.planned_focus || "依材料判讀與社會科概念作答。")}</p>
+            <h3>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}｜${escapeHtml(day.label)}</h3>
+            <p>${escapeHtml(day.planned_focus || "依材料判讀與社會科概念完成本關挑戰。")}</p>
           </article>
           ${(day.day_materials || []).map(renderMaterial).join("")}
         `;
@@ -408,6 +415,13 @@
       function scoreChoice(question, selected) {
         const answer = [...(Array.isArray(question.answer) ? question.answer : [question.answer])].map(String).sort();
         return selected.length === answer.length && selected.every((value, index) => value === answer[index]);
+      }
+
+      function getStarText(correct, total) {
+        if (!total) return "☆☆☆";
+        const rate = correct / total;
+        const stars = rate >= 0.9 ? 3 : rate >= 0.7 ? 2 : 1;
+        return "★".repeat(stars) + "☆".repeat(3 - stars);
       }
 
       function submitAnswers(event) {
@@ -435,9 +449,14 @@
         document.body.classList.add("answered");
         const scorePanel = document.getElementById("scorePanel");
         scorePanel.classList.add("show");
+        const stars = getStarText(correct, autoScored);
+        const badge = badgeLabels[day?.task_type] || "社會主線徽章";
+        const writtenNote = written ? `文字關 ${written} 題請對照參考答案與評分規準，完成後算入老師人工審題。` : "本關沒有文字作答。";
         scorePanel.innerHTML = `
-          <h2>本回合結果</h2>
-          <p>選擇題自動判分：${correct} / ${autoScored} 題。${written ? `文字作答 ${written} 題請對照參考答案與評分規準。` : ""}</p>
+          <h2>本關通關結算</h2>
+          <div class="quest-result-line">${stars}<span>獲得徽章：${escapeHtml(badge)}</span></div>
+          <p>選擇挑戰自動判分：${correct} / ${autoScored} 題。${writtenNote}</p>
+          <p class="muted-text">答錯題目已標記為復活關情報，先看解析再重挑本關。</p>
         `;
         scorePanel.scrollIntoView({ behavior: "smooth", block: "start" });
       }

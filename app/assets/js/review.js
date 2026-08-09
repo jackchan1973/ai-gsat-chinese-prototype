@@ -1,5 +1,5 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260802-reviewed-bank";
+const DATA_VERSION = "20260809-quest-mode";
 const ATTEMPT_KEY = "chi_v1_last_attempt";
 const DATA_FILES = {
   groups: "question_groups.jsonl",
@@ -96,7 +96,7 @@ function formatQuestionType(type) {
 function resultLabel(answer) {
   if (answer.result_status === "needs_ai_review") return "待 AI 評分";
   if (answer.is_correct) return "答對";
-  return "需複習";
+  return "進復活關";
 }
 
 function resultClass(answer) {
@@ -154,7 +154,7 @@ async function main() {
     document.querySelector(".app-shell").innerHTML = `
       <section class="error-box">
         <h1>請先登入</h1>
-        <p>回首頁使用座號或導師帳號登入後，再查看解析。</p>
+        <p>回首頁使用座號或導師帳號登入後，再查看通關結算。</p>
         <p><a class="text-link" href="../index.html">回首頁登入</a></p>
       </section>
     `;
@@ -166,8 +166,8 @@ async function main() {
     document.querySelector(".app-shell").innerHTML = `
       <section class="error-box">
         <h1>尚未有作答結果</h1>
-        <p>請先回今日任務進入作答頁。</p>
-        <p><a class="text-link" href="../index.html">回今日任務</a></p>
+        <p>請先回闖關地圖進入今日挑戰。</p>
+        <p><a class="text-link" href="../index.html">回闖關地圖</a></p>
       </section>
     `;
     return;
@@ -183,14 +183,19 @@ async function main() {
   const autoCorrect = autoScored.filter((answer) => answer.is_correct).length;
   const pending = attempt.answers.filter((answer) => answer.result_status === "needs_ai_review").length;
   const wrong = attempt.answers.filter((answer) => answer.result_status === "wrong").length;
+  const correctRate = autoScored.length ? autoCorrect / autoScored.length : 0;
+  const stars = correctRate >= 0.9 ? 3 : correctRate >= 0.7 ? 2 : 1;
+  const starText = "★".repeat(stars) + "☆".repeat(3 - stars);
 
   document.getElementById("reviewDate").textContent = attempt.task_date;
   document.getElementById("reviewTitle").textContent = attempt.group_title;
-  document.getElementById("reviewMeta").textContent = `${attempt.subject}｜${attempt.mode}｜${attempt.answers.length} 題`;
-  document.getElementById("autoScore").textContent = `${autoCorrect}/${autoScored.length}`;
+  document.getElementById("reviewMeta").textContent = `${attempt.subject}｜${attempt.mode}｜${attempt.answers.length} 題挑戰`;
+  document.getElementById("questResultLine").textContent = `自動判分 ${autoCorrect}/${autoScored.length} 題，獲得 ${starText}`;
+  document.getElementById("autoScore").textContent = starText;
+  document.getElementById("autoScoreLabel").textContent = `${autoCorrect}/${autoScored.length} 題答對`;
   document.getElementById("pendingScore").textContent = pending;
   document.getElementById("wrongCount").textContent = wrong;
-  document.getElementById("reviewStatus").textContent = "已產生";
+  document.getElementById("reviewStatus").textContent = wrong ? "復活關已排程" : "今日通關";
   document.getElementById("reviewStack").innerHTML = attempt.answers
     .map((answer) => renderReviewItem(answer, questionMap.get(answer.question_id)))
     .join("");

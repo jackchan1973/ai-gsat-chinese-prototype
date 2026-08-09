@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260809-multi-subject";
+const DATA_VERSION = "20260809-quest-mode";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -44,8 +44,8 @@ const strategyLabels = {
 };
 
 const taskTypeLabels = {
-  daily_short_review: "每日短練",
-  daily_short_review_with_review: "每日短練＋錯題複習",
+  daily_short_review: "每日闖關",
+  daily_short_review_with_review: "每日闖關＋復活關",
 };
 
 const contentStatusLabels = {
@@ -109,7 +109,7 @@ function formatStrategy(strategy) {
 }
 
 function formatTaskType(type) {
-  return taskTypeLabels[type] || "每日練習";
+  return taskTypeLabels[type] || "每日闖關";
 }
 
 function formatContentStatus(status) {
@@ -154,8 +154,8 @@ function renderBasics(task, drillMap) {
   const uniqueNames = [...new Set(knowledgeNames)];
 
   summary.innerHTML = `
-    <h2>基礎短練</h2>
-    <p>第 1 段先做 ${escapeHtml(ids.length)} 題短練，優先練字音字形與文言字義，作答頁會放在最前面。</p>
+    <h2>第 1 關｜基礎暖身</h2>
+    <p>先做 ${escapeHtml(ids.length)} 題短練，拿穩基本分再進主線挑戰。</p>
     <div class="task-meta">
       ${["基礎短練", ...uniqueNames].map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
     </div>
@@ -175,7 +175,7 @@ function renderGroup(task, groupMap) {
   setText("groupStatus", formatContentStatus(group.status));
   setText("groupStepText", `${questionCount} 題閱讀挑戰，回到文本找答案依據。`);
   summary.innerHTML = `
-    <h2>閱讀題組</h2>
+    <h2>第 2 關｜閱讀挑戰</h2>
     <h3 class="group-title">${escapeHtml(group.title)}</h3>
     <p>第 2 段進入 ${escapeHtml(group.material_type || "學測型閱讀題組")}，共 ${questionCount} 題。材料與題目會在作答頁分區顯示。</p>
     <div class="task-meta">
@@ -190,14 +190,14 @@ function renderReviews(task, wrongMap, reviewSchedules) {
   const dueSlots = task.review_due_slots || [];
   const scheduled = reviewSchedules.filter((item) => ids.includes(item.assigned_question_id));
   const scheduleMap = byId(scheduled, "assigned_question_id");
-  setText("reviewStatus", ids.length || dueSlots.length ? "今日安排" : "今日無");
+  setText("reviewStatus", ids.length || dueSlots.length ? "待挑戰" : "今日無");
   const reviewAmount = ids.length || dueSlots.length;
-  setText("reviewStepText", reviewAmount ? `${reviewAmount} 題弱點回鍋，做完就更新錯題紀錄。` : "今天沒有錯題回鍋，照一般節奏完成。");
+  setText("reviewStepText", reviewAmount ? `${reviewAmount} 題復活挑戰，完成後修復弱點。` : "今天沒有復活關，保持一般節奏。");
 
   if (!ids.length && !dueSlots.length) {
     summary.innerHTML = `
-      <h2>錯題複習</h2>
-      <p>今天沒有安排錯題複習，維持一般練習節奏。</p>
+      <h2>第 3 關｜復活關</h2>
+      <p>今天沒有復活關，完成前兩關即可通關。</p>
       <div class="task-meta"><span class="tag">今日無</span></div>
     `;
     return;
@@ -205,11 +205,11 @@ function renderReviews(task, wrongMap, reviewSchedules) {
 
   if (!ids.length && dueSlots.length) {
     summary.innerHTML = `
-      <h2>錯題複習</h2>
-      <p>這一天有 ${escapeHtml(dueSlots.length)} 個錯題回流位置；實際題目會依孩子前 2 天答錯內容安排。</p>
+      <h2>第 3 關｜復活關</h2>
+      <p>這一天有 ${escapeHtml(dueSlots.length)} 個復活關位置；實際題目會依前 2 天答錯內容安排。</p>
       <div class="task-meta">
         <span class="tag">2 天後複習</span>
-        <span class="tag">測試版先記錄排程</span>
+        <span class="tag">弱點修復</span>
       </div>
     `;
     return;
@@ -221,8 +221,8 @@ function renderReviews(task, wrongMap, reviewSchedules) {
     .map((item) => formatKnowledge(item.knowledge_code));
   const uniqueTags = [...new Set(reviewTags)];
   summary.innerHTML = `
-    <h2>錯題複習</h2>
-    <p>第 3 段排入 ${escapeHtml(ids.length)} 題錯題複習，來源是前次錯題 2 天後回流。</p>
+    <h2>第 3 關｜復活關</h2>
+    <p>排入 ${escapeHtml(ids.length)} 題復活挑戰，來源是前次錯題 2 天後回流。</p>
     <div class="task-meta">
       ${["2 天後複習", ...uniqueTags].map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
     </div>
@@ -232,8 +232,8 @@ function renderReviews(task, wrongMap, reviewSchedules) {
 function renderFlowSummary(task, groupQuestionCount) {
   const basicCount = (task.basic_question_ids || []).length;
   const reviewCount = (task.review_question_ids || []).length || (task.review_due_slots || []).length;
-  const reviewText = reviewCount ? `、錯題複習 ${reviewCount} 題` : "";
-  return `今日流程：基礎短練 ${basicCount} 題 → 閱讀題組 ${groupQuestionCount} 題${reviewText}`;
+  const reviewText = reviewCount ? ` → 復活關 ${reviewCount} 題` : "";
+  return `今日三關：基礎暖身 ${basicCount} 題 → 閱讀挑戰 ${groupQuestionCount} 題${reviewText}`;
 }
 
 function isTaskRunnable(task, groupMap, drillMap) {
@@ -243,9 +243,9 @@ function isTaskRunnable(task, groupMap, drillMap) {
 }
 
 function readinessText(task, runnable) {
-  if (runnable) return "這一天可以測試完整作答流程。";
-  if (task.app_readiness === "needs_bank_items_before_app_use") return "這一天已排進度，但題庫還沒補齊，暫時不能作答。";
-  return "這一天資料還需要檢查後才能測試。";
+  if (runnable) return "今日關卡已開放。";
+  if (task.app_readiness === "needs_bank_items_before_app_use") return "這一關還在準備中。";
+  return "這一關還需要檢查後才會開放。";
 }
 
 function readStoredAttempt() {
@@ -261,10 +261,10 @@ function renderCurrentUser() {
 }
 
 function missionMessage(task, group, reviewCount, completed) {
-  if (completed) return "今天這回合已完成，可以查看解析或換一天再練。";
-  if (reviewCount) return "今天有錯題回鍋，先把弱點補起來，再挑戰閱讀題組。";
-  if ((task.basic_question_ids || []).length) return "今天先拿下基礎題，再進入閱讀題組。";
-  return `今天主題是「${group?.title || "閱讀理解"}」，抓準題幹再作答。`;
+  if (completed) return "今日關卡已通關，可以查看結算或繼續修復弱點。";
+  if (reviewCount) return "今天有復活關，完成後把弱點補回來。";
+  if ((task.basic_question_ids || []).length) return "先完成基礎暖身，再進入閱讀挑戰。";
+  return `今天主線是「${group?.title || "閱讀理解"}」，抓準題幹再作答。`;
 }
 
 function renderMissionProgress(task, group, reviewCount) {
@@ -274,7 +274,7 @@ function renderMissionProgress(task, group, reviewCount) {
   const percent = Math.round((doneCount / 3) * 100);
 
   setText("missionProgressText", `${doneCount} / 3 關`);
-  setText("missionProgressLabel", completed ? "已完成" : "未開始");
+  setText("missionProgressLabel", completed ? "已通關" : "未開始");
   setText("studentMessage", missionMessage(task, group, reviewCount, completed));
 
   const fill = document.getElementById("missionProgressFill");
@@ -312,7 +312,7 @@ function renderTaskSelector(tasks, selectedTask, groupMap, drillMap, onChange) {
       `;
     }
       const runnable = isTaskRunnable(task, groupMap, drillMap);
-      const suffix = runnable ? "可測" : "待補題庫";
+      const suffix = runnable ? "開放" : "準備中";
       return `
         <button class="day-button${runnable ? "" : " pending"}" type="button" role="listitem" data-task-id="${escapeHtml(task.task_id)}" aria-pressed="false">
           <strong>${escapeHtml(dayNumber)}號</strong>
@@ -349,7 +349,7 @@ function renderTask(data, selectedTaskId) {
   setText("estimatedMinutes", task.estimated_minutes);
   setText("questionCount", totalQuestionCount);
   setText("reviewCount", reviewCount);
-  setText("taskStatus", runnable ? "可測試" : "待補題庫");
+  setText("taskStatus", runnable ? "可闖關" : "準備中");
   setText("taskReadiness", readinessText(task, runnable));
   renderMissionProgress(task, group, reviewCount);
   setActiveDayButton(task.task_id);
@@ -360,7 +360,7 @@ function renderTask(data, selectedTaskId) {
   statusNode?.classList.toggle("blocked", !runnable);
 
   document.getElementById("startButton").disabled = !runnable;
-  document.getElementById("startButton").textContent = runnable ? "開始今天練習" : "這天題庫尚未補齊";
+  document.getElementById("startButton").textContent = runnable ? "開始今日闖關" : "這一關尚未開放";
 
   renderBasics(task, drillMap);
   renderGroup(task, groupMap);
@@ -371,11 +371,11 @@ function renderTask(data, selectedTaskId) {
 function renderWeekSummary(report) {
   const node = document.getElementById("weekSummary");
   node.innerHTML = `
-    <h2>本週狀態</h2>
-    <p>${escapeHtml(report.parent_message)}</p>
+    <h2>本週闖關情報</h2>
+    <p>${escapeHtml(report.parent_message).replaceAll("任務", "關卡").replaceAll("練習", "闖關")}</p>
     <div class="task-meta">
-      <span class="tag">完成 ${escapeHtml(report.completed_days)} 天</span>
-      <span class="tag">答對率 ${escapeHtml(Math.round(report.correct_rate * 100))}%</span>
+      <span class="tag">通關 ${escapeHtml(report.completed_days)} 天</span>
+      <span class="tag">星等表現 ${escapeHtml(Math.round(report.correct_rate * 100))}%</span>
       <span class="tag">${escapeHtml(report.weakness_summary)}</span>
     </div>
   `;
@@ -389,7 +389,7 @@ function renderDataStatus(data) {
     ["閱讀題組", data.groups.length, "候選題庫"],
     ["題組題目", groupQuestionCount, "閱讀理解"],
     ["基礎短練", data.drills.length, "高中程度"],
-    ["錯題排程", data.reviewSchedules.length, "2 天後複習"],
+    ["復活關排程", data.reviewSchedules.length, "2 天後修復"],
   ];
   grid.innerHTML = cards
     .map(
@@ -442,12 +442,12 @@ function portalCopy(portal) {
   const copy = {
     student: {
       title: "學生登入",
-      hint: "用座號與個人密碼進入今日任務。",
+      hint: "用座號與個人密碼進入闖關地圖。",
       accountLabel: "學生座號",
       accountValue: "01",
       accountPlaceholder: "例如 01",
       passwordValue: "100501",
-      button: "進入今日任務",
+      button: "進入闖關地圖",
     },
     parent: {
       title: "家長登入",
