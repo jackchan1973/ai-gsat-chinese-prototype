@@ -124,6 +124,12 @@
         color: var(--warn);
       }
 
+      .social-status.needs_human_review {
+        border-color: rgba(21, 94, 117, 0.24);
+        background: #edf7fb;
+        color: var(--primary);
+      }
+
       .social-status.excluded {
         border-color: rgba(194, 65, 12, 0.28);
         background: #fff2ee;
@@ -224,11 +230,11 @@
 
       <section class="social-hero" aria-label="試跑摘要">
         <div class="social-hero-main">
-          <p class="label">v0.2 第二批測試題</p>
+          <p class="label">v0.3 題組重做版</p>
           <h2>線上檢查用，尚未接入正式每日任務</h2>
           <p>
-            這批題目依照「出題 Agent -> 審題 Agent -> 入庫 Gatekeeper」流程產生。
-            題目狀態會清楚標示，待修正與排除題只供檢查，不會放進正式任務。
+            v0.1/v0.2 短題已刪除，本版改成 3 組題組、9 題資料題。
+            全部先標示為待人工檢查，不會放進正式任務。
           </p>
         </div>
         <div class="social-stat" id="summaryStats" aria-label="題目狀態統計"></div>
@@ -237,6 +243,7 @@
       <section class="social-toolbar" aria-label="篩選">
         <select class="social-filter" id="statusFilter" aria-label="狀態篩選">
           <option value="all">全部狀態</option>
+          <option value="needs_human_review">待人工檢查</option>
           <option value="approved_for_app">已核准</option>
           <option value="needs_revision">待修正</option>
           <option value="excluded">排除</option>
@@ -250,11 +257,12 @@
     </main>
 
     <script>
-      const DATA_URL = "../../data/social_v0_2_trial.jsonl?v=20260809-v2";
+      const DATA_URL = "../../data/social_v0_3_groups.json?v=20260809-v3";
       const statusLabels = {
         approved_for_app: "已核准",
         needs_revision: "待修正",
-        excluded: "排除"
+        excluded: "排除",
+        needs_human_review: "待人工檢查"
       };
 
       const gradeLabels = {
@@ -264,15 +272,8 @@
         D: "D 排除"
       };
 
+      let groups = [];
       let questions = [];
-
-      function parseJsonl(text) {
-        return text
-          .split("\n")
-          .map((line) => line.trim())
-          .filter(Boolean)
-          .map((line) => JSON.parse(line));
-      }
 
       function countBy(items, key) {
         return items.reduce((acc, item) => {
@@ -283,12 +284,12 @@
       }
 
       function renderStats() {
-        const statusCounts = countBy(questions, "status");
+        const statusCounts = countBy(groups, "status");
         const stats = [
           ["總題數", questions.length],
-          ["已核准", statusCounts.approved_for_app || 0],
-          ["待修正", statusCounts.needs_revision || 0],
-          ["排除", statusCounts.excluded || 0]
+          ["題組數", groups.length],
+          ["待人工檢查", statusCounts.needs_human_review || 0],
+          ["正式入庫", statusCounts.approved_for_app || 0]
         ];
         document.getElementById("summaryStats").innerHTML = stats
           .map(([label, value]) => `<div><span>${label}</span><strong>${value}</strong></div>`)
@@ -303,9 +304,16 @@
           .join("");
       }
 
-      function renderMaterials(materials = []) {
-        return materials.map((material) => {
-          if (material.type !== "table" || !Array.isArray(material.rows)) return "";
+      function renderMaterialBlock(material) {
+        if (material.type === "text") {
+          return `
+            <section class="social-answer">
+              <h3>${material.title || "材料"}</h3>
+              <p>${material.content || ""}</p>
+            </section>
+          `;
+        }
+        if (material.type === "table" && Array.isArray(material.rows)) {
           const [head = [], ...rows] = material.rows;
           return `
             <table class="social-table">
@@ -314,10 +322,15 @@
               <tbody>${rows.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody>
             </table>
           `;
-        }).join("");
+        }
+        return "";
       }
 
-      function renderQuestion(question, index) {
+      function renderMaterials(materials = []) {
+        return materials.map(renderMaterialBlock).join("");
+      }
+
+      function renderQuestion(question, index, groupStatus) {
         const options = Array.isArray(question.options) && question.options.length
           ? `<ul class="social-options">${question.options.map((option) => `<li><strong>${option.key}</strong>${option.text}</li>`).join("")}</ul>`
           : '<p class="social-empty">短答題，無選項。</p>';
@@ -325,19 +338,18 @@
           question.id,
           question.question_type,
           question.difficulty,
-          gradeLabels[question.review_grade] || question.review_grade,
-          `相似風險：${question.similarity_risk || "未標記"}`
+          "高中以上難度",
+          "題組資料題"
         ];
 
         return `
-          <article class="social-card" data-status="${question.status}" data-type="${question.question_type}">
+          <article class="social-card" data-status="${groupStatus}" data-type="${question.question_type}">
             <div class="social-card-header">
               <div class="social-tags">${tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
-              <span class="social-status ${question.status}">${statusLabels[question.status] || question.status}</span>
+              <span class="social-status ${groupStatus}">${statusLabels[groupStatus] || groupStatus}</span>
             </div>
             <p class="label">第 ${index + 1} 題</p>
             <div class="social-stem">${question.stem}</div>
-            ${renderMaterials(question.materials)}
             ${options}
             <details class="social-answer">
               <summary>查看答案與解析</summary>
@@ -354,21 +366,46 @@
         `;
       }
 
+      function renderGroup(group) {
+        return `
+          <section class="social-card" data-status="${group.status}" data-type="題組">
+            <div class="social-card-header">
+              <div class="social-tags">
+                <span class="tag">${group.id}</span>
+                <span class="tag">${group.subjects.join("＋")}</span>
+                <span class="tag">題組</span>
+              </div>
+              <span class="social-status ${group.status}">${statusLabels[group.status] || group.status}</span>
+            </div>
+            <h2>${group.title}</h2>
+            <p>${group.summary}</p>
+            ${renderMaterials(group.materials)}
+            <div class="social-list">
+              ${group.questions.map((question, index) => renderQuestion(question, index, group.status)).join("")}
+            </div>
+          </section>
+        `;
+      }
+
       function renderList() {
         const status = document.getElementById("statusFilter").value;
         const type = document.getElementById("typeFilter").value;
-        const filtered = questions.filter((question) => {
-          return (status === "all" || question.status === status) && (type === "all" || question.question_type === type);
+        const filtered = groups.map((group) => {
+          const groupQuestions = group.questions.filter((question) => type === "all" || question.question_type === type);
+          return { ...group, questions: groupQuestions };
+        }).filter((group) => {
+          return (status === "all" || group.status === status) && group.questions.length;
         });
         document.getElementById("questionList").innerHTML = filtered.length
-          ? filtered.map(renderQuestion).join("")
+          ? filtered.map(renderGroup).join("")
           : '<div class="social-empty">沒有符合條件的題目。</div>';
       }
 
       async function init() {
         const response = await fetch(DATA_URL);
-        const text = await response.text();
-        questions = parseJsonl(text);
+        const data = await response.json();
+        groups = data.groups || [];
+        questions = groups.flatMap((group) => group.questions.map((question) => ({ ...question, group_status: group.status })));
         renderStats();
         renderTypeFilter();
         renderList();
