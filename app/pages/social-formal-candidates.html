@@ -11,6 +11,37 @@
         max-width: 1080px;
       }
 
+      .candidate-page {
+        background:
+          linear-gradient(180deg, #eef7fa 0, #f4f7fb 360px),
+          var(--bg);
+        color: var(--ink);
+      }
+
+      .candidate-page .topbar {
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+        background: linear-gradient(135deg, #f8fcff 0%, #e8f3f7 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .candidate-page .topbar > div {
+        min-width: 0;
+      }
+
+      .candidate-page .topbar h1 {
+        color: #102536;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .candidate-page .topbar .eyebrow {
+        color: #486172;
+      }
+
       .candidate-alert,
       .candidate-day,
       .candidate-question,
@@ -32,6 +63,8 @@
       .candidate-alert p {
         margin: 0;
         color: var(--muted);
+        overflow-wrap: anywhere;
+        word-break: break-word;
       }
 
       .candidate-stats {
@@ -95,6 +128,7 @@
 
       .candidate-day h2 {
         margin: 0 0 8px;
+        overflow-wrap: anywhere;
       }
 
       .candidate-material {
@@ -178,6 +212,12 @@
         color: var(--muted);
       }
 
+      .candidate-empty strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink);
+      }
+
       @media (max-width: 760px) {
         .candidate-stats {
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -187,10 +227,24 @@
         .candidate-question {
           padding: 14px;
         }
+
+        .candidate-page .topbar {
+          align-items: stretch;
+        }
+
+        .candidate-page .topbar h1 {
+          font-size: 1.45rem;
+        }
+
+        .candidate-day-header,
+        .candidate-question-header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
       }
     </style>
   </head>
-  <body>
+  <body class="candidate-page">
     <main class="app-shell candidate-shell">
       <header class="topbar">
         <div>
@@ -202,7 +256,7 @@
 
       <section class="candidate-alert" aria-label="候選題狀態">
         <strong>本頁只供線上檢查</strong>
-        <p>全部題目目前都是 `needs_human_review`，尚未進入正式每日任務，也不是已核准題庫。</p>
+        <p>全部題目都是待人工檢查，尚未進入正式每日任務。</p>
       </section>
 
       <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
@@ -223,11 +277,17 @@
     </main>
 
     <script>
-      const DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-batch01";
+      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-batch01";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260809-batch01";
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
         Sat: "週六"
+      };
+      const taskTypeLabels = {
+        concept_and_material_reading: "概念與資料判讀",
+        cross_domain_and_chart_reading: "跨科整合與圖表判讀",
+        weekly_synthesis: "週總結與深度表達"
       };
 
       let days = [];
@@ -325,7 +385,7 @@
             <div class="candidate-day-header">
               <div>
                 <p class="eyebrow">${escapeHtml(day.day_id)}</p>
-                <h2>${escapeHtml(day.label)}：${escapeHtml(day.task_type)}</h2>
+                <h2>${escapeHtml(day.label)}：${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h2>
               </div>
               <span class="candidate-status">待人工檢查</span>
             </div>
@@ -352,10 +412,42 @@
           : '<div class="candidate-empty">沒有符合條件的題目。</div>';
       }
 
+      function getDataUrls() {
+        if (window.location.protocol === "file:") {
+          return [REMOTE_DATA_URL, LOCAL_DATA_URL];
+        }
+        return [LOCAL_DATA_URL, REMOTE_DATA_URL];
+      }
+
+      async function loadCandidateData() {
+        const errors = [];
+        for (const url of getDataUrls()) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return await response.json();
+          } catch (error) {
+            errors.push(`${url}: ${error.message}`);
+          }
+        }
+        throw new Error(errors.join("；"));
+      }
+
+      function renderLoadError(error) {
+        const localFileHint = window.location.protocol === "file:"
+          ? "你目前是直接用 Chrome 開本機檔案。這種開法常會擋住 JSON 讀取，請改用線上網址，或用本機 http server 預覽。"
+          : "請重新整理，或改用帶版本號的線上網址檢查。";
+        document.getElementById("candidateList").innerHTML = `
+          <div class="candidate-empty">
+            <strong>題庫讀取失敗</strong>
+            <p>${escapeHtml(localFileHint)}</p>
+            <p>技術訊息：${escapeHtml(error.message)}</p>
+          </div>
+        `;
+      }
+
       async function init() {
-        const response = await fetch(DATA_URL);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
+        const data = await loadCandidateData();
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
@@ -366,7 +458,7 @@
       }
 
       init().catch((error) => {
-        document.getElementById("candidateList").innerHTML = `<div class="candidate-empty">讀取失敗：${escapeHtml(error.message)}</div>`;
+        renderLoadError(error);
       });
     </script>
   </body>
