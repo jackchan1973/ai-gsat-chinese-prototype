@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜社會正式候選題 v0.1</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-social-formal-candidates" />
+    <style>
+      .candidate-shell {
+        max-width: 1080px;
+      }
+
+      .candidate-alert,
+      .candidate-day,
+      .candidate-question,
+      .candidate-stat {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .candidate-alert {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 16px;
+        padding: 18px;
+        border-left: 5px solid var(--warn);
+      }
+
+      .candidate-alert p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .candidate-stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .candidate-stat {
+        padding: 14px;
+      }
+
+      .candidate-stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .candidate-stat strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 1.45rem;
+      }
+
+      .candidate-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 16px;
+      }
+
+      .candidate-filter {
+        min-height: 40px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 12px;
+        background: var(--surface);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .candidate-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .candidate-day {
+        padding: 18px;
+      }
+
+      .candidate-day-header,
+      .candidate-question-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .candidate-day h2 {
+        margin: 0 0 8px;
+      }
+
+      .candidate-material {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin: 10px 0;
+        padding: 12px;
+        background: var(--surface-muted);
+      }
+
+      .candidate-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+        font-size: 0.94rem;
+      }
+
+      .candidate-table th,
+      .candidate-table td {
+        border: 1px solid var(--line);
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .candidate-table th {
+        background: var(--surface);
+      }
+
+      .candidate-question {
+        margin-top: 12px;
+        padding: 14px;
+      }
+
+      .candidate-options {
+        display: grid;
+        gap: 8px;
+        margin: 12px 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .candidate-options li,
+      .candidate-answer,
+      .candidate-review {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: var(--surface-muted);
+      }
+
+      .candidate-options strong {
+        margin-right: 8px;
+      }
+
+      .candidate-answer {
+        margin-top: 10px;
+      }
+
+      .candidate-review {
+        margin-top: 10px;
+        color: var(--muted);
+      }
+
+      .candidate-status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        border: 1px solid rgba(21, 94, 117, 0.24);
+        border-radius: 999px;
+        padding: 4px 10px;
+        background: #edf7fb;
+        color: var(--primary);
+        font-size: 0.86rem;
+      }
+
+      .candidate-empty {
+        padding: 18px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 760px) {
+        .candidate-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .candidate-day,
+        .candidate-question {
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app-shell candidate-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI學測考總複習</p>
+          <h1>社會正式候選題 v0.1 batch_01</h1>
+        </div>
+        <a class="secondary-action link-action" href="../index.html">返回主頁</a>
+      </header>
+
+      <section class="candidate-alert" aria-label="候選題狀態">
+        <strong>本頁只供線上檢查</strong>
+        <p>全部題目目前都是 `needs_human_review`，尚未進入正式每日任務，也不是已核准題庫。</p>
+      </section>
+
+      <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
+
+      <section class="candidate-toolbar" aria-label="篩選">
+        <select class="candidate-filter" id="weekdayFilter" aria-label="星期篩選">
+          <option value="all">全部星期</option>
+          <option value="Tue">週二</option>
+          <option value="Thu">週四</option>
+          <option value="Sat">週六</option>
+        </select>
+        <select class="candidate-filter" id="typeFilter" aria-label="題型篩選">
+          <option value="all">全部題型</option>
+        </select>
+      </section>
+
+      <section class="candidate-list" id="candidateList" aria-live="polite"></section>
+    </main>
+
+    <script>
+      const DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-batch01";
+      const weekdayLabels = {
+        Tue: "週二",
+        Thu: "週四",
+        Sat: "週六"
+      };
+
+      let days = [];
+      let questions = [];
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function renderStats() {
+        const written = questions.filter((item) => item.question.requires_written_response).length;
+        const selection = questions.length - written;
+        const stats = [
+          ["總題數", questions.length],
+          ["選擇題", selection],
+          ["文字作答", written],
+          ["任務日", days.length]
+        ];
+        document.getElementById("summaryStats").innerHTML = stats
+          .map(([label, value]) => `<div class="candidate-stat"><span>${label}</span><strong>${value}</strong></div>`)
+          .join("");
+      }
+
+      function renderTypeFilter() {
+        const types = Array.from(new Set(questions.map((item) => item.question.question_type))).sort();
+        document.getElementById("typeFilter").innerHTML = '<option value="all">全部題型</option>' + types
+          .map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`)
+          .join("");
+      }
+
+      function renderMaterial(material) {
+        if (material.type === "table" && Array.isArray(material.rows)) {
+          const [head = [], ...rows] = material.rows;
+          return `
+            <section class="candidate-material">
+              <strong>${escapeHtml(material.title || "資料表")}</strong>
+              <table class="candidate-table">
+                <thead><tr>${head.map((cell) => `<th>${escapeHtml(cell)}</th>`).join("")}</tr></thead>
+                <tbody>${rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
+              </table>
+            </section>
+          `;
+        }
+        return `
+          <section class="candidate-material">
+            <strong>${escapeHtml(material.title || "材料")}</strong>
+            <p>${escapeHtml(material.content || "")}</p>
+          </section>
+        `;
+      }
+
+      function renderQuestion(item, index) {
+        const question = item.question;
+        const options = question.options && question.options.length
+          ? `<ul class="candidate-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
+          : '<p class="candidate-empty">文字作答題，無選項。</p>';
+        return `
+          <article class="candidate-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}">
+            <div class="candidate-question-header">
+              <div class="social-tags">
+                <span class="tag">${escapeHtml(question.id)}</span>
+                <span class="tag">${escapeHtml(question.question_type)}</span>
+                <span class="tag">${escapeHtml(question.difficulty)}</span>
+                <span class="tag">${question.requires_written_response ? "週六文字作答" : "選擇題"}</span>
+              </div>
+              <span class="candidate-status">待人工檢查</span>
+            </div>
+            <p class="label">${escapeHtml(weekdayLabels[item.weekday] || item.weekday)} 第 ${index + 1} 題</p>
+            <div>${escapeHtml(question.stem)}</div>
+            ${options}
+            <details class="candidate-answer">
+              <summary>查看答案與解析</summary>
+              <p><strong>答案：</strong>${escapeHtml(Array.isArray(question.answer) ? question.answer.join("、") : question.answer)}</p>
+              ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
+              <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
+              <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
+            </details>
+            <div class="candidate-review">
+              <p><strong>審題等級：</strong>${escapeHtml(question.review_grade || "未標")}</p>
+              <p><strong>審題紀錄：</strong>${escapeHtml(question.review_notes || "尚無")}</p>
+              <p><strong>相似風險：</strong>${escapeHtml(question.similarity_risk || "未標")}</p>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderDay(day) {
+        const dayQuestions = day.question_slots || [];
+        return `
+          <section class="candidate-day" data-weekday="${day.weekday}">
+            <div class="candidate-day-header">
+              <div>
+                <p class="eyebrow">${escapeHtml(day.day_id)}</p>
+                <h2>${escapeHtml(day.label)}：${escapeHtml(day.task_type)}</h2>
+              </div>
+              <span class="candidate-status">待人工檢查</span>
+            </div>
+            ${(day.day_materials || []).map(renderMaterial).join("")}
+            <div class="candidate-list">
+              ${dayQuestions.map((question, index) => renderQuestion({ weekday: day.weekday, question }, index)).join("")}
+            </div>
+          </section>
+        `;
+      }
+
+      function renderList() {
+        const weekday = document.getElementById("weekdayFilter").value;
+        const type = document.getElementById("typeFilter").value;
+        const filteredDays = days
+          .filter((day) => weekday === "all" || day.weekday === weekday)
+          .map((day) => ({
+            ...day,
+            question_slots: day.question_slots.filter((question) => type === "all" || question.question_type === type)
+          }))
+          .filter((day) => day.question_slots.length);
+        document.getElementById("candidateList").innerHTML = filteredDays.length
+          ? filteredDays.map(renderDay).join("")
+          : '<div class="candidate-empty">沒有符合條件的題目。</div>';
+      }
+
+      async function init() {
+        const response = await fetch(DATA_URL);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        days = (data.weeks || []).flatMap((week) => week.days || []);
+        questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
+        renderStats();
+        renderTypeFilter();
+        renderList();
+        document.getElementById("weekdayFilter").addEventListener("change", renderList);
+        document.getElementById("typeFilter").addEventListener("change", renderList);
+      }
+
+      init().catch((error) => {
+        document.getElementById("candidateList").innerHTML = `<div class="candidate-empty">讀取失敗：${escapeHtml(error.message)}</div>`;
+      });
+    </script>
+  </body>
+</html>
