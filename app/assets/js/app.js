@@ -1,5 +1,6 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260810-system01";
+const DATA_VERSION = "20260810-home-file01";
+const REMOTE_DATA_ROOT = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -62,22 +63,48 @@ function withDataVersion(path) {
   return `${path}${joiner}v=${DATA_VERSION}`;
 }
 
-function readJson(path) {
-  return fetch(withDataVersion(path)).then((response) => {
-    if (!response.ok) throw new Error(`讀取失敗：${path}`);
-    return response.json();
-  });
+function remoteDataUrl(path) {
+  const fileName = path.split("/").pop().split("?")[0];
+  return `${REMOTE_DATA_ROOT}/${fileName}`;
+}
+
+function dataUrls(path) {
+  return window.location.protocol === "file:"
+    ? [remoteDataUrl(path), path]
+    : [path, remoteDataUrl(path)];
+}
+
+async function readJson(path) {
+  const errors = [];
+  for (const url of dataUrls(path)) {
+    try {
+      const response = await fetch(withDataVersion(url));
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      errors.push(`${url}: ${error.message}`);
+    }
+  }
+  throw new Error(errors.join("；"));
 }
 
 async function readJsonl(path) {
-  const response = await fetch(withDataVersion(path));
-  if (!response.ok) throw new Error(`讀取失敗：${path}`);
-  const text = await response.text();
-  return text
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .map((line) => JSON.parse(line));
+  const errors = [];
+  for (const url of dataUrls(path)) {
+    try {
+      const response = await fetch(withDataVersion(url));
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const text = await response.text();
+      return text
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .map((line) => JSON.parse(line));
+    } catch (error) {
+      errors.push(`${url}: ${error.message}`);
+    }
+  }
+  throw new Error(errors.join("；"));
 }
 
 function byId(items, key) {
