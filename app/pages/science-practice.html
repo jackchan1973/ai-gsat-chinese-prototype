@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜自然科闖關</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-sciencepractice01" />
+    <style>
+      .science-practice-page { background: linear-gradient(180deg,#eef8f5 0,#f5f7fb 320px), var(--bg); color: var(--ink); }
+      .science-practice-shell { max-width: 1120px; min-width:0; }
+      .science-practice-page .topbar { align-items:center; border:1px solid var(--line); border-radius:8px; padding:18px; background:linear-gradient(135deg,#f7fcfb,#e9f5ef); box-shadow:var(--shadow); }
+      .science-practice-page .topbar > div { min-width:0; }
+      .science-summary,.science-day-tabs,.science-material,.science-question-card,.science-actions,.science-score-panel { border:1px solid var(--line); border-radius:8px; background:var(--surface); box-shadow:var(--shadow); }
+      .science-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:16px 0; padding:14px; }
+      .science-summary div { border:1px solid rgba(15,118,110,.14); border-radius:8px; padding:12px; background:#f7fbfd; }
+      .science-summary span { display:block; color:var(--muted); font-size:.86rem; }
+      .science-summary strong { display:block; margin-top:4px; color:#0f766e; font-size:1.35rem; }
+      .science-day-tabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:16px; padding:12px; }
+      .science-day-tab { border:1px solid var(--line); border-radius:8px; padding:12px; background:#f7fbfd; color:var(--ink); text-align:left; font:inherit; cursor:pointer; }
+      .science-day-tab.active { border-color:#0f766e; background:#e9f8f4; box-shadow:inset 0 0 0 2px rgba(15,118,110,.12); }
+      .science-day-tab span,.science-day-tab small { display:block; color:var(--muted); }
+      .science-day-tab strong { display:block; margin:4px 0; color:#0f4f4a; }
+      .science-material { margin:10px 0; padding:12px; background:#f7fbfd; overflow-x:auto; }
+      .science-material h3 { margin:0 0 8px; }
+      .science-table { width:100%; min-width:420px; border-collapse:collapse; margin-top:8px; font-size:.94rem; }
+      .science-table th,.science-table td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; }
+      .science-graph { display:block; width:100%; max-width:760px; height:auto; margin-top:10px; border:1px solid rgba(21,94,117,.16); border-radius:8px; background:#fff; }
+      .science-question-list { display:grid; gap:12px; min-width:0; }
+      .science-question-card { min-width:0; max-width:100%; padding:14px; overflow-wrap:anywhere; }
+      .science-question-card.correct { border-color:rgba(15,118,110,.42); background:#f0fbf6; }
+      .science-question-card.incorrect { border-color:rgba(194,65,12,.36); background:#fff7ed; }
+      .science-question-header { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:10px; }
+      .science-tags { display:flex; flex-wrap:wrap; gap:6px; min-width:0; max-width:100%; }
+      .science-tags .tag { min-width:0; max-width:100%; white-space:normal; overflow-wrap:anywhere; text-align:left; }
+      .science-status { display:inline-flex; align-items:center; min-height:30px; border:1px solid rgba(15,118,110,.22); border-radius:999px; padding:4px 10px; background:#e9f8f4; color:#0f766e; font-size:.86rem; font-weight:900; white-space:nowrap; }
+      .science-option-list { display:grid; gap:8px; margin:12px 0; min-width:0; }
+      .science-option { display:flex; gap:10px; align-items:flex-start; min-width:0; border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:var(--surface-muted); cursor:pointer; }
+      .science-option span { min-width:0; overflow-wrap:anywhere; }
+      .science-option input { margin-top:4px; }
+      .science-written { width:100%; min-height:56px; border:1px solid var(--line); border-radius:8px; padding:10px 12px; font:inherit; }
+      .science-answer-panel { display:none; margin-top:10px; border:1px solid var(--line); border-radius:8px; padding:12px; background:#fbfdfe; }
+      .science-practice-page.answered .science-answer-panel { display:block; }
+      .science-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; padding:14px; }
+      .science-score-panel { display:none; margin-top:16px; padding:16px; }
+      .science-score-panel.show { display:block; }
+      .science-result-line { display:flex; flex-wrap:wrap; gap:10px; align-items:center; color:#0f766e; font-size:1.2rem; font-weight:900; }
+      @media (max-width:760px) {
+        .science-summary,.science-day-tabs { grid-template-columns:1fr; }
+        .science-practice-page .topbar,.science-question-header { align-items:stretch; flex-direction:column; }
+        .science-table { min-width:0; font-size:.82rem; }
+        .science-table th,.science-table td { padding:6px; }
+      }
+    </style>
+  </head>
+  <body class="science-practice-page">
+    <main class="app-shell science-practice-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">自然主線</p>
+          <h1>自然科正式三關</h1>
+          <p class="muted-text">完成生命實驗、物理地科、能源環境三關，練圖表判讀與探究實作。</p>
+        </div>
+        <a class="secondary-action link-action" href="../index.html">回闖關地圖</a>
+      </header>
+
+      <section class="science-summary" id="summaryStats" aria-label="練習統計"></section>
+      <section class="science-day-tabs" id="dayTabs" aria-label="選擇自然科練習日"></section>
+      <section id="materials"></section>
+      <form id="sciencePracticeForm">
+        <section class="science-question-list" id="questionList" aria-live="polite"></section>
+        <div class="science-actions">
+          <button class="primary-action" type="submit">完成本關看結算</button>
+          <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
+        </div>
+      </form>
+      <section class="science-score-panel" id="scorePanel" aria-live="polite"></section>
+    </main>
+
+    <script>
+      const DATA_VERSION = "20260810-sciencepractice01";
+      const LOCAL_DATA_URL = `../../data/science_formal_daily_tasks_v0_1.json?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_daily_tasks_v0_1.json?v=${DATA_VERSION}`;
+      const taskTypeLabels = {
+        life_experiment_data: "生命實驗關",
+        physics_earth_diagrams: "物理地科關",
+        energy_environment_reasoning: "能源環境關"
+      };
+      const badgeLabels = {
+        life_experiment_data: "生命實驗徽章",
+        physics_earth_diagrams: "模型判讀徽章",
+        energy_environment_reasoning: "能源環境徽章"
+      };
+      let days = [];
+      let activeDayId = "";
+
+      function escapeHtml(value) {
+        return String(value ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
+      }
+
+      function answerText(answer) {
+        if (Array.isArray(answer)) return answer.join("、");
+        if (answer && typeof answer === "object") return Object.values(answer).flat().join("；");
+        return String(answer ?? "");
+      }
+
+      function normalizeAnswer(value) {
+        return String(value ?? "").replace(/\s+/g, "").replaceAll("，", ",").toLowerCase();
+      }
+
+      function getDataUrls() {
+        return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL];
+      }
+
+      async function loadData() {
+        const errors = [];
+        for (const url of getDataUrls()) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return await response.json();
+          } catch (error) {
+            errors.push(`${url}: ${error.message}`);
+          }
+        }
+        throw new Error(errors.join("；"));
+      }
+
+      function renderStats() {
+        const questions = days.flatMap((day) => day.question_slots || []);
+        const written = questions.filter((question) => question.requires_written_response).length;
+        const stats = [["關卡", days.length], ["總題數", questions.length], ["選擇挑戰", questions.length - written], ["文字關", written]];
+        document.getElementById("summaryStats").innerHTML = stats.map(([label, value]) => `<div><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join("");
+      }
+
+      function renderTabs() {
+        document.getElementById("dayTabs").innerHTML = days.map((day, index) => `
+          <button class="science-day-tab${day.day_id === activeDayId ? " active" : ""}" type="button" data-day-id="${escapeHtml(day.day_id)}">
+            <span>第 ${index + 1} 關</span>
+            <strong>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}</strong>
+            <small>${escapeHtml((day.question_slots || []).length)} 題挑戰</small>
+          </button>
+        `).join("");
+      }
+
+      function renderTable(material) {
+        return `
+          <table class="science-table">
+            <thead><tr><th>${escapeHtml(material.row_header || "項目")}</th>${(material.columns || []).map((column) => `<th>${escapeHtml(column)}</th>`).join("")}</tr></thead>
+            <tbody>${(material.rows || []).map((row) => `<tr><th>${escapeHtml(row.label || "")}</th>${(row.values || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
+          </table>
+        `;
+      }
+
+      function renderLineChart(material) {
+        const series = material.series || [{ name: material.title || "資料", points: material.points || [] }];
+        const width = 760, height = 320, pad = 48;
+        const all = series.flatMap((item) => item.points || []);
+        const xs = all.map((point) => point[0]), ys = all.map((point) => point[1]);
+        const xMin = Math.min(...xs), xMax = Math.max(...xs), yMin = Math.min(0, Math.min(...ys)), yMax = Math.max(...ys) * 1.15;
+        const mapX = (x) => pad + (x - xMin) * (width - pad * 2) / (xMax - xMin || 1);
+        const mapY = (y) => height - pad - (y - yMin) * (height - pad * 2) / (yMax - yMin || 1);
+        const colors = ["#155e75", "#c2410c", "#0f766e"];
+        return `
+          <svg class="science-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(material.title)}">
+            <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" stroke="#8aa2b2"/>
+            <line x1="${pad}" y1="${pad}" x2="${pad}" y2="${height - pad}" stroke="#8aa2b2"/>
+            <text x="${pad}" y="${height - 10}" fill="#61707e" font-size="13">${escapeHtml(material.x_label || "")}</text>
+            <text x="12" y="${pad - 16}" fill="#61707e" font-size="13">${escapeHtml(material.y_label || "")}</text>
+            ${series.map((item, index) => `
+              <polyline points="${(item.points || []).map((point) => `${mapX(point[0]).toFixed(1)},${mapY(point[1]).toFixed(1)}`).join(" ")}" fill="none" stroke="${colors[index % colors.length]}" stroke-width="3"/>
+              ${(item.points || []).map((point) => `<circle cx="${mapX(point[0])}" cy="${mapY(point[1])}" r="4" fill="${colors[index % colors.length]}"/>`).join("")}
+              <text x="${width - pad - 132}" y="${pad + 20 + index * 22}" fill="${colors[index % colors.length]}" font-size="14" font-weight="800">${escapeHtml(item.name || "")}</text>
+            `).join("")}
+          </svg>
+        `;
+      }
+
+      function renderProcess(material) {
+        const steps = material.steps || [];
+        const width = 760;
+        const stepWidth = Math.max(120, Math.floor((width - 80) / Math.max(steps.length, 1)) - 18);
+        return `
+          <svg class="science-graph" viewBox="0 0 ${width} 190" role="img" aria-label="${escapeHtml(material.title)}">
+            ${steps.map((step, index) => {
+              const x = 34 + index * ((width - 68) / Math.max(steps.length, 1));
+              const arrowX = x + stepWidth + 8;
+              return `
+                <rect x="${x}" y="64" width="${stepWidth}" height="58" rx="8" fill="#f7fbfd" stroke="#cbdde7"/>
+                <text x="${x + 10}" y="98" fill="#102235" font-size="14" font-weight="800">${escapeHtml(step)}</text>
+                ${index < steps.length - 1 ? `<line x1="${arrowX}" y1="93" x2="${arrowX + 26}" y2="93" stroke="#155e75" stroke-width="3"/><polygon points="${arrowX + 28},93 ${arrowX + 16},86 ${arrowX + 16},100" fill="#155e75"/>` : ""}
+              `;
+            }).join("")}
+          </svg>
+        `;
+      }
+
+      function renderMaterial(material) {
+        if (material.type === "table") return `<article class="science-material"><h3>${escapeHtml(material.title || "資料表")}</h3>${renderTable(material)}</article>`;
+        if (material.type === "line_chart") return `<article class="science-material"><h3>${escapeHtml(material.title || "圖表")}</h3>${renderLineChart(material)}</article>`;
+        if (material.type === "process_diagram") return `<article class="science-material"><h3>${escapeHtml(material.title || "流程圖")}</h3>${renderProcess(material)}</article>`;
+        return `<article class="science-material"><h3>${escapeHtml(material.title || "材料")}</h3><p>${escapeHtml(material.content || "")}</p></article>`;
+      }
+
+      function answerName(index) {
+        return `question_${index}`;
+      }
+
+      function renderQuestion(question, index) {
+        const name = answerName(index);
+        const isMultiple = Array.isArray(question.answer) && question.answer.length > 1;
+        const options = question.options?.length
+          ? `<div class="science-option-list">${question.options.map((option) => `
+              <label class="science-option">
+                <input type="${isMultiple ? "checkbox" : "radio"}" name="${escapeHtml(name)}" value="${escapeHtml(option.key)}" />
+                <span><strong>${escapeHtml(option.key)}.</strong> ${escapeHtml(option.text)}</span>
+              </label>
+            `).join("")}</div>`
+          : `<textarea class="science-written" name="${escapeHtml(name)}" placeholder="請輸入你的答案。"></textarea>`;
+        return `
+          <article class="science-question-card" data-question-index="${index}">
+            <div class="science-question-header">
+              <div class="science-tags">
+                <span class="tag">挑戰 ${index + 1}</span>
+                <span class="tag">${escapeHtml(question.question_type)}</span>
+                <span class="tag">${escapeHtml(question.difficulty)}</span>
+              </div>
+              <span class="science-status">${question.requires_written_response ? "文字關" : "選擇挑戰"}</span>
+            </div>
+            <p>${escapeHtml(question.stem)}</p>
+            ${(question.materials || []).map(renderMaterial).join("")}
+            ${options}
+            <div class="science-answer-panel">
+              <p><strong>參考答案：</strong>${escapeHtml(answerText(question.answer))}</p>
+              ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
+              <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
+              <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderActiveDay() {
+        const day = days.find((item) => item.day_id === activeDayId) || days[0];
+        if (!day) return;
+        activeDayId = day.day_id;
+        document.body.classList.remove("answered");
+        document.getElementById("scorePanel").classList.remove("show");
+        document.getElementById("scorePanel").innerHTML = "";
+        renderTabs();
+        document.getElementById("materials").innerHTML = `
+          <article class="science-material">
+            <h3>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}｜${escapeHtml(day.label)}</h3>
+            <p>${escapeHtml((day.day_materials || [])[0]?.content || "依材料判讀與自然科概念完成本關挑戰。")}</p>
+          </article>
+        `;
+        document.getElementById("questionList").innerHTML = (day.question_slots || []).map(renderQuestion).join("");
+      }
+
+      function selectedValues(form, index) {
+        return Array.from(form.querySelectorAll(`[name="${CSS.escape(answerName(index))}"]:checked`)).map((input) => input.value).sort();
+      }
+
+      function scoreChoice(question, selected) {
+        const answer = [...(Array.isArray(question.answer) ? question.answer : [question.answer])].map(String).sort();
+        return selected.length === answer.length && selected.every((value, index) => value === answer[index]);
+      }
+
+      function scoreWritten(question, form, index) {
+        const value = form.querySelector(`[name="${CSS.escape(answerName(index))}"]`)?.value || "";
+        if (question.question_type === "short_answer") return normalizeAnswer(value).length > 0;
+        return normalizeAnswer(value) === normalizeAnswer(answerText(question.answer));
+      }
+
+      function starText(correct, total) {
+        if (!total) return "☆☆☆";
+        const rate = correct / total;
+        const stars = rate >= 0.9 ? 3 : rate >= 0.7 ? 2 : 1;
+        return "★".repeat(stars) + "☆".repeat(3 - stars);
+      }
+
+      function submitAnswers(event) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const day = days.find((item) => item.day_id === activeDayId);
+        const questions = day?.question_slots || [];
+        let autoScored = 0;
+        let correct = 0;
+        let written = 0;
+        questions.forEach((question, index) => {
+          const card = document.querySelector(`[data-question-index="${index}"]`);
+          card?.classList.remove("correct", "incorrect");
+          let ok = false;
+          if (question.options?.length) {
+            autoScored += 1;
+            ok = scoreChoice(question, selectedValues(form, index));
+          } else if (question.question_type !== "short_answer") {
+            autoScored += 1;
+            ok = scoreWritten(question, form, index);
+          } else {
+            written += 1;
+            return;
+          }
+          if (ok) correct += 1;
+          card?.classList.add(ok ? "correct" : "incorrect");
+        });
+        document.body.classList.add("answered");
+        const panel = document.getElementById("scorePanel");
+        panel.classList.add("show");
+        const badge = badgeLabels[day?.task_type] || "自然主線徽章";
+        const writtenNote = written ? `短答 ${written} 題請對照評分規準自評。` : "本關沒有短答人工評分題。";
+        panel.innerHTML = `
+          <h2>本關通關結算</h2>
+          <div class="science-result-line">${starText(correct, autoScored)}<span>獲得徽章：${escapeHtml(badge)}</span></div>
+          <p>自動判分：${correct} / ${autoScored} 題。${writtenNote}</p>
+          <p class="muted-text">答錯題目已標記，先看解析再重挑本關。</p>
+        `;
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function wireEvents() {
+        document.getElementById("dayTabs").addEventListener("click", (event) => {
+          const button = event.target.closest("[data-day-id]");
+          if (!button) return;
+          activeDayId = button.dataset.dayId;
+          renderActiveDay();
+        });
+        document.getElementById("sciencePracticeForm").addEventListener("submit", submitAnswers);
+        document.getElementById("resetButton").addEventListener("click", () => renderActiveDay());
+      }
+
+      async function init() {
+        const data = await loadData();
+        days = (data.weeks || []).flatMap((week) => week.days || []);
+        activeDayId = days[0]?.day_id || "";
+        renderStats();
+        renderActiveDay();
+        wireEvents();
+      }
+
+      init().catch((error) => {
+        document.querySelector(".science-practice-shell").innerHTML = `
+          <section class="error-box">
+            <h1>自然科題庫讀取失敗</h1>
+            <p>${escapeHtml(error.message)}</p>
+            <p>請改用 GitHub Pages 線上網址，或重新整理後再試。</p>
+          </section>
+        `;
+      });
+    </script>
+  </body>
+</html>
