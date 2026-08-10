@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜社會科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-quest-map" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-batch02" />
     <style>
       .social-practice-page {
         background: linear-gradient(180deg, #102235 0, #16344b 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -243,8 +243,8 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">社會主線</p>
-          <h1>第一週三關挑戰</h1>
-          <p class="muted-text">完成資料判讀、跨科圖表、週末文字關，累積星等與徽章。</p>
+          <h1>第二批三關挑戰</h1>
+          <p class="muted-text">完成人口照護、AI 勞動、糧食風險，累積星等與徽章。</p>
         </div>
         <a class="secondary-action link-action" href="../index.html">回闖關地圖</a>
       </header>
@@ -257,35 +257,42 @@
         <div class="social-actions">
           <button class="primary-action" type="submit">完成本關看結算</button>
           <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
-          <a class="secondary-action link-action" href="./social-formal-candidates.html?v=20260809-batch01">查看題庫情報</a>
+          <a class="secondary-action link-action" href="./social-formal-candidates.html?batch=02">查看題庫情報</a>
         </div>
       </form>
       <section class="social-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth";
+      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_02.json?v=20260810-batch02";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_02.json?v=20260810-batch02";
       const taskTypeLabels = {
-        concept_and_material_reading: "資料判讀關",
-        cross_domain_and_chart_reading: "跨科圖表關",
-        weekly_synthesis: "週末文字關"
+        concept_and_material_reading: "人口照護關",
+        cross_domain_and_chart_reading: "AI 勞動關",
+        weekly_synthesis: "糧食風險關"
       };
       const badgeLabels = {
-        concept_and_material_reading: "資料判讀徽章",
-        cross_domain_and_chart_reading: "跨科圖表徽章",
-        weekly_synthesis: "週末整合徽章"
+        concept_and_material_reading: "人口照護徽章",
+        cross_domain_and_chart_reading: "AI 勞動治理徽章",
+        weekly_synthesis: "糧食風險徽章"
       };
       const focusLabels = {
         "SO-H02": "歷史時空脈絡",
+        "SO-H06": "產業轉型與人口變遷",
         "SO-H07": "族群文化與地方記憶",
+        "SO-H08": "勞動制度變遷",
+        "SO-H09": "貿易網絡與供應風險",
         "SO-G01": "區域與產業變遷",
+        "SO-G02": "人口老化與服務可近性",
+        "SO-G04": "糧食供應與氣候風險",
         "SO-G06": "環境風險與土地使用",
         "SO-C03": "公共政策與權益保障",
+        "SO-C06": "照護勞動與利害關係人",
         "SO-C07": "文化權利與民主參與",
         "SO-S01": "能源轉型與供需判讀",
         "SO-S02": "利害關係人與治理",
-        "SO-S04": "觀光承載與永續管理"
+        "SO-S04": "觀光承載與永續管理",
+        "SO-S05": "AI 治理與資料偏誤"
       };
 
       let days = [];

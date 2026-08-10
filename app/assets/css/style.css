@@ -1793,6 +1793,10 @@ body {
 }
 
 .weekly-subject-strip span {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 4px;
   min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
@@ -1806,6 +1810,14 @@ body {
   display: block;
   color: #fff;
   font-size: 1.04rem;
+}
+
+.weekly-subject-strip em {
+  display: block;
+  color: rgba(255, 255, 255, 0.82);
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1.08;
 }
 
 .subject-command-grid {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜社會正式候選題 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-social-formal-candidates" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-batch02" />
     <style>
       .candidate-shell {
         max-width: 1080px;
@@ -249,7 +249,7 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">AI學測考總複習</p>
-          <h1>社會正式候選題 v0.1 batch_01</h1>
+          <h1 id="candidateTitle">社會正式候選題 v0.1</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
@@ -262,6 +262,10 @@
       <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
 
       <section class="candidate-toolbar" aria-label="篩選">
+        <select class="candidate-filter" id="batchFilter" aria-label="批次篩選">
+          <option value="02">batch_02</option>
+          <option value="01">batch_01</option>
+        </select>
         <select class="candidate-filter" id="weekdayFilter" aria-label="星期篩選">
           <option value="all">全部星期</option>
           <option value="Tue">週二</option>
@@ -277,8 +281,18 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-batch01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260809-batch01";
+      const BATCHES = {
+        "01": {
+          label: "batch_01",
+          local: "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth",
+          remote: "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth"
+        },
+        "02": {
+          label: "batch_02",
+          local: "../../data/social_formal_candidates_v0_1_batch_02.json?v=20260810-batch02",
+          remote: "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_02.json?v=20260810-batch02"
+        }
+      };
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -292,6 +306,7 @@
 
       let days = [];
       let questions = [];
+      let activeBatch = "02";
 
       function escapeHtml(value) {
         return String(value ?? "")
@@ -413,10 +428,11 @@
       }
 
       function getDataUrls() {
+        const config = BATCHES[activeBatch] || BATCHES["02"];
         if (window.location.protocol === "file:") {
-          return [REMOTE_DATA_URL, LOCAL_DATA_URL];
+          return [config.remote, config.local];
         }
-        return [LOCAL_DATA_URL, REMOTE_DATA_URL];
+        return [config.local, config.remote];
       }
 
       async function loadCandidateData() {
@@ -447,14 +463,29 @@
       }
 
       async function init() {
+        const batchParam = new URLSearchParams(window.location.search).get("batch");
+        if (BATCHES[batchParam]) activeBatch = batchParam;
+        document.getElementById("batchFilter").value = activeBatch;
+        await loadAndRender();
+        document.getElementById("batchFilter").addEventListener("change", async (event) => {
+          activeBatch = event.target.value;
+          const url = new URL(window.location.href);
+          url.searchParams.set("batch", activeBatch);
+          window.history.replaceState(null, "", url);
+          await loadAndRender();
+        });
+        document.getElementById("weekdayFilter").addEventListener("change", renderList);
+        document.getElementById("typeFilter").addEventListener("change", renderList);
+      }
+
+      async function loadAndRender() {
         const data = await loadCandidateData();
+        document.getElementById("candidateTitle").textContent = `社會正式候選題 v0.1 ${BATCHES[activeBatch]?.label || ""}`;
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
         renderTypeFilter();
         renderList();
-        document.getElementById("weekdayFilter").addEventListener("change", renderList);
-        document.getElementById("typeFilter").addEventListener("change", renderList);
       }
 
       init().catch((error) => {

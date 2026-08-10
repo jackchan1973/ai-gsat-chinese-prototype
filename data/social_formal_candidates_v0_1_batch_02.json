@@ -1,0 +1,1237 @@
+{
+  "meta": {
+    "subject": "社會",
+    "mode": "學測",
+    "version": "formal_candidates_v0.1_batch_02",
+    "purpose": "社會科正式候選題庫 v0.1 第 2 批；供線上預覽與人工檢查，不接入正式每日任務。",
+    "status": "needs_human_review",
+    "created_at": "2026-08-10",
+    "source_policy": "官方歷年題只用於分析題型、類別、題目長度與資料形式；本批題目、材料、數據、選項與解析皆為 AI 新製作。",
+    "app_integration_policy": "本批全部為 needs_human_review，未經審題與 Gatekeeper 前不可進入正式小程式。",
+    "batch_plan": {
+      "target_days": 3,
+      "target_questions": 16,
+      "written_response_count": 2,
+      "status": "needs_human_review",
+      "themes": [
+        "人口老化與照護服務",
+        "AI 招募與勞動治理",
+        "糧食供應與氣候風險"
+      ]
+    },
+    "schedule_rule": {
+      "allowed_weekdays": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ],
+      "written_response_day_only": "Sat",
+      "no_written_response_days": [
+        "Tue",
+        "Thu"
+      ],
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  "review_flags": [
+    {
+      "level": "needs_human_review",
+      "note": "batch_02 為 AI 新製作候選題，需人工審題後才可進入正式 app。"
+    },
+    {
+      "level": "check_depth",
+      "note": "確認題幹與材料是否達到學測社會科資料判讀深度，避免只靠常識答題。"
+    },
+    {
+      "level": "check_balance",
+      "note": "週二、週四不含文字作答；週六含 2 題文字作答。"
+    }
+  ],
+  "weeks": [
+    {
+      "week_id": "SO-FC-V01-B02-W01",
+      "label": "第2批第1週",
+      "days": [
+        {
+          "day_id": "SO-FC-V01-B02-W01-TUE",
+          "label": "第2批週二",
+          "weekday": "Tue",
+          "task_type": "concept_and_material_reading",
+          "planned_focus": [
+            "SO-G02",
+            "SO-C03",
+            "SO-H06"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "text",
+              "title": "材料一：山城老化、照護服務與地方交通",
+              "content": "某山城縣早期因礦業與林業聚落形成，青年多在 1990 年代後外移到都會區就學與就業。近年縣內高齡人口比例上升，獨居長者增加，但公共運輸班次減少，部分山區到區域醫院單程需 90 分鐘以上。縣府準備整合巡迴醫療、日照中心、社區接駁與外籍看護家庭支持服務。地方居民期待服務更近，照服員工會則擔心人力不足與勞動條件不穩。若只用『設一座大型長照園區』回應，可能忽略聚落分散、交通可近性、家庭照顧壓力與照護勞動權益。"
+            },
+            {
+              "type": "table",
+              "title": "材料二：三區照護條件比較",
+              "rows": [
+                [
+                  "區域",
+                  "人口與空間特徵",
+                  "既有資源",
+                  "主要限制"
+                ],
+                [
+                  "甲區",
+                  "老礦村，長者集中但住宅老舊",
+                  "閒置校舍、社區志工",
+                  "無障礙設施不足，夜間照護弱"
+                ],
+                [
+                  "乙區",
+                  "山間聚落分散，獨居比例高",
+                  "衛生所、每週巡迴醫療",
+                  "交通班次少，到院時間長"
+                ],
+                [
+                  "丙區",
+                  "靠近縣城，家庭照護壓力高",
+                  "醫院、照服訓練中心",
+                  "照服員流動率高，費用負擔重"
+                ]
+              ]
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "SO-FC-V01-B02-W01-TUE-Q01",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SO-G02",
+                "SO-C03"
+              ],
+              "ability_tags": [
+                "SO-A2",
+                "SO-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "縣府初步規劃在丙區興建大型長照園區，理由是丙區靠近醫院與訓練中心。但乙區居民指出，山間聚落分散且到院時間長，甲區居民也希望閒置校舍能轉作社區服務。根據材料一、二，若要提高長者照護可近性，下列判斷何者最適當？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "只要在丙區興建大型園區，甲、乙兩區長者的交通與夜間照護問題就會同時解決。"
+                },
+                {
+                  "key": "B",
+                  "text": "應同時考量服務據點、接駁交通與人力配置，避免把照護資源過度集中在縣城周邊。"
+                },
+                {
+                  "key": "C",
+                  "text": "乙區人口分散，表示政府可完全不提供公共照護服務。"
+                },
+                {
+                  "key": "D",
+                  "text": "甲區有閒置校舍，因此不需評估無障礙設施與夜間照護需求。"
+                }
+              ],
+              "answer": [
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "B 能整合空間分布、交通可近性與人力配置。A 把單一設施視為萬能；C 忽略偏遠地區仍有基本服務需求；D 忽略閒置空間需要改造與服務安排。",
+              "review_advice": "社會政策題先看服務對象分布、交通可近性與資源配置，不要只看單一設施。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Tue"
+              ],
+              "preferred_weekday": "Tue",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "高齡化",
+                "長照"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-TUE-Q02",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "多選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-C03",
+                "SO-C06"
+              ],
+              "ability_tags": [
+                "SO-A3",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "若縣府希望同時回應長者需求、家庭照護壓力與照服員勞動條件，政策不能只追求服務量增加，也要避免把成本集中到家庭或基層照護者身上。根據材料一、二，下列哪些配套較能降低照護政策執行風險？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "在乙區增加固定接駁與巡迴醫療班次，並公開服務時間與預約方式。"
+                },
+                {
+                  "key": "B",
+                  "text": "要求家庭完全自行負擔照護成本，政府只負責宣導孝道即可。"
+                },
+                {
+                  "key": "C",
+                  "text": "將甲區閒置校舍改造為日照據點前，先評估無障礙設施、夜間安全與社區人力。"
+                },
+                {
+                  "key": "D",
+                  "text": "若外籍看護能補充人力，就不必討論家庭支持、勞動權益或喘息服務。"
+                },
+                {
+                  "key": "E",
+                  "text": "在丙區建立照服員培訓、留任獎勵與工時管理制度，降低人力流動率。"
+                }
+              ],
+              "answer": [
+                "A",
+                "C",
+                "E"
+              ],
+              "scoring_rule": "",
+              "explanation": "A、C、E 分別處理交通資訊、空間改造與照護勞動條件。B 把公共照護責任推給家庭；D 把移工人力視為替代所有制度安排，忽略權益與服務品質。",
+              "review_advice": "多選題逐項檢查：是否同時照顧服務使用者、家庭與照護勞動者。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Tue"
+              ],
+              "preferred_weekday": "Tue",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "長照",
+                "勞動權益"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "補長題幹，增加材料判讀條件與政策限制。"
+                }
+              ]
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-TUE-Q03",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SO-H06",
+                "SO-G02"
+              ],
+              "ability_tags": [
+                "SO-A2",
+                "SO-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "材料一提到山城縣早期因礦業與林業聚落形成，後來青年外移，高齡人口比例上升。若要從歷史變遷與人口地理角度理解今日照護問題，下列敘述何者最適當？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "產業衰退與青年外移改變了地方人口結構，使照護需求與服務供給出現新的不平衡。"
+                },
+                {
+                  "key": "B",
+                  "text": "只要過去曾有礦業聚落，現在就必然不需要醫療與照護服務。"
+                },
+                {
+                  "key": "C",
+                  "text": "人口老化完全是個人家庭選擇造成，與產業轉型或交通條件無關。"
+                },
+                {
+                  "key": "D",
+                  "text": "青年外移表示地方社會已失去政策價值，政府不必投入公共資源。"
+                }
+              ],
+              "answer": [
+                "A"
+              ],
+              "scoring_rule": "",
+              "explanation": "A 能把產業變遷、人口外移與照護需求連結。B、C、D 都把歷史與地理因素切開，或把公共服務問題簡化為個人責任。",
+              "review_advice": "看到人口題時，先追問人口結構如何由產業、交通與政策長期累積而來。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Tue"
+              ],
+              "preferred_weekday": "Tue",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "人口老化",
+                "地方變遷"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-TUE-Q04",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "多選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-G02",
+                "SO-C03"
+              ],
+              "ability_tags": [
+                "SO-A3",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "乙區山間聚落分散，若只用平均服務人數評估，可能看不出交通時間與獨居風險。若縣府要設計乙區照護方案，下列哪些判斷較符合地理資料與公共政策分析？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "除統計長者人數，也應標示到衛生所、日照中心與醫院的交通時間。"
+                },
+                {
+                  "key": "B",
+                  "text": "聚落分散代表服務成本較高，因此可直接排除乙區。"
+                },
+                {
+                  "key": "C",
+                  "text": "可結合固定接駁、巡迴醫療與遠距諮詢，但仍須處理不會使用數位工具者。"
+                },
+                {
+                  "key": "D",
+                  "text": "只要導入遠距醫療，所有實體交通與緊急送醫需求都會消失。"
+                },
+                {
+                  "key": "E",
+                  "text": "獨居長者比例可作為安排關懷訪視與緊急通報系統的依據之一。"
+                }
+              ],
+              "answer": [
+                "A",
+                "C",
+                "E"
+              ],
+              "scoring_rule": "",
+              "explanation": "A、C、E 能把空間距離、數位落差與獨居風險納入。B 以成本排除偏遠需求；D 把遠距工具說成可取代所有實體服務，推論過度。",
+              "review_advice": "地理資料題不要只看人數，也要看距離、時間、可近性與弱勢風險。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Tue"
+              ],
+              "preferred_weekday": "Tue",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "偏鄉服務",
+                "數位落差"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-TUE-Q05",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-C03",
+                "SO-C06"
+              ],
+              "ability_tags": [
+                "SO-A5",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "照服員工會指出，若只增加服務據點，卻沒有改善工時、薪資與留任制度，服務品質可能不穩。依材料判斷，下列哪一項最能說明照護政策中的利害關係人分析？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "長者與家屬是唯一需要考量的群體，照服員勞動條件與政策成敗無關。"
+                },
+                {
+                  "key": "B",
+                  "text": "照護服務品質同時受使用者需求、家庭負擔與照服員勞動條件影響。"
+                },
+                {
+                  "key": "C",
+                  "text": "只要志工願意協助，就不需要專業照護人力與制度支持。"
+                },
+                {
+                  "key": "D",
+                  "text": "照護政策屬家庭倫理問題，不應納入公共政策討論。"
+                }
+              ],
+              "answer": [
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "B 指出照護政策需要同時分析服務使用者、家庭與照服員。A 忽略服務提供者；C 混淆志願服務與專業照護；D 把公共問題私人化。",
+              "review_advice": "公民題常考不同利害關係人的目標與限制，不能只看單一群體。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Tue"
+              ],
+              "preferred_weekday": "Tue",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "長照",
+                "利害關係人"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            }
+          ]
+        },
+        {
+          "day_id": "SO-FC-V01-B02-W01-THU",
+          "label": "第2批週四",
+          "weekday": "Thu",
+          "task_type": "cross_domain_and_chart_reading",
+          "planned_focus": [
+            "SO-C07",
+            "SO-S05",
+            "SO-H08"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "text",
+              "title": "材料一：AI 招募系統與勞動治理爭議",
+              "content": "某科技服務公司替多家企業設計 AI 履歷篩選系統，系統會依工作經驗、證照、通勤距離、過去轉職頻率與面試文字紀錄推估錄取建議分數。企業認為可節省人資成本並提高篩選效率，但求職者團體質疑：若訓練資料來自過去錄取紀錄，可能延續性別、年齡、學歷或居住地偏誤。勞動主管機關要求企業告知求職者是否使用 AI 評分，提供人工複核管道，並定期檢查不同群體的通過率。此爭議不只是技術準確度問題，也涉及資訊透明、平等就業機會與勞動市場長期變遷。"
+            },
+            {
+              "type": "table",
+              "title": "材料二：三種招募流程比較",
+              "rows": [
+                [
+                  "流程",
+                  "主要優點",
+                  "主要風險",
+                  "可能治理工具"
+                ],
+                [
+                  "完全人工初篩",
+                  "可看見特殊經歷與脈絡",
+                  "耗時且可能受主觀偏見影響",
+                  "評分規準、多人複核"
+                ],
+                [
+                  "AI 初篩後人工複核",
+                  "提高效率並保留申訴機會",
+                  "模型偏誤若未檢查仍會影響排序",
+                  "告知、偏誤檢測、複核制度"
+                ],
+                [
+                  "完全 AI 自動淘汰",
+                  "速度最快且成本較低",
+                  "黑箱決策、難以申訴、可能歧視",
+                  "高風險職缺禁止或嚴格限制"
+                ]
+              ]
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "SO-FC-V01-B02-W01-THU-Q01",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SO-C07",
+                "SO-S05"
+              ],
+              "ability_tags": [
+                "SO-A2",
+                "SO-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某企業主張 AI 初篩能節省人力，因此不需要向求職者說明評分方式，也不需要人工複核。根據材料一、二，若從法治保障與平等就業角度判斷，下列何者最適當？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "只要 AI 篩選速度快，就可以取代所有程序保障。"
+                },
+                {
+                  "key": "B",
+                  "text": "若 AI 影響錄取機會，應提供告知、偏誤檢測與人工複核等制度。"
+                },
+                {
+                  "key": "C",
+                  "text": "求職者未錄取一定是能力不足，與資料或模型設計無關。"
+                },
+                {
+                  "key": "D",
+                  "text": "企業使用私人系統，政府與勞工團體完全不應討論。"
+                }
+              ],
+              "answer": [
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "B 能回應透明、偏誤與申訴。A 把效率凌駕程序保障；C 忽略訓練資料偏誤；D 忽略就業機會涉及公共規範。",
+              "review_advice": "遇到科技治理題，效率不是唯一標準，要檢查透明、申訴與權利保障。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Thu"
+              ],
+              "preferred_weekday": "Thu",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "AI治理",
+                "就業平等"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-THU-Q02",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "多選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-C07",
+                "SO-S05"
+              ],
+              "ability_tags": [
+                "SO-A3",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "材料一指出 AI 系統可能延續過去錄取資料中的偏誤；若企業只看模型分數，求職者可能不知道自己被哪些欄位影響。若主管機關要求企業建立可檢查的招募制度，下列哪些措施較能降低黑箱決策與歧視風險？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "要求企業保存模型版本、使用欄位與各群體通過率資料，以供稽核。"
+                },
+                {
+                  "key": "B",
+                  "text": "只要企業宣稱系統客觀，就不必公開任何評分邏輯或複核管道。"
+                },
+                {
+                  "key": "C",
+                  "text": "當求職者提出疑義時，提供人工複核並說明主要淘汰理由。"
+                },
+                {
+                  "key": "D",
+                  "text": "若 AI 系統降低成本，就可忽略年齡、性別或居住地造成的間接差別影響。"
+                },
+                {
+                  "key": "E",
+                  "text": "對高風險職缺限制完全自動淘汰，保留人員判斷與申訴程序。"
+                }
+              ],
+              "answer": [
+                "A",
+                "C",
+                "E"
+              ],
+              "scoring_rule": "",
+              "explanation": "A、C、E 對應稽核、申訴與高風險限制。B 把企業宣稱當成充分保障；D 忽略間接差別待遇。",
+              "review_advice": "多選題要分清楚『提升效率』與『降低權利風險』是否同時被處理。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Thu"
+              ],
+              "preferred_weekday": "Thu",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "演算法偏誤",
+                "勞動治理"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "補長題幹，增加材料判讀條件與政策限制。"
+                }
+              ]
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-THU-Q03",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-H08",
+                "SO-C07"
+              ],
+              "ability_tags": [
+                "SO-A2",
+                "SO-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "若從勞動制度長期變遷來看，工廠時代曾用學歷、年齡、性別或戶籍等條件篩選勞工；數位時代則可能把這些差異轉化成資料欄位與模型分數。依材料判斷，AI 招募最需要注意的歷史延續問題是什麼？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "新科技可能改變篩選形式，但不一定消除既有勞動市場不平等。"
+                },
+                {
+                  "key": "B",
+                  "text": "只要使用 AI，過去所有就業歧視都會自動消失。"
+                },
+                {
+                  "key": "C",
+                  "text": "勞動市場問題只存在於工廠時代，服務業與科技業不會發生。"
+                },
+                {
+                  "key": "D",
+                  "text": "歷史變遷代表政府不應再制定勞動規範。"
+                }
+              ],
+              "answer": [
+                "A"
+              ],
+              "scoring_rule": "",
+              "explanation": "A 能指出技術形式改變與不平等延續。B、C 都過度樂觀；D 把制度變遷錯推成無需治理。",
+              "review_advice": "歷史題不只問年代，也會問制度問題如何在新型態中延續或轉變。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Thu"
+              ],
+              "preferred_weekday": "Thu",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "勞動史",
+                "AI治理"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-THU-Q04",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "多選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-S05",
+                "SO-C07"
+              ],
+              "ability_tags": [
+                "SO-A3",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "材料二比較三種招募流程：完全人工可能耗時且有主觀偏見，完全 AI 自動淘汰則速度快但申訴困難。若企業想兼顧效率、求職者權利與篩選品質，下列哪些推論較符合材料？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "AI 初篩後人工複核可在效率與申訴機會之間取得較好的平衡。"
+                },
+                {
+                  "key": "B",
+                  "text": "完全 AI 自動淘汰成本較低，因此不會有任何權利風險。"
+                },
+                {
+                  "key": "C",
+                  "text": "完全人工初篩可能看見特殊經歷，但仍需要評分規準避免主觀偏見。"
+                },
+                {
+                  "key": "D",
+                  "text": "只要流程加入人工，所有偏見與錯誤就必然消失。"
+                },
+                {
+                  "key": "E",
+                  "text": "高風險職缺若採 AI 篩選，應有更嚴格的告知、複核與偏誤檢測。"
+                }
+              ],
+              "answer": [
+                "A",
+                "C",
+                "E"
+              ],
+              "scoring_rule": "",
+              "explanation": "A、C、E 分別扣住效率平衡、人工偏見與高風險治理。B 忽略黑箱與歧視；D 把人工判斷理想化。",
+              "review_advice": "圖表比較題要同時看優點、限制與治理工具，不要只看單一欄位。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Thu"
+              ],
+              "preferred_weekday": "Thu",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "AI治理",
+                "資料判讀"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "補長題幹，增加材料判讀條件與政策限制。"
+                }
+              ]
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-THU-Q05",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SO-C07",
+                "SO-S05"
+              ],
+              "ability_tags": [
+                "SO-A5",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某求職者因通勤距離較遠而被 AI 系統降低建議分數，但他願意搬家，且具備職缺要求的技能。若企業完全依 AI 分數淘汰，依材料判斷，最主要的治理問題為何？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "系統可能把可改變的個人情境當成固定風險，且缺乏讓求職者說明與複核的機會。"
+                },
+                {
+                  "key": "B",
+                  "text": "通勤距離是資料欄位，因此必然比所有人工判斷更公平。"
+                },
+                {
+                  "key": "C",
+                  "text": "求職者願意搬家表示企業不需要任何篩選制度。"
+                },
+                {
+                  "key": "D",
+                  "text": "只要錄取建議分數較低，就代表求職者沒有任何工作能力。"
+                }
+              ],
+              "answer": [
+                "A"
+              ],
+              "scoring_rule": "",
+              "explanation": "A 指出資料欄位可能過度簡化個人情境，且缺少複核。B 把資料化等同公平；C、D 都過度推論。",
+              "review_advice": "資料欄位不等於完整的人，作答時要注意模型分數背後的脈絡限制。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Thu"
+              ],
+              "preferred_weekday": "Thu",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "AI治理",
+                "就業平等"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            }
+          ]
+        },
+        {
+          "day_id": "SO-FC-V01-B02-W01-SAT",
+          "label": "第2批週六",
+          "weekday": "Sat",
+          "task_type": "weekly_synthesis",
+          "planned_focus": [
+            "SO-G04",
+            "SO-C03",
+            "SO-H09"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "text",
+              "title": "材料一：糧食供應、氣候風險與進口依賴",
+              "content": "某海島城市糧食自給率偏低，主食與飼料多仰賴進口。近年因出口國乾旱、海運成本上升與國際價格波動，市府開始討論糧食安全政策。農民團體主張保留近郊農地與水利設施，港口物流業者希望擴大冷鏈倉儲，消費者團體則關心低收入家庭能否承擔食物價格上漲。市府提出三項工具：提高安全存糧、補助耐旱作物與節水灌溉、建立弱勢家庭食物券。此議題同時牽涉全球貿易、地方土地使用、氣候調適與社會公平。若只以最低價格進口為目標，可能忽略供應中斷與分配不均風險。"
+            },
+            {
+              "type": "table",
+              "title": "材料二：三種糧食政策工具比較",
+              "rows": [
+                [
+                  "工具",
+                  "主要效果",
+                  "主要限制",
+                  "較直接受影響者"
+                ],
+                [
+                  "安全存糧",
+                  "短期穩定供應，緩衝進口中斷",
+                  "倉儲成本高，需輪替管理",
+                  "政府、物流業者、消費者"
+                ],
+                [
+                  "耐旱作物與節水灌溉",
+                  "降低氣候乾旱對本地生產衝擊",
+                  "轉作需要技術與市場支持",
+                  "農民、水利單位"
+                ],
+                [
+                  "弱勢食物券",
+                  "降低價格上漲對低收入家庭衝擊",
+                  "需設定資格與防止標籤化",
+                  "低收入家庭、社福單位"
+                ]
+              ]
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "SO-FC-V01-B02-W01-SAT-Q01",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SO-G04",
+                "SO-C03"
+              ],
+              "ability_tags": [
+                "SO-A2",
+                "SO-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "市府官員主張，只要在國際市場尋找更便宜的糧食來源，就能解決糧食安全問題。根據材料一、二，若要同時考量進口依賴、氣候風險與社會公平，下列判斷何者最適當？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "最低價格進口可完全消除供應中斷、氣候風險與弱勢家庭負擔。"
+                },
+                {
+                  "key": "B",
+                  "text": "糧食安全需要搭配存糧、本地生產調適與弱勢支持，而非只看進口價格。"
+                },
+                {
+                  "key": "C",
+                  "text": "只要保留農地，就不需要討論倉儲、物流或低收入家庭。"
+                },
+                {
+                  "key": "D",
+                  "text": "糧食價格上漲只影響個人消費選擇，不屬公共政策問題。"
+                }
+              ],
+              "answer": [
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "B 能整合供應、氣候與分配。A 把低價進口視為萬能；C 只看生產面；D 忽略食物可近性與社會公平。",
+              "review_advice": "糧食安全題要同時看生產、進口、儲備與分配，不要只看價格。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "糧食安全",
+                "氣候風險"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-SAT-Q02",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "多選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-G04",
+                "SO-C03"
+              ],
+              "ability_tags": [
+                "SO-A3",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "若出口國乾旱導致國際糧價上升，市府必須在短期穩定供應與中長期氣候調適之間安排政策，也要避免低收入家庭承擔過高食物支出。根據材料一、二，下列哪些做法較合理？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "建立安全存糧並定期輪替，降低短期進口中斷衝擊。"
+                },
+                {
+                  "key": "B",
+                  "text": "只補貼進口商，不必確認低收入家庭是否能取得足夠食物。"
+                },
+                {
+                  "key": "C",
+                  "text": "協助農民試種耐旱作物與節水灌溉，並連結市場通路。"
+                },
+                {
+                  "key": "D",
+                  "text": "因為本地生產成本較高，所以不需要任何氣候調適投資。"
+                },
+                {
+                  "key": "E",
+                  "text": "以食物券或營養補助降低價格波動對弱勢家庭的衝擊。"
+                }
+              ],
+              "answer": [
+                "A",
+                "C",
+                "E"
+              ],
+              "scoring_rule": "",
+              "explanation": "A、C、E 分別處理短期存糧、中長期生產調適與分配公平。B 忽略消費端弱勢；D 以成本否定調適，推論過度。",
+              "review_advice": "多選題要分辨不同政策工具負責不同時間尺度與對象。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "糧食安全",
+                "社會公平"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "補長題幹，增加材料判讀條件與政策限制。"
+                }
+              ]
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-SAT-Q03",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "單選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-H09",
+                "SO-G04"
+              ],
+              "ability_tags": [
+                "SO-A2",
+                "SO-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "從歷史角度看，港口城市常因貿易而取得多元糧食來源，但也會受國際價格、航運與政治經濟變動影響。若把材料一放入全球貿易與地方糧食治理的脈絡理解，下列何者最適當？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "全球貿易可擴大糧食來源，但也會使城市暴露於國際市場與運輸風險。"
+                },
+                {
+                  "key": "B",
+                  "text": "只要城市有港口，就永遠不會面臨糧食價格波動。"
+                },
+                {
+                  "key": "C",
+                  "text": "糧食問題只由自然災害造成，與貿易網絡或政策選擇無關。"
+                },
+                {
+                  "key": "D",
+                  "text": "進口糧食比例高代表地方政府不需要關心近郊農地與水利設施。"
+                }
+              ],
+              "answer": [
+                "A"
+              ],
+              "scoring_rule": "",
+              "explanation": "A 能說明貿易帶來來源擴大與風險暴露。B、C、D 都忽略國際市場、地方土地與政策選擇的連動。",
+              "review_advice": "歷史與地理跨科題常要看網絡帶來機會，也帶來依賴與風險。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "貿易",
+                "糧食安全"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "補長題幹，增加材料判讀條件與政策限制。"
+                }
+              ]
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-SAT-Q04",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "多選",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-G04",
+                "SO-C03"
+              ],
+              "ability_tags": [
+                "SO-A3",
+                "SO-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "材料二列出安全存糧、耐旱作物與弱勢食物券三種工具，各自處理的時間尺度與受影響群體不同，也各有財政、技術或執行限制。若市府要避免政策只照顧單一群體，下列哪些評估較完整？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "安全存糧可緩衝短期風險，但需考量倉儲成本與輪替管理。"
+                },
+                {
+                  "key": "B",
+                  "text": "耐旱作物若缺少技術與市場支持，農民轉作風險可能升高。"
+                },
+                {
+                  "key": "C",
+                  "text": "弱勢食物券能處理所有糧食生產與進口中斷問題，因此不需其他工具。"
+                },
+                {
+                  "key": "D",
+                  "text": "食物券資格設計應兼顧可近性與避免標籤化。"
+                },
+                {
+                  "key": "E",
+                  "text": "只要物流業者支持冷鏈倉儲，就不必討論農地保留與水利設施。"
+                }
+              ],
+              "answer": [
+                "A",
+                "B",
+                "D"
+              ],
+              "scoring_rule": "",
+              "explanation": "A、B、D 能同時檢查工具效果與限制。C 把分配工具擴大成萬能；E 只看物流端，忽略生產與氣候調適。",
+              "review_advice": "政策表格題要看『效果』與『限制』兩欄，不能只選看起來最有用的工具。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "requires_written_response": false,
+              "written_response_day_only": "",
+              "ai_scoring_required": false,
+              "current_event_tags": [
+                "糧食政策",
+                "資料判讀"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "補長題幹，增加材料判讀條件與政策限制。"
+                }
+              ]
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-SAT-Q05",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "混合題-短答",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-G04",
+                "SO-C03",
+                "SO-H09"
+              ],
+              "ability_tags": [
+                "SO-A7",
+                "SO-A8"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "市府要提出一套糧食安全方案，但若只做安全存糧，可能忽略本地農業調適與弱勢家庭負擔；若只補助農民，也可能無法處理短期進口中斷。請根據材料一、二提出一套較完整方案，答案需包含：一項短期供應穩定措施、一項中長期氣候調適措施、一項弱勢家庭支持措施。",
+              "materials": [],
+              "options": [],
+              "answer": [
+                "示例：短期建立安全存糧並定期輪替，降低進口中斷衝擊；中長期補助耐旱作物、節水灌溉與市場通路，提升本地生產韌性；同時提供低收入家庭食物券或營養補助，減少價格上漲造成的食物取得不平等。"
+              ],
+              "scoring_rule": "同時寫出短期供應穩定、中長期氣候調適、弱勢家庭支持三項且能連結材料，可得滿分；缺一項或只寫口號給部分分；完全未依材料作答不給分。",
+              "explanation": "高分答案需同時包含短期供應、中長期氣候調適與弱勢分配支持；只寫增加進口或只寫補助農民都不完整。",
+              "review_advice": "短答先列三個面向：供應、調適、分配，再各寫一個具體工具。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "requires_written_response": true,
+              "written_response_day_only": "Sat",
+              "ai_scoring_required": true,
+              "current_event_tags": [
+                "糧食安全",
+                "氣候調適",
+                "社會公平"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            },
+            {
+              "id": "SO-FC-V01-B02-W01-SAT-Q06",
+              "subject": "社會",
+              "mode": "學測",
+              "question_type": "填寫文字作答",
+              "difficulty": "中偏難",
+              "knowledge_tags": [
+                "SO-C03",
+                "SO-G04"
+              ],
+              "ability_tags": [
+                "SO-A7",
+                "SO-A8"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "有市民說：「糧食只要市場買得到就好，政府不必介入。」若從公共財、風險分擔與社會公平角度回應，請說明為什麼糧食安全不能只交給市場價格決定。答案需指出一個市場可能失靈或分配不均的原因，並舉材料中的一個政策工具。",
+              "materials": [],
+              "options": [],
+              "answer": [
+                "示例：市場價格不能保證進口中斷時仍有穩定供應，也可能讓低收入家庭在價格上漲時取得不足。政府可用安全存糧分擔供應風險，並用食物券降低弱勢家庭負擔。"
+              ],
+              "scoring_rule": "能指出市場限制或分配不均，並舉材料中的政策工具，可得滿分；只寫政府應補助但未說原因給部分分；只表態支持或反對市場不給分。",
+              "explanation": "答案需指出市場價格無法完全處理供應中斷或弱勢可近性，並連結安全存糧、食物券或氣候調適工具。",
+              "review_advice": "公民短答要先說概念，再用材料工具支持，不要只寫個人立場。",
+              "review_grade": "B",
+              "review_notes": [
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "低",
+              "allowed_weekdays": [
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "requires_written_response": true,
+              "written_response_day_only": "Sat",
+              "ai_scoring_required": true,
+              "current_event_tags": [
+                "公共政策",
+                "糧食安全"
+              ],
+              "data_year": "虛構練習資料",
+              "revision_history": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
