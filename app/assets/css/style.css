@@ -1033,6 +1033,17 @@ h2 {
   grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(150px, 0.6fr));
 }
 
+.parent-page .topbar,
+.parent-page .topbar .eyebrow,
+.parent-page .topbar h1,
+.parent-page .topbar .text-link {
+  color: #fff;
+}
+
+.parent-page .topbar .text-link {
+  font-weight: 900;
+}
+
 .parent-message-panel p {
   margin-bottom: 0;
   color: #334044;

@@ -348,7 +348,7 @@ async function main() {
   const weaknessMap = byId(weaknesses, "knowledge_code");
 
   document.getElementById("reportRange").textContent = formatDateRange(report.week_start, report.week_end);
-  document.getElementById("reportTitle").textContent = `${report.subject}週報`;
+  document.getElementById("reportTitle").textContent = "家長週報";
   document.getElementById("reportMode").textContent = `${report.mode}｜${dataSourceLabel}`;
   document.getElementById("completedDays").textContent = report.completed_days;
   document.getElementById("correctRate").textContent = percent(report.correct_rate);
