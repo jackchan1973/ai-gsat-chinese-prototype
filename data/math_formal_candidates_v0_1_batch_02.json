@@ -1,0 +1,938 @@
+{
+  "meta": {
+    "subject": "數學",
+    "mode": "學測",
+    "version": "formal_candidates_v0.1_batch_02",
+    "purpose": "數學科正式候選題庫 v0.1 第 2 批；目前僅供試跑與審題，不接入正式小程式。",
+    "status": "needs_human_review",
+    "created_at": "2026-08-10",
+    "source_policy": "113、114、115 官方數學 A/B 題與出版社解析僅用於分析題型、圖形材料、計算深度與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
+    "app_integration_policy": "本批題目尚未通過數學審題與 Gatekeeper，不可接入正式每日任務。",
+    "batch_plan": {
+      "target_days": 4,
+      "target_questions": 12,
+      "short_answer_count": 2,
+      "status": "needs_human_review",
+      "themes": [
+        "代數函數與模型",
+        "機率統計與資料判讀",
+        "圖形幾何與向量",
+        "混合推理與非選表達"
+      ]
+    },
+    "schedule_rule": {
+      "allowed_weekdays": [
+        "Tue",
+        "Thu",
+        "Sat",
+        "Sun"
+      ],
+      "written_response_day_only": "Sun",
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  "review_flags": [
+    {
+      "level": "needs_human_review",
+      "note": "本批為數學科第二批 AI 新題，尚未經數學老師或外部審題。"
+    },
+    {
+      "level": "not_for_app",
+      "note": "正式小程式只能讀 approved_for_app；本批目前不可接入正式闖關。"
+    },
+    {
+      "level": "diagram_policy",
+      "note": "需要圖形的題目已使用可重繪 graph_spec 或 diagram_spec，不使用官方圖形或官方圖形改寫。"
+    }
+  ],
+  "weeks": [
+    {
+      "week_id": "MA-FC-V01-B02-W01",
+      "label": "數學第2批第1週",
+      "days": [
+        {
+          "day_id": "MA-FC-V01-B02-TUE",
+          "label": "週二：代數、函數與模型",
+          "weekday": "Tue",
+          "task_type": "algebra_function_model",
+          "planned_focus": [
+            "MA-ALG",
+            "MA-FUNC",
+            "MA-MAT",
+            "MA-SEQ"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "從文字條件、函數圖形與矩陣向量材料建立模型，避免直接套公式。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-TUE-Q01",
+              "math_track": "A/B",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-SEQ",
+                "MA-MODEL"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3",
+                "MA-A9"
+              ],
+              "stem": "某線上課程平台統計，一位學生每完成一回複習後，熟練度分數會先保留原本的 80%，再因回饋修正增加 18 分。若開始時熟練度為 40 分，完成 3 回複習後約為幾分？",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "50.00"
+                },
+                {
+                  "key": "B",
+                  "text": "58.00"
+                },
+                {
+                  "key": "C",
+                  "text": "64.40"
+                },
+                {
+                  "key": "D",
+                  "text": "75.28"
+                },
+                {
+                  "key": "E",
+                  "text": "94.00"
+                }
+              ],
+              "answer": "C",
+              "scoring_rule": "",
+              "explanation": "依序計算：第 1 回為 0.8×40+18=50；第 2 回為 0.8×50+18=58；第 3 回為 0.8×58+18=64.4。因此約為 64.40 分。錯因：A、B 是只算到第 1、2 回；D 是誤用其他更新率或多加固定值；E 是把增加量直接累加。",
+              "review_advice": "看到遞迴語句時，要逐回更新；若選項沒有正確值，應標記修訂。",
+              "review_notes": [
+                "Question Agent：設計熟練度遞迴模型。",
+                "Review Agent：修正選項後答案唯一，無題目前置公式提示。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_recurrence_context",
+              "requires_written_response": false,
+              "diagram_required": false
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-TUE-Q02",
+              "math_track": "A/B",
+              "question_type": "multiple_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-FUNC",
+                "MA-GEO2D"
+              ],
+              "ability_tags": [
+                "MA-A4",
+                "MA-A6",
+                "MA-A10"
+              ],
+              "stem": "坐標平面上二次函數 f(x)=-(x-1)^2+4 的圖形如下。試選出正確敘述。",
+              "materials": [
+                {
+                  "type": "graph_spec",
+                  "title": "二次函數圖形",
+                  "spec": {
+                    "type": "quadratic",
+                    "equation": "y=-(x-1)^2+4",
+                    "vertex": [
+                      1,
+                      4
+                    ],
+                    "h": 1,
+                    "k": 4,
+                    "a": -1,
+                    "opens": "down"
+                  }
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "頂點為 (1,4)"
+                },
+                {
+                  "key": "B",
+                  "text": "對稱軸為 x=1"
+                },
+                {
+                  "key": "C",
+                  "text": "函數最大值為 4"
+                },
+                {
+                  "key": "D",
+                  "text": "與 y 軸交於 (0,3)"
+                },
+                {
+                  "key": "E",
+                  "text": "圖形開口向上"
+                }
+              ],
+              "answer": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ],
+              "scoring_rule": "",
+              "explanation": "由頂點式可知頂點 (1,4)、對稱軸 x=1，且開口向下，所以最大值為 4。令 x=0 得 y=3，D 正確；E 錯。",
+              "review_advice": "先從頂點式判斷頂點、對稱軸與開口，再檢查截距。",
+              "review_notes": [
+                "Question Agent：設計二次函數圖形多選題。",
+                "Review Agent：答案唯一，圖形材料必要且未提供解題公式。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_quadratic_vertex_context",
+              "requires_written_response": false,
+              "diagram_required": true
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-TUE-Q03",
+              "math_track": "A",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-MAT",
+                "MA-VEC"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A4"
+              ],
+              "stem": "坐標平面上一線性變換 T 滿足 T(1,0)=(3,1)，T(0,1)=(-2,2)。若以矩陣 A 表示 T，試求 det(A)。",
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "基底向量變換示意圖",
+                  "spec": {
+                    "type": "basis_transform_area",
+                    "source_vectors": {
+                      "e1": [
+                        1,
+                        0
+                      ],
+                      "e2": [
+                        0,
+                        1
+                      ]
+                    },
+                    "image_vectors": {
+                      "T(e1)": [
+                        3,
+                        1
+                      ],
+                      "T(e2)": [
+                        -2,
+                        2
+                      ]
+                    }
+                  }
+                }
+              ],
+              "options": [],
+              "answer": "8",
+              "scoring_rule": "填答 8 得滿分。",
+              "explanation": "T(1,0)、T(0,1) 是矩陣欄向量，所以 A=[[3,-2],[1,2]]，det(A)=3×2-(-2)×1=8。",
+              "review_advice": "把基底向量的像放成矩陣欄向量，再計算行列式。",
+              "review_notes": [
+                "Question Agent：設計基底向量變換與 det 題。",
+                "Review Agent：圖形與題意一致，答案唯一。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_matrix_basis_transform",
+              "requires_written_response": false,
+              "diagram_required": true
+            }
+          ]
+        },
+        {
+          "day_id": "MA-FC-V01-B02-THU",
+          "label": "週四：機率統計與資料判讀",
+          "weekday": "Thu",
+          "task_type": "probability_statistics_data",
+          "planned_focus": [
+            "MA-PROB",
+            "MA-STAT",
+            "MA-MODEL"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "從表格資料判斷分母、比例、期望值與統計量變化。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-THU-Q01",
+              "math_track": "B",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-PROB",
+                "MA-STAT"
+              ],
+              "ability_tags": [
+                "MA-A5",
+                "MA-A6"
+              ],
+              "stem": "某工廠檢查 200 件產品，依生產線與是否需返工整理如下表。若隨機抽出一件需返工產品，問它來自乙線的機率，比全體產品中來自乙線的比例高出多少個百分點？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "產品檢查資料",
+                  "row_header": "生產線",
+                  "columns": [
+                    "需返工",
+                    "不需返工",
+                    "合計"
+                  ],
+                  "rows": [
+                    {
+                      "label": "甲線",
+                      "values": [
+                        "12",
+                        "68",
+                        "80"
+                      ]
+                    },
+                    {
+                      "label": "乙線",
+                      "values": [
+                        "18",
+                        "52",
+                        "70"
+                      ]
+                    },
+                    {
+                      "label": "丙線",
+                      "values": [
+                        "10",
+                        "40",
+                        "50"
+                      ]
+                    },
+                    {
+                      "label": "合計",
+                      "values": [
+                        "40",
+                        "160",
+                        "200"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "5 個百分點"
+                },
+                {
+                  "key": "B",
+                  "text": "8 個百分點"
+                },
+                {
+                  "key": "C",
+                  "text": "10 個百分點"
+                },
+                {
+                  "key": "D",
+                  "text": "12 個百分點"
+                },
+                {
+                  "key": "E",
+                  "text": "18 個百分點"
+                }
+              ],
+              "answer": "C",
+              "scoring_rule": "",
+              "explanation": "需返工共有 40 件，其中乙線 18 件，所以條件機率為 18/40=45%。全體乙線比例為 70/200=35%，高出 10 個百分點。",
+              "review_advice": "條件機率題先確認「已知條件」決定分母。",
+              "review_notes": [
+                "Question Agent：設計條件機率與百分點比較表格題。",
+                "Review Agent：分母判斷明確，選項有常見錯因誘答。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_quality_control_table",
+              "requires_written_response": false,
+              "diagram_required": false
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-THU-Q02",
+              "math_track": "B",
+              "question_type": "multiple_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-STAT"
+              ],
+              "ability_tags": [
+                "MA-A5",
+                "MA-A10"
+              ],
+              "stem": "某班 5 次小考分數為 2, 4, 4, 6, 9。若再加入一次分數 11，試選出正確敘述。",
+              "materials": [],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "平均數由 5 變為 6"
+                },
+                {
+                  "key": "B",
+                  "text": "中位數由 4 變為 5"
+                },
+                {
+                  "key": "C",
+                  "text": "全距由 7 變為 9"
+                },
+                {
+                  "key": "D",
+                  "text": "眾數仍為 4"
+                },
+                {
+                  "key": "E",
+                  "text": "資料筆數增加後，標準差必定變小"
+                }
+              ],
+              "answer": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ],
+              "scoring_rule": "",
+              "explanation": "原平均 25/5=5，新平均 36/6=6，A 正確。新資料排序 2,4,4,6,9,11，中位數為 (4+6)/2=5，B 正確。全距由 9-2=7 變為 11-2=9，C 正確。4 仍出現最多次，D 正確；加入較大的 11 不保證標準差變小，E 錯。",
+              "review_advice": "統計量變化題要逐一重算，不要憑直覺判斷。",
+              "review_notes": [
+                "Question Agent：設計統計量多選題。",
+                "Review Agent：答案組合清楚，但正式入庫前仍需人工確認多選難度。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_small_dataset_statistics",
+              "requires_written_response": false,
+              "diagram_required": false
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-THU-Q03",
+              "math_track": "A/B",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-PROB",
+                "MA-MODEL"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3",
+                "MA-A9"
+              ],
+              "stem": "一個抽獎盒中有 5 張紅卡與 5 張白卡，不放回抽出 2 張。若抽到 2 張紅卡得 90 元，恰抽到 1 張紅卡得 20 元，抽到 0 張紅卡不得獎。若參加費為 15 元，試求一次參加的期望淨收益為多少元？",
+              "materials": [],
+              "options": [],
+              "answer": "145/9",
+              "scoring_rule": "填答 145/9 或等值小數 16.11... 得滿分。",
+              "explanation": "抽到 2 張紅卡機率為 (5/10)(4/9)=2/9；恰 1 張紅卡機率為 2×(5/10)(5/9)=5/9。獎金期望為 90×2/9+20×5/9=20+100/9=280/9，扣掉參加費 15 後為 145/9 元。",
+              "review_advice": "期望值題要先算各事件機率，再扣掉成本。",
+              "review_notes": [
+                "Question Agent：設計不放回抽樣期望值題。",
+                "Review Agent：修正答案欄為 145/9，計算與解析一致。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_lottery_expected_value",
+              "requires_written_response": false,
+              "diagram_required": false
+            }
+          ]
+        },
+        {
+          "day_id": "MA-FC-V01-B02-SAT",
+          "label": "週六：圖形、幾何與向量",
+          "weekday": "Sat",
+          "task_type": "geometry_vector_graph",
+          "planned_focus": [
+            "MA-GEO2D",
+            "MA-GEO3D",
+            "MA-VEC",
+            "MA-MAT"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "圖形題必須由圖與題目共同提供資訊；圖形不得超框或與文字重疊。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-SAT-Q01",
+              "math_track": "A",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-VEC",
+                "MA-GEO2D"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A4"
+              ],
+              "stem": "坐標平面上有向量 v=(5,7)，方向向量 u=(3,4)。試問 v 在 u 方向上的正射影長為何？",
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "向量投影示意圖",
+                  "spec": {
+                    "type": "vector_projection",
+                    "vectors": {
+                      "v": [
+                        5,
+                        7
+                      ],
+                      "u": [
+                        3,
+                        4
+                      ]
+                    },
+                    "projection_point": [
+                      5.16,
+                      6.88
+                    ],
+                    "ray_point": [
+                      6.45,
+                      8.6
+                    ],
+                    "projection_length": "43/5"
+                  }
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "5"
+                },
+                {
+                  "key": "B",
+                  "text": "43/5"
+                },
+                {
+                  "key": "C",
+                  "text": "sqrt(74)"
+                },
+                {
+                  "key": "D",
+                  "text": "12"
+                },
+                {
+                  "key": "E",
+                  "text": "43"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "v·u=5×3+7×4=43，|u|=5，所以正射影長為 43/5。",
+              "review_advice": "方向向量不是單位向量時，投影長需除以方向向量長度。",
+              "review_notes": [
+                "Question Agent：設計向量投影圖形題。",
+                "Review Agent：圖形材料與數據一致，答案唯一。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_vector_projection",
+              "requires_written_response": false,
+              "diagram_required": true
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-SAT-Q02",
+              "math_track": "A/B",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-GEO2D",
+                "MA-MAT"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A4"
+              ],
+              "stem": "坐標平面上三點 A(0,1)、B(4,1)、C(1,3) 所成三角形 ABC，經線性變換 T(x,y)=(2x-y, x+y) 後成為三角形 A'B'C'。試求三角形 A'B'C' 的面積。",
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "三角形 ABC",
+                  "spec": {
+                    "transform": "T(x,y)=(2x-y,x+y)",
+                    "points": {
+                      "A": [
+                        0,
+                        1
+                      ],
+                      "B": [
+                        4,
+                        1
+                      ],
+                      "C": [
+                        1,
+                        3
+                      ]
+                    },
+                    "segments": [
+                      [
+                        "A",
+                        "B"
+                      ],
+                      [
+                        "B",
+                        "C"
+                      ],
+                      [
+                        "C",
+                        "A"
+                      ]
+                    ]
+                  }
+                }
+              ],
+              "options": [],
+              "answer": "12",
+              "scoring_rule": "填答 12 得滿分。",
+              "explanation": "原三角形以 AB 為底，底長 4，高為 2，面積為 4。線性變換矩陣 [[2,-1],[1,1]] 的行列式為 3，面積變為 3 倍，因此 A'B'C' 面積為 12。",
+              "review_advice": "線性變換後面積會乘上行列式絕對值。",
+              "review_notes": [
+                "Question Agent：設計三角形變換後面積題。",
+                "Review Agent：沿用可重繪圖形規格，答案唯一。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_triangle_transform_area",
+              "requires_written_response": false,
+              "diagram_required": true
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-SAT-Q03",
+              "math_track": "A",
+              "question_type": "fill_in",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "MA-GEO3D",
+                "MA-VEC"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A6",
+                "MA-A8"
+              ],
+              "stem": "空間中四點 A(0,0,0)、B(1,2,0)、D(3,0,0)、P(1,1,5)。以 AB、AD、AP 為三邊形成一平行六面體，試求其體積。",
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "平行六面體",
+                  "spec": {
+                    "points": {
+                      "A": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "B": [
+                        1,
+                        2,
+                        0
+                      ],
+                      "D": [
+                        3,
+                        0,
+                        0
+                      ],
+                      "P": [
+                        1,
+                        1,
+                        5
+                      ]
+                    },
+                    "vectors_from_A": [
+                      "AB",
+                      "AD",
+                      "AP"
+                    ]
+                  }
+                }
+              ],
+              "options": [],
+              "answer": "30",
+              "scoring_rule": "填答 30 得滿分。",
+              "explanation": "AB×AD=(0,0,-6)，AP·(AB×AD)=-30，所以體積為 30。",
+              "review_advice": "空間體積可用 |AP·(AB×AD)|，先確認三向量同起點。",
+              "review_notes": [
+                "Question Agent：設計空間向量體積選填。",
+                "Review Agent：週六不放文字作答，改為選填；計算正確但仍需人工審圖。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_3d_vector_volume",
+              "requires_written_response": false,
+              "diagram_required": true
+            }
+          ]
+        },
+        {
+          "day_id": "MA-FC-V01-B02-SUN",
+          "label": "週日：混合推理與非選表達",
+          "weekday": "Sun",
+          "task_type": "mixed_reasoning_written",
+          "planned_focus": [
+            "MA-FUNC",
+            "MA-PROB",
+            "MA-MODEL",
+            "MA-A8"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "週日可放需要文字說明或步驟的短答題，並搭配必要圖表。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-FC-V01-B02-SUN-Q01",
+              "math_track": "A/B",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "MA-ALG",
+                "MA-FUNC"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A6",
+                "MA-A7"
+              ],
+              "stem": "已知二次函數 f(x)=x^2+2x+k 的圖形與 x 軸有兩個相異交點，且兩交點距離小於 4。試問 k 的範圍為何？",
+              "materials": [
+                {
+                  "type": "graph_spec",
+                  "title": "二次函數與 x 軸交點示意",
+                  "spec": {
+                    "type": "quadratic_roots_distance",
+                    "family": "f(x)=x^2+2x+k",
+                    "axis": "x=-1",
+                    "axis_value": -1,
+                    "condition": "兩個相異交點，且兩交點距離小於 4"
+                  }
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "k<-3"
+                },
+                {
+                  "key": "B",
+                  "text": "-3<k<1"
+                },
+                {
+                  "key": "C",
+                  "text": "0<k<1"
+                },
+                {
+                  "key": "D",
+                  "text": "k>1"
+                },
+                {
+                  "key": "E",
+                  "text": "k=1"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "方程式 x^2+2x+k=0 兩根相異需判別式 4-4k>0，得 k<1。兩根距離為 sqrt(4-4k)，小於 4 得 4-4k<16，所以 k>-3。合併得 -3<k<1。",
+              "review_advice": "根距離與判別式都要檢查，不可只看相異交點。",
+              "review_notes": [
+                "Question Agent：設計二次函數根距離題。",
+                "Review Agent：答案唯一，圖形只提示結構不洩漏推導。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_quadratic_roots_range",
+              "requires_written_response": false,
+              "diagram_required": true
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": true,
+              "id": "MA-FC-V01-B02-SUN-Q02",
+              "math_track": "B",
+              "question_type": "short_answer",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "MA-PROB",
+                "MA-STAT",
+                "MA-MODEL"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3",
+                "MA-A5",
+                "MA-A8",
+                "MA-A9"
+              ],
+              "stem": "某社區 1000 人接受健康風險篩檢。已知實際高風險者比例為 10%。若實際高風險，篩檢呈陽性的機率為 80%；若實際非高風險，篩檢仍呈陽性的機率為 20%。試求篩檢陽性的期望人數，並求一位篩檢陽性者實際高風險的機率。",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "篩檢條件資料",
+                  "row_header": "族群",
+                  "columns": [
+                    "人數",
+                    "篩檢陽性機率"
+                  ],
+                  "rows": [
+                    {
+                      "label": "實際高風險",
+                      "values": [
+                        "100",
+                        "80%"
+                      ]
+                    },
+                    {
+                      "label": "實際非高風險",
+                      "values": [
+                        "900",
+                        "20%"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [],
+              "answer": {
+                "expected_positive": 260,
+                "conditional_probability": "4/13"
+              },
+              "scoring_rule": "滿分：求得陽性期望人數 260，且條件機率 80/260=4/13。部分給分需人工判斷。",
+              "explanation": "高風險且陽性期望人數為 100×80%=80；非高風險但陽性期望人數為 900×20%=180，所以陽性總期望人數為 260。陽性者實際高風險機率為 80/260=4/13。",
+              "review_advice": "先把人數分成兩群，再用陽性總人數當條件機率分母。",
+              "review_notes": [
+                "Question Agent：設計健康篩檢條件機率短答。",
+                "Review Agent：數值整齊且分母判斷清楚，仍需人工確認短答評分細則。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_screening_probability_context",
+              "requires_written_response": true,
+              "written_response_day_only": "Sun",
+              "diagram_required": false
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": true,
+              "id": "MA-FC-V01-B02-SUN-Q03",
+              "math_track": "A/B",
+              "question_type": "short_answer",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-MODEL",
+                "MA-ALG"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3",
+                "MA-A6"
+              ],
+              "stem": "某共享單車站每天早上有 48 輛車。白天借出後會剩下早上車數的 60%，傍晚維修車補回 10 輛。若每天照此規則更新，第二天早上約有幾輛車？",
+              "materials": [],
+              "options": [],
+              "answer": "38.8",
+              "scoring_rule": "滿分：寫出 48×0.6+10=38.8，並回答第二天早上約 38.8 輛。若只寫 28.8 未補回 10 輛，不給滿分。",
+              "explanation": "第一天傍晚後為 48×60%+10=38.8，因此第二天早上約有 38.8 輛。錯因：A 是只算剩下 60%，D 是誤以為維持原數量。",
+              "review_advice": "生活模型題要依事件順序處理比例變化與固定增減。",
+              "review_notes": [
+                "Question Agent：設計一階更新生活模型短答。",
+                "Review Agent：安排於週日短答，需人工確認小數車輛語意是否要改為約 39 輛。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_bike_station_model",
+              "requires_written_response": true,
+              "diagram_required": false,
+              "written_response_day_only": "Sun"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

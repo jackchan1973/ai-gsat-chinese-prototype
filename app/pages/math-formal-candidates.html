@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview08" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview10" />
     <style>
       .candidate-page {
         background:
@@ -315,14 +315,14 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">AI學測考總複習</p>
-          <h1>數學候選題庫 v0.1 batch_01</h1>
+          <h1 id="pageTitle">數學候選題庫 v0.1 batch_01</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
       <section class="candidate-alert" aria-label="題庫狀態">
-        <strong>數學第一批仍待人工審題</strong>
-        <p>本批是數學科 AI 新題試跑候選題，狀態全部為 needs_human_review。它尚未接入正式闖關，也不是已完成題庫。</p>
+        <strong id="statusTitle">數學候選題仍待人工審題</strong>
+        <p id="statusCopy">本批是數學科 AI 新題試跑候選題，狀態全部為 needs_human_review。它尚未接入正式闖關，也不是已完成題庫。</p>
       </section>
 
       <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
@@ -347,8 +347,16 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview08";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview08";
+      const DATA_VERSION = "20260810-mathpreview10";
+      const batchFiles = {
+        "01": "math_formal_candidates_v0_1_batch_01.json",
+        "02": "math_formal_candidates_v0_1_batch_02.json"
+      };
+      const batchParam = new URLSearchParams(window.location.search).get("batch") || "01";
+      const activeBatch = batchFiles[batchParam] ? batchParam : "01";
+      const activeDataFile = batchFiles[activeBatch];
+      const LOCAL_DATA_URL = `../../data/${activeDataFile}?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/${activeDataFile}?v=${DATA_VERSION}`;
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -493,24 +501,29 @@
         const yScale = (height - pad * 2) / (yMax - yMin);
         const mapX = (x) => pad + (x - xMin) * xScale;
         const mapY = (y) => height - pad - (y - yMin) * yScale;
+        const clampY = (y) => Math.max(pad, Math.min(height - pad, mapY(y)));
+        const vertex = spec.vertex || [2, -3];
+        const h = Number(spec.h ?? vertex[0] ?? 2);
+        const k = Number(spec.k ?? vertex[1] ?? -3);
+        const a = Number(spec.a ?? (spec.opens === "down" ? -1 : 1));
         const points = [];
         for (let i = 0; i <= 80; i += 1) {
           const x = xMin + (xMax - xMin) * i / 80;
-          const y = (x - 2) ** 2 - 3;
-          points.push(`${mapX(x).toFixed(1)},${mapY(y).toFixed(1)}`);
+          const y = a * (x - h) ** 2 + k;
+          points.push(`${mapX(x).toFixed(1)},${clampY(y).toFixed(1)}`);
         }
-        const vertex = spec.vertex || [2, -3];
         const vertexX = mapX(vertex[0]);
         const vertexY = mapY(vertex[1]);
+        const axisLabelY = spec.opens === "down" ? height - 44 : pad + 16;
         return `
           <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="拋物線 ${escapeHtml(spec.equation || "")}">
             <line x1="${pad}" y1="${mapY(0)}" x2="${width - pad}" y2="${mapY(0)}" stroke="#8aa2b2" stroke-width="1" />
             <line x1="${mapX(0)}" y1="${pad}" x2="${mapX(0)}" y2="${height - pad}" stroke="#8aa2b2" stroke-width="1" />
-            <line x1="${mapX(2)}" y1="${pad}" x2="${mapX(2)}" y2="${height - pad}" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="5 5" />
+            <line x1="${mapX(h)}" y1="${pad}" x2="${mapX(h)}" y2="${height - pad}" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="5 5" />
             <polyline points="${points.join(" ")}" fill="none" stroke="#155e75" stroke-width="3" stroke-linejoin="round" />
             <circle cx="${vertexX}" cy="${vertexY}" r="5" fill="#c2410c" />
-            <text x="${vertexX + 8}" y="${vertexY - 8}" fill="#17212b" font-size="14">頂點 (2,-3)</text>
-            <text x="${mapX(2) + 8}" y="${pad + 16}" fill="#c2410c" font-size="13">對稱軸 x=2</text>
+            <text x="${vertexX + 16}" y="${vertexY - 14}" fill="#17212b" font-size="14">頂點 (${vertex.join(",")})</text>
+            <text x="${mapX(h) + 16}" y="${axisLabelY}" fill="#c2410c" font-size="13">對稱軸 x=${h}</text>
             <text x="${pad}" y="${height - 8}" fill="#61707e" font-size="13">${escapeHtml(spec.equation || "")}</text>
           </svg>
         `;
@@ -530,10 +543,11 @@
         const v = spec.vectors?.v || [6, 8];
         const u = spec.vectors?.u || [4, 3];
         const projection = spec.projection_point || [7.68, 5.76];
+        const ray = spec.ray_point || [u[0] * 2.15, u[1] * 2.15];
         const vPoint = map(v);
         const uPoint = map(u);
         const projectionPoint = map(projection);
-        const rayPoint = map([8.6, 6.45]);
+        const rayPoint = map(ray);
         return `
           <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="向量投影示意圖">
             <defs>
@@ -551,8 +565,8 @@
             <line x1="${origin.x}" y1="${origin.y}" x2="${uPoint.x}" y2="${uPoint.y}" stroke="#c2410c" stroke-width="3" marker-end="url(#arrow-orange)" />
             <line x1="${vPoint.x}" y1="${vPoint.y}" x2="${projectionPoint.x}" y2="${projectionPoint.y}" stroke="#64748b" stroke-width="2" stroke-dasharray="5 5" />
             <circle cx="${projectionPoint.x}" cy="${projectionPoint.y}" r="4" fill="#0f766e" />
-            <text x="${vPoint.x + 8}" y="${vPoint.y - 8}" fill="#155e75" font-size="14">v=(6,8)</text>
-            <text x="${uPoint.x + 8}" y="${uPoint.y + 18}" fill="#c2410c" font-size="14">u=(4,3)</text>
+            <text x="${vPoint.x + 8}" y="${vPoint.y - 8}" fill="#155e75" font-size="14">v=(${v.join(",")})</text>
+            <text x="${uPoint.x + 8}" y="${uPoint.y + 18}" fill="#c2410c" font-size="14">u=(${u.join(",")})</text>
             <text x="${projectionPoint.x - 46}" y="${projectionPoint.y + 20}" fill="#0f766e" font-size="14">投影點</text>
             <text x="${pad}" y="${height - 8}" fill="#61707e" font-size="13">由圖判斷 v 沿 u 方向的投影長</text>
           </svg>
@@ -675,10 +689,10 @@
             ${line(sourceOrigin, scale, e2, "#c2410c")}
             ${line(imageOrigin, imageScale, te1, "#155e75")}
             ${line(imageOrigin, imageScale, te2, "#c2410c")}
-            ${legendItem(52, 338, "e1=(1,0)", "#155e75", 94)}
-            ${legendItem(164, 338, "e2=(0,1)", "#c2410c", 94)}
-            ${legendItem(286, 338, "T(e1)=(2,1)", "#155e75", 124)}
-            ${legendItem(430, 338, "T(e2)=(-1,3)", "#c2410c", 138)}
+            ${legendItem(52, 338, `e1=(${e1.join(",")})`, "#155e75", 94)}
+            ${legendItem(164, 338, `e2=(${e2.join(",")})`, "#c2410c", 94)}
+            ${legendItem(286, 338, `T(e1)=(${te1.join(",")})`, "#155e75", 124)}
+            ${legendItem(430, 338, `T(e2)=(${te2.join(",")})`, "#c2410c", 138)}
             <text x="42" y="380" fill="#61707e" font-size="13">det(A) 可視為單位方格經變換後的有向面積倍率。</text>
           </svg>
         `;
@@ -688,22 +702,25 @@
         const width = 760;
         const height = 330;
         const pad = 44;
-        const xMin = -3;
-        const xMax = 7;
+        const axisValue = Number(spec.axis_value ?? String(spec.axis || "x=2").replace("x=", "")) || 2;
+        const xMin = axisValue - 5;
+        const xMax = axisValue + 5;
         const yMin = -5;
         const yMax = 7;
         const mapX = (x) => pad + (x - xMin) * (width - pad * 2) / (xMax - xMin);
         const mapY = (y) => height - pad - (y - yMin) * (height - pad * 2) / (yMax - yMin);
+        const clampY = (y) => Math.max(pad, Math.min(height - pad, mapY(y)));
         const points = [];
         for (let i = 0; i <= 100; i += 1) {
           const x = xMin + (xMax - xMin) * i / 100;
-          const y = (x - 2) ** 2 - 4;
-          points.push(`${mapX(x).toFixed(1)},${mapY(y).toFixed(1)}`);
+          const y = (x - axisValue) ** 2 - 4;
+          points.push(`${mapX(x).toFixed(1)},${clampY(y).toFixed(1)}`);
         }
-        const leftRoot = mapX(0);
-        const rightRoot = mapX(4);
-        const axisX = mapX(2);
+        const leftRoot = mapX(axisValue - 2);
+        const rightRoot = mapX(axisValue + 2);
+        const axisX = mapX(axisValue);
         const axisY = mapY(0);
+        const distanceLabel = (spec.condition || "").match(/兩交點距離小於\s*\d+/)?.[0] || "兩交點距離限制";
         return `
           <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="二次函數與 x 軸交點距離示意">
             <rect x="18" y="20" width="${width - 36}" height="${height - 54}" rx="10" fill="#ffffff" stroke="rgba(21,94,117,0.18)" />
@@ -715,9 +732,9 @@
             <circle cx="${leftRoot}" cy="${axisY}" r="4" fill="#0f766e" />
             <circle cx="${rightRoot}" cy="${axisY}" r="4" fill="#0f766e" />
             <rect x="${axisX + 10}" y="${pad + 8}" width="84" height="24" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
-            <text x="${axisX + 15}" y="${pad + 26}" fill="#c2410c" font-size="14" font-weight="800">對稱軸 x=2</text>
+            <text x="${axisX + 15}" y="${pad + 26}" fill="#c2410c" font-size="14" font-weight="800">對稱軸 x=${axisValue}</text>
             <rect x="${axisX - 72}" y="${axisY - 52}" width="160" height="25" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
-            <text x="${axisX - 66}" y="${axisY - 34}" fill="#0f766e" font-size="14" font-weight="800">兩交點距離需小於 6</text>
+            <text x="${axisX - 66}" y="${axisY - 34}" fill="#0f766e" font-size="14" font-weight="800">${escapeHtml(distanceLabel)}</text>
             <text x="42" y="${height - 12}" fill="#61707e" font-size="13">${escapeHtml(spec.family || "f(x)=x^2-4x+k")} 的圖形會隨 k 上下平移。</text>
           </svg>
         `;
@@ -766,8 +783,8 @@
             <polygon points="${polygon(transformed)}" fill="rgba(194,65,12,0.12)" stroke="#c2410c" stroke-width="2.5" />
             ${dots(points, "#155e75")}
             ${dots(transformed, "#c2410c")}
-            ${legend(38, 332, "#155e75", "原三角形：A(1,2)、B(5,2)、C(3,7)", 272)}
-            ${legend(38, 362, "#c2410c", "變換後：A'(0,3)、B'(8,7)、C'(-1,10)", 332)}
+            ${legend(38, 332, "#155e75", `原三角形：${Object.entries(points).map(([name, point]) => `${name}(${point.join(",")})`).join("、")}`, 296)}
+            ${legend(38, 362, "#c2410c", `變換後：${Object.entries(transformed).map(([name, point]) => `${name}(${point.join(",")})`).join("、")}`, 356)}
           </svg>
         `;
       }
@@ -853,8 +870,8 @@
             ${dot(B)}
             ${dot(D)}
             ${dot(P)}
-            ${legend(38, 322, "A(0,0,0)、B(2,1,0)、D(1,3,0)", 294)}
-            ${legend(38, 352, "P(1,1,4)；以 AB、AD、AP 為三邊", 300)}
+            ${legend(38, 322, `A(${A.join(",")})、B(${B.join(",")})、D(${D.join(",")})`, 294)}
+            ${legend(38, 352, `P(${P.join(",")})；以 AB、AD、AP 為三邊`, 300)}
           </svg>
         `;
       }
@@ -862,9 +879,10 @@
       function renderSpecSummary(material) {
         const spec = material.spec || {};
         if (material.type === "graph_spec" && spec.type === "quadratic") {
+          const openingText = spec.opens === "up" ? "向上" : spec.opens === "down" ? "向下" : spec.opens || "未標";
           return `
             <p>拋物線：${escapeHtml(spec.equation || "")}</p>
-            <p>頂點：(${escapeHtml((spec.vertex || []).join(","))})；開口：${spec.opens === "up" ? "向上" : escapeHtml(spec.opens || "未標")}</p>
+            <p>頂點：(${escapeHtml((spec.vertex || []).join(","))})；開口：${escapeHtml(openingText)}</p>
             ${renderQuadraticGraph(spec)}
           `;
         }
@@ -875,8 +893,10 @@
           `;
         }
         if (material.type === "diagram_spec" && spec.type === "vector_projection") {
+          const v = spec.vectors?.v || [6, 8];
+          const u = spec.vectors?.u || [4, 3];
           return `
-            <p>向量 v=(6,8)，方向向量 u=(4,3)。</p>
+            <p>向量 v=(${escapeHtml(v.join(","))})，方向向量 u=(${escapeHtml(u.join(","))})。</p>
             ${renderVectorProjectionGraph(spec)}
           `;
         }
@@ -1030,6 +1050,10 @@
 
       async function init() {
         const data = await loadCandidateData();
+        const batchLabel = activeBatch === "02" ? "第二批" : "第一批";
+        document.getElementById("pageTitle").textContent = `數學候選題庫 v0.1 batch_${activeBatch}`;
+        document.getElementById("statusTitle").textContent = `數學${batchLabel}仍待人工審題`;
+        document.getElementById("statusCopy").textContent = data.meta?.purpose || "本批是數學科 AI 新題試跑候選題，狀態全部為 needs_human_review。它尚未接入正式闖關，也不是已完成題庫。";
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
