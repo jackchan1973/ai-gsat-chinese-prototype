@@ -3,16 +3,16 @@
     "subject": "數學",
     "mode": "學測",
     "version": "formal_candidates_v0.1_batch_02",
-    "purpose": "數學科正式候選題庫 v0.1 第 2 批；目前僅供試跑與審題，不接入正式小程式。",
-    "status": "needs_human_review",
+    "purpose": "數學科正式每日任務 batch_02；已接入數學科闖關頁。",
+    "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方數學 A/B 題與出版社解析僅用於分析題型、圖形材料、計算深度與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "本批題目尚未通過數學審題與 Gatekeeper，不可接入正式每日任務。",
+    "app_integration_policy": "數學正式闖關已開放：週二、週四、週六、週日完成代數模型、機率統計、圖形向量與混合推理。",
     "batch_plan": {
       "target_days": 4,
       "target_questions": 12,
       "short_answer_count": 2,
-      "status": "needs_human_review",
+      "status": "approved_for_app",
       "themes": [
         "代數函數與模型",
         "機率統計與資料判讀",
@@ -29,16 +29,14 @@
       ],
       "written_response_day_only": "Sun",
       "timezone": "Asia/Shanghai"
-    }
+    },
+    "approved_for_app_at": "2026-08-10",
+    "gatekeeper_decision": "user_requested_formal_daily_task_integration"
   },
   "review_flags": [
     {
-      "level": "needs_human_review",
-      "note": "本批為數學科第二批 AI 新題，尚未經數學老師或外部審題。"
-    },
-    {
-      "level": "not_for_app",
-      "note": "正式小程式只能讀 approved_for_app；本批目前不可接入正式闖關。"
+      "level": "approved_for_app",
+      "note": "2026-08-10 依使用者明確要求，接入數學正式每日任務；正式頁只讀 approved_for_app。"
     },
     {
       "level": "diagram_policy",
@@ -61,7 +59,7 @@
             "MA-MAT",
             "MA-SEQ"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -74,7 +72,7 @@
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-TUE-Q01",
@@ -121,17 +119,19 @@
               "review_notes": [
                 "Question Agent：設計熟練度遞迴模型。",
                 "Review Agent：修正選項後答案唯一，無題目前置公式提示。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_recurrence_context",
               "requires_written_response": false,
-              "diagram_required": false
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-TUE-Q02",
@@ -200,17 +200,19 @@
               "review_notes": [
                 "Question Agent：設計二次函數圖形多選題。",
                 "Review Agent：答案唯一，圖形材料必要且未提供解題公式。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_quadratic_vertex_context",
               "requires_written_response": false,
-              "diagram_required": true
+              "diagram_required": true,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-TUE-Q03",
@@ -263,11 +265,13 @@
               "review_notes": [
                 "Question Agent：設計基底向量變換與 det 題。",
                 "Review Agent：圖形與題意一致，答案唯一。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_matrix_basis_transform",
               "requires_written_response": false,
-              "diagram_required": true
+              "diagram_required": true,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             }
           ]
         },
@@ -281,7 +285,7 @@
             "MA-STAT",
             "MA-MODEL"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -294,7 +298,7 @@
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-THU-Q01",
@@ -385,17 +389,19 @@
               "review_notes": [
                 "Question Agent：設計條件機率與百分點比較表格題。",
                 "Review Agent：分母判斷明確，選項有常見錯因誘答。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_quality_control_table",
               "requires_written_response": false,
-              "diagram_required": false
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-THU-Q02",
@@ -445,17 +451,19 @@
               "review_notes": [
                 "Question Agent：設計統計量多選題。",
                 "Review Agent：答案組合清楚，但正式入庫前仍需人工確認多選難度。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_small_dataset_statistics",
               "requires_written_response": false,
-              "diagram_required": false
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-THU-Q03",
@@ -481,11 +489,13 @@
               "review_notes": [
                 "Question Agent：設計不放回抽樣期望值題。",
                 "Review Agent：修正答案欄為 145/9，計算與解析一致。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_lottery_expected_value",
               "requires_written_response": false,
-              "diagram_required": false
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             }
           ]
         },
@@ -500,7 +510,7 @@
             "MA-VEC",
             "MA-MAT"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -513,7 +523,7 @@
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-SAT-Q01",
@@ -586,17 +596,19 @@
               "review_notes": [
                 "Question Agent：設計向量投影圖形題。",
                 "Review Agent：圖形材料與數據一致，答案唯一。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_vector_projection",
               "requires_written_response": false,
-              "diagram_required": true
+              "diagram_required": true,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-SAT-Q02",
@@ -657,17 +669,19 @@
               "review_notes": [
                 "Question Agent：設計三角形變換後面積題。",
                 "Review Agent：沿用可重繪圖形規格，答案唯一。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_triangle_transform_area",
               "requires_written_response": false,
-              "diagram_required": true
+              "diagram_required": true,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-SAT-Q03",
@@ -727,11 +741,13 @@
               "review_notes": [
                 "Question Agent：設計空間向量體積選填。",
                 "Review Agent：週六不放文字作答，改為選填；計算正確但仍需人工審圖。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_3d_vector_volume",
               "requires_written_response": false,
-              "diagram_required": true
+              "diagram_required": true,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             }
           ]
         },
@@ -746,7 +762,7 @@
             "MA-MODEL",
             "MA-A8"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -759,7 +775,7 @@
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "MA-FC-V01-B02-SUN-Q01",
@@ -818,17 +834,19 @@
               "review_notes": [
                 "Question Agent：設計二次函數根距離題。",
                 "Review Agent：答案唯一，圖形只提示結構不洩漏推導。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_quadratic_roots_range",
               "requires_written_response": false,
-              "diagram_required": true
+              "diagram_required": true,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": true,
               "id": "MA-FC-V01-B02-SUN-Q02",
@@ -886,18 +904,20 @@
               "review_notes": [
                 "Question Agent：設計健康篩檢條件機率短答。",
                 "Review Agent：數值整齊且分母判斷清楚，仍需人工確認短答評分細則。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_screening_probability_context",
               "requires_written_response": true,
               "written_response_day_only": "Sun",
-              "diagram_required": false
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             },
             {
               "subject": "數學",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": true,
               "id": "MA-FC-V01-B02-SUN-Q03",
@@ -923,12 +943,14 @@
               "review_notes": [
                 "Question Agent：設計一階更新生活模型短答。",
                 "Review Agent：安排於週日短答，需人工確認小數車輛語意是否要改為約 39 輛。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 依使用者明確要求接入正式每日任務，設為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_bike_station_model",
               "requires_written_response": true,
               "diagram_required": false,
-              "written_response_day_only": "Sun"
+              "written_response_day_only": "Sun",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10"
             }
           ]
         }

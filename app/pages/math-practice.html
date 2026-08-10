@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜數學候選題庫 v0.1</title>
+    <title>AI學測考總複習｜數學科闖關</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpractice01" />
     <style>
@@ -240,12 +240,59 @@
       }
 
       .candidate-options li,
+      .candidate-option-label,
       .candidate-answer,
       .candidate-review {
         border: 1px solid var(--line);
         border-radius: 8px;
         padding: 10px 12px;
         background: var(--surface-muted);
+      }
+
+      .candidate-option-label {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        cursor: pointer;
+      }
+
+      .candidate-option-label input {
+        margin-top: 4px;
+      }
+
+      .math-written-answer {
+        width: 100%;
+        min-height: 56px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        font: inherit;
+      }
+
+      .math-practice-actions,
+      .math-score-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .math-practice-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+        padding: 14px;
+      }
+
+      .math-score-panel {
+        display: none;
+        margin-top: 16px;
+        padding: 16px;
+      }
+
+      .math-score-panel.show {
+        display: block;
       }
 
       .candidate-options strong {
@@ -314,15 +361,15 @@
     <main class="app-shell candidate-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">AI學測考總複習</p>
-          <h1 id="pageTitle">數學候選題庫 v0.1 batch_01</h1>
+          <p class="eyebrow">數學主線</p>
+          <h1 id="pageTitle">數學科正式四關</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
       <section class="candidate-alert" aria-label="題庫狀態">
-        <strong id="statusTitle">數學候選題仍待人工審題</strong>
-        <p id="statusCopy">本批是數學科 AI 新題試跑候選題，狀態全部為 needs_human_review。它尚未接入正式闖關，也不是已完成題庫。</p>
+        <strong id="statusTitle">數學 batch_02 已接入正式每日任務</strong>
+        <p id="statusCopy">週二、週四、週六、週日完成代數模型、機率統計、圖形向量與混合推理四關。</p>
       </section>
 
       <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
@@ -344,19 +391,18 @@
       </section>
 
       <section class="candidate-list" id="candidateList" aria-live="polite"></section>
+      <section class="math-practice-actions" aria-label="數學作答操作">
+        <button class="primary-action" type="button" id="submitButton">完成本關看結算</button>
+        <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
+        <a class="secondary-action link-action" href="./math-formal-candidates.html?batch=02">查看題庫情報</a>
+      </section>
+      <section class="math-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
       const DATA_VERSION = "20260810-mathpractice01";
-      const batchFiles = {
-        "01": "math_formal_candidates_v0_1_batch_01.json",
-        "02": "math_formal_candidates_v0_1_batch_02.json"
-      };
-      const batchParam = new URLSearchParams(window.location.search).get("batch") || "01";
-      const activeBatch = batchFiles[batchParam] ? batchParam : "01";
-      const activeDataFile = batchFiles[activeBatch];
-      const LOCAL_DATA_URL = `../../data/${activeDataFile}?v=${DATA_VERSION}`;
-      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/${activeDataFile}?v=${DATA_VERSION}`;
+      const LOCAL_DATA_URL = `../../data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -394,6 +440,59 @@
         return String(answer ?? "");
       }
 
+      function normalizeAnswer(value) {
+        return String(value ?? "").replace(/\s+/g, "").replaceAll("，", ",").toLowerCase();
+      }
+
+      function answerKey(question) {
+        return `math-answer-${question.id}`;
+      }
+
+      function isChoiceQuestion(question) {
+        return Array.isArray(question.options) && question.options.length > 0;
+      }
+
+      function renderAnswerControl(question) {
+        if (isChoiceQuestion(question)) {
+          const type = question.question_type === "multiple_choice" ? "checkbox" : "radio";
+          return `
+            <ul class="candidate-options">
+              ${question.options.map((option) => `
+                <li>
+                  <label class="candidate-option-label">
+                    <input type="${type}" name="${escapeHtml(answerKey(question))}" value="${escapeHtml(option.key)}" />
+                    <span><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</span>
+                  </label>
+                </li>
+              `).join("")}
+            </ul>
+          `;
+        }
+        const multiline = question.requires_written_response;
+        const placeholder = multiline ? "寫下答案與必要理由" : "輸入答案";
+        if (multiline) {
+          return `<textarea class="math-written-answer" name="${escapeHtml(answerKey(question))}" placeholder="${escapeHtml(placeholder)}"></textarea>`;
+        }
+        return `<input class="math-written-answer" name="${escapeHtml(answerKey(question))}" placeholder="${escapeHtml(placeholder)}" />`;
+      }
+
+      function getStudentAnswer(question) {
+        const name = answerKey(question);
+        if (isChoiceQuestion(question)) {
+          return Array.from(document.querySelectorAll(`[name="${CSS.escape(name)}"]:checked`)).map((input) => input.value).sort();
+        }
+        return document.querySelector(`[name="${CSS.escape(name)}"]`)?.value || "";
+      }
+
+      function isCorrect(question, studentAnswer) {
+        if (Array.isArray(studentAnswer)) {
+          const expected = Array.isArray(question.answer) ? question.answer.slice().sort() : [String(question.answer)];
+          return expected.join("|") === studentAnswer.join("|");
+        }
+        if (question.requires_written_response) return normalizeAnswer(studentAnswer).length > 0;
+        return normalizeAnswer(studentAnswer) === normalizeAnswer(answerText(question.answer));
+      }
+
       function getDataUrls() {
         return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL];
       }
@@ -420,7 +519,7 @@
           ["任務日", days.length],
           ["文字作答", written],
           ["正式題", approved],
-          ["狀態", "待審"]
+          ["狀態", "開放"]
         ];
         document.getElementById("summaryStats").innerHTML = stats
           .map(([label, value]) => `<div class="candidate-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
@@ -972,9 +1071,7 @@
       function renderQuestion(item, index) {
         const question = item.question;
         const statusText = statusLabels[question.status] || question.status || "未標";
-        const options = question.options && question.options.length
-          ? `<ul class="candidate-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
-          : '<p class="candidate-empty">選填或短答題，無選項。</p>';
+        const answerControl = renderAnswerControl(question);
         return `
           <article class="candidate-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}" data-track="${escapeHtml(question.math_track)}">
             <div class="candidate-question-header">
@@ -983,14 +1080,14 @@
                 <span class="tag">${escapeHtml(question.question_type)}</span>
                 <span class="tag">數學 ${escapeHtml(question.math_track)}</span>
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
-                <span class="tag">${question.status === "approved_for_app" ? "正式題" : question.requires_written_response ? "週日短答" : "待審題"}</span>
+                <span class="tag">${question.requires_written_response ? "週日短答" : "正式題"}</span>
               </div>
               <span class="candidate-status">${escapeHtml(statusText)}</span>
             </div>
             <p class="label">${escapeHtml(weekdayLabels[item.weekday] || item.weekday)} 第 ${index + 1} 題</p>
             <div>${escapeHtml(question.stem)}</div>
             ${(question.materials || []).map(renderMaterial).join("")}
-            ${options}
+            ${answerControl}
             <details class="candidate-answer">
               <summary>查看答案與解析</summary>
               <p><strong>答案：</strong>${escapeHtml(answerText(question.answer))}</p>
@@ -998,14 +1095,42 @@
               <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
               <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
             </details>
-            <div class="candidate-review">
-              <p><strong>知識標籤：</strong>${escapeHtml((question.knowledge_tags || []).join("、"))}</p>
-              <p><strong>能力標籤：</strong>${escapeHtml((question.ability_tags || []).join("、"))}</p>
-              <p><strong>審題紀錄：</strong>${escapeHtml((question.review_notes || []).join(" "))}</p>
-              <p><strong>相似風險：</strong>${escapeHtml(question.similarity_risk || "未標")}</p>
-            </div>
           </article>
         `;
+      }
+
+      function scoreSubmission() {
+        let correct = 0;
+        const rows = questions.map(({ question }) => {
+          const studentAnswer = getStudentAnswer(question);
+          const answered = Array.isArray(studentAnswer) ? studentAnswer.length > 0 : normalizeAnswer(studentAnswer).length > 0;
+          const ok = answered && isCorrect(question, studentAnswer);
+          if (ok) correct += 1;
+          const display = Array.isArray(studentAnswer) ? studentAnswer.join("、") : studentAnswer || "未作答";
+          return `<li>${escapeHtml(question.id)}：${escapeHtml(display)}｜${ok ? "可得分" : "待訂正"}</li>`;
+        });
+        document.querySelectorAll(".candidate-answer").forEach((details) => {
+          details.open = true;
+        });
+        const scorePanel = document.getElementById("scorePanel");
+        scorePanel.classList.add("show");
+        scorePanel.innerHTML = `
+          <h2>本關結算</h2>
+          <p>自動判讀：${escapeHtml(correct)} / ${escapeHtml(questions.length)}。短答題先以有作答計入，仍需人工確認理由與評分細節。</p>
+          <ul>${rows.join("")}</ul>
+        `;
+        scorePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function resetPractice() {
+        document.querySelectorAll("input, textarea").forEach((field) => {
+          if (field.type === "radio" || field.type === "checkbox") field.checked = false;
+          else field.value = "";
+        });
+        document.querySelectorAll(".candidate-answer").forEach((details) => {
+          details.open = false;
+        });
+        document.getElementById("scorePanel").classList.remove("show");
       }
 
       function renderDay(day) {
@@ -1050,13 +1175,9 @@
 
       async function init() {
         const data = await loadCandidateData();
-        const batchLabel = activeBatch === "02" ? "第二批" : "第一批";
-        document.getElementById("pageTitle").textContent = `數學候選題庫 v0.1 batch_${activeBatch}`;
-        const approved = data.meta?.status === "approved_for_app";
-        document.getElementById("statusTitle").textContent = approved ? `數學${batchLabel}已接入正式每日任務` : `數學${batchLabel}仍待人工審題`;
-        document.getElementById("statusCopy").textContent = approved
-          ? data.meta?.app_integration_policy || "本批已作為數學正式闖關使用。"
-          : data.meta?.purpose || "本批是數學科 AI 新題試跑候選題，狀態全部為 needs_human_review。它尚未接入正式闖關，也不是已完成題庫。";
+        document.getElementById("pageTitle").textContent = "數學科正式四關";
+        document.getElementById("statusTitle").textContent = "數學 batch_02 已接入正式每日任務";
+        document.getElementById("statusCopy").textContent = data.meta?.app_integration_policy || "週二、週四、週六、週日完成數學正式闖關。";
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
@@ -1065,6 +1186,8 @@
         document.getElementById("weekdayFilter").addEventListener("change", renderList);
         document.getElementById("trackFilter").addEventListener("change", renderList);
         document.getElementById("typeFilter").addEventListener("change", renderList);
+        document.getElementById("submitButton").addEventListener("click", scoreSubmission);
+        document.getElementById("resetButton").addEventListener("click", resetPractice);
       }
 
       init().catch((error) => {
