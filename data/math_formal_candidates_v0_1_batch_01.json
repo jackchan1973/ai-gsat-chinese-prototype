@@ -841,12 +841,14 @@
               "question_type": "short_answer",
               "difficulty": "中等偏難",
               "knowledge_tags": [
-                "MA-TRIG",
+                "MA-PROB",
+                "MA-STAT",
                 "MA-MODEL"
               ],
               "ability_tags": [
                 "MA-A2",
                 "MA-A3",
+                "MA-A5",
                 "MA-A8",
                 "MA-A9"
               ],
@@ -890,6 +892,7 @@
               "review_notes": [
                 "Question Agent：修正版改為健康檢查條件機率與期望人數，避免三角函數模型相似風險。",
                 "Review Agent：第二輪檢查條件機率與人數計算正確；仍需人工確認表格敘述清楚。",
+                "Review Agent：第三輪修正知識標籤，健康檢查題應歸為機率、統計與模型，不是三角函數。",
                 "Gatekeeper：未審定，維持 needs_human_review。"
               ],
               "error_codes": [
