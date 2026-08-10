@@ -236,7 +236,35 @@
               "source_type": "AI新題",
               "status": "needs_human_review",
               "stem": "坐標平面上一線性變換 T 滿足 T(1,0)=(2,1)，T(0,1)=(-1,3)。若以矩陣 A 表示 T，試求 det(A)。",
-              "materials": [],
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "基底向量變換示意圖",
+                  "spec": {
+                    "type": "basis_transform_area",
+                    "source_vectors": {
+                      "e1": [
+                        1,
+                        0
+                      ],
+                      "e2": [
+                        0,
+                        1
+                      ]
+                    },
+                    "image_vectors": {
+                      "T(e1)": [
+                        2,
+                        1
+                      ],
+                      "T(e2)": [
+                        -1,
+                        3
+                      ]
+                    }
+                  }
+                }
+              ],
               "options": [],
               "answer": "7",
               "scoring_rule": "填答 7 得滿分；若寫出矩陣但行列式計算錯誤，不給本題分數。",
@@ -246,13 +274,14 @@
                 "Question Agent：以矩陣欄向量與行列式設計選填。",
                 "Review Agent：待確認是否需標為數學 A 專用。",
                 "Review Agent：移除題目前置公式，避免把解題步驟當成題目提示。",
+                "Review Agent：補上基底向量變換圖，幫助學生連結 det 與面積倍率。",
                 "Gatekeeper：未審定，維持 needs_human_review。"
               ],
               "error_codes": [],
               "similarity_risk": "low_ai_new_material",
               "requires_written_response": false,
               "ai_scoring_required": false,
-              "diagram_required": false
+              "diagram_required": true
             }
           ]
         },
@@ -753,7 +782,18 @@
               "source_type": "AI新題",
               "status": "needs_human_review",
               "stem": "已知二次函數 f(x)=x^2-4x+k 的圖形與 x 軸有兩個相異交點，且兩交點距離小於 6。試問 k 的範圍為何？",
-              "materials": [],
+              "materials": [
+                {
+                  "type": "graph_spec",
+                  "title": "二次函數與 x 軸交點示意",
+                  "spec": {
+                    "type": "quadratic_roots_distance",
+                    "family": "f(x)=x^2-4x+k",
+                    "axis": "x=2",
+                    "condition": "兩個相異交點，且兩交點距離小於 6"
+                  }
+                }
+              ],
               "options": [
                 {
                   "key": "A",
@@ -784,13 +824,14 @@
                 "Question Agent：以判別式與根距離設計。",
                 "Review Agent：待確認選項與解析嚴謹性。",
                 "Review Agent：移除題目前置公式，避免把解題步驟當成題目提示。",
+                "Review Agent：補上拋物線與 x 軸交點距離示意圖，避免純文字條件過抽象。",
                 "Gatekeeper：未審定，維持 needs_human_review。"
               ],
               "error_codes": [],
               "similarity_risk": "low_ai_new_material",
               "requires_written_response": false,
               "ai_scoring_required": false,
-              "diagram_required": false
+              "diagram_required": true
             },
             {
               "id": "MA-FC-V01-B01-SUN-Q02",

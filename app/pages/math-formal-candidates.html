@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview05" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview06" />
     <style>
       .candidate-page {
         background:
@@ -347,8 +347,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview05";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview05";
+      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview06";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview06";
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -561,67 +561,172 @@
 
       function renderLinearTransformMappingGraph(spec) {
         const width = 760;
-        const height = 320;
-        const panelWidth = 340;
-        const panelGap = 42;
-        const pad = 34;
-        const sourceOrigin = { x: pad + 38, y: height - 58 };
-        const imageOrigin = { x: pad + panelWidth + panelGap + 38, y: height - 58 };
-        const scale = 42;
+        const height = 420;
+        const panelWidth = 330;
+        const panelHeight = 310;
+        const leftPanel = { x: 42, y: 42 };
+        const rightPanel = { x: 388, y: 42 };
+        const sourceOrigin = { x: leftPanel.x + 72, y: leftPanel.y + 232 };
+        const imageOrigin = { x: rightPanel.x + 82, y: rightPanel.y + 232 };
+        const scale = 56;
+        const imageScale = 44;
         const mapFrom = (origin, [x, y]) => ({
           x: origin.x + x * scale,
           y: origin.y - y * scale
         });
+        const mapImage = (origin, [x, y]) => ({
+          x: origin.x + x * imageScale,
+          y: origin.y - y * imageScale
+        });
         const sourceVectors = spec.source_vectors || {};
         const imageVectors = spec.image_vectors || {};
-        const sourceLabels = {
-          a: "(1,1)",
-          b: "(1,-1)",
-          w: "(3,1)"
-        };
-        const vectorLine = (origin, name, point, color, label, dashed = false) => {
-          const mapped = mapFrom(origin, point);
+        const textBox = (x, y, text, color, width = 84) => `
+          <rect x="${x - 5}" y="${y - 17}" width="${width}" height="23" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
+          <text x="${x}" y="${y}" fill="${color}" font-size="14" font-weight="800">${escapeHtml(text)}</text>
+        `;
+        const vectorLine = (origin, mapper, point, color, marker, labelX, labelY, label, boxWidth = 86) => {
+          const mapped = mapper(origin, point);
           return `
-            <line x1="${origin.x}" y1="${origin.y}" x2="${mapped.x}" y2="${mapped.y}" stroke="${color}" stroke-width="3" ${dashed ? 'stroke-dasharray="6 5"' : ""} marker-end="url(#arrow-${color.replace("#", "")})" />
+            <line x1="${origin.x}" y1="${origin.y}" x2="${mapped.x}" y2="${mapped.y}" stroke="${color}" stroke-width="3" marker-end="url(#${marker})" />
             <circle cx="${mapped.x}" cy="${mapped.y}" r="4" fill="${color}" />
-            <text x="${mapped.x + 7}" y="${mapped.y - 8}" fill="${color}" font-size="13">${escapeHtml(label || name)}</text>
+            ${textBox(labelX, labelY, label, color, boxWidth)}
           `;
         };
-        const axis = (origin, title) => `
-          <rect x="${origin.x - 38}" y="30" width="${panelWidth}" height="${height - 58}" rx="8" fill="#ffffff" stroke="rgba(21,94,117,0.18)" />
-          <line x1="${origin.x - 18}" y1="${origin.y}" x2="${origin.x + panelWidth - 62}" y2="${origin.y}" stroke="#8aa2b2" />
-          <line x1="${origin.x}" y1="${origin.y + 24}" x2="${origin.x}" y2="54" stroke="#8aa2b2" />
-          <text x="${origin.x - 24}" y="56" fill="#17212b" font-size="15" font-weight="800">${title}</text>
+        const axis = (panel, origin, title) => `
+          <rect x="${panel.x}" y="${panel.y}" width="${panelWidth}" height="${panelHeight}" rx="10" fill="#ffffff" stroke="rgba(21,94,117,0.2)" />
+          <line x1="${origin.x - 34}" y1="${origin.y}" x2="${panel.x + panelWidth - 30}" y2="${origin.y}" stroke="#8aa2b2" />
+          <line x1="${origin.x}" y1="${origin.y + 34}" x2="${origin.x}" y2="${panel.y + 56}" stroke="#8aa2b2" />
+          <text x="${panel.x + 22}" y="${panel.y + 32}" fill="#17212b" font-size="16" font-weight="800">${title}</text>
         `;
         return `
           <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="線性變換示意圖">
             <defs>
-              <marker id="arrow-155e75" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <marker id="arrow-lt-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 0 L 10 5 L 0 10 z" fill="#155e75" />
               </marker>
-              <marker id="arrow-c2410c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <marker id="arrow-lt-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c" />
               </marker>
-              <marker id="arrow-0f766e" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <marker id="arrow-lt-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e" />
               </marker>
             </defs>
-            ${axis(sourceOrigin, "原坐標平面")}
-            ${axis(imageOrigin, "變換後平面")}
-            ${vectorLine(sourceOrigin, "a", sourceVectors.a || [1, 1], "#155e75", `a=${sourceLabels.a}`)}
-            ${vectorLine(sourceOrigin, "b", sourceVectors.b || [1, -1], "#c2410c", `b=${sourceLabels.b}`)}
-            ${vectorLine(sourceOrigin, "w", sourceVectors.w || [3, 1], "#0f766e", `w=${sourceLabels.w}`)}
-            ${vectorLine(imageOrigin, "T(a)", imageVectors["T(a)"] || [4, 2], "#155e75", "T(a)=(4,2)")}
-            ${vectorLine(imageOrigin, "T(b)", imageVectors["T(b)"] || [0, 2], "#c2410c", "T(b)=(0,2)")}
-            <text x="${imageOrigin.x + 104}" y="${imageOrigin.y - 44}" fill="#0f766e" font-size="16" font-weight="800">T(w)=?</text>
-            <text x="${pad}" y="${height - 10}" fill="#61707e" font-size="13">圖中只給已知向量與已知變換結果，目標 T(3,1) 需自行推理。</text>
+            ${axis(leftPanel, sourceOrigin, "原坐標平面")}
+            ${axis(rightPanel, imageOrigin, "變換後平面")}
+            ${vectorLine(sourceOrigin, mapFrom, sourceVectors.a || [1, 1], "#155e75", "arrow-lt-blue", leftPanel.x + 164, leftPanel.y + 95, "a=(1,1)", 78)}
+            ${vectorLine(sourceOrigin, mapFrom, sourceVectors.b || [1, -1], "#c2410c", "arrow-lt-orange", leftPanel.x + 164, leftPanel.y + 292, "b=(1,-1)", 86)}
+            ${vectorLine(sourceOrigin, mapFrom, sourceVectors.w || [3, 1], "#0f766e", "arrow-lt-green", leftPanel.x + 236, leftPanel.y + 130, "w=(3,1)", 82)}
+            ${vectorLine(imageOrigin, mapImage, imageVectors["T(a)"] || [4, 2], "#155e75", "arrow-lt-blue", rightPanel.x + 208, rightPanel.y + 94, "T(a)=(4,2)", 104)}
+            ${vectorLine(imageOrigin, mapImage, imageVectors["T(b)"] || [0, 2], "#c2410c", "arrow-lt-orange", rightPanel.x + 42, rightPanel.y + 94, "T(b)=(0,2)", 104)}
+            ${textBox(rightPanel.x + 194, rightPanel.y + 174, "T(w)=?", "#0f766e", 78)}
+            <text x="42" y="392" fill="#61707e" font-size="13">圖中只給已知向量與已知變換結果；目標 T(3,1) 需自行推理。</text>
+          </svg>
+        `;
+      }
+
+      function renderBasisTransformAreaGraph(spec) {
+        const width = 760;
+        const height = 400;
+        const leftPanel = { x: 42, y: 38 };
+        const rightPanel = { x: 388, y: 38 };
+        const panelWidth = 330;
+        const panelHeight = 270;
+        const sourceOrigin = { x: leftPanel.x + 82, y: leftPanel.y + 202 };
+        const imageOrigin = { x: rightPanel.x + 136, y: rightPanel.y + 202 };
+        const scale = 68;
+        const imageScale = 54;
+        const map = (origin, s, [x, y]) => ({ x: origin.x + x * s, y: origin.y - y * s });
+        const legendItem = (x, y, label, color, width = 92) => `
+          <rect x="${x - 5}" y="${y - 17}" width="${width}" height="23" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
+          <circle cx="${x + 8}" cy="${y - 6}" r="4" fill="${color}" />
+          <text x="${x + 18}" y="${y}" fill="${color}" font-size="14" font-weight="800">${escapeHtml(label)}</text>
+        `;
+        const axis = (panel, origin, title) => `
+          <rect x="${panel.x}" y="${panel.y}" width="${panelWidth}" height="${panelHeight}" rx="10" fill="#ffffff" stroke="rgba(21,94,117,0.2)" />
+          <line x1="${origin.x - 42}" y1="${origin.y}" x2="${panel.x + panelWidth - 28}" y2="${origin.y}" stroke="#8aa2b2" />
+          <line x1="${origin.x}" y1="${origin.y + 32}" x2="${origin.x}" y2="${panel.y + 54}" stroke="#8aa2b2" />
+          <text x="${panel.x + 22}" y="${panel.y + 32}" fill="#17212b" font-size="16" font-weight="800">${title}</text>
+        `;
+        const poly = (origin, s, vectors, fill, stroke) => {
+          const a = vectors[0];
+          const b = vectors[1];
+          const pts = [[0, 0], a, [a[0] + b[0], a[1] + b[1]], b].map((p) => map(origin, s, p));
+          return `<polygon points="${pts.map((p) => `${p.x},${p.y}`).join(" ")}" fill="${fill}" stroke="${stroke}" stroke-width="2.5" />`;
+        };
+        const line = (origin, s, point, color) => {
+          const p = map(origin, s, point);
+          return `<line x1="${origin.x}" y1="${origin.y}" x2="${p.x}" y2="${p.y}" stroke="${color}" stroke-width="3" marker-end="url(#arrow-area-${color.replace("#", "")})" />`;
+        };
+        const e1 = spec.source_vectors?.e1 || [1, 0];
+        const e2 = spec.source_vectors?.e2 || [0, 1];
+        const te1 = spec.image_vectors?.["T(e1)"] || [2, 1];
+        const te2 = spec.image_vectors?.["T(e2)"] || [-1, 3];
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="基底向量變換示意圖">
+            <defs>
+              <marker id="arrow-area-155e75" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#155e75" /></marker>
+              <marker id="arrow-area-c2410c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c" /></marker>
+            </defs>
+            ${axis(leftPanel, sourceOrigin, "原基底")}
+            ${axis(rightPanel, imageOrigin, "變換後")}
+            ${poly(sourceOrigin, scale, [e1, e2], "rgba(21,94,117,0.12)", "#155e75")}
+            ${poly(imageOrigin, imageScale, [te1, te2], "rgba(194,65,12,0.12)", "#c2410c")}
+            ${line(sourceOrigin, scale, e1, "#155e75")}
+            ${line(sourceOrigin, scale, e2, "#c2410c")}
+            ${line(imageOrigin, imageScale, te1, "#155e75")}
+            ${line(imageOrigin, imageScale, te2, "#c2410c")}
+            ${legendItem(52, 338, "e1=(1,0)", "#155e75", 94)}
+            ${legendItem(164, 338, "e2=(0,1)", "#c2410c", 94)}
+            ${legendItem(286, 338, "T(e1)=(2,1)", "#155e75", 124)}
+            ${legendItem(430, 338, "T(e2)=(-1,3)", "#c2410c", 138)}
+            <text x="42" y="380" fill="#61707e" font-size="13">det(A) 可視為單位方格經變換後的有向面積倍率。</text>
+          </svg>
+        `;
+      }
+
+      function renderQuadraticRootsDistanceGraph(spec) {
+        const width = 760;
+        const height = 330;
+        const pad = 44;
+        const xMin = -3;
+        const xMax = 7;
+        const yMin = -5;
+        const yMax = 7;
+        const mapX = (x) => pad + (x - xMin) * (width - pad * 2) / (xMax - xMin);
+        const mapY = (y) => height - pad - (y - yMin) * (height - pad * 2) / (yMax - yMin);
+        const points = [];
+        for (let i = 0; i <= 100; i += 1) {
+          const x = xMin + (xMax - xMin) * i / 100;
+          const y = (x - 2) ** 2 - 4;
+          points.push(`${mapX(x).toFixed(1)},${mapY(y).toFixed(1)}`);
+        }
+        const leftRoot = mapX(0);
+        const rightRoot = mapX(4);
+        const axisX = mapX(2);
+        const axisY = mapY(0);
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="二次函數與 x 軸交點距離示意">
+            <rect x="18" y="20" width="${width - 36}" height="${height - 54}" rx="10" fill="#ffffff" stroke="rgba(21,94,117,0.18)" />
+            <line x1="${pad}" y1="${axisY}" x2="${width - pad}" y2="${axisY}" stroke="#8aa2b2" />
+            <line x1="${mapX(0)}" y1="${pad}" x2="${mapX(0)}" y2="${height - pad}" stroke="#8aa2b2" />
+            <line x1="${axisX}" y1="${pad}" x2="${axisX}" y2="${height - pad}" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="6 5" />
+            <polyline points="${points.join(" ")}" fill="none" stroke="#155e75" stroke-width="3" stroke-linejoin="round" />
+            <line x1="${leftRoot}" y1="${axisY - 18}" x2="${rightRoot}" y2="${axisY - 18}" stroke="#0f766e" stroke-width="3" />
+            <circle cx="${leftRoot}" cy="${axisY}" r="4" fill="#0f766e" />
+            <circle cx="${rightRoot}" cy="${axisY}" r="4" fill="#0f766e" />
+            <rect x="${axisX + 10}" y="${pad + 8}" width="84" height="24" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
+            <text x="${axisX + 15}" y="${pad + 26}" fill="#c2410c" font-size="14" font-weight="800">對稱軸 x=2</text>
+            <rect x="${axisX - 72}" y="${axisY - 52}" width="160" height="25" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
+            <text x="${axisX - 66}" y="${axisY - 34}" fill="#0f766e" font-size="14" font-weight="800">兩交點距離需小於 6</text>
+            <text x="42" y="${height - 12}" fill="#61707e" font-size="13">${escapeHtml(spec.family || "f(x)=x^2-4x+k")} 的圖形會隨 k 上下平移。</text>
           </svg>
         `;
       }
 
       function renderTriangleTransformGraph(spec) {
         const width = 520;
-        const height = 340;
+        const height = 390;
+        const plotHeight = 320;
         const pad = 38;
         const points = spec.points || {};
         const transformed = {};
@@ -638,32 +743,38 @@
         const yMax = Math.max(10, ...ys) + 1;
         const map = ([x, y]) => ({
           x: pad + (x - xMin) * (width - pad * 2) / (xMax - xMin),
-          y: height - pad - (y - yMin) * (height - pad * 2) / (yMax - yMin)
+          y: plotHeight - pad - (y - yMin) * (plotHeight - pad * 2) / (yMax - yMin)
         });
         const polygon = (shape) => Object.values(shape).map((point) => {
           const mapped = map(point);
           return `${mapped.x.toFixed(1)},${mapped.y.toFixed(1)}`;
         }).join(" ");
-        const labels = (shape, color) => Object.entries(shape).map(([name, point]) => {
+        const dots = (shape, color) => Object.entries(shape).map(([, point]) => {
           const mapped = map(point);
-          return `<circle cx="${mapped.x}" cy="${mapped.y}" r="4" fill="${color}" /><text x="${mapped.x + 7}" y="${mapped.y - 7}" fill="${color}" font-size="13">${escapeHtml(name)}(${point.join(",")})</text>`;
+          return `<circle cx="${mapped.x}" cy="${mapped.y}" r="4.5" fill="${color}" />`;
         }).join("");
+        const legend = (x, y, color, text, width) => `
+          <rect x="${x}" y="${y - 16}" width="${width}" height="24" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
+          <circle cx="${x + 10}" cy="${y - 5}" r="4" fill="${color}" />
+          <text x="${x + 20}" y="${y}" fill="${color}" font-size="13" font-weight="800">${escapeHtml(text)}</text>
+        `;
         return `
           <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="三角形線性變換示意圖">
             <line x1="${pad}" y1="${map([0, 0]).y}" x2="${width - pad}" y2="${map([0, 0]).y}" stroke="#8aa2b2" />
             <line x1="${map([0, 0]).x}" y1="${pad}" x2="${map([0, 0]).x}" y2="${height - pad}" stroke="#8aa2b2" />
             <polygon points="${polygon(points)}" fill="rgba(21,94,117,0.12)" stroke="#155e75" stroke-width="2.5" />
             <polygon points="${polygon(transformed)}" fill="rgba(194,65,12,0.12)" stroke="#c2410c" stroke-width="2.5" />
-            ${labels(points, "#155e75")}
-            ${labels(transformed, "#c2410c")}
-            <text x="${pad}" y="${height - 8}" fill="#61707e" font-size="13">藍色為原三角形；橘色為 T(x,y)=(2x-y, x+y) 後圖形</text>
+            ${dots(points, "#155e75")}
+            ${dots(transformed, "#c2410c")}
+            ${legend(38, 332, "#155e75", "原三角形：A(1,2)、B(5,2)、C(3,7)", 272)}
+            ${legend(38, 362, "#c2410c", "變換後：A'(0,3)、B'(8,7)、C'(-1,10)", 332)}
           </svg>
         `;
       }
 
       function renderParallelepipedGraph(spec) {
         const width = 520;
-        const height = 330;
+        const height = 390;
         const add = (a, b) => a.map((value, index) => value + b[index]);
         const points = spec.points || {};
         const A = points.A || [0, 0, 0];
@@ -689,10 +800,15 @@
           const b = project(nodes[to]);
           return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${color}" stroke-width="2.5" ${dash ? `stroke-dasharray="${dash}"` : ""} />`;
         };
-        const label = (name, point, dx = 6, dy = -8) => {
+        const dot = (point) => {
           const p = project(point);
-          return `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#c2410c" /><text x="${p.x + dx}" y="${p.y + dy}" fill="#17212b" font-size="13">${name}</text>`;
+          return `<circle cx="${p.x}" cy="${p.y}" r="4.5" fill="#c2410c" />`;
         };
+        const legend = (x, y, text, width) => `
+          <rect x="${x}" y="${y - 16}" width="${width}" height="24" rx="5" fill="#ffffff" stroke="rgba(15,23,42,0.08)" />
+          <circle cx="${x + 10}" cy="${y - 5}" r="4" fill="#c2410c" />
+          <text x="${x + 20}" y="${y}" fill="#17212b" font-size="13" font-weight="800">${escapeHtml(text)}</text>
+        `;
         return `
           <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="平行六面體示意圖">
             ${line("A", "B")}
@@ -708,11 +824,12 @@
             ${line("Q", "S")}
             ${line("R", "S")}
             ${line("B", "D", "#94a3b8", "5 5")}
-            ${label("A(0,0,0)", A, -62, 18)}
-            ${label("B(2,1,0)", B)}
-            ${label("D(1,3,0)", D)}
-            ${label("P(1,1,4)", P)}
-            <text x="38" y="${height - 8}" fill="#61707e" font-size="13">以 AB、AD、AP 為三邊形成的平行六面體</text>
+            ${dot(A)}
+            ${dot(B)}
+            ${dot(D)}
+            ${dot(P)}
+            ${legend(38, 322, "A(0,0,0)、B(2,1,0)、D(1,3,0)", 294)}
+            ${legend(38, 352, "P(1,1,4)；以 AB、AD、AP 為三邊", 300)}
           </svg>
         `;
       }
@@ -726,6 +843,12 @@
             ${renderQuadraticGraph(spec)}
           `;
         }
+        if (material.type === "graph_spec" && spec.type === "quadratic_roots_distance") {
+          return `
+            <p>${escapeHtml(spec.condition || "觀察二次函數與 x 軸交點。")}</p>
+            ${renderQuadraticRootsDistanceGraph(spec)}
+          `;
+        }
         if (material.type === "diagram_spec" && spec.type === "vector_projection") {
           return `
             <p>向量 v=(6,8)，方向向量 u=(4,3)。</p>
@@ -736,6 +859,12 @@
           return `
             <p>比較原向量與變換後向量，判斷目標向量的變換結果。</p>
             ${renderLinearTransformMappingGraph(spec)}
+          `;
+        }
+        if (material.type === "diagram_spec" && spec.type === "basis_transform_area") {
+          return `
+            <p>觀察基底向量變換後形成的平行四邊形。</p>
+            ${renderBasisTransformAreaGraph(spec)}
           `;
         }
         if (material.type === "diagram_spec" && spec.transform && spec.points) {
