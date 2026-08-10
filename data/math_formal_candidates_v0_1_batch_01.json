@@ -145,7 +145,40 @@
               "source_type": "AI新題",
               "status": "needs_human_review",
               "stem": "坐標平面上一線性變換 T 滿足 T(1,1)=(4,2)，且 T(1,-1)=(0,2)。試問 T(3,1) 的坐標為何？",
-              "materials": [],
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "線性變換示意圖",
+                  "spec": {
+                    "type": "linear_transform_mapping",
+                    "source_vectors": {
+                      "a": [
+                        1,
+                        1
+                      ],
+                      "b": [
+                        1,
+                        -1
+                      ],
+                      "w": [
+                        3,
+                        1
+                      ]
+                    },
+                    "image_vectors": {
+                      "T(a)": [
+                        4,
+                        2
+                      ],
+                      "T(b)": [
+                        0,
+                        2
+                      ]
+                    },
+                    "unknown": "T(w)"
+                  }
+                }
+              ],
               "options": [
                 {
                   "key": "A",
@@ -176,13 +209,14 @@
                 "Question Agent：修正版改為線性變換與向量線性組合，降低與指數數列官方常見題型的相似風險。",
                 "Review Agent：第二輪檢查答案唯一，仍需人工確認數學 A 適配性。",
                 "Review Agent：移除題目前置公式，避免把解題步驟當成題目提示。",
+                "Review Agent：補上不揭露答案的線性變換示意圖，讓題目與圖形材料結合。",
                 "Gatekeeper：未審定，維持 needs_human_review。"
               ],
               "error_codes": [],
               "similarity_risk": "low_ai_new_linear_transformation_context",
               "requires_written_response": false,
               "ai_scoring_required": false,
-              "diagram_required": false
+              "diagram_required": true
             },
             {
               "id": "MA-FC-V01-B01-TUE-Q03",

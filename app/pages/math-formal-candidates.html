@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview04" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview05" />
     <style>
       .candidate-page {
         background:
@@ -167,7 +167,7 @@
       .math-graph {
         display: block;
         width: 100%;
-        max-width: 520px;
+        max-width: 760px;
         height: auto;
         margin-top: 10px;
         border: 1px solid rgba(21, 94, 117, 0.18);
@@ -347,8 +347,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview04";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview04";
+      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview05";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview05";
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -559,6 +559,66 @@
         `;
       }
 
+      function renderLinearTransformMappingGraph(spec) {
+        const width = 760;
+        const height = 320;
+        const panelWidth = 340;
+        const panelGap = 42;
+        const pad = 34;
+        const sourceOrigin = { x: pad + 38, y: height - 58 };
+        const imageOrigin = { x: pad + panelWidth + panelGap + 38, y: height - 58 };
+        const scale = 42;
+        const mapFrom = (origin, [x, y]) => ({
+          x: origin.x + x * scale,
+          y: origin.y - y * scale
+        });
+        const sourceVectors = spec.source_vectors || {};
+        const imageVectors = spec.image_vectors || {};
+        const sourceLabels = {
+          a: "(1,1)",
+          b: "(1,-1)",
+          w: "(3,1)"
+        };
+        const vectorLine = (origin, name, point, color, label, dashed = false) => {
+          const mapped = mapFrom(origin, point);
+          return `
+            <line x1="${origin.x}" y1="${origin.y}" x2="${mapped.x}" y2="${mapped.y}" stroke="${color}" stroke-width="3" ${dashed ? 'stroke-dasharray="6 5"' : ""} marker-end="url(#arrow-${color.replace("#", "")})" />
+            <circle cx="${mapped.x}" cy="${mapped.y}" r="4" fill="${color}" />
+            <text x="${mapped.x + 7}" y="${mapped.y - 8}" fill="${color}" font-size="13">${escapeHtml(label || name)}</text>
+          `;
+        };
+        const axis = (origin, title) => `
+          <rect x="${origin.x - 38}" y="30" width="${panelWidth}" height="${height - 58}" rx="8" fill="#ffffff" stroke="rgba(21,94,117,0.18)" />
+          <line x1="${origin.x - 18}" y1="${origin.y}" x2="${origin.x + panelWidth - 62}" y2="${origin.y}" stroke="#8aa2b2" />
+          <line x1="${origin.x}" y1="${origin.y + 24}" x2="${origin.x}" y2="54" stroke="#8aa2b2" />
+          <text x="${origin.x - 24}" y="56" fill="#17212b" font-size="15" font-weight="800">${title}</text>
+        `;
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="線性變換示意圖">
+            <defs>
+              <marker id="arrow-155e75" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#155e75" />
+              </marker>
+              <marker id="arrow-c2410c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c" />
+              </marker>
+              <marker id="arrow-0f766e" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e" />
+              </marker>
+            </defs>
+            ${axis(sourceOrigin, "原坐標平面")}
+            ${axis(imageOrigin, "變換後平面")}
+            ${vectorLine(sourceOrigin, "a", sourceVectors.a || [1, 1], "#155e75", `a=${sourceLabels.a}`)}
+            ${vectorLine(sourceOrigin, "b", sourceVectors.b || [1, -1], "#c2410c", `b=${sourceLabels.b}`)}
+            ${vectorLine(sourceOrigin, "w", sourceVectors.w || [3, 1], "#0f766e", `w=${sourceLabels.w}`)}
+            ${vectorLine(imageOrigin, "T(a)", imageVectors["T(a)"] || [4, 2], "#155e75", "T(a)=(4,2)")}
+            ${vectorLine(imageOrigin, "T(b)", imageVectors["T(b)"] || [0, 2], "#c2410c", "T(b)=(0,2)")}
+            <text x="${imageOrigin.x + 104}" y="${imageOrigin.y - 44}" fill="#0f766e" font-size="16" font-weight="800">T(w)=?</text>
+            <text x="${pad}" y="${height - 10}" fill="#61707e" font-size="13">圖中只給已知向量與已知變換結果，目標 T(3,1) 需自行推理。</text>
+          </svg>
+        `;
+      }
+
       function renderTriangleTransformGraph(spec) {
         const width = 520;
         const height = 340;
@@ -670,6 +730,12 @@
           return `
             <p>向量 v=(6,8)，方向向量 u=(4,3)。</p>
             ${renderVectorProjectionGraph(spec)}
+          `;
+        }
+        if (material.type === "diagram_spec" && spec.type === "linear_transform_mapping") {
+          return `
+            <p>比較原向量與變換後向量，判斷目標向量的變換結果。</p>
+            ${renderLinearTransformMappingGraph(spec)}
           `;
         }
         if (material.type === "diagram_spec" && spec.transform && spec.points) {
