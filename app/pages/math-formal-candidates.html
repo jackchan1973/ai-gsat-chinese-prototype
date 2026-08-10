@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview03" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview04" />
     <style>
       .candidate-page {
         background:
@@ -347,8 +347,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview03";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview03";
+      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview04";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview04";
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -516,6 +516,147 @@
         `;
       }
 
+      function renderVectorProjectionGraph(spec) {
+        const width = 520;
+        const height = 300;
+        const pad = 36;
+        const max = 9;
+        const scale = (height - pad * 2) / max;
+        const origin = { x: pad, y: height - pad };
+        const map = ([x, y]) => ({
+          x: origin.x + x * scale,
+          y: origin.y - y * scale
+        });
+        const v = spec.vectors?.v || [6, 8];
+        const u = spec.vectors?.u || [4, 3];
+        const projection = spec.projection_point || [7.68, 5.76];
+        const vPoint = map(v);
+        const uPoint = map(u);
+        const projectionPoint = map(projection);
+        const rayPoint = map([8.6, 6.45]);
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="向量投影示意圖">
+            <defs>
+              <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#155e75" />
+              </marker>
+              <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c" />
+              </marker>
+            </defs>
+            <line x1="${origin.x}" y1="${origin.y}" x2="${width - pad}" y2="${origin.y}" stroke="#8aa2b2" />
+            <line x1="${origin.x}" y1="${origin.y}" x2="${origin.x}" y2="${pad}" stroke="#8aa2b2" />
+            <line x1="${origin.x}" y1="${origin.y}" x2="${rayPoint.x}" y2="${rayPoint.y}" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 5" />
+            <line x1="${origin.x}" y1="${origin.y}" x2="${vPoint.x}" y2="${vPoint.y}" stroke="#155e75" stroke-width="3" marker-end="url(#arrow-blue)" />
+            <line x1="${origin.x}" y1="${origin.y}" x2="${uPoint.x}" y2="${uPoint.y}" stroke="#c2410c" stroke-width="3" marker-end="url(#arrow-orange)" />
+            <line x1="${vPoint.x}" y1="${vPoint.y}" x2="${projectionPoint.x}" y2="${projectionPoint.y}" stroke="#64748b" stroke-width="2" stroke-dasharray="5 5" />
+            <circle cx="${projectionPoint.x}" cy="${projectionPoint.y}" r="4" fill="#0f766e" />
+            <text x="${vPoint.x + 8}" y="${vPoint.y - 8}" fill="#155e75" font-size="14">v=(6,8)</text>
+            <text x="${uPoint.x + 8}" y="${uPoint.y + 18}" fill="#c2410c" font-size="14">u=(4,3)</text>
+            <text x="${projectionPoint.x - 46}" y="${projectionPoint.y + 20}" fill="#0f766e" font-size="14">投影點</text>
+            <text x="${pad}" y="${height - 8}" fill="#61707e" font-size="13">由圖判斷 v 沿 u 方向的投影長</text>
+          </svg>
+        `;
+      }
+
+      function renderTriangleTransformGraph(spec) {
+        const width = 520;
+        const height = 340;
+        const pad = 38;
+        const points = spec.points || {};
+        const transformed = {};
+        Object.entries(points).forEach(([name, point]) => {
+          const [x, y] = point;
+          transformed[`${name}'`] = [2 * x - y, x + y];
+        });
+        const allPoints = [...Object.values(points), ...Object.values(transformed)];
+        const xs = allPoints.map((point) => point[0]);
+        const ys = allPoints.map((point) => point[1]);
+        const xMin = Math.min(-1, ...xs) - 1;
+        const xMax = Math.max(8, ...xs) + 1;
+        const yMin = Math.min(0, ...ys) - 1;
+        const yMax = Math.max(10, ...ys) + 1;
+        const map = ([x, y]) => ({
+          x: pad + (x - xMin) * (width - pad * 2) / (xMax - xMin),
+          y: height - pad - (y - yMin) * (height - pad * 2) / (yMax - yMin)
+        });
+        const polygon = (shape) => Object.values(shape).map((point) => {
+          const mapped = map(point);
+          return `${mapped.x.toFixed(1)},${mapped.y.toFixed(1)}`;
+        }).join(" ");
+        const labels = (shape, color) => Object.entries(shape).map(([name, point]) => {
+          const mapped = map(point);
+          return `<circle cx="${mapped.x}" cy="${mapped.y}" r="4" fill="${color}" /><text x="${mapped.x + 7}" y="${mapped.y - 7}" fill="${color}" font-size="13">${escapeHtml(name)}(${point.join(",")})</text>`;
+        }).join("");
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="三角形線性變換示意圖">
+            <line x1="${pad}" y1="${map([0, 0]).y}" x2="${width - pad}" y2="${map([0, 0]).y}" stroke="#8aa2b2" />
+            <line x1="${map([0, 0]).x}" y1="${pad}" x2="${map([0, 0]).x}" y2="${height - pad}" stroke="#8aa2b2" />
+            <polygon points="${polygon(points)}" fill="rgba(21,94,117,0.12)" stroke="#155e75" stroke-width="2.5" />
+            <polygon points="${polygon(transformed)}" fill="rgba(194,65,12,0.12)" stroke="#c2410c" stroke-width="2.5" />
+            ${labels(points, "#155e75")}
+            ${labels(transformed, "#c2410c")}
+            <text x="${pad}" y="${height - 8}" fill="#61707e" font-size="13">藍色為原三角形；橘色為 T(x,y)=(2x-y, x+y) 後圖形</text>
+          </svg>
+        `;
+      }
+
+      function renderParallelepipedGraph(spec) {
+        const width = 520;
+        const height = 330;
+        const add = (a, b) => a.map((value, index) => value + b[index]);
+        const points = spec.points || {};
+        const A = points.A || [0, 0, 0];
+        const B = points.B || [2, 1, 0];
+        const D = points.D || [1, 3, 0];
+        const P = points.P || [1, 1, 4];
+        const nodes = {
+          A,
+          B,
+          D,
+          P,
+          C: add(B, D),
+          Q: add(B, P),
+          R: add(D, P),
+          S: add(add(B, D), P)
+        };
+        const project = ([x, y, z]) => ({
+          x: 86 + x * 54 + y * 26,
+          y: 246 - x * 8 - y * 18 - z * 32
+        });
+        const line = (from, to, color = "#155e75", dash = "") => {
+          const a = project(nodes[from]);
+          const b = project(nodes[to]);
+          return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${color}" stroke-width="2.5" ${dash ? `stroke-dasharray="${dash}"` : ""} />`;
+        };
+        const label = (name, point, dx = 6, dy = -8) => {
+          const p = project(point);
+          return `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#c2410c" /><text x="${p.x + dx}" y="${p.y + dy}" fill="#17212b" font-size="13">${name}</text>`;
+        };
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="平行六面體示意圖">
+            ${line("A", "B")}
+            ${line("A", "D")}
+            ${line("B", "C")}
+            ${line("D", "C")}
+            ${line("A", "P", "#c2410c")}
+            ${line("B", "Q")}
+            ${line("D", "R")}
+            ${line("C", "S")}
+            ${line("P", "Q")}
+            ${line("P", "R")}
+            ${line("Q", "S")}
+            ${line("R", "S")}
+            ${line("B", "D", "#94a3b8", "5 5")}
+            ${label("A(0,0,0)", A, -62, 18)}
+            ${label("B(2,1,0)", B)}
+            ${label("D(1,3,0)", D)}
+            ${label("P(1,1,4)", P)}
+            <text x="38" y="${height - 8}" fill="#61707e" font-size="13">以 AB、AD、AP 為三邊形成的平行六面體</text>
+          </svg>
+        `;
+      }
+
       function renderSpecSummary(material) {
         const spec = material.spec || {};
         if (material.type === "graph_spec" && spec.type === "quadratic") {
@@ -523,6 +664,24 @@
             <p>拋物線：${escapeHtml(spec.equation || "")}</p>
             <p>頂點：(${escapeHtml((spec.vertex || []).join(","))})；開口：${spec.opens === "up" ? "向上" : escapeHtml(spec.opens || "未標")}</p>
             ${renderQuadraticGraph(spec)}
+          `;
+        }
+        if (material.type === "diagram_spec" && spec.type === "vector_projection") {
+          return `
+            <p>向量 v=(6,8)，方向向量 u=(4,3)。</p>
+            ${renderVectorProjectionGraph(spec)}
+          `;
+        }
+        if (material.type === "diagram_spec" && spec.transform && spec.points) {
+          return `
+            <p>原圖形與變換後圖形如下。</p>
+            ${renderTriangleTransformGraph(spec)}
+          `;
+        }
+        if (material.type === "diagram_spec" && spec.vectors_from_A && spec.points) {
+          return `
+            <p>由同一頂點 A 出發的三個向量形成平行六面體。</p>
+            ${renderParallelepipedGraph(spec)}
           `;
         }
         const items = [];
