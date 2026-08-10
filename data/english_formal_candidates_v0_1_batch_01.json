@@ -1,0 +1,1626 @@
+{
+  "meta": {
+    "subject": "英文",
+    "mode": "學測",
+    "version": "formal_candidates_v0.1_batch_01",
+    "purpose": "英文科正式候選題庫 v0.1 第 1 批；供線上預覽與人工檢查，不接入正式每日任務。",
+    "status": "needs_human_review",
+    "created_at": "2026-08-10",
+    "source_policy": "113、114、115 官方英文題與出版社解析僅用於分析題型、閱讀量、解析深度與評分規準；本批材料、題目、選項與解析皆為 AI 新製作。",
+    "app_integration_policy": "本批全部為 needs_human_review，未經審題與 Gatekeeper 前不可進入正式小程式。",
+    "batch_plan": {
+      "target_days": 4,
+      "target_questions": 31,
+      "written_response_count": 1,
+      "status": "needs_human_review",
+      "themes": [
+        "校園學習",
+        "社群修理",
+        "公共閱讀",
+        "睡眠與學習",
+        "語言日",
+        "翻譯判斷"
+      ]
+    },
+    "schedule_rule": {
+      "allowed_weekdays": [
+        "Mon",
+        "Wed",
+        "Fri",
+        "Sun"
+      ],
+      "written_response_day_only": "Sun",
+      "timezone": "Asia/Shanghai",
+      "written_response_limit_per_week": 1,
+      "writing_question_count_per_week": 1
+    }
+  },
+  "review_flags": [
+    {
+      "level": "needs_human_review",
+      "note": "batch_01 為 AI 新製作英文候選題，需人工審題後才可進入正式 app。"
+    },
+    {
+      "level": "check_language_naturalness",
+      "note": "需檢查英文句子自然度、難度與選項干擾公平性。"
+    },
+    {
+      "level": "check_similarity",
+      "note": "確認未接近 113-115 官方題文或出版社解析文字。"
+    },
+    {
+      "level": "check_writing_balance",
+      "note": "英文科每週只安排 1 題寫作題；其餘翻譯能力改為選擇型判斷。"
+    }
+  ],
+  "weeks": [
+    {
+      "week_id": "EN-FC-V01-B01-W01",
+      "label": "英文第1批第1週",
+      "days": [
+        {
+          "day_id": "EN-FC-V01-B01-MON",
+          "label": "週一：詞彙語境與短篇閱讀",
+          "weekday": "Mon",
+          "task_type": "vocabulary_and_short_reading",
+          "planned_focus": [
+            "EN-VOC",
+            "EN-CONTEXT",
+            "EN-READ"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "reading",
+              "title": "Material: A School Garden Project",
+              "content": "A senior high school turned a small unused corner beside the gym into a garden. At first, only ten students joined the project because most classmates thought gardening was slow and messy. The teacher did not ask them to produce perfect vegetables. Instead, she asked each group to record sunlight, watering time, soil moisture, and changes in plant growth. After six weeks, the students noticed that the garden had become more than a science activity. Some used the herbs in cooking club, some wrote short poems about the plants, and others designed signs explaining how insects helped the garden. The project became popular because it connected science, language, art, and daily life."
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-MON-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "In the sentence “The library started a quiet-hour policy to create a more ______ study environment,” which word best fits the blank?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "distracting"
+                },
+                {
+                  "key": "B",
+                  "text": "spacious"
+                },
+                {
+                  "key": "C",
+                  "text": "focused"
+                },
+                {
+                  "key": "D",
+                  "text": "temporary"
+                }
+              ],
+              "answer": "C",
+              "explanation": "「quiet-hour policy」目的在讓讀書環境更能專注，focused 最符合語境。distracting 與安靜政策相反；spacious 指空間大；temporary 指暫時。",
+              "review_advice": "先抓句子中的目的線索，再判斷選項語意。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "A student who checks several sources before quoting a fact is being ______ about information. Which word best completes the sentence?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "careless"
+                },
+                {
+                  "key": "B",
+                  "text": "selective"
+                },
+                {
+                  "key": "C",
+                  "text": "critical"
+                },
+                {
+                  "key": "D",
+                  "text": "ordinary"
+                }
+              ],
+              "answer": "C",
+              "explanation": "查核多個來源表示具備批判性判讀，critical about information 是合理搭配。selective 只表示有選擇，語意不足。",
+              "review_advice": "注意形容詞後面的介系詞與整句行為。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "The club decided to ______ the event because heavy rain made the outdoor stage unsafe.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "postpone"
+                },
+                {
+                  "key": "B",
+                  "text": "predict"
+                },
+                {
+                  "key": "C",
+                  "text": "preserve"
+                },
+                {
+                  "key": "D",
+                  "text": "promote"
+                }
+              ],
+              "answer": "A",
+              "explanation": "大雨使戶外舞台不安全，因此活動應延期，postpone 符合因果。predict 是預測，preserve 是保存，promote 是推廣。",
+              "review_advice": "看 because 後的原因，通常能推出動作。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "The science teacher asked students to make a ______ observation instead of guessing what had happened in the experiment.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "visual"
+                },
+                {
+                  "key": "B",
+                  "text": "casual"
+                },
+                {
+                  "key": "C",
+                  "text": "precise"
+                },
+                {
+                  "key": "D",
+                  "text": "remote"
+                }
+              ],
+              "answer": "C",
+              "explanation": "題幹對比 guessing，表示要精確觀察，precise 最合適。visual 不一定精確，casual 與要求相反。",
+              "review_advice": "遇到 instead of 時，前後常形成對比。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-MAIN"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "A garden project became meaningful by connecting different subjects."
+                },
+                {
+                  "key": "B",
+                  "text": "Students learned that vegetables grow faster beside a gym."
+                },
+                {
+                  "key": "C",
+                  "text": "The school required every club to plant vegetables."
+                },
+                {
+                  "key": "D",
+                  "text": "The teacher wanted students to sell herbs after class."
+                }
+              ],
+              "answer": "A",
+              "explanation": "文章重點是花園從科學活動延伸到烹飪、詩作與標示設計，呈現跨領域學習。其他選項不是文章主旨或未提及。",
+              "review_advice": "主旨題要抓整段發展，不只看第一句。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-DETAIL"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "According to the passage, what did the teacher ask students to do?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Compete to grow the largest vegetables."
+                },
+                {
+                  "key": "B",
+                  "text": "Record conditions related to plant growth."
+                },
+                {
+                  "key": "C",
+                  "text": "Clean the gym after gardening."
+                },
+                {
+                  "key": "D",
+                  "text": "Write a business plan for the garden."
+                }
+              ],
+              "answer": "B",
+              "explanation": "文中說老師要求記錄 sunlight、watering time、soil moisture 和 plant growth changes，正是 B。",
+              "review_advice": "細節題回到材料找同義轉述。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q07",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Why did the project become popular?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "It allowed students to avoid regular classes."
+                },
+                {
+                  "key": "B",
+                  "text": "It was easier than other science activities."
+                },
+                {
+                  "key": "C",
+                  "text": "It linked school learning with real-life experiences."
+                },
+                {
+                  "key": "D",
+                  "text": "It provided free food for all students."
+                }
+              ],
+              "answer": "C",
+              "explanation": "文末指出受歡迎是因為連結 science, language, art, and daily life，C 是合理推論。",
+              "review_advice": "推論題要找材料中多個線索的共同方向。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q08",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-WORD"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "In the passage, “unused” most nearly means ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "not being used"
+                },
+                {
+                  "key": "B",
+                  "text": "not being cleaned"
+                },
+                {
+                  "key": "C",
+                  "text": "not being measured"
+                },
+                {
+                  "key": "D",
+                  "text": "not being repaired"
+                }
+              ],
+              "answer": "A",
+              "explanation": "unused corner 指原本沒有被使用的角落。",
+              "review_advice": "詞義題要放回原句，不要只看單字外形。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            }
+          ]
+        },
+        {
+          "day_id": "EN-FC-V01-B01-WED",
+          "label": "週三：綜合測驗與篇章結構",
+          "weekday": "Wed",
+          "task_type": "cloze_and_discourse",
+          "planned_focus": [
+            "EN-CLOZE",
+            "EN-DISCOURSE",
+            "EN-STRUCTURE"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "cloze",
+              "title": "Material: A Repair Cafe",
+              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. When a lamp is repaired, the owner learns a skill; when a radio works again, a memory may return with it. These events remind people that objects do not always have to be thrown away, and that knowledge grows when it is shared."
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-WED-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "The phrase “not only to save money, but also to reduce waste” shows a relationship of ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "addition"
+                },
+                {
+                  "key": "B",
+                  "text": "contrast"
+                },
+                {
+                  "key": "C",
+                  "text": "time order"
+                },
+                {
+                  "key": "D",
+                  "text": "condition"
+                }
+              ],
+              "answer": "A",
+              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "In “people bring broken items and learn how to fix them,” the word “them” refers to ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "volunteers"
+                },
+                {
+                  "key": "B",
+                  "text": "events"
+                },
+                {
+                  "key": "C",
+                  "text": "broken items"
+                },
+                {
+                  "key": "D",
+                  "text": "neighbors"
+                }
+              ],
+              "answer": "C",
+              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which word best completes the idea: Repair cafes help people ______ waste by fixing usable objects.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "reduce"
+                },
+                {
+                  "key": "B",
+                  "text": "describe"
+                },
+                {
+                  "key": "C",
+                  "text": "hide"
+                },
+                {
+                  "key": "D",
+                  "text": "increase"
+                }
+              ],
+              "answer": "A",
+              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which sentence best explains why a repaired radio may bring back a memory?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Old objects are always expensive."
+                },
+                {
+                  "key": "B",
+                  "text": "Objects can be connected with personal experiences."
+                },
+                {
+                  "key": "C",
+                  "text": "Radios are easier to repair than lamps."
+                },
+                {
+                  "key": "D",
+                  "text": "Memories disappear when objects break."
+                }
+              ],
+              "answer": "B",
+              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "The passage suggests that knowledge grows when it is ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "shared"
+                },
+                {
+                  "key": "B",
+                  "text": "hidden"
+                },
+                {
+                  "key": "C",
+                  "text": "tested secretly"
+                },
+                {
+                  "key": "D",
+                  "text": "sold quickly"
+                }
+              ],
+              "answer": "A",
+              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which title best fits the passage?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "The Business of New Products"
+                },
+                {
+                  "key": "B",
+                  "text": "Fixing Things, Connecting People"
+                },
+                {
+                  "key": "C",
+                  "text": "Why Volunteers Avoid Technology"
+                },
+                {
+                  "key": "D",
+                  "text": "The History of Radios"
+                }
+              ],
+              "answer": "B",
+              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q07",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-DISCOURSE",
+                "EN-STRUCTURE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Where would this sentence best fit in the passage? “For this reason, the events often feel more like workshops than stores.”",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "After the first sentence"
+                },
+                {
+                  "key": "B",
+                  "text": "After the second sentence"
+                },
+                {
+                  "key": "C",
+                  "text": "After the third sentence"
+                },
+                {
+                  "key": "D",
+                  "text": "At the very end only"
+                }
+              ],
+              "answer": "B",
+              "explanation": "句中的 this reason 指前一句提到的目標：省錢、減廢、重建信任，所以放在第二句後最自然。",
+              "review_advice": "篇章結構題要找指示詞 this/that 的前文依據。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q08",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-DISCOURSE",
+                "EN-STRUCTURE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which sentence could best conclude the passage?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Therefore, repair cafes show that fixing objects can also repair social connections."
+                },
+                {
+                  "key": "B",
+                  "text": "However, most people dislike using old objects in daily life."
+                },
+                {
+                  "key": "C",
+                  "text": "For example, a lamp usually needs electricity to work."
+                },
+                {
+                  "key": "D",
+                  "text": "In contrast, many stores sell new radios online."
+                }
+              ],
+              "answer": "A",
+              "explanation": "結尾需總結修理物品與社群連結，A 最能承接全段。",
+              "review_advice": "結論句通常要回扣全文主旨。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q09",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "難",
+              "knowledge_tags": [
+                "EN-DISCOURSE",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "What is the function of the examples of a lamp and a radio?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "To list the only things that can be repaired."
+                },
+                {
+                  "key": "B",
+                  "text": "To show both practical and emotional value of repairing."
+                },
+                {
+                  "key": "C",
+                  "text": "To compare two types of expensive products."
+                },
+                {
+                  "key": "D",
+                  "text": "To explain why volunteers need payment."
+                }
+              ],
+              "answer": "B",
+              "explanation": "lamp 的例子偏技能與實用，radio 的例子偏記憶與情感，兩者合起來說明修理的多重價值。",
+              "review_advice": "功能題要問例子服務哪個主旨，不是只看例子本身。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            }
+          ]
+        },
+        {
+          "day_id": "EN-FC-V01-B01-FRI",
+          "label": "週五：閱讀測驗與推論",
+          "weekday": "Fri",
+          "task_type": "reading_and_inference",
+          "planned_focus": [
+            "EN-READ",
+            "EN-INFER",
+            "EN-COMPARE"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "reading",
+              "title": "Material A: Tiny Libraries",
+              "content": "In several towns, residents have placed tiny book boxes on sidewalks. Anyone may take a book or leave one. The idea looks simple, but it changes how people think about public space. A box outside a bakery may attract children after school; another near a train station may serve commuters. Because no one checks membership cards, the system depends on trust. Some towns have found that the boxes also encourage conversations among strangers. A person who leaves a travel guide may later meet someone who used it for a weekend trip."
+            },
+            {
+              "type": "reading",
+              "title": "Material B: Sleep and Study",
+              "content": "Many students believe that studying late into the night is a sign of effort. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. A short review before bed may help, but replacing sleep with extra hours of study often harms attention the next day. The question is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned."
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-FRI-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-MAIN"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "What is the main point of Material A?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Tiny libraries can turn public places into shared reading spaces."
+                },
+                {
+                  "key": "B",
+                  "text": "Book boxes are useful only near train stations."
+                },
+                {
+                  "key": "C",
+                  "text": "Residents should check membership cards before lending books."
+                },
+                {
+                  "key": "D",
+                  "text": "Bakeries are the best places to sell travel guides."
+                }
+              ],
+              "answer": "A",
+              "explanation": "Material A 重點是 tiny book boxes 如何改變公共空間與閱讀分享。",
+              "review_advice": "主旨題避免被細節如 bakery、train station 牽走。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-DETAIL"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "According to Material A, the system depends on trust because ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "people must pay before taking books"
+                },
+                {
+                  "key": "B",
+                  "text": "no one checks membership cards"
+                },
+                {
+                  "key": "C",
+                  "text": "only children may use the boxes"
+                },
+                {
+                  "key": "D",
+                  "text": "all books are new"
+                }
+              ],
+              "answer": "B",
+              "explanation": "文中明說因為沒有檢查會員卡，所以系統仰賴信任。",
+              "review_advice": "細節題找明確因果句。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "What can be inferred from the travel guide example?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Shared books may create unexpected human connections."
+                },
+                {
+                  "key": "B",
+                  "text": "Travel guides should not be placed outdoors."
+                },
+                {
+                  "key": "C",
+                  "text": "Weekend trips always require borrowed books."
+                },
+                {
+                  "key": "D",
+                  "text": "Strangers rarely talk about reading."
+                }
+              ],
+              "answer": "A",
+              "explanation": "留下旅遊指南的人可能遇到使用者，說明共享書籍創造人際連結。",
+              "review_advice": "推論題要把例子和段落主旨連起來。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-WORD"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "In Material A, “commuters” most nearly means people who ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "travel regularly between home and work or school"
+                },
+                {
+                  "key": "B",
+                  "text": "repair old books"
+                },
+                {
+                  "key": "C",
+                  "text": "own bakeries"
+                },
+                {
+                  "key": "D",
+                  "text": "write membership rules"
+                }
+              ],
+              "answer": "A",
+              "explanation": "commuters 指通勤者，符合 train station 語境。",
+              "review_advice": "詞義題先看附近地點與行為。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-MAIN"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "What is the main idea of Material B?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Students should stop reviewing before bed."
+                },
+                {
+                  "key": "B",
+                  "text": "Sleep helps the brain organize learning."
+                },
+                {
+                  "key": "C",
+                  "text": "Memory is exactly like a storage box."
+                },
+                {
+                  "key": "D",
+                  "text": "Studying late always improves attention."
+                }
+              ],
+              "answer": "B",
+              "explanation": "Material B 說睡眠強化有用連結、整理學習，不是反對努力。",
+              "review_advice": "主旨題要抓作者真正立場。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Why does the writer mention “a storage box”?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "To support the idea that memory can be filled endlessly."
+                },
+                {
+                  "key": "B",
+                  "text": "To reject a simple but misleading view of memory."
+                },
+                {
+                  "key": "C",
+                  "text": "To explain how students should organize books."
+                },
+                {
+                  "key": "D",
+                  "text": "To compare sleep with buying containers."
+                }
+              ],
+              "answer": "B",
+              "explanation": "作者說記憶不是可不斷填滿的箱子，是要反駁過度簡化的看法。",
+              "review_advice": "遇到比喻題，要判斷作者贊成或反駁該比喻。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q07",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-COMPARE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which idea do both materials share?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Good results depend only on individual effort."
+                },
+                {
+                  "key": "B",
+                  "text": "Systems work better when people understand invisible processes."
+                },
+                {
+                  "key": "C",
+                  "text": "Public spaces are always better than private rooms."
+                },
+                {
+                  "key": "D",
+                  "text": "Rules should be removed from schools and towns."
+                }
+              ],
+              "answer": "B",
+              "explanation": "Material A 的信任系統與 Material B 的睡眠整理，都涉及看不見但重要的運作機制。",
+              "review_advice": "跨篇比較題要找抽象共同點。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q08",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-ATTITUDE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "What is the writer’s attitude in Material B toward hard work?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Critical of hard work itself"
+                },
+                {
+                  "key": "B",
+                  "text": "Supportive only when it includes enough rest"
+                },
+                {
+                  "key": "C",
+                  "text": "Uninterested in students’ habits"
+                },
+                {
+                  "key": "D",
+                  "text": "Certain that effort is useless"
+                }
+              ],
+              "answer": "B",
+              "explanation": "文末說問題不是是否努力，而是讀書計畫是否給大腦整理時間，表示支持有休息的努力。",
+              "review_advice": "態度題看結尾轉折與限定語。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            }
+          ]
+        },
+        {
+          "day_id": "EN-FC-V01-B01-SUN",
+          "label": "週日：翻譯判斷、寫作與整合表達",
+          "weekday": "Sun",
+          "task_type": "translation_writing_and_integrated",
+          "planned_focus": [
+            "EN-TRANS",
+            "EN-WRITE",
+            "EN-INTEGRATED"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "integrated",
+              "title": "Material: A Campus Language Day",
+              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. The event also encourages students to explain local culture in simple English."
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-SUN-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-TRANS",
+                "EN-WRITE"
+              ],
+              "ability_tags": [
+                "EN-A3",
+                "EN-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which English sentence best translates this idea?「越來越多學生使用 AI 工具來整理英文單字，但老師提醒他們仍要自己造句。」",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "More and more students use AI tools to organize English vocabulary, but teachers remind them that they still need to make sentences by themselves."
+                },
+                {
+                  "key": "B",
+                  "text": "More students stop learning English vocabulary because AI tools can write all sentences for teachers."
+                },
+                {
+                  "key": "C",
+                  "text": "Teachers remind AI tools to organize students and make English vocabulary by themselves."
+                },
+                {
+                  "key": "D",
+                  "text": "Students use English sentences to remind teachers that vocabulary does not need tools."
+                }
+              ],
+              "answer": "A",
+              "explanation": "A 完整表達「越來越多學生」「使用 AI 工具整理英文單字」「老師提醒仍要自己造句」。其他選項有主詞錯置、語意扭曲或漏掉重點。",
+              "review_advice": "翻譯判斷題先檢查主詞、動詞與轉折關係，再看是否漏掉關鍵意思。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。",
+                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-TRANS",
+                "EN-WRITE"
+              ],
+              "ability_tags": [
+                "EN-A3",
+                "EN-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which English sentence best translates this idea?「如果學生只複製答案，他們可能無法真正理解文章中的想法。」",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "If students only copy answers, they may not truly understand the ideas in the article."
+                },
+                {
+                  "key": "B",
+                  "text": "Because students understand the article, they should copy every answer quickly."
+                },
+                {
+                  "key": "C",
+                  "text": "Students may truly copy articles if the answers cannot understand them."
+                },
+                {
+                  "key": "D",
+                  "text": "If articles copy students, the ideas may answer only one question."
+                }
+              ],
+              "answer": "A",
+              "explanation": "A 正確呈現條件句與「只複製答案可能無法真正理解文章想法」。其他選項語意反轉或主詞關係錯誤。",
+              "review_advice": "條件句翻譯要先確定 If 子句與主要子句的邏輯。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。",
+                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "written_essay",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-WRITE",
+                "EN-ORGANIZATION"
+              ],
+              "ability_tags": [
+                "EN-A3",
+                "EN-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "英文短文寫作：根據材料，請用 80-100 words 說明你會如何設計一個 Language Day 活動，並說明它如何幫助同學使用英文。",
+              "options": [],
+              "answer": "Open response",
+              "explanation": "本題檢查活動設計、理由說明與英文組織。答案須有明確活動內容與學習效果。",
+              "review_advice": "先列活動，再寫它如何幫助口說、聽力或文化表達。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": true,
+              "ai_scoring_required": true,
+              "scoring_rule": "10 分：內容完整 4 分，組織 2 分，語言正確 2 分，具體例子 2 分。",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-INTEGRATED",
+                "EN-READ"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "According to the material, what is the main goal of Language Day?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "To help students use English in real communication."
+                },
+                {
+                  "key": "B",
+                  "text": "To test the hardest vocabulary in the textbook."
+                },
+                {
+                  "key": "C",
+                  "text": "To replace all English classes."
+                },
+                {
+                  "key": "D",
+                  "text": "To invite visitors to speak only Chinese."
+                }
+              ],
+              "answer": "A",
+              "explanation": "材料說活動是讓學生在課本練習之外使用英文，重點是真實溝通。",
+              "review_advice": "整合題先抓活動目的。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-INTEGRATED",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Why do teachers ask students to focus on clear communication rather than difficult vocabulary?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Because difficult words are never useful."
+                },
+                {
+                  "key": "B",
+                  "text": "Because successful communication depends on being understood."
+                },
+                {
+                  "key": "C",
+                  "text": "Because students should avoid speaking English."
+                },
+                {
+                  "key": "D",
+                  "text": "Because posters cannot include vocabulary."
+                }
+              ],
+              "answer": "B",
+              "explanation": "清楚溝通比艱難單字更符合活動目的，B 是合理推論。",
+              "review_advice": "推論題要從活動目的與老師提醒連結。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-INTEGRATED",
+                "EN-CULTURE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "Which booth task best matches the material?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Students explain a local night market snack in simple English."
+                },
+                {
+                  "key": "B",
+                  "text": "Students memorize a list of rare medical terms."
+                },
+                {
+                  "key": "C",
+                  "text": "Visitors copy grammar rules from the blackboard."
+                },
+                {
+                  "key": "D",
+                  "text": "Teachers cancel all student talks."
+                }
+              ],
+              "answer": "A",
+              "explanation": "材料提到用簡單英文說明在地文化，A 最符合。",
+              "review_advice": "選擇最能落實材料目標的活動。",
+              "review_notes": [
+                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_new_context_not_from_official_item",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
