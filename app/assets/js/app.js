@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260810-home-file01";
+const DATA_VERSION = "20260810-expansion01";
 const REMOTE_DATA_ROOT = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",

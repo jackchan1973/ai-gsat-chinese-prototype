@@ -3,14 +3,14 @@
     "subject": "自然",
     "mode": "學測",
     "version": "formal_candidates_v0.1_batch_03",
-    "purpose": "自然科正式候選題庫 v0.1 第 3 批；目前僅供試跑與審題，不接入正式小程式。",
+    "purpose": "自然科正式每日任務；已納入第一波補題。",
     "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方自然題與評分原則僅用於分析題型、圖表材料、實驗設計與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
     "app_integration_policy": "自然 batch_03 正式題庫改為週三輕量、週六長題的週末集中節奏。",
     "batch_plan": {
       "target_days": 2,
-      "target_questions": 12,
+      "target_questions": 24,
       "short_answer_count": 1,
       "status": "approved_for_app",
       "themes": [
@@ -33,8 +33,18 @@
       "updated_at": "2026-08-10",
       "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
       "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
-      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
+      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。",
+      "first_wave_expansion": "已新增 12 題正式題，並補齊時間、課綱與審題欄位。"
     },
+    "expansion_history": [
+      {
+        "date": "2026-08-10",
+        "action": "first_wave_add_12_questions",
+        "added_questions": 12,
+        "status": "approved_for_app",
+        "note": "依使用者要求開始補足一個月題量缺口；本波新增題皆經角色分工審核紀錄。"
+      }
+    ],
     "source_batch": "science_formal_candidates_v0_1_batch_03.json"
   },
   "review_flags": [
@@ -567,11 +577,446 @@
                 },
                 "human_sampling_required_after_live_feedback": true
               }
+            },
+            {
+              "id": "SC-FC-V01-B03-WED-Q05",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某學生以彈簧測力計拉同一木塊，記錄不同接觸面上的等速拉力如下。哪一項推論最合理？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "不同接觸面的等速拉力",
+                  "columns": [
+                    "砂紙面",
+                    "木板面",
+                    "玻璃面"
+                  ],
+                  "row_header": "接觸面",
+                  "rows": [
+                    {
+                      "label": "平均拉力(N)",
+                      "values": [
+                        3.8,
+                        2.1,
+                        1.2
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "砂紙面對木塊的摩擦力最大"
+                },
+                {
+                  "key": "B",
+                  "text": "玻璃面一定沒有摩擦力"
+                },
+                {
+                  "key": "C",
+                  "text": "拉力越大代表木塊質量越小"
+                },
+                {
+                  "key": "D",
+                  "text": "三種接觸面的摩擦力完全相同"
+                },
+                {
+                  "key": "E",
+                  "text": "等速時拉力與摩擦力無關"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "木塊等速運動時，水平方向受力平衡，拉力大小可反映摩擦力大小。砂紙面所需平均拉力最大，因此摩擦力最大。玻璃面仍有摩擦力，只是較小。",
+              "review_advice": "看到「等速」要想到合力為零，拉力可用來比較摩擦力。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 4,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-WED-Q06",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某地連續四天觀測月亮升起時間與月相，如下表。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "月相與升起時間",
+                  "columns": [
+                    "第1天",
+                    "第2天",
+                    "第3天",
+                    "第4天"
+                  ],
+                  "row_header": "項目",
+                  "rows": [
+                    {
+                      "label": "月相",
+                      "values": [
+                        "上弦後",
+                        "盈凸月",
+                        "接近滿月",
+                        "滿月後"
+                      ]
+                    },
+                    {
+                      "label": "升起時間",
+                      "values": [
+                        "15:10",
+                        "15:58",
+                        "16:45",
+                        "17:35"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "月亮每天約延後升起"
+                },
+                {
+                  "key": "B",
+                  "text": "資料支持月相在數天內逐漸改變"
+                },
+                {
+                  "key": "C",
+                  "text": "月亮每天都固定正午升起"
+                },
+                {
+                  "key": "D",
+                  "text": "滿月後升起時間一定立刻提前"
+                },
+                {
+                  "key": "E",
+                  "text": "月相在連續數天內完全不會改變"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "完全答對 A、B 得分。E 是正確背景知識，但本題要求依表中資料判斷，表中沒有直接提供運動機制。",
+              "explanation": "表中升起時間從 15:10 延到 17:35，支持 A；月相由上弦後到滿月後，也支持數天內逐漸改變，B 正確。C、D、E 都與資料不符。",
+              "review_advice": "自然資料題要分清「資料直接支持」與「課本背景知識」。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。",
+                "Review Agent：修正 E 選項，避免背景知識造成判讀爭議。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-WED-Q07",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某電路使用同一顆電池，改接不同電阻後量得電流如下。哪一項最符合資料？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "電阻與電流",
+                  "columns": [
+                    "5Ω",
+                    "10Ω",
+                    "20Ω"
+                  ],
+                  "row_header": "電阻",
+                  "rows": [
+                    {
+                      "label": "電流(A)",
+                      "values": [
+                        1.2,
+                        0.6,
+                        0.3
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "電阻增加時，電流變小"
+                },
+                {
+                  "key": "B",
+                  "text": "電阻增加時，電流一定變大"
+                },
+                {
+                  "key": "C",
+                  "text": "電流與電阻無關"
+                },
+                {
+                  "key": "D",
+                  "text": "20Ω 時電流最大"
+                },
+                {
+                  "key": "E",
+                  "text": "此資料表示電池電壓不可能相同"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "在同一電池下，資料顯示電阻由 5Ω 增至 20Ω，電流由 1.2A 降至 0.3A，符合電阻越大電流越小。",
+              "review_advice": "表格題先看變因如何改變，再判斷趨勢。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 4,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-WED-Q08",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A4"
+              ],
+              "stem": "某地午後雷雨時，看到閃電後約 6 秒聽到雷聲。若聲音在空氣中的速率約 340 m/s，閃電發生處約距離觀察者多少公尺？",
+              "materials": [
+                {
+                  "type": "text",
+                  "title": "估算條件",
+                  "content": "光傳到觀察者的時間可忽略，只用聲音傳播時間估算。"
+                }
+              ],
+              "options": [],
+              "answer": "2040",
+              "scoring_rule": "可接受 2040 m 或約 2.0 km。",
+              "explanation": "距離=速率×時間=340×6=2040 公尺，約 2.0 公里。常見錯誤是把 340 當 km/s 或忘記單位。",
+              "review_advice": "自然計算題要先確認單位，再代入速率、時間與距離關係。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
             }
           ],
           "gatekeeper_status": "approved_for_app",
           "approved_for_app_at": "2026-08-10",
-          "estimated_minutes": 21,
+          "estimated_minutes": 39,
           "time_policy": "weekday_light",
           "coverage_summary": [
             "SC-U01-energy-force-motion",
@@ -1603,18 +2048,886 @@
                 },
                 "human_sampling_required_after_live_feedback": false
               }
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q05",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某學生測試澱粉酶在不同溫度下分解澱粉的速率，結果如下。哪一項最能由資料支持？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "溫度與澱粉分解速率",
+                  "columns": [
+                    "10°C",
+                    "25°C",
+                    "37°C",
+                    "60°C"
+                  ],
+                  "row_header": "溫度",
+                  "rows": [
+                    {
+                      "label": "相對速率",
+                      "values": [
+                        2,
+                        6,
+                        10,
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "此酵素在 37°C 附近活性最高"
+                },
+                {
+                  "key": "B",
+                  "text": "溫度越高酵素活性一定越高"
+                },
+                {
+                  "key": "C",
+                  "text": "60°C 時澱粉分解最快"
+                },
+                {
+                  "key": "D",
+                  "text": "10°C 時酵素完全失去作用"
+                },
+                {
+                  "key": "E",
+                  "text": "酵素活性與溫度完全無關"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "表中 37°C 的相對速率最高，表示此條件下活性最高。60°C 速率反而下降，不能說溫度越高越快。",
+              "review_advice": "生物實驗題要用資料判斷最佳條件，不要只套「升溫變快」。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 4,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q06",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4",
+                "SC-A5"
+              ],
+              "stem": "某學生以不同體積的同濃度酸液中和 20 mL 鹼液，滴入指示劑後觀察如下。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "酸鹼中和觀察",
+                  "columns": [
+                    "加入酸液 10 mL",
+                    "20 mL",
+                    "30 mL"
+                  ],
+                  "row_header": "條件",
+                  "rows": [
+                    {
+                      "label": "顏色",
+                      "values": [
+                        "藍色",
+                        "綠色",
+                        "紅色"
+                      ]
+                    },
+                    {
+                      "label": "推測",
+                      "values": [
+                        "偏鹼",
+                        "接近中性",
+                        "偏酸"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "加入 20 mL 酸液時最接近中和"
+                },
+                {
+                  "key": "B",
+                  "text": "加入 30 mL 酸液後溶液偏酸"
+                },
+                {
+                  "key": "C",
+                  "text": "加入酸越多，溶液一定越偏鹼"
+                },
+                {
+                  "key": "D",
+                  "text": "10 mL 酸液已完全中和且偏酸"
+                },
+                {
+                  "key": "E",
+                  "text": "此資料無法比較酸液加入量的影響"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "完全答對 A、B 得分。",
+              "explanation": "表中 20 mL 對應綠色、接近中性，最接近中和；30 mL 對應紅色、偏酸。C、D 與觀察相反；E 忽略了表格中已控制酸液體積變化。",
+              "review_advice": "酸鹼題要把顏色、酸鹼性與加入量連在一起看。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q07",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A4"
+              ],
+              "stem": "某金屬塊質量為 54 g，體積為 20 cm³。其密度為多少 g/cm³？",
+              "materials": [],
+              "options": [],
+              "answer": "2.7",
+              "scoring_rule": "可接受 2.7 g/cm³。",
+              "explanation": "密度=質量/體積=54/20=2.7 g/cm³。常見錯誤是把體積除以質量，或漏寫單位。",
+              "review_advice": "物質性質計算題先寫公式，再注意單位。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 4,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q08",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某湖泊調查外來魚移除前後的浮游動物數量，如下表。哪一項解釋最合理？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "外來魚移除與浮游動物",
+                  "columns": [
+                    "移除前",
+                    "移除後第1月",
+                    "移除後第2月"
+                  ],
+                  "row_header": "時間",
+                  "rows": [
+                    {
+                      "label": "浮游動物相對數量",
+                      "values": [
+                        20,
+                        34,
+                        51
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "外來魚可能原本捕食浮游動物"
+                },
+                {
+                  "key": "B",
+                  "text": "移除外來魚一定使湖水完全沒有污染"
+                },
+                {
+                  "key": "C",
+                  "text": "浮游動物增加表示所有生物都增加"
+                },
+                {
+                  "key": "D",
+                  "text": "此資料證明外來魚不影響生態"
+                },
+                {
+                  "key": "E",
+                  "text": "浮游動物數量只受溫度影響"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "移除外來魚後浮游動物增加，合理推測外來魚可能原本捕食浮游動物。資料不能證明污染完全消失，也不能推論所有生物都增加。",
+              "review_advice": "生態題要避免把單一指標過度推論成整個生態都改善。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q09",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4",
+                "SC-A5"
+              ],
+              "stem": "某地觀測到颱風接近期間的風向與氣壓變化，如下表。哪一項最合理？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "颱風接近觀測",
+                  "columns": [
+                    "上午",
+                    "下午",
+                    "夜間"
+                  ],
+                  "row_header": "時間",
+                  "rows": [
+                    {
+                      "label": "氣壓(hPa)",
+                      "values": [
+                        1004,
+                        996,
+                        988
+                      ]
+                    },
+                    {
+                      "label": "平均風速(m/s)",
+                      "values": [
+                        8,
+                        15,
+                        24
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "氣壓下降且風速增強，顯示天氣系統接近"
+                },
+                {
+                  "key": "B",
+                  "text": "氣壓下降代表風速一定變為 0"
+                },
+                {
+                  "key": "C",
+                  "text": "風速增加與氣壓變化完全無關"
+                },
+                {
+                  "key": "D",
+                  "text": "夜間氣壓最高"
+                },
+                {
+                  "key": "E",
+                  "text": "資料顯示颱風已完全遠離"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "資料顯示氣壓由 1004 降至 988 hPa，風速由 8 增至 24 m/s，符合強烈天氣系統接近時常見趨勢。B、D、E 與資料不符。",
+              "review_advice": "地科資料題要同時看多個欄位趨勢，不要只看單一數字。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q10",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4",
+                "SC-A5"
+              ],
+              "stem": "某班比較兩種杯子中熱水降溫情形，初溫皆為 80°C，室溫皆為 25°C，結果如下。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "熱水降溫資料",
+                  "columns": [
+                    "0 分",
+                    "10 分",
+                    "20 分",
+                    "30 分"
+                  ],
+                  "row_header": "杯子",
+                  "rows": [
+                    {
+                      "label": "甲杯溫度(°C)",
+                      "values": [
+                        80,
+                        68,
+                        59,
+                        52
+                      ]
+                    },
+                    {
+                      "label": "乙杯溫度(°C)",
+                      "values": [
+                        80,
+                        72,
+                        66,
+                        61
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "乙杯保溫效果較好"
+                },
+                {
+                  "key": "B",
+                  "text": "30 分時甲杯比乙杯溫度低"
+                },
+                {
+                  "key": "C",
+                  "text": "兩杯降溫速率完全相同"
+                },
+                {
+                  "key": "D",
+                  "text": "甲杯在 20 分後溫度升高"
+                },
+                {
+                  "key": "E",
+                  "text": "此資料顯示兩杯的初溫不同"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "完全答對 A、B 得分。",
+              "explanation": "乙杯在 10、20、30 分時溫度都高於甲杯，表示降溫較慢，保溫較好；30 分時甲杯 52°C、乙杯 61°C，所以 B 正確。C、D、E 與表中數據或題幹條件不符。",
+              "review_advice": "實驗資料題要比較同一時間點的數值，也要看整體趨勢。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。",
+                "Review Agent：修正 E 選項，避免控制變因敘述被視為額外正答。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q11",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "short_answer",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-INQ",
+                "SC-BIO"
+              ],
+              "ability_tags": [
+                "SC-A5",
+                "SC-A6"
+              ],
+              "stem": "某學生想比較不同肥料對豆苗生長的影響。請寫出一個公平比較的實驗設計，至少包含操縱變因、應變變因與兩個控制變因。",
+              "materials": [
+                {
+                  "type": "text",
+                  "title": "實驗情境",
+                  "content": "可假設使用同品種豆苗，連續觀察 14 天。"
+                }
+              ],
+              "options": [],
+              "answer": "操縱變因為肥料種類；應變變因可為豆苗高度增加量或葉片數；控制變因可包含豆苗品種、光照時間、水量、土壤量、盆器大小、觀察天數等。",
+              "scoring_rule": "滿分需明確寫出 1 個操縱變因、1 個可量測應變變因、至少 2 個合理控制變因。少一項或變因混淆則部分給分。",
+              "explanation": "公平比較要一次只改變肥料種類，其他可能影響生長的條件都盡量相同，才能把生長差異合理歸因於肥料。",
+              "review_advice": "探究實作題要用「操縱、應變、控制」三欄整理，避免只描述做法。",
+              "requires_written_response": true,
+              "ai_scoring_required": true,
+              "estimated_minutes": 9,
+              "long_question": true,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U05-scientific-inquiry-data",
+                "SC-U03-life-science-experiment"
+              ],
+              "syllabus_tags": [
+                "自然領綱-探究與實作-變因控制與證據",
+                "自然領綱-生物-生命現象與實驗"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
+            },
+            {
+              "id": "SC-FC-V01-B03-SAT-Q12",
+              "subject": "自然",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "下列流程為回收鋁罐再製的簡化步驟。若要降低混入塑膠瓶造成的品質問題，最應加強哪一階段？",
+              "materials": [
+                {
+                  "type": "process_diagram",
+                  "title": "鋁罐回收流程",
+                  "steps": [
+                    "收集",
+                    "分類",
+                    "清洗",
+                    "熔融",
+                    "再製成鋁材"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "分類"
+                },
+                {
+                  "key": "B",
+                  "text": "熔融後才任意混入其他材料"
+                },
+                {
+                  "key": "C",
+                  "text": "取消清洗"
+                },
+                {
+                  "key": "D",
+                  "text": "只增加收集量，不檢查種類"
+                },
+                {
+                  "key": "E",
+                  "text": "再製完成後才判斷是否混入"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "塑膠瓶與鋁罐材質不同，若混入會影響後續處理，因此應在分類階段加強辨識與分流。B、D、E 都太晚或忽略材料差異；C 可能增加污染。",
+              "review_advice": "流程題要找問題最早能被處理的階段。",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "estimated_minutes": 5,
+              "long_question": false,
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "review_grade": "A",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "review_notes": [
+                "Question Agent：依五科系統化複習地圖新增 AI 原創題，避開官方題文與出版社解析文字。",
+                "Review Agent：檢查答案唯一、材料足夠、選項干擾合理、解析能讓高中生看懂。",
+                "Gatekeeper：2026-08-10 第一波補題審核通過，設為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_expansion_context",
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "quality_audit": {
+                "review_grade": "A",
+                "checked_at": "2026-08-10",
+                "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
+              },
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "first_wave_expansion_approved",
+                  "note": "補足一個月題量缺口的第一波正式擴充題。"
+                }
+              ]
             }
           ],
           "gatekeeper_status": "approved_for_app",
           "approved_for_app_at": "2026-08-10",
           "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
-          "estimated_minutes": 43,
+          "estimated_minutes": 85,
           "time_policy": "weekend_deep",
           "coverage_summary": [
             "SC-U03-life-science-experiment",
             "SC-U05-scientific-inquiry-data",
             "SC-U04-matter-reaction-energy",
-            "SC-U01-energy-force-motion"
+            "SC-U01-energy-force-motion",
+            "SC-U02-earth-system-data"
           ]
         }
       ]

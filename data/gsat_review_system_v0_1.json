@@ -2,7 +2,7 @@
   "meta": {
     "id": "gsat_review_system_v0_1",
     "title": "五科學測系統化複習地圖",
-    "version": "2026-08-10-system01",
+    "version": "2026-08-10-system02",
     "status": "approved_for_app",
     "updated_at": "2026-08-10",
     "purpose": "把國英數社自正式題庫納入同一套知識點、課綱能力、時間控管與角色儀表板規則。",
@@ -32,7 +32,8 @@
         "Gatekeeper",
         "Program Agent"
       ]
-    }
+    },
+    "expansion_status": "第一波已補數學 12 題、自然 12 題。"
   },
   "weekly_plan": [
     {
@@ -224,8 +225,8 @@
         "Thu",
         "Sun"
       ],
-      "current_formal_count": 12,
-      "coverage_status": "只夠 1 週診斷；若要完整 1 個月，建議擴充到 48-60 題並補函數、排列組合、統計、幾何向量完整輪次。",
+      "current_formal_count": 24,
+      "coverage_status": "已完成第一波補題，從 12 題增至 24 題；仍需補到 48-60 題才足夠 1 個月。",
       "knowledge_units": [
         {
           "unit_id": "MA-U01",
@@ -313,8 +314,8 @@
         "Wed",
         "Sat"
       ],
-      "current_formal_count": 12,
-      "coverage_status": "只夠 1 週診斷；若要完整 1 個月，建議擴充到 48-60 題，物理、化學、生物、地科與探究實作都要輪替。",
+      "current_formal_count": 24,
+      "coverage_status": "已完成第一波補題，從 12 題增至 24 題；仍需補到 48-60 題才足夠 1 個月。",
       "knowledge_units": [
         {
           "unit_id": "SC-U01",
@@ -395,7 +396,7 @@
     }
   },
   "one_month_readiness": {
-    "summary": "目前國文足夠 1 個月；英文、數學、社會、自然適合做第一週正式診斷與闖關示範，不足以支撐完整 1 個月不重複複習。",
+    "summary": "目前國文足夠 1 個月；數學與自然已完成第一波補題但仍不足完整 1 個月；英文、社會仍待擴充。",
     "recommended_expansion": [
       {
         "subject": "英文",
