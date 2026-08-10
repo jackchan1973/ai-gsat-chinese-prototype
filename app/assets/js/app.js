@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260810-questformal";
+const DATA_VERSION = "20260810-englishprep";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -144,6 +144,7 @@ function createTaskItem(title, body, tags = []) {
 
 function renderBasics(task, drillMap) {
   const summary = document.getElementById("basicSummary");
+  if (!summary) return;
   const ids = task.basic_question_ids || [];
   setText("basicCount", `${ids.length} 題`);
   setText("basicStepText", `${ids.length} 題暖身，先把基本分拿穩。`);
@@ -165,6 +166,7 @@ function renderBasics(task, drillMap) {
 function renderGroup(task, groupMap) {
   const group = groupMap.get(task.group_id);
   const summary = document.getElementById("groupSummary");
+  if (!summary) return;
   if (!group) {
     setText("groupStatus", "待檢查");
     summary.innerHTML = `<div class="error-box">今天的閱讀題組暫時讀取不到。</div>`;
@@ -186,6 +188,7 @@ function renderGroup(task, groupMap) {
 
 function renderReviews(task, wrongMap, reviewSchedules) {
   const summary = document.getElementById("reviewSummary");
+  if (!summary) return;
   const ids = task.review_question_ids || [];
   const dueSlots = task.review_due_slots || [];
   const scheduled = reviewSchedules.filter((item) => ids.includes(item.assigned_question_id));
@@ -359,8 +362,11 @@ function renderTask(data, selectedTaskId) {
   statusNode?.classList.toggle("not-started", runnable && readStoredAttempt()?.task_id !== task.task_id);
   statusNode?.classList.toggle("blocked", !runnable);
 
-  document.getElementById("startButton").disabled = !runnable;
-  document.getElementById("startButton").textContent = runnable ? "開始今日闖關" : "這一關尚未開放";
+  const startButton = document.getElementById("startButton");
+  if (startButton) {
+    startButton.disabled = !runnable;
+    startButton.textContent = runnable ? "開始今日闖關" : "這一關尚未開放";
+  }
 
   renderBasics(task, drillMap);
   renderGroup(task, groupMap);
@@ -370,6 +376,7 @@ function renderTask(data, selectedTaskId) {
 
 function renderWeekSummary(report) {
   const node = document.getElementById("weekSummary");
+  if (!node) return;
   node.innerHTML = `
     <h2>本週闖關情報</h2>
     <p>${escapeHtml(report.parent_message).replaceAll("任務", "關卡").replaceAll("練習", "闖關")}</p>
@@ -405,10 +412,10 @@ function renderDataStatus(data) {
 }
 
 function wireButtons(data) {
-  document.getElementById("startButton").addEventListener("click", () => {
+  document.getElementById("startButton")?.addEventListener("click", () => {
     window.location.href = "./pages/practice.html";
   });
-  document.getElementById("reviewButton").addEventListener("click", () => {
+  document.getElementById("reviewButton")?.addEventListener("click", () => {
     window.location.href = "./pages/wrongs.html";
   });
   ["chineseFocusButton", "chineseCardButton"].forEach((id) => {

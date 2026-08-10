@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜闖關地圖</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./assets/css/style.css?v=20260810-questformal" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=20260810-englishprep" />
   </head>
   <body>
     <main class="app-shell student-home-shell">
@@ -53,10 +53,10 @@
           <div class="exam-command-copy">
             <p class="eyebrow">AI學測考總複習</p>
             <h1>五科闖關控制台</h1>
-            <p>國文主線已運作，社會科正式三關接入；接下來英文、數學、自然會依同一套闖關路線接上。</p>
+            <p>五科入口統一在這裡管理；國文、社會已開放，下一科開始準備英文主線。</p>
             <div class="exam-hero-actions">
               <a class="primary-action link-action" href="./pages/social-practice.html">開始社會科闖關</a>
-              <button class="secondary-action compact-action" type="button" id="chineseFocusButton">查看國文今日關卡</button>
+              <a class="secondary-action compact-action link-action" href="./pages/practice.html">開始國文闖關</a>
             </div>
           </div>
           <div class="exam-command-panel" aria-label="總複習狀態">
@@ -70,22 +70,22 @@
                 <strong>2 科</strong>
               </div>
               <div>
-                <span>本週關卡</span>
-                <strong>8 天次</strong>
+                <span>本週排程</span>
+                <strong>12 天次</strong>
               </div>
               <div>
-                <span>國文今日</span>
-                <strong id="taskStatus">讀取中</strong>
+                <span>下一科</span>
+                <strong>英文</strong>
               </div>
             </div>
             <div class="weekly-subject-strip" aria-label="每週科目節奏">
-              <span><strong>一</strong><em>國文</em><em>自然</em></span>
+              <span><strong>一</strong><em>國文</em><em>英文</em><em>自然</em></span>
               <span><strong>二</strong><em>國文</em><em>數學</em><em>社會</em></span>
-              <span><strong>三</strong><em>國文</em><em>自然</em></span>
+              <span><strong>三</strong><em>國文</em><em>英文</em><em>自然</em></span>
               <span><strong>四</strong><em>國文</em><em>數學</em><em>社會</em></span>
-              <span><strong>五</strong><em>國文</em><em>自然</em></span>
+              <span><strong>五</strong><em>國文</em><em>英文</em><em>自然</em></span>
               <span><strong>六</strong><em>數學</em><em>社會</em></span>
-              <span><strong>日</strong><em>數學</em></span>
+              <span><strong>日</strong><em>英文</em><em>數學</em></span>
             </div>
           </div>
         </header>
@@ -98,7 +98,7 @@
             </div>
             <h2>國文主線</h2>
             <p>今日三關：基礎暖身、閱讀挑戰、復活關。</p>
-            <button class="secondary-action compact-action" type="button" id="chineseCardButton">查看關卡</button>
+            <a class="secondary-action compact-action link-action" href="./pages/practice.html">開始闖關</a>
           </article>
           <article class="subject-command-card social">
             <div class="subject-card-head">
@@ -109,13 +109,13 @@
             <p>正式三關：人口照護、AI 勞動、糧食風險。</p>
             <a class="primary-action link-action" href="./pages/social-practice.html">開始闖關</a>
           </article>
-          <article class="subject-command-card pending">
+          <article class="subject-command-card english next-up">
             <div class="subject-card-head">
               <span>英文</span>
-              <strong>準備中</strong>
+              <strong>下一科</strong>
             </div>
             <h2>閱讀與寫作</h2>
-            <p>將先分析近三年題型，再接入每日關卡。</p>
+            <p>週一、週三、週五、週日安排；先做近三年題型分析。</p>
           </article>
           <article class="subject-command-card pending">
             <div class="subject-card-head">
@@ -135,92 +135,23 @@
           </article>
         </section>
 
-        <section class="student-today-card quest-today-card" id="chineseTaskPanel" aria-label="國文今日關卡">
-          <div class="panel-heading">
-            <p class="label">國文今日關卡</p>
-            <strong id="taskDate">--</strong>
+        <section class="next-subject-panel" aria-label="下一科準備">
+          <div>
+            <p class="eyebrow">Next subject</p>
+            <h2>下一科：英文主線準備</h2>
+            <p>先完成近三年學測英文題型分析，再產生第一批 AI 新題。英文排程依你的指定：週一、週三、週五、週日，一週 4 天。</p>
           </div>
-          <div class="student-task-main">
-            <p class="student-message" id="studentMessage">準備讀取今日關卡。</p>
-            <h2 id="taskTitle">今日關卡載入中</h2>
-            <p id="taskMeta">請稍候</p>
-          </div>
-          <div class="mission-progress" aria-label="今日完成度">
-            <div class="progress-row">
-              <strong id="missionProgressText">0 / 3 關</strong>
-              <span id="missionProgressLabel">未開始</span>
-            </div>
-            <div class="progress-track"><span id="missionProgressFill"></span></div>
-          </div>
-          <div class="student-metrics quest-intel" aria-label="闖關情報">
-            <div>
-              <span>挑戰時間</span>
-              <strong><span id="estimatedMinutes">--</span> 分鐘</strong>
-            </div>
-            <div>
-              <span>今日總題數</span>
-              <strong><span id="questionCount">--</span> 題</strong>
-            </div>
-            <div>
-              <span>復活關</span>
-              <strong><span id="reviewCount">--</span> 題</strong>
-            </div>
-          </div>
-          <button class="primary-action student-start-action" type="button" id="startButton">開始今日闖關</button>
-        </section>
-
-        <section class="mission-road" aria-label="今日三關">
-          <article class="mission-step" id="basicStep">
-            <span class="mission-step-index">1</span>
-            <div>
-              <strong>第 1 關｜基礎暖身</strong>
-              <p id="basicStepText">讀取中</p>
-            </div>
-            <span id="basicCount">0 題</span>
-          </article>
-          <article class="mission-step" id="groupStep">
-            <span class="mission-step-index">2</span>
-            <div>
-              <strong>第 2 關｜閱讀挑戰</strong>
-              <p id="groupStepText">讀取中</p>
-            </div>
-            <span id="groupStatus">--</span>
-          </article>
-          <article class="mission-step" id="reviewStep">
-            <span class="mission-step-index">3</span>
-            <div>
-              <strong>第 3 關｜復活關</strong>
-              <p id="reviewStepText">讀取中</p>
-            </div>
-            <span id="reviewStatus">--</span>
-          </article>
-        </section>
-
-        <section class="student-plan-stack" aria-label="今日安排">
-          <article class="student-plan-card">
-            <div id="basicSummary"></div>
-          </article>
-
-          <article class="student-plan-card">
-            <div id="groupSummary"></div>
-          </article>
-
-          <article class="student-plan-card">
-            <div id="reviewSummary"></div>
-          </article>
-        </section>
-
-        <section class="student-secondary-panel" aria-label="其他入口">
-          <div id="weekSummary"></div>
-          <div class="student-link-row">
-            <button class="secondary-action" type="button" id="reviewButton">進入復活關</button>
-            <a class="secondary-action link-action" href="./pages/parent-report.html">家長週報</a>
+          <div class="next-subject-steps" aria-label="英文準備步驟">
+            <span>1 近三年題型分析</span>
+            <span>2 英文出題規則</span>
+            <span>3 batch_01 候選題</span>
+            <span>4 審題後接入闖關</span>
           </div>
         </section>
       </section>
     </main>
 
-    <script src="./assets/js/session.js?v=20260810-questformal"></script>
-    <script src="./assets/js/app.js?v=20260810-questformal"></script>
+    <script src="./assets/js/session.js?v=20260810-englishprep"></script>
+    <script src="./assets/js/app.js?v=20260810-englishprep"></script>
   </body>
 </html>
