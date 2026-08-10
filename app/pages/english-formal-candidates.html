@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文正式題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-englishbatch01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
     <style>
       .candidate-page {
         background:
@@ -147,6 +147,25 @@
         white-space: pre-wrap;
       }
 
+      .candidate-translation {
+        margin-top: 12px;
+        border: 1px solid rgba(3, 96, 121, 0.14);
+        border-radius: 8px;
+        background: #ffffff;
+        color: var(--muted);
+      }
+
+      .candidate-translation summary {
+        cursor: pointer;
+        padding: 10px 12px;
+        color: var(--primary);
+        font-weight: 900;
+      }
+
+      .candidate-translation p {
+        padding: 0 12px 12px;
+      }
+
       .candidate-question {
         padding: 16px;
         overflow-wrap: anywhere;
@@ -231,8 +250,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-englishbatch01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-englishbatch01";
+      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
       const weekdayLabels = {
         Mon: "週一",
         Wed: "週三",
@@ -303,6 +322,12 @@
           <section class="candidate-material">
             <strong>${escapeHtml(material.title || "材料")}</strong>
             <p>${escapeHtml(material.content || "")}</p>
+            ${material.translation_zh ? `
+              <details class="candidate-translation">
+                <summary>中文翻譯</summary>
+                <p>${escapeHtml(material.translation_zh)}</p>
+              </details>
+            ` : ""}
           </section>
         `;
       }

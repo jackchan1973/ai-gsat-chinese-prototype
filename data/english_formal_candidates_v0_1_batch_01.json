@@ -45,6 +45,11 @@
         "解析包含正答理由、材料依據、錯選原因與複習建議。",
         "每週僅保留 1 題寫作題。"
       ]
+    },
+    "learner_support": {
+      "chinese_translation_added": true,
+      "translation_scope": "day_materials.translation_zh for every English reading material; explanations remain in Chinese and vague cloze explanations were strengthened",
+      "updated_at": "2026-08-10"
     }
   },
   "review_flags": [
@@ -59,6 +64,10 @@
     {
       "level": "monitor_after_launch",
       "note": "上線後仍建議觀察學生作答與錯題分布，必要時微調選項或解析。"
+    },
+    {
+      "level": "learner_support_added",
+      "note": "已為英文閱讀材料加入中文翻譯，方便高中生先理解文章脈絡，再回到英文題目作答。"
     }
   ],
   "weeks": [
@@ -81,7 +90,8 @@
             {
               "type": "reading",
               "title": "Material: A School Garden Project",
-              "content": "A senior high school turned a small unused corner beside the gym into a garden. At first, only ten students joined the project because most classmates thought gardening was slow, messy, and unrelated to exam preparation. The science teacher, however, did not ask the students to produce perfect vegetables or compete for the largest harvest. Instead, she asked each group to record sunlight, watering time, soil moisture, insect activity, and weekly changes in plant growth. The records were written in simple English so that the class could later share the project with exchange students.\n\nAfter six weeks, the students noticed that the garden had become more than a science activity. The cooking club used the herbs in simple recipes and wrote ingredient cards. A few students in the art club designed signs explaining why bees and butterflies were useful to the garden. Others interviewed grandparents about vegetables that used to be common in local markets but were now rarely seen. When the English teacher asked students to prepare short guided tours, even students who were usually quiet found that they could explain concrete things more easily than abstract topics. The project became popular not because it was easy, but because it connected science, language, art, and daily life in a visible way."
+              "content": "A senior high school turned a small unused corner beside the gym into a garden. At first, only ten students joined the project because most classmates thought gardening was slow, messy, and unrelated to exam preparation. The science teacher, however, did not ask the students to produce perfect vegetables or compete for the largest harvest. Instead, she asked each group to record sunlight, watering time, soil moisture, insect activity, and weekly changes in plant growth. The records were written in simple English so that the class could later share the project with exchange students.\n\nAfter six weeks, the students noticed that the garden had become more than a science activity. The cooking club used the herbs in simple recipes and wrote ingredient cards. A few students in the art club designed signs explaining why bees and butterflies were useful to the garden. Others interviewed grandparents about vegetables that used to be common in local markets but were now rarely seen. When the English teacher asked students to prepare short guided tours, even students who were usually quiet found that they could explain concrete things more easily than abstract topics. The project became popular not because it was easy, but because it connected science, language, art, and daily life in a visible way.",
+              "translation_zh": "一所高中把體育館旁邊一個沒有使用的小角落改造成花園。一開始，只有十位學生加入這個計畫，因為多數同學認為園藝很慢、很髒，而且和考試準備沒有關係。不過，科學老師並沒有要求學生種出完美的蔬菜，也沒有要大家比誰收成最多。相反地，她要求每一組記錄日照、澆水時間、土壤濕度、昆蟲活動，以及植物每週的生長變化。這些紀錄用簡單英文寫成，讓班上之後可以和交換學生分享這個計畫。\n\n六週後，學生發現這座花園已經不只是科學活動。烹飪社把香草用在簡單食譜中，並寫了食材卡。幾位美術社學生設計標示，說明蜜蜂和蝴蝶為什麼對花園有幫助。其他學生訪問祖父母，了解過去在本地市場常見、現在卻少見的蔬菜。當英文老師請學生準備簡短導覽時，連平常比較安靜的學生也發現，說明具體事物比談抽象主題更容易。這個計畫受歡迎，不是因為它很簡單，而是因為它用看得見的方式連結了科學、語言、藝術與日常生活。"
             }
           ],
           "question_slots": [
@@ -141,7 +151,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q02",
@@ -199,7 +226,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q03",
@@ -257,7 +301,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q04",
@@ -315,7 +376,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q05",
@@ -373,7 +451,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q06",
@@ -431,7 +526,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q07",
@@ -489,7 +601,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q08",
@@ -547,7 +676,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             }
           ],
           "approved_at": "2026-08-10",
@@ -568,7 +714,8 @@
             {
               "type": "cloze",
               "title": "Material: A Repair Cafe",
-              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. At such an event, an old lamp may be opened on a table while a volunteer explains how to check the switch safely. A radio that has been silent for years may begin to work again after a small part is replaced. The owner learns a practical skill, but the repaired object may also bring back a memory.\n\nThe atmosphere is different from that of a shop. Visitors are not treated simply as customers waiting for a service. They are encouraged to observe, ask questions, and sometimes hold the tools themselves. For this reason, repair cafes often feel more like workshops than stores. They remind people that objects do not always have to be thrown away when one part fails. They also show that useful knowledge grows when it is shared. A person who learns to repair a toaster may later help a neighbor fix a fan, and that neighbor may teach someone else how to mend a backpack. In this way, repairing things can also repair social connections. The process is slow, but that slowness gives learners time to understand each step."
+              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. At such an event, an old lamp may be opened on a table while a volunteer explains how to check the switch safely. A radio that has been silent for years may begin to work again after a small part is replaced. The owner learns a practical skill, but the repaired object may also bring back a memory.\n\nThe atmosphere is different from that of a shop. Visitors are not treated simply as customers waiting for a service. They are encouraged to observe, ask questions, and sometimes hold the tools themselves. For this reason, repair cafes often feel more like workshops than stores. They remind people that objects do not always have to be thrown away when one part fails. They also show that useful knowledge grows when it is shared. A person who learns to repair a toaster may later help a neighbor fix a fan, and that neighbor may teach someone else how to mend a backpack. In this way, repairing things can also repair social connections. The process is slow, but that slowness gives learners time to understand each step.",
+              "translation_zh": "修理咖啡館是一種社區活動，人們把壞掉的物品帶來，並和志工一起學習如何修理。目的不只是省錢，也包括減少浪費、重新建立鄰里之間的信任。在這樣的活動中，一盞舊檯燈可能會被打開放在桌上，志工一邊說明如何安全檢查開關。一台沉默多年的收音機，也可能在更換一個小零件後重新運作。物主學到實用技能，而修好的物品也可能喚回一段記憶。\n\n這裡的氣氛和商店不同。訪客不只是等待服務的顧客。他們被鼓勵觀察、提問，有時甚至親手拿工具操作。因此，修理咖啡館常讓人覺得更像工作坊，而不是商店。它提醒人們，物品不一定因為一個零件故障就必須丟掉。它也顯示，有用的知識在分享時會成長。一個學會修理烤麵包機的人，之後可能幫鄰居修電風扇，而那位鄰居也可能教別人縫補背包。從這個角度看，修理物品也能修補社會連結。過程雖然慢，但這種慢讓學習者有時間理解每個步驟。"
             }
           ],
           "question_slots": [
@@ -608,7 +755,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "explanation": "not only ... but also ... 是「不只……也……」的增加關係，句中同時列出省錢與減少浪費兩個目的，所以答案是 addition。contrast 是對比，time order 是時間順序，condition 是條件，都不符合。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -628,7 +775,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q02",
@@ -666,7 +830,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "explanation": "them 回指前面的 broken items，意思是人們帶壞掉的物品來，學習如何修理「它們」。不能指 volunteers 或 people，因為被修理的是物品。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -686,7 +850,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q03",
@@ -724,7 +905,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "explanation": "文章說 repair cafes 的目標包含 reduce waste，透過修理仍可使用的物品來減少浪費，所以應選 reduce。其他動詞若表示增加、忽略或隱藏浪費，都和文意相反。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -744,7 +925,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q04",
@@ -782,7 +980,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "explanation": "文章提到修好的物品 may also bring back a memory，意思是物品不只恢復功能，也可能連結過去經驗或情感記憶。因此最佳解釋要同時抓到「修理」與「記憶」兩層意思。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -802,7 +1000,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q05",
@@ -840,7 +1055,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "explanation": "文中明說 useful knowledge grows when it is shared，有用知識在分享時會擴散與累積，所以 shared 是答案。若選 kept secret 或 sold，會違反文章強調的社群學習。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -860,7 +1075,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q06",
@@ -898,7 +1130,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
+              "explanation": "全文重點不是商店買賣，而是透過修理物品學技能、減少浪費並建立鄰里連結；因此標題應涵蓋 repair 與 community connection。只談省錢或單一物品太窄。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -918,7 +1150,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q07",
@@ -976,7 +1225,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q08",
@@ -1034,7 +1300,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q09",
@@ -1092,7 +1375,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             }
           ],
           "approved_at": "2026-08-10",
@@ -1113,12 +1413,14 @@
             {
               "type": "reading",
               "title": "Material A: Tiny Libraries",
-              "content": "In several towns, residents have placed tiny book boxes on sidewalks, near bakeries, beside bus stops, and outside apartment buildings. Anyone may take a book or leave one. The idea looks simple, but it changes how people think about public space. A box outside a bakery may attract children after school; another near a train station may serve commuters who want something to read on the way home. Because no one checks membership cards or records every book, the system depends on trust rather than formal rules.\n\nSome towns have found that the boxes also encourage conversations among strangers. A retired teacher may leave a grammar guide with a note inside; a teenager may later add a comic book that helped him start reading in English. A person who leaves a travel guide may eventually meet someone who used it for a weekend trip. Of course, the system is not perfect. Books can be damaged by rain, and popular titles may disappear quickly. Still, supporters argue that tiny libraries are valuable because they make reading visible. They turn an ordinary sidewalk into a small invitation: take something, leave something, and become part of a quiet exchange. Some teachers have begun using the boxes for informal lessons. Instead of asking students to write reports only for the teacher, they invite students to recommend one book for an unknown reader and explain why it might be worth taking. This turns a simple exchange into a small act of public writing."
+              "content": "In several towns, residents have placed tiny book boxes on sidewalks, near bakeries, beside bus stops, and outside apartment buildings. Anyone may take a book or leave one. The idea looks simple, but it changes how people think about public space. A box outside a bakery may attract children after school; another near a train station may serve commuters who want something to read on the way home. Because no one checks membership cards or records every book, the system depends on trust rather than formal rules.\n\nSome towns have found that the boxes also encourage conversations among strangers. A retired teacher may leave a grammar guide with a note inside; a teenager may later add a comic book that helped him start reading in English. A person who leaves a travel guide may eventually meet someone who used it for a weekend trip. Of course, the system is not perfect. Books can be damaged by rain, and popular titles may disappear quickly. Still, supporters argue that tiny libraries are valuable because they make reading visible. They turn an ordinary sidewalk into a small invitation: take something, leave something, and become part of a quiet exchange. Some teachers have begun using the boxes for informal lessons. Instead of asking students to write reports only for the teacher, they invite students to recommend one book for an unknown reader and explain why it might be worth taking. This turns a simple exchange into a small act of public writing.",
+              "translation_zh": "在幾個城鎮中，居民在人行道、麵包店附近、公車站旁和公寓外放置了小型書箱。任何人都可以拿一本書，也可以留下一本書。這個想法看似簡單，卻改變了人們對公共空間的看法。麵包店外的書箱可能吸引放學後的孩子；火車站附近的書箱則可能服務想在回家路上閱讀的通勤者。因為沒有人檢查會員卡，也沒有人記錄每一本書，所以這套系統依靠的是信任，而不是正式規則。\n\n有些城鎮發現，這些書箱也鼓勵陌生人之間的對話。一位退休老師可能放入一本文法書並在裡面留下便條；一位青少年之後可能加入一本幫助他開始閱讀英文的漫畫。留下一本旅遊指南的人，最後也可能遇見曾用它規劃週末旅行的人。當然，這套系統並不完美。書可能被雨淋壞，熱門書也可能很快消失。即使如此，支持者仍認為小型圖書館很有價值，因為它讓閱讀出現在公共視野中。它把普通的人行道變成一個小小的邀請：拿走一些、留下些什麼，並成為安靜交流的一部分。有些老師也開始把這些書箱用於非正式課程。他們不只要求學生寫報告給老師看，而是邀請學生向未知讀者推薦一本書，並說明它為什麼值得被拿走。這讓簡單交換變成一種小型公共寫作。"
             },
             {
               "type": "reading",
               "title": "Material B: Sleep and Study",
-              "content": "Many students believe that studying late into the night is a sign of effort. They may feel proud when they keep their desk lamp on after everyone else has gone to bed. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. In other words, rest is not simply a break from learning; it is part of how learning becomes stable.\n\nThis does not mean students should stop reviewing before bed. A short review of vocabulary, formulas, or key ideas can be helpful because it gives the brain material to organize. The problem begins when students replace sleep with extra hours of unfocused study. Without enough rest, attention drops the next day, and mistakes become more likely even on familiar questions. The question, then, is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned. A strong plan may include both effort and recovery. Researchers also point out that sleep affects emotional control. A tired student may read a question carelessly, give up too soon, or choose an answer without checking the evidence. Enough rest therefore supports both memory and judgment, two abilities that matter in reading tests."
+              "content": "Many students believe that studying late into the night is a sign of effort. They may feel proud when they keep their desk lamp on after everyone else has gone to bed. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. In other words, rest is not simply a break from learning; it is part of how learning becomes stable.\n\nThis does not mean students should stop reviewing before bed. A short review of vocabulary, formulas, or key ideas can be helpful because it gives the brain material to organize. The problem begins when students replace sleep with extra hours of unfocused study. Without enough rest, attention drops the next day, and mistakes become more likely even on familiar questions. The question, then, is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned. A strong plan may include both effort and recovery. Researchers also point out that sleep affects emotional control. A tired student may read a question carelessly, give up too soon, or choose an answer without checking the evidence. Enough rest therefore supports both memory and judgment, two abilities that matter in reading tests.",
+              "translation_zh": "許多學生認為讀到深夜是努力的象徵。當所有人都睡了，自己仍讓書桌燈亮著時，他們可能會感到自豪。然而，睡眠研究者提醒，記憶不像一個可以不休息就一直塞滿的收納箱。睡眠時，大腦會強化有用的連結，並清除比較不重要的細節。換句話說，休息不只是學習的中斷；它是讓學習變穩定的一部分。\n\n這不表示學生睡前不該複習。簡短複習單字、公式或重點概念可能有幫助，因為它提供大腦可整理的材料。問題出現在學生用額外且不專注的讀書時間取代睡眠。休息不足時，隔天注意力會下降，即使是熟悉的題目也更容易出錯。因此，問題不是學生該不該努力，而是讀書計畫是否給大腦時間整理已學內容。一個好的計畫可以同時包含努力與恢復。研究者也指出，睡眠會影響情緒控制。疲倦的學生可能粗心讀題、太快放棄，或沒有檢查證據就選答案。因此，充足休息同時支持記憶與判斷，而這兩種能力在閱讀測驗中都很重要。"
             }
           ],
           "question_slots": [
@@ -1178,7 +1480,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q02",
@@ -1236,7 +1555,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q03",
@@ -1294,7 +1630,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q04",
@@ -1352,7 +1705,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q05",
@@ -1410,7 +1780,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q06",
@@ -1468,7 +1855,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q07",
@@ -1526,7 +1930,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q08",
@@ -1584,7 +2005,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             }
           ],
           "approved_at": "2026-08-10",
@@ -1605,7 +2043,8 @@
             {
               "type": "integrated",
               "title": "Material: A Campus Language Day",
-              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. They believe that students are more willing to speak when the task has a real listener and a concrete purpose.\n\nThe planning team also wants students to explain local culture in simple English. One group may introduce a night market snack, another may explain a temple festival, and another may describe how students use public bikes to get around the city. Before the event, each group must prepare a short script, two useful pictures, and three possible questions visitors may ask. Teachers will not grade students only on pronunciation. They will also check whether the speaker can organize ideas, respond politely, and help visitors understand something about local life. The event is designed to show that English is not only a subject, but also a tool for sharing experience. To make the preparation more realistic, students must practice with classmates who have not seen their scripts. If the listeners look confused, the speakers have to change their examples or use simpler words. This rehearsal helps students understand that communication is not the same as memorizing a perfect paragraph. It requires noticing the listener and adjusting the message."
+              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. They believe that students are more willing to speak when the task has a real listener and a concrete purpose.\n\nThe planning team also wants students to explain local culture in simple English. One group may introduce a night market snack, another may explain a temple festival, and another may describe how students use public bikes to get around the city. Before the event, each group must prepare a short script, two useful pictures, and three possible questions visitors may ask. Teachers will not grade students only on pronunciation. They will also check whether the speaker can organize ideas, respond politely, and help visitors understand something about local life. The event is designed to show that English is not only a subject, but also a tool for sharing experience. To make the preparation more realistic, students must practice with classmates who have not seen their scripts. If the listeners look confused, the speakers have to change their examples or use simpler words. This rehearsal helps students understand that communication is not the same as memorizing a perfect paragraph. It requires noticing the listener and adjusting the message.",
+              "translation_zh": "一所學校規劃 Language Day，幫助學生在課本練習之外使用英文。活動包括上午的海報走讀、學生短講，以及讓訪客用英文提問的攤位。老師希望學生重視清楚溝通，而不是艱難單字。他們相信，當任務有真實聽眾和具體目的時，學生會更願意開口說英文。\n\n籌備團隊也希望學生能用簡單英文介紹在地文化。一組可能介紹夜市小吃，另一組可能說明廟會活動，還有一組可能描述學生如何使用公共自行車在城市移動。活動前，每組都必須準備一份短講稿、兩張有用圖片，以及訪客可能提出的三個問題。老師不會只用發音評分，也會檢查講者是否能組織想法、禮貌回應，並幫助訪客理解在地生活。這個活動的設計是為了顯示，英文不只是學科，也是分享經驗的工具。為了讓準備更接近真實情境，學生必須和沒有看過講稿的同學練習。如果聽眾看起來困惑，講者就必須更換例子或使用更簡單的詞。這樣的演練幫助學生理解，溝通不等於背熟一段完美文章；它需要注意聽眾，並調整訊息。"
             }
           ],
           "question_slots": [
@@ -1666,7 +2105,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q02",
@@ -1725,7 +2181,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q03",
@@ -1766,7 +2239,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q04",
@@ -1824,7 +2314,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q05",
@@ -1882,7 +2389,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q06",
@@ -1940,7 +2464,24 @@
               ],
               "approved_at": "2026-08-10",
               "review_grade": "A",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
+              }
             }
           ],
           "approved_at": "2026-08-10",

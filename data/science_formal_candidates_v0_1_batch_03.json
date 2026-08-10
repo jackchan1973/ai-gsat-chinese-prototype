@@ -4,15 +4,15 @@
     "mode": "學測",
     "version": "formal_candidates_v0.1_batch_03",
     "purpose": "自然科正式候選題庫 v0.1 第 3 批；目前僅供試跑與審題，不接入正式小程式。",
-    "status": "needs_human_review",
+    "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方自然題與評分原則僅用於分析題型、圖表材料、實驗設計與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "本批題目尚未通過自然科審題與 Gatekeeper，不可接入正式每日任務。",
+    "app_integration_policy": "自然 batch_03 已由使用者人工確認並轉為正式，可作為自然科正式題庫來源。",
     "batch_plan": {
       "target_days": 3,
       "target_questions": 12,
       "short_answer_count": 1,
-      "status": "needs_human_review",
+      "status": "approved_for_app",
       "themes": [
         "實驗設計與資料判讀",
         "天氣地科與圖形模型",
@@ -26,7 +26,9 @@
         "Fri"
       ],
       "timezone": "Asia/Shanghai"
-    }
+    },
+    "approved_for_app_at": "2026-08-10",
+    "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。"
   },
   "review_flags": [
     {
@@ -40,6 +42,10 @@
     {
       "level": "diagram_policy",
       "note": "圖表與流程圖皆為 AI 新製作，可由前端重繪，不使用官方圖形。"
+    },
+    {
+      "level": "human_confirmed_formal",
+      "note": "2026-08-10 使用者人工確認自然 batch_03 轉為 approved_for_app。"
     }
   ],
   "weeks": [
@@ -57,7 +63,7 @@
             "SC-CHEM",
             "SC-INQ"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -70,7 +76,7 @@
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-MON-Q01",
@@ -139,17 +145,36 @@
               "review_advice": "實驗表格題要確認其他條件相同，再比較操縱變因造成的差異。",
               "review_notes": [
                 "Question Agent：以 AI 新製水草實驗表格測資料判讀。",
-                "Review Agent：答案唯一，需人工確認氣泡數作為光合作用指標的表述精確度。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Review Agent：答案唯一，已人工確認氣泡數在本題中作為相對比較指標，表述可用。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-MON-Q02",
@@ -235,16 +260,35 @@
               "review_notes": [
                 "Question Agent：以 AI 新製曲線測代謝資料判讀。",
                 "Review Agent：多選正答數明確，圖表材料可作答。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-MON-Q03",
@@ -332,17 +376,36 @@
               "review_advice": "酸鹼指示劑題要把兩種試紙結果一起看，避免只看單一欄位。",
               "review_notes": [
                 "Question Agent：以 AI 新製表格測酸鹼判讀。",
-                "Review Agent：答案唯一，丁的雙變化設計為不合理干擾項，需人工確認是否保留。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Review Agent：答案唯一，丁的雙變化設計為不合理干擾項，已人工確認干擾項可保留，用於檢查是否誤判雙變因設計。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-MON-Q04",
@@ -370,12 +433,33 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水樣數據測單位與量化推理。",
                 "Review Agent：答案唯一，屬填充題，未放公式提示於題幹外。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": true
+              "requires_written_response": true,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             }
-          ]
+          ],
+          "gatekeeper_status": "approved_for_app",
+          "approved_for_app_at": "2026-08-10"
         },
         {
           "day_id": "SC-FC-V01-B03-WED",
@@ -387,7 +471,7 @@
             "SC-EARTH",
             "SC-INQ"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -400,7 +484,7 @@
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-WED-Q01",
@@ -460,16 +544,35 @@
               "review_notes": [
                 "Question Agent：以 AI 新製流程圖測能量轉換。",
                 "Review Agent：答案唯一，圖文結合足夠。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-WED-Q02",
@@ -553,16 +656,35 @@
               "review_notes": [
                 "Question Agent：以 AI 新製氣象表格測資料整合。",
                 "Review Agent：正答 2 項明確，避免過度因果推論。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-WED-Q03",
@@ -641,16 +763,35 @@
               "review_notes": [
                 "Question Agent：以 AI 新製速度圖測圖形判讀。",
                 "Review Agent：答案唯一，圖形資訊足夠。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-WED-Q04",
@@ -678,12 +819,33 @@
               "review_notes": [
                 "Question Agent：以 AI 新製數據測地科量化推理。",
                 "Review Agent：答案唯一，公式以文字條件給出，避免額外提示卡干擾。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": true
+              "requires_written_response": true,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             }
-          ]
+          ],
+          "gatekeeper_status": "approved_for_app",
+          "approved_for_app_at": "2026-08-10"
         },
         {
           "day_id": "SC-FC-V01-B03-FRI",
@@ -696,7 +858,7 @@
             "SC-BIO",
             "SC-INQ"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "note",
@@ -709,7 +871,7 @@
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-FRI-Q01",
@@ -779,16 +941,35 @@
               "review_notes": [
                 "Question Agent：以 AI 新製能源表格測資料判讀。",
                 "Review Agent：答案唯一，材料可作答。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-FRI-Q02",
@@ -879,16 +1060,35 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水質資料測跨科判讀。",
                 "Review Agent：正答 2 項明確，資料足以支持。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": true,
               "id": "SC-FC-V01-B03-FRI-Q03",
@@ -924,17 +1124,36 @@
               "review_advice": "探究實作短答先建立變因表，再補一句如何測量結果。",
               "review_notes": [
                 "Question Agent：以 AI 新製保溫實驗測變因控制。",
-                "Review Agent：評分規準可操作，仍需人工確認用語與分數配置。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Review Agent：評分規準可操作，已人工確認評分規準用語與分數配置可用。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": true
+              "requires_written_response": true,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             },
             {
               "subject": "自然",
               "mode": "學測",
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
               "id": "SC-FC-V01-B03-FRI-Q04",
@@ -994,12 +1213,33 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水處理流程圖測概念與流程判讀。",
                 "Review Agent：答案唯一，圖文結合清楚。",
-                "Gatekeeper：未審定，維持 needs_human_review。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
+              }
             }
-          ]
+          ],
+          "gatekeeper_status": "approved_for_app",
+          "approved_for_app_at": "2026-08-10"
         }
       ]
     }

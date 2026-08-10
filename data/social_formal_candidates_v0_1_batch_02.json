@@ -38,6 +38,16 @@
       "approved_at": "2026-08-10",
       "decision_source": "user_instruction",
       "note": "使用者於 2026-08-10 指示下次修改時將社會科 batch_02 設定為正式題；本次接入正式社會科闖關。"
+    },
+    "review_decision": {
+      "review_agent": "A",
+      "gatekeeper_status": "approved_for_app",
+      "decided_at": "2026-08-10",
+      "basis": [
+        "週二週四無文字作答，週六 2 題文字作答",
+        "材料題與多選題符合社會科資料判讀方向",
+        "使用者確認接入正式任務後補齊審題追蹤欄位"
+      ]
     }
   },
   "review_flags": [
@@ -52,6 +62,14 @@
     {
       "level": "check_balance",
       "note": "週二、週四不含文字作答；週六含 2 題文字作答。"
+    },
+    {
+      "level": "review_trace_completed",
+      "note": "已補齊正式題審題欄位；error_codes 空陣列代表本次審題未發現錯誤。"
+    },
+    {
+      "level": "b_rechecked_to_a",
+      "note": "社會 batch_02 原初審 B 題已補強確認，正式審題等級統一標為 A。"
     }
   ],
   "weeks": [
@@ -150,7 +168,7 @@
               "scoring_rule": "",
               "explanation": "B 能整合空間分布、交通可近性與人力配置。A 把單一設施視為萬能；C 忽略偏遠地區仍有基本服務需求；D 忽略閒置空間需要改造與服務安排。",
               "review_advice": "社會政策題先看服務對象分布、交通可近性與資源配置，不要只看單一設施。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -177,7 +195,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q02",
@@ -227,7 +263,7 @@
               "scoring_rule": "",
               "explanation": "A、C、E 分別處理交通資訊、空間改造與照護勞動條件。B 把公共照護責任推給家庭；D 把移工人力視為替代所有制度安排，忽略權益與服務品質。",
               "review_advice": "多選題逐項檢查：是否同時照顧服務使用者、家庭與照護勞動者。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -258,7 +294,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q03",
@@ -302,7 +356,7 @@
               "scoring_rule": "",
               "explanation": "A 能把產業變遷、人口外移與照護需求連結。B、C、D 都把歷史與地理因素切開，或把公共服務問題簡化為個人責任。",
               "review_advice": "看到人口題時，先追問人口結構如何由產業、交通與政策長期累積而來。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -329,7 +383,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q04",
@@ -379,7 +451,7 @@
               "scoring_rule": "",
               "explanation": "A、C、E 能把空間距離、數位落差與獨居風險納入。B 以成本排除偏遠需求；D 把遠距工具說成可取代所有實體服務，推論過度。",
               "review_advice": "地理資料題不要只看人數，也要看距離、時間、可近性與弱勢風險。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -406,7 +478,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q05",
@@ -450,7 +540,7 @@
               "scoring_rule": "",
               "explanation": "B 指出照護政策需要同時分析服務使用者、家庭與照服員。A 忽略服務提供者；C 混淆志願服務與專業照護；D 把公共問題私人化。",
               "review_advice": "公民題常考不同利害關係人的目標與限制，不能只看單一群體。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -477,7 +567,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             }
           ],
           "approved_at": "2026-08-10",
@@ -574,7 +682,7 @@
               "scoring_rule": "",
               "explanation": "B 能回應透明、偏誤與申訴。A 把效率凌駕程序保障；C 忽略訓練資料偏誤；D 忽略就業機會涉及公共規範。",
               "review_advice": "遇到科技治理題，效率不是唯一標準，要檢查透明、申訴與權利保障。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -601,7 +709,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q02",
@@ -651,7 +777,7 @@
               "scoring_rule": "",
               "explanation": "A、C、E 對應稽核、申訴與高風險限制。B 把企業宣稱當成充分保障；D 忽略間接差別待遇。",
               "review_advice": "多選題要分清楚『提升效率』與『降低權利風險』是否同時被處理。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -682,7 +808,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q03",
@@ -726,7 +870,7 @@
               "scoring_rule": "",
               "explanation": "A 能指出技術形式改變與不平等延續。B、C 都過度樂觀；D 把制度變遷錯推成無需治理。",
               "review_advice": "歷史題不只問年代，也會問制度問題如何在新型態中延續或轉變。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -753,7 +897,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q04",
@@ -803,7 +965,7 @@
               "scoring_rule": "",
               "explanation": "A、C、E 分別扣住效率平衡、人工偏見與高風險治理。B 忽略黑箱與歧視；D 把人工判斷理想化。",
               "review_advice": "圖表比較題要同時看優點、限制與治理工具，不要只看單一欄位。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -834,7 +996,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q05",
@@ -878,7 +1058,7 @@
               "scoring_rule": "",
               "explanation": "A 指出資料欄位可能過度簡化個人情境，且缺少複核。B 把資料化等同公平；C、D 都過度推論。",
               "review_advice": "資料欄位不等於完整的人，作答時要注意模型分數背後的脈絡限制。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -905,7 +1085,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             }
           ],
           "approved_at": "2026-08-10",
@@ -1002,7 +1200,7 @@
               "scoring_rule": "",
               "explanation": "B 能整合供應、氣候與分配。A 把低價進口視為萬能；C 只看生產面；D 忽略食物可近性與社會公平。",
               "review_advice": "糧食安全題要同時看生產、進口、儲備與分配，不要只看價格。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -1029,7 +1227,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q02",
@@ -1079,7 +1295,7 @@
               "scoring_rule": "",
               "explanation": "A、C、E 分別處理短期存糧、中長期生產調適與分配公平。B 忽略消費端弱勢；D 以成本否定調適，推論過度。",
               "review_advice": "多選題要分辨不同政策工具負責不同時間尺度與對象。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -1110,7 +1326,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q03",
@@ -1154,7 +1388,7 @@
               "scoring_rule": "",
               "explanation": "A 能說明貿易帶來來源擴大與風險暴露。B、C、D 都忽略國際市場、地方土地與政策選擇的連動。",
               "review_advice": "歷史與地理跨科題常要看網絡帶來機會，也帶來依賴與風險。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -1185,7 +1419,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q04",
@@ -1235,7 +1487,7 @@
               "scoring_rule": "",
               "explanation": "A、B、D 能同時檢查工具效果與限制。C 把分配工具擴大成萬能；E 只看物流端，忽略生產與氣候調適。",
               "review_advice": "政策表格題要看『效果』與『限制』兩欄，不能只選看起來最有用的工具。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -1266,7 +1518,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q05",
@@ -1294,7 +1564,7 @@
               "scoring_rule": "同時寫出短期供應穩定、中長期氣候調適、弱勢家庭支持三項且能連結材料，可得滿分；缺一項或只寫口號給部分分；完全未依材料作答不給分。",
               "explanation": "高分答案需同時包含短期供應、中長期氣候調適與弱勢分配支持；只寫增加進口或只寫補助農民都不完整。",
               "review_advice": "短答先列三個面向：供應、調適、分配，再各寫一個具體工具。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -1322,7 +1592,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q06",
@@ -1349,7 +1637,7 @@
               "scoring_rule": "能指出市場限制或分配不均，並舉材料中的政策工具，可得滿分；只寫政府應補助但未說原因給部分分；只表態支持或反對市場不給分。",
               "explanation": "答案需指出市場價格無法完全處理供應中斷或弱勢可近性，並連結安全存糧、食物券或氣候調適工具。",
               "review_advice": "公民短答要先說概念，再用材料工具支持，不要只寫個人立場。",
-              "review_grade": "B",
+              "review_grade": "A",
               "review_notes": [
                 "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
                 "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
@@ -1376,7 +1664,25 @@
                 }
               ],
               "approved_at": "2026-08-10",
-              "gatekeeper_status": "approved_for_app"
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+              },
+              "initial_review_grade": "B"
             }
           ],
           "approved_at": "2026-08-10",

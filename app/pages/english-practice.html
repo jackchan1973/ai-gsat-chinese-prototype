@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-englishpractice01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
     <style>
       .english-practice-page {
         background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -134,6 +134,25 @@
         white-space: pre-line;
       }
 
+      .english-translation {
+        margin-top: 12px;
+        border: 1px solid rgba(29, 78, 216, .16);
+        border-radius: 8px;
+        background: #f8fbff;
+        color: var(--muted);
+      }
+
+      .english-translation summary {
+        cursor: pointer;
+        padding: 10px 12px;
+        color: var(--primary);
+        font-weight: 900;
+      }
+
+      .english-translation p {
+        padding: 0 12px 12px;
+      }
+
       .english-question-list {
         display: grid;
         gap: 14px;
@@ -259,8 +278,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-englishpractice01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-englishpractice01";
+      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
       const dayNames = { Mon: "週一", Wed: "週三", Fri: "週五", Sun: "週日" };
       const taskTypeLabels = {
         vocabulary_and_short_reading: "詞彙語境關",
@@ -349,6 +368,12 @@
           <article class="english-material">
             <h3>${escapeHtml(material.title || "Material")}</h3>
             <p>${escapeHtml(material.content || "")}</p>
+            ${material.translation_zh ? `
+              <details class="english-translation">
+                <summary>中文翻譯</summary>
+                <p>${escapeHtml(material.translation_zh)}</p>
+              </details>
+            ` : ""}
           </article>
         `;
       }

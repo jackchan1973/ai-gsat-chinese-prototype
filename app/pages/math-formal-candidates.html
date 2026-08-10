@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜數學候選題庫 v0.1</title>
+    <title>AI學測考總複習｜數學題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpractice01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
     <style>
       .candidate-page {
         background:
@@ -347,7 +347,7 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260810-mathpractice01";
+      const DATA_VERSION = "20260810-audit02";
       const batchFiles = {
         "01": "math_formal_candidates_v0_1_batch_01.json",
         "02": "math_formal_candidates_v0_1_batch_02.json"
@@ -1051,8 +1051,13 @@
       async function init() {
         const data = await loadCandidateData();
         const batchLabel = activeBatch === "02" ? "第二批" : "第一批";
-        document.getElementById("pageTitle").textContent = `數學候選題庫 v0.1 batch_${activeBatch}`;
         const approved = data.meta?.status === "approved_for_app";
+        document.getElementById("pageTitle").textContent = approved
+          ? `數學正式題庫 v0.1 batch_${activeBatch}`
+          : `數學候選題庫 v0.1 batch_${activeBatch}`;
+        document.title = approved
+          ? "AI學測考總複習｜數學正式題庫 v0.1"
+          : "AI學測考總複習｜數學候選題庫 v0.1";
         document.getElementById("statusTitle").textContent = approved ? `數學${batchLabel}已接入正式每日任務` : `數學${batchLabel}仍待人工審題`;
         document.getElementById("statusCopy").textContent = approved
           ? data.meta?.app_integration_policy || "本批已作為數學正式闖關使用。"

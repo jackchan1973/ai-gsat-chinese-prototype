@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜自然科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-sciencepractice01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
     <style>
       .science-practice-page { background: linear-gradient(180deg,#eef8f5 0,#f5f7fb 320px), var(--bg); color: var(--ink); }
       .science-practice-shell { max-width: 1120px; min-width:0; }
@@ -72,13 +72,14 @@
         <div class="science-actions">
           <button class="primary-action" type="submit">完成本關看結算</button>
           <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
+          <a class="secondary-action link-action" href="./science-formal-candidates.html">查看題庫情報</a>
         </div>
       </form>
       <section class="science-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
-      const DATA_VERSION = "20260810-sciencepractice01";
+      const DATA_VERSION = "20260810-audit02";
       const LOCAL_DATA_URL = `../../data/science_formal_daily_tasks_v0_1.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_daily_tasks_v0_1.json?v=${DATA_VERSION}`;
       const taskTypeLabels = {

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜自然候選題庫 v0.1</title>
+    <title>AI學測考總複習｜自然正式題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-sciencepreview03" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
     <style>
       .science-page { background: linear-gradient(180deg,#102235 0,#17425a 240px,#f3f7fb 240px,#f3f7fb 100%); color: var(--ink); }
       .science-shell { max-width: 1120px; }
@@ -43,10 +43,10 @@
   <body class="science-page">
     <main class="app-shell science-shell">
       <header class="topbar">
-        <div><p class="eyebrow">AI學測考總複習</p><h1>自然候選題庫 v0.1 batch_03</h1><p class="muted-text">生命、地科、物理、化學與探究實作候選題。</p></div>
+        <div><p class="eyebrow">AI學測考總複習</p><h1>自然正式題庫 v0.1 batch_03</h1><p class="muted-text">生命、地科、物理、化學與探究實作正式題。</p></div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
-      <section class="science-alert"><strong>自然第三批仍待人工審題</strong><p>本批為自然科 AI 新題試跑候選題，狀態全部為 needs_human_review；尚未接入正式闖關。</p></section>
+      <section class="science-alert"><strong>自然第三批已人工確認轉正式</strong><p>本批為自然科 AI 新題，已由使用者人工確認並轉為 approved_for_app；自然正式闖關讀取正式每日任務資料。</p></section>
       <section class="science-stats" id="summaryStats"></section>
       <section class="science-toolbar">
         <select class="science-filter" id="weekdayFilter"><option value="all">全部星期</option><option value="Mon">週一</option><option value="Wed">週三</option><option value="Fri">週五</option></select>
@@ -55,7 +55,7 @@
       <section class="science-list" id="scienceList"></section>
     </main>
     <script>
-      const DATA_VERSION = "20260810-sciencepreview03";
+      const DATA_VERSION = "20260810-audit02";
       const LOCAL_DATA_URL = `../../data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
       const weekdayLabels = { Mon: "週一", Wed: "週三", Fri: "週五" };
@@ -71,7 +71,7 @@
       function renderProcess(material){ return `<svg class="science-graph" viewBox="0 0 760 180" role="img" aria-label="${escapeHtml(material.title)}">${(material.steps||[]).map((step,i)=>{const x=42+i*230; return `<rect x="${x}" y="58" width="170" height="54" rx="8" fill="#f7fbfd" stroke="#cbdde7"/><text x="${x+12}" y="90" fill="#102235" font-size="15" font-weight="800">${escapeHtml(step)}</text>${i<(material.steps||[]).length-1?`<line x1="${x+176}" y1="85" x2="${x+222}" y2="85" stroke="#155e75" stroke-width="3"/><polygon points="${x+222},85 ${x+210},78 ${x+210},92" fill="#155e75"/>`:""}`;}).join("")}</svg>`; }
       function renderMaterial(material){ if(material.type==="table") return `<section class="science-material"><strong>${escapeHtml(material.title||"資料表")}</strong>${renderTable(material)}</section>`; if(material.type==="line_chart") return `<section class="science-material"><strong>${escapeHtml(material.title||"圖表")}</strong>${renderLineChart(material)}</section>`; if(material.type==="process_diagram") return `<section class="science-material"><strong>${escapeHtml(material.title||"流程圖")}</strong>${renderProcess(material)}</section>`; return `<section class="science-material"><strong>${escapeHtml(material.title||"材料")}</strong><p>${escapeHtml(material.content||"")}</p></section>`; }
       function renderQuestion(q,index,weekday){ const options=(q.options||[]).length?`<ul class="science-options">${q.options.map(o=>`<li><strong>${escapeHtml(o.key)}</strong>${escapeHtml(o.text)}</li>`).join("")}</ul>`:`<p class="science-empty">選填或短答題，無選項。</p>`; return `<article class="science-question" data-weekday="${weekday}" data-type="${escapeHtml(q.question_type)}"><div class="science-question-header"><div class="science-tags"><span class="tag">${escapeHtml(q.id)}</span><span class="tag">${escapeHtml(q.question_type)}</span><span class="tag">${escapeHtml(q.difficulty)}</span><span class="tag">自然</span></div><span class="science-status">${escapeHtml(statusLabels[q.status]||q.status)}</span></div><p class="label">${escapeHtml(weekdayLabels[weekday])} 第 ${index+1} 題</p><div>${escapeHtml(q.stem)}</div>${(q.materials||[]).map(renderMaterial).join("")}${options}<details class="science-answer"><summary>查看答案與解析</summary><p><strong>答案：</strong>${escapeHtml(answerText(q.answer))}</p>${q.scoring_rule?`<p><strong>評分規準：</strong>${escapeHtml(q.scoring_rule)}</p>`:""}<p><strong>解析：</strong>${escapeHtml(q.explanation)}</p><p><strong>複習建議：</strong>${escapeHtml(q.review_advice)}</p></details><div class="science-review"><p><strong>知識標籤：</strong>${escapeHtml((q.knowledge_tags||[]).join("、"))}</p><p><strong>審題紀錄：</strong>${escapeHtml((q.review_notes||[]).join(" "))}</p><p><strong>相似風險：</strong>${escapeHtml(q.similarity_risk||"未標")}</p></div></article>`; }
-      function renderStats(){ const written=questions.filter(x=>x.question.requires_written_response).length; const typeSet=new Set(questions.map(x=>x.question.question_type)); const stats=[["總題數",questions.length],["任務日",days.length],["文字作答",written],["題型",typeSet.size],["狀態","待審"]]; document.getElementById("summaryStats").innerHTML=stats.map(([l,v])=>`<div class="science-stat"><span>${escapeHtml(l)}</span><strong>${escapeHtml(v)}</strong></div>`).join(""); }
+      function renderStats(){ const written=questions.filter(x=>x.question.requires_written_response).length; const typeSet=new Set(questions.map(x=>x.question.question_type)); const stats=[["總題數",questions.length],["任務日",days.length],["文字作答",written],["題型",typeSet.size],["狀態","正式"]]; document.getElementById("summaryStats").innerHTML=stats.map(([l,v])=>`<div class="science-stat"><span>${escapeHtml(l)}</span><strong>${escapeHtml(v)}</strong></div>`).join(""); }
       function renderFilters(){ const types=[...new Set(questions.map(x=>x.question.question_type))].sort(); document.getElementById("typeFilter").innerHTML=`<option value="all">全部題型</option>${types.map(t=>`<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("")}`; }
       function renderList(){ const weekday=document.getElementById("weekdayFilter").value; const type=document.getElementById("typeFilter").value; const filtered=days.filter(d=>weekday==="all"||d.weekday===weekday).map(d=>({...d,question_slots:d.question_slots.filter(q=>type==="all"||q.question_type===type)})).filter(d=>d.question_slots.length); document.getElementById("scienceList").innerHTML=filtered.map(day=>`<section class="science-day"><div class="science-day-header"><div><p class="eyebrow">${escapeHtml(day.day_id)}</p><h2>${escapeHtml(day.label)}</h2></div><span class="science-status">${escapeHtml(statusLabels[day.status]||day.status)}</span></div>${(day.day_materials||[]).map(renderMaterial).join("")}${day.question_slots.map((q,i)=>renderQuestion(q,i,day.weekday)).join("")}</section>`).join("") || `<div class="science-empty">沒有符合條件的題目。</div>`; }
       async function init(){ const data=await loadData(); days=(data.weeks||[]).flatMap(w=>w.days||[]); questions=days.flatMap(day=>(day.question_slots||[]).map(question=>({weekday:day.weekday,question}))); renderStats(); renderFilters(); renderList(); document.getElementById("weekdayFilter").addEventListener("change",renderList); document.getElementById("typeFilter").addEventListener("change",renderList); }
