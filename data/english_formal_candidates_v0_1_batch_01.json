@@ -50,6 +50,12 @@
       "chinese_translation_added": true,
       "translation_scope": "day_materials.translation_zh for every English reading material; explanations remain in Chinese and vague cloze explanations were strengthened",
       "updated_at": "2026-08-10"
+    },
+    "system_review": {
+      "updated_at": "2026-08-10",
+      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
+      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
+      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
     }
   },
   "review_flags": [
@@ -179,7 +185,30 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q02",
@@ -261,7 +290,30 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q03",
@@ -343,7 +395,30 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q04",
@@ -425,7 +500,30 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q05",
@@ -507,7 +605,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U02-main-idea"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-主旨掌握"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q06",
@@ -589,7 +711,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U03-detail-evidence"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-細節證據"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q07",
@@ -671,7 +817,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-MON-Q08",
@@ -753,11 +923,45 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Mon"
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U01-word-in-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-詞義推測"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
           ],
           "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
+          "gatekeeper_status": "approved_for_app",
+          "estimated_minutes": 11,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "EN-U01-vocabulary-context",
+            "EN-U02-reading-comprehension",
+            "EN-U02-main-idea",
+            "EN-U03-detail-evidence",
+            "EN-U04-inference",
+            "EN-U01-word-in-context"
+          ]
         },
         {
           "day_id": "EN-FC-V01-B01-THU",
@@ -859,7 +1063,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q02",
@@ -941,7 +1169,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q03",
@@ -1023,7 +1275,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q04",
@@ -1105,7 +1381,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q05",
@@ -1187,7 +1487,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q06",
@@ -1269,7 +1593,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q07",
@@ -1351,7 +1699,30 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U06-discourse-structure"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章結構",
+                "英語文核心素養-組織結構"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q08",
@@ -1433,7 +1804,30 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U06-discourse-structure"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章結構",
+                "英語文核心素養-組織結構"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-WED-Q09",
@@ -1515,11 +1909,43 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U06-discourse-structure",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章結構",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
           ],
           "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
+          "gatekeeper_status": "approved_for_app",
+          "estimated_minutes": 16,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "EN-U05-cloze-grammar-cohesion",
+            "EN-U05-cohesion",
+            "EN-U06-discourse-structure",
+            "EN-U04-inference"
+          ]
         },
         {
           "day_id": "EN-FC-V01-B01-SUN",
@@ -1633,7 +2059,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U02-main-idea"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-主旨掌握"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q02",
@@ -1715,7 +2165,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U03-detail-evidence"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-細節證據"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q03",
@@ -1797,7 +2271,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q04",
@@ -1879,7 +2377,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U01-word-in-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-詞義推測"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q05",
@@ -1961,7 +2483,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U02-main-idea"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-主旨掌握"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q06",
@@ -2043,7 +2589,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q07",
@@ -2125,7 +2695,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference-compare"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-比較判讀"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q08",
@@ -2207,7 +2801,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-author-attitude"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-作者態度"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q01",
@@ -2290,7 +2908,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U07-translation",
+                "EN-U08-writing"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-中英轉換",
+                "英語文核心素養-書面表達"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q02",
@@ -2373,7 +3015,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U07-translation",
+                "EN-U08-writing"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-中英轉換",
+                "英語文核心素養-書面表達"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q03",
@@ -2439,7 +3105,31 @@
                 "Sun"
               ],
               "preferred_weekday": "Sun",
-              "written_response_day_only": "Sun"
+              "written_response_day_only": "Sun",
+              "unit_tags": [
+                "EN-U08-writing",
+                "EN-U08-writing-organization"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-書面表達",
+                "英語文核心素養-段落組織"
+              ],
+              "estimated_minutes": 18,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q04",
@@ -2521,7 +3211,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U09-integrated-reading-writing",
+                "EN-U02-reading-comprehension"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-整合應用",
+                "英語文核心素養-閱讀理解"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q05",
@@ -2603,7 +3317,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U09-integrated-reading-writing",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-整合應用",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q06",
@@ -2685,12 +3423,52 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U09-integrated-reading-writing",
+                "EN-U10-culture-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-整合應用",
+                "英語文核心素養-文化理解"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
           ],
           "approved_at": "2026-08-10",
           "gatekeeper_status": "approved_for_app",
-          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
+          "estimated_minutes": 47,
+          "time_policy": "weekend_deep",
+          "coverage_summary": [
+            "EN-U02-reading-comprehension",
+            "EN-U02-main-idea",
+            "EN-U03-detail-evidence",
+            "EN-U04-inference",
+            "EN-U01-word-in-context",
+            "EN-U04-inference-compare",
+            "EN-U04-author-attitude",
+            "EN-U07-translation",
+            "EN-U08-writing",
+            "EN-U08-writing-organization",
+            "EN-U09-integrated-reading-writing",
+            "EN-U10-culture-context"
+          ]
         }
       ]
     }

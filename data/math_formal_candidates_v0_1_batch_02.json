@@ -40,6 +40,12 @@
         "使用者確認接入正式每日任務",
         "本次補齊資料完整性與審題欄位"
       ]
+    },
+    "system_review": {
+      "updated_at": "2026-08-10",
+      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
+      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
+      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
     }
   },
   "review_flags": [
@@ -166,7 +172,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Tue"
+              "preferred_weekday": "Tue",
+              "unit_tags": [
+                "MA-U01-sequence-recursion",
+                "MA-U02-modeling"
+              ],
+              "syllabus_tags": [
+                "數學A/B-數列與遞迴",
+                "數學A/B-情境建模"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -271,7 +301,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Tue"
+              "preferred_weekday": "Tue",
+              "unit_tags": [
+                "MA-U03-functions",
+                "MA-U04-plane-geometry"
+              ],
+              "syllabus_tags": [
+                "數學A/B-函數與圖形",
+                "數學A/B-平面幾何"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -360,8 +414,42 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Tue"
+              "preferred_weekday": "Tue",
+              "unit_tags": [
+                "MA-U05-matrix-transformation",
+                "MA-U06-vectors"
+              ],
+              "syllabus_tags": [
+                "數學A-矩陣與變換",
+                "數學A-向量"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
+          ],
+          "estimated_minutes": 18,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "MA-U01-sequence-recursion",
+            "MA-U02-modeling",
+            "MA-U03-functions",
+            "MA-U04-plane-geometry",
+            "MA-U05-matrix-transformation",
+            "MA-U06-vectors"
           ]
         },
         {
@@ -508,7 +596,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "MA-U07-probability",
+                "MA-U08-statistics"
+              ],
+              "syllabus_tags": [
+                "數學A/B-機率",
+                "數學A/B-統計資料判讀"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -594,7 +706,29 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "MA-U08-statistics"
+              ],
+              "syllabus_tags": [
+                "數學A/B-統計資料判讀"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -656,8 +790,39 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Thu"
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "MA-U07-probability",
+                "MA-U02-modeling"
+              ],
+              "syllabus_tags": [
+                "數學A/B-機率",
+                "數學A/B-情境建模"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
+          ],
+          "estimated_minutes": 18,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "MA-U07-probability",
+            "MA-U08-statistics",
+            "MA-U02-modeling"
           ]
         },
         {
@@ -792,7 +957,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "MA-U06-vectors",
+                "MA-U04-plane-geometry"
+              ],
+              "syllabus_tags": [
+                "數學A-向量",
+                "數學A/B-平面幾何"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -889,7 +1078,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "MA-U04-plane-geometry",
+                "MA-U05-matrix-transformation"
+              ],
+              "syllabus_tags": [
+                "數學A/B-平面幾何",
+                "數學A-矩陣與變換"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -985,7 +1198,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "MA-U09-spatial-geometry",
+                "MA-U06-vectors"
+              ],
+              "syllabus_tags": [
+                "數學A-空間概念",
+                "數學A-向量"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -1080,7 +1317,31 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "MA-U10-algebra",
+                "MA-U03-functions"
+              ],
+              "syllabus_tags": [
+                "數學A/B-代數運算",
+                "數學A/B-函數與圖形"
+              ],
+              "estimated_minutes": 7,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "數學",
@@ -1175,7 +1436,33 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "MA-U07-probability",
+                "MA-U08-statistics",
+                "MA-U02-modeling"
+              ],
+              "syllabus_tags": [
+                "數學A/B-機率",
+                "數學A/B-統計資料判讀",
+                "數學A/B-情境建模"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "subject": "數學",
@@ -1245,10 +1532,47 @@
                 "Thu",
                 "Sun"
               ],
-              "preferred_weekday": "Sun"
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "MA-U02-modeling",
+                "MA-U10-algebra"
+              ],
+              "syllabus_tags": [
+                "數學A/B-情境建模",
+                "數學A/B-代數運算"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             }
           ],
-          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
+          "estimated_minutes": 41,
+          "time_policy": "weekend_deep",
+          "coverage_summary": [
+            "MA-U06-vectors",
+            "MA-U04-plane-geometry",
+            "MA-U05-matrix-transformation",
+            "MA-U09-spatial-geometry",
+            "MA-U10-algebra",
+            "MA-U03-functions",
+            "MA-U07-probability",
+            "MA-U08-statistics",
+            "MA-U02-modeling"
+          ]
         }
       ]
     }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-system01" />
     <style>
       .candidate-page {
         background:
@@ -399,7 +399,7 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260810-weekend01";
+      const DATA_VERSION = "20260810-system01";
       const LOCAL_DATA_URL = `../../data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
@@ -513,10 +513,12 @@
       function renderStats() {
         const written = questions.filter((item) => item.question.requires_written_response).length;
         const approved = questions.filter((item) => item.question.status === "approved_for_app").length;
+        const minutes = days.reduce((sum, day) => sum + Number(day.estimated_minutes || 0), 0);
         const stats = [
           ["總題數", questions.length],
           ["任務日", days.length],
           ["文字作答", written],
+          ["預估分鐘", minutes],
           ["正式題", approved],
           ["狀態", "開放"]
         ];
@@ -1079,6 +1081,8 @@
                 <span class="tag">${escapeHtml(question.question_type)}</span>
                 <span class="tag">數學 ${escapeHtml(question.math_track)}</span>
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
+                <span class="tag">${escapeHtml(question.estimated_minutes || "--")} 分鐘</span>
+                ${(question.unit_tags || []).slice(0, 2).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
                 <span class="tag">${question.requires_written_response ? "週日短答" : "正式題"}</span>
               </div>
               <span class="candidate-status">${escapeHtml(statusText)}</span>
@@ -1141,6 +1145,7 @@
               <div>
                 <p class="eyebrow">${escapeHtml(day.day_id)}</p>
                 <h2>${escapeHtml(day.label)}：${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h2>
+                <p class="muted-text">${escapeHtml(dayQuestions.length)} 題｜${escapeHtml(day.estimated_minutes || "--")} 分鐘</p>
               </div>
               <span class="candidate-status">${escapeHtml(statusText)}</span>
             </div>

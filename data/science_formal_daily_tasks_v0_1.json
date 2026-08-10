@@ -2,12 +2,12 @@
   "meta": {
     "subject": "自然",
     "mode": "學測",
-    "version": "science_formal_daily_tasks_v0.1",
-    "purpose": "自然科正式每日任務資料 v0.1；由 batch_03 經使用者確認後接入正式闖關。",
+    "version": "formal_candidates_v0.1_batch_03",
+    "purpose": "自然科正式候選題庫 v0.1 第 3 批；目前僅供試跑與審題，不接入正式小程式。",
     "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方自然題與評分原則僅用於分析題型、圖表材料、實驗設計與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "自然正式闖關改為週三輕量圖形模型、週六生命實驗與能源環境長題。",
+    "app_integration_policy": "自然 batch_03 正式題庫改為週三輕量、週六長題的週末集中節奏。",
     "batch_plan": {
       "target_days": 2,
       "target_questions": 12,
@@ -27,19 +27,24 @@
       "timezone": "Asia/Shanghai",
       "weekend_load_policy": "週一與週五自然移到週六，週三只保留一組圖形模型輕量練習。"
     },
-    "source_batch": "science_formal_candidates_v0_1_batch_03",
-    "confirmation": "使用者於 2026-08-10 確認可正式推送；本檔作為自然科正式闖關資料。",
     "approved_for_app_at": "2026-08-10",
-    "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。"
+    "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。",
+    "system_review": {
+      "updated_at": "2026-08-10",
+      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
+      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
+      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
+    },
+    "source_batch": "science_formal_candidates_v0_1_batch_03.json"
   },
   "review_flags": [
     {
-      "level": "approved_for_app",
-      "note": "由 science batch_03 經使用者確認後建立正式資料檔。"
+      "level": "needs_human_review",
+      "note": "本批為自然科第三批 AI 新題，尚未經自然科老師或外部審題。"
     },
     {
-      "level": "protected_existing_banks",
-      "note": "正式接入只新增自然資料與入口，不修改已完成科目的題庫。"
+      "level": "not_for_app",
+      "note": "正式小程式只能讀 approved_for_app；本批目前不可接入正式闖關。"
     },
     {
       "level": "diagram_policy",
@@ -57,7 +62,7 @@
   "weeks": [
     {
       "week_id": "SC-FC-V01-B03-W01",
-      "label": "自然正式第1週",
+      "label": "自然第3批第1週",
       "days": [
         {
           "day_id": "SC-FC-V01-B03-WED",
@@ -142,8 +147,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製流程圖測能量轉換。",
                 "Review Agent：答案唯一，圖文結合足夠。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -171,7 +175,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Wed"
+              "preferred_weekday": "Wed",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -261,8 +289,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製氣象表格測資料整合。",
                 "Review Agent：正答 2 項明確，避免過度因果推論。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -290,7 +317,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Wed"
+              "preferred_weekday": "Wed",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -375,8 +426,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製速度圖測圖形判讀。",
                 "Review Agent：答案唯一，圖形資訊足夠。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -404,7 +454,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Wed"
+              "preferred_weekday": "Wed",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -438,8 +512,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製數據測地科量化推理。",
                 "Review Agent：答案唯一，公式以文字條件給出，避免額外提示卡干擾。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": true,
@@ -469,11 +542,42 @@
               ],
               "preferred_weekday": "Wed",
               "written_response_day_only": "Wed",
-              "schedule_note": "週三自然填充題屬輕量作答，可放平日；長短答仍以週六為主。"
+              "schedule_note": "週三自然填充題屬輕量作答，可放平日；長短答仍以週六為主。",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             }
           ],
           "gatekeeper_status": "approved_for_app",
-          "approved_for_app_at": "2026-08-10"
+          "approved_for_app_at": "2026-08-10",
+          "estimated_minutes": 21,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "SC-U01-energy-force-motion",
+            "SC-U05-scientific-inquiry-data",
+            "SC-U02-earth-system-data"
+          ]
         },
         {
           "day_id": "SC-FC-V01-B03-SAT",
@@ -573,8 +677,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水草實驗表格測資料判讀。",
                 "Review Agent：答案唯一，已人工確認氣泡數在本題中作為相對比較指標，表述可用。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -602,7 +705,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -694,8 +821,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製曲線測代謝資料判讀。",
                 "Review Agent：多選正答數明確，圖表材料可作答。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -723,7 +849,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -818,8 +968,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製表格測酸鹼判讀。",
                 "Review Agent：答案唯一，丁的雙變化設計為不合理干擾項，已人工確認干擾項可保留，用於檢查是否誤判雙變因設計。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -847,7 +996,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -881,8 +1054,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水樣數據測單位與量化推理。",
                 "Review Agent：答案唯一，屬填充題，未放公式提示於題幹外。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": true,
@@ -911,7 +1083,31 @@
                 "Sat"
               ],
               "preferred_weekday": "Sat",
-              "written_response_day_only": "Sat"
+              "written_response_day_only": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "subject": "自然",
@@ -987,8 +1183,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製能源表格測資料判讀。",
                 "Review Agent：答案唯一，材料可作答。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -1016,7 +1211,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -1113,8 +1332,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水質資料測跨科判讀。",
                 "Review Agent：正答 2 項明確，資料足以支持。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -1142,7 +1360,33 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -1185,8 +1429,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製保溫實驗測變因控制。",
                 "Review Agent：評分規準可操作，已人工確認評分規準用語與分數配置可用。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": true,
@@ -1215,7 +1458,33 @@
                 "Sat"
               ],
               "preferred_weekday": "Sat",
-              "written_response_day_only": "Sat"
+              "written_response_day_only": "Sat",
+              "unit_tags": [
+                "SC-U05-scientific-inquiry-data",
+                "SC-U01-energy-force-motion",
+                "SC-U04-matter-reaction-energy"
+              ],
+              "syllabus_tags": [
+                "自然領綱-探究與實作-變因控制與證據",
+                "自然領綱-物理-能量與運動",
+                "自然領綱-化學-物質反應與能量"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "subject": "自然",
@@ -1281,8 +1550,7 @@
               "review_notes": [
                 "Question Agent：以 AI 新製水處理流程圖測概念與流程判讀。",
                 "Review Agent：答案唯一，圖文結合清楚。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。",
-                "Gatekeeper：使用者確認後，正式資料檔標記為 approved_for_app。"
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
               ],
               "similarity_risk": "low_ai_new_science_context",
               "requires_written_response": false,
@@ -1310,12 +1578,44 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
           ],
           "gatekeeper_status": "approved_for_app",
           "approved_for_app_at": "2026-08-10",
-          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
+          "estimated_minutes": 43,
+          "time_policy": "weekend_deep",
+          "coverage_summary": [
+            "SC-U03-life-science-experiment",
+            "SC-U05-scientific-inquiry-data",
+            "SC-U04-matter-reaction-energy",
+            "SC-U01-energy-force-motion"
+          ]
         }
       ]
     }

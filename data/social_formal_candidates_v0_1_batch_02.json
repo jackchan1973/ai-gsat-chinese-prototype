@@ -47,6 +47,12 @@
         "材料題與多選題符合社會科資料判讀方向",
         "使用者確認接入正式任務後補齊審題追蹤欄位"
       ]
+    },
+    "system_review": {
+      "updated_at": "2026-08-10",
+      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
+      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
+      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
     }
   },
   "review_flags": [
@@ -218,7 +224,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U01-population-services",
+                "SO-U02-public-policy-resource-allocation"
+              ],
+              "syllabus_tags": [
+                "社會領綱-地理-人口與區域發展",
+                "社會領綱-公民-公共政策與資源分配"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q02",
@@ -319,7 +349,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U02-public-policy-resource-allocation",
+                "SO-U03-citizen-participation-law"
+              ],
+              "syllabus_tags": [
+                "社會領綱-公民-公共政策與資源分配",
+                "社會領綱-公民-民主參與與法治"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q03",
@@ -410,7 +464,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U04-modernization-social-change",
+                "SO-U01-population-services"
+              ],
+              "syllabus_tags": [
+                "社會領綱-歷史-社會變遷",
+                "社會領綱-地理-人口與區域發展"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q04",
@@ -507,7 +585,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U01-population-services",
+                "SO-U02-public-policy-resource-allocation"
+              ],
+              "syllabus_tags": [
+                "社會領綱-地理-人口與區域發展",
+                "社會領綱-公民-公共政策與資源分配"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q05",
@@ -598,11 +700,43 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U02-public-policy-resource-allocation",
+                "SO-U03-citizen-participation-law"
+              ],
+              "syllabus_tags": [
+                "社會領綱-公民-公共政策與資源分配",
+                "社會領綱-公民-民主參與與法治"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
           ],
           "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
+          "gatekeeper_status": "approved_for_app",
+          "estimated_minutes": 28,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "SO-U01-population-services",
+            "SO-U02-public-policy-resource-allocation",
+            "SO-U03-citizen-participation-law",
+            "SO-U04-modernization-social-change"
+          ]
         },
         {
           "day_id": "SO-FC-V01-B02-W01-SAT",
@@ -777,7 +911,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U05-technology-labor-governance",
+                "SO-U06-economics-labor-market"
+              ],
+              "syllabus_tags": [
+                "社會領綱-公民-科技社會與治理",
+                "社會領綱-經濟-市場與勞動"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q02",
@@ -878,7 +1036,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U05-technology-labor-governance",
+                "SO-U06-economics-labor-market"
+              ],
+              "syllabus_tags": [
+                "社會領綱-公民-科技社會與治理",
+                "社會領綱-經濟-市場與勞動"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q03",
@@ -969,7 +1151,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U07-industrial-change-history",
+                "SO-U05-technology-labor-governance"
+              ],
+              "syllabus_tags": [
+                "社會領綱-歷史-產業與制度變遷",
+                "社會領綱-公民-科技社會與治理"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q04",
@@ -1070,7 +1276,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U06-economics-labor-market",
+                "SO-U05-technology-labor-governance"
+              ],
+              "syllabus_tags": [
+                "社會領綱-經濟-市場與勞動",
+                "社會領綱-公民-科技社會與治理"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q05",
@@ -1161,7 +1391,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U05-technology-labor-governance",
+                "SO-U06-economics-labor-market"
+              ],
+              "syllabus_tags": [
+                "社會領綱-公民-科技社會與治理",
+                "社會領綱-經濟-市場與勞動"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q01",
@@ -1252,7 +1506,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U08-food-agriculture-risk",
+                "SO-U02-public-policy-resource-allocation"
+              ],
+              "syllabus_tags": [
+                "社會領綱-地理-農業與環境風險",
+                "社會領綱-公民-公共政策與資源分配"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q02",
@@ -1353,7 +1631,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U08-food-agriculture-risk",
+                "SO-U02-public-policy-resource-allocation"
+              ],
+              "syllabus_tags": [
+                "社會領綱-地理-農業與環境風險",
+                "社會領綱-公民-公共政策與資源分配"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q03",
@@ -1448,7 +1750,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U09-globalization-environment-history",
+                "SO-U08-food-agriculture-risk"
+              ],
+              "syllabus_tags": [
+                "社會領綱-歷史-全球互動與環境",
+                "社會領綱-地理-農業與環境風險"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q04",
@@ -1549,7 +1875,31 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U08-food-agriculture-risk",
+                "SO-U02-public-policy-resource-allocation"
+              ],
+              "syllabus_tags": [
+                "社會領綱-地理-農業與環境風險",
+                "社會領綱-公民-公共政策與資源分配"
+              ],
+              "estimated_minutes": 6,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q05",
@@ -1625,7 +1975,33 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U08-food-agriculture-risk",
+                "SO-U02-public-policy-resource-allocation",
+                "SO-U09-globalization-environment-history"
+              ],
+              "syllabus_tags": [
+                "社會領綱-地理-農業與環境風險",
+                "社會領綱-公民-公共政策與資源分配",
+                "社會領綱-歷史-全球互動與環境"
+              ],
+              "estimated_minutes": 9,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q06",
@@ -1699,12 +2075,46 @@
                 "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
                 "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
-              "initial_review_grade": "B"
+              "initial_review_grade": "B",
+              "unit_tags": [
+                "SO-U02-public-policy-resource-allocation",
+                "SO-U08-food-agriculture-risk"
+              ],
+              "syllabus_tags": [
+                "社會領綱-公民-公共政策與資源分配",
+                "社會領綱-地理-農業與環境風險"
+              ],
+              "estimated_minutes": 9,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             }
           ],
           "approved_at": "2026-08-10",
           "gatekeeper_status": "approved_for_app",
-          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
+          "estimated_minutes": 69,
+          "time_policy": "weekend_deep",
+          "coverage_summary": [
+            "SO-U05-technology-labor-governance",
+            "SO-U06-economics-labor-market",
+            "SO-U07-industrial-change-history",
+            "SO-U08-food-agriculture-risk",
+            "SO-U02-public-policy-resource-allocation",
+            "SO-U09-globalization-environment-history"
+          ]
         }
       ]
     }

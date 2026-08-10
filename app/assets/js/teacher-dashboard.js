@@ -14,6 +14,7 @@ const STUDENT_RECORD_KEYS = [
   SELECTED_TASK_KEY,
   LAST_LOGIN_KEY,
 ];
+const SYSTEM_PLAN_URL = "../../data/gsat_review_system_v0_1.json?v=20260810-system01";
 
 let studentRows = [];
 let activeFilter = "all";
@@ -90,6 +91,13 @@ function buildStudentRows() {
   });
 }
 
+function readJson(path) {
+  return fetch(path).then((response) => {
+    if (!response.ok) throw new Error(`讀取失敗：${path}`);
+    return response.json();
+  });
+}
+
 function renderSummary(rows) {
   const logged = rows.filter((row) => row.logged).length;
   const completed = rows.filter((row) => row.completed).length;
@@ -101,6 +109,45 @@ function renderSummary(rows) {
   document.getElementById("completedCount").textContent = `${completed}`;
   document.getElementById("averageRate").textContent = average === null ? "--" : `${average}%`;
   document.getElementById("attentionCount").textContent = `${attention}`;
+}
+
+function renderTeacherSystem(systemPlan) {
+  const status = document.getElementById("teacherSystemStatus");
+  const grid = document.getElementById("teacherSystemGrid");
+  const adjustment = document.getElementById("teacherAdjustmentBox");
+  if (!status || !grid || !adjustment || !systemPlan) return;
+
+  const requiredCards = systemPlan.role_views?.teacher?.required_cards || [];
+  status.textContent = requiredCards.length ? `${requiredCards.length} 個追蹤指標` : "已建立";
+
+  grid.innerHTML = (systemPlan.subject_maps || [])
+    .map(
+      (subject) => `
+        <article class="teacher-system-card">
+          <div>
+            <strong>${escapeHtml(subject.subject)}</strong>
+            <span>${escapeHtml(subject.current_formal_count)} 題</span>
+          </div>
+          <p>${escapeHtml(subject.coverage_status)}</p>
+          <small>${escapeHtml((subject.knowledge_units || []).map((unit) => unit.name).join("、"))}</small>
+        </article>
+      `,
+    )
+    .join("");
+
+  adjustment.innerHTML = `
+    <strong>系統調整規則</strong>
+    <ul>
+      ${(systemPlan.role_views?.system?.adjustment_rules || []).map((rule) => `<li>${escapeHtml(rule)}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function renderTeacherSystemError(error) {
+  const status = document.getElementById("teacherSystemStatus");
+  const grid = document.getElementById("teacherSystemGrid");
+  if (status) status.textContent = "讀取失敗";
+  if (grid) grid.innerHTML = `<div class="empty-box">${escapeHtml(error.message)}</div>`;
 }
 
 function statusBadge(row) {
@@ -251,7 +298,7 @@ function renderAccessDenied() {
   `;
 }
 
-function main() {
+async function main() {
   if (!requireTeacher()) {
     renderAccessDenied();
     return;
@@ -263,6 +310,11 @@ function main() {
   wireFilters();
   wireTeacherActions();
   renderRows();
+  try {
+    renderTeacherSystem(await readJson(SYSTEM_PLAN_URL));
+  } catch (error) {
+    renderTeacherSystemError(error);
+  }
 }
 
 main();

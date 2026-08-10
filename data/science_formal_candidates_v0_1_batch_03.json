@@ -28,7 +28,13 @@
       "weekend_load_policy": "週一與週五自然移到週六，週三只保留一組圖形模型輕量練習。"
     },
     "approved_for_app_at": "2026-08-10",
-    "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。"
+    "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。",
+    "system_review": {
+      "updated_at": "2026-08-10",
+      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
+      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
+      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
+    }
   },
   "review_flags": [
     {
@@ -168,7 +174,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Wed"
+              "preferred_weekday": "Wed",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -286,7 +316,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Wed"
+              "preferred_weekday": "Wed",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -399,7 +453,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Wed"
+              "preferred_weekday": "Wed",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -463,11 +541,42 @@
               ],
               "preferred_weekday": "Wed",
               "written_response_day_only": "Wed",
-              "schedule_note": "週三自然填充題屬輕量作答，可放平日；長短答仍以週六為主。"
+              "schedule_note": "週三自然填充題屬輕量作答，可放平日；長短答仍以週六為主。",
+              "unit_tags": [
+                "SC-U02-earth-system-data",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-地科-地球系統與資料判讀",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             }
           ],
           "gatekeeper_status": "approved_for_app",
-          "approved_for_app_at": "2026-08-10"
+          "approved_for_app_at": "2026-08-10",
+          "estimated_minutes": 21,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "SC-U01-energy-force-motion",
+            "SC-U05-scientific-inquiry-data",
+            "SC-U02-earth-system-data"
+          ]
         },
         {
           "day_id": "SC-FC-V01-B03-SAT",
@@ -595,7 +704,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -715,7 +848,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -838,7 +995,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -901,7 +1082,31 @@
                 "Sat"
               ],
               "preferred_weekday": "Sat",
-              "written_response_day_only": "Sat"
+              "written_response_day_only": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "subject": "自然",
@@ -1005,7 +1210,31 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U01-energy-force-motion",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-物理-能量與運動",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -1130,7 +1359,33 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U03-life-science-experiment",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-生物-生命現象與實驗",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             },
             {
               "subject": "自然",
@@ -1202,7 +1457,33 @@
                 "Sat"
               ],
               "preferred_weekday": "Sat",
-              "written_response_day_only": "Sat"
+              "written_response_day_only": "Sat",
+              "unit_tags": [
+                "SC-U05-scientific-inquiry-data",
+                "SC-U01-energy-force-motion",
+                "SC-U04-matter-reaction-energy"
+              ],
+              "syllabus_tags": [
+                "自然領綱-探究與實作-變因控制與證據",
+                "自然領綱-物理-能量與運動",
+                "自然領綱-化學-物質反應與能量"
+              ],
+              "estimated_minutes": 8,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              }
             },
             {
               "subject": "自然",
@@ -1296,12 +1577,44 @@
                 "Wed",
                 "Sat"
               ],
-              "preferred_weekday": "Sat"
+              "preferred_weekday": "Sat",
+              "unit_tags": [
+                "SC-U04-matter-reaction-energy",
+                "SC-U05-scientific-inquiry-data"
+              ],
+              "syllabus_tags": [
+                "自然領綱-化學-物質反應與能量",
+                "自然領綱-探究與實作-變因控制與證據"
+              ],
+              "estimated_minutes": 4,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              }
             }
           ],
           "gatekeeper_status": "approved_for_app",
           "approved_for_app_at": "2026-08-10",
-          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
+          "estimated_minutes": 43,
+          "time_policy": "weekend_deep",
+          "coverage_summary": [
+            "SC-U03-life-science-experiment",
+            "SC-U05-scientific-inquiry-data",
+            "SC-U04-matter-reaction-energy",
+            "SC-U01-energy-force-motion"
+          ]
         }
       ]
     }

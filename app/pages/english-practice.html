@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-system01" />
     <style>
       .english-practice-page {
         background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -278,8 +278,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-weekend01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-weekend01";
+      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-system01";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-system01";
       const dayNames = { Mon: "週一", Thu: "週四", Sun: "週日" };
       const taskTypeLabels = {
         vocabulary_and_short_reading: "詞彙語境關",
@@ -341,10 +341,12 @@
       function renderStats() {
         const questions = days.flatMap((day) => day.question_slots || []);
         const written = questions.filter((question) => question.requires_written_response).length;
+        const minutes = days.reduce((sum, day) => sum + Number(day.estimated_minutes || 0), 0);
         const stats = [
           ["關卡", days.length],
           ["總題數", questions.length],
           ["選擇挑戰", questions.length - written],
+          ["預估分鐘", minutes],
           ["寫作關", written]
         ];
         document.getElementById("summaryStats").innerHTML = stats
@@ -358,7 +360,7 @@
             <button class="english-day-tab${day.day_id === activeDayId ? " active" : ""}" type="button" data-day-id="${escapeHtml(day.day_id)}">
               <span>第 ${index + 1} 關｜${escapeHtml(dayNames[day.weekday] || day.weekday)}</span>
               <strong>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}</strong>
-              <small>${escapeHtml((day.question_slots || []).length)} 題挑戰</small>
+              <small>${escapeHtml((day.question_slots || []).length)} 題｜${escapeHtml(day.estimated_minutes || "--")} 分鐘</small>
             </button>
           `)
           .join("");
@@ -402,6 +404,8 @@
                 <span class="tag">挑戰 ${index + 1}</span>
                 <span class="tag">${escapeHtml(question.question_type)}</span>
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
+                <span class="tag">${escapeHtml(question.estimated_minutes || "--")} 分鐘</span>
+                ${(question.unit_tags || []).slice(0, 2).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
               </div>
               <span class="english-status">${question.requires_written_response ? "寫作關" : "選擇挑戰"}</span>
             </div>

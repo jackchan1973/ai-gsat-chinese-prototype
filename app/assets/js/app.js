@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260810-weekend01";
+const DATA_VERSION = "20260810-system01";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -7,6 +7,7 @@ const DATA_FILES = {
   wrongs: "wrong_questions.sample.jsonl",
   reviewSchedules: "review_schedule.sample.json",
   parentReport: "parent_weekly_report.sample.json",
+  systemPlan: "gsat_review_system_v0_1.json",
 };
 const SELECTED_TASK_KEY = "chi_v1_selected_task_id";
 const AUTH_KEY = "chi_v1_authenticated";
@@ -334,7 +335,7 @@ function renderTaskSelector(tasks, selectedTask, groupMap, drillMap, onChange) {
 }
 
 function renderTask(data, selectedTaskId) {
-  const { tasks, groups, drills, wrongs, reviewSchedules, report } = data;
+  const { tasks, groups, drills, wrongs, reviewSchedules, report, systemPlan } = data;
   const groupMap = byId(groups, "group_id");
   const drillMap = byId(drills, "question_id");
   const wrongMap = byId(wrongs, "wrong_id");
@@ -372,6 +373,7 @@ function renderTask(data, selectedTaskId) {
   renderGroup(task, groupMap);
   renderReviews(task, wrongMap, reviewSchedules);
   renderWeekSummary(report);
+  renderSystemPlan(systemPlan);
 }
 
 function renderWeekSummary(report) {
@@ -386,6 +388,49 @@ function renderWeekSummary(report) {
       <span class="tag">${escapeHtml(report.weakness_summary)}</span>
     </div>
   `;
+}
+
+function renderSystemPlan(systemPlan) {
+  const status = document.getElementById("systemPlanStatus");
+  const weekGrid = document.getElementById("systemWeekGrid");
+  const subjectGrid = document.getElementById("systemSubjectGrid");
+  if (!status || !weekGrid || !subjectGrid || !systemPlan) return;
+
+  status.textContent = systemPlan.meta?.time_control?.weekday_target_minutes
+    ? `平日 ${systemPlan.meta.time_control.weekday_target_minutes} 分鐘`
+    : "已建立";
+
+  weekGrid.innerHTML = (systemPlan.weekly_plan || [])
+    .map(
+      (day) => `
+        <article class="system-day-card${day.weekday === "Fri" ? " catchup" : ""}">
+          <div>
+            <strong>${escapeHtml(day.label)}</strong>
+            <span>${escapeHtml(day.target_minutes)} 分</span>
+          </div>
+          <p>${escapeHtml(day.student_view)}</p>
+          <small>${escapeHtml(day.rule)}</small>
+        </article>
+      `,
+    )
+    .join("");
+
+  subjectGrid.innerHTML = (systemPlan.subject_maps || [])
+    .map(
+      (subject) => `
+        <article class="system-subject-card">
+          <div>
+            <strong>${escapeHtml(subject.subject)}</strong>
+            <span>${escapeHtml(subject.current_formal_count)} 題</span>
+          </div>
+          <p>${escapeHtml(subject.coverage_status)}</p>
+          <div class="task-meta">
+            ${(subject.weekly_days || []).map((day) => `<span class="tag">${escapeHtml(day)}</span>`).join("")}
+          </div>
+        </article>
+      `,
+    )
+    .join("");
 }
 
 function renderDataStatus(data) {
@@ -551,16 +596,17 @@ async function main() {
       setPortal("student");
     }
 
-    const [tasks, groups, drills, wrongs, reviewSchedules, report] = await Promise.all([
+    const [tasks, groups, drills, wrongs, reviewSchedules, report, systemPlan] = await Promise.all([
       readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),
       readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),
       readJsonl(`${DATA_ROOT}/${DATA_FILES.drills}`),
       readJsonl(`${DATA_ROOT}/${DATA_FILES.wrongs}`),
       readJson(`${DATA_ROOT}/${DATA_FILES.reviewSchedules}`),
       readJson(`${DATA_ROOT}/${DATA_FILES.parentReport}`),
+      readJson(`${DATA_ROOT}/${DATA_FILES.systemPlan}`),
     ]);
 
-    const data = { tasks, groups, drills, wrongs, reviewSchedules, report };
+    const data = { tasks, groups, drills, wrongs, reviewSchedules, report, systemPlan };
     wireButtons(data);
     renderTask(data, pickDisplayTask(tasks).task_id);
   } catch (error) {

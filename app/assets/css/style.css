@@ -3125,16 +3125,161 @@ body {
   background: linear-gradient(135deg, #ffffff, #fff7ed);
 }
 
+.system-plan-panel {
+  margin-top: 16px;
+}
+
+.system-week-grid,
+.system-subject-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.system-week-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.system-subject-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.system-day-card,
+.system-subject-card {
+  min-width: 0;
+  border: 1px solid rgba(21, 94, 117, 0.16);
+  border-radius: 8px;
+  padding: 12px;
+  background: #f7fbfd;
+}
+
+.system-day-card div,
+.system-subject-card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.system-day-card strong,
+.system-subject-card strong {
+  color: var(--primary-dark);
+}
+
+.system-day-card span,
+.system-subject-card span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.system-day-card p,
+.system-subject-card p {
+  margin: 8px 0;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.system-day-card small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.system-day-card.catchup {
+  border-color: rgba(194, 65, 12, 0.22);
+  background: #fff7ed;
+}
+
+.teacher-system-panel {
+  margin-bottom: 14px;
+}
+
+.teacher-system-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.teacher-system-card {
+  min-width: 0;
+  border: 1px solid rgba(21, 94, 117, 0.16);
+  border-radius: 8px;
+  padding: 12px;
+  background: #f7fbfd;
+}
+
+.teacher-system-card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.teacher-system-card strong {
+  color: var(--primary-dark);
+}
+
+.teacher-system-card span,
+.teacher-system-card small {
+  color: var(--muted);
+}
+
+.teacher-system-card p {
+  margin: 8px 0;
+  font-weight: 800;
+}
+
+.teacher-system-card small {
+  display: block;
+  line-height: 1.45;
+}
+
+.teacher-adjustment-box {
+  margin-top: 12px;
+  border: 1px solid rgba(194, 65, 12, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff7ed;
+}
+
+.teacher-adjustment-box ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.teacher-adjustment-box li + li {
+  margin-top: 4px;
+}
+
 @media (max-width: 760px) {
   .social-day-tab {
     min-width: min(100%, 220px);
     flex: 1 1 180px;
+  }
+
+  .system-week-grid,
+  .system-subject-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 900px) {
   .student-dashboard .student-today-card .quest-intel {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .system-week-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .system-subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-system-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -3144,6 +3289,12 @@ body {
   }
 
   .student-dashboard .student-today-card .quest-intel {
+    grid-template-columns: 1fr;
+  }
+
+  .system-week-grid,
+  .system-subject-grid,
+  .teacher-system-grid {
     grid-template-columns: 1fr;
   }
 }

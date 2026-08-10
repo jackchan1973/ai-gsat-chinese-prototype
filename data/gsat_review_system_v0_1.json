@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "id": "gsat_review_system_v0_1",
+    "title": "五科學測系統化複習地圖",
+    "version": "2026-08-10-system01",
+    "status": "approved_for_app",
+    "updated_at": "2026-08-10",
+    "purpose": "把國英數社自正式題庫納入同一套知識點、課綱能力、時間控管與角色儀表板規則。",
+    "time_control": {
+      "weekday_target_minutes": "45-60",
+      "friday_target_minutes": "30-45",
+      "weekend_target_minutes": "75-120",
+      "rule": "每日任務不只看題數，必須加總 estimated_minutes；平日超過 60 分鐘時，優先移走長題、文字題或錯題復活關。"
+    },
+    "quality_gate": {
+      "formal_question_required_status": "approved_for_app",
+      "required_review_grade": "A 或 B 修訂後複審通過",
+      "required_fields": [
+        "knowledge_tags",
+        "unit_tags",
+        "syllabus_tags",
+        "ability_tags",
+        "estimated_minutes",
+        "review_notes",
+        "error_codes",
+        "similarity_risk",
+        "review_strictness"
+      ],
+      "review_roles": [
+        "Question Agent",
+        "Review Agent",
+        "Gatekeeper",
+        "Program Agent"
+      ]
+    }
+  },
+  "weekly_plan": [
+    {
+      "weekday": "Mon",
+      "label": "週一",
+      "subjects": [
+        "國文",
+        "英文"
+      ],
+      "target_minutes": 56,
+      "student_view": "國文主線＋英文詞彙閱讀短練",
+      "rule": "不排長篇寫作；英文以語境與短閱讀為主。"
+    },
+    {
+      "weekday": "Tue",
+      "label": "週二",
+      "subjects": [
+        "數學",
+        "社會"
+      ],
+      "target_minutes": 46,
+      "student_view": "數學模型＋社會資料判讀",
+      "rule": "社會只排選擇與材料題，不排文字作答。"
+    },
+    {
+      "weekday": "Wed",
+      "label": "週三",
+      "subjects": [
+        "國文",
+        "自然"
+      ],
+      "target_minutes": 60,
+      "student_view": "國文主線＋自然圖表模型",
+      "rule": "若國文已有閱讀題組，當天錯題復活關移到週五。"
+    },
+    {
+      "weekday": "Thu",
+      "label": "週四",
+      "subjects": [
+        "英文",
+        "數學"
+      ],
+      "target_minutes": 34,
+      "student_view": "英文克漏字篇章＋數學機率統計",
+      "rule": "保留緩衝時間，給學生補週一到週三未完成題。"
+    },
+    {
+      "weekday": "Fri",
+      "label": "週五",
+      "subjects": [
+        "錯題",
+        "補漏"
+      ],
+      "target_minutes": 40,
+      "student_view": "錯題復活關與弱點補漏",
+      "rule": "不新增正式主線題；系統依錯題與未完成狀態抽題。"
+    },
+    {
+      "weekday": "Sat",
+      "label": "週六",
+      "subjects": [
+        "社會",
+        "自然"
+      ],
+      "target_minutes": 112,
+      "student_view": "社會長材料＋自然實驗整合",
+      "rule": "集中處理材料長、圖表多、需要文字表達的題型。"
+    },
+    {
+      "weekday": "Sun",
+      "label": "週日",
+      "subjects": [
+        "國文",
+        "英文",
+        "數學"
+      ],
+      "target_minutes": 120,
+      "student_view": "國文閱讀、英文寫作、數學混合推理",
+      "rule": "以整合題與跨單元檢查為主，作為一週收束。"
+    }
+  ],
+  "subject_maps": [
+    {
+      "subject": "國文",
+      "weekly_days": [
+        "Mon",
+        "Wed",
+        "Sun"
+      ],
+      "current_formal_count": 360,
+      "coverage_status": "可支撐 1 個月國文每日任務；仍需用近三年學測題型繼續補跨文本與混合題。",
+      "knowledge_units": [
+        {
+          "unit_id": "CH-U01",
+          "name": "字音字形與詞語語境",
+          "tags": [
+            "K01",
+            "K02"
+          ]
+        },
+        {
+          "unit_id": "CH-U02",
+          "name": "文言字義與古今轉用",
+          "tags": [
+            "K03",
+            "K10"
+          ]
+        },
+        {
+          "unit_id": "CH-U03",
+          "name": "文意推論與論證判斷",
+          "tags": [
+            "K05",
+            "K09",
+            "K14"
+          ]
+        },
+        {
+          "unit_id": "CH-U04",
+          "name": "跨材料比較與圖表判讀",
+          "tags": [
+            "K08",
+            "K12"
+          ]
+        },
+        {
+          "unit_id": "CH-U05",
+          "name": "短答統整與國寫前置",
+          "tags": [
+            "K15"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "英文",
+      "weekly_days": [
+        "Mon",
+        "Thu",
+        "Sun"
+      ],
+      "current_formal_count": 31,
+      "coverage_status": "適合 1 週正式複習；若要完整 1 個月，建議擴充到 120-150 題並補 4 篇閱讀與 4 次寫作。",
+      "knowledge_units": [
+        {
+          "unit_id": "EN-U01",
+          "name": "詞彙與語境",
+          "tags": [
+            "EN-VOC",
+            "EN-CONTEXT",
+            "EN-WORD"
+          ]
+        },
+        {
+          "unit_id": "EN-U02",
+          "name": "閱讀主旨、細節與推論",
+          "tags": [
+            "EN-READ",
+            "EN-MAIN",
+            "EN-DETAIL",
+            "EN-INFER"
+          ]
+        },
+        {
+          "unit_id": "EN-U03",
+          "name": "克漏字與篇章銜接",
+          "tags": [
+            "EN-CLOZE",
+            "EN-COHESION",
+            "EN-DISCOURSE",
+            "EN-STRUCTURE"
+          ]
+        },
+        {
+          "unit_id": "EN-U04",
+          "name": "翻譯、整合閱讀與寫作",
+          "tags": [
+            "EN-TRANS",
+            "EN-WRITE",
+            "EN-INTEGRATED"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "數學",
+      "weekly_days": [
+        "Tue",
+        "Thu",
+        "Sun"
+      ],
+      "current_formal_count": 12,
+      "coverage_status": "只夠 1 週診斷；若要完整 1 個月，建議擴充到 48-60 題並補函數、排列組合、統計、幾何向量完整輪次。",
+      "knowledge_units": [
+        {
+          "unit_id": "MA-U01",
+          "name": "數列遞迴與代數模型",
+          "tags": [
+            "MA-SEQ",
+            "MA-ALG",
+            "MA-MODEL"
+          ]
+        },
+        {
+          "unit_id": "MA-U02",
+          "name": "函數、圖形與方程",
+          "tags": [
+            "MA-FUNC"
+          ]
+        },
+        {
+          "unit_id": "MA-U03",
+          "name": "機率統計與資料判讀",
+          "tags": [
+            "MA-PROB",
+            "MA-STAT"
+          ]
+        },
+        {
+          "unit_id": "MA-U04",
+          "name": "平面、空間、向量與矩陣",
+          "tags": [
+            "MA-GEO2D",
+            "MA-GEO3D",
+            "MA-VEC",
+            "MA-MAT"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "社會",
+      "weekly_days": [
+        "Tue",
+        "Sat"
+      ],
+      "current_formal_count": 16,
+      "coverage_status": "適合 1 週材料判讀訓練；若要完整 1 個月，建議擴充到 64-80 題，歷史、地理、公民各自輪替且保留跨科題。",
+      "knowledge_units": [
+        {
+          "unit_id": "SO-U01",
+          "name": "地理：人口、區域與環境風險",
+          "tags": [
+            "SO-G02",
+            "SO-G04"
+          ]
+        },
+        {
+          "unit_id": "SO-U02",
+          "name": "公民：政策、法治、科技治理",
+          "tags": [
+            "SO-C03",
+            "SO-C06",
+            "SO-C07"
+          ]
+        },
+        {
+          "unit_id": "SO-U03",
+          "name": "歷史：社會變遷、產業與全球互動",
+          "tags": [
+            "SO-H06",
+            "SO-H08",
+            "SO-H09"
+          ]
+        },
+        {
+          "unit_id": "SO-U04",
+          "name": "經濟與社會資料判讀",
+          "tags": [
+            "SO-S05"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "自然",
+      "weekly_days": [
+        "Wed",
+        "Sat"
+      ],
+      "current_formal_count": 12,
+      "coverage_status": "只夠 1 週診斷；若要完整 1 個月，建議擴充到 48-60 題，物理、化學、生物、地科與探究實作都要輪替。",
+      "knowledge_units": [
+        {
+          "unit_id": "SC-U01",
+          "name": "物理：能量、力與圖形模型",
+          "tags": [
+            "SC-PHY"
+          ]
+        },
+        {
+          "unit_id": "SC-U02",
+          "name": "化學：物質、反應與能量",
+          "tags": [
+            "SC-CHEM"
+          ]
+        },
+        {
+          "unit_id": "SC-U03",
+          "name": "生物：生命現象與實驗資料",
+          "tags": [
+            "SC-BIO"
+          ]
+        },
+        {
+          "unit_id": "SC-U04",
+          "name": "地科：地球系統與圖表判讀",
+          "tags": [
+            "SC-EARTH"
+          ]
+        },
+        {
+          "unit_id": "SC-U05",
+          "name": "探究實作：變因、證據與結論",
+          "tags": [
+            "SC-INQ"
+          ]
+        }
+      ]
+    }
+  ],
+  "role_views": {
+    "student": {
+      "required_cards": [
+        "今日應做科目",
+        "題數",
+        "預估分鐘",
+        "完成進度",
+        "錯題復活關"
+      ],
+      "primary_question": "今天要做什麼、要花多久、完成了沒有。"
+    },
+    "parent": {
+      "required_cards": [
+        "本週完成率",
+        "平均每日時間",
+        "整體答對率",
+        "最弱 3 個知識點",
+        "是否按時完成"
+      ],
+      "primary_question": "孩子有沒有穩定完成，以及哪裡需要陪他補。"
+    },
+    "teacher": {
+      "required_cards": [
+        "全班完成率",
+        "未完成名單",
+        "題目錯誤率",
+        "知識點弱點排行",
+        "需要關注學生"
+      ],
+      "primary_question": "哪些學生沒做、全班卡在哪些題與知識點。"
+    },
+    "system": {
+      "adjustment_rules": [
+        "同一知識點連錯 2 次，下週提高該 tag 題目比例。",
+        "題目錯誤率超過 70%，交由 Review Agent 檢查題意與干擾選項。",
+        "單日實際時間超過目標 20%，下一次同日減少長題或改排週末。",
+        "文字題未完成率超過 40%，降低平日文字題比例，改放週末。"
+      ]
+    }
+  },
+  "one_month_readiness": {
+    "summary": "目前國文足夠 1 個月；英文、數學、社會、自然適合做第一週正式診斷與闖關示範，不足以支撐完整 1 個月不重複複習。",
+    "recommended_expansion": [
+      {
+        "subject": "英文",
+        "target_count": "120-150",
+        "priority": "閱讀、克漏字、篇章結構、翻譯與每週 1 題寫作"
+      },
+      {
+        "subject": "數學",
+        "target_count": "48-60",
+        "priority": "函數、機率統計、幾何向量、數列、混合建模"
+      },
+      {
+        "subject": "社會",
+        "target_count": "64-80",
+        "priority": "歷史、地理、公民三科輪替與跨科材料題"
+      },
+      {
+        "subject": "自然",
+        "target_count": "48-60",
+        "priority": "物理、化學、生物、地科、探究實作輪替"
+      }
+    ]
+  }
+}

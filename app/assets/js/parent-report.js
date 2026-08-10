@@ -295,6 +295,31 @@ function renderNextPlan(report) {
   `;
 }
 
+function renderFamilySystem(systemPlan) {
+  const status = document.getElementById("familySystemStatus");
+  const grid = document.getElementById("familySystemGrid");
+  if (!status || !grid || !systemPlan) return;
+
+  status.textContent = systemPlan.meta?.time_control?.weekday_target_minutes
+    ? `平日 ${systemPlan.meta.time_control.weekday_target_minutes} 分鐘`
+    : "已建立";
+
+  const readiness = systemPlan.one_month_readiness?.recommended_expansion || [];
+  grid.innerHTML = (systemPlan.subject_maps || [])
+    .map((subject) => {
+      const expansion = readiness.find((item) => item.subject === subject.subject);
+      const note = expansion ? `需擴充到 ${expansion.target_count} 題` : subject.coverage_status;
+      return `
+        <article class="report-info-card">
+          <p class="label">${escapeHtml(subject.subject)}</p>
+          <strong>${escapeHtml(subject.current_formal_count)} 題</strong>
+          <span>${escapeHtml(note)}</span>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 async function main() {
   if (!isLoggedIn()) {
     document.querySelector(".app-shell").innerHTML = `
@@ -308,10 +333,11 @@ async function main() {
   }
 
   wireClearProgressButton();
-  const [sampleReport, sampleWeaknesses, sampleSchedules] = await Promise.all([
+  const [sampleReport, sampleWeaknesses, sampleSchedules, systemPlan] = await Promise.all([
     readJson(`${DATA_ROOT}/parent_weekly_report.sample.json`),
     readJson(`${DATA_ROOT}/weaknesses.sample.json`),
     readJson(`${DATA_ROOT}/review_schedule.sample.json`),
+    readJson(`${DATA_ROOT}/gsat_review_system_v0_1.json?v=20260810-system01`),
   ]);
   const { report, weaknesses, schedules, dataSourceLabel } = buildStoredReportPayload(
     sampleReport,
@@ -334,6 +360,7 @@ async function main() {
   renderWeaknesses(report, weaknessMap);
   renderReviewPlan(report, schedules, weaknessMap);
   renderNextPlan(report);
+  renderFamilySystem(systemPlan);
 }
 
 main().catch((error) => {
