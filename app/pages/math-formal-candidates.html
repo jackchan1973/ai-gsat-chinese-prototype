@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview03" />
     <style>
       .candidate-page {
         background:
@@ -347,8 +347,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview02";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview02";
+      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview03";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview03";
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -456,7 +456,7 @@
       function formatMathText(value) {
         const raw = String(value || "");
         if (raw.includes("projection length")) return "正射影長 = (v · u) / |u|";
-        if (raw.includes("x_{n+1}=0.7x_n+12")) return "x_(n+1) = 0.7x_n + 12，x_0 = 100";
+        if (raw.includes("x_{n+1}=0.7x_n+12")) return "xₙ₊₁ = 0.7xₙ + 12，x₀ = 100";
         if (raw.includes("begin{bmatrix}2&-1")) return "A = [[2, -1], [1, 3]]";
         if (raw.includes("120") && raw.includes("frac{6}{10}") && raw.includes("-20")) {
           return "E = 120 × 6/10 × 5/9 + 30 × (2 × 6/10 × 4/9) - 20";
