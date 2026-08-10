@@ -1,4 +1,6 @@
 const DATA_ROOT = "../../data";
+const DATA_VERSION = "20260810-parent-file01";
+const REMOTE_DATA_ROOT = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data";
 const ANSWER_RECORDS_KEY = "chi_v1_answer_records";
 const WRONG_QUESTIONS_KEY = "chi_v1_wrong_questions";
 const WEAKNESSES_KEY = "chi_v1_weaknesses";
@@ -6,11 +8,31 @@ const REVIEW_SCHEDULE_KEY = "chi_v1_review_schedule";
 const ATTEMPT_KEY = "chi_v1_last_attempt";
 const LOCAL_PROGRESS_KEYS = [ATTEMPT_KEY, ANSWER_RECORDS_KEY, WRONG_QUESTIONS_KEY, WEAKNESSES_KEY, REVIEW_SCHEDULE_KEY];
 
-function readJson(path) {
-  return fetch(path).then((response) => {
-    if (!response.ok) throw new Error(`讀取失敗：${path}`);
-    return response.json();
-  });
+function withDataVersion(path) {
+  const joiner = path.includes("?") ? "&" : "?";
+  return `${path}${joiner}v=${DATA_VERSION}`;
+}
+
+function remoteDataUrl(path) {
+  const fileName = path.split("/").pop().split("?")[0];
+  return `${REMOTE_DATA_ROOT}/${fileName}`;
+}
+
+async function readJson(path) {
+  const urls = window.location.protocol === "file:"
+    ? [remoteDataUrl(path), path]
+    : [path, remoteDataUrl(path)];
+  const errors = [];
+  for (const url of urls) {
+    try {
+      const response = await fetch(withDataVersion(url));
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      errors.push(`${url}: ${error.message}`);
+    }
+  }
+  throw new Error(errors.join("；"));
 }
 
 function escapeHtml(value) {
@@ -325,8 +347,8 @@ async function main() {
     document.querySelector(".app-shell").innerHTML = `
       <section class="error-box">
         <h1>請先登入</h1>
-        <p>回首頁使用座號或導師帳號登入後，再查看週報。</p>
-        <p><a class="text-link" href="../index.html">回首頁登入</a></p>
+        <p>回闖關地圖使用座號或導師帳號登入後，再查看週報。</p>
+        <p><a class="text-link" href="../index.html">回闖關地圖登入</a></p>
       </section>
     `;
     return;
@@ -337,7 +359,7 @@ async function main() {
     readJson(`${DATA_ROOT}/parent_weekly_report.sample.json`),
     readJson(`${DATA_ROOT}/weaknesses.sample.json`),
     readJson(`${DATA_ROOT}/review_schedule.sample.json`),
-    readJson(`${DATA_ROOT}/gsat_review_system_v0_1.json?v=20260810-system01`),
+    readJson(`${DATA_ROOT}/gsat_review_system_v0_1.json`),
   ]);
   const { report, weaknesses, schedules, dataSourceLabel } = buildStoredReportPayload(
     sampleReport,
