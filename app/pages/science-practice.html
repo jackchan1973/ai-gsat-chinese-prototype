@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜自然科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
     <style>
       .science-practice-page { background: linear-gradient(180deg,#eef8f5 0,#f5f7fb 320px), var(--bg); color: var(--ink); }
       .science-practice-shell { max-width: 1120px; min-width:0; }
@@ -58,8 +58,8 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">自然主線</p>
-          <h1>自然科正式三關</h1>
-          <p class="muted-text">完成生命實驗、物理地科、能源環境三關，練圖表判讀與探究實作。</p>
+          <h1>自然科正式兩天</h1>
+          <p class="muted-text">週三做物理地科圖形模型，週六完成生命實驗、能源環境與探究實作長題。</p>
         </div>
         <a class="secondary-action link-action" href="../index.html">回闖關地圖</a>
       </header>
@@ -79,18 +79,20 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260810-audit02";
+      const DATA_VERSION = "20260810-weekend01";
       const LOCAL_DATA_URL = `../../data/science_formal_daily_tasks_v0_1.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_daily_tasks_v0_1.json?v=${DATA_VERSION}`;
       const taskTypeLabels = {
         life_experiment_data: "生命實驗關",
         physics_earth_diagrams: "物理地科關",
-        energy_environment_reasoning: "能源環境關"
+        energy_environment_reasoning: "能源環境關",
+        weekend_science_lab_synthesis: "週六自然整合關"
       };
       const badgeLabels = {
         life_experiment_data: "生命實驗徽章",
         physics_earth_diagrams: "模型判讀徽章",
-        energy_environment_reasoning: "能源環境徽章"
+        energy_environment_reasoning: "能源環境徽章",
+        weekend_science_lab_synthesis: "自然週末整合徽章"
       };
       let days = [];
       let activeDayId = "";

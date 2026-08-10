@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜自然正式題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
     <style>
       .science-page { background: linear-gradient(180deg,#102235 0,#17425a 240px,#f3f7fb 240px,#f3f7fb 100%); color: var(--ink); }
       .science-shell { max-width: 1120px; }
@@ -49,16 +49,16 @@
       <section class="science-alert"><strong>自然第三批已人工確認轉正式</strong><p>本批為自然科 AI 新題，已由使用者人工確認並轉為 approved_for_app；自然正式闖關讀取正式每日任務資料。</p></section>
       <section class="science-stats" id="summaryStats"></section>
       <section class="science-toolbar">
-        <select class="science-filter" id="weekdayFilter"><option value="all">全部星期</option><option value="Mon">週一</option><option value="Wed">週三</option><option value="Fri">週五</option></select>
+        <select class="science-filter" id="weekdayFilter"><option value="all">全部星期</option><option value="Wed">週三</option><option value="Sat">週六</option></select>
         <select class="science-filter" id="typeFilter"><option value="all">全部題型</option></select>
       </section>
       <section class="science-list" id="scienceList"></section>
     </main>
     <script>
-      const DATA_VERSION = "20260810-audit02";
+      const DATA_VERSION = "20260810-weekend01";
       const LOCAL_DATA_URL = `../../data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
-      const weekdayLabels = { Mon: "週一", Wed: "週三", Fri: "週五" };
+      const weekdayLabels = { Wed: "週三", Sat: "週六" };
       const statusLabels = { needs_human_review: "待人工審題", approved_for_app: "正式題", needs_revision: "需修訂" };
       let days = [];
       let questions = [];

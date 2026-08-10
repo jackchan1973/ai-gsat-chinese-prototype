@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
     <style>
       .english-practice-page {
         background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -257,8 +257,8 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">English mainline</p>
-          <h1>英文正式四關</h1>
-          <p class="muted-text">週一、週三、週五、週日完成詞彙、克漏字、閱讀與寫作整合挑戰。</p>
+          <h1>英文正式三天</h1>
+          <p class="muted-text">週一做詞彙短讀，週四做克漏字與篇章結構，週日完成閱讀推論與寫作整合。</p>
         </div>
         <a class="secondary-action link-action" href="../index.html">回闖關地圖</a>
       </header>
@@ -278,14 +278,15 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
-      const dayNames = { Mon: "週一", Wed: "週三", Fri: "週五", Sun: "週日" };
+      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-weekend01";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-weekend01";
+      const dayNames = { Mon: "週一", Thu: "週四", Sun: "週日" };
       const taskTypeLabels = {
         vocabulary_and_short_reading: "詞彙語境關",
         cloze_and_discourse: "克漏字結構關",
         reading_and_inference: "閱讀推論關",
-        translation_writing_integration: "寫作整合關"
+        translation_writing_integration: "寫作整合關",
+        weekend_reading_writing_integration: "閱讀寫作整合關"
       };
       const focusLabels = {
         "EN-VOC": "詞彙語境",

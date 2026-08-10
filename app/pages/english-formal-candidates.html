@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文正式題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
     <style>
       .candidate-page {
         background:
@@ -237,8 +237,7 @@
         <select class="candidate-filter" id="weekdayFilter" aria-label="星期篩選">
           <option value="all">全部星期</option>
           <option value="Mon">週一</option>
-          <option value="Wed">週三</option>
-          <option value="Fri">週五</option>
+          <option value="Thu">週四</option>
           <option value="Sun">週日</option>
         </select>
         <select class="candidate-filter" id="typeFilter" aria-label="題型篩選">
@@ -250,12 +249,11 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-audit02";
+      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-weekend01";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-weekend01";
       const weekdayLabels = {
         Mon: "週一",
-        Wed: "週三",
-        Fri: "週五",
+        Thu: "週四",
         Sun: "週日"
       };
       const statusLabels = {

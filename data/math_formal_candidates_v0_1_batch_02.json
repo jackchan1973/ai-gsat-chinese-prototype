@@ -7,9 +7,9 @@
     "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方數學 A/B 題與出版社解析僅用於分析題型、圖形材料、計算深度與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "數學正式闖關已開放：週二、週四、週六、週日完成代數模型、機率統計、圖形向量與混合推理。",
+    "app_integration_policy": "數學正式闖關改為週二、週四、週日；週日集中圖形向量與混合推理。",
     "batch_plan": {
-      "target_days": 4,
+      "target_days": 3,
       "target_questions": 12,
       "short_answer_count": 2,
       "status": "approved_for_app",
@@ -24,11 +24,11 @@
       "allowed_weekdays": [
         "Tue",
         "Thu",
-        "Sat",
         "Sun"
       ],
       "written_response_day_only": "Sun",
-      "timezone": "Asia/Shanghai"
+      "timezone": "Asia/Shanghai",
+      "weekend_load_policy": "週六不排數學；週日集中圖形向量、混合推理與短答。"
     },
     "approved_for_app_at": "2026-08-10",
     "gatekeeper_decision": "user_requested_formal_daily_task_integration",
@@ -54,6 +54,10 @@
     {
       "level": "review_trace_completed",
       "note": "已補齊正式題審題欄位；error_codes 空陣列代表本次審題未發現錯誤。"
+    },
+    {
+      "level": "schedule_rebalanced",
+      "note": "數學週六圖形向量併入週日，平日保留週二與週四。"
     }
   ],
   "weeks": [
@@ -154,8 +158,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Tue"
             },
             {
               "subject": "數學",
@@ -252,8 +263,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Tue"
             },
             {
               "subject": "數學",
@@ -334,8 +352,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Tue"
             }
           ]
         },
@@ -475,8 +500,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "subject": "數學",
@@ -554,8 +586,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "subject": "數學",
@@ -609,21 +648,28 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             }
           ]
         },
         {
-          "day_id": "MA-FC-V01-B02-SAT",
-          "label": "週六：圖形、幾何與向量",
-          "weekday": "Sat",
-          "task_type": "geometry_vector_graph",
+          "day_id": "MA-FC-V01-B02-SUN",
+          "label": "週日：圖形向量與混合推理",
+          "weekday": "Sun",
+          "task_type": "weekend_geometry_mixed_reasoning",
           "planned_focus": [
-            "MA-GEO2D",
-            "MA-GEO3D",
-            "MA-VEC",
-            "MA-MAT"
+            "MA-FUNC",
+            "MA-PROB",
+            "MA-MODEL",
+            "MA-A8"
           ],
           "status": "approved_for_app",
           "day_materials": [
@@ -631,6 +677,11 @@
               "type": "note",
               "title": "本日重點",
               "content": "圖形題必須由圖與題目共同提供資訊；圖形不得超框或與文字重疊。"
+            },
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "週日可放需要文字說明或步驟的短答題，並搭配必要圖表。"
             }
           ],
           "question_slots": [
@@ -733,8 +784,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "subject": "數學",
@@ -823,8 +881,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "subject": "數學",
@@ -912,31 +977,16 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
-            }
-          ]
-        },
-        {
-          "day_id": "MA-FC-V01-B02-SUN",
-          "label": "週日：混合推理與非選表達",
-          "weekday": "Sun",
-          "task_type": "mixed_reasoning_written",
-          "planned_focus": [
-            "MA-FUNC",
-            "MA-PROB",
-            "MA-MODEL",
-            "MA-A8"
-          ],
-          "status": "approved_for_app",
-          "day_materials": [
-            {
-              "type": "note",
-              "title": "本日重點",
-              "content": "週日可放需要文字說明或步驟的短答題，並搭配必要圖表。"
-            }
-          ],
-          "question_slots": [
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
+            },
             {
               "subject": "數學",
               "mode": "學測",
@@ -1022,8 +1072,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "subject": "數學",
@@ -1110,8 +1167,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
-              }
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "subject": "數學",
@@ -1166,7 +1230,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。"
+                "note": "數學正式題已檢查答案、選項、圖表規格、解析與週日短答限制。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "revision_history": [
                 {
@@ -1174,9 +1239,16 @@
                   "action": "fix_integer_bike_count",
                   "note": "將共享單車答案由 38.8 輛修為最接近整數 39 輛，避免生活語意不自然。"
                 }
-              ]
+              ],
+              "allowed_weekdays": [
+                "Tue",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             }
-          ]
+          ],
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
         }
       ]
     }

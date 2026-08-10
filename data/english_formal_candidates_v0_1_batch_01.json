@@ -7,9 +7,9 @@
     "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方英文題與出版社解析僅用於分析題型、閱讀量、解析深度與評分規準；本批材料、題目、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "batch_01 已通過 AI 審題與 Gatekeeper 檢查，可作為英文科正式題庫預覽；正式每日任務接入前仍可依學生回饋微調。",
+    "app_integration_policy": "英文正式闖關改為週一、週四、週日：平日控制在一小時內，週日承接閱讀推論與一週唯一寫作題。",
     "batch_plan": {
-      "target_days": 4,
+      "target_days": 3,
       "target_questions": 31,
       "written_response_count": 1,
       "status": "approved_for_app",
@@ -25,14 +25,14 @@
     "schedule_rule": {
       "allowed_weekdays": [
         "Mon",
-        "Wed",
-        "Fri",
+        "Thu",
         "Sun"
       ],
       "written_response_day_only": "Sun",
       "timezone": "Asia/Shanghai",
       "written_response_limit_per_week": 1,
-      "writing_question_count_per_week": 1
+      "writing_question_count_per_week": 1,
+      "weekend_load_policy": "平日只排週一、週四；週日承接閱讀推論與唯一寫作題。"
     },
     "approved_at": "2026-08-10",
     "review_decision": {
@@ -68,6 +68,10 @@
     {
       "level": "learner_support_added",
       "note": "已為英文閱讀材料加入中文翻譯，方便高中生先理解文章脈絡，再回到英文題目作答。"
+    },
+    {
+      "level": "schedule_rebalanced",
+      "note": "英文週三改週四，週五閱讀併入週日，維持一週 1 題寫作且只在週日。"
     }
   ],
   "weeks": [
@@ -167,8 +171,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q02",
@@ -242,8 +253,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q03",
@@ -317,8 +335,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q04",
@@ -392,8 +417,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q05",
@@ -467,8 +499,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q06",
@@ -542,8 +581,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q07",
@@ -617,8 +663,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q08",
@@ -692,17 +745,24 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon"
             }
           ],
           "approved_at": "2026-08-10",
           "gatekeeper_status": "approved_for_app"
         },
         {
-          "day_id": "EN-FC-V01-B01-WED",
-          "label": "週三：綜合測驗與篇章結構",
-          "weekday": "Wed",
+          "day_id": "EN-FC-V01-B01-THU",
+          "label": "週四：綜合測驗與篇章結構",
+          "weekday": "Thu",
           "task_type": "cloze_and_discourse",
           "planned_focus": [
             "EN-CLOZE",
@@ -791,8 +851,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q02",
@@ -866,8 +933,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q03",
@@ -941,8 +1015,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q04",
@@ -1016,8 +1097,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q05",
@@ -1091,8 +1179,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q06",
@@ -1166,8 +1261,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q07",
@@ -1241,8 +1343,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q08",
@@ -1316,8 +1425,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q09",
@@ -1391,22 +1507,29 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu"
             }
           ],
           "approved_at": "2026-08-10",
           "gatekeeper_status": "approved_for_app"
         },
         {
-          "day_id": "EN-FC-V01-B01-FRI",
-          "label": "週五：閱讀測驗與推論",
-          "weekday": "Fri",
-          "task_type": "reading_and_inference",
+          "day_id": "EN-FC-V01-B01-SUN",
+          "label": "週日：閱讀推論、翻譯判斷與寫作整合",
+          "weekday": "Sun",
+          "task_type": "weekend_reading_writing_integration",
           "planned_focus": [
-            "EN-READ",
-            "EN-INFER",
-            "EN-COMPARE"
+            "EN-TRANS",
+            "EN-WRITE",
+            "EN-INTEGRATED"
           ],
           "status": "approved_for_app",
           "day_materials": [
@@ -1421,6 +1544,12 @@
               "title": "Material B: Sleep and Study",
               "content": "Many students believe that studying late into the night is a sign of effort. They may feel proud when they keep their desk lamp on after everyone else has gone to bed. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. In other words, rest is not simply a break from learning; it is part of how learning becomes stable.\n\nThis does not mean students should stop reviewing before bed. A short review of vocabulary, formulas, or key ideas can be helpful because it gives the brain material to organize. The problem begins when students replace sleep with extra hours of unfocused study. Without enough rest, attention drops the next day, and mistakes become more likely even on familiar questions. The question, then, is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned. A strong plan may include both effort and recovery. Researchers also point out that sleep affects emotional control. A tired student may read a question carelessly, give up too soon, or choose an answer without checking the evidence. Enough rest therefore supports both memory and judgment, two abilities that matter in reading tests.",
               "translation_zh": "許多學生認為讀到深夜是努力的象徵。當所有人都睡了，自己仍讓書桌燈亮著時，他們可能會感到自豪。然而，睡眠研究者提醒，記憶不像一個可以不休息就一直塞滿的收納箱。睡眠時，大腦會強化有用的連結，並清除比較不重要的細節。換句話說，休息不只是學習的中斷；它是讓學習變穩定的一部分。\n\n這不表示學生睡前不該複習。簡短複習單字、公式或重點概念可能有幫助，因為它提供大腦可整理的材料。問題出現在學生用額外且不專注的讀書時間取代睡眠。休息不足時，隔天注意力會下降，即使是熟悉的題目也更容易出錯。因此，問題不是學生該不該努力，而是讀書計畫是否給大腦時間整理已學內容。一個好的計畫可以同時包含努力與恢復。研究者也指出，睡眠會影響情緒控制。疲倦的學生可能粗心讀題、太快放棄，或沒有檢查證據就選答案。因此，充足休息同時支持記憶與判斷，而這兩種能力在閱讀測驗中都很重要。"
+            },
+            {
+              "type": "integrated",
+              "title": "Material: A Campus Language Day",
+              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. They believe that students are more willing to speak when the task has a real listener and a concrete purpose.\n\nThe planning team also wants students to explain local culture in simple English. One group may introduce a night market snack, another may explain a temple festival, and another may describe how students use public bikes to get around the city. Before the event, each group must prepare a short script, two useful pictures, and three possible questions visitors may ask. Teachers will not grade students only on pronunciation. They will also check whether the speaker can organize ideas, respond politely, and help visitors understand something about local life. The event is designed to show that English is not only a subject, but also a tool for sharing experience. To make the preparation more realistic, students must practice with classmates who have not seen their scripts. If the listeners look confused, the speakers have to change their examples or use simpler words. This rehearsal helps students understand that communication is not the same as memorizing a perfect paragraph. It requires noticing the listener and adjusting the message.",
+              "translation_zh": "一所學校規劃 Language Day，幫助學生在課本練習之外使用英文。活動包括上午的海報走讀、學生短講，以及讓訪客用英文提問的攤位。老師希望學生重視清楚溝通，而不是艱難單字。他們相信，當任務有真實聽眾和具體目的時，學生會更願意開口說英文。\n\n籌備團隊也希望學生能用簡單英文介紹在地文化。一組可能介紹夜市小吃，另一組可能說明廟會活動，還有一組可能描述學生如何使用公共自行車在城市移動。活動前，每組都必須準備一份短講稿、兩張有用圖片，以及訪客可能提出的三個問題。老師不會只用發音評分，也會檢查講者是否能組織想法、禮貌回應，並幫助訪客理解在地生活。這個活動的設計是為了顯示，英文不只是學科，也是分享經驗的工具。為了讓準備更接近真實情境，學生必須和沒有看過講稿的同學練習。如果聽眾看起來困惑，講者就必須更換例子或使用更簡單的詞。這樣的演練幫助學生理解，溝通不等於背熟一段完美文章；它需要注意聽眾，並調整訊息。"
             }
           ],
           "question_slots": [
@@ -1496,8 +1625,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q02",
@@ -1571,8 +1707,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q03",
@@ -1646,8 +1789,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q04",
@@ -1721,8 +1871,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q05",
@@ -1796,8 +1953,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q06",
@@ -1871,8 +2035,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q07",
@@ -1946,8 +2117,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q08",
@@ -2021,33 +2199,16 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
-            }
-          ],
-          "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
-        },
-        {
-          "day_id": "EN-FC-V01-B01-SUN",
-          "label": "週日：翻譯判斷、寫作與整合表達",
-          "weekday": "Sun",
-          "task_type": "translation_writing_and_integrated",
-          "planned_focus": [
-            "EN-TRANS",
-            "EN-WRITE",
-            "EN-INTEGRATED"
-          ],
-          "status": "approved_for_app",
-          "day_materials": [
-            {
-              "type": "integrated",
-              "title": "Material: A Campus Language Day",
-              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. They believe that students are more willing to speak when the task has a real listener and a concrete purpose.\n\nThe planning team also wants students to explain local culture in simple English. One group may introduce a night market snack, another may explain a temple festival, and another may describe how students use public bikes to get around the city. Before the event, each group must prepare a short script, two useful pictures, and three possible questions visitors may ask. Teachers will not grade students only on pronunciation. They will also check whether the speaker can organize ideas, respond politely, and help visitors understand something about local life. The event is designed to show that English is not only a subject, but also a tool for sharing experience. To make the preparation more realistic, students must practice with classmates who have not seen their scripts. If the listeners look confused, the speakers have to change their examples or use simpler words. This rehearsal helps students understand that communication is not the same as memorizing a perfect paragraph. It requires noticing the listener and adjusting the message.",
-              "translation_zh": "一所學校規劃 Language Day，幫助學生在課本練習之外使用英文。活動包括上午的海報走讀、學生短講，以及讓訪客用英文提問的攤位。老師希望學生重視清楚溝通，而不是艱難單字。他們相信，當任務有真實聽眾和具體目的時，學生會更願意開口說英文。\n\n籌備團隊也希望學生能用簡單英文介紹在地文化。一組可能介紹夜市小吃，另一組可能說明廟會活動，還有一組可能描述學生如何使用公共自行車在城市移動。活動前，每組都必須準備一份短講稿、兩張有用圖片，以及訪客可能提出的三個問題。老師不會只用發音評分，也會檢查講者是否能組織想法、禮貌回應，並幫助訪客理解在地生活。這個活動的設計是為了顯示，英文不只是學科，也是分享經驗的工具。為了讓準備更接近真實情境，學生必須和沒有看過講稿的同學練習。如果聽眾看起來困惑，講者就必須更換例子或使用更簡單的詞。這樣的演練幫助學生理解，溝通不等於背熟一段完美文章；它需要注意聽眾，並調整訊息。"
-            }
-          ],
-          "question_slots": [
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
+            },
             {
               "id": "EN-FC-V01-B01-SUN-Q01",
               "subject": "英文",
@@ -2121,8 +2282,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q02",
@@ -2197,8 +2365,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q03",
@@ -2255,8 +2430,16 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "written_response_day_only": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q04",
@@ -2330,8 +2513,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q05",
@@ -2405,8 +2595,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q06",
@@ -2480,12 +2677,20 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。"
-              }
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun"
             }
           ],
           "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
+          "gatekeeper_status": "approved_for_app",
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
         }
       ]
     }

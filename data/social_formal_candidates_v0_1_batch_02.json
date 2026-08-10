@@ -7,9 +7,9 @@
     "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "官方歷年題只用於分析題型、類別、題目長度與資料形式；本批題目、材料、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "batch_02 已由使用者指定接入正式小程式；程式可讀取 approved_for_app 題目。",
+    "app_integration_policy": "社會正式闖關改為週二輕量資料判讀、週六長題與文字整合。",
     "batch_plan": {
-      "target_days": 3,
+      "target_days": 2,
       "target_questions": 16,
       "written_response_count": 2,
       "status": "approved_for_app",
@@ -22,15 +22,14 @@
     "schedule_rule": {
       "allowed_weekdays": [
         "Tue",
-        "Thu",
         "Sat"
       ],
       "written_response_day_only": "Sat",
       "no_written_response_days": [
-        "Tue",
-        "Thu"
+        "Tue"
       ],
-      "timezone": "Asia/Shanghai"
+      "timezone": "Asia/Shanghai",
+      "weekend_load_policy": "週四社會移到週六，週六可放材料長題與文字作答。"
     },
     "approved_at": "2026-08-10",
     "gatekeeper_record": {
@@ -44,7 +43,7 @@
       "gatekeeper_status": "approved_for_app",
       "decided_at": "2026-08-10",
       "basis": [
-        "週二週四無文字作答，週六 2 題文字作答",
+        "週二無文字作答，週六 2 題文字作答",
         "材料題與多選題符合社會科資料判讀方向",
         "使用者確認接入正式任務後補齊審題追蹤欄位"
       ]
@@ -70,6 +69,10 @@
     {
       "level": "b_rechecked_to_a",
       "note": "社會 batch_02 原初審 B 題已補強確認，正式審題等級統一標為 A。"
+    },
+    {
+      "level": "schedule_rebalanced",
+      "note": "社會週四題組併入週六，平日只保留週二輕量練習。"
     }
   ],
   "weeks": [
@@ -176,7 +179,8 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Tue"
+                "Tue",
+                "Sat"
               ],
               "preferred_weekday": "Tue",
               "requires_written_response": false,
@@ -211,7 +215,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -271,7 +276,8 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Tue"
+                "Tue",
+                "Sat"
               ],
               "preferred_weekday": "Tue",
               "requires_written_response": false,
@@ -310,7 +316,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -364,7 +371,8 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Tue"
+                "Tue",
+                "Sat"
               ],
               "preferred_weekday": "Tue",
               "requires_written_response": false,
@@ -399,7 +407,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -459,7 +468,8 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Tue"
+                "Tue",
+                "Sat"
               ],
               "preferred_weekday": "Tue",
               "requires_written_response": false,
@@ -494,7 +504,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -548,7 +559,8 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Tue"
+                "Tue",
+                "Sat"
               ],
               "preferred_weekday": "Tue",
               "requires_written_response": false,
@@ -583,7 +595,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             }
@@ -592,14 +605,14 @@
           "gatekeeper_status": "approved_for_app"
         },
         {
-          "day_id": "SO-FC-V01-B02-W01-THU",
-          "label": "第2批週四",
-          "weekday": "Thu",
-          "task_type": "cross_domain_and_chart_reading",
+          "day_id": "SO-FC-V01-B02-W01-SAT",
+          "label": "週六：AI 勞動、糧食風險與文字整合",
+          "weekday": "Sat",
+          "task_type": "weekend_social_synthesis",
           "planned_focus": [
-            "SO-C07",
-            "SO-S05",
-            "SO-H08"
+            "SO-G04",
+            "SO-C03",
+            "SO-H09"
           ],
           "status": "approved_for_app",
           "day_materials": [
@@ -635,6 +648,41 @@
                   "速度最快且成本較低",
                   "黑箱決策、難以申訴、可能歧視",
                   "高風險職缺禁止或嚴格限制"
+                ]
+              ]
+            },
+            {
+              "type": "text",
+              "title": "材料一：糧食供應、氣候風險與進口依賴",
+              "content": "某海島城市糧食自給率偏低，主食與飼料多仰賴進口。近年因出口國乾旱、海運成本上升與國際價格波動，市府開始討論糧食安全政策。農民團體主張保留近郊農地與水利設施，港口物流業者希望擴大冷鏈倉儲，消費者團體則關心低收入家庭能否承擔食物價格上漲。市府提出三項工具：提高安全存糧、補助耐旱作物與節水灌溉、建立弱勢家庭食物券。此議題同時牽涉全球貿易、地方土地使用、氣候調適與社會公平。若只以最低價格進口為目標，可能忽略供應中斷與分配不均風險。"
+            },
+            {
+              "type": "table",
+              "title": "材料二：三種糧食政策工具比較",
+              "rows": [
+                [
+                  "工具",
+                  "主要效果",
+                  "主要限制",
+                  "較直接受影響者"
+                ],
+                [
+                  "安全存糧",
+                  "短期穩定供應，緩衝進口中斷",
+                  "倉儲成本高，需輪替管理",
+                  "政府、物流業者、消費者"
+                ],
+                [
+                  "耐旱作物與節水灌溉",
+                  "降低氣候乾旱對本地生產衝擊",
+                  "轉作需要技術與市場支持",
+                  "農民、水利單位"
+                ],
+                [
+                  "弱勢食物券",
+                  "降低價格上漲對低收入家庭衝擊",
+                  "需設定資格與防止標籤化",
+                  "低收入家庭、社福單位"
                 ]
               ]
             }
@@ -690,9 +738,10 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Thu"
+                "Tue",
+                "Sat"
               ],
-              "preferred_weekday": "Thu",
+              "preferred_weekday": "Sat",
               "requires_written_response": false,
               "written_response_day_only": "",
               "ai_scoring_required": false,
@@ -725,7 +774,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -785,9 +835,10 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Thu"
+                "Tue",
+                "Sat"
               ],
-              "preferred_weekday": "Thu",
+              "preferred_weekday": "Sat",
               "requires_written_response": false,
               "written_response_day_only": "",
               "ai_scoring_required": false,
@@ -824,7 +875,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -878,9 +930,10 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Thu"
+                "Tue",
+                "Sat"
               ],
-              "preferred_weekday": "Thu",
+              "preferred_weekday": "Sat",
               "requires_written_response": false,
               "written_response_day_only": "",
               "ai_scoring_required": false,
@@ -913,7 +966,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -973,9 +1027,10 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Thu"
+                "Tue",
+                "Sat"
               ],
-              "preferred_weekday": "Thu",
+              "preferred_weekday": "Sat",
               "requires_written_response": false,
               "written_response_day_only": "",
               "ai_scoring_required": false,
@@ -1012,7 +1067,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -1066,9 +1122,10 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
-                "Thu"
+                "Tue",
+                "Sat"
               ],
-              "preferred_weekday": "Thu",
+              "preferred_weekday": "Sat",
               "requires_written_response": false,
               "written_response_day_only": "",
               "ai_scoring_required": false,
@@ -1101,63 +1158,11 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
-            }
-          ],
-          "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
-        },
-        {
-          "day_id": "SO-FC-V01-B02-W01-SAT",
-          "label": "第2批週六",
-          "weekday": "Sat",
-          "task_type": "weekly_synthesis",
-          "planned_focus": [
-            "SO-G04",
-            "SO-C03",
-            "SO-H09"
-          ],
-          "status": "approved_for_app",
-          "day_materials": [
-            {
-              "type": "text",
-              "title": "材料一：糧食供應、氣候風險與進口依賴",
-              "content": "某海島城市糧食自給率偏低，主食與飼料多仰賴進口。近年因出口國乾旱、海運成本上升與國際價格波動，市府開始討論糧食安全政策。農民團體主張保留近郊農地與水利設施，港口物流業者希望擴大冷鏈倉儲，消費者團體則關心低收入家庭能否承擔食物價格上漲。市府提出三項工具：提高安全存糧、補助耐旱作物與節水灌溉、建立弱勢家庭食物券。此議題同時牽涉全球貿易、地方土地使用、氣候調適與社會公平。若只以最低價格進口為目標，可能忽略供應中斷與分配不均風險。"
             },
-            {
-              "type": "table",
-              "title": "材料二：三種糧食政策工具比較",
-              "rows": [
-                [
-                  "工具",
-                  "主要效果",
-                  "主要限制",
-                  "較直接受影響者"
-                ],
-                [
-                  "安全存糧",
-                  "短期穩定供應，緩衝進口中斷",
-                  "倉儲成本高，需輪替管理",
-                  "政府、物流業者、消費者"
-                ],
-                [
-                  "耐旱作物與節水灌溉",
-                  "降低氣候乾旱對本地生產衝擊",
-                  "轉作需要技術與市場支持",
-                  "農民、水利單位"
-                ],
-                [
-                  "弱勢食物券",
-                  "降低價格上漲對低收入家庭衝擊",
-                  "需設定資格與防止標籤化",
-                  "低收入家庭、社福單位"
-                ]
-              ]
-            }
-          ],
-          "question_slots": [
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q01",
               "subject": "社會",
@@ -1208,6 +1213,7 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
+                "Tue",
                 "Sat"
               ],
               "preferred_weekday": "Sat",
@@ -1243,7 +1249,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -1303,6 +1310,7 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
+                "Tue",
                 "Sat"
               ],
               "preferred_weekday": "Sat",
@@ -1342,7 +1350,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -1396,6 +1405,7 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
+                "Tue",
                 "Sat"
               ],
               "preferred_weekday": "Sat",
@@ -1435,7 +1445,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -1495,6 +1506,7 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
+                "Tue",
                 "Sat"
               ],
               "preferred_weekday": "Sat",
@@ -1534,7 +1546,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -1572,6 +1585,7 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
+                "Tue",
                 "Sat"
               ],
               "preferred_weekday": "Sat",
@@ -1608,7 +1622,8 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             },
@@ -1645,6 +1660,7 @@
               "error_codes": [],
               "similarity_risk": "低",
               "allowed_weekdays": [
+                "Tue",
                 "Sat"
               ],
               "preferred_weekday": "Sat",
@@ -1680,13 +1696,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。"
+                "note": "社會正式題由初審 B 題完成補強確認後轉 A 級正式題；已檢查材料依據、答案唯一、短答週六限制與資料判讀深度。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
               },
               "initial_review_grade": "B"
             }
           ],
           "approved_at": "2026-08-10",
-          "gatekeeper_status": "approved_for_app"
+          "gatekeeper_status": "approved_for_app",
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
         }
       ]
     }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-audit02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-weekend01" />
     <style>
       .candidate-page {
         background:
@@ -362,14 +362,14 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">數學主線</p>
-          <h1 id="pageTitle">數學科正式四關</h1>
+          <h1 id="pageTitle">數學科正式三天</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
       <section class="candidate-alert" aria-label="題庫狀態">
         <strong id="statusTitle">數學 batch_02 已接入正式每日任務</strong>
-        <p id="statusCopy">週二、週四、週六、週日完成代數模型、機率統計、圖形向量與混合推理四關。</p>
+        <p id="statusCopy">週二、週四控制平日練習量，週日集中圖形向量與混合推理。</p>
       </section>
 
       <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
@@ -379,7 +379,6 @@
           <option value="all">全部星期</option>
           <option value="Tue">週二</option>
           <option value="Thu">週四</option>
-          <option value="Sat">週六</option>
           <option value="Sun">週日</option>
         </select>
         <select class="candidate-filter" id="trackFilter" aria-label="數學 A B 篩選">
@@ -400,13 +399,12 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260810-audit02";
+      const DATA_VERSION = "20260810-weekend01";
       const LOCAL_DATA_URL = `../../data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
-        Sat: "週六",
         Sun: "週日"
       };
       const statusLabels = {
@@ -419,7 +417,8 @@
         algebra_function_model: "代數、函數與模型",
         probability_statistics_data: "機率統計與資料判讀",
         geometry_vector_graph: "圖形、幾何與向量",
-        mixed_reasoning_written: "混合推理與非選表達"
+        mixed_reasoning_written: "混合推理與非選表達",
+        weekend_geometry_mixed_reasoning: "週日圖形與混合推理"
       };
       let days = [];
       let questions = [];
@@ -1175,9 +1174,9 @@
 
       async function init() {
         const data = await loadCandidateData();
-        document.getElementById("pageTitle").textContent = "數學科正式四關";
+        document.getElementById("pageTitle").textContent = "數學科正式三天";
         document.getElementById("statusTitle").textContent = "數學 batch_02 已接入正式每日任務";
-        document.getElementById("statusCopy").textContent = data.meta?.app_integration_policy || "週二、週四、週六、週日完成數學正式闖關。";
+        document.getElementById("statusCopy").textContent = data.meta?.app_integration_policy || "週二、週四、週日完成數學正式闖關。";
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();

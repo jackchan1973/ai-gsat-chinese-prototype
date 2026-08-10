@@ -1,5 +1,5 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260810-audit02";
+const DATA_VERSION = "20260810-weekend01";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",

@@ -7,9 +7,9 @@
     "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方自然題與評分原則僅用於分析題型、圖表材料、實驗設計與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "自然 batch_03 已由使用者人工確認並轉為正式，可作為自然科正式題庫來源。",
+    "app_integration_policy": "自然 batch_03 正式題庫改為週三輕量、週六長題的週末集中節奏。",
     "batch_plan": {
-      "target_days": 3,
+      "target_days": 2,
       "target_questions": 12,
       "short_answer_count": 1,
       "status": "approved_for_app",
@@ -21,11 +21,11 @@
     },
     "schedule_rule": {
       "allowed_weekdays": [
-        "Mon",
         "Wed",
-        "Fri"
+        "Sat"
       ],
-      "timezone": "Asia/Shanghai"
+      "timezone": "Asia/Shanghai",
+      "weekend_load_policy": "週一與週五自然移到週六，週三只保留一組圖形模型輕量練習。"
     },
     "approved_for_app_at": "2026-08-10",
     "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。"
@@ -46,6 +46,10 @@
     {
       "level": "human_confirmed_formal",
       "note": "2026-08-10 使用者人工確認自然 batch_03 轉為 approved_for_app。"
+    },
+    {
+      "level": "schedule_rebalanced",
+      "note": "自然週一與週五併入週六，週三保留平日輕量圖表判讀。"
     }
   ],
   "weeks": [
@@ -54,10 +58,422 @@
       "label": "自然第3批第1週",
       "days": [
         {
-          "day_id": "SC-FC-V01-B03-MON",
-          "label": "週一：生命與實驗資料",
-          "weekday": "Mon",
-          "task_type": "life_experiment_data",
+          "day_id": "SC-FC-V01-B03-WED",
+          "label": "週三：物理與地科圖形模型",
+          "weekday": "Wed",
+          "task_type": "physics_earth_diagrams",
+          "planned_focus": [
+            "SC-PHY",
+            "SC-EARTH",
+            "SC-INQ"
+          ],
+          "status": "approved_for_app",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "用流程圖與折線圖判斷能量轉換、天氣變化與地科現象。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B03-WED-Q01",
+              "science_domains": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "下圖為手搖發電機點亮燈泡的能量轉換示意。哪一項描述最合理？",
+              "materials": [
+                {
+                  "type": "process_diagram",
+                  "title": "手搖發電機能量轉換",
+                  "steps": [
+                    "手部作功",
+                    "線圈轉動",
+                    "產生電能",
+                    "燈泡發光與發熱"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "機械能可經發電機轉為電能，再轉為光與熱"
+                },
+                {
+                  "key": "B",
+                  "text": "燈泡發光不需要任何能量轉換"
+                },
+                {
+                  "key": "C",
+                  "text": "電能會憑空產生，不需手部作功"
+                },
+                {
+                  "key": "D",
+                  "text": "所有輸入能量都會百分之百轉為可見光"
+                },
+                {
+                  "key": "E",
+                  "text": "線圈轉動會使能量完全消失"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "流程圖顯示手部作功使線圈轉動，發電機產生電能，燈泡再將部分電能轉成光與熱。能量形式改變，但不會憑空產生或完全消失。",
+              "review_advice": "流程圖題要按順序追蹤能量形式，不要把效率誤認為百分之百。",
+              "review_notes": [
+                "Question Agent：以 AI 新製流程圖測能量轉換。",
+                "Review Agent：答案唯一，圖文結合足夠。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Wed"
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B03-WED-Q02",
+              "science_domains": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A5"
+              ],
+              "stem": "某地 24 小時氣壓與天氣紀錄如下。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "氣壓與天氣紀錄",
+                  "columns": [
+                    "0 時",
+                    "6 時",
+                    "12 時",
+                    "18 時"
+                  ],
+                  "row_header": "項目",
+                  "rows": [
+                    {
+                      "label": "氣壓（hPa）",
+                      "values": [
+                        "1014",
+                        "1009",
+                        "1003",
+                        "1005"
+                      ]
+                    },
+                    {
+                      "label": "天氣",
+                      "values": [
+                        "多雲",
+                        "陰",
+                        "降雨",
+                        "雨勢減弱"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "0 到 12 時氣壓下降，天氣轉為降雨"
+                },
+                {
+                  "key": "B",
+                  "text": "18 時氣壓比 12 時略回升，雨勢減弱"
+                },
+                {
+                  "key": "C",
+                  "text": "氣壓下降必定代表當地發生地震"
+                },
+                {
+                  "key": "D",
+                  "text": "此資料顯示 12 時氣壓最高"
+                },
+                {
+                  "key": "E",
+                  "text": "四個時間的天氣完全相同"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "氣壓由 1014 降至 1003 hPa 的過程中，天氣由多雲、陰轉為降雨；18 時氣壓回升至 1005 hPa，雨勢也減弱。資料不支持地震或天氣完全相同的說法。",
+              "review_advice": "天氣資料題要同時看氣壓趨勢和天氣紀錄，不要把相關變化誇大為必然原因。",
+              "review_notes": [
+                "Question Agent：以 AI 新製氣象表格測資料整合。",
+                "Review Agent：正答 2 項明確，避免過度因果推論。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Wed"
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B03-WED-Q03",
+              "science_domains": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某車沿直線移動，速度隨時間變化如下。哪一項最符合 0 至 6 秒的運動？",
+              "materials": [
+                {
+                  "type": "line_chart",
+                  "title": "速度-時間圖",
+                  "x_label": "時間（秒）",
+                  "y_label": "速度（m/s）",
+                  "series": [
+                    {
+                      "name": "速度",
+                      "points": [
+                        [
+                          0,
+                          0
+                        ],
+                        [
+                          2,
+                          4
+                        ],
+                        [
+                          4,
+                          4
+                        ],
+                        [
+                          6,
+                          1
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "0 至 2 秒加速，2 至 4 秒等速，4 至 6 秒減速"
+                },
+                {
+                  "key": "B",
+                  "text": "0 至 6 秒全程靜止"
+                },
+                {
+                  "key": "C",
+                  "text": "2 至 4 秒速度為 0"
+                },
+                {
+                  "key": "D",
+                  "text": "4 至 6 秒速度持續增加"
+                },
+                {
+                  "key": "E",
+                  "text": "此圖無法提供任何速度資訊"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "速度從 0 到 4 m/s 是加速，2 至 4 秒維持 4 m/s 是等速，4 至 6 秒由 4 降至 1 m/s 是減速。",
+              "review_advice": "速度-時間圖看的是速度大小變化，不是位置圖的高低。",
+              "review_notes": [
+                "Question Agent：以 AI 新製速度圖測圖形判讀。",
+                "Review Agent：答案唯一，圖形資訊足夠。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Wed"
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B03-WED-Q04",
+              "science_domains": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A3"
+              ],
+              "stem": "某地震站測得 P 波與 S 波抵達時間相差 8 秒。若簡化估計震央距離為時間差乘以 8 km/s，震央距離約為多少 km？",
+              "materials": [],
+              "options": [],
+              "answer": "64",
+              "scoring_rule": "填入 64；可接受單位 km。計算為 8 秒 × 8 km/s = 64 km。",
+              "explanation": "題目已提供簡化估計方式，將時間差 8 秒乘以 8 km/s，得到 64 km。",
+              "review_advice": "地震波估距題要先找時間差，再乘以題目提供的比例。",
+              "review_notes": [
+                "Question Agent：以 AI 新製數據測地科量化推理。",
+                "Review Agent：答案唯一，公式以文字條件給出，避免額外提示卡干擾。",
+                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": true,
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Wed",
+              "written_response_day_only": "Wed",
+              "schedule_note": "週三自然填充題屬輕量作答，可放平日；長短答仍以週六為主。"
+            }
+          ],
+          "gatekeeper_status": "approved_for_app",
+          "approved_for_app_at": "2026-08-10"
+        },
+        {
+          "day_id": "SC-FC-V01-B03-SAT",
+          "label": "週六：生命實驗、能源環境與探究實作",
+          "weekday": "Sat",
+          "task_type": "weekend_science_lab_synthesis",
           "planned_focus": [
             "SC-BIO",
             "SC-CHEM",
@@ -69,6 +485,11 @@
               "type": "note",
               "title": "本日重點",
               "content": "從生物實驗與化學量測資料判斷變因、趨勢與合理結論。"
+            },
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "用能源、環境與探究實作材料判斷科學證據的支持程度。"
             }
           ],
           "question_slots": [
@@ -167,8 +588,14 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat"
             },
             {
               "subject": "自然",
@@ -281,8 +708,14 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat"
             },
             {
               "subject": "自然",
@@ -398,8 +831,14 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat"
             },
             {
               "subject": "自然",
@@ -454,419 +893,16 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
-            }
-          ],
-          "gatekeeper_status": "approved_for_app",
-          "approved_for_app_at": "2026-08-10"
-        },
-        {
-          "day_id": "SC-FC-V01-B03-WED",
-          "label": "週三：物理與地科圖形模型",
-          "weekday": "Wed",
-          "task_type": "physics_earth_diagrams",
-          "planned_focus": [
-            "SC-PHY",
-            "SC-EARTH",
-            "SC-INQ"
-          ],
-          "status": "approved_for_app",
-          "day_materials": [
-            {
-              "type": "note",
-              "title": "本日重點",
-              "content": "用流程圖與折線圖判斷能量轉換、天氣變化與地科現象。"
-            }
-          ],
-          "question_slots": [
-            {
-              "subject": "自然",
-              "mode": "學測",
-              "source_type": "AI新題",
-              "status": "approved_for_app",
-              "error_codes": [],
-              "ai_scoring_required": false,
-              "id": "SC-FC-V01-B03-WED-Q01",
-              "science_domains": [
-                "SC-PHY",
-                "SC-INQ"
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
               ],
-              "question_type": "single_choice",
-              "difficulty": "中等",
-              "knowledge_tags": [
-                "SC-PHY",
-                "SC-INQ"
-              ],
-              "ability_tags": [
-                "SC-A2",
-                "SC-A4"
-              ],
-              "stem": "下圖為手搖發電機點亮燈泡的能量轉換示意。哪一項描述最合理？",
-              "materials": [
-                {
-                  "type": "process_diagram",
-                  "title": "手搖發電機能量轉換",
-                  "steps": [
-                    "手部作功",
-                    "線圈轉動",
-                    "產生電能",
-                    "燈泡發光與發熱"
-                  ]
-                }
-              ],
-              "options": [
-                {
-                  "key": "A",
-                  "text": "機械能可經發電機轉為電能，再轉為光與熱"
-                },
-                {
-                  "key": "B",
-                  "text": "燈泡發光不需要任何能量轉換"
-                },
-                {
-                  "key": "C",
-                  "text": "電能會憑空產生，不需手部作功"
-                },
-                {
-                  "key": "D",
-                  "text": "所有輸入能量都會百分之百轉為可見光"
-                },
-                {
-                  "key": "E",
-                  "text": "線圈轉動會使能量完全消失"
-                }
-              ],
-              "answer": "A",
-              "scoring_rule": "",
-              "explanation": "流程圖顯示手部作功使線圈轉動，發電機產生電能，燈泡再將部分電能轉成光與熱。能量形式改變，但不會憑空產生或完全消失。",
-              "review_advice": "流程圖題要按順序追蹤能量形式，不要把效率誤認為百分之百。",
-              "review_notes": [
-                "Question Agent：以 AI 新製流程圖測能量轉換。",
-                "Review Agent：答案唯一，圖文結合足夠。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
-              ],
-              "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false,
-              "review_grade": "A",
-              "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-10",
-              "quality_audit": {
-                "review_grade": "A",
-                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
-                "checked_items": [
-                  "answer_uniqueness",
-                  "option_alignment",
-                  "explanation_with_reasoning",
-                  "review_advice",
-                  "mobile_reading_load",
-                  "ai_new_similarity_risk"
-                ],
-                "checked_at": "2026-08-10",
-                "reviewer": "Codex Review Agent",
-                "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+              "preferred_weekday": "Sat",
+              "written_response_day_only": "Sat"
             },
-            {
-              "subject": "自然",
-              "mode": "學測",
-              "source_type": "AI新題",
-              "status": "approved_for_app",
-              "error_codes": [],
-              "ai_scoring_required": false,
-              "id": "SC-FC-V01-B03-WED-Q02",
-              "science_domains": [
-                "SC-EARTH",
-                "SC-INQ"
-              ],
-              "question_type": "multiple_choice",
-              "difficulty": "中等偏難",
-              "knowledge_tags": [
-                "SC-EARTH",
-                "SC-INQ"
-              ],
-              "ability_tags": [
-                "SC-A3",
-                "SC-A5"
-              ],
-              "stem": "某地 24 小時氣壓與天氣紀錄如下。依資料判斷，哪些敘述合理？（應選 2 項）",
-              "materials": [
-                {
-                  "type": "table",
-                  "title": "氣壓與天氣紀錄",
-                  "columns": [
-                    "0 時",
-                    "6 時",
-                    "12 時",
-                    "18 時"
-                  ],
-                  "row_header": "項目",
-                  "rows": [
-                    {
-                      "label": "氣壓（hPa）",
-                      "values": [
-                        "1014",
-                        "1009",
-                        "1003",
-                        "1005"
-                      ]
-                    },
-                    {
-                      "label": "天氣",
-                      "values": [
-                        "多雲",
-                        "陰",
-                        "降雨",
-                        "雨勢減弱"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "options": [
-                {
-                  "key": "A",
-                  "text": "0 到 12 時氣壓下降，天氣轉為降雨"
-                },
-                {
-                  "key": "B",
-                  "text": "18 時氣壓比 12 時略回升，雨勢減弱"
-                },
-                {
-                  "key": "C",
-                  "text": "氣壓下降必定代表當地發生地震"
-                },
-                {
-                  "key": "D",
-                  "text": "此資料顯示 12 時氣壓最高"
-                },
-                {
-                  "key": "E",
-                  "text": "四個時間的天氣完全相同"
-                }
-              ],
-              "answer": [
-                "A",
-                "B"
-              ],
-              "scoring_rule": "",
-              "explanation": "氣壓由 1014 降至 1003 hPa 的過程中，天氣由多雲、陰轉為降雨；18 時氣壓回升至 1005 hPa，雨勢也減弱。資料不支持地震或天氣完全相同的說法。",
-              "review_advice": "天氣資料題要同時看氣壓趨勢和天氣紀錄，不要把相關變化誇大為必然原因。",
-              "review_notes": [
-                "Question Agent：以 AI 新製氣象表格測資料整合。",
-                "Review Agent：正答 2 項明確，避免過度因果推論。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
-              ],
-              "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false,
-              "review_grade": "A",
-              "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-10",
-              "quality_audit": {
-                "review_grade": "A",
-                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
-                "checked_items": [
-                  "answer_uniqueness",
-                  "option_alignment",
-                  "explanation_with_reasoning",
-                  "review_advice",
-                  "mobile_reading_load",
-                  "ai_new_similarity_risk"
-                ],
-                "checked_at": "2026-08-10",
-                "reviewer": "Codex Review Agent",
-                "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
-            },
-            {
-              "subject": "自然",
-              "mode": "學測",
-              "source_type": "AI新題",
-              "status": "approved_for_app",
-              "error_codes": [],
-              "ai_scoring_required": false,
-              "id": "SC-FC-V01-B03-WED-Q03",
-              "science_domains": [
-                "SC-PHY",
-                "SC-INQ"
-              ],
-              "question_type": "single_choice",
-              "difficulty": "中等",
-              "knowledge_tags": [
-                "SC-PHY",
-                "SC-INQ"
-              ],
-              "ability_tags": [
-                "SC-A2",
-                "SC-A4"
-              ],
-              "stem": "某車沿直線移動，速度隨時間變化如下。哪一項最符合 0 至 6 秒的運動？",
-              "materials": [
-                {
-                  "type": "line_chart",
-                  "title": "速度-時間圖",
-                  "x_label": "時間（秒）",
-                  "y_label": "速度（m/s）",
-                  "series": [
-                    {
-                      "name": "速度",
-                      "points": [
-                        [
-                          0,
-                          0
-                        ],
-                        [
-                          2,
-                          4
-                        ],
-                        [
-                          4,
-                          4
-                        ],
-                        [
-                          6,
-                          1
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "options": [
-                {
-                  "key": "A",
-                  "text": "0 至 2 秒加速，2 至 4 秒等速，4 至 6 秒減速"
-                },
-                {
-                  "key": "B",
-                  "text": "0 至 6 秒全程靜止"
-                },
-                {
-                  "key": "C",
-                  "text": "2 至 4 秒速度為 0"
-                },
-                {
-                  "key": "D",
-                  "text": "4 至 6 秒速度持續增加"
-                },
-                {
-                  "key": "E",
-                  "text": "此圖無法提供任何速度資訊"
-                }
-              ],
-              "answer": "A",
-              "scoring_rule": "",
-              "explanation": "速度從 0 到 4 m/s 是加速，2 至 4 秒維持 4 m/s 是等速，4 至 6 秒由 4 降至 1 m/s 是減速。",
-              "review_advice": "速度-時間圖看的是速度大小變化，不是位置圖的高低。",
-              "review_notes": [
-                "Question Agent：以 AI 新製速度圖測圖形判讀。",
-                "Review Agent：答案唯一，圖形資訊足夠。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
-              ],
-              "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": false,
-              "review_grade": "A",
-              "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-10",
-              "quality_audit": {
-                "review_grade": "A",
-                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
-                "checked_items": [
-                  "answer_uniqueness",
-                  "option_alignment",
-                  "explanation_with_reasoning",
-                  "review_advice",
-                  "mobile_reading_load",
-                  "ai_new_similarity_risk"
-                ],
-                "checked_at": "2026-08-10",
-                "reviewer": "Codex Review Agent",
-                "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
-            },
-            {
-              "subject": "自然",
-              "mode": "學測",
-              "source_type": "AI新題",
-              "status": "approved_for_app",
-              "error_codes": [],
-              "ai_scoring_required": false,
-              "id": "SC-FC-V01-B03-WED-Q04",
-              "science_domains": [
-                "SC-EARTH",
-                "SC-INQ"
-              ],
-              "question_type": "fill_in",
-              "difficulty": "中等",
-              "knowledge_tags": [
-                "SC-EARTH",
-                "SC-INQ"
-              ],
-              "ability_tags": [
-                "SC-A2",
-                "SC-A3"
-              ],
-              "stem": "某地震站測得 P 波與 S 波抵達時間相差 8 秒。若簡化估計震央距離為時間差乘以 8 km/s，震央距離約為多少 km？",
-              "materials": [],
-              "options": [],
-              "answer": "64",
-              "scoring_rule": "填入 64；可接受單位 km。計算為 8 秒 × 8 km/s = 64 km。",
-              "explanation": "題目已提供簡化估計方式，將時間差 8 秒乘以 8 km/s，得到 64 km。",
-              "review_advice": "地震波估距題要先找時間差，再乘以題目提供的比例。",
-              "review_notes": [
-                "Question Agent：以 AI 新製數據測地科量化推理。",
-                "Review Agent：答案唯一，公式以文字條件給出，避免額外提示卡干擾。",
-                "Gatekeeper：2026-08-10 使用者人工確認後轉為 approved_for_app。"
-              ],
-              "similarity_risk": "low_ai_new_science_context",
-              "requires_written_response": true,
-              "review_grade": "A",
-              "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-10",
-              "quality_audit": {
-                "review_grade": "A",
-                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
-                "checked_items": [
-                  "answer_uniqueness",
-                  "option_alignment",
-                  "explanation_with_reasoning",
-                  "review_advice",
-                  "mobile_reading_load",
-                  "ai_new_similarity_risk"
-                ],
-                "checked_at": "2026-08-10",
-                "reviewer": "Codex Review Agent",
-                "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
-            }
-          ],
-          "gatekeeper_status": "approved_for_app",
-          "approved_for_app_at": "2026-08-10"
-        },
-        {
-          "day_id": "SC-FC-V01-B03-FRI",
-          "label": "週五：能源環境跨科推理",
-          "weekday": "Fri",
-          "task_type": "energy_environment_reasoning",
-          "planned_focus": [
-            "SC-CHEM",
-            "SC-PHY",
-            "SC-BIO",
-            "SC-INQ"
-          ],
-          "status": "approved_for_app",
-          "day_materials": [
-            {
-              "type": "note",
-              "title": "本日重點",
-              "content": "用能源、環境與探究實作材料判斷科學證據的支持程度。"
-            }
-          ],
-          "question_slots": [
             {
               "subject": "自然",
               "mode": "學測",
@@ -962,8 +998,14 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat"
             },
             {
               "subject": "自然",
@@ -1081,8 +1123,14 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat"
             },
             {
               "subject": "自然",
@@ -1146,8 +1194,15 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat",
+              "written_response_day_only": "Sat"
             },
             {
               "subject": "自然",
@@ -1234,12 +1289,19 @@
                 "checked_at": "2026-08-10",
                 "reviewer": "Codex Review Agent",
                 "gatekeeper": "Codex Gatekeeper",
-                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。"
-              }
+                "note": "自然 batch_03 經人工確認轉正式；已檢查答案唯一、材料依據、解析、評分規準與圖表非官方來源。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Wed",
+                "Sat"
+              ],
+              "preferred_weekday": "Sat"
             }
           ],
           "gatekeeper_status": "approved_for_app",
-          "approved_for_app_at": "2026-08-10"
+          "approved_for_app_at": "2026-08-10",
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。"
         }
       ]
     }
