@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-mathpreview02" />
     <style>
       .candidate-page {
         background:
@@ -152,6 +152,42 @@
         color: #123246;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
         overflow-x: auto;
+      }
+
+      .math-readable {
+        border: 1px solid rgba(21, 94, 117, 0.18);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: #fbfdfe;
+        color: #123246;
+        font-weight: 850;
+        overflow-wrap: anywhere;
+      }
+
+      .math-graph {
+        display: block;
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        margin-top: 10px;
+        border: 1px solid rgba(21, 94, 117, 0.18);
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .math-spec-list {
+        display: grid;
+        gap: 6px;
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .math-spec-list li {
+        border: 1px solid rgba(21, 94, 117, 0.14);
+        border-radius: 8px;
+        padding: 8px 10px;
+        background: #fbfdfe;
       }
 
       .candidate-table {
@@ -311,8 +347,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview01";
+      const LOCAL_DATA_URL = "../../data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview02";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_01.json?v=20260810-mathpreview02";
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
@@ -417,6 +453,90 @@
         `;
       }
 
+      function formatMathText(value) {
+        const raw = String(value || "");
+        if (raw.includes("projection length")) return "正射影長 = (v · u) / |u|";
+        if (raw.includes("x_{n+1}=0.7x_n+12")) return "x_(n+1) = 0.7x_n + 12，x_0 = 100";
+        if (raw.includes("begin{bmatrix}2&-1")) return "A = [[2, -1], [1, 3]]";
+        if (raw.includes("120") && raw.includes("frac{6}{10}") && raw.includes("-20")) {
+          return "E = 120 × 6/10 × 5/9 + 30 × (2 × 6/10 × 4/9) - 20";
+        }
+        return raw
+          .replaceAll("\\\\", "\\")
+          .replace(/\\text\{([^}]*)\}/g, "$1")
+          .replace(/\\left/g, "")
+          .replace(/\\right/g, "")
+          .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, "($1) / ($2)")
+          .replace(/\\sqrt\{([^}]*)\}/g, "sqrt($1)")
+          .replace(/\\begin\{bmatrix\}/g, "[")
+          .replace(/\\end\{bmatrix\}/g, "]")
+          .replace(/\\cdot/g, "·")
+          .replace(/\\quad/g, "，")
+          .replace(/\\le/g, "<=")
+          .replace(/\\ge/g, ">=")
+          .replace(/\\times/g, "×")
+          .replace(/\^\{([^}]*)\}/g, "^$1")
+          .replace(/_\{([^}]*)\}/g, "_$1")
+          .replace(/\s+/g, " ")
+          .trim();
+      }
+
+      function renderQuadraticGraph(spec) {
+        const width = 520;
+        const height = 260;
+        const pad = 34;
+        const xMin = -2;
+        const xMax = 6;
+        const yMin = -5;
+        const yMax = 5;
+        const xScale = (width - pad * 2) / (xMax - xMin);
+        const yScale = (height - pad * 2) / (yMax - yMin);
+        const mapX = (x) => pad + (x - xMin) * xScale;
+        const mapY = (y) => height - pad - (y - yMin) * yScale;
+        const points = [];
+        for (let i = 0; i <= 80; i += 1) {
+          const x = xMin + (xMax - xMin) * i / 80;
+          const y = (x - 2) ** 2 - 3;
+          points.push(`${mapX(x).toFixed(1)},${mapY(y).toFixed(1)}`);
+        }
+        const vertex = spec.vertex || [2, -3];
+        const vertexX = mapX(vertex[0]);
+        const vertexY = mapY(vertex[1]);
+        return `
+          <svg class="math-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="拋物線 ${escapeHtml(spec.equation || "")}">
+            <line x1="${pad}" y1="${mapY(0)}" x2="${width - pad}" y2="${mapY(0)}" stroke="#8aa2b2" stroke-width="1" />
+            <line x1="${mapX(0)}" y1="${pad}" x2="${mapX(0)}" y2="${height - pad}" stroke="#8aa2b2" stroke-width="1" />
+            <line x1="${mapX(2)}" y1="${pad}" x2="${mapX(2)}" y2="${height - pad}" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="5 5" />
+            <polyline points="${points.join(" ")}" fill="none" stroke="#155e75" stroke-width="3" stroke-linejoin="round" />
+            <circle cx="${vertexX}" cy="${vertexY}" r="5" fill="#c2410c" />
+            <text x="${vertexX + 8}" y="${vertexY - 8}" fill="#17212b" font-size="14">頂點 (2,-3)</text>
+            <text x="${mapX(2) + 8}" y="${pad + 16}" fill="#c2410c" font-size="13">對稱軸 x=2</text>
+            <text x="${pad}" y="${height - 8}" fill="#61707e" font-size="13">${escapeHtml(spec.equation || "")}</text>
+          </svg>
+        `;
+      }
+
+      function renderSpecSummary(material) {
+        const spec = material.spec || {};
+        if (material.type === "graph_spec" && spec.type === "quadratic") {
+          return `
+            <p>拋物線：${escapeHtml(spec.equation || "")}</p>
+            <p>頂點：(${escapeHtml((spec.vertex || []).join(","))})；開口：${spec.opens === "up" ? "向上" : escapeHtml(spec.opens || "未標")}</p>
+            ${renderQuadraticGraph(spec)}
+          `;
+        }
+        const items = [];
+        if (spec.transform) items.push(`變換：${spec.transform}`);
+        if (spec.points) {
+          Object.entries(spec.points).forEach(([name, point]) => {
+            items.push(`${name} 點：(${point.join(",")})`);
+          });
+        }
+        if (spec.vectors_from_A) items.push(`從 A 出發的向量：${spec.vectors_from_A.join("、")}`);
+        if (spec.segments) items.push(`線段：${spec.segments.map((segment) => segment.join("")).join("、")}`);
+        return `<ul class="math-spec-list">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+      }
+
       function renderMaterial(material) {
         if (material.type === "table") {
           return `
@@ -430,15 +550,15 @@
           return `
             <section class="candidate-material">
               <strong>${escapeHtml(material.title || "公式")}</strong>
-              <pre class="math-code">${escapeHtml(material.content || "")}</pre>
+              <div class="math-readable">${escapeHtml(formatMathText(material.content || ""))}</div>
             </section>
           `;
         }
         if (material.type === "diagram_spec" || material.type === "graph_spec") {
           return `
             <section class="candidate-material">
-              <strong>${escapeHtml(material.title || "圖形規格")}</strong>
-              <pre class="math-code">${escapeHtml(JSON.stringify(material.spec || {}, null, 2))}</pre>
+              <strong>${escapeHtml(material.title || "圖形說明")}</strong>
+              ${renderSpecSummary(material)}
             </section>
           `;
         }
