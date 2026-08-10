@@ -1997,6 +1997,51 @@ body {
   font-size: 1.05rem;
 }
 
+.student-dashboard .student-today-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  margin-top: 16px;
+  padding: clamp(18px, 2.6vw, 26px);
+}
+
+.student-dashboard .student-today-card .panel-heading,
+.student-dashboard .student-today-card .student-task-main,
+.student-dashboard .student-today-card .mission-progress,
+.student-dashboard .student-today-card .quest-intel,
+.student-dashboard .student-today-card .student-start-action {
+  grid-column: 1;
+}
+
+.student-dashboard .student-today-card .panel-heading {
+  align-self: start;
+}
+
+.student-dashboard .student-task-main {
+  margin: 0;
+}
+
+.student-dashboard .student-task-main h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.student-dashboard .student-task-main p:last-child {
+  max-width: 780px;
+  font-size: 0.98rem;
+}
+
+.student-dashboard .student-today-card .quest-intel {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.student-dashboard .student-today-card .student-start-action {
+  align-self: stretch;
+}
+
 .progress-track {
   background: rgba(3, 96, 121, 0.1);
 }
@@ -2705,16 +2750,26 @@ body {
 }
 
 .quest-today-card::after {
-  content: "CLEAR";
+  content: "MAP";
   position: absolute;
-  right: -8px;
-  bottom: -18px;
+  right: 18px;
+  bottom: 8px;
   color: rgba(0, 167, 200, 0.08);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: clamp(4rem, 13vw, 8rem);
+  font-size: clamp(3rem, 8vw, 5.6rem);
   font-weight: 950;
   line-height: 0.8;
   pointer-events: none;
+}
+
+.student-dashboard .mission-road {
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.student-dashboard .mission-step {
+  min-height: 98px;
+  box-shadow: 0 12px 30px rgba(7, 19, 31, 0.08);
 }
 
 .quest-intel div {
@@ -2810,5 +2865,21 @@ body {
   .social-day-tab {
     min-width: min(100%, 220px);
     flex: 1 1 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  .student-dashboard .student-today-card .quest-intel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .student-dashboard .student-task-main h2 {
+    font-size: 2rem;
+  }
+
+  .student-dashboard .student-today-card .quest-intel {
+    grid-template-columns: 1fr;
   }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜社會科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-quest-mode" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-quest-map" />
     <style>
       .social-practice-page {
         background: linear-gradient(180deg, #102235 0, #16344b 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -264,8 +264,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260809-social-practice";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260809-social-practice";
+      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth";
       const taskTypeLabels = {
         concept_and_material_reading: "資料判讀關",
         cross_domain_and_chart_reading: "跨科圖表關",
@@ -275,6 +275,17 @@
         concept_and_material_reading: "資料判讀徽章",
         cross_domain_and_chart_reading: "跨科圖表徽章",
         weekly_synthesis: "週末整合徽章"
+      };
+      const focusLabels = {
+        "SO-H02": "歷史時空脈絡",
+        "SO-H07": "族群文化與地方記憶",
+        "SO-G01": "區域與產業變遷",
+        "SO-G06": "環境風險與土地使用",
+        "SO-C03": "公共政策與權益保障",
+        "SO-C07": "文化權利與民主參與",
+        "SO-S01": "能源轉型與供需判讀",
+        "SO-S02": "利害關係人與治理",
+        "SO-S04": "觀光承載與永續管理"
       };
 
       let days = [];
@@ -290,6 +301,11 @@
 
       function answerText(answer) {
         return Array.isArray(answer) ? answer.join("、") : String(answer || "");
+      }
+
+      function focusText(focus) {
+        if (Array.isArray(focus)) return focus.map((item) => focusLabels[item] || item).join("、");
+        return focusLabels[focus] || focus || "依材料判讀與社會科概念完成本關挑戰。";
       }
 
       function getDataUrls() {
@@ -401,7 +417,7 @@
         document.getElementById("materials").innerHTML = `
           <article class="social-material">
             <h3>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}｜${escapeHtml(day.label)}</h3>
-            <p>${escapeHtml(day.planned_focus || "依材料判讀與社會科概念完成本關挑戰。")}</p>
+            <p>${escapeHtml(focusText(day.planned_focus))}</p>
           </article>
           ${(day.day_materials || []).map(renderMaterial).join("")}
         `;

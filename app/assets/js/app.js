@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260809-quest-mode";
+const DATA_VERSION = "20260810-quest-map";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
   groups: "question_groups.jsonl",
@@ -344,8 +344,8 @@ function renderTask(data, selectedTaskId) {
   localStorage.setItem(storageKey(SELECTED_TASK_KEY), task.task_id);
 
   setText("taskDate", `第 ${task.day_number} 天｜${task.task_date}`);
-  setText("taskTitle", group?.title || task.group_id);
-  setText("taskMeta", `${task.subject}｜${task.mode}｜${formatTaskType(task.task_type)}｜${renderFlowSummary(task, countGroupQuestions(group))}`);
+  setText("taskTitle", "今日國文三關");
+  setText("taskMeta", `主線材料：${group?.title || task.group_id}｜${renderFlowSummary(task, countGroupQuestions(group))}`);
   setText("estimatedMinutes", task.estimated_minutes);
   setText("questionCount", totalQuestionCount);
   setText("reviewCount", reviewCount);
