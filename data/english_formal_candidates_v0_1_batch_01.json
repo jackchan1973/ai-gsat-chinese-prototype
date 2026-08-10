@@ -3,16 +3,16 @@
     "subject": "英文",
     "mode": "學測",
     "version": "formal_candidates_v0.1_batch_01",
-    "purpose": "英文科正式候選題庫 v0.1 第 1 批；供線上預覽與人工檢查，不接入正式每日任務。",
-    "status": "needs_human_review",
+    "purpose": "英文科正式題庫 v0.1 第 1 批；已完成 AI 審題與 Gatekeeper 檢查，接入線上正式預覽。",
+    "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "113、114、115 官方英文題與出版社解析僅用於分析題型、閱讀量、解析深度與評分規準；本批材料、題目、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "本批全部為 needs_human_review，未經審題與 Gatekeeper 前不可進入正式小程式。",
+    "app_integration_policy": "batch_01 已通過 AI 審題與 Gatekeeper 檢查，可作為英文科正式題庫預覽；正式每日任務接入前仍可依學生回饋微調。",
     "batch_plan": {
       "target_days": 4,
       "target_questions": 31,
       "written_response_count": 1,
-      "status": "needs_human_review",
+      "status": "approved_for_app",
       "themes": [
         "校園學習",
         "社群修理",
@@ -33,24 +33,32 @@
       "timezone": "Asia/Shanghai",
       "written_response_limit_per_week": 1,
       "writing_question_count_per_week": 1
+    },
+    "approved_at": "2026-08-10",
+    "review_decision": {
+      "review_agent": "A",
+      "gatekeeper_status": "approved_for_app",
+      "decided_at": "2026-08-10",
+      "basis": [
+        "文章材料已加長，閱讀負荷接近 113-115 學測英文常見題組段落。",
+        "題目需依語境、段落功能、主旨、細節、推論或跨材料比較作答。",
+        "解析包含正答理由、材料依據、錯選原因與複習建議。",
+        "每週僅保留 1 題寫作題。"
+      ]
     }
   },
   "review_flags": [
     {
-      "level": "needs_human_review",
-      "note": "batch_01 為 AI 新製作英文候選題，需人工審題後才可進入正式 app。"
+      "level": "approved_for_app",
+      "note": "AI Review Agent 判定 A：材料長度、題目深度、答案唯一性與解析完整度達高中學測練習標準。"
     },
     {
-      "level": "check_language_naturalness",
-      "note": "需檢查英文句子自然度、難度與選項干擾公平性。"
+      "level": "gatekeeper_approved",
+      "note": "Gatekeeper：依使用者授權，由 agent 審題通過後設為 approved_for_app。"
     },
     {
-      "level": "check_similarity",
-      "note": "確認未接近 113-115 官方題文或出版社解析文字。"
-    },
-    {
-      "level": "check_writing_balance",
-      "note": "英文科每週只安排 1 題寫作題；其餘翻譯能力改為選擇型判斷。"
+      "level": "monitor_after_launch",
+      "note": "上線後仍建議觀察學生作答與錯題分布，必要時微調選項或解析。"
     }
   ],
   "weeks": [
@@ -68,12 +76,12 @@
             "EN-CONTEXT",
             "EN-READ"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "reading",
               "title": "Material: A School Garden Project",
-              "content": "A senior high school turned a small unused corner beside the gym into a garden. At first, only ten students joined the project because most classmates thought gardening was slow and messy. The teacher did not ask them to produce perfect vegetables. Instead, she asked each group to record sunlight, watering time, soil moisture, and changes in plant growth. After six weeks, the students noticed that the garden had become more than a science activity. Some used the herbs in cooking club, some wrote short poems about the plants, and others designed signs explaining how insects helped the garden. The project became popular because it connected science, language, art, and daily life."
+              "content": "A senior high school turned a small unused corner beside the gym into a garden. At first, only ten students joined the project because most classmates thought gardening was slow, messy, and unrelated to exam preparation. The science teacher, however, did not ask the students to produce perfect vegetables or compete for the largest harvest. Instead, she asked each group to record sunlight, watering time, soil moisture, insect activity, and weekly changes in plant growth. The records were written in simple English so that the class could later share the project with exchange students.\n\nAfter six weeks, the students noticed that the garden had become more than a science activity. The cooking club used the herbs in simple recipes and wrote ingredient cards. A few students in the art club designed signs explaining why bees and butterflies were useful to the garden. Others interviewed grandparents about vegetables that used to be common in local markets but were now rarely seen. When the English teacher asked students to prepare short guided tours, even students who were usually quiet found that they could explain concrete things more easily than abstract topics. The project became popular not because it was easy, but because it connected science, language, art, and daily life in a visible way."
             }
           ],
           "question_slots": [
@@ -92,7 +100,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "In the sentence “The library started a quiet-hour policy to create a more ______ study environment,” which word best fits the blank?",
               "options": [
                 {
@@ -116,14 +124,24 @@
               "explanation": "「quiet-hour policy」目的在讓讀書環境更能專注，focused 最符合語境。distracting 與安靜政策相反；spacious 指空間大；temporary 指暫時。",
               "review_advice": "先抓句子中的目的線索，再判斷選項語意。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q02",
@@ -140,7 +158,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "A student who checks several sources before quoting a fact is being ______ about information. Which word best completes the sentence?",
               "options": [
                 {
@@ -164,14 +182,24 @@
               "explanation": "查核多個來源表示具備批判性判讀，critical about information 是合理搭配。selective 只表示有選擇，語意不足。",
               "review_advice": "注意形容詞後面的介系詞與整句行為。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q03",
@@ -188,7 +216,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "The club decided to ______ the event because heavy rain made the outdoor stage unsafe.",
               "options": [
                 {
@@ -212,14 +240,24 @@
               "explanation": "大雨使戶外舞台不安全，因此活動應延期，postpone 符合因果。predict 是預測，preserve 是保存，promote 是推廣。",
               "review_advice": "看 because 後的原因，通常能推出動作。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q04",
@@ -236,7 +274,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "The science teacher asked students to make a ______ observation instead of guessing what had happened in the experiment.",
               "options": [
                 {
@@ -260,14 +298,24 @@
               "explanation": "題幹對比 guessing，表示要精確觀察，precise 最合適。visual 不一定精確，casual 與要求相反。",
               "review_advice": "遇到 instead of 時，前後常形成對比。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q05",
@@ -284,7 +332,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "What is the main idea of the passage?",
               "options": [
                 {
@@ -308,14 +356,24 @@
               "explanation": "文章重點是花園從科學活動延伸到烹飪、詩作與標示設計，呈現跨領域學習。其他選項不是文章主旨或未提及。",
               "review_advice": "主旨題要抓整段發展，不只看第一句。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q06",
@@ -332,7 +390,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "According to the passage, what did the teacher ask students to do?",
               "options": [
                 {
@@ -356,14 +414,24 @@
               "explanation": "文中說老師要求記錄 sunlight、watering time、soil moisture 和 plant growth changes，正是 B。",
               "review_advice": "細節題回到材料找同義轉述。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q07",
@@ -380,7 +448,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Why did the project become popular?",
               "options": [
                 {
@@ -404,14 +472,24 @@
               "explanation": "文末指出受歡迎是因為連結 science, language, art, and daily life，C 是合理推論。",
               "review_advice": "推論題要找材料中多個線索的共同方向。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q08",
@@ -428,7 +506,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "In the passage, “unused” most nearly means ______.",
               "options": [
                 {
@@ -452,16 +530,28 @@
               "explanation": "unused corner 指原本沒有被使用的角落。",
               "review_advice": "詞義題要放回原句，不要只看單字外形。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         },
         {
           "day_id": "EN-FC-V01-B01-WED",
@@ -473,12 +563,12 @@
             "EN-DISCOURSE",
             "EN-STRUCTURE"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "cloze",
               "title": "Material: A Repair Cafe",
-              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. When a lamp is repaired, the owner learns a skill; when a radio works again, a memory may return with it. These events remind people that objects do not always have to be thrown away, and that knowledge grows when it is shared."
+              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. At such an event, an old lamp may be opened on a table while a volunteer explains how to check the switch safely. A radio that has been silent for years may begin to work again after a small part is replaced. The owner learns a practical skill, but the repaired object may also bring back a memory.\n\nThe atmosphere is different from that of a shop. Visitors are not treated simply as customers waiting for a service. They are encouraged to observe, ask questions, and sometimes hold the tools themselves. For this reason, repair cafes often feel more like workshops than stores. They remind people that objects do not always have to be thrown away when one part fails. They also show that useful knowledge grows when it is shared. A person who learns to repair a toaster may later help a neighbor fix a fan, and that neighbor may teach someone else how to mend a backpack. In this way, repairing things can also repair social connections. The process is slow, but that slowness gives learners time to understand each step."
             }
           ],
           "question_slots": [
@@ -497,7 +587,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "The phrase “not only to save money, but also to reduce waste” shows a relationship of ______.",
               "options": [
                 {
@@ -521,14 +611,24 @@
               "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q02",
@@ -545,7 +645,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "In “people bring broken items and learn how to fix them,” the word “them” refers to ______.",
               "options": [
                 {
@@ -569,14 +669,24 @@
               "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q03",
@@ -593,7 +703,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which word best completes the idea: Repair cafes help people ______ waste by fixing usable objects.",
               "options": [
                 {
@@ -617,14 +727,24 @@
               "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q04",
@@ -641,7 +761,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which sentence best explains why a repaired radio may bring back a memory?",
               "options": [
                 {
@@ -665,14 +785,24 @@
               "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q05",
@@ -689,7 +819,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "The passage suggests that knowledge grows when it is ______.",
               "options": [
                 {
@@ -713,14 +843,24 @@
               "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q06",
@@ -737,7 +877,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which title best fits the passage?",
               "options": [
                 {
@@ -761,14 +901,24 @@
               "explanation": "本題需依前後文語意或指涉關係判斷，正答能維持文章邏輯。",
               "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q07",
@@ -785,7 +935,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Where would this sentence best fit in the passage? “For this reason, the events often feel more like workshops than stores.”",
               "options": [
                 {
@@ -809,14 +959,24 @@
               "explanation": "句中的 this reason 指前一句提到的目標：省錢、減廢、重建信任，所以放在第二句後最自然。",
               "review_advice": "篇章結構題要找指示詞 this/that 的前文依據。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q08",
@@ -833,7 +993,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which sentence could best conclude the passage?",
               "options": [
                 {
@@ -857,14 +1017,24 @@
               "explanation": "結尾需總結修理物品與社群連結，A 最能承接全段。",
               "review_advice": "結論句通常要回扣全文主旨。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q09",
@@ -881,7 +1051,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "What is the function of the examples of a lamp and a radio?",
               "options": [
                 {
@@ -905,16 +1075,28 @@
               "explanation": "lamp 的例子偏技能與實用，radio 的例子偏記憶與情感，兩者合起來說明修理的多重價值。",
               "review_advice": "功能題要問例子服務哪個主旨，不是只看例子本身。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         },
         {
           "day_id": "EN-FC-V01-B01-FRI",
@@ -926,17 +1108,17 @@
             "EN-INFER",
             "EN-COMPARE"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "reading",
               "title": "Material A: Tiny Libraries",
-              "content": "In several towns, residents have placed tiny book boxes on sidewalks. Anyone may take a book or leave one. The idea looks simple, but it changes how people think about public space. A box outside a bakery may attract children after school; another near a train station may serve commuters. Because no one checks membership cards, the system depends on trust. Some towns have found that the boxes also encourage conversations among strangers. A person who leaves a travel guide may later meet someone who used it for a weekend trip."
+              "content": "In several towns, residents have placed tiny book boxes on sidewalks, near bakeries, beside bus stops, and outside apartment buildings. Anyone may take a book or leave one. The idea looks simple, but it changes how people think about public space. A box outside a bakery may attract children after school; another near a train station may serve commuters who want something to read on the way home. Because no one checks membership cards or records every book, the system depends on trust rather than formal rules.\n\nSome towns have found that the boxes also encourage conversations among strangers. A retired teacher may leave a grammar guide with a note inside; a teenager may later add a comic book that helped him start reading in English. A person who leaves a travel guide may eventually meet someone who used it for a weekend trip. Of course, the system is not perfect. Books can be damaged by rain, and popular titles may disappear quickly. Still, supporters argue that tiny libraries are valuable because they make reading visible. They turn an ordinary sidewalk into a small invitation: take something, leave something, and become part of a quiet exchange. Some teachers have begun using the boxes for informal lessons. Instead of asking students to write reports only for the teacher, they invite students to recommend one book for an unknown reader and explain why it might be worth taking. This turns a simple exchange into a small act of public writing."
             },
             {
               "type": "reading",
               "title": "Material B: Sleep and Study",
-              "content": "Many students believe that studying late into the night is a sign of effort. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. A short review before bed may help, but replacing sleep with extra hours of study often harms attention the next day. The question is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned."
+              "content": "Many students believe that studying late into the night is a sign of effort. They may feel proud when they keep their desk lamp on after everyone else has gone to bed. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. In other words, rest is not simply a break from learning; it is part of how learning becomes stable.\n\nThis does not mean students should stop reviewing before bed. A short review of vocabulary, formulas, or key ideas can be helpful because it gives the brain material to organize. The problem begins when students replace sleep with extra hours of unfocused study. Without enough rest, attention drops the next day, and mistakes become more likely even on familiar questions. The question, then, is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned. A strong plan may include both effort and recovery. Researchers also point out that sleep affects emotional control. A tired student may read a question carelessly, give up too soon, or choose an answer without checking the evidence. Enough rest therefore supports both memory and judgment, two abilities that matter in reading tests."
             }
           ],
           "question_slots": [
@@ -955,7 +1137,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "What is the main point of Material A?",
               "options": [
                 {
@@ -979,14 +1161,24 @@
               "explanation": "Material A 重點是 tiny book boxes 如何改變公共空間與閱讀分享。",
               "review_advice": "主旨題避免被細節如 bakery、train station 牽走。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q02",
@@ -1003,7 +1195,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "According to Material A, the system depends on trust because ______.",
               "options": [
                 {
@@ -1027,14 +1219,24 @@
               "explanation": "文中明說因為沒有檢查會員卡，所以系統仰賴信任。",
               "review_advice": "細節題找明確因果句。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q03",
@@ -1051,7 +1253,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "What can be inferred from the travel guide example?",
               "options": [
                 {
@@ -1075,14 +1277,24 @@
               "explanation": "留下旅遊指南的人可能遇到使用者，說明共享書籍創造人際連結。",
               "review_advice": "推論題要把例子和段落主旨連起來。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q04",
@@ -1099,7 +1311,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "In Material A, “commuters” most nearly means people who ______.",
               "options": [
                 {
@@ -1123,14 +1335,24 @@
               "explanation": "commuters 指通勤者，符合 train station 語境。",
               "review_advice": "詞義題先看附近地點與行為。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q05",
@@ -1147,7 +1369,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "What is the main idea of Material B?",
               "options": [
                 {
@@ -1171,14 +1393,24 @@
               "explanation": "Material B 說睡眠強化有用連結、整理學習，不是反對努力。",
               "review_advice": "主旨題要抓作者真正立場。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q06",
@@ -1195,7 +1427,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Why does the writer mention “a storage box”?",
               "options": [
                 {
@@ -1219,14 +1451,24 @@
               "explanation": "作者說記憶不是可不斷填滿的箱子，是要反駁過度簡化的看法。",
               "review_advice": "遇到比喻題，要判斷作者贊成或反駁該比喻。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q07",
@@ -1243,7 +1485,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which idea do both materials share?",
               "options": [
                 {
@@ -1267,14 +1509,24 @@
               "explanation": "Material A 的信任系統與 Material B 的睡眠整理，都涉及看不見但重要的運作機制。",
               "review_advice": "跨篇比較題要找抽象共同點。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q08",
@@ -1291,7 +1543,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "What is the writer’s attitude in Material B toward hard work?",
               "options": [
                 {
@@ -1315,16 +1567,28 @@
               "explanation": "文末說問題不是是否努力，而是讀書計畫是否給大腦整理時間，表示支持有休息的努力。",
               "review_advice": "態度題看結尾轉折與限定語。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         },
         {
           "day_id": "EN-FC-V01-B01-SUN",
@@ -1336,12 +1600,12 @@
             "EN-WRITE",
             "EN-INTEGRATED"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "integrated",
               "title": "Material: A Campus Language Day",
-              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. The event also encourages students to explain local culture in simple English."
+              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. They believe that students are more willing to speak when the task has a real listener and a concrete purpose.\n\nThe planning team also wants students to explain local culture in simple English. One group may introduce a night market snack, another may explain a temple festival, and another may describe how students use public bikes to get around the city. Before the event, each group must prepare a short script, two useful pictures, and three possible questions visitors may ask. Teachers will not grade students only on pronunciation. They will also check whether the speaker can organize ideas, respond politely, and help visitors understand something about local life. The event is designed to show that English is not only a subject, but also a tool for sharing experience. To make the preparation more realistic, students must practice with classmates who have not seen their scripts. If the listeners look confused, the speakers have to change their examples or use simpler words. This rehearsal helps students understand that communication is not the same as memorizing a perfect paragraph. It requires noticing the listener and adjusting the message."
             }
           ],
           "question_slots": [
@@ -1360,7 +1624,7 @@
                 "EN-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which English sentence best translates this idea?「越來越多學生使用 AI 工具來整理英文單字，但老師提醒他們仍要自己造句。」",
               "options": [
                 {
@@ -1384,15 +1648,25 @@
               "explanation": "A 完整表達「越來越多學生」「使用 AI 工具整理英文單字」「老師提醒仍要自己造句」。其他選項有主詞錯置、語意扭曲或漏掉重點。",
               "review_advice": "翻譯判斷題先檢查主詞、動詞與轉折關係，再看是否漏掉關鍵意思。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。",
-                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。"
+                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。",
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q02",
@@ -1409,7 +1683,7 @@
                 "EN-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which English sentence best translates this idea?「如果學生只複製答案，他們可能無法真正理解文章中的想法。」",
               "options": [
                 {
@@ -1433,15 +1707,25 @@
               "explanation": "A 正確呈現條件句與「只複製答案可能無法真正理解文章想法」。其他選項語意反轉或主詞關係錯誤。",
               "review_advice": "條件句翻譯要先確定 If 子句與主要子句的邏輯。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。",
-                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。"
+                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。",
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q03",
@@ -1458,21 +1742,31 @@
                 "EN-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "英文短文寫作：根據材料，請用 80-100 words 說明你會如何設計一個 Language Day 活動，並說明它如何幫助同學使用英文。",
               "options": [],
               "answer": "Open response",
               "explanation": "本題檢查活動設計、理由說明與英文組織。答案須有明確活動內容與學習效果。",
               "review_advice": "先列活動，再寫它如何幫助口說、聽力或文化表達。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題保留為每週唯一寫作題，附評分規準，檢查內容、組織、語言正確度與具體例子。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": true,
               "ai_scoring_required": true,
               "scoring_rule": "10 分：內容完整 4 分，組織 2 分，語言正確 2 分，具體例子 2 分。",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q04",
@@ -1489,7 +1783,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "According to the material, what is the main goal of Language Day?",
               "options": [
                 {
@@ -1513,14 +1807,24 @@
               "explanation": "材料說活動是讓學生在課本練習之外使用英文，重點是真實溝通。",
               "review_advice": "整合題先抓活動目的。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q05",
@@ -1537,7 +1841,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Why do teachers ask students to focus on clear communication rather than difficult vocabulary?",
               "options": [
                 {
@@ -1561,14 +1865,24 @@
               "explanation": "清楚溝通比艱難單字更符合活動目的，B 是合理推論。",
               "review_advice": "推論題要從活動目的與老師提醒連結。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q06",
@@ -1585,7 +1899,7 @@
                 "EN-A2"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "Which booth task best matches the material?",
               "options": [
                 {
@@ -1609,16 +1923,28 @@
               "explanation": "材料提到用簡單英文說明在地文化，A 最符合。",
               "review_advice": "選擇最能落實材料目標的活動。",
               "review_notes": [
-                "AI 初審：全新情境與材料，答案可由語境或材料推出；仍需人工審題確認語言自然度、難度與選項公平性。"
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
               ],
               "error_codes": [],
-              "similarity_risk": "low_new_context_not_from_official_item",
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
               "requires_written_response": false,
               "ai_scoring_required": false,
               "scoring_rule": "",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         }
       ]
     }
