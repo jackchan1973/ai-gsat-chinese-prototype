@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜英文科闖關</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-englishpractice01" />
+    <style>
+      .english-practice-page {
+        background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
+      }
+
+      .english-practice-shell {
+        max-width: 1120px;
+      }
+
+      .english-practice-page .topbar {
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(10, 32, 55, 0.96), rgba(27, 98, 118, 0.88));
+        color: #fff;
+      }
+
+      .english-practice-page .topbar h1,
+      .english-practice-page .topbar .eyebrow {
+        color: #fff;
+      }
+
+      .english-practice-page .topbar .muted-text {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .english-practice-page .topbar .secondary-action {
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+      }
+
+      .english-practice-summary,
+      .english-day-tabs,
+      .english-material,
+      .english-question-card,
+      .english-score-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .english-practice-summary {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin: 16px 0;
+        padding: 14px;
+      }
+
+      .english-practice-summary div {
+        border: 1px solid rgba(8, 104, 132, 0.14);
+        border-radius: 8px;
+        padding: 12px;
+        background: #f7fbfd;
+      }
+
+      .english-practice-summary span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .english-practice-summary strong {
+        display: block;
+        margin-top: 4px;
+        color: var(--primary-dark);
+        font-size: 1.4rem;
+      }
+
+      .english-day-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding: 12px;
+      }
+
+      .english-day-tab {
+        min-height: 48px;
+        border: 1px solid rgba(8, 104, 132, 0.18);
+        border-radius: 8px;
+        padding: 8px 12px;
+        background: #fff;
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+        text-align: left;
+      }
+
+      .english-day-tab.active {
+        border-color: rgba(0, 167, 200, 0.7);
+        background: linear-gradient(135deg, #00a7c8, #0f6f8d);
+        color: #fff;
+      }
+
+      .english-day-tab span,
+      .english-day-tab small {
+        display: block;
+      }
+
+      .english-status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        border: 1px solid rgba(21, 94, 117, 0.24);
+        border-radius: 999px;
+        padding: 4px 10px;
+        background: #edf7fb;
+        color: var(--primary);
+        font-size: 0.86rem;
+      }
+
+      .english-material {
+        margin-bottom: 14px;
+        padding: 16px;
+      }
+
+      .english-material h3 {
+        margin-top: 0;
+      }
+
+      .english-material p {
+        white-space: pre-line;
+      }
+
+      .english-question-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .english-question-card {
+        padding: 16px;
+      }
+
+      .english-question-card.correct {
+        border-color: rgba(22, 163, 74, 0.4);
+      }
+
+      .english-question-card.incorrect {
+        border-color: rgba(220, 38, 38, 0.38);
+      }
+
+      .english-question-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .english-option-list {
+        display: grid;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .english-option {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: #f7fbfd;
+      }
+
+      .english-option input {
+        margin-top: 4px;
+      }
+
+      .english-written {
+        width: 100%;
+        min-height: 130px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        resize: vertical;
+        font: inherit;
+      }
+
+      .english-answer-panel {
+        display: none;
+        margin-top: 12px;
+        border: 1px solid rgba(3, 96, 121, 0.14);
+        border-radius: 8px;
+        padding: 12px;
+        background: #f7fbfd;
+      }
+
+      .english-practice-page.answered .english-answer-panel {
+        display: block;
+      }
+
+      .english-score-panel {
+        display: none;
+        margin: 16px 0;
+        padding: 16px;
+      }
+
+      .english-score-panel.show {
+        display: block;
+      }
+
+      .english-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px 0;
+      }
+
+      @media (max-width: 760px) {
+        .english-practice-summary {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .english-practice-page .topbar,
+        .english-question-header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body class="english-practice-page">
+    <main class="app-shell english-practice-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">English mainline</p>
+          <h1>英文正式四關</h1>
+          <p class="muted-text">週一、週三、週五、週日完成詞彙、克漏字、閱讀與寫作整合挑戰。</p>
+        </div>
+        <a class="secondary-action link-action" href="../index.html">回闖關地圖</a>
+      </header>
+
+      <section class="english-practice-summary" id="summaryStats" aria-label="英文練習統計"></section>
+      <section class="english-day-tabs" id="dayTabs" aria-label="選擇英文練習日"></section>
+      <section id="materials"></section>
+      <form id="englishPracticeForm">
+        <section class="english-question-list" id="questionList" aria-live="polite"></section>
+        <div class="english-actions">
+          <button class="primary-action" type="submit">完成本關看結算</button>
+          <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
+          <a class="secondary-action link-action" href="./english-formal-candidates.html">查看正式題庫</a>
+        </div>
+      </form>
+      <section class="english-score-panel" id="scorePanel" aria-live="polite"></section>
+    </main>
+
+    <script>
+      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-englishpractice01";
+      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-englishpractice01";
+      const dayNames = { Mon: "週一", Wed: "週三", Fri: "週五", Sun: "週日" };
+      const taskTypeLabels = {
+        vocabulary_and_short_reading: "詞彙語境關",
+        cloze_and_discourse: "克漏字結構關",
+        reading_and_inference: "閱讀推論關",
+        translation_writing_integration: "寫作整合關"
+      };
+      const focusLabels = {
+        "EN-VOC": "詞彙語境",
+        "EN-CONTEXT": "語境判斷",
+        "EN-READ": "閱讀理解",
+        "EN-CLOZE": "綜合測驗",
+        "EN-DISCOURSE": "篇章結構",
+        "EN-INFER": "推論判斷",
+        "EN-WRITE": "寫作表達",
+        "EN-TRANSLATION": "翻譯判斷"
+      };
+
+      let days = [];
+      let activeDayId = "";
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function answerText(answer) {
+        return Array.isArray(answer) ? answer.join("、") : String(answer || "");
+      }
+
+      function focusText(focus) {
+        if (Array.isArray(focus)) return focus.map((item) => focusLabels[item] || item).join("、");
+        return focusLabels[focus] || focus || "依英文材料完成本關挑戰。";
+      }
+
+      function getDataUrls() {
+        return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL];
+      }
+
+      async function loadData() {
+        const errors = [];
+        for (const url of getDataUrls()) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return await response.json();
+          } catch (error) {
+            errors.push(`${url}: ${error.message}`);
+          }
+        }
+        throw new Error(errors.join("；"));
+      }
+
+      function renderStats() {
+        const questions = days.flatMap((day) => day.question_slots || []);
+        const written = questions.filter((question) => question.requires_written_response).length;
+        const stats = [
+          ["關卡", days.length],
+          ["總題數", questions.length],
+          ["選擇挑戰", questions.length - written],
+          ["寫作關", written]
+        ];
+        document.getElementById("summaryStats").innerHTML = stats
+          .map(([label, value]) => `<div><span>${label}</span><strong>${value}</strong></div>`)
+          .join("");
+      }
+
+      function renderTabs() {
+        document.getElementById("dayTabs").innerHTML = days
+          .map((day, index) => `
+            <button class="english-day-tab${day.day_id === activeDayId ? " active" : ""}" type="button" data-day-id="${escapeHtml(day.day_id)}">
+              <span>第 ${index + 1} 關｜${escapeHtml(dayNames[day.weekday] || day.weekday)}</span>
+              <strong>${escapeHtml(taskTypeLabels[day.task_type] || day.label)}</strong>
+              <small>${escapeHtml((day.question_slots || []).length)} 題挑戰</small>
+            </button>
+          `)
+          .join("");
+      }
+
+      function renderMaterial(material) {
+        return `
+          <article class="english-material">
+            <h3>${escapeHtml(material.title || "Material")}</h3>
+            <p>${escapeHtml(material.content || "")}</p>
+          </article>
+        `;
+      }
+
+      function renderOption(option) {
+        if (typeof option === "string") return { key: option.slice(0, 1), text: option };
+        return { key: option.key, text: option.text };
+      }
+
+      function renderQuestion(question, index) {
+        const name = `question_${index}`;
+        const isMultiple = Array.isArray(question.answer) && question.answer.length > 1;
+        const options = question.options?.length
+          ? `<div class="english-option-list">${question.options.map(renderOption).map((option) => `
+              <label class="english-option">
+                <input type="${isMultiple ? "checkbox" : "radio"}" name="${escapeHtml(name)}" value="${escapeHtml(option.key)}" />
+                <span><strong>${escapeHtml(option.key)}.</strong> ${escapeHtml(option.text)}</span>
+              </label>
+            `).join("")}</div>`
+          : `<textarea class="english-written" name="${escapeHtml(name)}" placeholder="請用英文作答，完成後對照評分規準。"></textarea>`;
+        return `
+          <article class="english-question-card" data-question-index="${index}">
+            <div class="english-question-header">
+              <div class="social-tags">
+                <span class="tag">挑戰 ${index + 1}</span>
+                <span class="tag">${escapeHtml(question.question_type)}</span>
+                <span class="tag">${escapeHtml(question.difficulty)}</span>
+              </div>
+              <span class="english-status">${question.requires_written_response ? "寫作關" : "選擇挑戰"}</span>
+            </div>
+            <p>${escapeHtml(question.stem)}</p>
+            ${options}
+            <div class="english-answer-panel">
+              <p><strong>參考答案：</strong>${escapeHtml(answerText(question.answer))}</p>
+              ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
+              <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
+              <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderActiveDay() {
+        const day = days.find((item) => item.day_id === activeDayId) || days[0];
+        if (!day) return;
+        activeDayId = day.day_id;
+        document.body.classList.remove("answered");
+        document.getElementById("scorePanel").classList.remove("show");
+        document.getElementById("scorePanel").innerHTML = "";
+        renderTabs();
+        document.getElementById("materials").innerHTML = `
+          <article class="english-material">
+            <h3>${escapeHtml(day.label)}</h3>
+            <p>${escapeHtml(focusText(day.planned_focus))}</p>
+          </article>
+          ${(day.day_materials || []).map(renderMaterial).join("")}
+        `;
+        document.getElementById("questionList").innerHTML = (day.question_slots || []).map(renderQuestion).join("");
+      }
+
+      function getSelectedValues(form, index) {
+        return Array.from(form.querySelectorAll(`[name="question_${index}"]:checked`)).map((input) => input.value).sort();
+      }
+
+      function scoreChoice(question, selected) {
+        const answer = [...(Array.isArray(question.answer) ? question.answer : [question.answer])].map(String).sort();
+        return selected.length === answer.length && selected.every((value, index) => value === answer[index]);
+      }
+
+      function getStarText(correct, total) {
+        if (!total) return "☆☆☆";
+        const rate = correct / total;
+        const stars = rate >= 0.9 ? 3 : rate >= 0.7 ? 2 : 1;
+        return "★".repeat(stars) + "☆".repeat(3 - stars);
+      }
+
+      function submitAnswers(event) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const day = days.find((item) => item.day_id === activeDayId);
+        const questions = day?.question_slots || [];
+        let autoScored = 0;
+        let correct = 0;
+        let written = 0;
+
+        questions.forEach((question, index) => {
+          const card = document.querySelector(`[data-question-index="${index}"]`);
+          card?.classList.remove("correct", "incorrect");
+          if (question.requires_written_response || !question.options?.length) {
+            written += 1;
+            return;
+          }
+          autoScored += 1;
+          const ok = scoreChoice(question, getSelectedValues(form, index));
+          if (ok) correct += 1;
+          card?.classList.add(ok ? "correct" : "incorrect");
+        });
+
+        document.body.classList.add("answered");
+        const scorePanel = document.getElementById("scorePanel");
+        scorePanel.classList.add("show");
+        const stars = getStarText(correct, autoScored);
+        const writtenNote = written ? `寫作關 ${written} 題請對照參考答案與評分規準，不自動判分。` : "本關沒有寫作題。";
+        scorePanel.innerHTML = `
+          <h2>本關通關結算</h2>
+          <div class="quest-result-line">${stars}<span>英文主線進度：${escapeHtml(dayNames[day?.weekday] || "")}完成</span></div>
+          <p>選擇挑戰自動判分：${correct} / ${autoScored} 題。${writtenNote}</p>
+          <p class="muted-text">答錯題目已標示，先看解析與複習建議再重挑本關。</p>
+        `;
+        scorePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function wireEvents() {
+        document.getElementById("dayTabs").addEventListener("click", (event) => {
+          const button = event.target.closest("[data-day-id]");
+          if (!button) return;
+          activeDayId = button.dataset.dayId;
+          renderActiveDay();
+        });
+        document.getElementById("englishPracticeForm").addEventListener("submit", submitAnswers);
+        document.getElementById("resetButton").addEventListener("click", () => renderActiveDay());
+      }
+
+      async function init() {
+        const data = await loadData();
+        days = (data.weeks || []).flatMap((week) => week.days || []);
+        activeDayId = days[0]?.day_id || "";
+        renderStats();
+        renderActiveDay();
+        wireEvents();
+      }
+
+      init().catch((error) => {
+        document.querySelector(".english-practice-shell").innerHTML = `
+          <section class="error-box">
+            <h1>英文科題庫讀取失敗</h1>
+            <p>${escapeHtml(error.message)}</p>
+            <p>請改用 GitHub Pages 線上網址，或重新整理後再試。</p>
+          </section>
+        `;
+      });
+    </script>
+  </body>
+</html>
