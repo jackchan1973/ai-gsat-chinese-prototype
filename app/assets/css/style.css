@@ -1829,6 +1829,7 @@ body {
 
 .subject-command-card {
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 10px;
   align-content: start;
   min-width: 0;
@@ -1853,6 +1854,18 @@ body {
 .subject-command-card p {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.subject-command-card .primary-action,
+.subject-command-card .secondary-action {
+  align-self: end;
+  justify-content: center;
+  width: 100%;
+}
+
+.subject-disabled-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
 }
 
 .subject-card-head {
