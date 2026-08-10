@@ -3,16 +3,16 @@
     "subject": "社會",
     "mode": "學測",
     "version": "formal_candidates_v0.1_batch_02",
-    "purpose": "社會科正式候選題庫 v0.1 第 2 批；供線上預覽與人工檢查，不接入正式每日任務。",
-    "status": "needs_human_review",
+    "purpose": "社會科正式題庫 v0.1 第 2 批；已依使用者指示接入正式社會科闖關。",
+    "status": "approved_for_app",
     "created_at": "2026-08-10",
     "source_policy": "官方歷年題只用於分析題型、類別、題目長度與資料形式；本批題目、材料、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "本批全部為 needs_human_review，未經審題與 Gatekeeper 前不可進入正式小程式。",
+    "app_integration_policy": "batch_02 已由使用者指定接入正式小程式；程式可讀取 approved_for_app 題目。",
     "batch_plan": {
       "target_days": 3,
       "target_questions": 16,
       "written_response_count": 2,
-      "status": "needs_human_review",
+      "status": "approved_for_app",
       "themes": [
         "人口老化與照護服務",
         "AI 招募與勞動治理",
@@ -31,16 +31,23 @@
         "Thu"
       ],
       "timezone": "Asia/Shanghai"
+    },
+    "approved_at": "2026-08-10",
+    "gatekeeper_record": {
+      "status": "approved_for_app",
+      "approved_at": "2026-08-10",
+      "decision_source": "user_instruction",
+      "note": "使用者於 2026-08-10 指示下次修改時將社會科 batch_02 設定為正式題；本次接入正式社會科闖關。"
     }
   },
   "review_flags": [
     {
-      "level": "needs_human_review",
-      "note": "batch_02 為 AI 新製作候選題，需人工審題後才可進入正式 app。"
+      "level": "approved_for_app",
+      "note": "使用者指定 batch_02 接入正式題，程式端可作為社會科正式三關。"
     },
     {
-      "level": "check_depth",
-      "note": "確認題幹與材料是否達到學測社會科資料判讀深度，避免只靠常識答題。"
+      "level": "monitor_after_launch",
+      "note": "上線後仍建議觀察學生作答與老師回饋，必要時再調整題幹、選項或解析。"
     },
     {
       "level": "check_balance",
@@ -62,7 +69,7 @@
             "SO-C03",
             "SO-H06"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "text",
@@ -116,7 +123,7 @@
                 "SO-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "縣府初步規劃在丙區興建大型長照園區，理由是丙區靠近醫院與訓練中心。但乙區居民指出，山間聚落分散且到院時間長，甲區居民也希望閒置校舍能轉作社區服務。根據材料一、二，若要提高長者照護可近性，下列判斷何者最適當？",
               "materials": [],
               "options": [
@@ -145,7 +152,8 @@
               "review_advice": "社會政策題先看服務對象分布、交通可近性與資源配置，不要只看單一設施。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -161,7 +169,15 @@
                 "長照"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q02",
@@ -178,7 +194,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "若縣府希望同時回應長者需求、家庭照護壓力與照服員勞動條件，政策不能只追求服務量增加，也要避免把成本集中到家庭或基層照護者身上。根據材料一、二，下列哪些配套較能降低照護政策執行風險？",
               "materials": [],
               "options": [
@@ -213,7 +229,8 @@
               "review_advice": "多選題逐項檢查：是否同時照顧服務使用者、家庭與照護勞動者。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -233,8 +250,15 @@
                 {
                   "date": "2026-08-10",
                   "action": "補長題幹，增加材料判讀條件與政策限制。"
+                },
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
                 }
-              ]
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q03",
@@ -251,7 +275,7 @@
                 "SO-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "材料一提到山城縣早期因礦業與林業聚落形成，後來青年外移，高齡人口比例上升。若要從歷史變遷與人口地理角度理解今日照護問題，下列敘述何者最適當？",
               "materials": [],
               "options": [
@@ -280,7 +304,8 @@
               "review_advice": "看到人口題時，先追問人口結構如何由產業、交通與政策長期累積而來。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -296,7 +321,15 @@
                 "地方變遷"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q04",
@@ -313,7 +346,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "乙區山間聚落分散，若只用平均服務人數評估，可能看不出交通時間與獨居風險。若縣府要設計乙區照護方案，下列哪些判斷較符合地理資料與公共政策分析？",
               "materials": [],
               "options": [
@@ -348,7 +381,8 @@
               "review_advice": "地理資料題不要只看人數，也要看距離、時間、可近性與弱勢風險。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -364,7 +398,15 @@
                 "數位落差"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q05",
@@ -381,7 +423,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "照服員工會指出，若只增加服務據點，卻沒有改善工時、薪資與留任制度，服務品質可能不穩。依材料判斷，下列哪一項最能說明照護政策中的利害關係人分析？",
               "materials": [],
               "options": [
@@ -410,7 +452,8 @@
               "review_advice": "公民題常考不同利害關係人的目標與限制，不能只看單一群體。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -426,9 +469,19 @@
                 "利害關係人"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         },
         {
           "day_id": "SO-FC-V01-B02-W01-THU",
@@ -440,7 +493,7 @@
             "SO-S05",
             "SO-H08"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "text",
@@ -494,7 +547,7 @@
                 "SO-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "某企業主張 AI 初篩能節省人力，因此不需要向求職者說明評分方式，也不需要人工複核。根據材料一、二，若從法治保障與平等就業角度判斷，下列何者最適當？",
               "materials": [],
               "options": [
@@ -523,7 +576,8 @@
               "review_advice": "遇到科技治理題，效率不是唯一標準，要檢查透明、申訴與權利保障。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -539,7 +593,15 @@
                 "就業平等"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q02",
@@ -556,7 +618,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "材料一指出 AI 系統可能延續過去錄取資料中的偏誤；若企業只看模型分數，求職者可能不知道自己被哪些欄位影響。若主管機關要求企業建立可檢查的招募制度，下列哪些措施較能降低黑箱決策與歧視風險？",
               "materials": [],
               "options": [
@@ -591,7 +653,8 @@
               "review_advice": "多選題要分清楚『提升效率』與『降低權利風險』是否同時被處理。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -611,8 +674,15 @@
                 {
                   "date": "2026-08-10",
                   "action": "補長題幹，增加材料判讀條件與政策限制。"
+                },
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
                 }
-              ]
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q03",
@@ -629,7 +699,7 @@
                 "SO-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "若從勞動制度長期變遷來看，工廠時代曾用學歷、年齡、性別或戶籍等條件篩選勞工；數位時代則可能把這些差異轉化成資料欄位與模型分數。依材料判斷，AI 招募最需要注意的歷史延續問題是什麼？",
               "materials": [],
               "options": [
@@ -658,7 +728,8 @@
               "review_advice": "歷史題不只問年代，也會問制度問題如何在新型態中延續或轉變。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -674,7 +745,15 @@
                 "AI治理"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q04",
@@ -691,7 +770,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "材料二比較三種招募流程：完全人工可能耗時且有主觀偏見，完全 AI 自動淘汰則速度快但申訴困難。若企業想兼顧效率、求職者權利與篩選品質，下列哪些推論較符合材料？",
               "materials": [],
               "options": [
@@ -726,7 +805,8 @@
               "review_advice": "圖表比較題要同時看優點、限制與治理工具，不要只看單一欄位。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -746,8 +826,15 @@
                 {
                   "date": "2026-08-10",
                   "action": "補長題幹，增加材料判讀條件與政策限制。"
+                },
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
                 }
-              ]
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q05",
@@ -764,7 +851,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "某求職者因通勤距離較遠而被 AI 系統降低建議分數，但他願意搬家，且具備職缺要求的技能。若企業完全依 AI 分數淘汰，依材料判斷，最主要的治理問題為何？",
               "materials": [],
               "options": [
@@ -793,7 +880,8 @@
               "review_advice": "資料欄位不等於完整的人，作答時要注意模型分數背後的脈絡限制。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -809,9 +897,19 @@
                 "就業平等"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         },
         {
           "day_id": "SO-FC-V01-B02-W01-SAT",
@@ -823,7 +921,7 @@
             "SO-C03",
             "SO-H09"
           ],
-          "status": "needs_human_review",
+          "status": "approved_for_app",
           "day_materials": [
             {
               "type": "text",
@@ -877,7 +975,7 @@
                 "SO-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "市府官員主張，只要在國際市場尋找更便宜的糧食來源，就能解決糧食安全問題。根據材料一、二，若要同時考量進口依賴、氣候風險與社會公平，下列判斷何者最適當？",
               "materials": [],
               "options": [
@@ -906,7 +1004,8 @@
               "review_advice": "糧食安全題要同時看生產、進口、儲備與分配，不要只看價格。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -922,7 +1021,15 @@
                 "氣候風險"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q02",
@@ -939,7 +1046,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "若出口國乾旱導致國際糧價上升，市府必須在短期穩定供應與中長期氣候調適之間安排政策，也要避免低收入家庭承擔過高食物支出。根據材料一、二，下列哪些做法較合理？",
               "materials": [],
               "options": [
@@ -974,7 +1081,8 @@
               "review_advice": "多選題要分辨不同政策工具負責不同時間尺度與對象。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -994,8 +1102,15 @@
                 {
                   "date": "2026-08-10",
                   "action": "補長題幹，增加材料判讀條件與政策限制。"
+                },
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
                 }
-              ]
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q03",
@@ -1012,7 +1127,7 @@
                 "SO-A5"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "從歷史角度看，港口城市常因貿易而取得多元糧食來源，但也會受國際價格、航運與政治經濟變動影響。若把材料一放入全球貿易與地方糧食治理的脈絡理解，下列何者最適當？",
               "materials": [],
               "options": [
@@ -1041,7 +1156,8 @@
               "review_advice": "歷史與地理跨科題常要看網絡帶來機會，也帶來依賴與風險。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -1061,8 +1177,15 @@
                 {
                   "date": "2026-08-10",
                   "action": "補長題幹，增加材料判讀條件與政策限制。"
+                },
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
                 }
-              ]
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q04",
@@ -1079,7 +1202,7 @@
                 "SO-A7"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "材料二列出安全存糧、耐旱作物與弱勢食物券三種工具，各自處理的時間尺度與受影響群體不同，也各有財政、技術或執行限制。若市府要避免政策只照顧單一群體，下列哪些評估較完整？",
               "materials": [],
               "options": [
@@ -1114,7 +1237,8 @@
               "review_advice": "政策表格題要看『效果』與『限制』兩欄，不能只選看起來最有用的工具。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -1134,8 +1258,15 @@
                 {
                   "date": "2026-08-10",
                   "action": "補長題幹，增加材料判讀條件與政策限制。"
+                },
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
                 }
-              ]
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q05",
@@ -1153,7 +1284,7 @@
                 "SO-A8"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "市府要提出一套糧食安全方案，但若只做安全存糧，可能忽略本地農業調適與弱勢家庭負擔；若只補助農民，也可能無法處理短期進口中斷。請根據材料一、二提出一套較完整方案，答案需包含：一項短期供應穩定措施、一項中長期氣候調適措施、一項弱勢家庭支持措施。",
               "materials": [],
               "options": [],
@@ -1165,7 +1296,8 @@
               "review_advice": "短答先列三個面向：供應、調適、分配，再各寫一個具體工具。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -1182,7 +1314,15 @@
                 "社會公平"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q06",
@@ -1199,7 +1339,7 @@
                 "SO-A8"
               ],
               "source_type": "AI新題",
-              "status": "needs_human_review",
+              "status": "approved_for_app",
               "stem": "有市民說：「糧食只要市場買得到就好，政府不必介入。」若從公共財、風險分擔與社會公平角度回應，請說明為什麼糧食安全不能只交給市場價格決定。答案需指出一個市場可能失靈或分配不均的原因，並舉材料中的一個政策工具。",
               "materials": [],
               "options": [],
@@ -1211,7 +1351,8 @@
               "review_advice": "公民短答要先說概念，再用材料工具支持，不要只寫個人立場。",
               "review_grade": "B",
               "review_notes": [
-                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；仍需人工審題確認難度與措辭。"
+                "AI 初審：材料足以支持答案，干擾選項多以過度推論、單一指標化或程序忽略設計；已依使用者指示接入正式題；上線後持續觀察作答回饋。",
+                "Gatekeeper：2026-08-10 依使用者指示設為 approved_for_app。"
               ],
               "error_codes": [],
               "similarity_risk": "低",
@@ -1227,9 +1368,19 @@
                 "糧食安全"
               ],
               "data_year": "虛構練習資料",
-              "revision_history": []
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "set_approved_for_app",
+                  "note": "使用者指示 batch_02 轉正式題並接入社會科闖關。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "gatekeeper_status": "approved_for_app"
             }
-          ]
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app"
         }
       ]
     }

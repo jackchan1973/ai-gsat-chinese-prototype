@@ -2502,6 +2502,103 @@ body {
   gap: 18px;
 }
 
+.practice-page {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(0, 167, 200, 0.22), transparent 24rem),
+    radial-gradient(circle at 90% 14%, rgba(240, 124, 40, 0.2), transparent 20rem),
+    linear-gradient(180deg, #07131f 0, #102235 310px, #eef5f8 310px, #eef5f8 100%);
+}
+
+.practice-quest-hero {
+  min-height: 172px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.96), rgba(7, 19, 31, 0.68), rgba(240, 124, 40, 0.24)),
+    url("../images/gsat-challenge-hero.jpg") center / cover no-repeat;
+  color: #fff;
+}
+
+.practice-quest-hero h1,
+.practice-quest-hero .eyebrow {
+  color: #fff;
+}
+
+.practice-quest-hero .muted-text {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.practice-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 16px;
+  margin: 16px 0;
+  border: 1px solid rgba(0, 167, 200, 0.22);
+  border-radius: 8px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 251, 255, 0.92)),
+    linear-gradient(90deg, transparent, rgba(240, 124, 40, 0.1));
+  box-shadow: 0 18px 44px rgba(7, 19, 31, 0.1);
+}
+
+.practice-stage h2 {
+  margin: 2px 0 8px;
+  color: #07131f;
+  font-size: clamp(1.9rem, 4vw, 3.4rem);
+  line-height: 1.04;
+}
+
+.practice-stage p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.practice-stage-copy {
+  align-self: center;
+}
+
+.practice-stage-panel {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  border: 1px solid rgba(3, 96, 121, 0.16);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+}
+
+.practice-stage-panel > span {
+  color: var(--primary-dark);
+  font-weight: 950;
+}
+
+.stage-route {
+  display: grid;
+  grid-template-columns: 42px minmax(28px, 1fr) 42px minmax(28px, 1fr) 42px;
+  align-items: center;
+  gap: 8px;
+}
+
+.stage-route strong {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), #7c5cff);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 950;
+}
+
+.stage-route i {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(0, 167, 200, 0.76), rgba(240, 124, 40, 0.72));
+}
+
 .practice-page .panel {
   border-color: rgba(3, 96, 121, 0.14);
 }
@@ -2517,8 +2614,38 @@ body {
 .practice-page .basic-drill-panel .section-title {
   margin: -18px -18px 16px;
   padding: 16px 18px;
-  background: #0d2538;
+  background:
+    linear-gradient(135deg, rgba(13, 37, 56, 0.98), rgba(15, 111, 141, 0.9)),
+    linear-gradient(90deg, rgba(240, 124, 40, 0.2), transparent);
   color: #fff;
+}
+
+.practice-page .quest-level-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.practice-page .quest-level-title div {
+  display: grid;
+  gap: 3px;
+}
+
+.practice-page .quest-level-title h2 {
+  margin: 0;
+}
+
+.level-chip {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
 }
 
 .practice-page .section-title h2 {
@@ -2542,7 +2669,9 @@ body {
 
 .practice-tools {
   border-color: rgba(0, 167, 200, 0.24);
-  background: linear-gradient(135deg, #eefbff, #f7f3ff);
+  background:
+    linear-gradient(135deg, #eefbff, #fff7ed),
+    linear-gradient(90deg, rgba(124, 92, 255, 0.08), transparent);
 }
 
 .question-card,
@@ -2552,6 +2681,20 @@ body {
 .schedule-card {
   background: #fff;
   box-shadow: 0 14px 34px rgba(7, 19, 31, 0.08);
+}
+
+.practice-page .question-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.practice-page .question-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--primary), #f07c28);
+  opacity: 0.82;
 }
 
 .question-number {
@@ -2592,6 +2735,7 @@ body {
   .exam-command-hero,
   .teacher-summary-grid,
   .practice-page .practice-layout,
+  .practice-stage,
   .compact-question-stack {
     grid-template-columns: 1fr;
   }
@@ -2747,6 +2891,28 @@ body {
 
   .home-return-action {
     width: 100%;
+  }
+
+  .practice-quest-hero {
+    align-items: flex-start;
+    min-height: 210px;
+  }
+
+  .practice-stage {
+    padding: 14px;
+  }
+
+  .practice-stage h2 {
+    font-size: 2rem;
+  }
+
+  .stage-route {
+    grid-template-columns: 36px minmax(20px, 1fr) 36px minmax(20px, 1fr) 36px;
+  }
+
+  .stage-route strong {
+    width: 36px;
+    height: 36px;
   }
 
   .practice-page .passage-panel .section-title,

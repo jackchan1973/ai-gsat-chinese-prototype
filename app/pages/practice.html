@@ -5,47 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜國文闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260809-quest-mode" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-questformal" />
   </head>
   <body class="practice-page">
     <main class="app-shell practice-shell">
-      <header class="topbar practice-topbar">
+      <header class="topbar practice-topbar practice-quest-hero">
         <div>
           <p class="eyebrow">國文主線</p>
-          <h1>今日闖關</h1>
+          <h1>今日任務地圖</h1>
+          <p class="muted-text">完成暖身、閱讀挑戰與復活關，收集今日星等。</p>
         </div>
         <a class="home-return-action" href="../index.html">返回闖關地圖</a>
       </header>
 
-      <section class="panel wide-panel">
-        <div class="section-title">
+      <section class="practice-stage" aria-label="今日闖關狀態">
+        <div class="practice-stage-copy">
+          <p class="eyebrow">Quest briefing</p>
           <h2 id="practiceTitle">讀取中</h2>
-          <span id="practiceMeta">--</span>
+          <p id="practiceDescription">請稍候，正在讀取今日關卡。</p>
         </div>
-        <p class="muted-text" id="practiceDescription">請稍候，正在讀取今日關卡。</p>
+        <div class="practice-stage-panel">
+          <span id="practiceMeta">--</span>
+          <div class="stage-route" aria-hidden="true">
+            <strong>1</strong>
+            <i></i>
+            <strong>2</strong>
+            <i></i>
+            <strong>3</strong>
+          </div>
+          <p>先拿基礎分，再進入閱讀挑戰。</p>
+        </div>
       </section>
 
       <form id="practiceForm" class="practice-form-stack">
-        <section class="panel basic-drill-panel">
-          <div class="section-title">
-          <h2>第 1 關｜基礎暖身</h2>
+        <section class="panel basic-drill-panel quest-level-panel">
+          <div class="section-title quest-level-title">
+            <div>
+              <span class="level-chip">Level 1</span>
+              <h2>基礎暖身</h2>
+            </div>
             <span id="basicBadge">0 題</span>
           </div>
           <div class="question-stack compact-question-stack" id="basicQuestionStack"></div>
         </section>
 
         <section class="practice-layout">
-          <article class="panel passage-panel">
-            <div class="section-title">
-              <h2>挑戰材料</h2>
+          <article class="panel passage-panel quest-level-panel">
+            <div class="section-title quest-level-title">
+              <div>
+                <span class="level-chip">Material</span>
+                <h2>關卡材料</h2>
+              </div>
               <span id="groupBadge">--</span>
             </div>
             <div class="passage-box tall" id="passageBox"></div>
           </article>
 
-          <article class="panel questions-panel">
-            <div class="section-title">
-              <h2>第 2 關｜閱讀挑戰</h2>
+          <article class="panel questions-panel quest-level-panel">
+            <div class="section-title quest-level-title">
+              <div>
+                <span class="level-chip">Level 2</span>
+                <h2>閱讀挑戰</h2>
+              </div>
               <span id="questionBadge">0 題</span>
             </div>
             <div class="practice-tools" aria-label="作答進度">
@@ -66,7 +87,7 @@
       </form>
     </main>
 
-    <script src="../assets/js/session.js?v=20260809-quest-mode"></script>
-    <script src="../assets/js/practice.js?v=20260809-quest-mode"></script>
+    <script src="../assets/js/session.js?v=20260810-questformal"></script>
+    <script src="../assets/js/practice.js?v=20260810-questformal"></script>
   </body>
 </html>

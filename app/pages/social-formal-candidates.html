@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜社會正式候選題 v0.1</title>
+    <title>AI學測考總複習｜社會正式題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-batch02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-questformal" />
     <style>
       .candidate-shell {
         max-width: 1080px;
@@ -249,14 +249,14 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">AI學測考總複習</p>
-          <h1 id="candidateTitle">社會正式候選題 v0.1</h1>
+          <h1 id="candidateTitle">社會正式題庫 v0.1</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
-      <section class="candidate-alert" aria-label="候選題狀態">
-        <strong>本頁只供線上檢查</strong>
-        <p>全部題目都是待人工檢查，尚未進入正式每日任務。</p>
+      <section class="candidate-alert" id="candidateAlert" aria-label="題庫狀態">
+        <strong id="candidateAlertTitle">本頁供線上檢查</strong>
+        <p id="candidateAlertText">正在讀取題庫狀態。</p>
       </section>
 
       <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
@@ -289,8 +289,8 @@
         },
         "02": {
           label: "batch_02",
-          local: "../../data/social_formal_candidates_v0_1_batch_02.json?v=20260810-batch02",
-          remote: "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_02.json?v=20260810-batch02"
+          local: "../../data/social_formal_candidates_v0_1_batch_02.json?v=20260810-questformal",
+          remote: "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_02.json?v=20260810-questformal"
         }
       };
       const weekdayLabels = {
@@ -303,10 +303,17 @@
         cross_domain_and_chart_reading: "跨科整合與圖表判讀",
         weekly_synthesis: "週總結與深度表達"
       };
+      const statusLabels = {
+        approved_for_app: "正式題",
+        needs_human_review: "待人工檢查",
+        needs_revision: "需修訂",
+        excluded: "排除"
+      };
 
       let days = [];
       let questions = [];
       let activeBatch = "02";
+      let activeMeta = {};
 
       function escapeHtml(value) {
         return String(value ?? "")
@@ -319,10 +326,12 @@
       function renderStats() {
         const written = questions.filter((item) => item.question.requires_written_response).length;
         const selection = questions.length - written;
+        const approved = questions.filter((item) => item.question.status === "approved_for_app").length;
         const stats = [
           ["總題數", questions.length],
           ["選擇題", selection],
           ["文字作答", written],
+          ["正式題", approved],
           ["任務日", days.length]
         ];
         document.getElementById("summaryStats").innerHTML = stats
@@ -360,6 +369,7 @@
 
       function renderQuestion(item, index) {
         const question = item.question;
+        const statusText = statusLabels[question.status] || question.status || "未標";
         const options = question.options && question.options.length
           ? `<ul class="candidate-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
           : '<p class="candidate-empty">文字作答題，無選項。</p>';
@@ -372,7 +382,7 @@
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
                 <span class="tag">${question.requires_written_response ? "週六文字作答" : "選擇題"}</span>
               </div>
-              <span class="candidate-status">待人工檢查</span>
+              <span class="candidate-status">${escapeHtml(statusText)}</span>
             </div>
             <p class="label">${escapeHtml(weekdayLabels[item.weekday] || item.weekday)} 第 ${index + 1} 題</p>
             <div>${escapeHtml(question.stem)}</div>
@@ -395,6 +405,7 @@
 
       function renderDay(day) {
         const dayQuestions = day.question_slots || [];
+        const statusText = statusLabels[day.status] || day.status || "未標";
         return `
           <section class="candidate-day" data-weekday="${day.weekday}">
             <div class="candidate-day-header">
@@ -402,7 +413,7 @@
                 <p class="eyebrow">${escapeHtml(day.day_id)}</p>
                 <h2>${escapeHtml(day.label)}：${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h2>
               </div>
-              <span class="candidate-status">待人工檢查</span>
+              <span class="candidate-status">${escapeHtml(statusText)}</span>
             </div>
             ${(day.day_materials || []).map(renderMaterial).join("")}
             <div class="candidate-list">
@@ -480,7 +491,13 @@
 
       async function loadAndRender() {
         const data = await loadCandidateData();
-        document.getElementById("candidateTitle").textContent = `社會正式候選題 v0.1 ${BATCHES[activeBatch]?.label || ""}`;
+        activeMeta = data.meta || {};
+        const isApproved = activeMeta.status === "approved_for_app";
+        document.getElementById("candidateTitle").textContent = `${isApproved ? "社會正式題庫" : "社會正式候選題"} v0.1 ${BATCHES[activeBatch]?.label || ""}`;
+        document.getElementById("candidateAlertTitle").textContent = isApproved ? "batch_02 已接入正式社會科闖關" : "本批仍供線上檢查";
+        document.getElementById("candidateAlertText").textContent = isApproved
+          ? "本批題目狀態為 approved_for_app，社會科闖關頁可正式讀取。"
+          : "本批題目仍待人工檢查，尚未進入正式每日任務。";
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
