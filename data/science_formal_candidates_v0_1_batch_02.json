@@ -1,0 +1,1026 @@
+{
+  "meta": {
+    "subject": "自然",
+    "mode": "學測",
+    "version": "formal_candidates_v0.1_batch_02",
+    "purpose": "自然科正式候選題庫 v0.1 第 2 批；目前僅供試跑與審題，不接入正式小程式。",
+    "status": "needs_human_review",
+    "created_at": "2026-08-10",
+    "source_policy": "113、114、115 官方自然題與評分原則僅用於分析題型、圖表材料、實驗設計與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
+    "app_integration_policy": "本批題目尚未通過自然科審題與 Gatekeeper，不可接入正式每日任務。",
+    "batch_plan": {
+      "target_days": 3,
+      "target_questions": 12,
+      "short_answer_count": 1,
+      "status": "needs_human_review",
+      "themes": [
+        "生命與地球系統圖表判讀",
+        "物理化學實驗與變因控制",
+        "跨域環境資料與模型推理"
+      ]
+    },
+    "schedule_rule": {
+      "allowed_weekdays": [
+        "Mon",
+        "Wed",
+        "Fri"
+      ],
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  "review_flags": [
+    {
+      "level": "needs_human_review",
+      "note": "本批為自然科第二批 AI 新題，尚未經自然科老師或外部審題。"
+    },
+    {
+      "level": "not_for_app",
+      "note": "正式小程式只能讀 approved_for_app；本批目前不可接入正式闖關。"
+    },
+    {
+      "level": "diagram_policy",
+      "note": "本批提高圖表與流程圖材料比例，圖形均為可重繪 AI 新製作，不使用官方圖形。"
+    }
+  ],
+  "weeks": [
+    {
+      "week_id": "SC-FC-V01-B02-W01",
+      "label": "自然第2批第1週",
+      "days": [
+        {
+          "day_id": "SC-FC-V01-B02-MON",
+          "label": "週一：生命與地球資料判讀",
+          "weekday": "Mon",
+          "task_type": "life_earth_systems",
+          "planned_focus": [
+            "SC-BIO",
+            "SC-EARTH",
+            "SC-INQ"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "用圖表與流程資料判斷生物族群、人體恆定與地球環境。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-MON-Q01",
+              "science_domains": [
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某湖泊小型浮游動物族群在人工放養後的數量變化如下。若湖中食物量與棲地空間沒有再增加，哪一項最能解釋第 8 至第 12 週的變化？",
+              "materials": [
+                {
+                  "type": "line_chart",
+                  "title": "浮游動物族群數量",
+                  "x_label": "週數",
+                  "y_label": "個體數（千隻）",
+                  "series": [
+                    {
+                      "name": "族群數量",
+                      "points": [
+                        [
+                          0,
+                          2
+                        ],
+                        [
+                          2,
+                          7
+                        ],
+                        [
+                          4,
+                          18
+                        ],
+                        [
+                          6,
+                          31
+                        ],
+                        [
+                          8,
+                          38
+                        ],
+                        [
+                          10,
+                          40
+                        ],
+                        [
+                          12,
+                          39
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "族群已完全停止出生與死亡"
+                },
+                {
+                  "key": "B",
+                  "text": "族群接近環境負荷量，淨增加量變小"
+                },
+                {
+                  "key": "C",
+                  "text": "個體數增加速度在第 8 週後持續變大"
+                },
+                {
+                  "key": "D",
+                  "text": "食物量突然變成無限供應"
+                },
+                {
+                  "key": "E",
+                  "text": "此圖只能說明溫度改變，不能討論族群"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "第 8 至第 12 週數量約維持在 38 至 40 千隻，代表族群增長趨緩並接近環境可支持的上限。接近平台不表示沒有出生或死亡，而是出生、死亡、遷入與遷出的淨效果變小。",
+              "review_advice": "看到曲線變平時，要從增量變化判斷限制因子，不要只看最後一個數字。",
+              "review_notes": [
+                "Question Agent：以 AI 新製族群曲線測資料判讀。",
+                "Review Agent：材料足以判斷答案，干擾選項避免單純背定義。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-MON-Q02",
+              "science_domains": [
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A5"
+              ],
+              "stem": "某學生測量飯後血糖與胰島素濃度變化，資料如下。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "飯後血糖與胰島素變化",
+                  "columns": [
+                    "0",
+                    "30",
+                    "60",
+                    "120"
+                  ],
+                  "row_header": "飯後時間（分鐘）",
+                  "rows": [
+                    {
+                      "label": "血糖（mg/dL）",
+                      "values": [
+                        "88",
+                        "136",
+                        "118",
+                        "92"
+                      ]
+                    },
+                    {
+                      "label": "胰島素（相對單位）",
+                      "values": [
+                        "1.0",
+                        "3.2",
+                        "3.8",
+                        "1.4"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "飯後 30 分鐘血糖升高，胰島素也升高"
+                },
+                {
+                  "key": "B",
+                  "text": "胰島素升高後，血糖在 60 到 120 分鐘間回降"
+                },
+                {
+                  "key": "C",
+                  "text": "血糖降低時，胰島素一定完全消失"
+                },
+                {
+                  "key": "D",
+                  "text": "此資料可證明腎臟是血糖調節的唯一器官"
+                },
+                {
+                  "key": "E",
+                  "text": "飯後 120 分鐘血糖比飯前高出 100 mg/dL 以上"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "表中 30 分鐘血糖由 88 升到 136，胰島素由 1.0 升到 3.2，A 合理。60 到 120 分鐘血糖由 118 降到 92，且胰島素仍高於飯前，B 合理。",
+              "review_advice": "人體恆定題常要同時讀兩列資料，判斷變化方向與時間先後。",
+              "review_notes": [
+                "Question Agent：以 AI 新製表格測恆定與資料判讀。",
+                "Review Agent：正答 2 項明確，選項 C/D/E 有資料或概念反證。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-MON-Q03",
+              "science_domains": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某地區岩層與事件的相對先後如下圖。依地質事件判讀原則，哪一事件最晚發生？",
+              "materials": [
+                {
+                  "type": "process_diagram",
+                  "title": "地質事件示意",
+                  "steps": [
+                    "沉積層甲形成",
+                    "岩脈乙切穿甲",
+                    "斷層丙錯移甲與乙"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "沉積層甲形成"
+                },
+                {
+                  "key": "B",
+                  "text": "岩脈乙侵入"
+                },
+                {
+                  "key": "C",
+                  "text": "斷層丙活動"
+                },
+                {
+                  "key": "D",
+                  "text": "甲與乙同時形成"
+                },
+                {
+                  "key": "E",
+                  "text": "無法由圖中事件判斷任何先後"
+                }
+              ],
+              "answer": "C",
+              "scoring_rule": "",
+              "explanation": "斷層丙錯移了甲與乙，表示甲與乙必須先存在，丙的活動才可能造成錯移，因此丙最晚發生。",
+              "review_advice": "地質先後判讀要看誰切穿或錯移誰，後發生的事件會影響先存在的構造。",
+              "review_notes": [
+                "Question Agent：以 AI 新製流程圖測地質相對年代。",
+                "Review Agent：答案由材料可直接推理，需人工確認圖文呈現是否足夠自然。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-MON-Q04",
+              "science_domains": [
+                "SC-BIO",
+                "SC-CHEM"
+              ],
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-BIO",
+                "SC-CHEM"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A3"
+              ],
+              "stem": "某水族箱中溶氧量由 8.0 mg/L 降至 5.6 mg/L，若水量為 20 L，水中氧氣總量減少多少 mg？",
+              "materials": [],
+              "options": [],
+              "answer": "48",
+              "scoring_rule": "填入 48；可接受單位 mg。計算過程為每公升減少 2.4 mg，20 L 共減少 48 mg。",
+              "explanation": "每公升溶氧量減少 8.0 - 5.6 = 2.4 mg。水量為 20 L，所以總減少量為 2.4 × 20 = 48 mg。",
+              "review_advice": "單位換算題先確認資料是每公升，再乘以總體積。",
+              "review_notes": [
+                "Question Agent：以 AI 新製數據測自然科量化推理。",
+                "Review Agent：數值唯一，需人工確認難度是否符合批次配置。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": true
+            }
+          ]
+        },
+        {
+          "day_id": "SC-FC-V01-B02-WED",
+          "label": "週三：物理化學實驗",
+          "weekday": "Wed",
+          "task_type": "physics_chemistry_experiment",
+          "planned_focus": [
+            "SC-PHY",
+            "SC-CHEM",
+            "SC-INQ"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "從實驗資料辨認變因、趨勢與合理結論。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-WED-Q01",
+              "science_domains": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某學生記錄熱水自然冷卻時的溫度變化。若室溫約為 25 ℃，哪一項最符合圖中趨勢？",
+              "materials": [
+                {
+                  "type": "line_chart",
+                  "title": "熱水冷卻曲線",
+                  "x_label": "時間（分鐘）",
+                  "y_label": "溫度（℃）",
+                  "series": [
+                    {
+                      "name": "水溫",
+                      "points": [
+                        [
+                          0,
+                          80
+                        ],
+                        [
+                          5,
+                          62
+                        ],
+                        [
+                          10,
+                          49
+                        ],
+                        [
+                          15,
+                          40
+                        ],
+                        [
+                          20,
+                          34
+                        ],
+                        [
+                          25,
+                          30
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "水溫降低速率一開始較大，接近室溫時變小"
+                },
+                {
+                  "key": "B",
+                  "text": "水溫每 5 分鐘都固定下降 18 ℃"
+                },
+                {
+                  "key": "C",
+                  "text": "水溫會在 25 分鐘時降到 0 ℃"
+                },
+                {
+                  "key": "D",
+                  "text": "室溫越低，圖中水溫必定越高"
+                },
+                {
+                  "key": "E",
+                  "text": "資料顯示水溫正在週期性振盪"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "前 5 分鐘降 18 ℃，20 至 25 分鐘只降 4 ℃，表示接近室溫時降溫速率變小。圖形沒有固定等差下降，也不是振盪。",
+              "review_advice": "折線圖要比較相鄰時間的差值，才能判斷變化速率。",
+              "review_notes": [
+                "Question Agent：以 AI 新製冷卻曲線測圖形判讀。",
+                "Review Agent：答案唯一，資料足以排除固定速率與振盪說法。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-WED-Q02",
+              "science_domains": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A5"
+              ],
+              "stem": "某組學生比較不同溫度下錠劑與水反應產生氣體的速率，其他條件保持相同。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "不同水溫下的氣體累積體積",
+                  "columns": [
+                    "30 秒",
+                    "60 秒",
+                    "90 秒"
+                  ],
+                  "row_header": "水溫",
+                  "rows": [
+                    {
+                      "label": "20 ℃",
+                      "values": [
+                        "18 mL",
+                        "31 mL",
+                        "38 mL"
+                      ]
+                    },
+                    {
+                      "label": "35 ℃",
+                      "values": [
+                        "32 mL",
+                        "47 mL",
+                        "52 mL"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "在此設計中，水溫是操縱變因"
+                },
+                {
+                  "key": "B",
+                  "text": "35 ℃ 組在 30 秒時的反應速率較 20 ℃ 組快"
+                },
+                {
+                  "key": "C",
+                  "text": "兩組 90 秒時產生氣體體積完全相同"
+                },
+                {
+                  "key": "D",
+                  "text": "此實驗不需要控制錠劑質量即可比較溫度影響"
+                },
+                {
+                  "key": "E",
+                  "text": "資料可證明所有化學反應在高溫下都會無限加速"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "兩組主要改變的是水溫，因此水溫是操縱變因。35 ℃ 組在 30 秒累積 32 mL，大於 20 ℃ 組的 18 mL，表示初期產氣較快。錠劑質量等條件仍須控制，資料也不能外推到所有反應。",
+              "review_advice": "實驗題先找操縱變因與應變變因，再用資料支持結論。",
+              "review_notes": [
+                "Question Agent：以 AI 新製實驗表格測變因控制。",
+                "Review Agent：正答 2 項明確，外推與未控制變因選項可排除。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-WED-Q03",
+              "science_domains": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "某學生以不同電阻接上同一電源，測得電流如下。哪一項判斷最合理？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "電阻與電流測量",
+                  "columns": [
+                    "2",
+                    "4",
+                    "6"
+                  ],
+                  "row_header": "電阻（Ω）",
+                  "rows": [
+                    {
+                      "label": "電流（A）",
+                      "values": [
+                        "3.0",
+                        "1.5",
+                        "1.0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "電阻越大，電流越大"
+                },
+                {
+                  "key": "B",
+                  "text": "電阻與電流相乘約為固定值"
+                },
+                {
+                  "key": "C",
+                  "text": "電阻加倍時，電流也加倍"
+                },
+                {
+                  "key": "D",
+                  "text": "此資料顯示電源電壓不可能相同"
+                },
+                {
+                  "key": "E",
+                  "text": "電流大小與電阻完全無關"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "2×3.0、4×1.5、6×1.0 都約為 6，表示同一電源下電阻與電流呈反向變化，電阻與電流相乘約固定。",
+              "review_advice": "表格中的兩個量若一增一減，可試著比較乘積或比值是否固定。",
+              "review_notes": [
+                "Question Agent：以 AI 新製電路表格測模型判讀。",
+                "Review Agent：答案唯一，公式未放在題目提示中，只在解析說明。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-WED-Q04",
+              "science_domains": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-CHEM",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A3"
+              ],
+              "stem": "某溶液稀釋前濃度為 0.60 M，取 50 mL 後加水至 150 mL。若溶質莫耳數不變，稀釋後濃度為多少 M？",
+              "materials": [],
+              "options": [],
+              "answer": "0.20",
+              "scoring_rule": "填入 0.20 或 0.2 皆可。可接受單位 M。",
+              "explanation": "稀釋後總體積為原來的 3 倍，溶質莫耳數不變，因此濃度變為原來的三分之一，0.60 ÷ 3 = 0.20 M。",
+              "review_advice": "稀釋題先判斷體積倍率，再用溶質量不變推濃度變化。",
+              "review_notes": [
+                "Question Agent：以 AI 新製數值測稀釋概念。",
+                "Review Agent：答案唯一，需人工確認是否需加入更多情境材料。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": true
+            }
+          ]
+        },
+        {
+          "day_id": "SC-FC-V01-B02-FRI",
+          "label": "週五：跨域環境與模型推理",
+          "weekday": "Fri",
+          "task_type": "integrated_science_reasoning",
+          "planned_focus": [
+            "SC-EARTH",
+            "SC-CHEM",
+            "SC-BIO",
+            "SC-INQ"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "整合環境監測、物質循環與實驗模型，判斷資料支持的結論。"
+            }
+          ],
+          "question_slots": [
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-FRI-Q01",
+              "science_domains": [
+                "SC-EARTH",
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-BIO",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A5"
+              ],
+              "stem": "某溪流上、中、下游的水質與生物指標如下。哪一項最能由資料支持？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "溪流水質監測",
+                  "columns": [
+                    "溶氧（mg/L）",
+                    "硝酸鹽（mg/L）",
+                    "敏感水生昆蟲種類數"
+                  ],
+                  "row_header": "測站",
+                  "rows": [
+                    {
+                      "label": "上游",
+                      "values": [
+                        "8.4",
+                        "0.6",
+                        "12"
+                      ]
+                    },
+                    {
+                      "label": "中游",
+                      "values": [
+                        "6.1",
+                        "2.4",
+                        "6"
+                      ]
+                    },
+                    {
+                      "label": "下游",
+                      "values": [
+                        "4.8",
+                        "4.1",
+                        "2"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "由上游到下游，溶氧降低且敏感種類數減少"
+                },
+                {
+                  "key": "B",
+                  "text": "硝酸鹽越高，敏感水生昆蟲種類數一定越多"
+                },
+                {
+                  "key": "C",
+                  "text": "下游水質最好，因為硝酸鹽最高"
+                },
+                {
+                  "key": "D",
+                  "text": "此資料可證明所有污染都來自火山活動"
+                },
+                {
+                  "key": "E",
+                  "text": "三個測站的溶氧完全相同"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "上游至下游溶氧由 8.4 降至 4.8，敏感水生昆蟲種類數由 12 降至 2。資料支持此趨勢，但不能證明污染來源一定是火山活動。",
+              "review_advice": "環境資料題要同時比較多欄位，不要把單一指標誤當作全部水質。",
+              "review_notes": [
+                "Question Agent：以 AI 新製水質表格測跨域判讀。",
+                "Review Agent：答案由多欄資料共同支持，避免過度因果推論。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-FRI-Q02",
+              "science_domains": [
+                "SC-CHEM",
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "question_type": "multiple_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-CHEM",
+                "SC-EARTH",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A3",
+                "SC-A5"
+              ],
+              "stem": "某城市連續監測雨水 pH 與二氧化硫濃度，得到下列資料。依資料判斷，哪些敘述合理？（應選 2 項）",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "雨水與空氣監測",
+                  "columns": [
+                    "二氧化硫（ppb）",
+                    "雨水 pH"
+                  ],
+                  "row_header": "月份",
+                  "rows": [
+                    {
+                      "label": "3 月",
+                      "values": [
+                        "8",
+                        "5.8"
+                      ]
+                    },
+                    {
+                      "label": "4 月",
+                      "values": [
+                        "18",
+                        "5.1"
+                      ]
+                    },
+                    {
+                      "label": "5 月",
+                      "values": [
+                        "31",
+                        "4.5"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "此資料中二氧化硫濃度增加時，雨水 pH 降低"
+                },
+                {
+                  "key": "B",
+                  "text": "pH 較低表示雨水酸性較強"
+                },
+                {
+                  "key": "C",
+                  "text": "雨水 pH 由 5.8 變 4.5，代表酸性消失"
+                },
+                {
+                  "key": "D",
+                  "text": "只憑此表可判定所有酸雨都由同一工廠造成"
+                },
+                {
+                  "key": "E",
+                  "text": "二氧化硫濃度增加時，雨水 pH 必定增加"
+                }
+              ],
+              "answer": [
+                "A",
+                "B"
+              ],
+              "scoring_rule": "",
+              "explanation": "資料中二氧化硫由 8 增至 31 ppb，雨水 pH 由 5.8 降至 4.5。pH 越低代表酸性越強，因此 A、B 合理；資料不能判定唯一污染源。",
+              "review_advice": "酸鹼與環境題要分清 pH 數值大小與酸性強弱的方向。",
+              "review_notes": [
+                "Question Agent：以 AI 新製環境化學資料測趨勢判斷。",
+                "Review Agent：正答 2 項明確，避免過度推論污染來源。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": true,
+              "id": "SC-FC-V01-B02-FRI-Q03",
+              "science_domains": [
+                "SC-INQ",
+                "SC-CHEM",
+                "SC-BIO"
+              ],
+              "question_type": "short_answer",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "SC-INQ",
+                "SC-CHEM",
+                "SC-BIO"
+              ],
+              "ability_tags": [
+                "SC-A4",
+                "SC-A5"
+              ],
+              "stem": "某學生想比較兩種濾材 A、B 對池水中硝酸鹽的降低效果。請寫出一個公平比較的實驗設計，至少包含操縱變因、應變變因與一個控制變因。",
+              "materials": [],
+              "options": [],
+              "answer": {
+                "key_points": [
+                  "操縱變因為濾材種類 A 或 B",
+                  "應變變因為處理後硝酸鹽濃度或降低量",
+                  "控制變因包含池水初始濃度、體積、濾材質量、處理時間、溫度或水流速率之一",
+                  "兩組以相同測量方法比較結果"
+                ]
+              },
+              "scoring_rule": "2 分：正確寫出操縱變因與應變變因，並提出至少一個合理控制變因。1 分：只寫出其中兩項或控制變因不完整但方向合理。0 分：未能形成公平比較或與題意無關。",
+              "explanation": "公平比較要只改變濾材種類，其他可能影響硝酸鹽降低量的條件需保持相同，再測量處理前後濃度變化。",
+              "review_advice": "短答題先用操縱、應變、控制三類變因整理答案，比直接寫步驟更穩。",
+              "review_notes": [
+                "Question Agent：以 AI 新製實驗設計情境測探究實作。",
+                "Review Agent：評分規準可操作，但仍需自然科人工審題確認用語。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": true
+            },
+            {
+              "subject": "自然",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "SC-FC-V01-B02-FRI-Q04",
+              "science_domains": [
+                "SC-EARTH",
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "SC-EARTH",
+                "SC-PHY",
+                "SC-INQ"
+              ],
+              "ability_tags": [
+                "SC-A2",
+                "SC-A4"
+              ],
+              "stem": "下圖為白天海岸附近空氣流動的簡化模型。依圖判斷，哪一項敘述最合理？",
+              "materials": [
+                {
+                  "type": "process_diagram",
+                  "title": "白天海岸空氣流動",
+                  "steps": [
+                    "陸地升溫較快",
+                    "陸地上方空氣上升",
+                    "近地面空氣由海面吹向陸地"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "白天近地面較可能形成由海吹向陸的海風"
+                },
+                {
+                  "key": "B",
+                  "text": "白天陸地永遠比海洋冷"
+                },
+                {
+                  "key": "C",
+                  "text": "空氣上升代表密度一定變大"
+                },
+                {
+                  "key": "D",
+                  "text": "此模型顯示風向與溫度差完全無關"
+                },
+                {
+                  "key": "E",
+                  "text": "近地面空氣一定由陸地吹向海洋"
+                }
+              ],
+              "answer": "A",
+              "scoring_rule": "",
+              "explanation": "白天陸地升溫較快，陸地上方空氣受熱上升，近地面由海面補充空氣，因此形成由海吹向陸的海風。",
+              "review_advice": "流程圖題要按箭頭方向串起因果，不要把日夜風向混淆。",
+              "review_notes": [
+                "Question Agent：以 AI 新製流程圖測地科與物理模型推理。",
+                "Review Agent：答案唯一，圖文結合充足，需人工確認視覺呈現。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "similarity_risk": "low_ai_new_science_context",
+              "requires_written_response": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
