@@ -202,6 +202,16 @@ function wireClearProgressButton() {
   });
 }
 
+function wireReturnHomeButton() {
+  const button = document.getElementById("returnHomeButton");
+  if (!button) return;
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (window.ChiAuth) window.ChiAuth.logout();
+    window.location.href = "../index.html";
+  });
+}
+
 function renderPerformance(report) {
   const grid = document.getElementById("performanceGrid");
   const missedDays = Number(report.missed_days) || 0;
@@ -355,6 +365,7 @@ async function main() {
   }
 
   wireClearProgressButton();
+  wireReturnHomeButton();
   const [sampleReport, sampleWeaknesses, sampleSchedules, systemPlan] = await Promise.all([
     readJson(`${DATA_ROOT}/parent_weekly_report.sample.json`),
     readJson(`${DATA_ROOT}/weaknesses.sample.json`),
