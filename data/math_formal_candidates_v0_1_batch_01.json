@@ -1,0 +1,906 @@
+{
+  "meta": {
+    "subject": "數學",
+    "mode": "學測",
+    "version": "formal_candidates_v0.1_batch_01",
+    "purpose": "數學科正式候選題庫 v0.1 第 1 批；目前僅供試跑與審題，不接入正式小程式。",
+    "status": "needs_human_review",
+    "created_at": "2026-08-10",
+    "source_policy": "113、114、115 官方數學 A/B 題與出版社解析僅用於分析題型、圖形材料、計算深度與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
+    "app_integration_policy": "本批題目尚未通過數學審題與 Gatekeeper，不可接入正式每日任務。",
+    "batch_plan": {
+      "target_days": 4,
+      "target_questions": 12,
+      "short_answer_count": 2,
+      "status": "needs_human_review",
+      "themes": [
+        "代數函數與模型",
+        "機率統計與資料判讀",
+        "圖形幾何與向量",
+        "混合推理與非選表達"
+      ]
+    },
+    "schedule_rule": {
+      "allowed_weekdays": [
+        "Tue",
+        "Thu",
+        "Sat",
+        "Sun"
+      ],
+      "written_response_day_only": "Sun",
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  "review_flags": [
+    {
+      "level": "needs_human_review",
+      "note": "本批為數學科第一批 AI 新題，尚未經數學老師或第二輪嚴格審題。"
+    },
+    {
+      "level": "not_for_app",
+      "note": "正式小程式只能讀 approved_for_app；本批目前不可接入正式闖關。"
+    },
+    {
+      "level": "diagram_policy",
+      "note": "圖形題使用 graph_spec 或 diagram_spec，不使用官方圖形或官方圖形改寫。"
+    }
+  ],
+  "weeks": [
+    {
+      "week_id": "MA-FC-V01-B01-W01",
+      "label": "數學第1批第1週",
+      "days": [
+        {
+          "day_id": "MA-FC-V01-B01-TUE",
+          "label": "週二：代數、函數與模型",
+          "weekday": "Tue",
+          "task_type": "algebra_function_model",
+          "planned_focus": [
+            "MA-ALG",
+            "MA-FUNC",
+            "MA-EXPLOG",
+            "MA-SEQ"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "將文字條件轉成式子，再用函數、數列或矩陣概念判斷。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "MA-FC-V01-B01-TUE-Q01",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A/B",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-EXPLOG",
+                "MA-MODEL"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某教室裝設空氣濾淨器後，每小時結束時，室內懸浮微粒濃度會先降為原本的 70%，再因開門與人員走動增加 12 單位。若開始時濃度為 100 單位，3 小時後濃度約為多少單位？",
+              "materials": [
+                {
+                  "type": "latex",
+                  "content": "x_{n+1}=0.7x_n+12,\\quad x_0=100"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "52.90"
+                },
+                {
+                  "key": "B",
+                  "text": "60.58"
+                },
+                {
+                  "key": "C",
+                  "text": "69.40"
+                },
+                {
+                  "key": "D",
+                  "text": "82.00"
+                },
+                {
+                  "key": "E",
+                  "text": "112.00"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "依遞迴式計算：x1=0.7×100+12=82，x2=0.7×82+12=69.4，x3=0.7×69.4+12=60.58。錯因：A 是漏加部分外來增加量；C 是只算到第 2 小時；D 是只算到第 1 小時；E 是把增加量直接加在初始值後沒有套用濾淨比例。",
+              "review_advice": "看到「先變成某比例，再增加固定量」時，要依時間順序建立遞迴，不要只用單純指數衰退。",
+              "review_notes": [
+                "Question Agent：修正版改為遞迴模型，避免只套單純指數衰退。",
+                "Review Agent：第二輪檢查計算正確，仍需人工確認閱讀負荷與情境合理性。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_recurrence_model_not_a_direct_official_rewrite",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-TUE-Q02",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-MAT",
+                "MA-VEC"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "坐標平面上一線性變換 T 滿足 T(1,1)=(4,2)，且 T(1,-1)=(0,2)。試問 T(3,1) 的坐標為何？",
+              "materials": [
+                {
+                  "type": "latex",
+                  "content": "(3,1)=2(1,1)+(1,-1)"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "(6,4)"
+                },
+                {
+                  "key": "B",
+                  "text": "(8,6)"
+                },
+                {
+                  "key": "C",
+                  "text": "(10,4)"
+                },
+                {
+                  "key": "D",
+                  "text": "(12,2)"
+                },
+                {
+                  "key": "E",
+                  "text": "(4,8)"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "因為 (3,1)=2(1,1)+(1,-1)，線性變換保留線性組合，所以 T(3,1)=2T(1,1)+T(1,-1)=2(4,2)+(0,2)=(8,6)。錯因：A 是少加一次 T(1,-1)；C、D 是把係數或向量相加順序誤用。",
+              "review_advice": "線性變換題先把目標向量表示成已知向量的線性組合，再套用 T。",
+              "review_notes": [
+                "Question Agent：修正版改為線性變換與向量線性組合，降低與指數數列官方常見題型的相似風險。",
+                "Review Agent：第二輪檢查答案唯一，仍需人工確認數學 A 適配性。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_linear_transformation_context",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-TUE-Q03",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-MAT",
+                "MA-VEC"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "坐標平面上一線性變換 T 滿足 T(1,0)=(2,1)，T(0,1)=(-1,3)。若以矩陣 A 表示 T，試求 det(A)。",
+              "materials": [
+                {
+                  "type": "latex",
+                  "content": "A=\\begin{bmatrix}2&-1\\\\1&3\\end{bmatrix}"
+                }
+              ],
+              "options": [],
+              "answer": "7",
+              "scoring_rule": "填答 7 得滿分；若寫出矩陣但行列式計算錯誤，不給本題分數。",
+              "explanation": "T(1,0) 與 T(0,1) 分別是矩陣 A 的第一欄與第二欄，所以 A=[[2,-1],[1,3]]，det(A)=2×3-(-1)×1=7。常見錯因：把兩個像向量當成列向量，或行列式計算時漏掉負號。",
+              "review_advice": "線性變換給出基底向量的像時，可直接把它們當作矩陣欄向量。",
+              "review_notes": [
+                "Question Agent：以矩陣欄向量與行列式設計選填。",
+                "Review Agent：待確認是否需標為數學 A 專用。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            }
+          ]
+        },
+        {
+          "day_id": "MA-FC-V01-B01-THU",
+          "label": "週四：機率統計與資料判讀",
+          "weekday": "Thu",
+          "task_type": "probability_statistics_data",
+          "planned_focus": [
+            "MA-PROB",
+            "MA-STAT",
+            "MA-MODEL"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "由表格或資料條件建立機率、統計量與判斷依據。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "MA-FC-V01-B01-THU-Q01",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "B",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-PROB",
+                "MA-STAT"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A5",
+                "MA-A6"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某校統計 100 位學生上學交通方式與是否遲到，資料如下表。若隨機選出一位遲到學生，試問他是騎自行車上學的機率，比全體學生中騎自行車上學的比例高出多少個百分點？",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "交通方式與遲到人數",
+                  "columns": [
+                    "公車",
+                    "自行車",
+                    "步行"
+                  ],
+                  "rows": [
+                    {
+                      "label": "遲到",
+                      "values": [
+                        12,
+                        9,
+                        4
+                      ]
+                    },
+                    {
+                      "label": "未遲到",
+                      "values": [
+                        28,
+                        21,
+                        26
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "3 個百分點"
+                },
+                {
+                  "key": "B",
+                  "text": "5 個百分點"
+                },
+                {
+                  "key": "C",
+                  "text": "6 個百分點"
+                },
+                {
+                  "key": "D",
+                  "text": "9 個百分點"
+                },
+                {
+                  "key": "E",
+                  "text": "12 個百分點"
+                }
+              ],
+              "answer": "C",
+              "scoring_rule": "",
+              "explanation": "遲到學生共有 12+9+4=25 人，其中騎自行車 9 人，所以條件機率為 9/25=36%。全體騎自行車共有 9+21=30 人，比例為 30/100=30%。高出 36%-30%=6 個百分點。錯因：若用 9/30，代表分母誤用成全體騎自行車者；若用 9/100，代表沒有依題意限制在遲到學生。",
+              "review_advice": "表格機率題要先確認分母：題目問遲到學生中的比例，分母就只看遲到那一列。",
+              "review_notes": [
+                "Question Agent：修正版改為條件機率與整體比例比較，避免套用獨立事件表格題。",
+                "Review Agent：第二輪檢查分母與百分點計算正確。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_conditional_probability_table",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-THU-Q02",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "B",
+              "question_type": "multiple_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-STAT"
+              ],
+              "ability_tags": [
+                "MA-A5",
+                "MA-A6",
+                "MA-A10"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某班 5 位學生一次測驗分數為 1, 1, 3, 5, 5。若再加入一位分數為 9 的學生，試選出正確敘述。",
+              "materials": [
+                {
+                  "type": "data",
+                  "content": "原資料：1, 1, 3, 5, 5；加入資料：9"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "平均數由 3 變為 4"
+                },
+                {
+                  "key": "B",
+                  "text": "中位數仍為 3"
+                },
+                {
+                  "key": "C",
+                  "text": "全距由 4 變為 8"
+                },
+                {
+                  "key": "D",
+                  "text": "眾數仍為 1 與 5"
+                },
+                {
+                  "key": "E",
+                  "text": "標準差必定變小"
+                }
+              ],
+              "answer": [
+                "A",
+                "C",
+                "D"
+              ],
+              "scoring_rule": "",
+              "explanation": "原平均為 15/5=3，加入 9 後平均為 24/6=4，A 正確。新資料排序為 1,1,3,5,5,9，中位數為 (3+5)/2=4，因此 B 錯。全距由 5-1=4 變為 9-1=8，C 正確。眾數仍為 1 與 5，D 正確。加入遠離中心的 9 會使資料更分散，E 錯。",
+              "review_advice": "多選題要逐一檢查每個統計量，不要因為某些量不變就推論全部不變。",
+              "review_notes": [
+                "Question Agent：以資料加入後統計量變化設計。",
+                "Review Agent：已發現中位數計算易錯，需複查答案列表。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [
+                "MA-review-needed"
+              ],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-THU-Q03",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A/B",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-PROB",
+                "MA-MODEL"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某活動從袋中不放回抽出 2 張卡。袋中有 6 張加倍卡與 4 張普通卡。若抽到 2 張加倍卡可得 120 元，恰抽到 1 張加倍卡可得 30 元，抽到 0 張加倍卡不得獎。參加費為 20 元，試求一次參加的期望淨收益為多少元？",
+              "materials": [
+                {
+                  "type": "latex",
+                  "content": "E=120\\times\\frac{6}{10}\\times\\frac{5}{9}+30\\times\\left(2\\times\\frac{6}{10}\\times\\frac{4}{9}\\right)-20"
+                }
+              ],
+              "options": [],
+              "answer": "36",
+              "scoring_rule": "填答 36 得滿分，單位可省略；若只算獎金期望值 56 而未扣參加費，需標記為常見錯誤。",
+              "explanation": "抽到 2 張加倍卡機率為 (6/10)(5/9)=1/3；恰抽到 1 張加倍卡機率為 2×(6/10)(4/9)=8/15。獎金期望值為 120×1/3+30×8/15=40+16=56，扣掉參加費 20 元，期望淨收益為 36 元。常見錯因：把不放回誤當放回，或只算獎金期望值而忘記扣參加費。",
+              "review_advice": "不放回抽樣要注意第二次機率會改變；題目問淨收益時，最後還要扣成本。",
+              "review_notes": [
+                "Question Agent：修正版改為不放回抽樣與淨收益，提升到兩步以上推理。",
+                "Review Agent：第二輪檢查機率與期望值計算正確。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            }
+          ]
+        },
+        {
+          "day_id": "MA-FC-V01-B01-SAT",
+          "label": "週六：圖形、幾何與向量",
+          "weekday": "Sat",
+          "task_type": "geometry_vector_graph",
+          "planned_focus": [
+            "MA-GEO2D",
+            "MA-GEO3D",
+            "MA-VEC",
+            "MA-FUNC"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "圖形條件需用文字與可重繪規格描述，避免只靠截圖。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "MA-FC-V01-B01-SAT-Q01",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-VEC",
+                "MA-GEO2D"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A4"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "坐標平面上有向量 v=(6,8)，方向向量 u=(4,3)。試問 v 在 u 方向上的正射影長為何？",
+              "materials": [
+                {
+                  "type": "latex",
+                  "content": "\\text{projection length}=\\frac{v\\cdot u}{|u|}"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "8"
+                },
+                {
+                  "key": "B",
+                  "text": "48/5"
+                },
+                {
+                  "key": "C",
+                  "text": "10"
+                },
+                {
+                  "key": "D",
+                  "text": "14"
+                },
+                {
+                  "key": "E",
+                  "text": "48"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "v·u=6×4+8×3=48，且 |u|=sqrt(4^2+3^2)=5，所以 v 在 u 方向上的正射影長為 48/5。錯因：A、C 是把分量或 |v| 誤當投影長；E 是只算內積，忘記除以方向向量長度。",
+              "review_advice": "投影到非單位方向向量時，要用 v·u 除以 |u|；不要只算內積。",
+              "review_notes": [
+                "Question Agent：修正版改為非單位方向向量投影，增加一步判斷。",
+                "Review Agent：第二輪檢查投影長與選項誘因正確。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-SAT-Q02",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A",
+              "question_type": "multiple_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-FUNC",
+                "MA-GEO2D"
+              ],
+              "ability_tags": [
+                "MA-A4",
+                "MA-A6",
+                "MA-A10"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "坐標平面上拋物線 Gamma: y=(x-2)^2-3。試選出正確敘述。",
+              "materials": [
+                {
+                  "type": "graph_spec",
+                  "title": "拋物線 Gamma",
+                  "spec": {
+                    "type": "quadratic",
+                    "equation": "y=(x-2)^2-3",
+                    "vertex": [
+                      2,
+                      -3
+                    ],
+                    "opens": "up"
+                  }
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "頂點為 (2,-3)"
+                },
+                {
+                  "key": "B",
+                  "text": "對稱軸為 x=2"
+                },
+                {
+                  "key": "C",
+                  "text": "與 y 軸交於 (0,1)"
+                },
+                {
+                  "key": "D",
+                  "text": "與 x 軸交於 (2+sqrt(3),0) 與 (2-sqrt(3),0)"
+                },
+                {
+                  "key": "E",
+                  "text": "函數最大值為 -3"
+                }
+              ],
+              "answer": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ],
+              "scoring_rule": "",
+              "explanation": "由頂點式可知頂點 (2,-3)、對稱軸 x=2，A、B 正確。令 x=0 得 y=1，C 正確。令 y=0 得 (x-2)^2=3，所以 x=2±sqrt(3)，D 正確。拋物線開口向上，-3 是最小值不是最大值，E 錯。",
+              "review_advice": "看到頂點式時，先判斷頂點、開口與對稱軸，再處理截距。",
+              "review_notes": [
+                "Question Agent：以函數圖形與多選判斷設計。",
+                "Review Agent：待確認選項數量與難度。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": true
+            },
+            {
+              "id": "MA-FC-V01-B01-SAT-Q03",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A/B",
+              "question_type": "fill_in",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "MA-GEO2D",
+                "MA-MAT"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A4"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "坐標平面上三點 A(1,2)、B(5,2)、C(3,7) 所成三角形 ABC，經線性變換 T(x,y)=(2x-y, x+y) 後成為三角形 A'B'C'。試求三角形 A'B'C' 的面積。",
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "三角形 ABC",
+                  "spec": {
+                    "transform": "T(x,y)=(2x-y,x+y)",
+                    "points": {
+                      "A": [
+                        1,
+                        2
+                      ],
+                      "B": [
+                        5,
+                        2
+                      ],
+                      "C": [
+                        3,
+                        7
+                      ]
+                    },
+                    "segments": [
+                      [
+                        "A",
+                        "B"
+                      ],
+                      [
+                        "B",
+                        "C"
+                      ],
+                      [
+                        "C",
+                        "A"
+                      ]
+                    ]
+                  }
+                }
+              ],
+              "options": [],
+              "answer": "30",
+              "scoring_rule": "填答 30 得滿分，平方單位可省略；若只求原三角形面積 10，標記為漏用線性變換。",
+              "explanation": "原三角形以 AB 為底，底長 4，高為 5，面積為 10。線性變換矩陣為 [[2,-1],[1,1]]，行列式為 2×1-(-1)×1=3，面積放大為 3 倍，所以 A'B'C' 面積為 30。常見錯因：只求原面積 10，或把行列式倍率漏掉。",
+              "review_advice": "線性變換後的面積會乘上行列式絕對值；先求原面積，再看變換比例。",
+              "review_notes": [
+                "Question Agent：修正版加入線性變換與行列式面積倍率，提升推理層次。",
+                "Review Agent：第二輪檢查原面積、行列式與答案正確。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_with_transform",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": true
+            }
+          ]
+        },
+        {
+          "day_id": "MA-FC-V01-B01-SUN",
+          "label": "週日：混合推理與非選表達",
+          "weekday": "Sun",
+          "task_type": "mixed_reasoning_written",
+          "planned_focus": [
+            "MA-MODEL",
+            "MA-GEO3D",
+            "MA-VEC",
+            "MA-A8"
+          ],
+          "status": "needs_human_review",
+          "day_materials": [
+            {
+              "type": "note",
+              "title": "本日重點",
+              "content": "週日可放需要寫出步驟的短答或非選推理題。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "MA-FC-V01-B01-SUN-Q01",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A/B",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "MA-ALG",
+                "MA-FUNC"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A6",
+                "MA-A7"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "已知二次函數 f(x)=x^2-4x+k 的圖形與 x 軸有兩個相異交點，且兩交點距離小於 6。試問 k 的範圍為何？",
+              "materials": [
+                {
+                  "type": "latex",
+                  "content": "f(x)=(x-2)^2+(k-4)"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "k< -5"
+                },
+                {
+                  "key": "B",
+                  "text": "-5<k<4"
+                },
+                {
+                  "key": "C",
+                  "text": "0<k<4"
+                },
+                {
+                  "key": "D",
+                  "text": "k>4"
+                },
+                {
+                  "key": "E",
+                  "text": "k=4"
+                }
+              ],
+              "answer": "B",
+              "scoring_rule": "",
+              "explanation": "方程式 x^2-4x+k=0 的兩根相異需判別式 16-4k>0，得 k<4。兩根距離為 sqrt(discriminant)/|a|=sqrt(16-4k)，要求小於 6，得 16-4k<36，所以 k>-5。合併得 -5<k<4。錯因：只檢查兩根相異會得到 k<4；只檢查距離小於 6 會漏掉相異交點條件。",
+              "review_advice": "二次方程兩根距離可用判別式判斷，也可先求根再相減。",
+              "review_notes": [
+                "Question Agent：以判別式與根距離設計。",
+                "Review Agent：待確認選項與解析嚴謹性。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-SUN-Q02",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "B",
+              "question_type": "short_answer",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "MA-TRIG",
+                "MA-MODEL"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A3",
+                "MA-A8",
+                "MA-A9"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "某校用快篩試劑做健康檢查。已知全校 1000 人中，實際需要進一步檢查的比例為 8%。若學生實際需要進一步檢查，快篩呈陽性的機率為 90%；若學生實際不需要進一步檢查，快篩仍呈陽性的機率為 15%。試求快篩呈陽性的期望人數，並求一位快篩陽性學生實際需要進一步檢查的機率。",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "快篩條件機率",
+                  "columns": [
+                    "實際需要進一步檢查",
+                    "實際不需要進一步檢查"
+                  ],
+                  "rows": [
+                    {
+                      "label": "人數",
+                      "values": [
+                        80,
+                        920
+                      ]
+                    },
+                    {
+                      "label": "快篩陽性機率",
+                      "values": [
+                        "90%",
+                        "15%"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": [],
+              "answer": {
+                "expected_positive": 210,
+                "conditional_probability": "12/35"
+              },
+              "scoring_rule": "滿分：算出實際需檢查者 80 人、不需檢查者 920 人；陽性期望人數 80×0.9+920×0.15=210；條件機率為 72/210=12/35。部分給分：若陽性人數正確但條件機率未化簡，可酌給；若把 90% 直接當答案，標記為分母錯誤。",
+              "explanation": "實際需要進一步檢查者為 1000×8%=80 人，其中快篩陽性期望人數為 80×90%=72 人。實際不需要進一步檢查者為 920 人，其中偽陽性期望人數為 920×15%=138 人。因此快篩陽性期望總人數為 72+138=210 人。快篩陽性者實際需要進一步檢查的機率為 72/210=12/35。",
+              "review_advice": "條件機率題要先算出各類人數，再用「目標事件且條件成立」除以「條件成立總數」。",
+              "review_notes": [
+                "Question Agent：修正版改為健康檢查條件機率與期望人數，避免三角函數模型相似風險。",
+                "Review Agent：第二輪檢查條件機率與人數計算正確；仍需人工確認表格敘述清楚。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [
+                "MA-review-needed"
+              ],
+              "similarity_risk": "low_ai_new_health_screening_probability_context",
+              "requires_written_response": true,
+              "written_response_day_only": "Sun",
+              "ai_scoring_required": true,
+              "diagram_required": false
+            },
+            {
+              "id": "MA-FC-V01-B01-SUN-Q03",
+              "subject": "數學",
+              "mode": "學測",
+              "math_track": "A",
+              "question_type": "short_answer",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "MA-GEO3D",
+                "MA-VEC"
+              ],
+              "ability_tags": [
+                "MA-A3",
+                "MA-A6",
+                "MA-A8"
+              ],
+              "source_type": "AI新題",
+              "status": "needs_human_review",
+              "stem": "空間中四點 A(0,0,0)、B(2,1,0)、D(1,3,0)、P(1,1,4)。以 AB、AD、AP 為三邊形成一平行六面體，試求其體積。",
+              "materials": [
+                {
+                  "type": "diagram_spec",
+                  "title": "平行六面體",
+                  "spec": {
+                    "points": {
+                      "A": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "B": [
+                        2,
+                        1,
+                        0
+                      ],
+                      "D": [
+                        1,
+                        3,
+                        0
+                      ],
+                      "P": [
+                        1,
+                        1,
+                        4
+                      ]
+                    },
+                    "vectors_from_A": [
+                      "AB",
+                      "AD",
+                      "AP"
+                    ]
+                  }
+                }
+              ],
+              "options": [],
+              "answer": "20",
+              "scoring_rule": "滿分：正確寫出 AB=(2,1,0)、AD=(1,3,0)、AP=(1,1,4)，並用 |AP dot (AB cross AD)| 求得 20。部分給分：外積或內積概念正確但計算有小錯，需人工判斷。",
+              "explanation": "AB=(2,1,0)，AD=(1,3,0)，AP=(1,1,4)。AB×AD=(0,0,5)，所以體積為 |AP·(AB×AD)|=|(1,1,4)·(0,0,5)|=20。",
+              "review_advice": "空間體積題可用純量三重積；先確認三個向量都從同一頂點出發。",
+              "review_notes": [
+                "Question Agent：以空間向量體積設計短答。",
+                "Review Agent：待確認數學 A 難度與評分規準。",
+                "Gatekeeper：未審定，維持 needs_human_review。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material",
+              "requires_written_response": true,
+              "written_response_day_only": "Sun",
+              "ai_scoring_required": true,
+              "diagram_required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
