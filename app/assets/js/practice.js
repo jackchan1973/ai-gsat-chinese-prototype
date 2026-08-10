@@ -154,13 +154,17 @@ function mergeById(existing, incoming, key) {
 
 function pickDisplayTask(tasks) {
   const selectedTaskId = localStorage.getItem(storageKey(SELECTED_TASK_KEY));
-  return tasks.find((task) => task.task_id === selectedTaskId) || tasks.find((task) => task.app_readiness === "can_run_as_candidate") || tasks[0];
+  return tasks.find((task) => task.task_id === selectedTaskId) || tasks.find((task) => isApprovedTaskStatus(task.app_readiness)) || tasks[0];
 }
 
 function isTaskRunnable(task, groupMap, drillMap) {
   const hasGroup = groupMap.has(task.group_id);
   const hasAllBasics = (task.basic_question_ids || []).every((id) => drillMap.has(id));
-  return task.app_readiness === "can_run_as_candidate" && hasGroup && hasAllBasics;
+  return isApprovedTaskStatus(task.app_readiness) && hasGroup && hasAllBasics;
+}
+
+function isApprovedTaskStatus(status) {
+  return status === "approved_for_app" || status === "can_run_as_candidate";
 }
 
 function flattenGroupQuestions(groups) {
