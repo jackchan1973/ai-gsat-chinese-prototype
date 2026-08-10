@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜自然候選題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-sciencepreview02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-sciencepreview03" />
     <style>
       .science-page { background: linear-gradient(180deg,#102235 0,#17425a 240px,#f3f7fb 240px,#f3f7fb 100%); color: var(--ink); }
       .science-shell { max-width: 1120px; }
@@ -43,10 +43,10 @@
   <body class="science-page">
     <main class="app-shell science-shell">
       <header class="topbar">
-        <div><p class="eyebrow">AI學測考總複習</p><h1>自然候選題庫 v0.1 batch_02</h1><p class="muted-text">生命、地科、物理、化學與探究實作候選題。</p></div>
+        <div><p class="eyebrow">AI學測考總複習</p><h1>自然候選題庫 v0.1 batch_03</h1><p class="muted-text">生命、地科、物理、化學與探究實作候選題。</p></div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
-      <section class="science-alert"><strong>自然第二批仍待人工審題</strong><p>本批為自然科 AI 新題試跑候選題，狀態全部為 needs_human_review；尚未接入正式闖關。</p></section>
+      <section class="science-alert"><strong>自然第三批仍待人工審題</strong><p>本批為自然科 AI 新題試跑候選題，狀態全部為 needs_human_review；尚未接入正式闖關。</p></section>
       <section class="science-stats" id="summaryStats"></section>
       <section class="science-toolbar">
         <select class="science-filter" id="weekdayFilter"><option value="all">全部星期</option><option value="Mon">週一</option><option value="Wed">週三</option><option value="Fri">週五</option></select>
@@ -55,9 +55,9 @@
       <section class="science-list" id="scienceList"></section>
     </main>
     <script>
-      const DATA_VERSION = "20260810-sciencepreview02";
-      const LOCAL_DATA_URL = `../../data/science_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
-      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
+      const DATA_VERSION = "20260810-sciencepreview03";
+      const LOCAL_DATA_URL = `../../data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
       const weekdayLabels = { Mon: "週一", Wed: "週三", Fri: "週五" };
       const statusLabels = { needs_human_review: "待人工審題", approved_for_app: "正式題", needs_revision: "需修訂" };
       let days = [];
