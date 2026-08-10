@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI學測考總複習｜自然候選題庫 v0.1</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-sciencepreview01" />
+    <style>
+      .science-page { background: linear-gradient(180deg,#102235 0,#17425a 240px,#f3f7fb 240px,#f3f7fb 100%); color: var(--ink); }
+      .science-shell { max-width: 1120px; }
+      .science-page .topbar { align-items:center; border:1px solid rgba(255,255,255,.16); border-radius:8px; padding:20px; background:linear-gradient(135deg,rgba(7,19,31,.96),rgba(20,89,82,.86)); color:#fff; }
+      .science-page .topbar h1,.science-page .topbar .eyebrow { color:#fff; }
+      .science-alert,.science-stats,.science-day,.science-question,.science-material { border:1px solid var(--line); border-radius:8px; background:var(--surface); box-shadow:var(--shadow); }
+      .science-alert { margin:16px 0; padding:16px; border-left:5px solid var(--warn); }
+      .science-alert p { margin-bottom:0; color:var(--muted); }
+      .science-stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; margin-bottom:16px; padding:14px; }
+      .science-stat { border:1px solid rgba(3,96,121,.14); border-radius:8px; padding:12px; background:#f7fbfd; }
+      .science-stat span { display:block; color:var(--muted); font-size:.86rem; }
+      .science-stat strong { display:block; margin-top:4px; color:var(--primary-dark); font-size:1.4rem; }
+      .science-toolbar { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+      .science-filter { min-height:42px; border:1px solid var(--line); border-radius:8px; padding:0 12px; background:#fff; color:var(--ink); font:inherit; font-weight:800; }
+      .science-list { display:grid; gap:16px; }
+      .science-day { padding:16px; }
+      .science-day-header,.science-question-header { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:12px; }
+      .science-day h2 { margin:0; }
+      .science-material { margin:10px 0; padding:12px; background:#f7fbfd; overflow:hidden; }
+      .science-table { width:100%; border-collapse:collapse; margin-top:8px; font-size:.94rem; }
+      .science-table th,.science-table td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; }
+      .science-graph { display:block; width:100%; max-width:760px; height:auto; margin-top:10px; border:1px solid rgba(21,94,117,.14); border-radius:8px; background:#fff; }
+      .science-question { margin-top:12px; padding:14px; overflow-wrap:anywhere; }
+      .science-tags { display:flex; flex-wrap:wrap; gap:6px; }
+      .science-status { display:inline-flex; align-items:center; min-height:30px; border:1px solid rgba(139,94,24,.26); border-radius:999px; padding:4px 10px; background:#fff7e8; color:var(--warn); font-size:.86rem; font-weight:900; white-space:nowrap; }
+      .science-options { display:grid; gap:8px; margin:12px 0; padding:0; list-style:none; }
+      .science-options li,.science-answer,.science-review { border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:var(--surface-muted); }
+      .science-options strong { margin-right:8px; color:var(--primary); }
+      .science-answer,.science-review { margin-top:10px; }
+      .science-review { color:var(--muted); }
+      .science-empty { border:1px dashed var(--line); border-radius:8px; padding:14px; color:var(--muted); }
+      @media (max-width:760px){ .science-stats{grid-template-columns:repeat(2,minmax(0,1fr));}.science-page .topbar{align-items:flex-start;flex-direction:column;}.science-question-header{flex-direction:column;} }
+    </style>
+  </head>
+  <body class="science-page">
+    <main class="app-shell science-shell">
+      <header class="topbar">
+        <div><p class="eyebrow">AI學測考總複習</p><h1>自然候選題庫 v0.1 batch_01</h1><p class="muted-text">生命、地科、物理、化學與探究實作候選題。</p></div>
+        <a class="secondary-action link-action" href="../index.html">返回主頁</a>
+      </header>
+      <section class="science-alert"><strong>自然第一批仍待人工審題</strong><p>本批為自然科 AI 新題試跑候選題，狀態全部為 needs_human_review；尚未接入正式闖關。</p></section>
+      <section class="science-stats" id="summaryStats"></section>
+      <section class="science-toolbar">
+        <select class="science-filter" id="weekdayFilter"><option value="all">全部星期</option><option value="Mon">週一</option><option value="Wed">週三</option><option value="Fri">週五</option></select>
+        <select class="science-filter" id="typeFilter"><option value="all">全部題型</option></select>
+      </section>
+      <section class="science-list" id="scienceList"></section>
+    </main>
+    <script>
+      const DATA_VERSION = "20260810-sciencepreview01";
+      const LOCAL_DATA_URL = `../../data/science_formal_candidates_v0_1_batch_01.json?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_candidates_v0_1_batch_01.json?v=${DATA_VERSION}`;
+      const weekdayLabels = { Mon: "週一", Wed: "週三", Fri: "週五" };
+      const statusLabels = { needs_human_review: "待人工審題", approved_for_app: "正式題", needs_revision: "需修訂" };
+      let days = [];
+      let questions = [];
+      function escapeHtml(value){ return String(value ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;"); }
+      function answerText(answer){ if(Array.isArray(answer)) return answer.join("、"); if(answer && typeof answer === "object") return Object.entries(answer).map(([k,v]) => `${k}: ${Array.isArray(v)?v.join("、"):v}`).join("；"); return String(answer ?? ""); }
+      function getDataUrls(){ return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL]; }
+      async function loadData(){ const errors=[]; for(const url of getDataUrls()){ try{ const response=await fetch(url); if(!response.ok) throw new Error(`HTTP ${response.status}`); return await response.json(); }catch(error){ errors.push(`${url}: ${error.message}`); } } throw new Error(errors.join("；")); }
+      function renderTable(material){ return `<table class="science-table"><thead><tr><th>${escapeHtml(material.row_header || "項目")}</th>${(material.columns||[]).map(c=>`<th>${escapeHtml(c)}</th>`).join("")}</tr></thead><tbody>${(material.rows||[]).map(r=>`<tr><th>${escapeHtml(r.label)}</th>${(r.values||[]).map(v=>`<td>${escapeHtml(v)}</td>`).join("")}</tr>`).join("")}</tbody></table>`; }
+      function renderLineChart(material){ const series = material.series || [{ name: material.title || "資料", points: material.points || [] }]; const width=760,height=320,pad=48; const all=series.flatMap(s=>s.points||[]); const xs=all.map(p=>p[0]), ys=all.map(p=>p[1]); const xMin=Math.min(...xs), xMax=Math.max(...xs), yMin=0, yMax=Math.max(...ys)*1.15; const mapX=x=>pad+(x-xMin)*(width-pad*2)/(xMax-xMin||1); const mapY=y=>height-pad-(y-yMin)*(height-pad*2)/(yMax-yMin||1); const colors=["#155e75","#c2410c","#0f766e"]; return `<svg class="science-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(material.title)}"><line x1="${pad}" y1="${height-pad}" x2="${width-pad}" y2="${height-pad}" stroke="#8aa2b2"/><line x1="${pad}" y1="${pad}" x2="${pad}" y2="${height-pad}" stroke="#8aa2b2"/><text x="${pad}" y="${height-10}" fill="#61707e" font-size="13">${escapeHtml(material.x_label||"")}</text><text x="12" y="${pad-16}" fill="#61707e" font-size="13">${escapeHtml(material.y_label||"")}</text>${series.map((s,i)=>`<polyline points="${(s.points||[]).map(p=>`${mapX(p[0]).toFixed(1)},${mapY(p[1]).toFixed(1)}`).join(" ")}" fill="none" stroke="${colors[i%colors.length]}" stroke-width="3"/>${(s.points||[]).map(p=>`<circle cx="${mapX(p[0])}" cy="${mapY(p[1])}" r="4" fill="${colors[i%colors.length]}"/>`).join("")}<text x="${width-pad-120}" y="${pad+20+i*22}" fill="${colors[i%colors.length]}" font-size="14" font-weight="800">${escapeHtml(s.name)}</text>`).join("")}</svg>`; }
+      function renderProcess(material){ return `<svg class="science-graph" viewBox="0 0 760 180" role="img" aria-label="${escapeHtml(material.title)}">${(material.steps||[]).map((step,i)=>{const x=42+i*230; return `<rect x="${x}" y="58" width="170" height="54" rx="8" fill="#f7fbfd" stroke="#cbdde7"/><text x="${x+12}" y="90" fill="#102235" font-size="15" font-weight="800">${escapeHtml(step)}</text>${i<(material.steps||[]).length-1?`<line x1="${x+176}" y1="85" x2="${x+222}" y2="85" stroke="#155e75" stroke-width="3"/><polygon points="${x+222},85 ${x+210},78 ${x+210},92" fill="#155e75"/>`:""}`;}).join("")}</svg>`; }
+      function renderMaterial(material){ if(material.type==="table") return `<section class="science-material"><strong>${escapeHtml(material.title||"資料表")}</strong>${renderTable(material)}</section>`; if(material.type==="line_chart") return `<section class="science-material"><strong>${escapeHtml(material.title||"圖表")}</strong>${renderLineChart(material)}</section>`; if(material.type==="process_diagram") return `<section class="science-material"><strong>${escapeHtml(material.title||"流程圖")}</strong>${renderProcess(material)}</section>`; return `<section class="science-material"><strong>${escapeHtml(material.title||"材料")}</strong><p>${escapeHtml(material.content||"")}</p></section>`; }
+      function renderQuestion(q,index,weekday){ const options=(q.options||[]).length?`<ul class="science-options">${q.options.map(o=>`<li><strong>${escapeHtml(o.key)}</strong>${escapeHtml(o.text)}</li>`).join("")}</ul>`:`<p class="science-empty">選填或短答題，無選項。</p>`; return `<article class="science-question" data-weekday="${weekday}" data-type="${escapeHtml(q.question_type)}"><div class="science-question-header"><div class="science-tags"><span class="tag">${escapeHtml(q.id)}</span><span class="tag">${escapeHtml(q.question_type)}</span><span class="tag">${escapeHtml(q.difficulty)}</span><span class="tag">自然</span></div><span class="science-status">${escapeHtml(statusLabels[q.status]||q.status)}</span></div><p class="label">${escapeHtml(weekdayLabels[weekday])} 第 ${index+1} 題</p><div>${escapeHtml(q.stem)}</div>${(q.materials||[]).map(renderMaterial).join("")}${options}<details class="science-answer"><summary>查看答案與解析</summary><p><strong>答案：</strong>${escapeHtml(answerText(q.answer))}</p>${q.scoring_rule?`<p><strong>評分規準：</strong>${escapeHtml(q.scoring_rule)}</p>`:""}<p><strong>解析：</strong>${escapeHtml(q.explanation)}</p><p><strong>複習建議：</strong>${escapeHtml(q.review_advice)}</p></details><div class="science-review"><p><strong>知識標籤：</strong>${escapeHtml((q.knowledge_tags||[]).join("、"))}</p><p><strong>審題紀錄：</strong>${escapeHtml((q.review_notes||[]).join(" "))}</p><p><strong>相似風險：</strong>${escapeHtml(q.similarity_risk||"未標")}</p></div></article>`; }
+      function renderStats(){ const written=questions.filter(x=>x.question.requires_written_response).length; const typeSet=new Set(questions.map(x=>x.question.question_type)); const stats=[["總題數",questions.length],["任務日",days.length],["文字作答",written],["題型",typeSet.size],["狀態","待審"]]; document.getElementById("summaryStats").innerHTML=stats.map(([l,v])=>`<div class="science-stat"><span>${escapeHtml(l)}</span><strong>${escapeHtml(v)}</strong></div>`).join(""); }
+      function renderFilters(){ const types=[...new Set(questions.map(x=>x.question.question_type))].sort(); document.getElementById("typeFilter").innerHTML=`<option value="all">全部題型</option>${types.map(t=>`<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("")}`; }
+      function renderList(){ const weekday=document.getElementById("weekdayFilter").value; const type=document.getElementById("typeFilter").value; const filtered=days.filter(d=>weekday==="all"||d.weekday===weekday).map(d=>({...d,question_slots:d.question_slots.filter(q=>type==="all"||q.question_type===type)})).filter(d=>d.question_slots.length); document.getElementById("scienceList").innerHTML=filtered.map(day=>`<section class="science-day"><div class="science-day-header"><div><p class="eyebrow">${escapeHtml(day.day_id)}</p><h2>${escapeHtml(day.label)}</h2></div><span class="science-status">${escapeHtml(statusLabels[day.status]||day.status)}</span></div>${(day.day_materials||[]).map(renderMaterial).join("")}${day.question_slots.map((q,i)=>renderQuestion(q,i,day.weekday)).join("")}</section>`).join("") || `<div class="science-empty">沒有符合條件的題目。</div>`; }
+      async function init(){ const data=await loadData(); days=(data.weeks||[]).flatMap(w=>w.days||[]); questions=days.flatMap(day=>(day.question_slots||[]).map(question=>({weekday:day.weekday,question}))); renderStats(); renderFilters(); renderList(); document.getElementById("weekdayFilter").addEventListener("change",renderList); document.getElementById("typeFilter").addEventListener("change",renderList); }
+      init().catch(error=>{ document.querySelector(".science-shell").innerHTML=`<section class="error-box"><h1>自然題庫讀取失敗</h1><p>${escapeHtml(error.message)}</p></section>`; });
+    </script>
+  </body>
+</html>
