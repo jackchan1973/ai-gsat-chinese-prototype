@@ -1,0 +1,3439 @@
+{
+  "meta": {
+    "id": "英文_formal_bank_v0_1",
+    "subject": "英文",
+    "title": "英文正式題庫",
+    "version": "2026-08-13-consolidated01",
+    "status": "approved_for_app",
+    "official_bank_status": "formal_online",
+    "total_questions": 31,
+    "source_policy": "由既有上線正式題庫合併為每科單一檔案。"
+  },
+  "weeks": [
+    {
+      "week_id": "EN-FC-V01-B01-W01",
+      "label": "英文第1批第1週",
+      "days": [
+        {
+          "day_id": "EN-FC-V01-B01-MON",
+          "label": "週一：詞彙語境與短篇閱讀",
+          "weekday": "Mon",
+          "task_type": "vocabulary_and_short_reading",
+          "planned_focus": [
+            "EN-VOC",
+            "EN-CONTEXT",
+            "EN-READ"
+          ],
+          "status": "approved_for_app",
+          "day_materials": [
+            {
+              "type": "reading",
+              "title": "Material: A School Garden Project",
+              "content": "A senior high school turned a small unused corner beside the gym into a garden. At first, only ten students joined the project because most classmates thought gardening was slow, messy, and unrelated to exam preparation. The science teacher, however, did not ask the students to produce perfect vegetables or compete for the largest harvest. Instead, she asked each group to record sunlight, watering time, soil moisture, insect activity, and weekly changes in plant growth. The records were written in simple English so that the class could later share the project with exchange students.\n\nAfter six weeks, the students noticed that the garden had become more than a science activity. The cooking club used the herbs in simple recipes and wrote ingredient cards. A few students in the art club designed signs explaining why bees and butterflies were useful to the garden. Others interviewed grandparents about vegetables that used to be common in local markets but were now rarely seen. When the English teacher asked students to prepare short guided tours, even students who were usually quiet found that they could explain concrete things more easily than abstract topics. The project became popular not because it was easy, but because it connected science, language, art, and daily life in a visible way.",
+              "translation_zh": "一所高中把體育館旁邊一個沒有使用的小角落改造成花園。一開始，只有十位學生加入這個計畫，因為多數同學認為園藝很慢、很髒，而且和考試準備沒有關係。不過，科學老師並沒有要求學生種出完美的蔬菜，也沒有要大家比誰收成最多。相反地，她要求每一組記錄日照、澆水時間、土壤濕度、昆蟲活動，以及植物每週的生長變化。這些紀錄用簡單英文寫成，讓班上之後可以和交換學生分享這個計畫。\n\n六週後，學生發現這座花園已經不只是科學活動。烹飪社把香草用在簡單食譜中，並寫了食材卡。幾位美術社學生設計標示，說明蜜蜂和蝴蝶為什麼對花園有幫助。其他學生訪問祖父母，了解過去在本地市場常見、現在卻少見的蔬菜。當英文老師請學生準備簡短導覽時，連平常比較安靜的學生也發現，說明具體事物比談抽象主題更容易。這個計畫受歡迎，不是因為它很簡單，而是因為它用看得見的方式連結了科學、語言、藝術與日常生活。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-MON-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "In the sentence “The library started a quiet-hour policy to create a more ______ study environment,” which word best fits the blank?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "distracting"
+                },
+                {
+                  "key": "B",
+                  "text": "spacious"
+                },
+                {
+                  "key": "C",
+                  "text": "focused"
+                },
+                {
+                  "key": "D",
+                  "text": "temporary"
+                }
+              ],
+              "answer": "C",
+              "explanation": "「quiet-hour policy」目的在讓讀書環境更能專注，focused 最符合語境。distracting 與安靜政策相反；spacious 指空間大；temporary 指暫時。",
+              "review_advice": "先抓句子中的目的線索，再判斷選項語意。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "A student who checks several sources before quoting a fact is being ______ about information. Which word best completes the sentence?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "careless"
+                },
+                {
+                  "key": "B",
+                  "text": "selective"
+                },
+                {
+                  "key": "C",
+                  "text": "critical"
+                },
+                {
+                  "key": "D",
+                  "text": "ordinary"
+                }
+              ],
+              "answer": "C",
+              "explanation": "查核多個來源表示具備批判性判讀，critical about information 是合理搭配。selective 只表示有選擇，語意不足。",
+              "review_advice": "注意形容詞後面的介系詞與整句行為。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "The club decided to ______ the event because heavy rain made the outdoor stage unsafe.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "postpone"
+                },
+                {
+                  "key": "B",
+                  "text": "predict"
+                },
+                {
+                  "key": "C",
+                  "text": "preserve"
+                },
+                {
+                  "key": "D",
+                  "text": "promote"
+                }
+              ],
+              "answer": "A",
+              "explanation": "大雨使戶外舞台不安全，因此活動應延期，postpone 符合因果。predict 是預測，preserve 是保存，promote 是推廣。",
+              "review_advice": "看 because 後的原因，通常能推出動作。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-VOC",
+                "EN-CONTEXT"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "The science teacher asked students to make a ______ observation instead of guessing what had happened in the experiment.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "visual"
+                },
+                {
+                  "key": "B",
+                  "text": "casual"
+                },
+                {
+                  "key": "C",
+                  "text": "precise"
+                },
+                {
+                  "key": "D",
+                  "text": "remote"
+                }
+              ],
+              "answer": "C",
+              "explanation": "題幹對比 guessing，表示要精確觀察，precise 最合適。visual 不一定精確，casual 與要求相反。",
+              "review_advice": "遇到 instead of 時，前後常形成對比。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U01-vocabulary-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-詞彙語意",
+                "英語文核心素養-語境判讀"
+              ],
+              "estimated_minutes": 1,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-MAIN"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "What is the main idea of the passage?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "A garden project became meaningful by connecting different subjects."
+                },
+                {
+                  "key": "B",
+                  "text": "Students learned that vegetables grow faster beside a gym."
+                },
+                {
+                  "key": "C",
+                  "text": "The school required every club to plant vegetables."
+                },
+                {
+                  "key": "D",
+                  "text": "The teacher wanted students to sell herbs after class."
+                }
+              ],
+              "answer": "A",
+              "explanation": "文章重點是花園從科學活動延伸到烹飪、詩作與標示設計，呈現跨領域學習。其他選項不是文章主旨或未提及。",
+              "review_advice": "主旨題要抓整段發展，不只看第一句。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U02-main-idea"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-主旨掌握"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-DETAIL"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "According to the passage, what did the teacher ask students to do?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Compete to grow the largest vegetables."
+                },
+                {
+                  "key": "B",
+                  "text": "Record conditions related to plant growth."
+                },
+                {
+                  "key": "C",
+                  "text": "Clean the gym after gardening."
+                },
+                {
+                  "key": "D",
+                  "text": "Write a business plan for the garden."
+                }
+              ],
+              "answer": "B",
+              "explanation": "文中說老師要求記錄 sunlight、watering time、soil moisture 和 plant growth changes，正是 B。",
+              "review_advice": "細節題回到材料找同義轉述。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U03-detail-evidence"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-細節證據"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q07",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Why did the project become popular?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "It allowed students to avoid regular classes."
+                },
+                {
+                  "key": "B",
+                  "text": "It was easier than other science activities."
+                },
+                {
+                  "key": "C",
+                  "text": "It linked school learning with real-life experiences."
+                },
+                {
+                  "key": "D",
+                  "text": "It provided free food for all students."
+                }
+              ],
+              "answer": "C",
+              "explanation": "文末指出受歡迎是因為連結 science, language, art, and daily life，C 是合理推論。",
+              "review_advice": "推論題要找材料中多個線索的共同方向。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-MON-Q08",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-WORD"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "In the passage, “unused” most nearly means ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "not being used"
+                },
+                {
+                  "key": "B",
+                  "text": "not being cleaned"
+                },
+                {
+                  "key": "C",
+                  "text": "not being measured"
+                },
+                {
+                  "key": "D",
+                  "text": "not being repaired"
+                }
+              ],
+              "answer": "A",
+              "explanation": "unused corner 指原本沒有被使用的角落。",
+              "review_advice": "詞義題要放回原句，不要只看單字外形。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Mon",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U01-word-in-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-詞義推測"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            }
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app",
+          "estimated_minutes": 11,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "EN-U01-vocabulary-context",
+            "EN-U02-reading-comprehension",
+            "EN-U02-main-idea",
+            "EN-U03-detail-evidence",
+            "EN-U04-inference",
+            "EN-U01-word-in-context"
+          ],
+          "official_bank_status": "formal_online"
+        },
+        {
+          "day_id": "EN-FC-V01-B01-THU",
+          "label": "週四：綜合測驗與篇章結構",
+          "weekday": "Thu",
+          "task_type": "cloze_and_discourse",
+          "planned_focus": [
+            "EN-CLOZE",
+            "EN-DISCOURSE",
+            "EN-STRUCTURE"
+          ],
+          "status": "approved_for_app",
+          "day_materials": [
+            {
+              "type": "cloze",
+              "title": "Material: A Repair Cafe",
+              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. At such an event, an old lamp may be opened on a table while a volunteer explains how to check the switch safely. A radio that has been silent for years may begin to work again after a small part is replaced. The owner learns a practical skill, but the repaired object may also bring back a memory.\n\nThe atmosphere is different from that of a shop. Visitors are not treated simply as customers waiting for a service. They are encouraged to observe, ask questions, and sometimes hold the tools themselves. They remind people that objects do not always have to be thrown away when one part fails. They also show that useful knowledge grows when it is shared. A person who learns to repair a toaster may later help a neighbor fix a fan, and that neighbor may teach someone else how to mend a backpack. In this way, repairing things can also repair social connections. The process is slow, but that slowness gives learners time to understand each step.",
+              "translation_zh": "修理咖啡館是一種社區活動，人們把壞掉的物品帶來，並和志工一起學習如何修理。目的不只是省錢，也包括減少浪費、重新建立鄰里之間的信任。在這樣的活動中，一盞舊檯燈可能會被打開放在桌上，志工一邊說明如何安全檢查開關。一台沉默多年的收音機，也可能在更換一個小零件後重新運作。物主學到實用技能，而修好的物品也可能喚回一段記憶。\n\n這裡的氣氛和商店不同。訪客不只是等待服務的顧客。他們被鼓勵觀察、提問，有時甚至親手拿工具操作。因此，修理咖啡館常讓人覺得更像工作坊，而不是商店。它提醒人們，物品不一定因為一個零件故障就必須丟掉。它也顯示，有用的知識在分享時會成長。一個學會修理烤麵包機的人，之後可能幫鄰居修電風扇，而那位鄰居也可能教別人縫補背包。從這個角度看，修理物品也能修補社會連結。過程雖然慢，但這種慢讓學習者有時間理解每個步驟。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-WED-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "The phrase “not only to save money, but also to reduce waste” shows a relationship of ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "addition"
+                },
+                {
+                  "key": "B",
+                  "text": "contrast"
+                },
+                {
+                  "key": "C",
+                  "text": "time order"
+                },
+                {
+                  "key": "D",
+                  "text": "condition"
+                }
+              ],
+              "answer": "A",
+              "explanation": "not only ... but also ... 是「不只……也……」的增加關係，句中同時列出省錢與減少浪費兩個目的，所以答案是 addition。contrast 是對比，time order 是時間順序，condition 是條件，都不符合。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "In “people bring broken items and learn how to fix them,” the word “them” refers to ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "volunteers"
+                },
+                {
+                  "key": "B",
+                  "text": "events"
+                },
+                {
+                  "key": "C",
+                  "text": "broken items"
+                },
+                {
+                  "key": "D",
+                  "text": "neighbors"
+                }
+              ],
+              "answer": "C",
+              "explanation": "them 回指前面的 broken items，意思是人們帶壞掉的物品來，學習如何修理「它們」。不能指 volunteers 或 people，因為被修理的是物品。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which word best completes the idea: Repair cafes help people ______ waste by fixing usable objects.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "reduce"
+                },
+                {
+                  "key": "B",
+                  "text": "describe"
+                },
+                {
+                  "key": "C",
+                  "text": "hide"
+                },
+                {
+                  "key": "D",
+                  "text": "increase"
+                }
+              ],
+              "answer": "A",
+              "explanation": "文章說 repair cafes 的目標包含 reduce waste，透過修理仍可使用的物品來減少浪費，所以應選 reduce。其他動詞若表示增加、忽略或隱藏浪費，都和文意相反。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which sentence best explains why a repaired radio may bring back a memory?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Old objects are always expensive."
+                },
+                {
+                  "key": "B",
+                  "text": "Objects can be connected with personal experiences."
+                },
+                {
+                  "key": "C",
+                  "text": "Radios are easier to repair than lamps."
+                },
+                {
+                  "key": "D",
+                  "text": "Memories disappear when objects break."
+                }
+              ],
+              "answer": "B",
+              "explanation": "文章提到修好的物品 may also bring back a memory，意思是物品不只恢復功能，也可能連結過去經驗或情感記憶。因此最佳解釋要同時抓到「修理」與「記憶」兩層意思。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "The passage suggests that knowledge grows when it is ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "shared"
+                },
+                {
+                  "key": "B",
+                  "text": "hidden"
+                },
+                {
+                  "key": "C",
+                  "text": "tested secretly"
+                },
+                {
+                  "key": "D",
+                  "text": "sold quickly"
+                }
+              ],
+              "answer": "A",
+              "explanation": "文中明說 useful knowledge grows when it is shared，有用知識在分享時會擴散與累積，所以 shared 是答案。若選 kept secret 或 sold，會違反文章強調的社群學習。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-CLOZE",
+                "EN-COHESION"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which title best fits the passage?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "The Business of New Products"
+                },
+                {
+                  "key": "B",
+                  "text": "Fixing Things, Connecting People"
+                },
+                {
+                  "key": "C",
+                  "text": "Why Volunteers Avoid Technology"
+                },
+                {
+                  "key": "D",
+                  "text": "The History of Radios"
+                }
+              ],
+              "answer": "B",
+              "explanation": "全文重點不是商店買賣，而是透過修理物品學技能、減少浪費並建立鄰里連結；因此標題應涵蓋 repair 與 community connection。只談省錢或單一物品太窄。",
+              "review_advice": "綜合測驗先判斷空格附近的連接、指涉與語意關係。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U05-cloze-grammar-cohesion",
+                "EN-U05-cohesion"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章克漏字",
+                "英語文核心素養-銜接連貫"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q07",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-DISCOURSE",
+                "EN-STRUCTURE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Where would this sentence best fit in the passage? “For this reason, the events often feel more like workshops than stores.”",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "After the sentence stating the goal (save money, reduce waste, rebuild trust)."
+                },
+                {
+                  "key": "B",
+                  "text": "After “Visitors are not treated simply as customers waiting for a service.”"
+                },
+                {
+                  "key": "C",
+                  "text": "After “They are encouraged to observe, ask questions, and sometimes hold the tools themselves.”"
+                },
+                {
+                  "key": "D",
+                  "text": "At the very beginning of the passage."
+                }
+              ],
+              "answer": "C",
+              "explanation": "插入句的 this reason 承接前一句「訪客被鼓勵觀察、提問、親手操作工具」，正因為訪客能動手參與，這類活動才更像工作坊而非商店，所以放在 C 的句子之後最連貫。A、B 的位置尚未提到訪客動手參與，D 放在開頭則沒有可承接的原因。",
+              "review_advice": "篇章結構題要找指示詞 this/that 的前文依據。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U06-discourse-structure"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章結構",
+                "英語文核心素養-組織結構"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q08",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-DISCOURSE",
+                "EN-STRUCTURE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which sentence could best conclude the passage?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Therefore, repair cafes show that fixing objects can also repair social connections."
+                },
+                {
+                  "key": "B",
+                  "text": "However, most people dislike using old objects in daily life."
+                },
+                {
+                  "key": "C",
+                  "text": "For example, a lamp usually needs electricity to work."
+                },
+                {
+                  "key": "D",
+                  "text": "In contrast, many stores sell new radios online."
+                }
+              ],
+              "answer": "A",
+              "explanation": "結尾需總結修理物品與社群連結，A 最能承接全段。",
+              "review_advice": "結論句通常要回扣全文主旨。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U06-discourse-structure"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章結構",
+                "英語文核心素養-組織結構"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-WED-Q09",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "難",
+              "knowledge_tags": [
+                "EN-DISCOURSE",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "What is the function of the examples of a lamp and a radio?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "To list the only things that can be repaired."
+                },
+                {
+                  "key": "B",
+                  "text": "To show both practical and emotional value of repairing."
+                },
+                {
+                  "key": "C",
+                  "text": "To compare two types of expensive products."
+                },
+                {
+                  "key": "D",
+                  "text": "To explain why volunteers need payment."
+                }
+              ],
+              "answer": "B",
+              "explanation": "lamp 的例子偏技能與實用，radio 的例子偏記憶與情感，兩者合起來說明修理的多重價值。",
+              "review_advice": "功能題要問例子服務哪個主旨，不是只看例子本身。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Thu",
+              "unit_tags": [
+                "EN-U06-discourse-structure",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-篇章結構",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            }
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app",
+          "estimated_minutes": 16,
+          "time_policy": "weekday_light",
+          "coverage_summary": [
+            "EN-U05-cloze-grammar-cohesion",
+            "EN-U05-cohesion",
+            "EN-U06-discourse-structure",
+            "EN-U04-inference"
+          ],
+          "official_bank_status": "formal_online"
+        },
+        {
+          "day_id": "EN-FC-V01-B01-SUN",
+          "label": "週日：閱讀推論、翻譯判斷與寫作整合",
+          "weekday": "Sun",
+          "task_type": "weekend_reading_writing_integration",
+          "planned_focus": [
+            "EN-TRANS",
+            "EN-WRITE",
+            "EN-INTEGRATED"
+          ],
+          "status": "approved_for_app",
+          "day_materials": [
+            {
+              "type": "reading",
+              "title": "Material A: Tiny Libraries",
+              "content": "In several towns, residents have placed tiny book boxes on sidewalks, near bakeries, beside bus stops, and outside apartment buildings. Anyone may take a book or leave one. The idea looks simple, but it changes how people think about public space. A box outside a bakery may attract children after school; another near a train station may serve commuters who want something to read on the way home. Because no one checks membership cards or records every book, the system depends on trust rather than formal rules.\n\nSome towns have found that the boxes also encourage conversations among strangers. A retired teacher may leave a grammar guide with a note inside; a teenager may later add a comic book that helped him start reading in English. A person who leaves a travel guide may eventually meet someone who used it for a weekend trip. Of course, the system is not perfect. Books can be damaged by rain, and popular titles may disappear quickly. Still, supporters argue that tiny libraries are valuable because they make reading visible. They turn an ordinary sidewalk into a small invitation: take something, leave something, and become part of a quiet exchange. Some teachers have begun using the boxes for informal lessons. Instead of asking students to write reports only for the teacher, they invite students to recommend one book for an unknown reader and explain why it might be worth taking. This turns a simple exchange into a small act of public writing.",
+              "translation_zh": "在幾個城鎮中，居民在人行道、麵包店附近、公車站旁和公寓外放置了小型書箱。任何人都可以拿一本書，也可以留下一本書。這個想法看似簡單，卻改變了人們對公共空間的看法。麵包店外的書箱可能吸引放學後的孩子；火車站附近的書箱則可能服務想在回家路上閱讀的通勤者。因為沒有人檢查會員卡，也沒有人記錄每一本書，所以這套系統依靠的是信任，而不是正式規則。\n\n有些城鎮發現，這些書箱也鼓勵陌生人之間的對話。一位退休老師可能放入一本文法書並在裡面留下便條；一位青少年之後可能加入一本幫助他開始閱讀英文的漫畫。留下一本旅遊指南的人，最後也可能遇見曾用它規劃週末旅行的人。當然，這套系統並不完美。書可能被雨淋壞，熱門書也可能很快消失。即使如此，支持者仍認為小型圖書館很有價值，因為它讓閱讀出現在公共視野中。它把普通的人行道變成一個小小的邀請：拿走一些、留下些什麼，並成為安靜交流的一部分。有些老師也開始把這些書箱用於非正式課程。他們不只要求學生寫報告給老師看，而是邀請學生向未知讀者推薦一本書，並說明它為什麼值得被拿走。這讓簡單交換變成一種小型公共寫作。"
+            },
+            {
+              "type": "reading",
+              "title": "Material B: Sleep and Study",
+              "content": "Many students believe that studying late into the night is a sign of effort. They may feel proud when they keep their desk lamp on after everyone else has gone to bed. However, sleep researchers warn that memory does not work like a storage box that can be filled without rest. During sleep, the brain strengthens useful connections and clears away less important details. In other words, rest is not simply a break from learning; it is part of how learning becomes stable.\n\nThis does not mean students should stop reviewing before bed. A short review of vocabulary, formulas, or key ideas can be helpful because it gives the brain material to organize. The problem begins when students replace sleep with extra hours of unfocused study. Without enough rest, attention drops the next day, and mistakes become more likely even on familiar questions. The question, then, is not whether students should work hard, but whether their study plan gives the brain time to organize what it has learned. A strong plan may include both effort and recovery. Researchers also point out that sleep affects emotional control. A tired student may read a question carelessly, give up too soon, or choose an answer without checking the evidence. Enough rest therefore supports both memory and judgment, two abilities that matter in reading tests.",
+              "translation_zh": "許多學生認為讀到深夜是努力的象徵。當所有人都睡了，自己仍讓書桌燈亮著時，他們可能會感到自豪。然而，睡眠研究者提醒，記憶不像一個可以不休息就一直塞滿的收納箱。睡眠時，大腦會強化有用的連結，並清除比較不重要的細節。換句話說，休息不只是學習的中斷；它是讓學習變穩定的一部分。\n\n這不表示學生睡前不該複習。簡短複習單字、公式或重點概念可能有幫助，因為它提供大腦可整理的材料。問題出現在學生用額外且不專注的讀書時間取代睡眠。休息不足時，隔天注意力會下降，即使是熟悉的題目也更容易出錯。因此，問題不是學生該不該努力，而是讀書計畫是否給大腦時間整理已學內容。一個好的計畫可以同時包含努力與恢復。研究者也指出，睡眠會影響情緒控制。疲倦的學生可能粗心讀題、太快放棄，或沒有檢查證據就選答案。因此，充足休息同時支持記憶與判斷，而這兩種能力在閱讀測驗中都很重要。"
+            },
+            {
+              "type": "integrated",
+              "title": "Material: A Campus Language Day",
+              "content": "A school plans a Language Day to help students use English beyond textbook exercises. The event includes a morning poster walk, short student talks, and a booth where visitors ask questions in English. Teachers want students to focus on clear communication rather than difficult vocabulary. They believe that students are more willing to speak when the task has a real listener and a concrete purpose.\n\nThe planning team also wants students to explain local culture in simple English. One group may introduce a night market snack, another may explain a temple festival, and another may describe how students use public bikes to get around the city. Before the event, each group must prepare a short script, two useful pictures, and three possible questions visitors may ask. Teachers will not grade students only on pronunciation. They will also check whether the speaker can organize ideas, respond politely, and help visitors understand something about local life. The event is designed to show that English is not only a subject, but also a tool for sharing experience. To make the preparation more realistic, students must practice with classmates who have not seen their scripts. If the listeners look confused, the speakers have to change their examples or use simpler words. This rehearsal helps students understand that communication is not the same as memorizing a perfect paragraph. It requires noticing the listener and adjusting the message.",
+              "translation_zh": "一所學校規劃 Language Day，幫助學生在課本練習之外使用英文。活動包括上午的海報走讀、學生短講，以及讓訪客用英文提問的攤位。老師希望學生重視清楚溝通，而不是艱難單字。他們相信，當任務有真實聽眾和具體目的時，學生會更願意開口說英文。\n\n籌備團隊也希望學生能用簡單英文介紹在地文化。一組可能介紹夜市小吃，另一組可能說明廟會活動，還有一組可能描述學生如何使用公共自行車在城市移動。活動前，每組都必須準備一份短講稿、兩張有用圖片，以及訪客可能提出的三個問題。老師不會只用發音評分，也會檢查講者是否能組織想法、禮貌回應，並幫助訪客理解在地生活。這個活動的設計是為了顯示，英文不只是學科，也是分享經驗的工具。為了讓準備更接近真實情境，學生必須和沒有看過講稿的同學練習。如果聽眾看起來困惑，講者就必須更換例子或使用更簡單的詞。這樣的演練幫助學生理解，溝通不等於背熟一段完美文章；它需要注意聽眾，並調整訊息。"
+            }
+          ],
+          "question_slots": [
+            {
+              "id": "EN-FC-V01-B01-FRI-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-MAIN"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "What is the main point of Material A?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Tiny libraries can turn public places into shared reading spaces."
+                },
+                {
+                  "key": "B",
+                  "text": "Book boxes are useful only near train stations."
+                },
+                {
+                  "key": "C",
+                  "text": "Residents should check membership cards before lending books."
+                },
+                {
+                  "key": "D",
+                  "text": "Bakeries are the best places to sell travel guides."
+                }
+              ],
+              "answer": "A",
+              "explanation": "Material A 重點是 tiny book boxes 如何改變公共空間與閱讀分享。",
+              "review_advice": "主旨題避免被細節如 bakery、train station 牽走。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U02-main-idea"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-主旨掌握"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-DETAIL"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "According to Material A, the system depends on trust because ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "people must pay before taking books"
+                },
+                {
+                  "key": "B",
+                  "text": "no one checks membership cards"
+                },
+                {
+                  "key": "C",
+                  "text": "only children may use the boxes"
+                },
+                {
+                  "key": "D",
+                  "text": "all books are new"
+                }
+              ],
+              "answer": "B",
+              "explanation": "文中明說因為沒有檢查會員卡，所以系統仰賴信任。",
+              "review_advice": "細節題找明確因果句。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U03-detail-evidence"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-細節證據"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "What can be inferred from the travel guide example?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Shared books may create unexpected human connections."
+                },
+                {
+                  "key": "B",
+                  "text": "Travel guides should not be placed outdoors."
+                },
+                {
+                  "key": "C",
+                  "text": "Weekend trips always require borrowed books."
+                },
+                {
+                  "key": "D",
+                  "text": "Strangers rarely talk about reading."
+                }
+              ],
+              "answer": "A",
+              "explanation": "留下旅遊指南的人可能遇到使用者，說明共享書籍創造人際連結。",
+              "review_advice": "推論題要把例子和段落主旨連起來。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-WORD"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "In Material A, “commuters” most nearly means people who ______.",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "travel regularly between home and work or school"
+                },
+                {
+                  "key": "B",
+                  "text": "repair old books"
+                },
+                {
+                  "key": "C",
+                  "text": "own bakeries"
+                },
+                {
+                  "key": "D",
+                  "text": "write membership rules"
+                }
+              ],
+              "answer": "A",
+              "explanation": "commuters 指通勤者，符合 train station 語境。",
+              "review_advice": "詞義題先看附近地點與行為。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U01-word-in-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-詞義推測"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-MAIN"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "What is the main idea of Material B?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Students should stop reviewing before bed."
+                },
+                {
+                  "key": "B",
+                  "text": "Sleep helps the brain organize learning."
+                },
+                {
+                  "key": "C",
+                  "text": "Memory is exactly like a storage box."
+                },
+                {
+                  "key": "D",
+                  "text": "Studying late always improves attention."
+                }
+              ],
+              "answer": "B",
+              "explanation": "Material B 說睡眠強化有用連結、整理學習，不是反對努力。",
+              "review_advice": "主旨題要抓作者真正立場。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U02-main-idea"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-主旨掌握"
+              ],
+              "estimated_minutes": 1.5,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Why does the writer mention “a storage box”?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "To support the idea that memory can be filled endlessly."
+                },
+                {
+                  "key": "B",
+                  "text": "To reject a simple but misleading view of memory."
+                },
+                {
+                  "key": "C",
+                  "text": "To explain how students should organize books."
+                },
+                {
+                  "key": "D",
+                  "text": "To compare sleep with buying containers."
+                }
+              ],
+              "answer": "B",
+              "explanation": "作者說記憶不是可不斷填滿的箱子，是要反駁過度簡化的看法。",
+              "review_advice": "遇到比喻題，要判斷作者贊成或反駁該比喻。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q07",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-COMPARE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which idea do both materials share?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Good results depend only on individual effort."
+                },
+                {
+                  "key": "B",
+                  "text": "Systems work better when people understand invisible processes."
+                },
+                {
+                  "key": "C",
+                  "text": "Public spaces are always better than private rooms."
+                },
+                {
+                  "key": "D",
+                  "text": "Rules should be removed from schools and towns."
+                }
+              ],
+              "answer": "B",
+              "explanation": "Material A 的信任系統與 Material B 的睡眠整理，都涉及看不見但重要的運作機制。",
+              "review_advice": "跨篇比較題要找抽象共同點。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-inference-compare"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-比較判讀"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-FRI-Q08",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "難",
+              "knowledge_tags": [
+                "EN-READ",
+                "EN-ATTITUDE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "What is the writer’s attitude in Material B toward hard work?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Critical of hard work itself"
+                },
+                {
+                  "key": "B",
+                  "text": "Supportive only when it includes enough rest"
+                },
+                {
+                  "key": "C",
+                  "text": "Uninterested in students’ habits"
+                },
+                {
+                  "key": "D",
+                  "text": "Certain that effort is useless"
+                }
+              ],
+              "answer": "B",
+              "explanation": "文末說問題不是是否努力，而是讀書計畫是否給大腦整理時間，表示支持有休息的努力。",
+              "review_advice": "態度題看結尾轉折與限定語。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U02-reading-comprehension",
+                "EN-U04-author-attitude"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-閱讀理解",
+                "英語文核心素養-作者態度"
+              ],
+              "estimated_minutes": 2,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q01",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-TRANS",
+                "EN-WRITE"
+              ],
+              "ability_tags": [
+                "EN-A3",
+                "EN-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which English sentence best translates this idea?「越來越多學生使用 AI 工具來整理英文單字，但老師提醒他們仍要自己造句。」",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "More and more students use AI tools to organize English vocabulary, but teachers remind them that they still need to make sentences by themselves."
+                },
+                {
+                  "key": "B",
+                  "text": "More students stop learning English vocabulary because AI tools can write all sentences for teachers."
+                },
+                {
+                  "key": "C",
+                  "text": "Teachers remind AI tools to organize students and make English vocabulary by themselves."
+                },
+                {
+                  "key": "D",
+                  "text": "Students use English sentences to remind teachers that vocabulary does not need tools."
+                }
+              ],
+              "answer": "A",
+              "explanation": "A 完整表達「越來越多學生」「使用 AI 工具整理英文單字」「老師提醒仍要自己造句」。其他選項有主詞錯置、語意扭曲或漏掉重點。",
+              "review_advice": "翻譯判斷題先檢查主詞、動詞與轉折關係，再看是否漏掉關鍵意思。",
+              "review_notes": [
+                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。",
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U07-translation",
+                "EN-U08-writing"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-中英轉換",
+                "英語文核心素養-書面表達"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q02",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-TRANS",
+                "EN-WRITE"
+              ],
+              "ability_tags": [
+                "EN-A3",
+                "EN-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which English sentence best translates this idea?「如果學生只複製答案，他們可能無法真正理解文章中的想法。」",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "If students only copy answers, they may not truly understand the ideas in the article."
+                },
+                {
+                  "key": "B",
+                  "text": "Because students understand the article, they should copy every answer quickly."
+                },
+                {
+                  "key": "C",
+                  "text": "Students may truly copy articles if the answers cannot understand them."
+                },
+                {
+                  "key": "D",
+                  "text": "If articles copy students, the ideas may answer only one question."
+                }
+              ],
+              "answer": "A",
+              "explanation": "A 正確呈現條件句與「只複製答案可能無法真正理解文章想法」。其他選項語意反轉或主詞關係錯誤。",
+              "review_advice": "條件句翻譯要先確定 If 子句與主要子句的邏輯。",
+              "review_notes": [
+                "依使用者指示：英文每週只保留 1 題寫作題，本題改為選擇型翻譯判斷。",
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U07-translation",
+                "EN-U08-writing"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-中英轉換",
+                "英語文核心素養-書面表達"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q03",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "written_essay",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-WRITE",
+                "EN-ORGANIZATION"
+              ],
+              "ability_tags": [
+                "EN-A3",
+                "EN-A5"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "英文短文寫作：根據材料，請用 80-100 words 說明你會如何設計一個 Language Day 活動，並說明它如何幫助同學使用英文。",
+              "options": [],
+              "answer": "Open response",
+              "explanation": "本題檢查活動設計、理由說明與英文組織。答案須有明確活動內容與學習效果。",
+              "review_advice": "先列活動，再寫它如何幫助口說、聽力或文化表達。",
+              "review_notes": [
+                "本題保留為每週唯一寫作題，附評分規準，檢查內容、組織、語言正確度與具體例子。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": true,
+              "ai_scoring_required": true,
+              "scoring_rule": "10 分：內容完整 4 分，組織 2 分，語言正確 2 分，具體例子 2 分。",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "written_response_day_only": "Sun",
+              "unit_tags": [
+                "EN-U08-writing",
+                "EN-U08-writing-organization"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-書面表達",
+                "英語文核心素養-段落組織"
+              ],
+              "estimated_minutes": 18,
+              "long_question": true,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": true
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q04",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等",
+              "knowledge_tags": [
+                "EN-INTEGRATED",
+                "EN-READ"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "According to the material, what is the main goal of Language Day?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "To help students use English in real communication."
+                },
+                {
+                  "key": "B",
+                  "text": "To test the hardest vocabulary in the textbook."
+                },
+                {
+                  "key": "C",
+                  "text": "To replace all English classes."
+                },
+                {
+                  "key": "D",
+                  "text": "To invite visitors to speak only Chinese."
+                }
+              ],
+              "answer": "A",
+              "explanation": "材料說活動是讓學生在課本練習之外使用英文，重點是真實溝通。",
+              "review_advice": "整合題先抓活動目的。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U09-integrated-reading-writing",
+                "EN-U02-reading-comprehension"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-整合應用",
+                "英語文核心素養-閱讀理解"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q05",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-INTEGRATED",
+                "EN-INFER"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Why do teachers ask students to focus on clear communication rather than difficult vocabulary?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Because difficult words are never useful."
+                },
+                {
+                  "key": "B",
+                  "text": "Because successful communication depends on being understood."
+                },
+                {
+                  "key": "C",
+                  "text": "Because students should avoid speaking English."
+                },
+                {
+                  "key": "D",
+                  "text": "Because posters cannot include vocabulary."
+                }
+              ],
+              "answer": "B",
+              "explanation": "清楚溝通比艱難單字更符合活動目的，B 是合理推論。",
+              "review_advice": "推論題要從活動目的與老師提醒連結。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U09-integrated-reading-writing",
+                "EN-U04-inference"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-整合應用",
+                "英語文核心素養-推論判斷"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            },
+            {
+              "id": "EN-FC-V01-B01-SUN-Q06",
+              "subject": "英文",
+              "mode": "學測",
+              "question_type": "single_choice",
+              "difficulty": "中等偏難",
+              "knowledge_tags": [
+                "EN-INTEGRATED",
+                "EN-CULTURE"
+              ],
+              "ability_tags": [
+                "EN-A1",
+                "EN-A2"
+              ],
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "stem": "Which booth task best matches the material?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Students explain a local night market snack in simple English."
+                },
+                {
+                  "key": "B",
+                  "text": "Students memorize a list of rare medical terms."
+                },
+                {
+                  "key": "C",
+                  "text": "Visitors copy grammar rules from the blackboard."
+                },
+                {
+                  "key": "D",
+                  "text": "Teachers cancel all student talks."
+                }
+              ],
+              "answer": "A",
+              "explanation": "材料提到用簡單英文說明在地文化，A 最符合。",
+              "review_advice": "選擇最能落實材料目標的活動。",
+              "review_notes": [
+                "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
+                "Gatekeeper：2026-08-10 agent 審題通過，設為 approved_for_app。"
+              ],
+              "error_codes": [],
+              "similarity_risk": "low_ai_new_material_not_copied_from_113_114_115_or_publisher_explanations",
+              "requires_written_response": false,
+              "ai_scoring_required": false,
+              "scoring_rule": "",
+              "revision_history": [
+                {
+                  "date": "2026-08-10",
+                  "action": "deepen_material_and_approve",
+                  "note": "加長材料、確認高中深度、補足解析審題紀錄後轉正式。"
+                }
+              ],
+              "approved_at": "2026-08-10",
+              "review_grade": "A",
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-10",
+              "quality_audit": {
+                "review_grade": "A",
+                "error_codes_meaning": "empty_array_means_no_error_found_in_current_review",
+                "checked_items": [
+                  "answer_uniqueness",
+                  "option_alignment",
+                  "explanation_with_reasoning",
+                  "review_advice",
+                  "mobile_reading_load",
+                  "ai_new_similarity_risk"
+                ],
+                "checked_at": "2026-08-10",
+                "reviewer": "Codex Review Agent",
+                "gatekeeper": "Codex Gatekeeper",
+                "note": "英文正式題已檢查答案唯一、解析可理解與學測閱讀/語境能力對應；文章另補中文翻譯輔助學習。",
+                "schedule_note": "2026-08-10 依平日一小時、週末長題原則重新排程。"
+              },
+              "allowed_weekdays": [
+                "Mon",
+                "Thu",
+                "Sun"
+              ],
+              "preferred_weekday": "Sun",
+              "unit_tags": [
+                "EN-U09-integrated-reading-writing",
+                "EN-U10-culture-context"
+              ],
+              "syllabus_tags": [
+                "英語文核心素養-整合應用",
+                "英語文核心素養-文化理解"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "review_strictness": {
+                "reviewer_role": "Review Agent",
+                "gatekeeper_role": "Gatekeeper",
+                "checked_at": "2026-08-10",
+                "checks": {
+                  "gsat_alignment": true,
+                  "answer_uniqueness": true,
+                  "explanation_readable_for_senior_high": true,
+                  "source_similarity_risk_checked": true,
+                  "time_estimate_added": true,
+                  "unit_and_syllabus_tags_added": true
+                },
+                "human_sampling_required_after_live_feedback": false
+              },
+              "official_bank_status": "formal_online"
+            }
+          ],
+          "approved_at": "2026-08-10",
+          "gatekeeper_status": "approved_for_app",
+          "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
+          "estimated_minutes": 47,
+          "time_policy": "weekend_deep",
+          "coverage_summary": [
+            "EN-U02-reading-comprehension",
+            "EN-U02-main-idea",
+            "EN-U03-detail-evidence",
+            "EN-U04-inference",
+            "EN-U01-word-in-context",
+            "EN-U04-inference-compare",
+            "EN-U04-author-attitude",
+            "EN-U07-translation",
+            "EN-U08-writing",
+            "EN-U08-writing-organization",
+            "EN-U09-integrated-reading-writing",
+            "EN-U10-culture-context"
+          ],
+          "official_bank_status": "formal_online"
+        }
+      ]
+    }
+  ]
+}
