@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜英文正式題庫 v0.1</title>
+    <title>AI學測考總複習｜英文正式題庫</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-system01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
     <style>
-      .candidate-page {
+      .bank-page {
         background:
           radial-gradient(circle at 12% 0%, rgba(124, 92, 255, 0.2), transparent 22rem),
           linear-gradient(180deg, #07131f 0, #102235 260px, #f3f7fb 260px, #f3f7fb 100%);
       }
 
-      .candidate-shell {
+      .bank-shell {
         max-width: 1180px;
       }
 
-      .candidate-page .topbar {
+      .bank-page .topbar {
         align-items: center;
         border: 1px solid rgba(255, 255, 255, 0.14);
         border-radius: 8px;
@@ -26,33 +26,33 @@
         color: #fff;
       }
 
-      .candidate-page .topbar h1,
-      .candidate-page .topbar .eyebrow {
+      .bank-page .topbar h1,
+      .bank-page .topbar .eyebrow {
         color: #fff;
       }
 
-      .candidate-alert,
-      .candidate-stats,
-      .candidate-day,
-      .candidate-question {
+      .bank-alert,
+      .bank-stats,
+      .bank-day,
+      .bank-question {
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--surface);
         box-shadow: var(--shadow);
       }
 
-      .candidate-alert {
+      .bank-alert {
         margin: 16px 0;
         padding: 16px;
         background: linear-gradient(135deg, #ffffff, #f3f0ff);
       }
 
-      .candidate-alert p {
+      .bank-alert p {
         margin-bottom: 0;
         color: var(--muted);
       }
 
-      .candidate-stats {
+      .bank-stats {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 10px;
@@ -60,34 +60,34 @@
         padding: 14px;
       }
 
-      .candidate-stat {
+      .bank-stat {
         border: 1px solid rgba(124, 92, 255, 0.16);
         border-radius: 8px;
         padding: 12px;
         background: #f8f7ff;
       }
 
-      .candidate-stat span {
+      .bank-stat span {
         display: block;
         color: var(--muted);
         font-size: 0.86rem;
       }
 
-      .candidate-stat strong {
+      .bank-stat strong {
         display: block;
         margin-top: 4px;
         color: #4b3aa7;
         font-size: 1.45rem;
       }
 
-      .candidate-toolbar {
+      .bank-toolbar {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin-bottom: 16px;
       }
 
-      .candidate-filter {
+      .bank-filter {
         min-height: 44px;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -98,17 +98,17 @@
         font-weight: 800;
       }
 
-      .candidate-list {
+      .bank-list {
         display: grid;
         gap: 16px;
       }
 
-      .candidate-day {
+      .bank-day {
         padding: 16px;
       }
 
-      .candidate-day-header,
-      .candidate-question-header {
+      .bank-day-header,
+      .bank-question-header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -116,12 +116,12 @@
         margin-bottom: 12px;
       }
 
-      .candidate-day h2 {
+      .bank-day h2 {
         margin: 0;
         color: #102235;
       }
 
-      .candidate-status {
+      .bank-status {
         display: inline-flex;
         align-items: center;
         min-height: 30px;
@@ -134,7 +134,7 @@
         white-space: nowrap;
       }
 
-      .candidate-material {
+      .bank-material {
         margin: 12px 0;
         border: 1px solid rgba(3, 96, 121, 0.12);
         border-radius: 8px;
@@ -142,12 +142,12 @@
         background: #f7fbfd;
       }
 
-      .candidate-material p {
+      .bank-material p {
         margin-bottom: 0;
         white-space: pre-wrap;
       }
 
-      .candidate-translation {
+      .bank-translation {
         margin-top: 12px;
         border: 1px solid rgba(3, 96, 121, 0.14);
         border-radius: 8px;
@@ -155,24 +155,24 @@
         color: var(--muted);
       }
 
-      .candidate-translation summary {
+      .bank-translation summary {
         cursor: pointer;
         padding: 10px 12px;
         color: var(--primary);
         font-weight: 900;
       }
 
-      .candidate-translation p {
+      .bank-translation p {
         padding: 0 12px 12px;
       }
 
-      .candidate-question {
+      .bank-question {
         padding: 16px;
         overflow-wrap: anywhere;
         word-break: normal;
       }
 
-      .candidate-options {
+      .bank-options {
         display: grid;
         gap: 8px;
         margin: 12px 0;
@@ -180,7 +180,7 @@
         list-style: none;
       }
 
-      .candidate-options li {
+      .bank-options li {
         border: 1px solid var(--line);
         border-radius: 8px;
         padding: 10px 12px;
@@ -188,13 +188,13 @@
         overflow-wrap: anywhere;
       }
 
-      .candidate-options strong {
+      .bank-options strong {
         margin-right: 8px;
         color: #4b3aa7;
       }
 
-      .candidate-answer,
-      .candidate-review {
+      .bank-answer,
+      .bank-review {
         margin-top: 12px;
         border: 1px solid rgba(3, 96, 121, 0.12);
         border-radius: 8px;
@@ -203,62 +203,62 @@
       }
 
       @media (max-width: 760px) {
-        .candidate-stats {
+        .bank-stats {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .candidate-day-header,
-        .candidate-question-header,
-        .candidate-page .topbar {
+        .bank-day-header,
+        .bank-question-header,
+        .bank-page .topbar {
           align-items: flex-start;
           flex-direction: column;
         }
       }
     </style>
   </head>
-  <body class="candidate-page">
-    <main class="app-shell candidate-shell">
+  <body class="bank-page">
+    <main class="app-shell bank-shell">
       <header class="topbar">
         <div>
           <p class="eyebrow">AI學測考總複習</p>
-          <h1>英文正式題庫 v0.1 batch_01</h1>
+          <h1>英文正式題庫</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
-      <section class="candidate-alert" aria-label="題庫狀態">
+      <section class="bank-alert" aria-label="題庫狀態">
         <strong>英文第一批已由 agent 審題通過</strong>
         <p>本批依 113、114、115 英文考科結構製作 AI 新題，文章長度、題目深度與解析完整度已檢查，狀態為 approved_for_app。</p>
       </section>
 
-      <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
+      <section class="bank-stats" id="summaryStats" aria-label="統計"></section>
 
-      <section class="candidate-toolbar" aria-label="篩選">
-        <select class="candidate-filter" id="weekdayFilter" aria-label="星期篩選">
+      <section class="bank-toolbar" aria-label="篩選">
+        <select class="bank-filter" id="weekdayFilter" aria-label="星期篩選">
           <option value="all">全部星期</option>
           <option value="Mon">週一</option>
           <option value="Thu">週四</option>
           <option value="Sun">週日</option>
         </select>
-        <select class="candidate-filter" id="typeFilter" aria-label="題型篩選">
+        <select class="bank-filter" id="typeFilter" aria-label="題型篩選">
           <option value="all">全部題型</option>
         </select>
       </section>
 
-      <section class="candidate-list" id="candidateList" aria-live="polite"></section>
+      <section class="bank-list" id="bankList" aria-live="polite"></section>
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-system01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-system01";
+      const LOCAL_DATA_URL = "../../data/banks/english.json?v=20260813-consolidated01";
+      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/english.json?v=20260813-consolidated01";
       const weekdayLabels = {
         Mon: "週一",
         Thu: "週四",
         Sun: "週日"
       };
       const statusLabels = {
-        needs_human_review: "待人工審題",
-        approved_for_app: "正式題"
+        approved_for_app: "正式題",
+        not_online: "未上線"
       };
       let days = [];
       let questions = [];
@@ -279,7 +279,7 @@
         return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL];
       }
 
-      async function loadCandidateData() {
+      async function loadBankData() {
         const errors = [];
         for (const url of getDataUrls()) {
           try {
@@ -304,7 +304,7 @@
           ["狀態", "審題"]
         ];
         document.getElementById("summaryStats").innerHTML = stats
-          .map(([label, value]) => `<div class="candidate-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
+          .map(([label, value]) => `<div class="bank-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
           .join("");
       }
 
@@ -317,11 +317,11 @@
 
       function renderMaterial(material) {
         return `
-          <section class="candidate-material">
+          <section class="bank-material">
             <strong>${escapeHtml(material.title || "材料")}</strong>
             <p>${escapeHtml(material.content || "")}</p>
             ${material.translation_zh ? `
-              <details class="candidate-translation">
+              <details class="bank-translation">
                 <summary>中文翻譯</summary>
                 <p>${escapeHtml(material.translation_zh)}</p>
               </details>
@@ -334,30 +334,30 @@
         const question = item.question;
         const statusText = statusLabels[question.status] || question.status || "未標";
         const options = question.options && question.options.length
-          ? `<ul class="candidate-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
-          : '<p class="candidate-empty">文字作答題，無選項。</p>';
+          ? `<ul class="bank-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
+          : '<p class="bank-empty">文字作答題，無選項。</p>';
         return `
-          <article class="candidate-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}">
-            <div class="candidate-question-header">
+          <article class="bank-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}">
+            <div class="bank-question-header">
               <div class="social-tags">
                 <span class="tag">${escapeHtml(question.id)}</span>
                 <span class="tag">${escapeHtml(question.question_type)}</span>
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
                 <span class="tag">${question.requires_written_response ? "週日文字作答" : "選擇題"}</span>
               </div>
-              <span class="candidate-status">${escapeHtml(statusText)}</span>
+              <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
             <p class="label">${escapeHtml(weekdayLabels[item.weekday] || item.weekday)} 第 ${index + 1} 題</p>
             <div>${escapeHtml(question.stem)}</div>
             ${options}
-            <details class="candidate-answer">
+            <details class="bank-answer">
               <summary>查看答案與解析</summary>
               <p><strong>答案：</strong>${escapeHtml(answerText(question.answer))}</p>
               ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
               <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
               <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
             </details>
-            <div class="candidate-review">
+            <div class="bank-review">
               <p><strong>審題紀錄：</strong>${escapeHtml((question.review_notes || []).join(" "))}</p>
               <p><strong>相似風險：</strong>${escapeHtml(question.similarity_risk || "未標")}</p>
             </div>
@@ -369,16 +369,16 @@
         const dayQuestions = day.question_slots || [];
         const statusText = statusLabels[day.status] || day.status || "未標";
         return `
-          <section class="candidate-day" data-weekday="${day.weekday}">
-            <div class="candidate-day-header">
+          <section class="bank-day" data-weekday="${day.weekday}">
+            <div class="bank-day-header">
               <div>
                 <p class="eyebrow">${escapeHtml(day.day_id)}</p>
                 <h2>${escapeHtml(day.label)}</h2>
               </div>
-              <span class="candidate-status">${escapeHtml(statusText)}</span>
+              <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
             ${(day.day_materials || []).map(renderMaterial).join("")}
-            <div class="candidate-list">
+            <div class="bank-list">
               ${dayQuestions.map((question, index) => renderQuestion({ weekday: day.weekday, question }, index)).join("")}
             </div>
           </section>
@@ -395,13 +395,13 @@
             question_slots: day.question_slots.filter((question) => type === "all" || question.question_type === type)
           }))
           .filter((day) => day.question_slots.length);
-        document.getElementById("candidateList").innerHTML = filteredDays.length
+        document.getElementById("bankList").innerHTML = filteredDays.length
           ? filteredDays.map(renderDay).join("")
-          : '<div class="candidate-empty">沒有符合條件的題目。</div>';
+          : '<div class="bank-empty">沒有符合條件的題目。</div>';
       }
 
       async function init() {
-        const data = await loadCandidateData();
+        const data = await loadBankData();
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
@@ -412,7 +412,7 @@
       }
 
       init().catch((error) => {
-        document.querySelector(".candidate-shell").innerHTML = `
+        document.querySelector(".bank-shell").innerHTML = `
           <section class="error-box">
             <h1>英文題庫讀取失敗</h1>
             <p>${escapeHtml(error.message)}</p>

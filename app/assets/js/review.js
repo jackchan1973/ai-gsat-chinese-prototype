@@ -1,9 +1,8 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260809-quest-mode";
+const DATA_VERSION = "20260813-consolidated01";
 const ATTEMPT_KEY = "chi_v1_last_attempt";
 const DATA_FILES = {
-  groups: "question_groups.jsonl",
-  drills: "basic_drills.jsonl",
+  chineseBank: "banks/chinese.json",
 };
 
 const knowledgeLabels = {
@@ -174,10 +173,9 @@ async function main() {
   }
 
   const attempt = JSON.parse(rawAttempt);
-  const [groups, drills] = await Promise.all([
-    readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),
-    readJsonl(`${DATA_ROOT}/${DATA_FILES.drills}`),
-  ]);
+  const chineseBank = await readJson(`${DATA_ROOT}/${DATA_FILES.chineseBank}`);
+  const groups = chineseBank.question_groups || [];
+  const drills = chineseBank.basic_drills || [];
   const questionMap = byId([...flattenGroupQuestions(groups), ...drills], "question_id");
   const autoScored = attempt.answers.filter((answer) => answer.result_status !== "needs_ai_review");
   const autoCorrect = autoScored.filter((answer) => answer.is_correct).length;

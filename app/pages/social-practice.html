@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜社會科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-system01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
     <style>
       .social-practice-page {
         background: linear-gradient(180deg, #102235 0, #16344b 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -257,15 +257,15 @@
         <div class="social-actions">
           <button class="primary-action" type="submit">完成本關看結算</button>
           <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
-          <a class="secondary-action link-action" href="./social-formal-candidates.html?batch=02">查看題庫情報</a>
+          <a class="secondary-action link-action" href="./social-bank.html">查看題庫情報</a>
         </div>
       </form>
       <section class="social-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/social_formal_candidates_v0_1_batch_02.json?v=20260810-system01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_02.json?v=20260810-system01";
+      const LOCAL_DATA_URL = "../../data/banks/social.json?v=20260813-consolidated01";
+      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/social.json?v=20260813-consolidated01";
       const taskTypeLabels = {
         concept_and_material_reading: "人口照護關",
         cross_domain_and_chart_reading: "AI 勞動關",
@@ -515,7 +515,7 @@
           <section class="error-box">
             <h1>社會科題庫讀取失敗</h1>
             <p>${escapeHtml(error.message)}</p>
-            <p>請改用 GitHub Pages 線上網址，或重新整理後再試。</p>
+            <p>請改用阿里雲線上網址，或重新整理後再試。</p>
           </section>
         `;
       });

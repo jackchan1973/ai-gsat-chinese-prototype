@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-system01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
     <style>
       .english-practice-page {
         background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -271,15 +271,15 @@
         <div class="english-actions">
           <button class="primary-action" type="submit">完成本關看結算</button>
           <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
-          <a class="secondary-action link-action" href="./english-formal-candidates.html">查看正式題庫</a>
+          <a class="secondary-action link-action" href="./english-bank.html">查看正式題庫</a>
         </div>
       </form>
       <section class="english-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/english_formal_candidates_v0_1_batch_01.json?v=20260810-system01";
-      const REMOTE_DATA_URL = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/english_formal_candidates_v0_1_batch_01.json?v=20260810-system01";
+      const LOCAL_DATA_URL = "../../data/banks/english.json?v=20260813-consolidated01";
+      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/english.json?v=20260813-consolidated01";
       const dayNames = { Mon: "週一", Thu: "週四", Sun: "週日" };
       const taskTypeLabels = {
         vocabulary_and_short_reading: "詞彙語境關",
@@ -516,7 +516,7 @@
           <section class="error-box">
             <h1>英文科題庫讀取失敗</h1>
             <p>${escapeHtml(error.message)}</p>
-            <p>請改用 GitHub Pages 線上網址，或重新整理後再試。</p>
+            <p>請改用阿里雲線上網址，或重新整理後再試。</p>
           </section>
         `;
       });

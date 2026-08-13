@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜社會正式題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-system01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
     <style>
-      .candidate-shell {
+      .bank-shell {
         max-width: 1080px;
       }
 
-      .candidate-page {
+      .bank-page {
         background:
           linear-gradient(180deg, #eef7fa 0, #f4f7fb 360px),
           var(--bg);
         color: var(--ink);
       }
 
-      .candidate-page .topbar {
+      .bank-page .topbar {
         align-items: center;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -27,32 +27,32 @@
         box-shadow: var(--shadow);
       }
 
-      .candidate-page .topbar > div {
+      .bank-page .topbar > div {
         min-width: 0;
       }
 
-      .candidate-page .topbar h1 {
+      .bank-page .topbar h1 {
         color: #102536;
         max-width: 100%;
         overflow-wrap: anywhere;
         word-break: break-word;
       }
 
-      .candidate-page .topbar .eyebrow {
+      .bank-page .topbar .eyebrow {
         color: #486172;
       }
 
-      .candidate-alert,
-      .candidate-day,
-      .candidate-question,
-      .candidate-stat {
+      .bank-alert,
+      .bank-day,
+      .bank-question,
+      .bank-stat {
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--surface);
         box-shadow: var(--shadow);
       }
 
-      .candidate-alert {
+      .bank-alert {
         display: grid;
         gap: 8px;
         margin-bottom: 16px;
@@ -60,44 +60,44 @@
         border-left: 5px solid var(--warn);
       }
 
-      .candidate-alert p {
+      .bank-alert p {
         margin: 0;
         color: var(--muted);
         overflow-wrap: anywhere;
         word-break: break-word;
       }
 
-      .candidate-stats {
+      .bank-stats {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 10px;
         margin-bottom: 16px;
       }
 
-      .candidate-stat {
+      .bank-stat {
         padding: 14px;
       }
 
-      .candidate-stat span {
+      .bank-stat span {
         display: block;
         color: var(--muted);
         font-size: 0.86rem;
       }
 
-      .candidate-stat strong {
+      .bank-stat strong {
         display: block;
         margin-top: 4px;
         font-size: 1.45rem;
       }
 
-      .candidate-toolbar {
+      .bank-toolbar {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin: 0 0 16px;
       }
 
-      .candidate-filter {
+      .bank-filter {
         min-height: 40px;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -107,17 +107,17 @@
         font: inherit;
       }
 
-      .candidate-list {
+      .bank-list {
         display: grid;
         gap: 16px;
       }
 
-      .candidate-day {
+      .bank-day {
         padding: 18px;
       }
 
-      .candidate-day-header,
-      .candidate-question-header {
+      .bank-day-header,
+      .bank-question-header {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -126,12 +126,12 @@
         margin-bottom: 12px;
       }
 
-      .candidate-day h2 {
+      .bank-day h2 {
         margin: 0 0 8px;
         overflow-wrap: anywhere;
       }
 
-      .candidate-material {
+      .bank-material {
         border: 1px solid var(--line);
         border-radius: 8px;
         margin: 10px 0;
@@ -139,31 +139,31 @@
         background: var(--surface-muted);
       }
 
-      .candidate-table {
+      .bank-table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 8px;
         font-size: 0.94rem;
       }
 
-      .candidate-table th,
-      .candidate-table td {
+      .bank-table th,
+      .bank-table td {
         border: 1px solid var(--line);
         padding: 8px;
         text-align: left;
         vertical-align: top;
       }
 
-      .candidate-table th {
+      .bank-table th {
         background: var(--surface);
       }
 
-      .candidate-question {
+      .bank-question {
         margin-top: 12px;
         padding: 14px;
       }
 
-      .candidate-options {
+      .bank-options {
         display: grid;
         gap: 8px;
         margin: 12px 0;
@@ -171,29 +171,29 @@
         list-style: none;
       }
 
-      .candidate-options li,
-      .candidate-answer,
-      .candidate-review {
+      .bank-options li,
+      .bank-answer,
+      .bank-review {
         border: 1px solid var(--line);
         border-radius: 8px;
         padding: 10px 12px;
         background: var(--surface-muted);
       }
 
-      .candidate-options strong {
+      .bank-options strong {
         margin-right: 8px;
       }
 
-      .candidate-answer {
+      .bank-answer {
         margin-top: 10px;
       }
 
-      .candidate-review {
+      .bank-review {
         margin-top: 10px;
         color: var(--muted);
       }
 
-      .candidate-status {
+      .bank-status {
         display: inline-flex;
         align-items: center;
         min-height: 30px;
@@ -205,93 +205,79 @@
         font-size: 0.86rem;
       }
 
-      .candidate-empty {
+      .bank-empty {
         padding: 18px;
         border: 1px dashed var(--line);
         border-radius: 8px;
         color: var(--muted);
       }
 
-      .candidate-empty strong {
+      .bank-empty strong {
         display: block;
         margin-bottom: 6px;
         color: var(--ink);
       }
 
       @media (max-width: 760px) {
-        .candidate-stats {
+        .bank-stats {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .candidate-day,
-        .candidate-question {
+        .bank-day,
+        .bank-question {
           padding: 14px;
         }
 
-        .candidate-page .topbar {
+        .bank-page .topbar {
           align-items: stretch;
         }
 
-        .candidate-page .topbar h1 {
+        .bank-page .topbar h1 {
           font-size: 1.45rem;
         }
 
-        .candidate-day-header,
-        .candidate-question-header {
+        .bank-day-header,
+        .bank-question-header {
           align-items: flex-start;
           flex-direction: column;
         }
       }
     </style>
   </head>
-  <body class="candidate-page">
-    <main class="app-shell candidate-shell">
+  <body class="bank-page">
+    <main class="app-shell bank-shell">
       <header class="topbar">
         <div>
           <p class="eyebrow">AI學測考總複習</p>
-          <h1 id="candidateTitle">社會正式題庫 v0.1</h1>
+          <h1 id="bankTitle">社會正式題庫 v0.1</h1>
         </div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
-      <section class="candidate-alert" id="candidateAlert" aria-label="題庫狀態">
-        <strong id="candidateAlertTitle">本頁供線上檢查</strong>
-        <p id="candidateAlertText">正在讀取題庫狀態。</p>
+      <section class="bank-alert" id="bankAlert" aria-label="題庫狀態">
+        <strong id="bankAlertTitle">社會正式題庫已整理完成</strong>
+        <p id="bankAlertText">正在讀取題庫狀態。</p>
       </section>
 
-      <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
+      <section class="bank-stats" id="summaryStats" aria-label="統計"></section>
 
-      <section class="candidate-toolbar" aria-label="篩選">
-        <select class="candidate-filter" id="batchFilter" aria-label="批次篩選">
-          <option value="02">batch_02</option>
-          <option value="01">batch_01</option>
-        </select>
-        <select class="candidate-filter" id="weekdayFilter" aria-label="星期篩選">
+      <section class="bank-toolbar" aria-label="篩選">
+        <select class="bank-filter" id="weekdayFilter" aria-label="星期篩選">
           <option value="all">全部星期</option>
           <option value="Tue">週二</option>
           <option value="Sat">週六</option>
         </select>
-        <select class="candidate-filter" id="typeFilter" aria-label="題型篩選">
+        <select class="bank-filter" id="typeFilter" aria-label="題型篩選">
           <option value="all">全部題型</option>
         </select>
       </section>
 
-      <section class="candidate-list" id="candidateList" aria-live="polite"></section>
+      <section class="bank-list" id="bankList" aria-live="polite"></section>
     </main>
 
     <script>
-      const BATCHES = {
-        "01": {
-          label: "batch_01",
-          local: "../../data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth",
-          remote: "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_01.json?v=20260810-depth"
-        },
-        "02": {
-          label: "batch_02",
-          local: "../../data/social_formal_candidates_v0_1_batch_02.json?v=20260810-system01",
-          remote: "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/social_formal_candidates_v0_1_batch_02.json?v=20260810-system01"
-        }
-      };
+      const LOCAL_DATA_URL = "../../data/banks/social.json?v=20260813-consolidated01";
+      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/social.json?v=20260813-consolidated01";
       const weekdayLabels = {
         Tue: "週二",
         Sat: "週六"
@@ -303,14 +289,11 @@
       };
       const statusLabels = {
         approved_for_app: "正式題",
-        needs_human_review: "待人工檢查",
-        needs_revision: "需修訂",
-        excluded: "排除"
+        not_online: "未上線"
       };
 
       let days = [];
       let questions = [];
-      let activeBatch = "02";
       let activeMeta = {};
 
       function escapeHtml(value) {
@@ -333,7 +316,7 @@
           ["任務日", days.length]
         ];
         document.getElementById("summaryStats").innerHTML = stats
-          .map(([label, value]) => `<div class="candidate-stat"><span>${label}</span><strong>${value}</strong></div>`)
+          .map(([label, value]) => `<div class="bank-stat"><span>${label}</span><strong>${value}</strong></div>`)
           .join("");
       }
 
@@ -348,9 +331,9 @@
         if (material.type === "table" && Array.isArray(material.rows)) {
           const [head = [], ...rows] = material.rows;
           return `
-            <section class="candidate-material">
+            <section class="bank-material">
               <strong>${escapeHtml(material.title || "資料表")}</strong>
-              <table class="candidate-table">
+              <table class="bank-table">
                 <thead><tr>${head.map((cell) => `<th>${escapeHtml(cell)}</th>`).join("")}</tr></thead>
                 <tbody>${rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
               </table>
@@ -358,7 +341,7 @@
           `;
         }
         return `
-          <section class="candidate-material">
+          <section class="bank-material">
             <strong>${escapeHtml(material.title || "材料")}</strong>
             <p>${escapeHtml(material.content || "")}</p>
           </section>
@@ -369,30 +352,30 @@
         const question = item.question;
         const statusText = statusLabels[question.status] || question.status || "未標";
         const options = question.options && question.options.length
-          ? `<ul class="candidate-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
-          : '<p class="candidate-empty">文字作答題，無選項。</p>';
+          ? `<ul class="bank-options">${question.options.map((option) => `<li><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</li>`).join("")}</ul>`
+          : '<p class="bank-empty">文字作答題，無選項。</p>';
         return `
-          <article class="candidate-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}">
-            <div class="candidate-question-header">
+          <article class="bank-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}">
+            <div class="bank-question-header">
               <div class="social-tags">
                 <span class="tag">${escapeHtml(question.id)}</span>
                 <span class="tag">${escapeHtml(question.question_type)}</span>
                 <span class="tag">${escapeHtml(question.difficulty)}</span>
                 <span class="tag">${question.requires_written_response ? "週六文字作答" : "選擇題"}</span>
               </div>
-              <span class="candidate-status">${escapeHtml(statusText)}</span>
+              <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
             <p class="label">${escapeHtml(weekdayLabels[item.weekday] || item.weekday)} 第 ${index + 1} 題</p>
             <div>${escapeHtml(question.stem)}</div>
             ${options}
-            <details class="candidate-answer">
+            <details class="bank-answer">
               <summary>查看答案與解析</summary>
               <p><strong>答案：</strong>${escapeHtml(Array.isArray(question.answer) ? question.answer.join("、") : question.answer)}</p>
               ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
               <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
               <p><strong>複習建議：</strong>${escapeHtml(question.review_advice)}</p>
             </details>
-            <div class="candidate-review">
+            <div class="bank-review">
               <p><strong>審題等級：</strong>${escapeHtml(question.review_grade || "未標")}</p>
               <p><strong>審題紀錄：</strong>${escapeHtml(question.review_notes || "尚無")}</p>
               <p><strong>相似風險：</strong>${escapeHtml(question.similarity_risk || "未標")}</p>
@@ -405,16 +388,16 @@
         const dayQuestions = day.question_slots || [];
         const statusText = statusLabels[day.status] || day.status || "未標";
         return `
-          <section class="candidate-day" data-weekday="${day.weekday}">
-            <div class="candidate-day-header">
+          <section class="bank-day" data-weekday="${day.weekday}">
+            <div class="bank-day-header">
               <div>
                 <p class="eyebrow">${escapeHtml(day.day_id)}</p>
                 <h2>${escapeHtml(day.label)}：${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h2>
               </div>
-              <span class="candidate-status">${escapeHtml(statusText)}</span>
+              <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
             ${(day.day_materials || []).map(renderMaterial).join("")}
-            <div class="candidate-list">
+            <div class="bank-list">
               ${dayQuestions.map((question, index) => renderQuestion({ weekday: day.weekday, question }, index)).join("")}
             </div>
           </section>
@@ -431,20 +414,19 @@
             question_slots: day.question_slots.filter((question) => type === "all" || question.question_type === type)
           }))
           .filter((day) => day.question_slots.length);
-        document.getElementById("candidateList").innerHTML = filteredDays.length
+        document.getElementById("bankList").innerHTML = filteredDays.length
           ? filteredDays.map(renderDay).join("")
-          : '<div class="candidate-empty">沒有符合條件的題目。</div>';
+          : '<div class="bank-empty">沒有符合條件的題目。</div>';
       }
 
       function getDataUrls() {
-        const config = BATCHES[activeBatch] || BATCHES["02"];
         if (window.location.protocol === "file:") {
-          return [config.remote, config.local];
+          return [REMOTE_DATA_URL, LOCAL_DATA_URL];
         }
-        return [config.local, config.remote];
+        return [LOCAL_DATA_URL, REMOTE_DATA_URL];
       }
 
-      async function loadCandidateData() {
+      async function loadBankData() {
         const errors = [];
         for (const url of getDataUrls()) {
           try {
@@ -460,10 +442,10 @@
 
       function renderLoadError(error) {
         const localFileHint = window.location.protocol === "file:"
-          ? "你目前是直接用 Chrome 開本機檔案。這種開法常會擋住 JSON 讀取，請改用線上網址，或用本機 http server 預覽。"
+          ? "你目前是直接用 Chrome 開本機檔案。這種開法常會擋住 JSON 讀取，請改用線上網址，或用本機 http server 開啟。"
           : "請重新整理，或改用帶版本號的線上網址檢查。";
-        document.getElementById("candidateList").innerHTML = `
-          <div class="candidate-empty">
+        document.getElementById("bankList").innerHTML = `
+          <div class="bank-empty">
             <strong>題庫讀取失敗</strong>
             <p>${escapeHtml(localFileHint)}</p>
             <p>技術訊息：${escapeHtml(error.message)}</p>
@@ -472,30 +454,17 @@
       }
 
       async function init() {
-        const batchParam = new URLSearchParams(window.location.search).get("batch");
-        if (BATCHES[batchParam]) activeBatch = batchParam;
-        document.getElementById("batchFilter").value = activeBatch;
         await loadAndRender();
-        document.getElementById("batchFilter").addEventListener("change", async (event) => {
-          activeBatch = event.target.value;
-          const url = new URL(window.location.href);
-          url.searchParams.set("batch", activeBatch);
-          window.history.replaceState(null, "", url);
-          await loadAndRender();
-        });
         document.getElementById("weekdayFilter").addEventListener("change", renderList);
         document.getElementById("typeFilter").addEventListener("change", renderList);
       }
 
       async function loadAndRender() {
-        const data = await loadCandidateData();
+        const data = await loadBankData();
         activeMeta = data.meta || {};
-        const isApproved = activeMeta.status === "approved_for_app";
-        document.getElementById("candidateTitle").textContent = `${isApproved ? "社會正式題庫" : "社會正式候選題"} v0.1 ${BATCHES[activeBatch]?.label || ""}`;
-        document.getElementById("candidateAlertTitle").textContent = isApproved ? "batch_02 已接入正式社會科闖關" : "本批仍供線上檢查";
-        document.getElementById("candidateAlertText").textContent = isApproved
-          ? "本批題目狀態為 approved_for_app，社會科闖關頁可正式讀取。"
-          : "本批題目仍待人工檢查，尚未進入正式每日任務。";
+        document.getElementById("bankTitle").textContent = "社會正式題庫";
+        document.getElementById("bankAlertTitle").textContent = "社會正式題庫已整理完成";
+        document.getElementById("bankAlertText").textContent = activeMeta.source_policy || "本檔為社會科單一正式題庫，已接入正式闖關。";
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();

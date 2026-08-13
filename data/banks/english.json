@@ -1,85 +1,14 @@
 {
   "meta": {
+    "id": "英文_formal_bank_v0_1",
     "subject": "英文",
-    "mode": "學測",
-    "version": "formal_candidates_v0.1_batch_01",
-    "purpose": "英文科正式題庫 v0.1 第 1 批；已完成 AI 審題與 Gatekeeper 檢查，接入線上正式預覽。",
+    "title": "英文正式題庫",
+    "version": "2026-08-13-consolidated01",
     "status": "approved_for_app",
-    "created_at": "2026-08-10",
-    "source_policy": "113、114、115 官方英文題與出版社解析僅用於分析題型、閱讀量、解析深度與評分規準；本批材料、題目、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "英文正式闖關改為週一、週四、週日：平日控制在一小時內，週日承接閱讀推論與一週唯一寫作題。",
-    "batch_plan": {
-      "target_days": 3,
-      "target_questions": 31,
-      "written_response_count": 1,
-      "status": "approved_for_app",
-      "themes": [
-        "校園學習",
-        "社群修理",
-        "公共閱讀",
-        "睡眠與學習",
-        "語言日",
-        "翻譯判斷"
-      ]
-    },
-    "schedule_rule": {
-      "allowed_weekdays": [
-        "Mon",
-        "Thu",
-        "Sun"
-      ],
-      "written_response_day_only": "Sun",
-      "timezone": "Asia/Shanghai",
-      "written_response_limit_per_week": 1,
-      "writing_question_count_per_week": 1,
-      "weekend_load_policy": "平日只排週一、週四；週日承接閱讀推論與唯一寫作題。"
-    },
-    "approved_at": "2026-08-10",
-    "review_decision": {
-      "review_agent": "A",
-      "gatekeeper_status": "approved_for_app",
-      "decided_at": "2026-08-10",
-      "basis": [
-        "文章材料已加長，閱讀負荷接近 113-115 學測英文常見題組段落。",
-        "題目需依語境、段落功能、主旨、細節、推論或跨材料比較作答。",
-        "解析包含正答理由、材料依據、錯選原因與複習建議。",
-        "每週僅保留 1 題寫作題。"
-      ]
-    },
-    "learner_support": {
-      "chinese_translation_added": true,
-      "translation_scope": "day_materials.translation_zh for every English reading material; explanations remain in Chinese and vague cloze explanations were strengthened",
-      "updated_at": "2026-08-10"
-    },
-    "system_review": {
-      "updated_at": "2026-08-10",
-      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
-      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
-      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
-    }
+    "official_bank_status": "formal_online",
+    "total_questions": 31,
+    "source_policy": "由既有上線正式題庫合併為每科單一檔案。"
   },
-  "review_flags": [
-    {
-      "level": "approved_for_app",
-      "note": "AI Review Agent 判定 A：材料長度、題目深度、答案唯一性與解析完整度達高中學測練習標準。"
-    },
-    {
-      "level": "gatekeeper_approved",
-      "note": "Gatekeeper：依使用者授權，由 agent 審題通過後設為 approved_for_app。"
-    },
-    {
-      "level": "monitor_after_launch",
-      "note": "上線後仍建議觀察學生作答與錯題分布，必要時微調選項或解析。"
-    },
-    {
-      "level": "learner_support_added",
-      "note": "已為英文閱讀材料加入中文翻譯，方便高中生先理解文章脈絡，再回到英文題目作答。"
-    },
-    {
-      "level": "schedule_rebalanced",
-      "note": "英文週三改週四，週五閱讀併入週日，維持一週 1 題寫作且只在週日。"
-    }
-  ],
   "weeks": [
     {
       "week_id": "EN-FC-V01-B01-W01",
@@ -208,7 +137,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q02",
@@ -313,7 +243,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q03",
@@ -418,7 +349,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q04",
@@ -523,7 +455,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q05",
@@ -629,7 +562,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q06",
@@ -735,7 +669,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q07",
@@ -841,7 +776,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-MON-Q08",
@@ -947,7 +883,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             }
           ],
           "approved_at": "2026-08-10",
@@ -961,7 +898,8 @@
             "EN-U03-detail-evidence",
             "EN-U04-inference",
             "EN-U01-word-in-context"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         },
         {
           "day_id": "EN-FC-V01-B01-THU",
@@ -978,7 +916,7 @@
             {
               "type": "cloze",
               "title": "Material: A Repair Cafe",
-              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. At such an event, an old lamp may be opened on a table while a volunteer explains how to check the switch safely. A radio that has been silent for years may begin to work again after a small part is replaced. The owner learns a practical skill, but the repaired object may also bring back a memory.\n\nThe atmosphere is different from that of a shop. Visitors are not treated simply as customers waiting for a service. They are encouraged to observe, ask questions, and sometimes hold the tools themselves. For this reason, repair cafes often feel more like workshops than stores. They remind people that objects do not always have to be thrown away when one part fails. They also show that useful knowledge grows when it is shared. A person who learns to repair a toaster may later help a neighbor fix a fan, and that neighbor may teach someone else how to mend a backpack. In this way, repairing things can also repair social connections. The process is slow, but that slowness gives learners time to understand each step.",
+              "content": "A repair cafe is a community event where people bring broken items and learn how to fix them with volunteers. The goal is not only to save money, but also to reduce waste and rebuild trust among neighbors. At such an event, an old lamp may be opened on a table while a volunteer explains how to check the switch safely. A radio that has been silent for years may begin to work again after a small part is replaced. The owner learns a practical skill, but the repaired object may also bring back a memory.\n\nThe atmosphere is different from that of a shop. Visitors are not treated simply as customers waiting for a service. They are encouraged to observe, ask questions, and sometimes hold the tools themselves. They remind people that objects do not always have to be thrown away when one part fails. They also show that useful knowledge grows when it is shared. A person who learns to repair a toaster may later help a neighbor fix a fan, and that neighbor may teach someone else how to mend a backpack. In this way, repairing things can also repair social connections. The process is slow, but that slowness gives learners time to understand each step.",
               "translation_zh": "修理咖啡館是一種社區活動，人們把壞掉的物品帶來，並和志工一起學習如何修理。目的不只是省錢，也包括減少浪費、重新建立鄰里之間的信任。在這樣的活動中，一盞舊檯燈可能會被打開放在桌上，志工一邊說明如何安全檢查開關。一台沉默多年的收音機，也可能在更換一個小零件後重新運作。物主學到實用技能，而修好的物品也可能喚回一段記憶。\n\n這裡的氣氛和商店不同。訪客不只是等待服務的顧客。他們被鼓勵觀察、提問，有時甚至親手拿工具操作。因此，修理咖啡館常讓人覺得更像工作坊，而不是商店。它提醒人們，物品不一定因為一個零件故障就必須丟掉。它也顯示，有用的知識在分享時會成長。一個學會修理烤麵包機的人，之後可能幫鄰居修電風扇，而那位鄰居也可能教別人縫補背包。從這個角度看，修理物品也能修補社會連結。過程雖然慢，但這種慢讓學習者有時間理解每個步驟。"
             }
           ],
@@ -1087,7 +1025,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q02",
@@ -1193,7 +1132,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q03",
@@ -1299,7 +1239,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q04",
@@ -1405,7 +1346,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q05",
@@ -1511,7 +1453,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q06",
@@ -1617,7 +1560,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q07",
@@ -1639,23 +1583,23 @@
               "options": [
                 {
                   "key": "A",
-                  "text": "After the first sentence"
+                  "text": "After the sentence stating the goal (save money, reduce waste, rebuild trust)."
                 },
                 {
                   "key": "B",
-                  "text": "After the second sentence"
+                  "text": "After “Visitors are not treated simply as customers waiting for a service.”"
                 },
                 {
                   "key": "C",
-                  "text": "After the third sentence"
+                  "text": "After “They are encouraged to observe, ask questions, and sometimes hold the tools themselves.”"
                 },
                 {
                   "key": "D",
-                  "text": "At the very end only"
+                  "text": "At the very beginning of the passage."
                 }
               ],
-              "answer": "B",
-              "explanation": "句中的 this reason 指前一句提到的目標：省錢、減廢、重建信任，所以放在第二句後最自然。",
+              "answer": "C",
+              "explanation": "插入句的 this reason 承接前一句「訪客被鼓勵觀察、提問、親手操作工具」，正因為訪客能動手參與，這類活動才更像工作坊而非商店，所以放在 C 的句子之後最連貫。A、B 的位置尚未提到訪客動手參與，D 放在開頭則沒有可承接的原因。",
               "review_advice": "篇章結構題要找指示詞 this/that 的前文依據。",
               "review_notes": [
                 "本題已檢查答案唯一性、選項干擾合理性與材料依據。解析需同時指出正答依據與至少一個錯選原因，符合高中學測閱讀或語境判斷練習。",
@@ -1722,7 +1666,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q08",
@@ -1827,7 +1772,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-WED-Q09",
@@ -1933,7 +1879,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             }
           ],
           "approved_at": "2026-08-10",
@@ -1945,7 +1892,8 @@
             "EN-U05-cohesion",
             "EN-U06-discourse-structure",
             "EN-U04-inference"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         },
         {
           "day_id": "EN-FC-V01-B01-SUN",
@@ -2083,7 +2031,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q02",
@@ -2189,7 +2138,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q03",
@@ -2295,7 +2245,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q04",
@@ -2401,7 +2352,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q05",
@@ -2507,7 +2459,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q06",
@@ -2613,7 +2566,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q07",
@@ -2719,7 +2673,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-FRI-Q08",
@@ -2825,7 +2780,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q01",
@@ -2932,7 +2888,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q02",
@@ -3039,7 +2996,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q03",
@@ -3129,7 +3087,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q04",
@@ -3235,7 +3194,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q05",
@@ -3341,7 +3301,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "EN-FC-V01-B01-SUN-Q06",
@@ -3447,7 +3408,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             }
           ],
           "approved_at": "2026-08-10",
@@ -3468,7 +3430,8 @@
             "EN-U08-writing-organization",
             "EN-U09-integrated-reading-writing",
             "EN-U10-culture-context"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         }
       ]
     }

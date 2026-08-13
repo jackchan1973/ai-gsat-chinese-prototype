@@ -1,86 +1,14 @@
 {
   "meta": {
+    "id": "社會_formal_bank_v0_1",
     "subject": "社會",
-    "mode": "學測",
-    "version": "formal_candidates_v0.1_batch_02",
-    "purpose": "社會科正式題庫 v0.1 第 2 批；已依使用者指示接入正式社會科闖關。",
+    "title": "社會正式題庫",
+    "version": "2026-08-13-consolidated01",
     "status": "approved_for_app",
-    "created_at": "2026-08-10",
-    "source_policy": "官方歷年題只用於分析題型、類別、題目長度與資料形式；本批題目、材料、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "社會正式闖關改為週二輕量資料判讀、週六長題與文字整合。",
-    "batch_plan": {
-      "target_days": 2,
-      "target_questions": 16,
-      "written_response_count": 2,
-      "status": "approved_for_app",
-      "themes": [
-        "人口老化與照護服務",
-        "AI 招募與勞動治理",
-        "糧食供應與氣候風險"
-      ]
-    },
-    "schedule_rule": {
-      "allowed_weekdays": [
-        "Tue",
-        "Sat"
-      ],
-      "written_response_day_only": "Sat",
-      "no_written_response_days": [
-        "Tue"
-      ],
-      "timezone": "Asia/Shanghai",
-      "weekend_load_policy": "週四社會移到週六，週六可放材料長題與文字作答。"
-    },
-    "approved_at": "2026-08-10",
-    "gatekeeper_record": {
-      "status": "approved_for_app",
-      "approved_at": "2026-08-10",
-      "decision_source": "user_instruction",
-      "note": "使用者於 2026-08-10 指示下次修改時將社會科 batch_02 設定為正式題；本次接入正式社會科闖關。"
-    },
-    "review_decision": {
-      "review_agent": "A",
-      "gatekeeper_status": "approved_for_app",
-      "decided_at": "2026-08-10",
-      "basis": [
-        "週二無文字作答，週六 2 題文字作答",
-        "材料題與多選題符合社會科資料判讀方向",
-        "使用者確認接入正式任務後補齊審題追蹤欄位"
-      ]
-    },
-    "system_review": {
-      "updated_at": "2026-08-10",
-      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
-      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
-      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。"
-    }
+    "official_bank_status": "formal_online",
+    "total_questions": 16,
+    "source_policy": "由既有上線正式題庫合併為每科單一檔案。"
   },
-  "review_flags": [
-    {
-      "level": "approved_for_app",
-      "note": "使用者指定 batch_02 接入正式題，程式端可作為社會科正式三關。"
-    },
-    {
-      "level": "monitor_after_launch",
-      "note": "上線後仍建議觀察學生作答與老師回饋，必要時再調整題幹、選項或解析。"
-    },
-    {
-      "level": "check_balance",
-      "note": "週二、週四不含文字作答；週六含 2 題文字作答。"
-    },
-    {
-      "level": "review_trace_completed",
-      "note": "已補齊正式題審題欄位；error_codes 空陣列代表本次審題未發現錯誤。"
-    },
-    {
-      "level": "b_rechecked_to_a",
-      "note": "社會 batch_02 原初審 B 題已補強確認，正式審題等級統一標為 A。"
-    },
-    {
-      "level": "schedule_rebalanced",
-      "note": "社會週四題組併入週六，平日只保留週二輕量練習。"
-    }
-  ],
   "weeks": [
     {
       "week_id": "SO-FC-V01-B02-W01",
@@ -248,7 +176,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q02",
@@ -373,7 +302,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q03",
@@ -488,7 +418,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q04",
@@ -609,7 +540,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-TUE-Q05",
@@ -724,7 +656,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             }
           ],
           "approved_at": "2026-08-10",
@@ -736,7 +669,8 @@
             "SO-U02-public-policy-resource-allocation",
             "SO-U03-citizen-participation-law",
             "SO-U04-modernization-social-change"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         },
         {
           "day_id": "SO-FC-V01-B02-W01-SAT",
@@ -935,7 +869,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q02",
@@ -1060,7 +995,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q03",
@@ -1175,7 +1111,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q04",
@@ -1300,7 +1237,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-THU-Q05",
@@ -1415,7 +1353,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q01",
@@ -1530,7 +1469,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q02",
@@ -1655,7 +1595,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q03",
@@ -1774,7 +1715,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q04",
@@ -1899,7 +1841,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q05",
@@ -2001,7 +1944,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SO-FC-V01-B02-W01-SAT-Q06",
@@ -2099,7 +2043,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             }
           ],
           "approved_at": "2026-08-10",
@@ -2114,7 +2059,8 @@
             "SO-U08-food-agriculture-risk",
             "SO-U02-public-policy-resource-allocation",
             "SO-U09-globalization-environment-history"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         }
       ]
     }

@@ -1,10 +1,9 @@
 const DATA_ROOT = "../data";
-const DATA_VERSION = "20260810-expansion01";
-const REMOTE_DATA_ROOT = "https://jackchan1973.github.io/ai-gsat-chinese-prototype/data";
+const DATA_VERSION = "20260813-consolidated01";
+const REMOTE_DATA_ROOT = "http://139.224.229.242/data";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
-  groups: "question_groups.jsonl",
-  drills: "basic_drills.jsonl",
+  chineseBank: "banks/chinese.json",
   wrongs: "wrong_questions.sample.jsonl",
   reviewSchedules: "review_schedule.sample.json",
   parentReport: "parent_weekly_report.sample.json",
@@ -51,8 +50,7 @@ const taskTypeLabels = {
 };
 
 const contentStatusLabels = {
-  draft_for_preview: "候選題",
-  revised_after_feedback: "已修訂候選題",
+  not_online: "未上線",
   validated_by_student: "學生已試做",
   rule_checked: "規則已檢查",
   approved_for_app: "正式題",
@@ -141,7 +139,7 @@ function formatTaskType(type) {
 }
 
 function formatContentStatus(status) {
-  return contentStatusLabels[status] || "候選題";
+  return contentStatusLabels[status] || "正式題";
 }
 
 function setText(id, text) {
@@ -274,7 +272,7 @@ function isTaskRunnable(task, groupMap, drillMap) {
 }
 
 function isApprovedTaskStatus(status) {
-  return status === "approved_for_app" || status === "can_run_as_candidate";
+  return status === "approved_for_app";
 }
 
 function readinessText(task, runnable) {
@@ -469,7 +467,7 @@ function renderDataStatus(data) {
   const grid = document.getElementById("dataGrid");
   const groupQuestionCount = data.groups.reduce((sum, group) => sum + countGroupQuestions(group), 0);
   const cards = [
-    ["閱讀題組", data.groups.length, "候選題庫"],
+    ["閱讀題組", data.groups.length, "正式題庫"],
     ["題組題目", groupQuestionCount, "閱讀理解"],
     ["基礎短練", data.drills.length, "高中程度"],
     ["復活關排程", data.reviewSchedules.length, "2 天後修復"],
@@ -627,15 +625,16 @@ async function main() {
       setPortal("student");
     }
 
-    const [tasks, groups, drills, wrongs, reviewSchedules, report, systemPlan] = await Promise.all([
+    const [tasks, chineseBank, wrongs, reviewSchedules, report, systemPlan] = await Promise.all([
       readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),
-      readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),
-      readJsonl(`${DATA_ROOT}/${DATA_FILES.drills}`),
+      readJson(`${DATA_ROOT}/${DATA_FILES.chineseBank}`),
       readJsonl(`${DATA_ROOT}/${DATA_FILES.wrongs}`),
       readJson(`${DATA_ROOT}/${DATA_FILES.reviewSchedules}`),
       readJson(`${DATA_ROOT}/${DATA_FILES.parentReport}`),
       readJson(`${DATA_ROOT}/${DATA_FILES.systemPlan}`),
     ]);
+    const groups = chineseBank.question_groups || [];
+    const drills = chineseBank.basic_drills || [];
 
     const data = { tasks, groups, drills, wrongs, reviewSchedules, report, systemPlan };
     wireButtons(data);

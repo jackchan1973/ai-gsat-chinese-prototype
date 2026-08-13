@@ -2,9 +2,9 @@
   "meta": {
     "id": "gsat_review_system_v0_1",
     "title": "五科學測系統化複習地圖",
-    "version": "2026-08-10-system02",
+    "version": "2026-08-13-consolidated01",
     "status": "approved_for_app",
-    "updated_at": "2026-08-10",
+    "updated_at": "2026-08-13",
     "purpose": "把國英數社自正式題庫納入同一套知識點、課綱能力、時間控管與角色儀表板規則。",
     "time_control": {
       "weekday_target_minutes": "45-60",
@@ -33,7 +33,9 @@
         "Program Agent"
       ]
     },
-    "expansion_status": "第一波已補數學 12 題、自然 12 題。"
+    "expansion_status": "五科正式上線題庫已整理為單一科目檔。",
+    "consolidated_bank_folder": "data/banks",
+    "bank_file_policy": "每科一個正式題庫檔；國文另保留 30 題並標示 not_online。"
   },
   "weekly_plan": [
     {
@@ -124,7 +126,7 @@
         "Sun"
       ],
       "current_formal_count": 360,
-      "coverage_status": "可支撐 1 個月國文每日任務；仍需用近三年學測題型繼續補跨文本與混合題。",
+      "coverage_status": "正式上線 360 題；另有 30 題保留於國文題庫並標示未上線。",
       "knowledge_units": [
         {
           "unit_id": "CH-U01",
@@ -166,7 +168,9 @@
             "K15"
           ]
         }
-      ]
+      ],
+      "not_online_count": 30,
+      "bank_file": "banks/chinese.json"
     },
     {
       "subject": "英文",
@@ -176,7 +180,7 @@
         "Sun"
       ],
       "current_formal_count": 31,
-      "coverage_status": "適合 1 週正式複習；若要完整 1 個月，建議擴充到 120-150 題並補 4 篇閱讀與 4 次寫作。",
+      "coverage_status": "正式上線 31 題，已整理為單一英文題庫檔。",
       "knowledge_units": [
         {
           "unit_id": "EN-U01",
@@ -216,7 +220,8 @@
             "EN-INTEGRATED"
           ]
         }
-      ]
+      ],
+      "bank_file": "banks/english.json"
     },
     {
       "subject": "數學",
@@ -226,7 +231,7 @@
         "Sun"
       ],
       "current_formal_count": 24,
-      "coverage_status": "已完成第一波補題，從 12 題增至 24 題；仍需補到 48-60 題才足夠 1 個月。",
+      "coverage_status": "正式上線 24 題，已整理為單一數學題庫檔。",
       "knowledge_units": [
         {
           "unit_id": "MA-U01",
@@ -262,7 +267,8 @@
             "MA-MAT"
           ]
         }
-      ]
+      ],
+      "bank_file": "banks/math.json"
     },
     {
       "subject": "社會",
@@ -271,7 +277,7 @@
         "Sat"
       ],
       "current_formal_count": 16,
-      "coverage_status": "適合 1 週材料判讀訓練；若要完整 1 個月，建議擴充到 64-80 題，歷史、地理、公民各自輪替且保留跨科題。",
+      "coverage_status": "正式上線 16 題，已整理為單一社會題庫檔。",
       "knowledge_units": [
         {
           "unit_id": "SO-U01",
@@ -306,7 +312,8 @@
             "SO-S05"
           ]
         }
-      ]
+      ],
+      "bank_file": "banks/social.json"
     },
     {
       "subject": "自然",
@@ -315,7 +322,7 @@
         "Sat"
       ],
       "current_formal_count": 24,
-      "coverage_status": "已完成第一波補題，從 12 題增至 24 題；仍需補到 48-60 題才足夠 1 個月。",
+      "coverage_status": "正式上線 24 題，已整理為單一自然題庫檔。",
       "knowledge_units": [
         {
           "unit_id": "SC-U01",
@@ -352,7 +359,8 @@
             "SC-INQ"
           ]
         }
-      ]
+      ],
+      "bank_file": "banks/science.json"
     }
   ],
   "role_views": {
@@ -396,7 +404,7 @@
     }
   },
   "one_month_readiness": {
-    "summary": "目前國文足夠 1 個月；數學與自然已完成第一波補題但仍不足完整 1 個月；英文、社會仍待擴充。",
+    "summary": "目前五科正式上線題數共 455 題；國文另有 30 題標示未上線。",
     "recommended_expansion": [
       {
         "subject": "英文",

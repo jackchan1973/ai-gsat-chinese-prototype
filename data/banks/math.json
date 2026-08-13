@@ -1,81 +1,14 @@
 {
   "meta": {
+    "id": "數學_formal_bank_v0_1",
     "subject": "數學",
-    "mode": "學測",
-    "version": "formal_candidates_v0.1_batch_02",
-    "purpose": "數學科正式每日任務 batch_02；已接入數學科闖關頁。",
+    "title": "數學正式題庫",
+    "version": "2026-08-13-consolidated01",
     "status": "approved_for_app",
-    "created_at": "2026-08-10",
-    "source_policy": "113、114、115 官方數學 A/B 題與出版社解析僅用於分析題型、圖形材料、計算深度與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "數學正式闖關改為週二、週四、週日；週日集中圖形向量與混合推理。",
-    "batch_plan": {
-      "target_days": 3,
-      "target_questions": 24,
-      "short_answer_count": 2,
-      "status": "approved_for_app",
-      "themes": [
-        "代數函數與模型",
-        "機率統計與資料判讀",
-        "圖形幾何與向量",
-        "混合推理與非選表達"
-      ]
-    },
-    "schedule_rule": {
-      "allowed_weekdays": [
-        "Tue",
-        "Thu",
-        "Sun"
-      ],
-      "written_response_day_only": "Sun",
-      "timezone": "Asia/Shanghai",
-      "weekend_load_policy": "週六不排數學；週日集中圖形向量、混合推理與短答。"
-    },
-    "approved_for_app_at": "2026-08-10",
-    "gatekeeper_decision": "user_requested_formal_daily_task_integration",
-    "review_decision": {
-      "review_agent": "A",
-      "gatekeeper_status": "approved_for_app",
-      "decided_at": "2026-08-10",
-      "basis": [
-        "使用者確認接入正式每日任務",
-        "本次補齊資料完整性與審題欄位"
-      ]
-    },
-    "system_review": {
-      "updated_at": "2026-08-10",
-      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
-      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
-      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。",
-      "first_wave_expansion": "已新增 12 題正式題，並補齊時間、課綱與審題欄位。"
-    },
-    "expansion_history": [
-      {
-        "date": "2026-08-10",
-        "action": "first_wave_add_12_questions",
-        "added_questions": 12,
-        "status": "approved_for_app",
-        "note": "依使用者要求開始補足一個月題量缺口；本波新增題皆經角色分工審核紀錄。"
-      }
-    ]
+    "official_bank_status": "formal_online",
+    "total_questions": 24,
+    "source_policy": "由既有上線正式題庫合併為每科單一檔案。"
   },
-  "review_flags": [
-    {
-      "level": "approved_for_app",
-      "note": "2026-08-10 依使用者明確要求，接入數學正式每日任務；正式頁只讀 approved_for_app。"
-    },
-    {
-      "level": "diagram_policy",
-      "note": "需要圖形的題目已使用可重繪 graph_spec 或 diagram_spec，不使用官方圖形或官方圖形改寫。"
-    },
-    {
-      "level": "review_trace_completed",
-      "note": "已補齊正式題審題欄位；error_codes 空陣列代表本次審題未發現錯誤。"
-    },
-    {
-      "level": "schedule_rebalanced",
-      "note": "數學週六圖形向量併入週日，平日保留週二與週四。"
-    }
-  ],
   "weeks": [
     {
       "week_id": "MA-FC-V01-B02-W01",
@@ -206,7 +139,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -335,7 +269,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -448,7 +383,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-TUE-Q04",
@@ -550,7 +486,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-TUE-Q05",
@@ -631,7 +568,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-TUE-Q06",
@@ -727,7 +665,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-TUE-Q07",
@@ -832,7 +771,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             }
           ],
           "estimated_minutes": 43,
@@ -847,7 +787,8 @@
             "MA-U11-exponential-logarithmic",
             "MA-U12-trigonometry",
             "MA-U10-algebra"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         },
         {
           "day_id": "MA-FC-V01-B02-THU",
@@ -1017,7 +958,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -1125,7 +1067,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -1211,7 +1154,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-THU-Q04",
@@ -1307,7 +1251,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-THU-Q05",
@@ -1429,7 +1374,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-THU-Q06",
@@ -1451,7 +1397,7 @@
               "options": [
                 {
                   "key": "A",
-                  "text": "原資料平均數為 6"
+                  "text": "原資料眾數為 7"
                 },
                 {
                   "key": "B",
@@ -1475,7 +1421,7 @@
                 "D"
               ],
               "scoring_rule": "完全答對 B、D 得分；多選、少選或錯選不得分。",
-              "explanation": "原平均數為 (3+5+5+7+10)/5=6，新增 12 後平均數為 42/6=7，所以 B 正確。原中位數是第 3 個數 5，不是 7；新增後排序為 3,5,5,7,10,12，中位數為 (5+7)/2=6。全距由 7 變 9，沒有變小。",
+              "explanation": "原資料 3,5,5,7,10：眾數為 5（出現兩次），不是 7，故 A 錯。平均數為 (3+5+5+7+10)/5=6，新增 12 後為 42/6=7，平均變大，B 對。原中位數為第 3 個數 5，不是 7，C 錯。新增後排序 3,5,5,7,10,12，中位數為 (5+7)/2=6，D 對。全距由 7 變 9，沒有變小，E 錯。故正確為 B、D。",
               "review_advice": "統計題要把平均數、中位數、全距分開算，不要混用。",
               "requires_written_response": false,
               "ai_scoring_required": false,
@@ -1525,7 +1471,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-THU-Q07",
@@ -1600,7 +1547,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             }
           ],
           "estimated_minutes": 43,
@@ -1610,7 +1558,8 @@
             "MA-U08-statistics",
             "MA-U02-modeling",
             "MA-U13-combinatorics"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         },
         {
           "day_id": "MA-FC-V01-B02-SUN",
@@ -1768,7 +1717,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -1889,7 +1839,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -2009,7 +1960,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -2128,7 +2080,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -2249,7 +2202,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "數學",
@@ -2343,7 +2297,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-SUN-Q04",
@@ -2418,7 +2373,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-SUN-Q05",
@@ -2514,7 +2470,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-SUN-Q06",
@@ -2598,7 +2555,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "MA-FC-V01-B02-SUN-Q07",
@@ -2706,7 +2664,8 @@
                 "review_grade": "A",
                 "checked_at": "2026-08-10",
                 "note": "第一波補題審查：符合學測複習導向，題目、材料、答案與解析完整。"
-              }
+              },
+              "official_bank_status": "formal_online"
             }
           ],
           "reschedule_note": "2026-08-10 依第二版複習節奏合併到週末或平日輕量日。",
@@ -2722,7 +2681,8 @@
             "MA-U07-probability",
             "MA-U08-statistics",
             "MA-U02-modeling"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         }
       ]
     }

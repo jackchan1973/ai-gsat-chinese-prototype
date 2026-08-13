@@ -1,74 +1,14 @@
 {
   "meta": {
+    "id": "自然_formal_bank_v0_1",
     "subject": "自然",
-    "mode": "學測",
-    "version": "formal_candidates_v0.1_batch_03",
-    "purpose": "自然科正式每日任務；已納入第一波補題。",
+    "title": "自然正式題庫",
+    "version": "2026-08-13-consolidated01",
     "status": "approved_for_app",
-    "created_at": "2026-08-10",
-    "source_policy": "113、114、115 官方自然題與評分原則僅用於分析題型、圖表材料、實驗設計與評分規準；本批材料、題目、數據、選項與解析皆為 AI 新製作。",
-    "app_integration_policy": "自然 batch_03 正式題庫改為週三輕量、週六長題的週末集中節奏。",
-    "batch_plan": {
-      "target_days": 2,
-      "target_questions": 24,
-      "short_answer_count": 1,
-      "status": "approved_for_app",
-      "themes": [
-        "實驗設計與資料判讀",
-        "天氣地科與圖形模型",
-        "能源、物質與環境跨科"
-      ]
-    },
-    "schedule_rule": {
-      "allowed_weekdays": [
-        "Wed",
-        "Sat"
-      ],
-      "timezone": "Asia/Shanghai",
-      "weekend_load_policy": "週一與週五自然移到週六，週三只保留一組圖形模型輕量練習。"
-    },
-    "approved_for_app_at": "2026-08-10",
-    "human_confirmation": "使用者於 2026-08-10 明確確認：自然科 batch_03 從待審轉為正式。",
-    "system_review": {
-      "updated_at": "2026-08-10",
-      "purpose": "補齊系統化複習所需欄位：知識點、課綱能力、預估時間、審題嚴格度。",
-      "time_control_policy": "每日排題以 estimated_minutes 加總控管；平日單日總複習目標 45-60 分鐘，週末承接長題與文字題。",
-      "gatekeeper_requirement": "正式題必須同時具備 approved_for_app、review_grade A 或 rechecked B、error_codes、similarity_risk、review_notes。",
-      "first_wave_expansion": "已新增 12 題正式題，並補齊時間、課綱與審題欄位。"
-    },
-    "expansion_history": [
-      {
-        "date": "2026-08-10",
-        "action": "first_wave_add_12_questions",
-        "added_questions": 12,
-        "status": "approved_for_app",
-        "note": "依使用者要求開始補足一個月題量缺口；本波新增題皆經角色分工審核紀錄。"
-      }
-    ],
-    "source_batch": "science_formal_candidates_v0_1_batch_03.json"
+    "official_bank_status": "formal_online",
+    "total_questions": 24,
+    "source_policy": "由既有上線正式題庫合併為每科單一檔案。"
   },
-  "review_flags": [
-    {
-      "level": "needs_human_review",
-      "note": "本批為自然科第三批 AI 新題，尚未經自然科老師或外部審題。"
-    },
-    {
-      "level": "not_for_app",
-      "note": "正式小程式只能讀 approved_for_app；本批目前不可接入正式闖關。"
-    },
-    {
-      "level": "diagram_policy",
-      "note": "圖表與流程圖皆為 AI 新製作，可由前端重繪，不使用官方圖形。"
-    },
-    {
-      "level": "human_confirmed_formal",
-      "note": "2026-08-10 使用者人工確認自然 batch_03 轉為 approved_for_app。"
-    },
-    {
-      "level": "schedule_rebalanced",
-      "note": "自然週一與週五併入週六，週三保留平日輕量圖表判讀。"
-    }
-  ],
   "weeks": [
     {
       "week_id": "SC-FC-V01-B03-W01",
@@ -209,7 +149,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -351,7 +292,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -488,7 +430,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -576,7 +519,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-WED-Q05",
@@ -690,7 +634,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-WED-Q06",
@@ -819,7 +764,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-WED-Q07",
@@ -933,7 +879,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-WED-Q08",
@@ -1011,7 +958,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             }
           ],
           "gatekeeper_status": "approved_for_app",
@@ -1022,7 +970,8 @@
             "SC-U01-energy-force-motion",
             "SC-U05-scientific-inquiry-data",
             "SC-U02-earth-system-data"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         },
         {
           "day_id": "SC-FC-V01-B03-SAT",
@@ -1174,7 +1123,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -1318,7 +1268,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -1465,7 +1416,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -1552,7 +1504,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -1680,7 +1633,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -1831,7 +1785,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -1929,7 +1884,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": true
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "subject": "自然",
@@ -2047,7 +2003,8 @@
                   "unit_and_syllabus_tags_added": true
                 },
                 "human_sampling_required_after_live_feedback": false
-              }
+              },
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q05",
@@ -2163,7 +2120,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q06",
@@ -2289,7 +2247,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q07",
@@ -2361,7 +2320,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q08",
@@ -2475,7 +2435,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q09",
@@ -2598,7 +2559,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q10",
@@ -2731,7 +2693,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q11",
@@ -2809,7 +2772,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             },
             {
               "id": "SC-FC-V01-B03-SAT-Q12",
@@ -2914,7 +2878,8 @@
                   "action": "first_wave_expansion_approved",
                   "note": "補足一個月題量缺口的第一波正式擴充題。"
                 }
-              ]
+              ],
+              "official_bank_status": "formal_online"
             }
           ],
           "gatekeeper_status": "approved_for_app",
@@ -2928,7 +2893,8 @@
             "SC-U04-matter-reaction-energy",
             "SC-U01-energy-force-motion",
             "SC-U02-earth-system-data"
-          ]
+          ],
+          "official_bank_status": "formal_online"
         }
       ]
     }

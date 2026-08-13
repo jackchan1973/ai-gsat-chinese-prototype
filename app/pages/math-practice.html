@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-expansion01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
     <style>
-      .candidate-page {
+      .bank-page {
         background:
           linear-gradient(180deg, #eef7fa 0, #f5f7fb 340px),
           var(--bg);
         color: var(--ink);
       }
 
-      .candidate-shell {
+      .bank-shell {
         max-width: 1120px;
       }
 
-      .candidate-page .topbar {
+      .bank-page .topbar {
         align-items: center;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -27,26 +27,26 @@
         box-shadow: var(--shadow);
       }
 
-      .candidate-page .topbar > div {
+      .bank-page .topbar > div {
         min-width: 0;
       }
 
-      .candidate-page .topbar h1 {
+      .bank-page .topbar h1 {
         color: #102536;
         overflow-wrap: anywhere;
       }
 
-      .candidate-alert,
-      .candidate-day,
-      .candidate-question,
-      .candidate-stat {
+      .bank-alert,
+      .bank-day,
+      .bank-question,
+      .bank-stat {
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--surface);
         box-shadow: var(--shadow);
       }
 
-      .candidate-alert {
+      .bank-alert {
         display: grid;
         gap: 8px;
         margin-bottom: 16px;
@@ -54,43 +54,43 @@
         border-left: 5px solid var(--warn);
       }
 
-      .candidate-alert p {
+      .bank-alert p {
         margin: 0;
         color: var(--muted);
       }
 
-      .candidate-stats {
+      .bank-stats {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 10px;
         margin-bottom: 16px;
       }
 
-      .candidate-stat {
+      .bank-stat {
         padding: 14px;
       }
 
-      .candidate-stat span {
+      .bank-stat span {
         display: block;
         color: var(--muted);
         font-size: 0.86rem;
       }
 
-      .candidate-stat strong {
+      .bank-stat strong {
         display: block;
         margin-top: 4px;
         color: var(--primary);
         font-size: 1.4rem;
       }
 
-      .candidate-toolbar {
+      .bank-toolbar {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin: 0 0 16px;
       }
 
-      .candidate-filter {
+      .bank-filter {
         min-height: 42px;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -101,20 +101,20 @@
         font-weight: 800;
       }
 
-      .candidate-list {
+      .bank-list {
         display: grid;
         gap: 16px;
         min-width: 0;
       }
 
-      .candidate-day {
+      .bank-day {
         padding: 18px;
         min-width: 0;
         max-width: 100%;
       }
 
-      .candidate-day-header,
-      .candidate-question-header {
+      .bank-day-header,
+      .bank-question-header {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -123,11 +123,11 @@
         margin-bottom: 12px;
       }
 
-      .candidate-day h2 {
+      .bank-day h2 {
         margin: 0;
       }
 
-      .candidate-material {
+      .bank-material {
         border: 1px solid var(--line);
         border-radius: 8px;
         margin: 10px 0;
@@ -138,7 +138,7 @@
         max-width: 100%;
       }
 
-      .candidate-material p,
+      .bank-material p,
       .math-code {
         margin-bottom: 0;
         white-space: pre-wrap;
@@ -190,7 +190,7 @@
         background: #fbfdfe;
       }
 
-      .candidate-table {
+      .bank-table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 8px;
@@ -198,19 +198,19 @@
         font-size: 0.94rem;
       }
 
-      .candidate-table th,
-      .candidate-table td {
+      .bank-table th,
+      .bank-table td {
         border: 1px solid var(--line);
         padding: 8px;
         text-align: left;
         vertical-align: top;
       }
 
-      .candidate-table th {
+      .bank-table th {
         background: var(--surface);
       }
 
-      .candidate-question {
+      .bank-question {
         margin-top: 12px;
         padding: 14px;
         min-width: 0;
@@ -219,8 +219,8 @@
         word-break: normal;
       }
 
-      .candidate-question-header > *,
-      .candidate-day-header > *,
+      .bank-question-header > *,
+      .bank-day-header > *,
       .social-tags {
         min-width: 0;
       }
@@ -231,7 +231,7 @@
         gap: 6px;
       }
 
-      .candidate-options {
+      .bank-options {
         display: grid;
         gap: 8px;
         margin: 12px 0;
@@ -239,24 +239,24 @@
         list-style: none;
       }
 
-      .candidate-options li,
-      .candidate-option-label,
-      .candidate-answer,
-      .candidate-review {
+      .bank-options li,
+      .bank-option-label,
+      .bank-answer,
+      .bank-review {
         border: 1px solid var(--line);
         border-radius: 8px;
         padding: 10px 12px;
         background: var(--surface-muted);
       }
 
-      .candidate-option-label {
+      .bank-option-label {
         display: flex;
         gap: 10px;
         align-items: flex-start;
         cursor: pointer;
       }
 
-      .candidate-option-label input {
+      .bank-option-label input {
         margin-top: 4px;
       }
 
@@ -295,21 +295,21 @@
         display: block;
       }
 
-      .candidate-options strong {
+      .bank-options strong {
         margin-right: 8px;
         color: var(--primary);
       }
 
-      .candidate-answer,
-      .candidate-review {
+      .bank-answer,
+      .bank-review {
         margin-top: 10px;
       }
 
-      .candidate-review {
+      .bank-review {
         color: var(--muted);
       }
 
-      .candidate-status {
+      .bank-status {
         display: inline-flex;
         align-items: center;
         min-height: 30px;
@@ -323,42 +323,42 @@
         white-space: nowrap;
       }
 
-      .candidate-empty {
+      .bank-empty {
         padding: 18px;
         border: 1px dashed var(--line);
         border-radius: 8px;
         color: var(--muted);
       }
 
-      .candidate-empty strong {
+      .bank-empty strong {
         display: block;
         margin-bottom: 6px;
         color: var(--ink);
       }
 
       @media (max-width: 760px) {
-        .candidate-stats {
+        .bank-stats {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .candidate-page .topbar {
+        .bank-page .topbar {
           align-items: stretch;
           flex-direction: column;
         }
 
-        .candidate-page .topbar h1 {
+        .bank-page .topbar h1 {
           font-size: 1.45rem;
         }
 
-        .candidate-day,
-        .candidate-question {
+        .bank-day,
+        .bank-question {
           padding: 14px;
         }
       }
     </style>
   </head>
-  <body class="candidate-page">
-    <main class="app-shell candidate-shell">
+  <body class="bank-page">
+    <main class="app-shell bank-shell">
       <header class="topbar">
         <div>
           <p class="eyebrow">數學主線</p>
@@ -367,51 +367,49 @@
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
 
-      <section class="candidate-alert" aria-label="題庫狀態">
+      <section class="bank-alert" aria-label="題庫狀態">
         <strong id="statusTitle">數學 batch_02 已接入正式每日任務</strong>
         <p id="statusCopy">週二、週四控制平日練習量，週日集中圖形向量與混合推理。</p>
       </section>
 
-      <section class="candidate-stats" id="summaryStats" aria-label="統計"></section>
+      <section class="bank-stats" id="summaryStats" aria-label="統計"></section>
 
-      <section class="candidate-toolbar" aria-label="篩選">
-        <select class="candidate-filter" id="weekdayFilter" aria-label="星期篩選">
+      <section class="bank-toolbar" aria-label="篩選">
+        <select class="bank-filter" id="weekdayFilter" aria-label="星期篩選">
           <option value="all">全部星期</option>
           <option value="Tue">週二</option>
           <option value="Thu">週四</option>
           <option value="Sun">週日</option>
         </select>
-        <select class="candidate-filter" id="trackFilter" aria-label="數學 A B 篩選">
+        <select class="bank-filter" id="trackFilter" aria-label="數學 A B 篩選">
           <option value="all">全部 A/B</option>
         </select>
-        <select class="candidate-filter" id="typeFilter" aria-label="題型篩選">
+        <select class="bank-filter" id="typeFilter" aria-label="題型篩選">
           <option value="all">全部題型</option>
         </select>
       </section>
 
-      <section class="candidate-list" id="candidateList" aria-live="polite"></section>
+      <section class="bank-list" id="bankList" aria-live="polite"></section>
       <section class="math-practice-actions" aria-label="數學作答操作">
         <button class="primary-action" type="button" id="submitButton">完成本關看結算</button>
         <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
-        <a class="secondary-action link-action" href="./math-formal-candidates.html?batch=02">查看題庫情報</a>
+        <a class="secondary-action link-action" href="./math-bank.html">查看題庫情報</a>
       </section>
       <section class="math-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
-      const DATA_VERSION = "20260810-expansion01";
-      const LOCAL_DATA_URL = `../../data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
-      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/math_formal_candidates_v0_1_batch_02.json?v=${DATA_VERSION}`;
+      const DATA_VERSION = "20260813-consolidated01";
+      const LOCAL_DATA_URL = `../../data/banks/math.json?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `http://139.224.229.242/data/banks/math.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
         Tue: "週二",
         Thu: "週四",
         Sun: "週日"
       };
       const statusLabels = {
-        needs_human_review: "待人工審題",
-        needs_revision: "需修訂",
         approved_for_app: "正式題",
-        excluded: "排除"
+        not_online: "未上線"
       };
       const taskTypeLabels = {
         algebra_function_model: "代數、函數與模型",
@@ -455,10 +453,10 @@
         if (isChoiceQuestion(question)) {
           const type = question.question_type === "multiple_choice" ? "checkbox" : "radio";
           return `
-            <ul class="candidate-options">
+            <ul class="bank-options">
               ${question.options.map((option) => `
                 <li>
-                  <label class="candidate-option-label">
+                  <label class="bank-option-label">
                     <input type="${type}" name="${escapeHtml(answerKey(question))}" value="${escapeHtml(option.key)}" />
                     <span><strong>${escapeHtml(option.key)}</strong>${escapeHtml(option.text)}</span>
                   </label>
@@ -496,7 +494,7 @@
         return window.location.protocol === "file:" ? [REMOTE_DATA_URL, LOCAL_DATA_URL] : [LOCAL_DATA_URL, REMOTE_DATA_URL];
       }
 
-      async function loadCandidateData() {
+      async function loadBankData() {
         const errors = [];
         for (const url of getDataUrls()) {
           try {
@@ -523,7 +521,7 @@
           ["狀態", "開放"]
         ];
         document.getElementById("summaryStats").innerHTML = stats
-          .map(([label, value]) => `<div class="candidate-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
+          .map(([label, value]) => `<div class="bank-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
           .join("");
       }
 
@@ -542,7 +540,7 @@
         const columns = material.columns || [];
         const rows = material.rows || [];
         return `
-          <table class="candidate-table">
+          <table class="bank-table">
             <thead>
               <tr>
                 <th>${escapeHtml(material.row_header || "")}</th>
@@ -1039,7 +1037,7 @@
       function renderMaterial(material) {
         if (material.type === "table") {
           return `
-            <section class="candidate-material">
+            <section class="bank-material">
               <strong>${escapeHtml(material.title || "資料表")}</strong>
               ${renderTable(material)}
             </section>
@@ -1047,7 +1045,7 @@
         }
         if (material.type === "latex") {
           return `
-            <section class="candidate-material">
+            <section class="bank-material">
               <strong>${escapeHtml(material.title || "公式")}</strong>
               <div class="math-readable">${escapeHtml(formatMathText(material.content || ""))}</div>
             </section>
@@ -1055,14 +1053,14 @@
         }
         if (material.type === "diagram_spec" || material.type === "graph_spec") {
           return `
-            <section class="candidate-material">
+            <section class="bank-material">
               <strong>${escapeHtml(material.title || "圖形說明")}</strong>
               ${renderSpecSummary(material)}
             </section>
           `;
         }
         return `
-          <section class="candidate-material">
+          <section class="bank-material">
             <strong>${escapeHtml(material.title || "材料")}</strong>
             <p>${escapeHtml(material.content || "")}</p>
           </section>
@@ -1074,8 +1072,8 @@
         const statusText = statusLabels[question.status] || question.status || "未標";
         const answerControl = renderAnswerControl(question);
         return `
-          <article class="candidate-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}" data-track="${escapeHtml(question.math_track)}">
-            <div class="candidate-question-header">
+          <article class="bank-question" data-weekday="${item.weekday}" data-type="${escapeHtml(question.question_type)}" data-track="${escapeHtml(question.math_track)}">
+            <div class="bank-question-header">
               <div class="social-tags">
                 <span class="tag">${escapeHtml(question.id)}</span>
                 <span class="tag">${escapeHtml(question.question_type)}</span>
@@ -1085,13 +1083,13 @@
                 ${(question.unit_tags || []).slice(0, 2).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
                 <span class="tag">${question.requires_written_response ? "週日短答" : "正式題"}</span>
               </div>
-              <span class="candidate-status">${escapeHtml(statusText)}</span>
+              <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
             <p class="label">${escapeHtml(weekdayLabels[item.weekday] || item.weekday)} 第 ${index + 1} 題</p>
             <div>${escapeHtml(question.stem)}</div>
             ${(question.materials || []).map(renderMaterial).join("")}
             ${answerControl}
-            <details class="candidate-answer">
+            <details class="bank-answer">
               <summary>查看答案與解析</summary>
               <p><strong>答案：</strong>${escapeHtml(answerText(question.answer))}</p>
               ${question.scoring_rule ? `<p><strong>評分規準：</strong>${escapeHtml(question.scoring_rule)}</p>` : ""}
@@ -1112,7 +1110,7 @@
           const display = Array.isArray(studentAnswer) ? studentAnswer.join("、") : studentAnswer || "未作答";
           return `<li>${escapeHtml(question.id)}：${escapeHtml(display)}｜${ok ? "可得分" : "待訂正"}</li>`;
         });
-        document.querySelectorAll(".candidate-answer").forEach((details) => {
+        document.querySelectorAll(".bank-answer").forEach((details) => {
           details.open = true;
         });
         const scorePanel = document.getElementById("scorePanel");
@@ -1130,7 +1128,7 @@
           if (field.type === "radio" || field.type === "checkbox") field.checked = false;
           else field.value = "";
         });
-        document.querySelectorAll(".candidate-answer").forEach((details) => {
+        document.querySelectorAll(".bank-answer").forEach((details) => {
           details.open = false;
         });
         document.getElementById("scorePanel").classList.remove("show");
@@ -1140,17 +1138,17 @@
         const dayQuestions = day.question_slots || [];
         const statusText = statusLabels[day.status] || day.status || "未標";
         return `
-          <section class="candidate-day" data-weekday="${day.weekday}">
-            <div class="candidate-day-header">
+          <section class="bank-day" data-weekday="${day.weekday}">
+            <div class="bank-day-header">
               <div>
                 <p class="eyebrow">${escapeHtml(day.day_id)}</p>
                 <h2>${escapeHtml(day.label)}：${escapeHtml(taskTypeLabels[day.task_type] || day.task_type)}</h2>
                 <p class="muted-text">${escapeHtml(dayQuestions.length)} 題｜${escapeHtml(day.estimated_minutes || "--")} 分鐘</p>
               </div>
-              <span class="candidate-status">${escapeHtml(statusText)}</span>
+              <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
             ${(day.day_materials || []).map(renderMaterial).join("")}
-            <div class="candidate-list">
+            <div class="bank-list">
               ${dayQuestions.map((question, index) => renderQuestion({ weekday: day.weekday, question }, index)).join("")}
             </div>
           </section>
@@ -1172,13 +1170,13 @@
             })
           }))
           .filter((day) => day.question_slots.length);
-        document.getElementById("candidateList").innerHTML = filteredDays.length
+        document.getElementById("bankList").innerHTML = filteredDays.length
           ? filteredDays.map(renderDay).join("")
-          : '<div class="candidate-empty">沒有符合條件的題目。</div>';
+          : '<div class="bank-empty">沒有符合條件的題目。</div>';
       }
 
       async function init() {
-        const data = await loadCandidateData();
+        const data = await loadBankData();
         document.getElementById("pageTitle").textContent = "數學科正式三天";
         document.getElementById("statusTitle").textContent = "數學 batch_02 已接入正式每日任務";
         document.getElementById("statusCopy").textContent = data.meta?.app_integration_policy || "週二、週四、週日完成數學正式闖關。";
@@ -1195,7 +1193,7 @@
       }
 
       init().catch((error) => {
-        document.querySelector(".candidate-shell").innerHTML = `
+        document.querySelector(".bank-shell").innerHTML = `
           <section class="error-box">
             <h1>數學題庫讀取失敗</h1>
             <p>${escapeHtml(error.message)}</p>

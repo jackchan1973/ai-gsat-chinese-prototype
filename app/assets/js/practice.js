@@ -1,9 +1,8 @@
 const DATA_ROOT = "../../data";
-const DATA_VERSION = "20260810-system01";
+const DATA_VERSION = "20260813-consolidated01";
 const DATA_FILES = {
   tasks: "daily_tasks.30_days.json",
-  groups: "question_groups.jsonl",
-  drills: "basic_drills.jsonl",
+  chineseBank: "banks/chinese.json",
 };
 const SELECTED_TASK_KEY = "chi_v1_selected_task_id";
 const AUTH_KEY = "chi_v1_authenticated";
@@ -30,8 +29,7 @@ const knowledgeLabels = {
 };
 
 const contentStatusLabels = {
-  draft_for_preview: "候選題",
-  revised_after_feedback: "已修訂候選題",
+  not_online: "未上線",
   validated_by_student: "學生已試做",
   rule_checked: "規則已檢查",
   approved_for_app: "正式題",
@@ -48,7 +46,7 @@ function formatKnowledge(code) {
 }
 
 function formatContentStatus(status) {
-  return contentStatusLabels[status] || "候選題";
+  return contentStatusLabels[status] || "正式題";
 }
 
 function withDataVersion(path) {
@@ -164,7 +162,7 @@ function isTaskRunnable(task, groupMap, drillMap) {
 }
 
 function isApprovedTaskStatus(status) {
-  return status === "approved_for_app" || status === "can_run_as_candidate";
+  return status === "approved_for_app";
 }
 
 function flattenGroupQuestions(groups) {
@@ -588,11 +586,12 @@ async function main() {
     return;
   }
 
-  const [tasks, groups, drills] = await Promise.all([
+  const [tasks, chineseBank] = await Promise.all([
     readJson(`${DATA_ROOT}/${DATA_FILES.tasks}`),
-    readJsonl(`${DATA_ROOT}/${DATA_FILES.groups}`),
-    readJsonl(`${DATA_ROOT}/${DATA_FILES.drills}`),
+    readJson(`${DATA_ROOT}/${DATA_FILES.chineseBank}`),
   ]);
+  const groups = chineseBank.question_groups || [];
+  const drills = chineseBank.basic_drills || [];
 
   const task = pickDisplayTask(tasks);
   const groupMap = byId(groups, "group_id");

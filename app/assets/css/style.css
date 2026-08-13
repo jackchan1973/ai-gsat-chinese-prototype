@@ -285,7 +285,7 @@ h2 {
 }
 
 .task-item p,
-.group-preview p,
+.group-summary p,
 .parent-summary p {
   margin-bottom: 0;
   color: var(--muted);
@@ -304,7 +304,7 @@ h2 {
   font-size: 0.82rem;
 }
 
-.group-preview {
+.group-summary {
   display: grid;
   gap: 12px;
 }

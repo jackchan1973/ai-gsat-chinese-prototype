@@ -14,7 +14,7 @@ const STUDENT_RECORD_KEYS = [
   SELECTED_TASK_KEY,
   LAST_LOGIN_KEY,
 ];
-const SYSTEM_PLAN_URL = "../../data/gsat_review_system_v0_1.json?v=20260810-system01";
+const SYSTEM_PLAN_URL = "../../data/gsat_review_system_v0_1.json?v=20260813-consolidated01";
 
 let studentRows = [];
 let activeFilter = "all";

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜自然正式題庫 v0.1</title>
+    <title>AI學測考總複習｜自然正式題庫</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260810-expansion01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
     <style>
       .science-page { background: linear-gradient(180deg,#102235 0,#17425a 240px,#f3f7fb 240px,#f3f7fb 100%); color: var(--ink); }
       .science-shell { max-width: 1120px; }
@@ -43,7 +43,7 @@
   <body class="science-page">
     <main class="app-shell science-shell">
       <header class="topbar">
-        <div><p class="eyebrow">AI學測考總複習</p><h1>自然正式題庫 v0.1 batch_03</h1><p class="muted-text">生命、地科、物理、化學與探究實作正式題。</p></div>
+        <div><p class="eyebrow">AI學測考總複習</p><h1>自然正式題庫</h1><p class="muted-text">生命、地科、物理、化學與探究實作正式題。</p></div>
         <a class="secondary-action link-action" href="../index.html">返回主頁</a>
       </header>
       <section class="science-alert"><strong>自然第三批已人工確認轉正式</strong><p>本批為自然科 AI 新題，已由使用者人工確認並轉為 approved_for_app；自然正式闖關讀取正式每日任務資料。</p></section>
@@ -55,11 +55,11 @@
       <section class="science-list" id="scienceList"></section>
     </main>
     <script>
-      const DATA_VERSION = "20260810-expansion01";
-      const LOCAL_DATA_URL = `../../data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
-      const REMOTE_DATA_URL = `https://jackchan1973.github.io/ai-gsat-chinese-prototype/data/science_formal_candidates_v0_1_batch_03.json?v=${DATA_VERSION}`;
+      const DATA_VERSION = "20260813-consolidated01";
+      const LOCAL_DATA_URL = `../../data/banks/science.json?v=${DATA_VERSION}`;
+      const REMOTE_DATA_URL = `http://139.224.229.242/data/banks/science.json?v=${DATA_VERSION}`;
       const weekdayLabels = { Wed: "週三", Sat: "週六" };
-      const statusLabels = { needs_human_review: "待人工審題", approved_for_app: "正式題", needs_revision: "需修訂" };
+      const statusLabels = { approved_for_app: "正式題", not_online: "未上線" };
       let days = [];
       let questions = [];
       function escapeHtml(value){ return String(value ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;"); }
