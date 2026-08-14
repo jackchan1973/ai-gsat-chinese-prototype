@@ -305,6 +305,14 @@
         margin-top: 10px;
       }
 
+      .bank-answer {
+        display: none;
+      }
+
+      body.answered .bank-answer {
+        display: block;
+      }
+
       .bank-review {
         color: var(--muted);
       }
@@ -1110,6 +1118,7 @@
           const display = Array.isArray(studentAnswer) ? studentAnswer.join("、") : studentAnswer || "未作答";
           return `<li>${escapeHtml(question.id)}：${escapeHtml(display)}｜${ok ? "可得分" : "待訂正"}</li>`;
         });
+        document.body.classList.add("answered");
         document.querySelectorAll(".bank-answer").forEach((details) => {
           details.open = true;
         });
@@ -1128,6 +1137,7 @@
           if (field.type === "radio" || field.type === "checkbox") field.checked = false;
           else field.value = "";
         });
+        document.body.classList.remove("answered");
         document.querySelectorAll(".bank-answer").forEach((details) => {
           details.open = false;
         });

@@ -183,7 +183,7 @@ function renderRows() {
               <td>${row.rate === null ? "--" : `${escapeHtml(row.rate)}%`}<small>${row.answerCount ? `｜${escapeHtml(row.answerCount)}題` : ""}</small></td>
               <td>${escapeHtml(row.wrongCount)}</td>
               <td>${escapeHtml(formatDateTime(row.lastLogin))}</td>
-              <td><code>${escapeHtml(row.seat_no)} / ${escapeHtml(row.password)}</code></td>
+              <td><code>${escapeHtml(row.account)} / ${escapeHtml(row.password)}</code></td>
             </tr>
           `,
         )
@@ -219,7 +219,7 @@ function copyText(text) {
 
 function buildAccountList() {
   return window.ChiAuth.students
-    .map((student) => `${student.seat_no} ${student.name}｜帳號 ${student.seat_no}｜密碼 ${student.password}`)
+    .map((student) => `${student.seat_no} ${student.name}｜帳號 ${student.account}｜密碼 ${student.password}`)
     .join("\n");
 }
 
@@ -259,14 +259,14 @@ function wireTeacherActions() {
   document.getElementById("copyAccountsButton").addEventListener("click", async () => {
     const status = document.getElementById("copyStatus");
     await copyText(buildAccountList());
-    status.textContent = "已複製 50 位帳號";
+    status.textContent = `已複製 ${window.ChiAuth.students.length} 位帳號`;
     window.setTimeout(() => {
       status.textContent = "";
     }, 2200);
   });
 
   document.getElementById("clearAllRecordsButton").addEventListener("click", () => {
-    const confirmed = window.confirm("確定要清除 1105 班所有學生在這台瀏覽器中的登入、作答、錯題與週報紀錄嗎？此動作不能復原。");
+    const confirmed = window.confirm("確定要清除 T01 測試班所有學生在這台瀏覽器中的登入、作答、錯題與週報紀錄嗎？此動作不能復原。");
     if (!confirmed) return;
     clearAllStudentRecords();
     activeFilter = "all";

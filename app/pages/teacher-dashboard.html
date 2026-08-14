@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI學測考總複習｜1105班導師儀表板</title>
+    <title>AI學測考總複習｜T01測試班導師儀表板</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
   </head>
@@ -11,7 +11,7 @@
     <main class="app-shell teacher-shell">
       <header class="topbar teacher-topbar">
         <div>
-          <p class="eyebrow">1105 班級管理</p>
+          <p class="eyebrow">T01 測試班管理</p>
           <h1>導師控制台</h1>
           <p class="teacher-topbar-note">只保留導師需要看的班級進度、關注名單與帳號發放資訊。</p>
         </div>
@@ -32,7 +32,7 @@
         <article class="teacher-summary-card">
           <span>已登入</span>
           <strong id="loggedInCount">--</strong>
-          <small>50 位學生</small>
+          <small>10 位學生</small>
         </article>
         <article class="teacher-summary-card">
           <span>已完成練習</span>
@@ -71,6 +71,22 @@
       <section class="teacher-alert" id="teacherAlert">
         <strong>靜態測試版限制</strong>
         <span>目前讀取同一台裝置瀏覽器內的學生紀錄；接資料庫後才能跨手機、跨電腦看全班真實進度。</span>
+      </section>
+
+      <section class="panel" aria-label="查看各科學生題目">
+        <div class="section-title">
+          <div>
+            <h2>查看各科學生題目</h2>
+            <p class="muted-text">直接進入學生答題頁檢視題目品質並提供建議；老師在此作答不會計入學生統計。</p>
+          </div>
+        </div>
+        <div class="exam-hero-actions">
+          <a class="primary-action link-action" href="./practice.html">國文</a>
+          <a class="primary-action link-action" href="./english-practice.html">英文</a>
+          <a class="primary-action link-action" href="./math-practice.html">數學</a>
+          <a class="primary-action link-action" href="./social-practice.html">社會</a>
+          <a class="primary-action link-action" href="./science-practice.html">自然</a>
+        </div>
       </section>
 
       <section class="panel teacher-system-panel" aria-label="五科題庫與弱點監控">

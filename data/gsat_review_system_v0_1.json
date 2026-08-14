@@ -179,8 +179,8 @@
         "Thu",
         "Sun"
       ],
-      "current_formal_count": 31,
-      "coverage_status": "正式上線 31 題，已整理為單一英文題庫檔。",
+      "current_formal_count": 104,
+      "coverage_status": "正式上線 104 題（4 份，詞彙／克漏字／文意選填／篇章結構／閱讀題組／中譯英／作文）。",
       "knowledge_units": [
         {
           "unit_id": "EN-U01",
@@ -230,8 +230,8 @@
         "Thu",
         "Sun"
       ],
-      "current_formal_count": 24,
-      "coverage_status": "正式上線 24 題，已整理為單一數學題庫檔。",
+      "current_formal_count": 80,
+      "coverage_status": "正式上線 80 題（4 份，單選／多選／選填／非選，含計算與情境）。",
       "knowledge_units": [
         {
           "unit_id": "MA-U01",
@@ -274,10 +274,11 @@
       "subject": "社會",
       "weekly_days": [
         "Tue",
-        "Sat"
+        "Thu",
+        "Sun"
       ],
-      "current_formal_count": 16,
-      "coverage_status": "正式上線 16 題，已整理為單一社會題庫檔。",
+      "current_formal_count": 80,
+      "coverage_status": "正式上線 80 題（4 份，零多選、每題組附材料、跨科題組與分級非選）。",
       "knowledge_units": [
         {
           "unit_id": "SO-U01",
@@ -318,11 +319,11 @@
     {
       "subject": "自然",
       "weekly_days": [
-        "Wed",
-        "Sat"
+        "Tue",
+        "Thu"
       ],
-      "current_formal_count": 24,
-      "coverage_status": "正式上線 24 題，已整理為單一自然題庫檔。",
+      "current_formal_count": 80,
+      "coverage_status": "正式上線 80 題（4 份，物化生地各 25%、真圖表判讀、探究題組）。",
       "knowledge_units": [
         {
           "unit_id": "SC-U01",
