@@ -384,20 +384,7 @@
 
       <section class="bank-stats" id="summaryStats" aria-label="統計"></section>
 
-      <section class="bank-toolbar" aria-label="篩選">
-        <select class="bank-filter" id="weekdayFilter" aria-label="星期篩選">
-          <option value="all">全部星期</option>
-          <option value="Tue">週二</option>
-          <option value="Thu">週四</option>
-          <option value="Sun">週日</option>
-        </select>
-        <select class="bank-filter" id="trackFilter" aria-label="數學 A B 篩選">
-          <option value="all">全部 A/B</option>
-        </select>
-        <select class="bank-filter" id="typeFilter" aria-label="題型篩選">
-          <option value="all">全部題型</option>
-        </select>
-      </section>
+      <section class="bank-day-tabs" id="dayTabs" aria-label="選擇關卡"></section>
 
       <section class="bank-list" id="bankList" aria-live="polite"></section>
       <section class="math-practice-actions" aria-label="數學作答操作">
@@ -430,6 +417,7 @@
       };
       let days = [];
       let questions = [];
+      let activeDayId = null;
 
       function escapeHtml(value) {
         return String(value ?? "")
@@ -524,11 +512,9 @@
         const minutes = days.reduce((sum, day) => sum + Number(day.estimated_minutes || 0), 0);
         const stats = [
           ["總題數", questions.length],
-          ["任務日", days.length],
+          ["關卡數", days.length],
           ["文字作答", written],
-          ["預估分鐘", minutes],
-          ["正式題", approved],
-          ["狀態", "開放"]
+          ["預估分鐘", minutes]
         ];
         document.getElementById("summaryStats").innerHTML = stats
           .map(([label, value]) => `<div class="bank-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
@@ -1167,24 +1153,43 @@
         `;
       }
 
-      function renderList() {
-        const weekday = document.getElementById("weekdayFilter").value;
-        const type = document.getElementById("typeFilter").value;
-        const track = document.getElementById("trackFilter").value;
-        const filteredDays = days
-          .filter((day) => weekday === "all" || day.weekday === weekday)
-          .map((day) => ({
-            ...day,
-            question_slots: day.question_slots.filter((question) => {
-              const typeMatch = type === "all" || question.question_type === type;
-              const trackMatch = track === "all" || question.math_track === track;
-              return typeMatch && trackMatch;
-            })
-          }))
-          .filter((day) => day.question_slots.length);
-        document.getElementById("bankList").innerHTML = filteredDays.length
-          ? filteredDays.map(renderDay).join("")
-          : '<div class="bank-empty">沒有符合條件的題目。</div>';
+      function renderTabs() {
+        const tabs = document.getElementById("dayTabs");
+        if (!tabs) return;
+        tabs.innerHTML = days
+          .map((day, i) => {
+            const n = (day.question_slots || []).length;
+            const title = (day.label || "").split("：").slice(-1)[0] || day.label || "";
+            return `
+              <button type="button" class="bank-day-tab${day.day_id === activeDayId ? " active" : ""}" data-day-id="${escapeHtml(day.day_id)}">
+                <span>第 ${i + 1} 關｜${escapeHtml(weekdayLabels[day.weekday] || day.weekday)}</span>
+                <strong>${escapeHtml(title)}</strong>
+                <small>${n} 題｜${escapeHtml(day.estimated_minutes || "--")} 分鐘</small>
+              </button>`;
+          })
+          .join("");
+        tabs.querySelectorAll(".bank-day-tab").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            activeDayId = btn.dataset.dayId;
+            renderTabs();
+            renderActiveDay();
+            document.body.classList.remove("answered");
+            document.getElementById("scorePanel").classList.remove("show");
+            document.getElementById("scorePanel").innerHTML = "";
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        });
+      }
+
+      function renderActiveDay() {
+        const day = days.find((d) => d.day_id === activeDayId) || days[0];
+        if (!day) {
+          document.getElementById("bankList").innerHTML = '<div class="bank-empty">目前沒有題目。</div>';
+          return;
+        }
+        activeDayId = day.day_id;
+        questions = (day.question_slots || []).map((question) => ({ weekday: day.weekday, question }));
+        document.getElementById("bankList").innerHTML = renderDay(day);
       }
 
       async function init() {
@@ -1195,11 +1200,9 @@
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
-        renderFilters();
-        renderList();
-        document.getElementById("weekdayFilter").addEventListener("change", renderList);
-        document.getElementById("trackFilter").addEventListener("change", renderList);
-        document.getElementById("typeFilter").addEventListener("change", renderList);
+        activeDayId = days[0] ? days[0].day_id : null;
+        renderTabs();
+        renderActiveDay();
         document.getElementById("submitButton").addEventListener("click", scoreSubmission);
         document.getElementById("resetButton").addEventListener("click", resetPractice);
       }

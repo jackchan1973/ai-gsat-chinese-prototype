@@ -155,6 +155,28 @@ function pickDisplayTask(tasks) {
   return tasks.find((task) => task.task_id === selectedTaskId) || tasks.find((task) => isApprovedTaskStatus(task.app_readiness)) || tasks[0];
 }
 
+function renderTaskTabs(tasks, activeTaskId) {
+  const el = document.getElementById("taskTabs");
+  if (!el) return;
+  el.innerHTML = (tasks || [])
+    .map((t) => {
+      const focus = (t.weekly_focus || "").split("：")[0] || "國文闖關";
+      return `
+        <button type="button" class="bank-day-tab${t.task_id === activeTaskId ? " active" : ""}" data-task-id="${escapeHtml(t.task_id)}">
+          <span>第 ${escapeHtml(t.day_number || "?")} 天</span>
+          <strong>${escapeHtml(focus)}</strong>
+          <small>${escapeHtml(t.estimated_minutes || "--")} 分鐘</small>
+        </button>`;
+    })
+    .join("");
+  el.querySelectorAll(".bank-day-tab").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      localStorage.setItem(storageKey(SELECTED_TASK_KEY), btn.dataset.taskId);
+      window.location.reload();
+    });
+  });
+}
+
 function isTaskRunnable(task, groupMap, drillMap) {
   const hasGroup = groupMap.has(task.group_id);
   const hasAllBasics = (task.basic_question_ids || []).every((id) => drillMap.has(id));
@@ -609,6 +631,7 @@ async function main() {
     return;
   }
   localStorage.setItem(storageKey(SELECTED_TASK_KEY), task.task_id);
+  renderTaskTabs(tasks, task.task_id);
   const questions = makeQuestionList(task, groupMap, drillMap, questionMap);
   const basicQuestions = questions.filter((question) => question.source_section === "基礎短練");
   const readingQuestions = questions.filter((question) => question.source_section !== "基礎短練");

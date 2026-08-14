@@ -84,3 +84,49 @@ header.app-hero .home-return-action:hover {
     gap: 12px;
   }
 }
+
+/* ---- 4. 數學關卡卡片格（比照自然/英文的 day-tab） ---- */
+.bank-day-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.bank-day-tab {
+  display: grid;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+.bank-day-tab span {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 800;
+}
+.bank-day-tab strong {
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+.bank-day-tab small {
+  color: var(--muted);
+}
+.bank-day-tab.active {
+  border-color: var(--primary);
+  background: #e9f6f9;
+  box-shadow: inset 0 0 0 2px rgba(21, 94, 117, 0.16);
+}
+.bank-day-tab:hover {
+  border-color: var(--primary);
+}
+@media (max-width: 640px) {
+  .bank-day-tabs {
+    grid-template-columns: 1fr;
+  }
+}
