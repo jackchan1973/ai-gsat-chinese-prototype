@@ -2,56 +2,33 @@
   const AUTH_KEY = "chi_v1_authenticated";
   const CURRENT_USER_KEY = "chi_v1_current_user";
   const PORTAL_KEY = "chi_v1_active_portal";
-  const CLASS_ID = "T01";
+  const CLASS_ID = "1105";
+  const numerals = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
 
-  // 正式測試班：10 位測試學生，每人專屬帳號與密碼（非座號、非 1005 規則）。
-  // 之後收集到真實名單，只要把對應的 name 改掉即可；account / password 不必動。
-  const STUDENT_SEEDS = [
-    { account: "gsat01", password: "620481", name: "測試生01" },
-    { account: "gsat02", password: "375192", name: "測試生02" },
-    { account: "gsat03", password: "948260", name: "測試生03" },
-    { account: "gsat04", password: "214785", name: "測試生04" },
-    { account: "gsat05", password: "803657", name: "測試生05" },
-    { account: "gsat06", password: "569013", name: "測試生06" },
-    { account: "gsat07", password: "431928", name: "測試生07" },
-    { account: "gsat08", password: "750364", name: "測試生08" },
-    { account: "gsat09", password: "186402", name: "測試生09" },
-    { account: "gsat10", password: "927540", name: "測試生10" },
-  ];
+  function chineseNumber(value) {
+    if (value <= 10) return value === 10 ? "十" : numerals[value];
+    if (value < 20) return `十${numerals[value - 10]}`;
+    const tens = Math.floor(value / 10);
+    const ones = value % 10;
+    return `${numerals[tens]}十${ones ? numerals[ones] : ""}`;
+  }
 
-  function makeStudent(seed, index) {
-    const seatNo = String(index + 1).padStart(2, "0");
+  function makeStudent(seatNumber) {
+    const seatNo = String(seatNumber).padStart(2, "0");
     return {
       role: "student",
       class_id: CLASS_ID,
       seat_no: seatNo,
-      account: seed.account,
-      name: seed.name,
-      nickname: seed.name,
-      password: seed.password,
+      name: `王${chineseNumber(seatNumber)}`,
+      nickname: `王${chineseNumber(seatNumber)}`,
+      password: `1005${seatNo}`,
       student_id: `${CLASS_ID}_${seatNo}`,
       storage_namespace: `${CLASS_ID}_${seatNo}`,
     };
   }
 
-  const students = STUDENT_SEEDS.map((seed, index) => makeStudent(seed, index));
-  const studentMap = new Map(students.map((student) => [student.account, student]));
-
-  // 快速測試/展示用帳號：test / 123456。
-  // 刻意不放進 students 陣列，所以導師後台名單與統計都不會算到它。
-  const demoStudent = {
-    role: "student",
-    class_id: CLASS_ID,
-    seat_no: "00",
-    account: "test",
-    name: "測試號",
-    nickname: "測試號",
-    password: "123456",
-    student_id: `${CLASS_ID}_test`,
-    storage_namespace: `${CLASS_ID}_test`,
-    demo: true,
-  };
-  studentMap.set(demoStudent.account, demoStudent);
+  const students = Array.from({ length: 50 }, (_, index) => makeStudent(index + 1));
+  const studentMap = new Map(students.map((student) => [student.seat_no, student]));
   const teacher = {
     role: "teacher",
     class_id: CLASS_ID,
