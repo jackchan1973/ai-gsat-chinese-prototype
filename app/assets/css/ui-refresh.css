@@ -1,0 +1,86 @@
+/* ============================================================
+   UI 統一刷新（2026-08-14）
+   目的：英數社自登入後版面比照國文（深色 hero 圖頭 + 白卡），
+        並隱藏各處資訊橢圓標籤（正式題 / 題型 / 難度 / 知識標籤 / 已開放 等）。
+   不改任何題庫資料，只做外觀。此檔於各頁 <head> 最後載入以穩定覆蓋。
+   ============================================================ */
+
+/* ---- 1. 隱藏所有資訊橢圓標籤與狀態徽章 ---- */
+.tag,
+.bank-status,
+.science-status,
+.english-status,
+.social-status,
+.social-tags,
+.science-tags,
+.bank-question-header .social-tags,
+.subject-card-head strong {           /* 首頁各科卡片「已開放」 */
+  display: none !important;
+}
+
+/* ---- 2. 頁面底：比照國文 practice-page（深→淺） ---- */
+body.ui-hero-bg {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(0, 167, 200, 0.2), transparent 22rem),
+    linear-gradient(180deg, #07131f 0, #102235 260px, #f3f7fb 260px, #f3f7fb 100%) !important;
+  color: var(--ink);
+}
+
+/* ---- 3. hero 圖頭（比照國文 .practice-quest-hero） ---- */
+header.app-hero {
+  min-height: 172px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 22px;
+  background:
+    linear-gradient(90deg, rgba(7, 19, 31, 0.96), rgba(7, 19, 31, 0.68), rgba(240, 124, 40, 0.24)),
+    url("../images/gsat-challenge-hero.jpg") center / cover no-repeat !important;
+  color: #fff !important;
+  box-shadow: var(--shadow);
+}
+header.app-hero h1 {
+  color: #fff !important;
+  margin: 6px 0 4px;
+  font-size: clamp(1.7rem, 3.6vw, 2.8rem);
+}
+header.app-hero .eyebrow {
+  color: #dff8ff !important;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+header.app-hero .muted-text,
+header.app-hero p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0;
+}
+header.app-hero .home-return-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0d2538;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+header.app-hero .home-return-action:hover {
+  background: #fff;
+}
+
+@media (max-width: 640px) {
+  header.app-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
