@@ -13,7 +13,7 @@
   "weeks": [
     {
       "week_id": "MA-V2-B01",
-      "label": "數學第1份：代數函數・機率統計・幾何向量・非選",
+      "label": "數學第1份：代數函數・機率統計・幾何向量・非選（學測偏難＋圖表）",
       "days": [
         {
           "day_id": "MA-V2-B01-TUE",
@@ -22,9 +22,9 @@
           "task_type": "algebra_function_model",
           "status": "approved_for_app",
           "day_materials": [],
-          "approved_at": "2026-08-13",
+          "approved_at": "2026-08-14",
           "gatekeeper_status": "approved_for_app",
-          "estimated_minutes": 55,
+          "estimated_minutes": 60,
           "official_bank_status": "formal_online",
           "question_slots": [
             {
@@ -37,50 +37,50 @@
               "id": "MA-V2-B01-TUE-Q01",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "基礎",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-EXP",
-                "MA-MODEL"
+                "指數-半衰期"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "某藥物在體內每經過 1 小時會衰減為前一小時的 3/4。若病人一開始服用 200 mg，經過 3 小時後體內約剩下多少 mg？",
+              "stem": "某放射性物質的半衰期為 8 年（每經過 8 年質量減為一半）。若一開始有 40 克，經過幾年後會剩下 5 克？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "150"
+                  "text": "24"
                 },
                 {
                   "key": "B",
-                  "text": "112.5"
+                  "text": "12"
                 },
                 {
                   "key": "C",
-                  "text": "84.375"
+                  "text": "16"
                 },
                 {
                   "key": "D",
-                  "text": "168.75"
+                  "text": "32"
                 },
                 {
                   "key": "E",
-                  "text": "56.25"
+                  "text": "3"
                 }
               ],
-              "answer": "C",
+              "answer": "A",
               "scoring_rule": "",
-              "explanation": "每小時乘以 3/4，屬等比衰減：200×(3/4)³ = 200×27/64 = 84.375 mg。常見錯誤：只乘一次得 150（1 小時後）、只乘兩次得 112.5（2 小時後），或把固定倍率誤當成固定減量。",
-              "review_advice": "遞減情境要判斷是等比(乘固定倍率)還是等差(加固定量)，本題為等比。",
+              "explanation": "設經過 t 年。40×(1/2)^(t/8)=5 ⇒ (1/2)^(t/8)=1/8=(1/2)³ ⇒ t/8=3 ⇒ t=24 年。屬「先求衰減比例＝(1/2)ⁿ、再解指數」的兩步題。錯選：只算一個半衰期(8年剩20)或把 40→5 誤判為 2 次衰減得 16。",
+              "review_advice": "半衰期兩步：先把剩餘比例寫成 (1/2)ⁿ 解 n，再乘週期。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-指對數應用"
@@ -99,50 +99,50 @@
               "id": "MA-V2-B01-TUE-Q02",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-SEQ",
-                "MA-MODEL"
+                "數列-等比級數應用"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "一座蓄水池第 1 天注入 2 公噸水，之後每天的注入量都是前一天的 1.5 倍。前 4 天總共注入多少公噸水？",
+              "stem": "某傳染病第 1 天新增 3 人感染，之後每天新增人數是前一天的 2 倍。若要使「累計」感染人數首次超過 1000 人，至少要到第幾天？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "16.25"
+                  "text": "8"
                 },
                 {
                   "key": "B",
-                  "text": "10.75"
+                  "text": "10"
                 },
                 {
                   "key": "C",
-                  "text": "6.75"
+                  "text": "9"
                 },
                 {
                   "key": "D",
-                  "text": "24.375"
+                  "text": "7"
                 },
                 {
                   "key": "E",
-                  "text": "13.5"
+                  "text": "11"
                 }
               ],
-              "answer": "A",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "每天注入量成等比：2, 3, 4.5, 6.75，公比 r=1.5。前 4 天總和 = 2×(1.5⁴−1)/(1.5−1) = 2×(5.0625−1)/0.5 = 16.25 公噸。常見錯誤：把第 4 天單日量 6.75 當成總和、只加前 3 天得 6.5，或公比、項數代錯。",
-              "review_advice": "等比級數和公式 Sₙ = a₁(rⁿ−1)/(r−1)；先確認是「總和」而非「單日量」。",
+              "explanation": "每天新增成等比(首項3、公比2)，前 n 天累計 = 3(2ⁿ−1)/(2−1)=3(2ⁿ−1)。令 3(2ⁿ−1)>1000 ⇒ 2ⁿ>334.3；因 2⁸=256<334.3<512=2⁹，故 n=9。屬「等比級數和＋解不等式」兩步。錯選 8 是 2⁸ 未過門檻。",
+              "review_advice": "『累計』要用等比級數和 Sₙ=a(rⁿ−1)/(r−1)，再解不等式取最小整數。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-數列級數"
@@ -161,49 +161,65 @@
               "id": "MA-V2-B01-TUE-Q05",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "基礎",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-POLY"
+                "二次-不等式與圖形"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "二次函數 f(x) = x² − 6x + 11 的最小值為何？",
-              "materials": [],
+              "stem": "根據下方二次函數 y = x² − 4x + 3 的圖形，使 y < 0 成立的 x 範圍為下列何者？",
+              "materials": [
+                {
+                  "type": "graph_spec",
+                  "title": "圖：二次函數 y = x² − 4x + 3",
+                  "spec": {
+                    "type": "quadratic",
+                    "equation": "y = x² − 4x + 3",
+                    "vertex": [
+                      2,
+                      -1
+                    ],
+                    "a": 1,
+                    "opens": "up"
+                  }
+                }
+              ],
               "options": [
                 {
                   "key": "A",
-                  "text": "11"
+                  "text": "x < 1 或 x > 3"
                 },
                 {
                   "key": "B",
-                  "text": "3"
+                  "text": "x < 3"
                 },
                 {
                   "key": "C",
-                  "text": "−2"
+                  "text": "−3 < x < 3"
                 },
                 {
                   "key": "D",
-                  "text": "5"
+                  "text": "所有實數"
                 },
                 {
                   "key": "E",
-                  "text": "2"
+                  "text": "1 < x < 3"
                 }
               ],
               "answer": "E",
               "scoring_rule": "",
-              "explanation": "配方 f(x) = (x−3)² + 2，開口向上，頂點在 x=3 處，最小值為 2。常見錯誤：把頂點的 x 坐標 3 當答案、把截距 f(0)=11 當最小值，或正負號寫成 −2。",
-              "review_advice": "二次函數 y=ax²+bx+c 頂點 y 值 = c − b²/(4a)；a>0 時為最小值。",
+              "explanation": "y=x²−4x+3=(x−1)(x−3)，圖形開口向上、與 x 軸交於 (1,0)、(3,0)。開口向上者在兩根「之間」為負，故 y<0 的解為 1<x<3。(A) 是 y>0 的範圍；其餘與圖形不符。",
+              "review_advice": "看圖：開口向上時，兩根之間 y<0、兩根之外 y>0。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
-              "diagram_required": false,
+              "diagram_required": true,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-多項式二次"
@@ -219,56 +235,139 @@
               "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
+              "id": "MA-V2-B01-TUE-Q17F",
+              "math_track": "A/B",
+              "question_type": "fill_in",
+              "difficulty": "偏難",
+              "knowledge_tags": [
+                "多項式-因式與根"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A9"
+              ],
+              "stem": "多項式 f(x) = x³ + ax² + bx + 6 同時以 (x − 1) 與 (x − 2) 為因式。求係數 a 的值。（答案為整數，負號用鍵盤減號）",
+              "materials": [],
+              "options": [],
+              "answer": "0",
+              "scoring_rule": "",
+              "explanation": "(x−1)(x−2) 為因式，設第三根 r，則三根乘積 = 1·2·r = −(常數項)/首項 = −6，得 r=−3。三根為 1、2、−3；a = −(根之和) = −(1+2−3) = 0。（驗證 f(x)=(x−1)(x−2)(x+3)=x³−7x+6，常數 6 相符。）",
+              "review_advice": "多因式題可補出第三根：由根與係數的『根之積、根之和』兩條件求係數。",
+              "review_notes": [
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
+              ],
+              "similarity_risk": "low_ai_new",
+              "requires_written_response": false,
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-14",
+              "review_grade": "A",
+              "unit_tags": [
+                "MA-U-多項式二次"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "official_bank_status": "formal_online"
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "ai_scoring_required": false,
+              "id": "MA-V2-B01-TUE-Q18F",
+              "math_track": "A/B",
+              "question_type": "fill_in",
+              "difficulty": "偏難",
+              "knowledge_tags": [
+                "對數-方程"
+              ],
+              "ability_tags": [
+                "MA-A2",
+                "MA-A9"
+              ],
+              "stem": "解方程式 log₂(x + 2) + log₂(x − 2) = 5，求 x 的值。（答案為整數）",
+              "materials": [],
+              "options": [],
+              "answer": "6",
+              "scoring_rule": "",
+              "explanation": "合併對數：log₂[(x+2)(x−2)]=5 ⇒ (x+2)(x−2)=2⁵=32 ⇒ x²−4=32 ⇒ x²=36 ⇒ x=6 或 −6。真數須 >0（x>2），故 x=6。",
+              "review_advice": "先合併 logₐM+logₐN=logₐ(MN)，解後檢查真數 >0 的範圍。",
+              "review_notes": [
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
+              ],
+              "similarity_risk": "low_ai_new",
+              "requires_written_response": false,
+              "diagram_required": false,
+              "gatekeeper_status": "approved_for_app",
+              "approved_for_app_at": "2026-08-14",
+              "review_grade": "A",
+              "unit_tags": [
+                "MA-U-指對數應用"
+              ],
+              "estimated_minutes": 3,
+              "long_question": false,
+              "official_bank_status": "formal_online"
+            },
+            {
+              "subject": "數學",
+              "mode": "學測",
+              "source_type": "AI新題",
+              "status": "approved_for_app",
+              "error_codes": [],
+              "ai_scoring_required": false,
               "id": "MA-V2-B01-TUE-Q08",
               "math_track": "A/B",
               "question_type": "multiple_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-POLY"
+                "二次-根與係數"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "設一元二次方程式 x² − 5x + 6 = 0 的兩根為 α、β。下列敘述哪些正確？",
+              "stem": "設一元二次方程式 x² − 6x + 7 = 0 的兩根為 α、β。下列敘述哪些正確？（應選 3 項）",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "α + β = 5"
+                  "text": "(α − β)² = 8"
                 },
                 {
                   "key": "B",
-                  "text": "1/α + 1/β = 6/5"
+                  "text": "1/α + 1/β = 6/7"
                 },
                 {
                   "key": "C",
-                  "text": "αβ = 6"
+                  "text": "α 與 β 都是有理數"
                 },
                 {
                   "key": "D",
-                  "text": "α² + β² = 13"
+                  "text": "αβ = −7"
                 },
                 {
                   "key": "E",
-                  "text": "|α − β| = 2"
+                  "text": "α² + β² = 22"
                 }
               ],
               "answer": [
                 "A",
-                "C",
-                "D"
+                "B",
+                "E"
               ],
               "scoring_rule": "",
-              "explanation": "由根與係數：α+β=5(A對)、αβ=6(C對)。α²+β²=(α+β)²−2αβ=25−12=13(D對)。兩根為 2、3：1/α+1/β=(α+β)/αβ=5/6，故 B 寫 6/5 錯；|α−β|=1，故 E 寫 2 錯。",
-              "review_advice": "多選逐項判定：善用 α+β=−b/a、αβ=c/a 與恆等式 α²+β²=(α+β)²−2αβ。",
+              "explanation": "由根與係數 α+β=6、αβ=7。α²+β²=(α+β)²−2αβ=36−14=22(E對)；(α−β)²=(α+β)²−4αβ=36−28=8(A對)；1/α+1/β=(α+β)/αβ=6/7(B對)。兩根為 3±√2 為無理數，C 錯；αβ=7 非 −7，D 錯。",
+              "review_advice": "善用 α+β、αβ 與恆等式；(α−β)²=(α+β)²−4αβ 可判別根是否有理。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-多項式二次"
@@ -287,53 +386,54 @@
               "id": "MA-V2-B01-TUE-Q11",
               "math_track": "A/B",
               "question_type": "multiple_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-SEQ"
+                "數列-等差"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "已知等差數列 aₙ 的首項 a₁ = 3、公差 d = 4。下列敘述哪些正確？",
+              "stem": "已知等差數列 aₙ 的首項 a₁ = 2、公差 d = 3。下列敘述哪些正確？（應選 3 項）",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "a₁₀ = 39"
+                  "text": "a₁₀ = 29"
                 },
                 {
                   "key": "B",
-                  "text": "前 10 項的和為 210"
-                },
-                {
-                  "key": "C",
                   "text": "此數列為遞減數列"
                 },
                 {
+                  "key": "C",
+                  "text": "aₙ = 3n − 1"
+                },
+                {
                   "key": "D",
-                  "text": "相鄰兩項的比值為定值"
+                  "text": "前 10 項的和為 155"
                 },
                 {
                   "key": "E",
-                  "text": "a₅ = 19"
+                  "text": "公差為 2"
                 }
               ],
               "answer": [
                 "A",
-                "B",
-                "E"
+                "C",
+                "D"
               ],
               "scoring_rule": "",
-              "explanation": "aₙ=3+(n−1)×4。a₁₀=3+9×4=39(A對)；S₁₀=10/2×(2×3+9×4)=5×42=210(B對)；a₅=3+4×4=19(E對)。公差 d=4>0 為遞增，C 錯；等差數列相鄰兩項「差」為定值、「比」不固定，D 錯。",
-              "review_advice": "等差用 aₙ=a₁+(n−1)d、Sₙ=n/2×(2a₁+(n−1)d)；比值固定是等比的特徵。",
+              "explanation": "aₙ=2+(n−1)×3=3n−1(C對)；a₁₀=3×10−1=29(A對)；S₁₀=10/2×(a₁+a₁₀)=5×(2+29)=155(D對)。公差為 3 非 2，E 錯；d=3>0 為遞增，B 錯。",
+              "review_advice": "等差通項 aₙ=a₁+(n−1)d 可整理成 pn+q；和用 Sₙ=n(a₁+aₙ)/2。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-數列級數"
@@ -352,138 +452,59 @@
               "id": "MA-V2-B01-TUE-Q12",
               "math_track": "A/B",
               "question_type": "multiple_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-LOG"
+                "對數-運算律"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "設 log 為以 10 為底的對數，已知 log2 ≈ 0.301、log3 ≈ 0.477。下列估計值哪些正確？",
+              "stem": "下列指數與對數敘述，哪些正確？（應選 3 項）",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "log6 ≈ 0.778"
+                  "text": "log₂3 × log₃4 = 2"
                 },
                 {
                   "key": "B",
-                  "text": "log9 ≈ 0.699"
+                  "text": "log₁₀2 + log₁₀5 = 1"
                 },
                 {
                   "key": "C",
-                  "text": "log8 ≈ 0.912"
+                  "text": "2^(log₂5) = 5"
                 },
                 {
                   "key": "D",
-                  "text": "log(1/2) ≈ −0.301"
+                  "text": "log₉27 = 2"
                 },
                 {
                   "key": "E",
-                  "text": "log5 ≈ 0.699"
+                  "text": "log₃1 = 1"
                 }
               ],
               "answer": [
                 "A",
-                "D",
-                "E"
+                "B",
+                "C"
               ],
               "scoring_rule": "",
-              "explanation": "log6=log2+log3≈0.778(A對)；log(1/2)=−log2≈−0.301(D對)；log5=log10−log2=1−0.301=0.699(E對)。log9=2log3≈0.954，故 B 寫 0.699 錯；log8=3log2≈0.903，故 C 寫 0.912 錯。",
-              "review_advice": "對數運算三律：log(mn)=logm+logn、log(m/n)=logm−logn、log(mⁿ)=n logm。",
+              "explanation": "log₂3×log₃4=log₂4=2（換底連鎖，A對）；log₁₀2+log₁₀5=log₁₀10=1(B對)；a^(logₐx)=x 故 2^(log₂5)=5(C對)。log₉27=log₃27/log₃9=3/2 非 2，D 錯；log₃1=0 非 1，E 錯。",
+              "review_advice": "換底 logₐb×logbc=logₐc；a^(logₐx)=x；logₐ1=0。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-指對數應用"
               ],
               "estimated_minutes": 4,
-              "long_question": false,
-              "official_bank_status": "formal_online"
-            },
-            {
-              "subject": "數學",
-              "mode": "學測",
-              "source_type": "AI新題",
-              "status": "approved_for_app",
-              "error_codes": [],
-              "ai_scoring_required": false,
-              "id": "MA-V2-B01-TUE-Q13F",
-              "math_track": "A/B",
-              "question_type": "fill_in",
-              "difficulty": "中等",
-              "knowledge_tags": [
-                "MA-POLY"
-              ],
-              "ability_tags": [
-                "MA-A2"
-              ],
-              "stem": "設一元二次方程式 x² − 7x + k = 0 的兩根相差為 3，求 k 的值。（答案為整數）",
-              "materials": [],
-              "options": [],
-              "answer": "10",
-              "scoring_rule": "",
-              "explanation": "設兩根 α、β，α+β=7、αβ=k。(α−β)²=(α+β)²−4αβ=49−4k。由 |α−β|=3 得 49−4k=9，故 k=10。（此時兩根為 5、2，差為 3，驗證正確。）",
-              "review_advice": "根差平方公式 (α−β)²=(α+β)²−4αβ 是連結「根差」與係數的關鍵。",
-              "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
-              ],
-              "similarity_risk": "low_ai_new_not_copied",
-              "requires_written_response": false,
-              "diagram_required": false,
-              "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
-              "review_grade": "A",
-              "unit_tags": [
-                "MA-U-多項式二次"
-              ],
-              "estimated_minutes": 3,
-              "long_question": false,
-              "official_bank_status": "formal_online"
-            },
-            {
-              "subject": "數學",
-              "mode": "學測",
-              "source_type": "AI新題",
-              "status": "approved_for_app",
-              "error_codes": [],
-              "ai_scoring_required": false,
-              "id": "MA-V2-B01-TUE-Q14F",
-              "math_track": "A/B",
-              "question_type": "fill_in",
-              "difficulty": "基礎",
-              "knowledge_tags": [
-                "MA-EXP"
-              ],
-              "ability_tags": [
-                "MA-A2"
-              ],
-              "stem": "已知 2ˣ = 5，求 8ˣ 的值。（答案為整數）",
-              "materials": [],
-              "options": [],
-              "answer": "125",
-              "scoring_rule": "",
-              "explanation": "8ˣ = (2³)ˣ = 2^(3x) = (2ˣ)³ = 5³ = 125。",
-              "review_advice": "把底數化為相同(8=2³)，再用指數律 (aᵐ)ⁿ=a^(mn) 轉成已知的 2ˣ。",
-              "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
-              ],
-              "similarity_risk": "low_ai_new_not_copied",
-              "requires_written_response": false,
-              "diagram_required": false,
-              "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
-              "review_grade": "A",
-              "unit_tags": [
-                "MA-U-指對數應用"
-              ],
-              "estimated_minutes": 3,
               "long_question": false,
               "official_bank_status": "formal_online"
             }
@@ -496,9 +517,9 @@
           "task_type": "probability_statistics_data",
           "status": "approved_for_app",
           "day_materials": [],
-          "approved_at": "2026-08-13",
+          "approved_at": "2026-08-14",
           "gatekeeper_status": "approved_for_app",
-          "estimated_minutes": 45,
+          "estimated_minutes": 50,
           "official_bank_status": "formal_online",
           "question_slots": [
             {
@@ -508,56 +529,56 @@
               "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
-              "id": "MA-V2-B01-THU-Q03",
+              "id": "MA-V2-B01-THU-Q06",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-PROB",
-                "MA-COMB"
+                "機率-條件機率"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "一個袋子裡有 5 顆紅球與 3 顆白球，共 8 顆。今從中一次取出 2 顆（不放回），則兩顆都是紅球的機率為何？",
+              "stem": "袋中有 3 顆紅球與 2 顆白球。不放回連續取出 2 顆球。已知「第 1 顆取到紅球」，則「第 2 顆也取到紅球」的條件機率為何？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "25/64"
+                  "text": "2/5"
                 },
                 {
                   "key": "B",
-                  "text": "5/8"
-                },
-                {
-                  "key": "C",
                   "text": "1/2"
                 },
                 {
+                  "key": "C",
+                  "text": "3/5"
+                },
+                {
                   "key": "D",
-                  "text": "5/14"
+                  "text": "1/4"
                 },
                 {
                   "key": "E",
-                  "text": "10/56"
+                  "text": "3/10"
                 }
               ],
-              "answer": "D",
+              "answer": "B",
               "scoring_rule": "",
-              "explanation": "取法總數 C(8,2)=28，兩顆皆紅為 C(5,2)=10，機率 10/28=5/14。常見錯誤：誤用放回獨立算成 (5/8)²=25/64、把單取一顆為紅 5/8 當答案，或用有序 8×7=56 為分母且未化簡（10/56）。",
-              "review_advice": "不放回、不計順序用組合 C(n,r)；放回且獨立才用乘法 (p)²。",
+              "explanation": "已知第 1 顆是紅球後，袋中剩 2 紅 2 白共 4 顆，第 2 顆為紅的機率 = 2/4 = 1/2。屬條件機率：條件成立後重新計算樣本空間。錯選 3/10 是「兩顆都紅」的無條件機率、2/5 是單取一顆紅。",
+              "review_advice": "條件機率：把『已知事件』發生後的狀態當新樣本空間再算。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
-                "MA-U-機率"
+                "MA-U-條件機率"
               ],
               "estimated_minutes": 3,
               "long_question": false,
@@ -573,27 +594,53 @@
               "id": "MA-V2-B01-THU-Q07",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-STAT"
+                "統計-標準差"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "某小組 8 次小考成績為 2, 4, 4, 4, 5, 5, 7, 9（單位：分）。這組資料的標準差為何？",
-              "materials": [],
+              "stem": "下表為某商店連續 5 天的日銷售量（單位：件）。求這 5 天銷售量的標準差。",
+              "materials": [
+                {
+                  "type": "table",
+                  "title": "表：某商店連續 5 天日銷售量（件）",
+                  "row_header": "項目",
+                  "columns": [
+                    "第1天",
+                    "第2天",
+                    "第3天",
+                    "第4天",
+                    "第5天"
+                  ],
+                  "rows": [
+                    {
+                      "label": "日銷售量",
+                      "values": [
+                        "10",
+                        "12",
+                        "14",
+                        "16",
+                        "18"
+                      ]
+                    }
+                  ]
+                }
+              ],
               "options": [
                 {
                   "key": "A",
-                  "text": "4"
+                  "text": "2"
                 },
                 {
                   "key": "B",
-                  "text": "√2"
+                  "text": "8"
                 },
                 {
                   "key": "C",
-                  "text": "2"
+                  "text": "4"
                 },
                 {
                   "key": "D",
@@ -601,21 +648,21 @@
                 },
                 {
                   "key": "E",
-                  "text": "1"
+                  "text": "√10"
                 }
               ],
-              "answer": "C",
+              "answer": "D",
               "scoring_rule": "",
-              "explanation": "平均數 = 40/8 = 5。各項與平均差的平方和 = 9+1+1+1+0+0+4+16 = 32，變異數 = 32/8 = 4，標準差 = √4 = 2。常見錯誤：把變異數 4 直接當標準差、或開根號時算錯（√2、2√2）。",
-              "review_advice": "標準差 = √(變異數)，變異數 = 離差平方的平均；別把變異數 4 直接當標準差。",
+              "explanation": "平均 = (10+12+14+16+18)/5 = 70/5 = 14。各日離差平方 = 16+4+0+4+16 = 40，變異數 = 40/5 = 8，標準差 = √8 = 2√2。屬「先求平均、再求變異數、再開根」三步。錯選 8 是把變異數當標準差。",
+              "review_advice": "標準差三步：平均→離差平方平均(變異數)→開根號。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
-              "diagram_required": false,
+              "diagram_required": true,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-統計"
@@ -634,53 +681,54 @@
               "id": "MA-V2-B01-THU-Q09",
               "math_track": "A/B",
               "question_type": "multiple_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-PROB"
+                "機率-期望值與計數"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "投擲一顆公正骰子兩次，觀察兩次的點數。下列敘述哪些正確？",
+              "stem": "投擲兩顆公正骰子，觀察其點數。下列敘述哪些正確？（應選 3 項）",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "兩次點數和為 7 的機率為 7/36"
+                  "text": "兩顆點數乘積為奇數的機率為 1/4"
                 },
                 {
                   "key": "B",
-                  "text": "兩次都出現 6 點的機率為 1/36"
+                  "text": "兩顆點數和為質數的機率大於 1/2"
                 },
                 {
                   "key": "C",
-                  "text": "至少一次出現 6 點的機率為 1/3"
+                  "text": "兩顆點數和為 12 的機率為 1/6"
                 },
                 {
                   "key": "D",
-                  "text": "「第一次為偶數」與「第二次為奇數」為獨立事件"
+                  "text": "兩顆點數和的期望值為 7"
                 },
                 {
                   "key": "E",
-                  "text": "兩次點數相同的機率為 1/6"
+                  "text": "至少出現一個 6 點的機率為 11/36"
                 }
               ],
               "answer": [
-                "B",
+                "A",
                 "D",
                 "E"
               ],
               "scoring_rule": "",
-              "explanation": "樣本空間 36 種。兩次皆 6：1 種=1/36(B對)。兩次獨立、各自結果互不影響(D對)。兩次相同：6 種=1/6(E對)。和為 7 有 (1,6)…(6,1) 共 6 種=1/6，故 A 寫 7/36 錯；至少一次 6 = 1−(5/6)²=11/36，故 C 寫 1/3 錯。",
-              "review_advice": "「至少一次」用補集 1−P(都沒有)最快；獨立事件指一次結果不影響另一次。",
+              "explanation": "和的期望值 = 2×3.5 = 7(D對)；至少一個 6 = 1−(5/6)²=11/36(E對)；乘積為奇數需兩顆皆奇，機率 (3/6)²=1/4(A對)。和為質數(2,3,5,7,11)共 1+2+4+6+2=15 種=15/36<1/2，B 錯；和為 12 只有 1 種=1/36 非 1/6，C 錯。",
+              "review_advice": "『至少一個』用補集；乘積為奇＝兩數皆奇；期望值用對稱性。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-機率"
@@ -699,54 +747,54 @@
               "id": "MA-V2-B01-THU-Q13M",
               "math_track": "A/B",
               "question_type": "multiple_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-STAT",
-                "MA-REG"
+                "統計-相關與迴歸"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "某班學生數學成績 x 與物理成績 y 的相關係數 r = 0.8。下列敘述哪些正確？",
+              "stem": "關於相關係數 r 與最小平方迴歸直線，下列敘述哪些正確？（應選 3 項）",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "x 與 y 呈正相關"
+                  "text": "相關係數 r 可能大於 1"
                 },
                 {
                   "key": "B",
-                  "text": "r = 0.8 表示全班有 80% 的學生兩科都拿高分"
+                  "text": "將 x、y 各自改變測量單位，r 值不受影響"
                 },
                 {
                   "key": "C",
-                  "text": "y 對 x 的迴歸直線斜率必等於 0.8"
+                  "text": "迴歸直線必通過 (x̄, ȳ)"
                 },
                 {
                   "key": "D",
-                  "text": "若每位學生的數學成績都加 5 分，r 的值不變"
+                  "text": "r = 0.9 的兩變數，其線性關聯強度必大於 r = −0.95 者"
                 },
                 {
                   "key": "E",
-                  "text": "相關係數 r 的值必介於 −1 與 1 之間"
+                  "text": "標準差的平方即為變異數"
                 }
               ],
               "answer": [
-                "A",
-                "D",
+                "B",
+                "C",
                 "E"
               ],
               "scoring_rule": "",
-              "explanation": "r>0 表正相關(A對)。資料同加一常數是平移，不改變相關係數(D對)。相關係數恆有 −1≤r≤1(E對)。r 衡量線性關聯強弱，並非「高分人數比例」，B 為常見誤解錯；迴歸斜率=r×(sy/sx)，不一定等於 0.8，C 錯。",
-              "review_advice": "r 只描述線性關聯強度與方向；斜率還要乘上標準差比 sy/sx。",
+              "explanation": "B 對：r 為無單位的標準化量，改單位不變；C 對：最小平方迴歸直線必過平均點；E 對：變異數＝標準差²。D 錯：線性關聯強度看 |r|，|−0.95|=0.95>0.9，反而 −0.95 較強；A 錯：恆有 −1≤r≤1。",
+              "review_advice": "關聯強度看 |r|（絕對值），負相關也可以很強；r 無單位、|r|≤1。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-統計"
@@ -765,28 +813,29 @@
               "id": "MA-V2-B01-THU-Q14F",
               "math_track": "A/B",
               "question_type": "fill_in",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-COMB"
+                "組合-隔板法"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "從 5 位男生與 4 位女生共 9 人中選出 3 人組成小組，若要求小組中至少有 1 位女生，則不同的選法共有幾種？（答案為整數）",
+              "stem": "將 7 顆相同的球全部放入甲、乙、丙 3 個不同的箱子，若每個箱子至少放 1 顆，則不同的放法共有幾種？（答案為整數）",
               "materials": [],
               "options": [],
-              "answer": "74",
+              "answer": "15",
               "scoring_rule": "",
-              "explanation": "全部選法 C(9,3)=84，扣掉「完全沒有女生(3 人全男)」C(5,3)=10 種，得 84−10=74 種。",
-              "review_advice": "「至少」型用「全部 − 反面(一個都沒有)」最省事，避免分類重複。",
+              "explanation": "每箱至少 1 顆，用「隔板法」：7 顆球排成一列有 6 個間隙，插入 2 塊隔板把球分成 3 段，方法數 = C(6,2) = 15。",
+              "review_advice": "相同物分入不同箱、每箱至少 1：隔板法 C(n−1, 箱數−1)。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-排列組合"
@@ -804,9 +853,9 @@
           "task_type": "weekend_geometry_mixed_reasoning",
           "status": "approved_for_app",
           "day_materials": [],
-          "approved_at": "2026-08-13",
+          "approved_at": "2026-08-14",
           "gatekeeper_status": "approved_for_app",
-          "estimated_minutes": 60,
+          "estimated_minutes": 65,
           "official_bank_status": "formal_online",
           "question_slots": [
             {
@@ -816,52 +865,53 @@
               "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
-              "id": "MA-V2-B01-SUN-Q04",
+              "id": "MA-V2-B01-SUN-Q03",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-TRIG"
+                "三角-餘弦定理與面積"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "三角形 ABC 中，∠A = 30°，邊 a = 8、邊 b = 8√3。若已知 ∠B 為銳角，求 ∠B。",
+              "stem": "三角形 ABC 的三邊長為 a = 7、b = 8、c = 9。求三角形 ABC 的面積。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "45°"
+                  "text": "12√5"
                 },
                 {
                   "key": "B",
-                  "text": "60°"
+                  "text": "36"
                 },
                 {
                   "key": "C",
-                  "text": "90°"
+                  "text": "10√5"
                 },
                 {
                   "key": "D",
-                  "text": "120°"
+                  "text": "6√5"
                 },
                 {
                   "key": "E",
-                  "text": "30°"
+                  "text": "12√3"
                 }
               ],
-              "answer": "B",
+              "answer": "A",
               "scoring_rule": "",
-              "explanation": "正弦定理 a/sinA = b/sinB，得 sinB = b·sinA/a = 8√3×(1/2)/8 = √3/2。∠B 為銳角故取 60°（另一解 120° 為鈍角，已被題目排除）。常見錯誤：忘了限制銳角而選 120°，或 sin 值對應的角記錯。",
-              "review_advice": "正弦定理求角會有銳角/鈍角兩解，需依題目條件(此處指定銳角)取捨。",
+              "explanation": "先用餘弦定理求角 C：cosC=(a²+b²−c²)/(2ab)=(49+64−81)/(2·7·8)=32/112=2/7；sinC=√(1−(2/7)²)=√(45/49)=3√5/7。面積=½·a·b·sinC=½·7·8·(3√5/7)=12√5。屬『餘弦定理→sin→面積』三步。",
+              "review_advice": "已知三邊求面積：先餘弦定理求一角的 cos、再求 sin、代面積 ½ab·sinC（或用海龍公式驗算）。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-三角"
@@ -877,55 +927,56 @@
               "status": "approved_for_app",
               "error_codes": [],
               "ai_scoring_required": false,
-              "id": "MA-V2-B01-SUN-Q06",
+              "id": "MA-V2-B01-SUN-Q04",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-VEC"
+                "向量-空間夾角"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "空間中兩向量 u = (2, −1, 2)、v = (1, 2, 2)。則 u 與 v 夾角 θ 的 cosθ 值為何？",
+              "stem": "坐標空間中三點 A(1, 0, 2)、B(3, 1, 1)、C(2, −1, 0)。求 ∠BAC 的餘弦值（cos∠BAC）。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "4/9"
-                },
-                {
-                  "key": "B",
-                  "text": "2/3"
-                },
-                {
-                  "key": "C",
-                  "text": "4/3"
-                },
-                {
-                  "key": "D",
                   "text": "1/3"
                 },
                 {
+                  "key": "B",
+                  "text": "√3/2"
+                },
+                {
+                  "key": "C",
+                  "text": "1/2"
+                },
+                {
+                  "key": "D",
+                  "text": "1/6"
+                },
+                {
                   "key": "E",
-                  "text": "8/9"
+                  "text": "−1/2"
                 }
               ],
-              "answer": "A",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "u·v = 2×1+(−1)×2+2×2 = 4；|u| = √(4+1+4)=3、|v| = √(1+4+4)=3。cosθ = (u·v)/(|u||v|) = 4/(3×3) = 4/9。常見錯誤：忘了除以模長乘積得 4/3（>1 已違反 cos 值範圍即知錯），或內積、模長算錯。",
-              "review_advice": "夾角公式 cosθ = (u·v)/(|u||v|)；cos 值必落在 [−1,1]，超出即知算錯。",
+              "explanation": "向量 AB=B−A=(2,1,−1)、AC=C−A=(1,−1,−2)。內積 AB·AC=2×1+1×(−1)+(−1)×(−2)=2−1+2=3；|AB|=√(4+1+1)=√6、|AC|=√(1+1+4)=√6。cos∠BAC=(AB·AC)/(|AB||AC|)=3/(√6·√6)=3/6=1/2。屬『求兩向量→內積→模長→夾角』多步。",
+              "review_advice": "空間夾角：先由座標求兩向量，再用 cosθ=(u·v)/(|u||v|)。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
-                "MA-U-向量"
+                "MA-U-空間向量"
               ],
               "estimated_minutes": 3,
               "long_question": false,
@@ -941,53 +992,54 @@
               "id": "MA-V2-B01-SUN-Q10",
               "math_track": "A/B",
               "question_type": "multiple_choice",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-VEC"
+                "向量-空間體積"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "坐標空間中三點 A(1, 0, 0)、B(0, 2, 0)、C(0, 0, 3)。下列敘述哪些正確？",
+              "stem": "坐標空間中四點 A(0,0,0)、B(2,0,0)、C(0,3,0)、D(0,0,4)。下列敘述哪些正確？（應選 3 項）",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "向量 AB = (−1, 2, 0)"
+                  "text": "四面體 ABCD 的體積為 4"
                 },
                 {
                   "key": "B",
-                  "text": "∠A 為直角（即 AB ⊥ AC）"
+                  "text": "|向量 AD| = 4"
                 },
                 {
                   "key": "C",
-                  "text": "|向量 AC| = √10"
+                  "text": "A、B、C、D 四點共平面"
                 },
                 {
                   "key": "D",
-                  "text": "向量 BC = (0, 2, 3)"
+                  "text": "向量 AB 與向量 AD 的夾角為 60°"
                 },
                 {
                   "key": "E",
-                  "text": "向量 AB · 向量 AC = 1"
+                  "text": "向量 AB 與向量 AC 互相垂直"
                 }
               ],
               "answer": [
                 "A",
-                "C",
+                "B",
                 "E"
               ],
               "scoring_rule": "",
-              "explanation": "AB = B−A = (−1,2,0)(A對)；AC = C−A = (−1,0,3)，|AC| = √(1+0+9)=√10(C對)；AB·AC = 1+0+0 = 1(E對)。因 AB·AC=1≠0，AB 與 AC 不垂直，B 錯；BC = C−B = (0,−2,3)，故 D 寫 (0,2,3) 錯。",
-              "review_advice": "空間向量 = 終點坐標 − 起點坐標；垂直 ⇔ 內積為 0。",
+              "explanation": "AB=(2,0,0)、AC=(0,3,0)、AD=(0,0,4) 兩兩垂直。AB·AC=0(E對)；|AD|=4(B對)；四面體體積=(1/6)|純量三重積|=(1/6)(2·3·4)=4(A對)。四點不共面（構成立體），C 錯；AB⊥AD 夾角為 90° 非 60°，D 錯。",
+              "review_advice": "三向量兩兩垂直時，四面體體積=(1/6)×三邊長乘積；垂直⇔內積 0。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-空間向量"
@@ -1006,28 +1058,29 @@
               "id": "MA-V2-B01-SUN-Q15F",
               "math_track": "A/B",
               "question_type": "fill_in",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-TRIG"
+                "三角-外接圓"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "三角形 ABC 的三邊長為 a = 7、b = 8、c = 9。求 cosB 的值。（以最簡分數 p/q 表示）",
+              "stem": "三角形 ABC 中，∠A = 60°，其對邊 a = √3。求三角形 ABC 外接圓的半徑 R。（以最簡分數或整數表示）",
               "materials": [],
               "options": [],
-              "answer": "11/21",
+              "answer": "1",
               "scoring_rule": "",
-              "explanation": "餘弦定理 cosB = (a²+c²−b²)/(2ac) = (49+81−64)/(2×7×9) = 66/126 = 11/21。",
-              "review_advice": "餘弦定理求角：對角 B 的對邊是 b，公式分子放 (a²+c²−b²)。記得約成最簡分數。",
+              "explanation": "正弦定理 a/sinA = 2R ⇒ 2R = √3 / sin60° = √3 / (√3/2) = 2 ⇒ R = 1。屬『代入正弦定理→化簡』兩步。",
+              "review_advice": "外接圓半徑用 a/sinA=2R；sin60°=√3/2，化簡後除以 2。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-三角"
@@ -1046,28 +1099,29 @@
               "id": "MA-V2-B01-SUN-Q16F",
               "math_track": "A/B",
               "question_type": "fill_in",
-              "difficulty": "中等",
+              "difficulty": "偏難",
               "knowledge_tags": [
-                "MA-VEC"
+                "向量-三角形面積"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "平面上兩向量 a = (2, 4)、b = (3, 4)。求 a 在 b 方向上的正射影長。（以最簡分數表示）",
+              "stem": "平面上三角形的三頂點為 A(1, 1)、B(4, 2)、C(2, 5)。求此三角形的面積。（以最簡分數表示）",
               "materials": [],
               "options": [],
-              "answer": "22/5",
+              "answer": "11/2",
               "scoring_rule": "",
-              "explanation": "正射影長 = (a·b)/|b| = (2×3+4×4)/√(3²+4²) = 22/√25 = 22/5。",
-              "review_advice": "正射影長公式 = (a·b)/|b|；本題 |b|=5 為整數，直接得最簡分數。",
+              "explanation": "以 A 為基準，AB=(3,1)、AC=(1,4)。面積=½|AB 的 x·AC 的 y − AB 的 y·AC 的 x|=½|3×4−1×1|=½×11=11/2。屬『求兩邊向量→外積絕對值→取半』。",
+              "review_advice": "已知三頂點座標求面積：½×|x₁(y₂−y₃)+x₂(y₃−y₁)+x₃(y₁−y₂)| 或用兩邊向量的外積。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
                 "MA-U-向量"
@@ -1086,31 +1140,32 @@
               "id": "MA-V2-B01-SUN-Q19",
               "math_track": "A/B",
               "question_type": "short_answer",
-              "difficulty": "中等",
+              "difficulty": "難",
               "knowledge_tags": [
-                "MA-TRIG"
+                "不等式-證明"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "三角形 ABC 的三邊長為 a = 5、b = 6、c = 7。請完整寫出計算過程，回答下列兩小題：(1) 求 cosA。(2) 求三角形 ABC 的面積。",
+              "stem": "設 a、b、c 為任意實數。請完整寫出推理過程，證明下列兩小題：(1) 證明 a² + b² ≥ 2ab。(2) 利用 (1) 的結果，證明 a² + b² + c² ≥ ab + bc + ca。",
               "materials": [],
               "options": [],
-              "answer": "(1) cosA = 5/7　(2) 面積 = 6√6",
-              "scoring_rule": "共 8 分：(1) cosA 用餘弦定理正確列式並化簡得 5/7，4 分（列式 2 分＋化簡 2 分）；(2) 正確求 sinA=2√6/7 得 2 分、代入面積公式得 6√6 得 2 分。僅寫答案無過程最多各給一半；觀念或計算錯誤該小題不給分。",
-              "explanation": "(1) 餘弦定理 cosA = (b²+c²−a²)/(2bc) = (36+49−25)/(2×6×7) = 60/84 = 5/7。\n(2) sinA = √(1−cos²A) = √(1−25/49) = √(24/49) = 2√6/7。面積 = (1/2)·b·c·sinA = (1/2)×6×7×(2√6/7) = 6√6。",
-              "review_advice": "先用餘弦定理求 cosA，再由 sin²+cos²=1 求 sinA，最後代面積公式 (1/2)bc·sinA；非選務必逐步列式。",
+              "answer": "(1) 由 (a−b)²≥0 展開得證　(2) 三式相加除以 2 得證",
+              "scoring_rule": "共 8 分：(1) 由 (a−b)²≥0 展開推得 a²+b²≥2ab，3 分（寫出平方非負的關鍵 2 分＋正確移項 1 分）；(2) 對三對變數各寫一式並相加、除以 2 得證，5 分（三式列出 3 分＋相加化簡完成 2 分）。僅寫結論無過程不給分；能指出等號成立條件 a=b=c 可視為完整。",
+              "explanation": "(1) 因為任意實數的平方非負，(a−b)²≥0，展開得 a²−2ab+b²≥0，移項即 a²+b²≥2ab。\n(2) 同理有 b²+c²≥2bc、c²+a²≥2ca。將三式相加：2(a²+b²+c²)≥2(ab+bc+ca)，兩邊同除以 2 得 a²+b²+c²≥ab+bc+ca。等號在 a=b=c 時成立。",
+              "review_advice": "不等式證明常用『完全平方非負』；多變數對稱式用『輪換相加』。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": true,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
-                "MA-U-三角"
+                "MA-U-多項式二次"
               ],
               "estimated_minutes": 8,
               "long_question": true,
@@ -1126,32 +1181,32 @@
               "id": "MA-V2-B01-SUN-Q20F",
               "math_track": "A/B",
               "question_type": "fill_in",
-              "difficulty": "偏難",
+              "difficulty": "難",
               "knowledge_tags": [
-                "MA-VEC",
-                "MA-DET"
+                "機率-期望值"
               ],
               "ability_tags": [
-                "MA-A2"
+                "MA-A2",
+                "MA-A9"
               ],
-              "stem": "坐標空間中，一個平行六面體由從同一頂點出發的三個向量 u = (1, 2, 0)、v = (0, 3, 1)、w = (2, 0, 4) 決定。求此平行六面體的體積。（答案為整數；提示：體積 = |三向量的純量三重積|，即 3×3 行列式的絕對值）",
+              "stem": "袋中有 4 顆紅球與 6 顆白球，共 10 顆。一次取出 3 顆球（不放回）。求「取出的紅球數」的期望值。（以最簡分數表示；提示：可用每顆球被取中的機率相加）",
               "materials": [],
               "options": [],
-              "answer": "16",
+              "answer": "6/5",
               "scoring_rule": "",
-              "explanation": "體積 = |det[u; v; w]| = |1×(3×4−1×0) − 2×(0×4−1×2) + 0×(0×0−3×2)| = |1×12 − 2×(−2) + 0| = |12+4| = 16。",
-              "review_advice": "平行六面體體積 = 純量三重積 u·(v×w) 的絕對值 = 三向量排成的 3×3 行列式絕對值；沿第一列展開較快。",
+              "explanation": "設取出的紅球數為 X。方法一(超幾何期望值)：E(X)=抽取數×紅球比例=3×(4/10)=12/10=6/5。方法二(指示變數)：每顆紅球被取中的機率為 3/10，4 顆紅球的期望總數=4×(3/10)=12/10=6/5。",
+              "review_advice": "『取出某色球數』的期望值＝抽取數×該色比例（超幾何分布期望值），或用指示變數相加。",
               "review_notes": [
-                "Claude 重做把關：答案已用 sympy 獨立驗算；情境/難度對齊學測；解析含正解依據＋逐一錯選辨析。"
+                "Claude 難度升級版：多步驟/情境/多概念；答案 sympy 驗算；圖表為真渲染。"
               ],
-              "similarity_risk": "low_ai_new_not_copied",
+              "similarity_risk": "low_ai_new",
               "requires_written_response": false,
               "diagram_required": false,
               "gatekeeper_status": "approved_for_app",
-              "approved_for_app_at": "2026-08-13",
+              "approved_for_app_at": "2026-08-14",
               "review_grade": "A",
               "unit_tags": [
-                "MA-U-空間向量"
+                "MA-U-機率"
               ],
               "estimated_minutes": 6,
               "long_question": false,
