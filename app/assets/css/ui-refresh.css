@@ -130,3 +130,15 @@ header.app-hero .home-return-action:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- 5. 統一各科關卡格選中色（自然/英文/社會 → 與數學/國文同一青色） ---- */
+.science-day-tab.active,
+.english-day-tab.active,
+.social-day-tab.active {
+  border-color: var(--primary) !important;
+  background: #e9f6f9 !important;
+  box-shadow: inset 0 0 0 2px rgba(21, 94, 117, 0.16) !important;
+}
+.bank-alert {
+  display: none !important;
+}

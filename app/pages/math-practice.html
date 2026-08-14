@@ -377,11 +377,6 @@
         <a class="home-return-action" href="../index.html">返回闖關地圖</a>
       </header>
 
-      <section class="bank-alert" aria-label="題庫狀態">
-        <strong id="statusTitle">數學 batch_02 已接入正式每日任務</strong>
-        <p id="statusCopy">週二、週四控制平日練習量，週日集中圖形向量與混合推理。</p>
-      </section>
-
       <section class="bank-stats" id="summaryStats" aria-label="統計"></section>
 
       <section class="bank-day-tabs" id="dayTabs" aria-label="選擇關卡"></section>
@@ -1195,8 +1190,6 @@
       async function init() {
         const data = await loadBankData();
         document.getElementById("pageTitle").textContent = "數學科正式三天";
-        document.getElementById("statusTitle").textContent = "數學 batch_02 已接入正式每日任務";
-        document.getElementById("statusCopy").textContent = data.meta?.app_integration_policy || "週二、週四、週日完成數學正式闖關。";
         days = (data.weeks || []).flatMap((week) => week.days || []);
         questions = days.flatMap((day) => (day.question_slots || []).map((question) => ({ weekday: day.weekday, question })));
         renderStats();
