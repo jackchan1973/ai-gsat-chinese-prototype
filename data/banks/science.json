@@ -33,7 +33,7 @@
               "science_area": "物理",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "物理-密度"
               ],
@@ -43,34 +43,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "一塊鋁的體積為 20 cm³、質量為 54 g。求此鋁塊的密度。",
+              "stem": "一金屬塊的密度為 8 g/cm³，在空氣中測得質量為 80 g。若將它完全浸入水中（水的密度為 1 g/cm³），依阿基米德原理，它所排開的水質量為多少克？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "2.7 g/cm³"
+                  "text": "10 克"
                 },
                 {
                   "key": "B",
-                  "text": "0.37 g/cm³"
+                  "text": "8 克"
                 },
                 {
                   "key": "C",
-                  "text": "27 g/cm³"
+                  "text": "70 克"
                 },
                 {
                   "key": "D",
-                  "text": "1.08 g/cm³"
+                  "text": "80 克"
                 },
                 {
                   "key": "E",
-                  "text": "74 g/cm³"
+                  "text": "640 克"
                 }
               ],
               "answer": "A",
               "scoring_rule": "",
-              "explanation": "密度 = 質量 / 體積 = 54 g ÷ 20 cm³ = 2.7 g/cm³。",
-              "review_advice": "密度 = 質量÷體積，注意單位對應。",
+              "explanation": "金屬塊體積＝質量÷密度＝80÷8＝10 cm³。完全浸入水中排開的水體積等於金屬塊體積 10 cm³，排水質量＝10×1＝10 克。",
+              "review_advice": "先由密度求體積，再乘水的密度得排水質量；浮力大小＝排開液體的重量。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -81,7 +81,7 @@
               "unit_tags": [
                 "密度"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -350,7 +350,7 @@
               "science_area": "化學",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "化學-莫耳"
               ],
@@ -360,34 +360,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "已知碳（C）的原子量為 12。試問 12 公克的碳原子相當於多少莫耳？",
+              "stem": "在反應 C + O₂ → CO₂ 中，若有 12 公克的碳（碳原子量 12）完全燃燒，理論上需消耗氧氣 O₂（分子量 32）多少公克？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "0.5 莫耳"
+                  "text": "16 克"
                 },
                 {
                   "key": "B",
-                  "text": "2 莫耳"
+                  "text": "32 克"
                 },
                 {
                   "key": "C",
-                  "text": "12 莫耳"
+                  "text": "24 克"
                 },
                 {
                   "key": "D",
-                  "text": "6 莫耳"
+                  "text": "44 克"
                 },
                 {
                   "key": "E",
-                  "text": "1 莫耳"
+                  "text": "48 克"
                 }
               ],
-              "answer": "E",
+              "answer": "B",
               "scoring_rule": "",
-              "explanation": "莫耳數 = 質量 ÷ 原子量 = 12 g ÷ 12 = 1 莫耳。",
-              "review_advice": "莫耳數 = 質量÷莫耳質量（原子量／分子量）。",
+              "explanation": "12 公克碳＝12÷12＝1 莫耳。由方程式係數，C 與 O₂ 為 1:1，需 1 莫耳 O₂＝1×32＝32 公克。",
+              "review_advice": "先把質量換成莫耳，再依方程式係數比換算另一物質莫耳數，最後乘分子量回到公克。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -398,7 +398,7 @@
               "unit_tags": [
                 "莫耳"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -696,7 +696,7 @@
               "science_area": "生物",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "生物-細胞"
               ],
@@ -706,34 +706,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "在植物細胞中，進行光合作用、將光能轉換為化學能的胞器為何？",
+              "stem": "關於葉綠體與粒線體的比較，下列敘述何者正確？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "粒線體"
+                  "text": "兩者都只存在於植物細胞中"
                 },
                 {
                   "key": "B",
-                  "text": "核糖體"
+                  "text": "葉綠體進行呼吸作用，粒線體進行光合作用"
                 },
                 {
                   "key": "C",
-                  "text": "液胞"
+                  "text": "葉綠體把光能轉為化學能（合成養分），粒線體把養分中的化學能轉為細胞可用的能量（ATP）"
                 },
                 {
                   "key": "D",
-                  "text": "葉綠體"
+                  "text": "兩者都不含任何遺傳物質"
                 },
                 {
                   "key": "E",
-                  "text": "高基氏體"
+                  "text": "粒線體只存在於動物細胞，植物細胞完全沒有"
                 }
               ],
-              "answer": "D",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "光合作用在『葉綠體』進行；粒線體是進行呼吸作用（釋放能量）的胞器。",
-              "review_advice": "光合作用→葉綠體；呼吸作用→粒線體，別搞混。",
+              "explanation": "葉綠體行光合作用把光能轉為化學能；粒線體行呼吸作用把養分化學能轉為 ATP。植物細胞同時具有兩者，且兩者皆含少量自身 DNA。",
+              "review_advice": "記住能量流向：光能→(葉綠體)→養分化學能→(粒線體)→ATP；別把兩胞器功能對調。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -744,7 +744,7 @@
               "unit_tags": [
                 "細胞胞器"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -1102,7 +1102,7 @@
               "science_area": "地科",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "地科-板塊"
               ],
@@ -1112,34 +1112,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "板塊之間的交界，依相對運動方式可分為三大類。台灣位於歐亞板塊與菲律賓海板塊『互相聚合、碰撞』的交界帶。此種板塊邊界屬於下列何者？",
+              "stem": "台灣位於歐亞板塊與菲律賓海板塊的聚合（碰撞）邊界。關於此類「聚合型」板塊邊界，下列敘述何者最正確？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "張裂（分離）邊界"
+                  "text": "板塊互相分離，主要形成中洋脊"
                 },
                 {
                   "key": "B",
-                  "text": "錯動（轉形）邊界"
+                  "text": "板塊只做水平錯動，幾乎不會發生地震"
                 },
                 {
                   "key": "C",
-                  "text": "穩定的板塊內部"
+                  "text": "此處地殼被拉張變薄，不會有山脈生成"
                 },
                 {
                   "key": "D",
-                  "text": "海洋中脊"
+                  "text": "板塊互相聚合擠壓，常伴隨造山運動、地震，且可能形成海溝或火山"
                 },
                 {
                   "key": "E",
-                  "text": "聚合（隱沒／碰撞）邊界"
+                  "text": "兩板塊完全靜止，不會有任何地質活動"
                 }
               ],
-              "answer": "E",
+              "answer": "D",
               "scoring_rule": "",
-              "explanation": "兩板塊相向擠壓、碰撞或隱沒者為『聚合邊界』；台灣的造山運動即源於此。張裂邊界為板塊分離（如中洋脊），錯動邊界為板塊水平錯移（如聖安地列斯斷層）。",
-              "review_advice": "板塊邊界三型：聚合（擠壓）、張裂（分離）、錯動（水平滑移）。",
+              "explanation": "聚合型邊界板塊相向擠壓，造成造山、地震、海溝或火山島弧；台灣的高山即由此碰撞抬升而來。分離型才形成中洋脊，錯動型以水平滑動為主。",
+              "review_advice": "板塊邊界三類：分離（中洋脊）、聚合（造山/海溝/地震）、錯動（平移斷層）；由相對運動方向判斷。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -1150,7 +1150,7 @@
               "unit_tags": [
                 "板塊構造"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -1376,7 +1376,7 @@
               "science_area": "物理",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "物理-波動"
               ],
@@ -1386,34 +1386,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "一列波在介質中傳播，其頻率為 50 Hz、波長為 4 公尺。求此波的波速。",
+              "stem": "一列波在某介質中傳播，頻率為 50 Hz、波長為 4 公尺。若在同一介質中（波速不變）將頻率調整為 100 Hz，則新的波長為多少公尺？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "12.5 公尺/秒"
+                  "text": "1 公尺"
                 },
                 {
                   "key": "B",
-                  "text": "54 公尺/秒"
+                  "text": "4 公尺"
                 },
                 {
                   "key": "C",
-                  "text": "200 公尺/秒"
+                  "text": "8 公尺"
                 },
                 {
                   "key": "D",
-                  "text": "46 公尺/秒"
+                  "text": "200 公尺"
                 },
                 {
                   "key": "E",
-                  "text": "100 公尺/秒"
+                  "text": "2 公尺"
                 }
               ],
-              "answer": "C",
+              "answer": "E",
               "scoring_rule": "",
-              "explanation": "波速 = 頻率 × 波長 = 50 Hz × 4 m = 200 公尺/秒。",
-              "review_advice": "波速公式 v = f λ（頻率×波長）。",
+              "explanation": "波速 v＝f×λ＝50×4＝200 m/s。同介質波速不變，頻率變為 100 Hz 時，λ＝v÷f＝200÷100＝2 公尺。",
+              "review_advice": "v＝fλ；同介質波速固定，頻率與波長成反比，頻率加倍波長減半。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -1424,7 +1424,7 @@
               "unit_tags": [
                 "波動"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -1663,7 +1663,7 @@
               "science_area": "化學",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "化學-酸鹼"
               ],
@@ -1673,20 +1673,20 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "某水溶液中氫離子濃度 [H⁺] = 1×10⁻³ M。求此溶液的 pH 值。",
+              "stem": "將 pH = 2 的強酸溶液用水稀釋成原來的 1000 倍（稀釋後仍為酸性、遠離中性）。稀釋後溶液的 pH 最接近下列何者？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "3"
+                  "text": "5"
                 },
                 {
                   "key": "B",
-                  "text": "1"
+                  "text": "2"
                 },
                 {
                   "key": "C",
-                  "text": "5"
+                  "text": "3"
                 },
                 {
                   "key": "D",
@@ -1694,13 +1694,13 @@
                 },
                 {
                   "key": "E",
-                  "text": "11"
+                  "text": "9"
                 }
               ],
               "answer": "A",
               "scoring_rule": "",
-              "explanation": "pH = −log[H⁺] = −log(10⁻³) = 3。pH<7 為酸性。",
-              "review_advice": "pH = −log[H⁺]；濃度為 10 的次方時，pH 就是該指數取負。",
+              "explanation": "pH=2 表示 [H⁺]=10⁻² M。稀釋 1000 倍後 [H⁺]≈10⁻²÷10³＝10⁻⁵ M，pH＝−log(10⁻⁵)＝5。",
+              "review_advice": "每稀釋 10 倍，強酸 pH 約增加 1；稀釋 1000 倍（10³）約增加 3。但極稀時會趨近但不超過 7。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -1711,7 +1711,7 @@
               "unit_tags": [
                 "酸鹼pH"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -1988,7 +1988,7 @@
               "science_area": "生物",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "生物-神經"
               ],
@@ -1998,34 +1998,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "當手不小心碰到滾燙的物體會立刻縮回，此『縮手反射』的神經傳遞路徑，其反射中樞位於何處？",
+              "stem": "『縮手反射』屬於脊髓反射。下列關於其神經衝動傳遞路徑的排列，何者正確？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "大腦"
+                  "text": "受器 → 運動神經元 → 脊髓 → 感覺神經元 → 動器"
                 },
                 {
                   "key": "B",
-                  "text": "小腦"
+                  "text": "受器 → 感覺（傳入）神經元 → 脊髓 → 運動（傳出）神經元 → 動器（肌肉）"
                 },
                 {
                   "key": "C",
-                  "text": "延腦"
+                  "text": "受器 → 大腦皮質 → 脊髓 → 運動神經元 → 動器"
                 },
                 {
                   "key": "D",
-                  "text": "視丘"
+                  "text": "動器 → 運動神經元 → 脊髓 → 感覺神經元 → 受器"
                 },
                 {
                   "key": "E",
-                  "text": "脊髓"
+                  "text": "受器 → 感覺神經元 → 大腦皮質 → 運動神經元 → 動器"
                 }
               ],
-              "answer": "E",
+              "answer": "B",
               "scoring_rule": "",
-              "explanation": "縮手反射屬脊髓反射，反射中樞在『脊髓』，訊號不需先傳到大腦即可快速反應，以爭取時間避開傷害。",
-              "review_advice": "膝反射、縮手反射等快速反射的中樞在脊髓（不經大腦思考）。",
+              "explanation": "反射弧固定為：受器→傳入(感覺)神經元→中樞(脊髓)→傳出(運動)神經元→動器。縮手反射由脊髓直接處理、不先經大腦，故反應快。",
+              "review_advice": "反射弧五站順序要背熟；『反射比思考快』的關鍵在於中樞是脊髓、不繞大腦。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -2036,7 +2036,7 @@
               "unit_tags": [
                 "神經反射"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -2392,7 +2392,7 @@
               "science_area": "地科",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "地科-岩石"
               ],
@@ -2402,34 +2402,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "岩石依成因分為三大類。由岩漿冷卻凝固而成的岩石稱為下列何者？",
+              "stem": "岩石會因環境改變而彼此轉變。花岡岩（火成岩）若長期受到高溫與高壓作用，最可能變質形成下列哪一種岩石？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "沉積岩"
+                  "text": "玄武岩"
                 },
                 {
                   "key": "B",
-                  "text": "變質岩"
+                  "text": "石灰岩"
                 },
                 {
                   "key": "C",
-                  "text": "隕石"
+                  "text": "片麻岩"
                 },
                 {
                   "key": "D",
-                  "text": "礦物"
+                  "text": "頁岩"
                 },
                 {
                   "key": "E",
-                  "text": "火成岩"
+                  "text": "砂岩"
                 }
               ],
-              "answer": "E",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "岩漿或熔岩冷卻凝固而成者為『火成岩』；沉積物堆積膠結成沉積岩；受高溫高壓改變者為變質岩。",
-              "review_advice": "三大岩類：火成（岩漿冷卻）、沉積（堆積膠結）、變質（高溫高壓）。",
+              "explanation": "花岡岩在高溫高壓下礦物重新排列成明顯條帶狀構造，變質成片麻岩。玄武岩為火成岩，石灰岩、頁岩、砂岩皆為沉積岩。",
+              "review_advice": "變質作用＝高溫高壓下礦物重組；花岡岩→片麻岩、頁岩→板岩、石灰岩→大理岩是常考組合。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -2440,7 +2440,7 @@
               "unit_tags": [
                 "岩石循環"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -2663,7 +2663,7 @@
               "science_area": "物理",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "物理-電路"
               ],
@@ -2673,34 +2673,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "一電阻 4 歐姆的電阻器兩端接上 12 伏特的電壓。依歐姆定律，通過此電阻的電流為何？",
+              "stem": "將 4 Ω 與 6 Ω 兩個電阻並聯後，接上 12 伏特的電源。求流過電源的總電流。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "48 安培"
+                  "text": "1.2 安培"
                 },
                 {
                   "key": "B",
-                  "text": "3 安培"
+                  "text": "2 安培"
                 },
                 {
                   "key": "C",
-                  "text": "0.33 安培"
+                  "text": "3 安培"
                 },
                 {
                   "key": "D",
-                  "text": "8 安培"
+                  "text": "5 安培"
                 },
                 {
                   "key": "E",
-                  "text": "16 安培"
+                  "text": "7.2 安培"
                 }
               ],
-              "answer": "B",
+              "answer": "D",
               "scoring_rule": "",
-              "explanation": "歐姆定律 I = V/R = 12 V ÷ 4 Ω = 3 安培。",
-              "review_advice": "歐姆定律 V=IR，求電流用 I=V/R。",
+              "explanation": "並聯總電阻 R＝(4×6)÷(4+6)＝24÷10＝2.4 Ω。總電流 I＝V÷R＝12÷2.4＝5 安培。",
+              "review_advice": "並聯電阻用『乘積÷和』；並聯後總電阻比任一分支都小，再用歐姆定律求總電流。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -2711,7 +2711,7 @@
               "unit_tags": [
                 "歐姆定律"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -2981,7 +2981,7 @@
               "science_area": "化學",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "化學-溶解度"
               ],
@@ -2991,34 +2991,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "在一定溫度下，於 100 公克水中最多能溶解某固體 40 公克而達飽和。下列關於『溶解度』的敘述何者正確？",
+              "stem": "某固體在 60°C 的溶解度為 110 g／100 g 水，在 20°C 為 30 g／100 g 水。取 60°C 的飽和溶液（其中含水 100 g），緩慢降溫到 20°C。理論上會析出多少克此固體？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "溶解度與溫度無關"
+                  "text": "30 克"
                 },
                 {
                   "key": "B",
-                  "text": "此溫度下該固體在 100 公克水中的溶解度為 40 公克"
+                  "text": "40 克"
                 },
                 {
                   "key": "C",
-                  "text": "再加入更多固體會全部溶解"
+                  "text": "110 克"
                 },
                 {
                   "key": "D",
-                  "text": "溶解度是指溶液的質量"
+                  "text": "140 克"
                 },
                 {
                   "key": "E",
-                  "text": "飽和溶液一定是濃溶液"
+                  "text": "80 克"
                 }
               ],
-              "answer": "B",
+              "answer": "E",
               "scoring_rule": "",
-              "explanation": "溶解度定義為『特定溫度下 100 公克水中最多能溶解的溶質克數』，故此溫度下溶解度為 40 公克。A 錯（多數固體溶解度隨溫度改變）、C 錯（已飽和不再溶）、D 錯（溶解度非溶液質量）、E 錯（飽和≠濃，溶解度小的物質飽和時仍很稀）。",
-              "review_advice": "溶解度＝定溫下 100 克水中最多溶解的溶質克數；飽和與濃稀是兩回事。",
+              "explanation": "60°C 時 100 g 水溶有 110 g 固體（飽和）。降到 20°C 時 100 g 水只能溶 30 g，多出的 110−30＝80 g 會析出。",
+              "review_advice": "降溫析出量＝高溫溶解量−低溫溶解量（同水量）；先確認溶劑（水）質量相同再相減。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -3029,7 +3029,7 @@
               "unit_tags": [
                 "溶解度"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -3341,7 +3341,7 @@
               "science_area": "生物",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "生物-分子生物"
               ],
@@ -3351,34 +3351,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "關於 DNA 的結構，下列敘述何者正確？",
+              "stem": "已知一段 DNA 的其中一股序列為 5′–ATGCGT–3′。依鹼基互補配對（A–T、G–C）與雙股反向平行的原則，與它配對的互補股，由 5′ 讀到 3′ 的序列為下列何者？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "DNA 由核苷酸組成，具雙股螺旋結構，A 與 T、G 與 C 配對"
+                  "text": "5′–ACGCAT–3′"
                 },
                 {
                   "key": "B",
-                  "text": "DNA 為單股螺旋結構"
+                  "text": "5′–TACGCA–3′"
                 },
                 {
                   "key": "C",
-                  "text": "DNA 的組成單位是胺基酸"
+                  "text": "5′–ATGCGT–3′"
                 },
                 {
                   "key": "D",
-                  "text": "DNA 中 A 與 G 配對、T 與 C 配對"
+                  "text": "5′–UACGCA–3′"
                 },
                 {
                   "key": "E",
-                  "text": "DNA 不能自我複製"
+                  "text": "5′–CGTACG–3′"
                 }
               ],
               "answer": "A",
               "scoring_rule": "",
-              "explanation": "DNA 為雙股螺旋，組成單位是核苷酸；鹼基互補配對為 A–T、G–C，且能以半保留方式自我複製。C（胺基酸是蛋白質單位）、D（配對錯）、A、E 皆錯。",
-              "review_advice": "DNA：雙股螺旋、核苷酸為單位、A–T／G–C 互補、可半保留複製。",
+              "explanation": "模板 5′–ATGCGT–3′ 的互補（反向平行）股為 3′–TACGCA–5′，由 5′ 讀到 3′ 即 ACGCAT。DNA 不含 U（U 為 RNA）。",
+              "review_advice": "寫互補股先逐一配對(A-T,G-C)得到反向股，再『反過來』由 5′ 讀到 3′；DNA 用 T 不用 U。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -3389,7 +3389,7 @@
               "unit_tags": [
                 "DNA結構"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -3746,7 +3746,7 @@
               "science_area": "地科",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "地科-地層"
               ],
@@ -3756,34 +3756,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "在未受擾動而水平堆疊的沉積岩層中，若不考慮後來的變動，關於岩層新舊，下列敘述何者正確？（疊置定律）",
+              "stem": "在一段未受擾動、水平堆疊的沉積岩層中，下層 A 含三葉蟲化石，上層 B 含恐龍化石。依疊置定律，下列敘述何者正確？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "越上層的岩層年代越老"
+                  "text": "B 層比 A 層古老"
                 },
                 {
                   "key": "B",
-                  "text": "所有岩層年代都相同"
+                  "text": "A 層比 B 層先形成（較古老），三葉蟲的生存年代早於恐龍"
                 },
                 {
                   "key": "C",
-                  "text": "岩層新舊與上下位置無關"
+                  "text": "兩層一定同時形成"
                 },
                 {
                   "key": "D",
-                  "text": "越下層的岩層年代越老"
+                  "text": "上層一定比下層古老"
                 },
                 {
                   "key": "E",
-                  "text": "含化石的岩層一定最年輕"
+                  "text": "岩層上下無法用來判斷先後"
                 }
               ],
-              "answer": "D",
+              "answer": "B",
               "scoring_rule": "",
-              "explanation": "疊置定律：未受擾動的水平沉積岩層，先沉積者在下、後沉積者在上，故『越下層越老、越上層越新』。",
-              "review_advice": "疊置定律：下老上新（未受擾動的水平地層）。",
+              "explanation": "疊置定律：未受擾動的水平岩層中，下層先沉積、較古老。A 在下方故較早，其中的三葉蟲也早於上層 B 的恐龍。",
+              "review_advice": "疊置定律『下老上新』只適用於未受擾動的岩層；若有褶皺倒轉則需另判斷。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -3794,7 +3794,7 @@
               "unit_tags": [
                 "地層"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -4038,7 +4038,7 @@
               "science_area": "物理",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "物理-功率"
               ],
@@ -4048,34 +4048,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "某機器在 10 秒內對物體作功 600 焦耳。求此機器的平均功率。",
+              "stem": "一部抽水機在 20 秒內，將 100 公斤的水均勻提升到 5 公尺高處（g 取 10 m/s²）。求抽水機對水作功的平均功率。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "60 瓦特"
+                  "text": "100 瓦特"
                 },
                 {
                   "key": "B",
-                  "text": "6 瓦特"
+                  "text": "500 瓦特"
                 },
                 {
                   "key": "C",
-                  "text": "600 瓦特"
+                  "text": "250 瓦特"
                 },
                 {
                   "key": "D",
-                  "text": "6000 瓦特"
+                  "text": "1000 瓦特"
                 },
                 {
                   "key": "E",
-                  "text": "0.6 瓦特"
+                  "text": "5000 瓦特"
                 }
               ],
-              "answer": "A",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "功率 = 作功 ÷ 時間 = 600 焦耳 ÷ 10 秒 = 60 瓦特。",
-              "review_advice": "功率 P = W/t（每秒作的功）。",
+              "explanation": "對水作功 W＝mgh＝100×10×5＝5000 焦耳。平均功率 P＝W÷t＝5000÷20＝250 瓦特。",
+              "review_advice": "先算作功 W＝mgh（提升重物），再用 P＝W÷t 求功率；單位焦耳、瓦特要對應。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -4086,7 +4086,7 @@
               "unit_tags": [
                 "功率"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -4356,7 +4356,7 @@
               "science_area": "化學",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "化學-原子結構"
               ],
@@ -4366,34 +4366,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "已知碳原子的原子序為 6。關於一個中性碳原子，下列敘述何者正確？",
+              "stem": "某原子的原子序為 17、質量數為 35。當它得到一個電子形成 −1 價陰離子時，此離子的『質子數、中子數、電子數』依序為下列何者？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "含有 6 個中子且不帶電"
+                  "text": "17、18、17"
                 },
                 {
                   "key": "B",
-                  "text": "含有 12 個電子"
+                  "text": "17、17、18"
                 },
                 {
                   "key": "C",
-                  "text": "質子數等於中子數且為 12"
+                  "text": "18、17、18"
                 },
                 {
                   "key": "D",
-                  "text": "含有 6 個質子與 6 個電子"
+                  "text": "17、18、18"
                 },
                 {
                   "key": "E",
-                  "text": "不含電子"
+                  "text": "17、18、16"
                 }
               ],
               "answer": "D",
               "scoring_rule": "",
-              "explanation": "原子序＝質子數，中性原子的質子數＝電子數，故碳（原子序 6）有 6 個質子、6 個電子。中子數不一定等於質子數（同位素中子數可不同），故 B、D 未必成立；C、E 皆錯。",
-              "review_advice": "原子序＝質子數；中性原子質子數＝電子數；中子數看同位素。",
+              "explanation": "原子序＝質子數＝17；中子數＝質量數−原子序＝35−17＝18；得到 1 個電子後電子數＝17＋1＝18。",
+              "review_advice": "質子數＝原子序（不因帶電改變）；中子數＝質量數−原子序；陰離子電子數＝質子數＋帶的負電數。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -4404,7 +4404,7 @@
               "unit_tags": [
                 "原子結構"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 4,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -4681,7 +4681,7 @@
               "science_area": "生物",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "生物-循環"
               ],
@@ -4691,34 +4691,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "在人體血液循環中，將血液從心臟送出、運往全身各處的血管稱為？",
+              "stem": "關於人體的血液循環，下列敘述何者正確？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "動脈"
+                  "text": "所有動脈都運送含氧血、所有靜脈都運送缺氧血"
                 },
                 {
                   "key": "B",
-                  "text": "靜脈"
+                  "text": "體循環由右心室把血液送往全身"
                 },
                 {
                   "key": "C",
-                  "text": "微血管"
+                  "text": "左心房收縮直接把血液送往全身各處"
                 },
                 {
                   "key": "D",
-                  "text": "淋巴管"
+                  "text": "微血管管壁很厚，不利於物質交換"
                 },
                 {
                   "key": "E",
-                  "text": "毛細管"
+                  "text": "肺動脈運送缺氧血到肺、肺靜脈運送含氧血回心臟"
                 }
               ],
-              "answer": "A",
+              "answer": "E",
               "scoring_rule": "",
-              "explanation": "動脈把血液由心臟送出；靜脈將血液送回心臟；微血管是動、靜脈間進行物質交換的細小血管。",
-              "review_advice": "動脈＝離心（送出）、靜脈＝回心；微血管做物質交換。",
+              "explanation": "一般動脈運含氧血、靜脈運缺氧血，但『肺動脈』是例外運缺氧血、『肺靜脈』運含氧血。體循環由左心室送出；微血管管壁薄利於交換。",
+              "review_advice": "動脈/靜脈是以『血流方向（離心/回心）』定義，不是以含氧量；肺循環的肺動脈、肺靜脈是經典例外。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -4729,7 +4729,7 @@
               "unit_tags": [
                 "循環系統"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",
@@ -5102,7 +5102,7 @@
               "science_area": "地科",
               "mode": "學測",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "地科-太陽系"
               ],
@@ -5112,34 +5112,34 @@
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "在太陽系中，八大行星依離太陽由近到遠排列，最靠近太陽的行星是下列何者？",
+              "stem": "關於太陽系的八大行星，下列敘述何者正確？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "水星"
+                  "text": "離太陽越遠的行星，公轉一圈所需的時間（公轉週期）越長"
                 },
                 {
                   "key": "B",
-                  "text": "金星"
+                  "text": "八大行星中體積最大的是地球"
                 },
                 {
                   "key": "C",
-                  "text": "地球"
+                  "text": "所有行星的公轉方向彼此相反"
                 },
                 {
                   "key": "D",
-                  "text": "火星"
+                  "text": "太陽系中最靠近太陽的是火星"
                 },
                 {
                   "key": "E",
-                  "text": "木星"
+                  "text": "行星本身會像恆星一樣發光發熱"
                 }
               ],
               "answer": "A",
               "scoring_rule": "",
-              "explanation": "八大行星由近到遠為水星、金星、地球、火星、木星、土星、天王星、海王星，最靠近太陽者為『水星』。",
-              "review_advice": "行星順序（近→遠）：水金地火木土天海。",
+              "explanation": "依克卜勒定律，公轉軌道半徑越大週期越長。體積最大的是木星、最靠近太陽的是水星、八大行星公轉方向相同、行星本身不發光。",
+              "review_advice": "行星『不發光、靠反射太陽光』；由近到遠：水金地火木土天海；越遠公轉越慢。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；理科 sympy 驗算；圖表為真渲染、判讀後套情境。"
               ],
@@ -5150,7 +5150,7 @@
               "unit_tags": [
                 "太陽系"
               ],
-              "estimated_minutes": 2,
+              "estimated_minutes": 3,
               "long_question": false,
               "gatekeeper_status": "approved_for_app",
               "approved_for_app_at": "2026-08-14",

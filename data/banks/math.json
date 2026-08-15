@@ -38,7 +38,7 @@
               "id": "MA-V2-B01-TUE-Q01",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "指數-半衰期"
               ],
@@ -46,34 +46,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "某放射性物質的半衰期為 8 年（每經過 8 年質量減為一半）。若一開始有 40 克，經過幾年後會剩下 5 克？",
+              "stem": "兩種放射性同位素 X、Y 的半衰期分別為 8 年與 12 年。已知 X 原有 64 克，經過 24 年後，其剩餘質量恰與 Y 經過 24 年後的剩餘質量相等。則 Y 原有多少克？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "12"
+                  "text": "32 克"
                 },
                 {
                   "key": "B",
-                  "text": "16"
+                  "text": "24 克"
                 },
                 {
                   "key": "C",
-                  "text": "24"
+                  "text": "40 克"
                 },
                 {
                   "key": "D",
-                  "text": "32"
+                  "text": "48 克"
                 },
                 {
                   "key": "E",
-                  "text": "3"
+                  "text": "16 克"
                 }
               ],
-              "answer": "C",
+              "answer": "A",
               "scoring_rule": "",
-              "explanation": "設經過 t 年。40×(1/2)^(t/8)=5 ⇒ (1/2)^(t/8)=1/8=(1/2)³ ⇒ t/8=3 ⇒ t=24 年。兩步：先把剩餘比例寫成 (1/2)ⁿ 解 n，再乘週期。錯選：只算一個半衰期(8年剩20)或誤判 2 次衰減得 16。",
-              "review_advice": "半衰期兩步：先把剩餘比例寫成 (1/2)ⁿ 解 n，再乘週期。",
+              "explanation": "X 經 24 年＝3 個半衰期，剩 64×(1/2)³＝8 克。設 Y 原有 m 克，經 24 年＝2 個半衰期，剩 m×(1/2)²＝m/4。令 m/4＝8，得 m＝32 克。",
+              "review_advice": "半衰期題先算「經過幾個半衰期」＝總時間÷半衰期，再乘 (1/2) 的次方；兩物比較時分別列式再解方程。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -518,7 +518,7 @@
               "id": "MA-V2-B01-THU-Q06",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "機率-條件機率"
               ],
@@ -526,34 +526,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "袋中有 3 顆紅球與 2 顆白球。不放回連續取出 2 顆球。已知「第 1 顆取到紅球」，則「第 2 顆也取到紅球」的條件機率為何？",
+              "stem": "某工廠甲、乙兩條產線分別生產全部產品的 60% 與 40%。甲線不良率為 2%，乙線不良率為 5%。今隨機抽出一件產品，發現為不良品，則它來自乙線的機率為何？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "1/2"
+                  "text": "3/8"
                 },
                 {
                   "key": "B",
-                  "text": "2/5"
+                  "text": "5/8"
                 },
                 {
                   "key": "C",
-                  "text": "3/5"
+                  "text": "1/2"
                 },
                 {
                   "key": "D",
-                  "text": "1/4"
+                  "text": "2/5"
                 },
                 {
                   "key": "E",
-                  "text": "3/10"
+                  "text": "5/16"
                 }
               ],
-              "answer": "A",
+              "answer": "B",
               "scoring_rule": "",
-              "explanation": "已知第 1 顆是紅球後，袋中剩 2 紅 2 白共 4 顆，第 2 顆為紅的機率 = 2/4 = 1/2。錯選 3/10 是『兩顆都紅』的無條件機率、2/5 是單取一顆紅。",
-              "review_advice": "條件機率：把『已知事件』發生後的狀態當新樣本空間再算。",
+              "explanation": "由貝氏定理，P(乙|不良)＝P(乙)P(不良|乙) ÷ [P(甲)P(不良|甲)+P(乙)P(不良|乙)]＝(0.4×0.05)÷(0.6×0.02+0.4×0.05)＝0.02÷0.032＝5/8。",
+              "review_advice": "條件機率反推來源用貝氏定理：分子是該來源的聯合機率，分母是所有來源聯合機率之和。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -566,7 +566,7 @@
               "unit_tags": [
                 "MA-U-條件機率"
               ],
-              "estimated_minutes": 3,
+              "estimated_minutes": 4,
               "long_question": false,
               "official_bank_status": "formal_online"
             },
@@ -1262,7 +1262,7 @@
               "id": "MA-V2-B02-TUE-Q01",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "數列-等比"
               ],
@@ -1270,34 +1270,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "已知等比數列 5, 10, 20, 40, … 。求此數列的第 7 項。",
+              "stem": "一等比數列中，第 3 項為 12、第 6 項為 96。求此數列前 8 項的和。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "160"
+                  "text": "381"
                 },
                 {
                   "key": "B",
-                  "text": "640"
+                  "text": "511"
                 },
                 {
                   "key": "C",
-                  "text": "280"
+                  "text": "765"
                 },
                 {
                   "key": "D",
-                  "text": "320"
+                  "text": "1020"
                 },
                 {
                   "key": "E",
-                  "text": "1280"
+                  "text": "1023"
                 }
               ],
-              "answer": "D",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "首項 5、公比 2，第 7 項 = 5×2⁶ = 5×64 = 320。",
-              "review_advice": "等比通項 aₙ=a₁·rⁿ⁻¹，注意指數是 n−1。",
+              "explanation": "公比 r 滿足 r³＝96/12＝8，故 r＝2；首項 a₁＝12/r²＝12/4＝3。前 8 項和 S₈＝a₁(r⁸−1)/(r−1)＝3×(256−1)/1＝765。",
+              "review_advice": "等比先由兩項比值求公比 r，再回推首項，最後套等比級數和公式 Sₙ＝a₁(rⁿ−1)/(r−1)。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -1310,7 +1310,7 @@
               "unit_tags": [
                 "MA-U-數列級數"
               ],
-              "estimated_minutes": 3,
+              "estimated_minutes": 4,
               "long_question": false,
               "official_bank_status": "formal_online"
             },
@@ -1742,7 +1742,7 @@
               "id": "MA-V2-B02-THU-Q06",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "統計-百分位數"
               ],
@@ -1750,34 +1750,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "某社團 8 位成員的服務時數（小時）由小到大為：3, 5, 5, 8, 10, 12, 15, 20。求此組資料的第 75 百分位數。",
+              "stem": "一組資料 3, 5, 7, 9, 11 的平均數為 7。若將每個數值都先加上 4、再乘以 2，得到一組新資料。求新資料的變異數。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "12"
+                  "text": "8"
                 },
                 {
                   "key": "B",
-                  "text": "13.5"
+                  "text": "16"
                 },
                 {
                   "key": "C",
-                  "text": "15"
+                  "text": "64"
                 },
                 {
                   "key": "D",
-                  "text": "12.5"
+                  "text": "32"
                 },
                 {
                   "key": "E",
-                  "text": "13"
+                  "text": "40"
                 }
               ],
-              "answer": "B",
+              "answer": "D",
               "scoring_rule": "",
-              "explanation": "n=8，第 75 百分位數位置 = 8×0.75 = 6（整數），依大考中心定義取第 6 與第 7 筆的平均 = (12+15)/2 = 13.5。",
-              "review_advice": "百分位位置 = n×(p/100)；若為整數，取該筆與下一筆的平均。",
+              "explanation": "原資料變異數＝[(−4)²+(−2)²+0+2²+4²]/5＝40/5＝8。整組加常數變異數不變；整組乘以 k 變異數變為 k² 倍。故新變異數＝8×2²＝32。",
+              "review_advice": "變異數對『加減常數』不變、對『乘以 k』變 k² 倍；先判斷平移與縮放再套性質，不必重算每一項。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -1790,7 +1790,7 @@
               "unit_tags": [
                 "MA-U-統計"
               ],
-              "estimated_minutes": 3,
+              "estimated_minutes": 4,
               "long_question": false,
               "official_bank_status": "formal_online"
             },
@@ -2473,7 +2473,7 @@
               "id": "MA-V2-B03-TUE-Q01",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "對數-基本運算"
               ],
@@ -2481,34 +2481,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "求 log₂ 8 + log₃ 9 的值。",
+              "stem": "已知 log₁₀2 ≈ 0.301。試問 2⁵⁰ 是幾位數的整數？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "6"
+                  "text": "15"
                 },
                 {
                   "key": "B",
-                  "text": "4"
-                },
-                {
-                  "key": "C",
                   "text": "17"
                 },
                 {
+                  "key": "C",
+                  "text": "50"
+                },
+                {
                   "key": "D",
-                  "text": "72"
+                  "text": "51"
                 },
                 {
                   "key": "E",
-                  "text": "5"
+                  "text": "16"
                 }
               ],
               "answer": "E",
               "scoring_rule": "",
-              "explanation": "log₂8=log₂2³=3；log₃9=log₃3²=2。相加 = 3+2 = 5。",
-              "review_advice": "把真數寫成底數的次方，logₐaᵏ=k。",
+              "explanation": "log₁₀(2⁵⁰)＝50×log₁₀2≈50×0.301＝15.05。整數位數＝⌊15.05⌋＋1＝16 位。",
+              "review_advice": "求正整數位數用常用對數：位數＝⌊log₁₀N⌋＋1；先把次方拉到 log 前面再乘。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -2953,7 +2953,7 @@
               "id": "MA-V2-B03-THU-Q06",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "機率-期望值"
               ],
@@ -2961,34 +2961,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "某抽獎活動每張券中獎機率為 1/10，中獎可得 100 元，未中獎得 0 元。求購買一張券的獎金期望值。",
+              "stem": "某遊戲每次入場費 50 元。擲一顆公正骰子，出現 6 點得 200 元，出現 4 或 5 點得 80 元，其餘點數無獎金。求玩一次的期望淨利（獎金扣除入場費）。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "100 元"
-                },
-                {
-                  "key": "B",
-                  "text": "1 元"
-                },
-                {
-                  "key": "C",
                   "text": "10 元"
                 },
                 {
+                  "key": "B",
+                  "text": "0 元"
+                },
+                {
+                  "key": "C",
+                  "text": "−10 元"
+                },
+                {
                   "key": "D",
-                  "text": "50 元"
+                  "text": "30 元"
                 },
                 {
                   "key": "E",
-                  "text": "90 元"
+                  "text": "60 元"
                 }
               ],
-              "answer": "C",
+              "answer": "A",
               "scoring_rule": "",
-              "explanation": "期望值 = 100×(1/10) + 0×(9/10) = 10 元。",
-              "review_advice": "期望值 = Σ(獎金×該獎金的機率)。",
+              "explanation": "期望獎金＝200×(1/6)+80×(2/6)+0×(3/6)＝(200+160)/6＝60 元。期望淨利＝60−50＝10 元。",
+              "review_advice": "期望值＝各結果×機率之總和；淨利題最後別忘了扣掉固定成本（入場費）。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -3001,7 +3001,7 @@
               "unit_tags": [
                 "MA-U-機率"
               ],
-              "estimated_minutes": 3,
+              "estimated_minutes": 4,
               "long_question": false,
               "official_bank_status": "formal_online"
             },
@@ -3697,7 +3697,7 @@
               "id": "MA-V2-B04-TUE-Q01",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "對數-基本運算"
               ],
@@ -3705,34 +3705,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "求 log₂ 1024 的值。",
+              "stem": "解方程式 log₂x + log₂(x−2) = 3。",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "9"
+                  "text": "2"
                 },
                 {
                   "key": "B",
-                  "text": "10"
+                  "text": "3"
                 },
                 {
                   "key": "C",
-                  "text": "11"
+                  "text": "4"
                 },
                 {
                   "key": "D",
-                  "text": "512"
+                  "text": "6"
                 },
                 {
                   "key": "E",
-                  "text": "100"
+                  "text": "8"
                 }
               ],
-              "answer": "B",
+              "answer": "C",
               "scoring_rule": "",
-              "explanation": "1024=2¹⁰，故 log₂1024=10。",
-              "review_advice": "把真數寫成 2 的次方，指數即為答案。",
+              "explanation": "合併為 log₂[x(x−2)]＝3，故 x(x−2)＝2³＝8，即 x²−2x−8＝0，(x−4)(x+2)＝0。因對數需 x>2，取 x＝4。",
+              "review_advice": "對數方程先用加法律合併，再化成指數式解；解出後務必檢查真數為正（定義域）刪去不合解。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -3745,7 +3745,7 @@
               "unit_tags": [
                 "MA-U-指對數應用"
               ],
-              "estimated_minutes": 3,
+              "estimated_minutes": 4,
               "long_question": false,
               "official_bank_status": "formal_online"
             },
@@ -4177,7 +4177,7 @@
               "id": "MA-V2-B04-THU-Q06",
               "math_track": "A/B",
               "question_type": "single_choice",
-              "difficulty": "送分",
+              "difficulty": "中難",
               "knowledge_tags": [
                 "組合-基本"
               ],
@@ -4185,34 +4185,34 @@
                 "MA-A2",
                 "MA-A9"
               ],
-              "stem": "從 5 位候選人中選出 2 位擔任幹部（不分職務），共有多少種不同的選法？",
+              "stem": "從 5 位男生與 4 位女生中選出 4 人組成委員會，且委員會中至少要有 1 位女生。共有多少種不同的選法？",
               "materials": [],
               "options": [
                 {
                   "key": "A",
-                  "text": "20"
-                },
-                {
-                  "key": "B",
-                  "text": "25"
-                },
-                {
-                  "key": "C",
-                  "text": "5"
-                },
-                {
-                  "key": "D",
                   "text": "120"
                 },
                 {
+                  "key": "B",
+                  "text": "121"
+                },
+                {
+                  "key": "C",
+                  "text": "125"
+                },
+                {
+                  "key": "D",
+                  "text": "126"
+                },
+                {
                   "key": "E",
-                  "text": "10"
+                  "text": "246"
                 }
               ],
-              "answer": "E",
+              "answer": "B",
               "scoring_rule": "",
-              "explanation": "不分職務即為組合：C(5,2)=10 種。（若分職務才用排列 P(5,2)=20。）",
-              "review_advice": "『不分先後、不分職務』用組合 C(n,k)；分職務才用排列。",
+              "explanation": "用排容：全部選法 C(9,4)＝126，扣掉『完全沒有女生（4 人全男）』C(5,4)＝5，得 126−5＝121。",
+              "review_advice": "『至少一個』的組合題用補集最快：全部情形減去『完全沒有』的情形。",
               "review_notes": [
                 "Claude v3 真學測難度階梯：送分→中難→壓軸；答案 sympy 斷言；圖表為真渲染。"
               ],
@@ -4225,7 +4225,7 @@
               "unit_tags": [
                 "MA-U-排列組合"
               ],
-              "estimated_minutes": 3,
+              "estimated_minutes": 4,
               "long_question": false,
               "official_bank_status": "formal_online"
             },
