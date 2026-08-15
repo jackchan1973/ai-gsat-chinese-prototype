@@ -142,3 +142,34 @@ header.app-hero .home-return-action:hover {
 .bank-alert {
   display: none !important;
 }
+
+/* ---- 6. 兩欄式作答：左邊材料(固定sticky)、右邊題目捲動（比照國文閱讀關） ---- */
+.split-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 38%) 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.split-layout > .split-material {
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+}
+.split-layout > .split-material:empty {
+  display: none;
+}
+/* 左側材料為空時，右欄佔滿 */
+.split-layout:has(> .split-material:empty) {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 900px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+  .split-layout > .split-material {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}

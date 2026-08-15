@@ -453,9 +453,6 @@ function renderSystemPlan(systemPlan) {
             <span>${escapeHtml(subject.current_formal_count)} 題</span>
           </div>
           <p>${escapeHtml(subject.coverage_status)}</p>
-          <div class="task-meta">
-            ${(subject.weekly_days || []).map((day) => `<span class="tag">${escapeHtml(day)}</span>`).join("")}
-          </div>
         </article>
       `,
     )

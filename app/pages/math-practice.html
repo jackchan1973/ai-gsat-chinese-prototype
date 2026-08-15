@@ -1140,9 +1140,11 @@
               </div>
               <span class="bank-status">${escapeHtml(statusText)}</span>
             </div>
-            ${(day.day_materials || []).map(renderMaterial).join("")}
-            <div class="bank-list">
-              ${dayQuestions.map((question, index) => renderQuestion({ weekday: day.weekday, question }, index)).join("")}
+            <div class="split-layout">
+              <div class="split-material">${(day.day_materials || []).map(renderMaterial).join("")}</div>
+              <div class="bank-list">
+                ${dayQuestions.map((question, index) => renderQuestion({ weekday: day.weekday, question }, index)).join("")}
+              </div>
             </div>
           </section>
         `;
