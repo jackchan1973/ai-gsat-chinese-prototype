@@ -240,3 +240,19 @@ header.app-hero .home-return-action:hover {
   background: transparent !important;
   padding: 0 12px 12px !important;
 }
+
+/* ---- 8. 英文「文章＋答題卡」分段：每段內部兩欄(左文章sticky/右題目)，手機自動單欄 ---- */
+.english-day-intro {
+  margin-bottom: 16px;
+}
+.english-section {
+  margin: 0 0 18px;
+}
+.english-section.split-layout {
+  gap: 16px;
+}
+.english-section-questions {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui02" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui03" />
     <style>
       .english-practice-page {
         background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -268,7 +268,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui02" />
+    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui03" />
   </head>
   <body class="english-practice-page ui-hero-bg">
     <main class="app-shell english-practice-shell">
@@ -290,23 +290,21 @@
         </summary>
         <section class="english-day-tabs" id="dayTabs" aria-label="選擇英文練習日"></section>
       </details>
-      <div class="split-layout">
-      <section id="materials" class="split-material"></section>
       <form id="englishPracticeForm">
-        <section class="english-question-list" id="questionList" aria-live="polite"></section>
+        <article class="english-material english-day-intro" id="dayIntro"></article>
+        <div id="daySections" aria-live="polite"></div>
         <div class="english-actions">
           <button class="primary-action" type="submit">完成本關看結算</button>
           <button class="secondary-action" type="button" id="resetButton">重挑本關</button>
           <a class="secondary-action link-action" href="./english-bank.html">查看正式題庫</a>
         </div>
       </form>
-      </div>
       <section class="english-score-panel" id="scorePanel" aria-live="polite"></section>
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/banks/english.json?v=20260815-ui02";
-      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/english.json?v=20260815-ui02";
+      const LOCAL_DATA_URL = "../../data/banks/english.json?v=20260815-ui03";
+      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/english.json?v=20260815-ui03";
       const dayNames = { Mon: "週一", Thu: "週四", Sun: "週日" };
       const taskTypeLabels = {
         vocabulary_and_short_reading: "詞彙語境關",
@@ -461,6 +459,76 @@
         `;
       }
 
+      // 依題幹線索把每題歸到它對應的文章，形成「文章＋答題卡」分段（不改題庫）
+      function classifyQuestion(question) {
+        const stem = String(question.stem || "");
+        if (question.question_type === "reading_comprehension") {
+          const match = stem.match(/【閱讀([一二三四五六七八九十]+)】/);
+          const cnMap = { 一: 0, 二: 1, 三: 2, 四: 3, 五: 4, 六: 5 };
+          const articleIndex = match && cnMap[match[1]] != null ? cnMap[match[1]] : 0;
+          return { kind: "reading", articleIndex };
+        }
+        const gapMatch = stem.match(/第\s*(\d+)\s*格/);
+        if (gapMatch) return { kind: "gap", num: parseInt(gapMatch[1], 10) };
+        return { kind: "standalone" };
+      }
+
+      function buildSections(day) {
+        const materials = day.day_materials || [];
+        const gapMaterials = materials.filter((m) => ["cloze", "gapfill", "discourse"].includes(m.type));
+        const readingMaterials = materials.filter((m) => m.type === "reading");
+        const sections = [];
+        const used = new Set();
+        let standaloneSec = null;
+        let gapSec = null;
+        let gapMatPointer = -1;
+        let prevGapNum = null;
+        const readingSecByIdx = {};
+
+        (day.question_slots || []).forEach((question, index) => {
+          const info = classifyQuestion(question);
+          if (info.kind === "standalone") {
+            gapSec = null; prevGapNum = null;
+            if (!standaloneSec) { standaloneSec = { material: null, questions: [] }; sections.push(standaloneSec); }
+            standaloneSec.questions.push({ question, index });
+          } else if (info.kind === "gap") {
+            standaloneSec = null;
+            if (prevGapNum === null || info.num !== prevGapNum + 1 || !gapSec) {
+              gapMatPointer += 1;
+              const material = gapMaterials[gapMatPointer] || null;
+              if (material) used.add(material);
+              gapSec = { material, questions: [] };
+              sections.push(gapSec);
+            }
+            gapSec.questions.push({ question, index });
+            prevGapNum = info.num;
+          } else {
+            standaloneSec = null; gapSec = null; prevGapNum = null;
+            const ai = info.articleIndex;
+            if (!readingSecByIdx[ai]) {
+              const material = readingMaterials[ai] || null;
+              if (material) used.add(material);
+              readingSecByIdx[ai] = { material, questions: [] };
+              sections.push(readingSecByIdx[ai]);
+            }
+            readingSecByIdx[ai].questions.push({ question, index });
+          }
+        });
+
+        // 防呆：任何沒被引用到的文章仍完整呈現（放最前，避免遺漏材料）
+        const orphan = materials.filter((m) => !used.has(m));
+        orphan.forEach((m) => sections.unshift({ material: m, questions: [] }));
+        return sections;
+      }
+
+      function renderSection(section) {
+        const hasMat = Boolean(section.material);
+        const matHtml = hasMat ? `<section class="split-material">${renderMaterial(section.material)}</section>` : "";
+        const qHtml = section.questions.map(({ question, index }) => renderQuestion(question, index)).join("");
+        const cls = hasMat ? "english-section split-layout" : "english-section";
+        return `<section class="${cls}">${matHtml}<div class="english-section-questions">${qHtml}</div></section>`;
+      }
+
       function renderActiveDay() {
         const day = days.find((item) => item.day_id === activeDayId) || days[0];
         if (!day) return;
@@ -469,14 +537,11 @@
         document.getElementById("scorePanel").classList.remove("show");
         document.getElementById("scorePanel").innerHTML = "";
         renderTabs();
-        document.getElementById("materials").innerHTML = `
-          <article class="english-material">
-            <h3>${escapeHtml(day.label)}</h3>
-            <p>${escapeHtml(focusText(day.planned_focus))}</p>
-          </article>
-          ${(day.day_materials || []).map(renderMaterial).join("")}
+        document.getElementById("dayIntro").innerHTML = `
+          <h3>${escapeHtml(day.label)}</h3>
+          <p>${escapeHtml(focusText(day.planned_focus))}</p>
         `;
-        document.getElementById("questionList").innerHTML = (day.question_slots || []).map(renderQuestion).join("");
+        document.getElementById("daySections").innerHTML = buildSections(day).map(renderSection).join("");
       }
 
       function getSelectedValues(form, index) {
