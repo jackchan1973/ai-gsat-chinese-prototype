@@ -169,6 +169,12 @@ function renderTaskTabs(tasks, activeTaskId) {
         </button>`;
     })
     .join("");
+  const activeTask = (tasks || []).find((t) => t.task_id === activeTaskId) || (tasks || [])[0];
+  const cur = document.getElementById("questPickerCurrent");
+  if (cur && activeTask) {
+    const focus = (activeTask.weekly_focus || "").split("：")[0] || "國文闖關";
+    cur.textContent = `第 ${activeTask.day_number || "?"} 天｜${focus}`;
+  }
   el.querySelectorAll(".bank-day-tab").forEach((btn) => {
     btn.addEventListener("click", () => {
       localStorage.setItem(storageKey(SELECTED_TASK_KEY), btn.dataset.taskId);

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui02" />
     <style>
       .bank-page {
         background:
@@ -364,7 +364,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260814" />
+    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui02" />
   </head>
   <body class="bank-page ui-hero-bg">
     <main class="app-shell bank-shell">
@@ -379,7 +379,14 @@
 
       <section class="bank-stats" id="summaryStats" aria-label="統計"></section>
 
-      <section class="bank-day-tabs" id="dayTabs" aria-label="選擇關卡"></section>
+      <details class="quest-picker" id="questPicker">
+        <summary class="quest-picker-summary">
+          <span class="qp-eyebrow">目前關卡</span>
+          <strong class="qp-current" id="questPickerCurrent">選擇關卡</strong>
+          <span class="qp-toggle">切換關卡 <span class="qp-caret">▾</span></span>
+        </summary>
+        <section class="bank-day-tabs" id="dayTabs" aria-label="選擇關卡"></section>
+      </details>
 
       <section class="bank-list" id="bankList" aria-live="polite"></section>
       <section class="math-practice-actions" aria-label="數學作答操作">
@@ -391,7 +398,7 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260813-consolidated01";
+      const DATA_VERSION = "20260815-ui02";
       const LOCAL_DATA_URL = `../../data/banks/math.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `http://139.224.229.242/data/banks/math.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
@@ -1165,9 +1172,18 @@
               </button>`;
           })
           .join("");
+        const active = days.find((d) => d.day_id === activeDayId) || days[0];
+        const cur = document.getElementById("questPickerCurrent");
+        if (cur && active) {
+          const idx = days.indexOf(active);
+          const title = (active.label || "").split("：").slice(-1)[0] || active.label || "";
+          cur.textContent = `第 ${idx + 1} 關｜${title}`;
+        }
         tabs.querySelectorAll(".bank-day-tab").forEach((btn) => {
           btn.addEventListener("click", () => {
             activeDayId = btn.dataset.dayId;
+            const picker = document.getElementById("questPicker");
+            if (picker) picker.open = false;
             renderTabs();
             renderActiveDay();
             document.body.classList.remove("answered");

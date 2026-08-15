@@ -173,3 +173,70 @@ header.app-hero .home-return-action:hover {
     overflow: visible;
   }
 }
+
+/* ---- 7. 關卡選擇收合（手風琴）：手機優先，預設收合、直接看題目 ---- */
+/* 五科練習頁把「選擇闖關日／關卡」的卡片格收進 <details>，點一下才展開 */
+.quest-picker {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  box-shadow: var(--shadow);
+  margin: 16px 0;
+  overflow: hidden;
+}
+.quest-picker > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 10px 16px;
+  user-select: none;
+}
+.quest-picker > summary::-webkit-details-marker {
+  display: none;
+}
+.quest-picker .qp-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.quest-picker .qp-current {
+  flex: 1;
+  min-width: 0;
+  font-size: 1.05rem;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.quest-picker .qp-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+.quest-picker[open] .qp-toggle {
+  color: var(--muted);
+}
+.quest-picker .qp-caret {
+  transition: transform 0.18s ease;
+}
+.quest-picker[open] .qp-caret {
+  transform: rotate(180deg);
+}
+/* 收進手風琴的卡片格：去掉自身外框/陰影/外距，改用手風琴的容器樣式 */
+.quest-picker > .bank-day-tabs,
+.quest-picker > .science-day-tabs,
+.quest-picker > .english-day-tabs,
+.quest-picker > .social-day-tabs {
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 12px 12px !important;
+}

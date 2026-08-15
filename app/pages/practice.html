@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜國文闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
-    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260814" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui02" />
+    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui02" />
   </head>
   <body class="practice-page">
     <main class="app-shell practice-shell">
@@ -38,13 +38,14 @@
         </div>
       </section>
 
-      <section class="panel quest-level-panel" aria-label="選擇闖關日" style="padding:16px;margin-bottom:16px;">
-        <div class="section-title quest-level-title">
-          <div><span class="level-chip">Select</span><h2>選擇闖關日</h2></div>
-          <span>共 30 天</span>
-        </div>
+      <details class="quest-picker" id="questPicker">
+        <summary class="quest-picker-summary">
+          <span class="qp-eyebrow">目前闖關日</span>
+          <strong class="qp-current" id="questPickerCurrent">選擇闖關日</strong>
+          <span class="qp-toggle">切換闖關日 <span class="qp-caret">▾</span></span>
+        </summary>
         <div class="bank-day-tabs" id="taskTabs"></div>
-      </section>
+      </details>
 
       <form id="practiceForm" class="practice-form-stack">
         <section class="panel basic-drill-panel quest-level-panel">
@@ -96,7 +97,7 @@
       </form>
     </main>
 
-    <script src="../assets/js/session.js?v=20260813-consolidated01"></script>
-    <script src="../assets/js/practice.js?v=20260813-consolidated01"></script>
+    <script src="../assets/js/session.js?v=20260815-ui02"></script>
+    <script src="../assets/js/practice.js?v=20260815-ui02"></script>
   </body>
 </html>

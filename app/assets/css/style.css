@@ -1831,6 +1831,23 @@ body {
   line-height: 1.08;
 }
 
+/* 家長頁淺底變體：白卡上要用深色字 */
+.parent-week-heading {
+  margin: 16px 0 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.parent-page .weekly-subject-strip span {
+  border-color: var(--line);
+  background: #f4f8fb;
+}
+.parent-page .weekly-subject-strip strong {
+  color: var(--ink);
+}
+.parent-page .weekly-subject-strip em {
+  color: var(--muted);
+}
+
 .subject-command-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));

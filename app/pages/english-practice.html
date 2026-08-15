@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜英文科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260813-consolidated01" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui02" />
     <style>
       .english-practice-page {
         background: linear-gradient(180deg, #14304c 0, #214f6a 220px, #f3f7fb 220px, #f3f7fb 100%);
@@ -268,7 +268,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260814" />
+    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui02" />
   </head>
   <body class="english-practice-page ui-hero-bg">
     <main class="app-shell english-practice-shell">
@@ -282,7 +282,14 @@
       </header>
 
       <section class="english-practice-summary" id="summaryStats" aria-label="英文練習統計"></section>
-      <section class="english-day-tabs" id="dayTabs" aria-label="選擇英文練習日"></section>
+      <details class="quest-picker" id="questPicker">
+        <summary class="quest-picker-summary">
+          <span class="qp-eyebrow">目前關卡</span>
+          <strong class="qp-current" id="questPickerCurrent">選擇關卡</strong>
+          <span class="qp-toggle">切換關卡 <span class="qp-caret">▾</span></span>
+        </summary>
+        <section class="english-day-tabs" id="dayTabs" aria-label="選擇英文練習日"></section>
+      </details>
       <div class="split-layout">
       <section id="materials" class="split-material"></section>
       <form id="englishPracticeForm">
@@ -298,8 +305,8 @@
     </main>
 
     <script>
-      const LOCAL_DATA_URL = "../../data/banks/english.json?v=20260813-consolidated01";
-      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/english.json?v=20260813-consolidated01";
+      const LOCAL_DATA_URL = "../../data/banks/english.json?v=20260815-ui02";
+      const REMOTE_DATA_URL = "http://139.224.229.242/data/banks/english.json?v=20260815-ui02";
       const dayNames = { Mon: "週一", Thu: "週四", Sun: "週日" };
       const taskTypeLabels = {
         vocabulary_and_short_reading: "詞彙語境關",
@@ -384,6 +391,11 @@
             </button>
           `)
           .join("");
+        const active = days.find((d) => d.day_id === activeDayId) || days[0];
+        const cur = document.getElementById("questPickerCurrent");
+        if (cur && active) {
+          cur.textContent = `第 ${days.indexOf(active) + 1} 關｜${taskTypeLabels[active.task_type] || active.label}`;
+        }
       }
 
       function clozeBlanks(escaped) {
@@ -524,7 +536,10 @@
           const button = event.target.closest("[data-day-id]");
           if (!button) return;
           activeDayId = button.dataset.dayId;
+          const picker = document.getElementById("questPicker");
+          if (picker) picker.open = false;
           renderActiveDay();
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
         document.getElementById("englishPracticeForm").addEventListener("submit", submitAnswers);
         document.getElementById("resetButton").addEventListener("click", () => renderActiveDay());
