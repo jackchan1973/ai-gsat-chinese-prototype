@@ -241,6 +241,36 @@ header.app-hero .home-return-action:hover {
   padding: 0 12px 12px !important;
 }
 
+/* ---- 9. 浮動返回按鈕：手機捲動到哪都能一鍵返回主頁（桌機不顯示避免與底部列重疊）---- */
+.floating-home {
+  position: fixed;
+  left: 14px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);
+  z-index: 60;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(13, 37, 56, 0.92);
+  color: #fff !important;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.floating-home:active {
+  background: #0d2538;
+}
+@media (max-width: 900px) {
+  .floating-home {
+    display: inline-flex;
+  }
+}
+
 /* ---- 8. 英文「文章＋答題卡」分段：每段內部兩欄(左文章sticky/右題目)，手機自動單欄 ---- */
 .english-day-intro {
   margin-bottom: 16px;
