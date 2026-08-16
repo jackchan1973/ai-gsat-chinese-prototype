@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學科闖關</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui05" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui06" />
     <style>
       .bank-page {
         background:
@@ -364,7 +364,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui05" />
+    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui06" />
   </head>
   <body class="bank-page ui-hero-bg">
     <main class="app-shell bank-shell">
@@ -399,7 +399,7 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260815-ui05";
+      const DATA_VERSION = "20260815-ui06";
       const LOCAL_DATA_URL = `../../data/banks/math.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `http://139.224.229.242/data/banks/math.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
@@ -514,10 +514,11 @@
         const approved = questions.filter((item) => item.question.status === "approved_for_app").length;
         const minutes = days.reduce((sum, day) => sum + Number(day.estimated_minutes || 0), 0);
         const stats = [
+          ["關卡", days.length],
           ["總題數", questions.length],
-          ["關卡數", days.length],
-          ["文字作答", written],
-          ["預估分鐘", minutes]
+          ["選擇挑戰", questions.length - written],
+          ["預估分鐘", minutes],
+          ["文字關", written]
         ];
         document.getElementById("summaryStats").innerHTML = stats
           .map(([label, value]) => `<div class="bank-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
