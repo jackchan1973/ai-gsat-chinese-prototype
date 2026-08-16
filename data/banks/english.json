@@ -1490,37 +1490,41 @@
               "id": "EN-V2-B01-D3-Q39",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-MAIN"
+                "EN-MIX-GRAMMAR"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】What is the main idea of this passage?",
+              "stem": "【閱讀二】混合題組。依文意，選出最適合填入空格的動詞形式：\nFor more than a century, the five-day, forty-hour work week ______ almost as a law of nature.",
               "options": [
                 {
                   "key": "A",
-                  "text": "British companies are losing money because of shorter work weeks."
+                  "text": "treats"
                 },
                 {
                   "key": "B",
-                  "text": "The four-day work week is being tested and is challenging long-held assumptions about work."
+                  "text": "has been treated"
                 },
                 {
                   "key": "C",
-                  "text": "Hospitals and restaurants should immediately switch to a four-day week."
+                  "text": "is treating"
                 },
                 {
                   "key": "D",
-                  "text": "Workers today are far lazier than workers a century ago."
+                  "text": "was treating"
+                },
+                {
+                  "key": "E",
+                  "text": "having treated"
                 }
               ],
               "answer": "B",
-              "explanation": "【題幹中譯】這篇文章的主旨是什麼？→【線索句】「the experiments have already changed the conversation… employers and governments… are asking whether the familiar schedule is truly the most productive one—or simply the one we have always known.」（實驗已改變了討論，各方開始質疑熟悉的工時制度是否真的最有效率）。→【正解B】全文介紹四天工作週的試驗、成效與爭議，並點出它挑戰「週工時天經地義」的舊觀念，(B) 最周全。→【辨析】(A) 與「多數公司營收持平甚至微升」相反；(C) 文中明說醫院餐廳難全放，並未主張立即改；(D) 完全非本文論點。→【評析】主旨題，須綜合全文正反論點與收尾，屬中等難度。",
+              "explanation": "【題幹中譯】一個多世紀以來，週休二日、每週 40 小時的工時制度幾乎______被當成一條自然法則。→【線索句】原文：「For more than a century, the five-day, forty-hour work week has been treated almost as a law of nature.」（一個多世紀以來，週休二日、每週 40 小時被當成自然法則）。→【正解B】主詞 work week 是「被當成」，需用被動語態；且時間副詞 For more than a century 表示「從過去持續到現在」，須搭配現在完成式，故用現在完成被動 has been treated，(B) 正確。→【辨析逐選項】(A) treats 為主動現在式，語態、時態皆錯，且與 For more than a century 的持續語意不合；(C) is treating 為主動現在進行式，語態錯；(D) was treating 為主動過去進行式，語態、時態皆錯；(E) having treated 為完成分詞，非限定動詞，無法當本句主要動詞。→【評析】動詞語態／時態題，關鍵在辨識「被動＋現在完成」的雙重線索（For more than a century），屬中等難度。",
               "review_advice": "主旨題涵蓋『試驗＋挑戰舊觀念』兩層，勿選片面或牴觸內文者。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1552,37 +1556,41 @@
               "id": "EN-V2-B01-D3-Q40",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-DETAIL"
+                "EN-MIX-CONN"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】According to the passage, what did the British trial find?",
+              "stem": "【閱讀二】混合題組。依文意與文法，選出最適合填入空格的關係副詞：\nThe largest trial so far took place in the United Kingdom, ______ about sixty companies and several thousand workers took part for six months.",
               "options": [
                 {
                   "key": "A",
-                  "text": "Most companies lost a large part of their revenue."
+                  "text": "where"
                 },
                 {
                   "key": "B",
-                  "text": "Most employees felt more tired than before."
+                  "text": "which"
                 },
                 {
                   "key": "C",
-                  "text": "Most companies decided to keep the four-day week after the trial."
+                  "text": "whose"
                 },
                 {
                   "key": "D",
-                  "text": "Most workers quit their jobs during the trial."
+                  "text": "when"
+                },
+                {
+                  "key": "E",
+                  "text": "what"
                 }
               ],
-              "answer": "C",
-              "explanation": "【題幹中譯】根據本文，英國的試驗發現了什麼？→【線索句】「the great majority of the companies chose to keep the four-day week rather than return to the old schedule.」（絕大多數公司選擇保留四天制，而非回到舊班表）。→【正解C】第三段明載試驗結束後絕大多數公司選擇保留四天制，(C) 正確。→【辨析】(A) 與「營收持平或微升」相反；(B) 與「壓力與疲勞下降」相反；(D) 與「離職大減（far fewer quit）」相反。→【評析】細節題，選項多為原文事實的反向陷阱，屬中等難度。",
+              "answer": "A",
+              "explanation": "【題幹中譯】目前為止最大規模的試驗發生在英國，在那裡約有六十家公司和數千名員工參與了六個月。→【線索句】原文：「The largest trial so far took place in the United Kingdom, where about sixty companies and several thousand workers took part for six months.」→【正解A】先行詞 the United Kingdom 為「地方」，且空格後為結構完整的子句（主詞 companies and workers＋動詞 took part），需用表地方的關係副詞 where（＝in which），(A) 正確。→【辨析逐選項】(B) which 為關係代名詞，後方子句並不缺主詞或受詞，語法不合，且 which 不宜直接指地方作此用法；(C) whose 表所有格，其後須接名詞，此處不缺所有格；(D) when 用於時間先行詞，但先行詞是地點 the United Kingdom，不合；(E) what 不可引導形容詞子句修飾先行詞。→【評析】關係詞題，關鍵在辨識先行詞為「地點」且其後子句完整，屬中等難度。",
               "review_advice": "細節題逐一對照第三段數據，三個錯選都與原文相反。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1614,37 +1622,45 @@
               "id": "EN-V2-B01-D3-Q41",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "multiple_choice",
               "difficulty": "偏難",
               "knowledge_tags": [
-                "EN-READ-VOC"
+                "EN-MIX-MULTI"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】In the fourth paragraph, “the model” refers to ______.",
+              "stem": "【閱讀二】混合題組（多選，應選 3 項）。根據文章第三段對英國試驗結果（the British trial）的描述，下列哪些正確？請選出全部三個正確選項。",
               "options": [
                 {
                   "key": "A",
-                  "text": "the four-day work week"
+                  "text": "Most participating companies reported that their revenue stayed roughly the same or even rose slightly."
                 },
                 {
                   "key": "B",
-                  "text": "the British government"
+                  "text": "Employees reported lower levels of stress and tiredness."
                 },
                 {
                   "key": "C",
-                  "text": "the hospital schedule"
+                  "text": "Far fewer employees quit their jobs than before."
                 },
                 {
                   "key": "D",
-                  "text": "the traditional five-day week"
+                  "text": "Most companies decided to return to the old five-day schedule after the trial."
+                },
+                {
+                  "key": "E",
+                  "text": "The trial was cut short because most companies lost money."
                 }
               ],
-              "answer": "A",
-              "explanation": "【題幹中譯】第四段中，the model 指的是______。→【線索句】「Still, the model is not a perfect fit for every workplace.」（不過，這個模式並不適合每一種職場），承接前文一路討論的四天工作週。→【正解A】the model 回指前文主題「四天工作週（the four-day work week）」，(A) 正確。→【辨析】(B) 政府是後文才登場的另一角色；(C) 醫院班表是被舉來說明限制的例子，非 the model 本身；(D) 五天制是被挑戰的舊制，非此處所指的新模式。→【評析】指代題，須回溯前文核心名詞，屬中等難度。",
+              "answer": [
+                "A",
+                "B",
+                "C"
+              ],
+              "explanation": "【題幹中譯】根據文章第三段對英國試驗結果的描述，下列哪些正確？（應選三項）→【線索句】原文第三段：「Most of the participating companies reported that their revenue stayed roughly the same or even rose slightly. Employees, meanwhile, reported lower levels of stress and tiredness, and far fewer of them quit their jobs. When the trial ended, the great majority of the companies chose to keep the four-day week rather than return to the old schedule.」→【正解A、B、C】(A) 對應「revenue stayed roughly the same or even rose slightly」（營收持平或微升）；(B) 對應「reported lower levels of stress and tiredness」（壓力與疲勞下降）；(C) 對應「far fewer of them quit their jobs」（離職大減），三者皆為原文明載，故為三個正確選項。→【辨析逐選項】(D) 與原文「chose to keep the four-day week rather than return to the old schedule」（選擇保留四天制而非回到舊班表）完全相反，為誤；(E) 原文並未提及試驗被提前中止，且與「營收持平或微升」相矛盾，屬無中生有，為誤。→【評析】多選細節題，三個正解各對應第三段一項數據，兩個誤答分別為「反向陷阱」與「文中未提」，屬中偏難。",
               "review_advice": "指涉題往前找最近且語意相符的名詞：整段都在談四天制。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1676,37 +1692,41 @@
               "id": "EN-V2-B01-D3-Q42",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "偏難",
               "knowledge_tags": [
-                "EN-READ-INFER"
+                "EN-MIX-VOC"
               ],
               "ability_tags": [
                 "EN-A5"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】Which of the following would the author most likely agree with?",
+              "stem": "【閱讀二】混合題組。文章第二段提到「that single free day can mean the difference between a frantic week and a manageable one.」句中 frantic 一字的意思最接近下列何者？",
               "options": [
                 {
                   "key": "A",
-                  "text": "The traditional work week should never be questioned by anyone."
+                  "text": "hurried and full of stress"
                 },
                 {
                   "key": "B",
-                  "text": "A shorter week works equally well for every kind of job."
+                  "text": "calm and well organized"
                 },
                 {
                   "key": "C",
-                  "text": "The four-day week is promising but needs more study before it can suit all workplaces."
+                  "text": "boring and empty"
                 },
                 {
                   "key": "D",
-                  "text": "Six months is clearly long enough to prove the four-day week is perfect."
+                  "text": "cheap and simple"
+                },
+                {
+                  "key": "E",
+                  "text": "long and profitable"
                 }
               ],
-              "answer": "C",
-              "explanation": "【題幹中譯】作者最可能同意下列何者？→【線索句】「the experiments have already changed the conversation」搭配「a trial lasting only six months cannot show what might happen over many years」與「the model is not a perfect fit for every workplace」，語氣持平。→【正解C】作者一面呈現正面成效、一面列出「不適用所有職場」與「六個月看不出長期」的保留，故最可能認同 (C)：前景看好但仍需更多研究才能適用所有職場。→【辨析】(A) 與全文「重新質疑舊制」相反；(B) 與「並非適合所有職場」相反；(D) 與「短期試驗看不出長期」的保留相反。→【評析】推論／態度題，須抓住作者平衡、審慎的語氣，屬中偏難。",
+              "answer": "A",
+              "explanation": "【題幹中譯】文章第二段提到「那一天的休假，可能就是『frantic 的一週』與『manageable（可應付）的一週』之間的差別」，句中 frantic 一字最接近下列何者？→【線索句】原文：「For many parents, that single free day can mean the difference between a frantic week and a manageable one.」frantic 與 manageable（從容可應付）形成對比，並承接前文「a frantic week」與「waste less time」「lower levels of stress」等脈絡。→【正解A】frantic 意為「手忙腳亂、慌亂緊張的」，與 manageable 相反，最接近 hurried and full of stress（匆忙且充滿壓力），(A) 正確。→【辨析逐選項】(B) calm and well organized（冷靜又有條理）正是 manageable 一週的樣子，與 frantic 語意相反；(C) boring and empty（無聊空洞）與「忙亂」無關；(D) cheap and simple（便宜簡單）談的是價格與難易，非情緒或步調；(E) long and profitable（漫長又有利可圖）與 frantic 的慌亂含意不符。→【評析】字義題，須靠 frantic 與 manageable 的對比及全段語境推得，屬中偏難。",
               "review_advice": "推論作者立場題，抓文末平衡語氣：看好但仍需更多研究。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3265,37 +3285,41 @@
               "id": "EN-V2-B02-D3-Q39",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-MAIN"
+                "EN-MIX-GRAMMAR"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】What is the main idea of this passage?",
+              "stem": "【閱讀二】文法（語態／時態填充）：依原文語意，下列句子空格應填入何者？\nThis fast-growing movement ______ as citizen science, and thanks to the smartphone in almost everyone's pocket, taking part has never been easier.",
               "options": [
                 {
                   "key": "A",
-                  "text": "Smartphones have made professional scientists completely unnecessary."
+                  "text": "knows"
                 },
                 {
                   "key": "B",
-                  "text": "Ordinary people can help real scientific research through citizen science."
+                  "text": "is known"
                 },
                 {
                   "key": "C",
-                  "text": "Birdwatching is now the most popular hobby in the whole world."
+                  "text": "was knowing"
                 },
                 {
                   "key": "D",
-                  "text": "A warming climate can only be studied by very large research teams."
+                  "text": "has been knowing"
+                },
+                {
+                  "key": "E",
+                  "text": "knew"
                 }
               ],
               "answer": "B",
-              "explanation": "【題幹中譯】這篇文章的主旨是什麼？【線索句】This fast-growing movement is known as citizen science… Volunteers act as thousands of extra eyes and ears（這股風潮稱為公民科學……志工成了數千雙額外的眼睛耳朵）。【正解B】全文說明公民科學如何讓一般人協助真實研究，並談對科學家與志工雙方的益處，(B)『一般人能透過公民科學協助真正的科學研究』最貼主旨。【辨析】(A) 過度，文中說志工是『額外』眼耳而非取代專家；(C) 賞鳥只是舉例；(D) 與『若無業餘大軍幾乎不可能』相反。【評析】此為主旨題，屬中等；須選能涵蓋『一般人＋協助研究』兩要素的統括選項。",
+              "explanation": "【題幹中譯】這股快速成長的風潮『被稱為』公民科學，而且靠著幾乎人人口袋裡的智慧手機，參與從未如此容易。【線索句】原文為 This fast-growing movement is known as citizen science（這股快速成長的風潮被稱為公民科學）。【正解B】主詞 movement 是『被稱呼』的動作承受者，須用被動語態 be known as；且全文陳述現況（現在式），故用現在簡單式被動 is known，(B) 正確。【辨析】(A)knows 為主動且語態錯，movement 不會主動去『知道』；(C)was knowing、(D)has been knowing 皆為 know 的進行式，know 屬狀態動詞一般不用進行式，且語態錯誤；(E)knew 為主動過去式，語態與時態皆不合現況陳述。【評析】此為語態／時態題，屬中等；關鍵在辨識主詞為動作承受者須用 be+p.p. 被動，並配合全文現在式語境選 is known。",
               "review_advice": "主旨題涵蓋『一般人協助研究』的核心。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3327,37 +3351,41 @@
               "id": "EN-V2-B02-D3-Q40",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-DETAIL"
+                "EN-MIX-CONN"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】According to the passage, how do birdwatchers take part in citizen science?",
+              "stem": "【閱讀二】文法（連接詞／詞性填充）：依原文語意，下列句子空格應填入何者？\nThe volunteers do not replace the experts; ______, they stretch the reach of research into places no single laboratory could ever follow.",
               "options": [
                 {
                   "key": "A",
-                  "text": "They build their own small laboratories at home."
+                  "text": "instead"
                 },
                 {
                   "key": "B",
-                  "text": "They are paid a monthly salary by research teams."
+                  "text": "therefore"
                 },
                 {
                   "key": "C",
-                  "text": "They study only frogs on summer nights."
+                  "text": "for example"
                 },
                 {
                   "key": "D",
-                  "text": "They use a free app to report the species, date, and location they observe."
+                  "text": "in short"
+                },
+                {
+                  "key": "E",
+                  "text": "as a result"
                 }
               ],
-              "answer": "D",
-              "explanation": "【題幹中譯】根據本文，賞鳥者如何參與公民科學？【線索句】Birdwatchers… use a free app to report every species they spot, along with the date and the exact location（賞鳥者用免費 App 回報看到的每種鳥及日期、確切地點）。【正解D】原文明說賞鳥者用免費 App 回報鳥種、日期與地點，(D) 完全對應線索句。【辨析】(A) 文中未提自建實驗室；(B) 志工是義務參與、非領薪；(C) 聽蛙是別的專案，且賞鳥回報的是鳥而非蛙。【評析】此為細節題，屬中等；答案須回原文 report every species… date… location 逐一比對，慎防 (C) 張冠李戴。",
+              "answer": "A",
+              "explanation": "【題幹中譯】志工並非取代專家；『反而』他們把研究的觸角延伸到任何單一實驗室都無法企及的地方。【線索句】原文為 The volunteers do not replace the experts; instead, they stretch the reach of research…（志工並非取代專家；反而，他們擴展了研究的觸角）。【正解A】前句為否定『不取代』，後句提出相反的正面事實『而是擴展觸角』，兩者為對比／更正關係，須用 instead（反而、而是），(A) 正確。【辨析】(B)therefore、(E)as a result 表因果結論，但前後非因果；(C)for example 表舉例，後句非前句之例證；(D)in short 表總結，後句是對比而非摘要。【評析】此為連接詞（轉承語）題，屬中等；須抓住 do not…；後句轉折『而是』的對比邏輯選 instead。",
               "review_advice": "細節題定位第二段的 App 回報內容。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3389,37 +3417,45 @@
               "id": "EN-V2-B02-D3-Q41",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "multiple_choice",
               "difficulty": "偏難",
               "knowledge_tags": [
-                "EN-READ-VOC"
+                "EN-MIX-MULTI"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】In the third paragraph, “this army of amateurs” refers to ______.",
+              "stem": "【閱讀二】細節（多選，應選 3 項）：根據本文，志工被要求做的觀察工作包括下列哪些？請選出所有正確選項（本題正確選項共 3 項）。",
               "options": [
                 {
                   "key": "A",
-                  "text": "the large number of volunteers"
+                  "text": "Photograph wildflowers."
                 },
                 {
                   "key": "B",
-                  "text": "professional scientists in laboratories"
+                  "text": "Repair expensive laboratory equipment."
                 },
                 {
                   "key": "C",
-                  "text": "the research funding"
+                  "text": "Measure rainfall."
                 },
                 {
                   "key": "D",
-                  "text": "the students’ teachers"
+                  "text": "Listen for frogs on summer nights."
+                },
+                {
+                  "key": "E",
+                  "text": "Design the research project themselves."
                 }
               ],
-              "answer": "A",
-              "explanation": "【題幹中譯】第三段中 “this army of amateurs” 指的是什麼？【線索句】Volunteers act as thousands of extra eyes and ears… Some discoveries… would have been almost impossible without this army of amateurs（志工像數千雙額外的眼睛耳朵……若無這支業餘大軍幾乎不可能）。【正解A】this army of amateurs（這支業餘大軍）緊接在志工描述之後，即指眾多志工，(A)『為數眾多的志工』正確。【辨析】(B) 專業科學家正是與業餘者相對的一方；(C) 經費非人；(D) 老師是末段才登場的另一角色。【評析】此為指代／字義題，屬偏難；抓住 amateurs 與前文 volunteers 的呼應即可定指代對象。",
+              "answer": [
+                "A",
+                "C",
+                "D"
+              ],
+              "explanation": "【題幹中譯】根據本文，志工被要求從事的觀察工作包括哪些？【線索句】Other projects ask volunteers to photograph wildflowers, measure rainfall, count butterflies, or even listen for frogs on summer nights（其他專案請志工拍野花、量雨量、數蝴蝶，甚至在夏夜聆聽蛙鳴）。【正解ACD】此三項皆逐字出現在第二段列舉句中：(A)拍野花 photograph wildflowers、(C)量雨量 measure rainfall、(D)夏夜聽蛙鳴 listen for frogs on summer nights，均為志工實際被要求的觀察任務。【辨析】(B) 修理昂貴實驗室設備：文中無此敘述，反而強調發現不必出自昂貴實驗室；(E) 自行設計研究專案：原文為 A research team designs a project and asks the public to record（由研究團隊設計專案、請大眾記錄），設計者是研究團隊而非志工，故錯。【評析】此為多選細節題，屬偏難；正確選項共 3 項（＝宣告數），須回第二段列舉句逐字比對，排除文中未提及（B）與角色張冠李戴（E）的干擾。",
               "review_advice": "指涉題往前找 this 所代的名詞：眾多志工。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3451,37 +3487,41 @@
               "id": "EN-V2-B02-D3-Q42",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "偏難",
               "knowledge_tags": [
-                "EN-READ-INFER"
+                "EN-MIX-VOC"
               ],
               "ability_tags": [
                 "EN-A5"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】Why are volunteers valuable to scientists, according to the passage?",
+              "stem": "【閱讀二】字義／片語：In the third paragraph, the phrase “stretch the reach of research” is closest in meaning to ______.",
               "options": [
                 {
                   "key": "A",
-                  "text": "Because they are always more accurate than trained experts."
+                  "text": "extend how far research can go"
                 },
                 {
                   "key": "B",
-                  "text": "Because they can completely replace laboratory equipment."
+                  "text": "slow down the pace of research"
                 },
                 {
                   "key": "C",
-                  "text": "Because they can gather far more data across many places than a small team of experts."
+                  "text": "reduce the cost of research"
                 },
                 {
                   "key": "D",
-                  "text": "Because they work for scientists without ever resting."
+                  "text": "hide the results of research"
+                },
+                {
+                  "key": "E",
+                  "text": "repeat the same research again"
                 }
               ],
-              "answer": "C",
-              "explanation": "【題幹中譯】根據本文，志工為何對科學家有價值？【線索句】No research team, however well funded, could place trained observers in every forest, park, and backyard… Volunteers act as thousands of extra eyes and ears, gathering far more information than a small group of experts ever could。【正解C】原文說再有錢的團隊也無法同時遍佈各地，志工像數千雙眼耳、蒐集遠超專家小組的資訊，(C)『能跨越眾多地點蒐集遠多於小型專家團隊的資料』正確。【辨析】(A) 文中未主張志工比專家更準；(B) 誇大，志工補的是人力覆蓋而非取代設備；(D)『從不休息』無中生有。【評析】此為推論／細節題，屬偏難；關鍵在 far more information 與 every forest, park, and backyard 的覆蓋廣度。",
+              "answer": "A",
+              "explanation": "【題幹中譯】第三段中片語 “stretch the reach of research” 意思最接近下列何者？【線索句】they stretch the reach of research into places no single laboratory could ever follow（他們把研究的觸角延伸到任何單一實驗室都無法企及的地方）。【正解A】stretch the reach 意為『延展所及範圍』，配合 into places…（延伸到……的地方），代入為『擴展研究所能觸及的範圍』，與 extend how far research can go（延伸研究能達到的範圍）語意最貼合，(A) 正確。【辨析】(B)slow down the pace 放慢步調，與『延伸範圍』無關；(C)reduce the cost 降低成本，文中未談成本；(D)hide the results 隱藏結果，與 into places 的擴展語意相反；(E)repeat the same research 重複研究，並非『擴大範圍』之意。【評析】此為片語字義題，屬偏難；須由 reach（所及範圍）與 into places…could ever follow 的語境，判斷 stretch the reach＝擴大研究觸及的範圍。",
               "review_advice": "抓第三段『extra eyes and ears, gathering far more information』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5037,37 +5077,41 @@
               "id": "EN-V2-B03-D3-Q39",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-MAIN"
+                "EN-MIX-GRAMMAR"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】What is the main idea of this passage?",
+              "stem": "【閱讀二】In the second paragraph, the writer notes that some of history’s famous discoveries and stories ______ to have arrived not during busy hours of work, but in dull moments. Which choice best completes the sentence to match the original passage?",
               "options": [
                 {
                   "key": "A",
-                  "text": "Boredom is always harmful and should be avoided at all costs."
+                  "text": "are said"
                 },
                 {
                   "key": "B",
-                  "text": "Smartphones are the best possible cure for empty time."
+                  "text": "say"
                 },
                 {
                   "key": "C",
-                  "text": "Allowing ourselves to be bored may actually have real value."
+                  "text": "have said"
                 },
                 {
                   "key": "D",
-                  "text": "Famous discoveries were all made on slow trains."
+                  "text": "are saying"
+                },
+                {
+                  "key": "E",
+                  "text": "was said"
                 }
               ],
-              "answer": "C",
-              "explanation": "【題幹中譯】這篇文章的主旨是什麼？【線索句】we may be quietly losing something valuable when we never once allow ourselves to be bored（若從不讓自己無聊，我們或許正悄悄失去珍貴之物），末段 the most useful thing we can possibly do is nothing at all。【正解C】(C)「讓自己無聊其實可能有真正的價值」貼合全文為「無聊」翻案、論其創意與自省益處的立場。【辨析】(A) 與全文立場相反；(B) 文章正是質疑一有空就滑手機；(D) 慢車只是舉例，原文用 some/said to，並非「全部」。【評析】屬主旨/標題題，須抓「無聊有價值」的核心論點，避開以偏概全的干擾項。難度中等。",
+              "answer": "A",
+              "explanation": "【題幹中譯】第二段提到，歷史上一些著名的發現與故事「據說」並非在忙碌的工作時段、而是在乏味的時刻中出現。哪一選項最能完成句子並與原文一致？【線索句】Some of history’s famous discoveries and stories are said to have arrived...（有些著名的發現與故事據說是在…出現的）。【正解A】主詞 discoveries and stories 為「被說」，需用被動語態且主詞為複數，故用 are said；後接 to have arrived 表更早發生的動作，句構完整。【辨析】(B) say 為主動，語意變成「發現會說話」不合理；(C) have said 為現在完成主動，語態錯誤；(D) are saying 進行式主動，語態與語意皆錯；(E) was said 為單數，與複數主詞 discoveries and stories 不一致。【評析】屬語態／時態填充題，關鍵在辨識複數主詞＋被動 be said to 的固定結構。難度中等。",
               "review_advice": "主旨題抓作者為無聊『翻案』的核心立場。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5099,37 +5143,41 @@
               "id": "EN-V2-B03-D3-Q40",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
-              "difficulty": "偏難",
+              "question_type": "single_choice",
+              "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-DETAIL"
+                "EN-MIX-CONN"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】According to the passage, why can boredom help creativity?",
+              "stem": "【閱讀二】In the final paragraph, the writer says such advice is hard to follow in a world designed to keep us distracted, ______ it may be more valuable now than it has ever been before. Which choice best fits the passage?",
               "options": [
                 {
                   "key": "A",
-                  "text": "Because an unoccupied mind tends to wander and produce fresh ideas."
+                  "text": "yet"
                 },
                 {
                   "key": "B",
-                  "text": "Because it forces people to work much harder and faster."
+                  "text": "so"
                 },
                 {
                   "key": "C",
-                  "text": "Because it makes people fall asleep and rest deeply."
+                  "text": "because"
                 },
                 {
                   "key": "D",
-                  "text": "Because it removes all uncomfortable thoughts at once."
+                  "text": "unless"
+                },
+                {
+                  "key": "E",
+                  "text": "as if"
                 }
               ],
               "answer": "A",
-              "explanation": "【題幹中譯】根據本文，無聊為何能幫助創造力？【線索句】When the mind is unoccupied and a little restless, it tends to wander... the mental state in which many people come up with fresh ideas（當心智無所事事又略帶焦躁，便會漫遊…正是許多人想出新點子的狀態）。【正解A】(A)「因為無所事事的心智會漫遊並產生新點子」與原文因果一致。【辨析】(B) 與「無所事事」相反；(C) 文中談的是清醒漫遊而非入睡休息；(D) 第三段反而說被逃避的問題會浮現，非移除不適念頭。【評析】屬細節/因果題，關鍵在定位第二段 wander→fresh ideas 的推理鏈。屬偏難。",
+              "explanation": "【題幹中譯】末段說，這種建議在一個被設計成使我們分心的世界裡很難遵循，「____」它現在或許比以往任何時候都更有價值。哪一選項最貼合原文？【線索句】Such advice is hard to follow..., yet it may be more valuable now than it has ever been before（這種建議很難遵循，然而它現在或許比以往更有價值）。【正解A】前後兩句語意相反（難遵循 vs. 更有價值），需用轉折連接詞 yet。【辨析】(B) so 表結果，因果不成立；(C) because 表原因，語意不通；(D) unless 表條件「除非」，與句意不合；(E) as if 表「彷彿」，語意不合。【評析】屬連接詞／詞性填充題，關鍵在判斷前後子句為「對比轉折」關係。難度中等。",
               "review_advice": "細節題定位第二段 wander→fresh ideas 的因果。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5161,37 +5209,45 @@
               "id": "EN-V2-B03-D3-Q41",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "multiple_choice",
               "difficulty": "偏難",
               "knowledge_tags": [
-                "EN-READ-VOC"
+                "EN-MIX-MULTI"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】In the second paragraph, “this wandering” refers to ______.",
+              "stem": "【閱讀二】According to the passage, which of the following are described as possible benefits of allowing ourselves to be bored? (Choose ALL that apply.)",
               "options": [
                 {
                   "key": "A",
-                  "text": "travelling to famous places by train"
+                  "text": "The mind may wander and come up with fresh ideas and unexpected solutions."
                 },
                 {
                   "key": "B",
-                  "text": "the mind drifting from one loose thought to another"
+                  "text": "We may notice thoughts we have been avoiding and understand ourselves better."
                 },
                 {
                   "key": "C",
-                  "text": "walking around outside while feeling bored"
+                  "text": "We may gain quiet moments in which the mind can rest, wander, and surprise us."
                 },
                 {
                   "key": "D",
-                  "text": "searching the internet for new ideas"
+                  "text": "Boredom guarantees that every dull afternoon leads straight to genius."
+                },
+                {
+                  "key": "E",
+                  "text": "Reaching for a phone at once is the surest way to solve our problems."
                 }
               ],
-              "answer": "B",
-              "explanation": "【題幹中譯】第二段中，「this wandering」指的是______。【線索句】it tends to wander, drifting freely from one loose thought to another. This wandering is exactly the mental state...（心智傾向漫遊，自由地從一個念頭飄向另一個。這種漫遊正是…的心理狀態）。【正解B】this wandering 緊承前句，指「心思從一念飄向另一念的遊走」，故選 the mind drifting from one loose thought to another。【辨析】(A) 把 wander 誤解為搭火車實體旅行；(C) 誤為到處走動；(D) 上網找點子與「放空漫遊」相反。【評析】屬指代/字詞題，關鍵在回指前句同義描述，勿被 wander 的字面「遊走、旅行」誤導。屬偏難。",
+              "answer": [
+                "A",
+                "B",
+                "C"
+              ],
+              "explanation": "【題幹中譯】根據本文，下列哪些被描述為「讓自己無聊」可能帶來的好處？（選出所有正確者）【線索句】(A) it tends to wander... come up with fresh ideas and unexpected solutions；(B) we are left alone with our own thoughts... how people notice what they truly want；(C) quiet moments in which the mind could rest, wander, and surprise us。【正解A、B、C】三者分別對應第二段（創意）、第三段（自省）、第四段（讓心智休息漫遊）所述的益處。【辨析】(D) 原文明言 None of this means... every dull afternoon leads straight to genius，作者特意否定此絕對說法；(E) 全文正是質疑「一有空就滑手機」，並非解決之道。【評析】屬多選題，須逐段定位三項益處，並排除文中被明確否定（D）與立場相反（E）的干擾項。宣告 3 項、真項亦為 3 項（A、B、C）。屬偏難。",
               "review_advice": "指涉題回看前句 it tends to wander, drifting...。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5223,37 +5279,41 @@
               "id": "EN-V2-B03-D3-Q42",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "偏難",
               "knowledge_tags": [
-                "EN-READ-INFER"
+                "EN-MIX-VOC"
               ],
               "ability_tags": [
                 "EN-A5"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】What would the author most likely suggest?",
+              "stem": "【閱讀二】In the last paragraph, the phrase “trading away quiet moments” is closest in meaning to ______.",
               "options": [
                 {
                   "key": "A",
-                  "text": "People should fill every empty minute with entertainment."
+                  "text": "giving up those quiet moments in exchange for something else"
                 },
                 {
                   "key": "B",
-                  "text": "Boredom always leads directly to important discoveries."
+                  "text": "buying more free time from other people"
                 },
                 {
                   "key": "C",
-                  "text": "Thinking about oneself is something best avoided."
+                  "text": "making those quiet moments last much longer"
                 },
                 {
                   "key": "D",
-                  "text": "People should sometimes put away their screens and let their minds wander."
+                  "text": "sharing quiet moments with close friends"
+                },
+                {
+                  "key": "E",
+                  "text": "carefully recording every quiet moment"
                 }
               ],
-              "answer": "D",
-              "explanation": "【題幹中譯】作者最可能提出什麼建議？【線索句】When we reach for a screen at the very first hint of emptiness, we may be trading away quiet moments in which the mind could rest, wander, and surprise us（一有空虛就抓螢幕，可能換走了讓心智休息、漫遊並帶來驚喜的安靜時刻）。【正解D】(D)「人們有時該放下螢幕、讓思緒漫遊」正是作者末段惋惜語氣所暗示的建議。【辨析】(A) 與文旨相反；(B) 作者明言並非每個乏味午後都通向天才，用詞保留；(C) 文中肯定獨處自省的價值，非要避免。【評析】屬推論/延伸題，關鍵在由末段的惋惜與 do nothing at all 反推作者立場。屬偏難。",
+              "answer": "A",
+              "explanation": "【題幹中譯】末段片語「trading away quiet moments」的意思最接近______。【線索句】When we reach for a screen at the very first hint of emptiness, we may be trading away quiet moments in which the mind could rest, wander, and surprise us（一有空虛就抓螢幕，我們可能正把那些能讓心智休息、漫遊並帶來驚喜的安靜時刻換掉）。【正解A】trade away 意為「（用…）換掉、捨棄」，故指「放棄那些安靜時刻以換取別的東西（滑手機）」。【辨析】(B) 曲解為向他人買時間，文中無此意；(C) 與「捨棄」相反，並非延長；(D) 與人分享，非原意；(E) 記錄，與 trade away 無關。【評析】屬字義／片語題，關鍵在掌握 trade away 「用某物換掉、捨棄」的語意，並結合上下文「抓螢幕換走安靜時刻」的因果。屬偏難。",
               "review_advice": "推論建議題呼應末段『the most useful thing...is nothing at all』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6812,37 +6872,41 @@
               "id": "EN-V2-B04-D3-Q39",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-MAIN"
+                "EN-MIX-GRAMMAR"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】What is the main idea of this passage?",
+              "stem": "【閱讀二】根據文章第二段，作者描述樹根與真菌的關係：「The roots of most trees ______ in extremely fine threads of fungus, far too thin to notice.」依原文語態與時態，空格應填入下列何者？",
               "options": [
                 {
                   "key": "A",
-                  "text": "Trees compete so fiercely that a forest can never cooperate at all."
+                  "text": "wrap"
                 },
                 {
                   "key": "B",
-                  "text": "Fungi are harmful parasites that slowly kill most forest trees."
+                  "text": "are wrapped"
                 },
                 {
                   "key": "C",
-                  "text": "Forests are connected underground, and trees share resources and even warnings."
+                  "text": "wrapping"
                 },
                 {
                   "key": "D",
-                  "text": "The safest possible way to cut down very old trees."
+                  "text": "have wrapped"
+                },
+                {
+                  "key": "E",
+                  "text": "were wrapping"
                 }
               ],
-              "answer": "C",
-              "explanation": "【題幹中譯】本文的主旨為何？【線索句】原文：「the trees are quietly connected and share far more than anyone had ever imagined.」（樹木其實悄悄相連、分享的遠比想像多）並詳述地下真菌網路傳送養分、水與警訊。【正解C】「森林在地下相連，樹木分享資源甚至警訊」最貼主旨。【辨析】(A) 與全文「其實會合作」相反；(B) 文中真菌是互利夥伴而非害樹寄生蟲；(D) 砍樹安全法非本文主題。【評析】主旨（main idea）題，須抓「連結、合作」的核心論點；屬中等閱讀題。",
+              "answer": "B",
+              "explanation": "【題幹中譯】依原文語態與時態，空格應填入哪一個？【線索句】原文：「The roots of most trees are wrapped in extremely fine threads of fungus」（多數樹的根被極細的真菌絲包覆）。【正解B】主詞 The roots 是「被」真菌絲包覆的受詞，且全文陳述普遍事實用現在式，故用現在式被動語態 are wrapped。【辨析】(A) wrap 為主動現在式，語意變成「樹根去包覆真菌」與原意相反；(C) wrapping 為分詞，無法單獨當述語動詞，句子缺主要動詞；(D) have wrapped 為主動完成式，語態錯誤；(E) were wrapping 為過去進行主動，時態與語態皆不合，全文以現在式描述普遍事實。【評析】語態與時態辨析題，關鍵在辨識主詞為動作承受者（被動）＋普遍事實（現在式）；屬中等文法題。",
               "review_advice": "主旨題抓『地下相連＋分享資源與警訊』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6874,37 +6938,41 @@
               "id": "EN-V2-B04-D3-Q40",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
+              "question_type": "single_choice",
               "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-DETAIL"
+                "EN-MIX-CONN"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】According to the passage, how are trees connected to each other?",
+              "stem": "【閱讀二】文章第三段提到真菌搬運養分與訊息並非無償：「The fungi are not doing this for free, of course; ______ moving food and messages, they receive sugars from the trees.」依原文語意與詞性，空格應填入下列何者？",
               "options": [
                 {
                   "key": "A",
-                  "text": "Through their leaves touching high up in the wind."
+                  "text": "instead of"
                 },
                 {
                   "key": "B",
-                  "text": "Through birds that carry seeds between them."
+                  "text": "in return for"
                 },
                 {
                   "key": "C",
-                  "text": "Through rivers running past their trunks."
+                  "text": "regardless of"
                 },
                 {
                   "key": "D",
-                  "text": "Through underground threads of fungus wrapped around their roots."
+                  "text": "in spite of"
+                },
+                {
+                  "key": "E",
+                  "text": "as well as"
                 }
               ],
-              "answer": "D",
-              "explanation": "【題幹中譯】依本文，樹木彼此如何相連？【線索句】原文：「The roots of most trees are wrapped in extremely fine threads of fungus... which spread through the soil and link one tree to another.」（多數樹根被極細真菌絲包覆，穿過土壤把樹連起來。）【正解D】「透過包覆樹根的地下真菌絲」與原文完全一致。【辨析】(A) 葉子相觸、(B) 鳥傳種子、(C) 河流經過皆非文中所述連結方式，屬無中生有。【評析】細節（detail）題，定位 roots...wrapped in...fungus 一句；屬中等閱讀題。",
+              "answer": "B",
+              "explanation": "【題幹中譯】依原文語意與詞性，空格應填入哪一個？【線索句】原文：「in return for moving food and messages, they receive sugars from the trees」（真菌以搬運養分與訊息換取樹木的糖分）。【正解B】in return for「以…作為回報／交換」正好表達真菌搬運養分訊息、樹木回饋糖分的互利交換，且後接動名詞 moving，詞性相符。【辨析】(A) instead of「而非、取代」語意相反；(C) regardless of「不管、無視」不合互利語境；(D) in spite of「儘管、雖然」表讓步，與交換關係不符；(E) as well as「以及」為對等連接，無法表達「作為回報」的交換關係。【評析】連接詞／片語語意與詞性辨析題，須抓「互利交換」語境並確認後接動名詞；屬中等題。",
               "review_advice": "細節題定位第二段 fine threads of fungus...link one tree to another。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6936,37 +7004,45 @@
               "id": "EN-V2-B04-D3-Q41",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
-              "difficulty": "偏難",
+              "question_type": "multiple_choice",
+              "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-DETAIL"
+                "EN-MIX-MULTI"
               ],
               "ability_tags": [
                 "EN-A4"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】According to the passage, what can happen when insects attack one tree?",
+              "stem": "【閱讀二】根據文章第二段，樹木可以透過地下真菌網路（'wood wide web'）在彼此之間傳送哪些東西？下列選項中，何者屬於原文明確提到能透過此網路來回傳遞的項目？（本題為多選題，請選出全部三個正確選項）",
               "options": [
                 {
                   "key": "A",
-                  "text": "Nearby trees receive a warning signal and begin to prepare their defences."
+                  "text": "Sugar（糖）"
                 },
                 {
                   "key": "B",
-                  "text": "All the nearby trees suddenly die at the same time."
+                  "text": "Water（水）"
                 },
                 {
                   "key": "C",
-                  "text": "The attacked tree grows a whole new set of roots overnight."
+                  "text": "Chemical signals（化學訊號）"
                 },
                 {
                   "key": "D",
-                  "text": "The fungus completely vanishes from the soil."
+                  "text": "Sunlight（陽光）"
+                },
+                {
+                  "key": "E",
+                  "text": "Insects（昆蟲）"
                 }
               ],
-              "answer": "A",
-              "explanation": "【題幹中譯】依本文，當昆蟲攻擊一棵樹時可能發生什麼事？【線索句】原文：「nearby trees, receiving the message, start to prepare their own chemical defences before the insects even arrive.」（鄰近樹木收到訊息，便在昆蟲到來前先備好化學防禦。）【正解A】「鄰近樹木收到警訊並開始準備防禦」與原文吻合。【辨析】(B) 一起死亡誇大且與「合作存活」相反；(C) 一夜長新根為虛構；(D) 真菌消失文中未提且與互利關係矛盾。【評析】細節（detail）題，鎖定「送訊號→鄰樹備防禦」的因果鏈；屬偏難閱讀題。",
+              "answer": [
+                "A",
+                "B",
+                "C"
+              ],
+              "explanation": "【題幹中譯】樹木可透過地下真菌網路來回傳遞哪些項目？（多選，選出全部三個正確項）【線索句】原文：「trees can actually pass sugar, water, and chemical signals back and forth」（樹木能來回傳送糖、水與化學訊號）。【正解A、B、C】糖(sugar)、水(water)、化學訊號(chemical signals)三者原文明列，皆可經真菌網路來回傳遞。【辨析】(D) Sunlight 陽光：原文開頭提樹木為『光』競爭，但陽光並非透過地下網路傳送的項目；(E) Insects 昆蟲：昆蟲是啃食樹木、觸發警訊的攻擊者，並非網路傳送之物。【評析】細節多選題，真項數＝宣告數（3），三個正確項全出自同一線索句，全自動判分；屬中等題。",
               "review_advice": "細節題定位第三段的警訊傳遞與鄰樹備防。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6998,37 +7074,41 @@
               "id": "EN-V2-B04-D3-Q42",
               "subject": "英文",
               "mode": "學測",
-              "question_type": "reading_comprehension",
-              "difficulty": "偏難",
+              "question_type": "single_choice",
+              "difficulty": "中等",
               "knowledge_tags": [
-                "EN-READ-INFER"
+                "EN-MIX-VOC"
               ],
               "ability_tags": [
                 "EN-A5"
               ],
               "source_type": "AI新題",
               "status": "approved_for_app",
-              "stem": "【閱讀二】What can be inferred from the last paragraph about cutting down an old tree?",
+              "stem": "【閱讀二】文章第二段提到真菌有時把養分從一個樹種送到另一個樹種，「quietly blurring the line between competitor and partner.」畫線片語 blurring the line 在此最接近下列哪一個意思？",
               "options": [
                 {
                   "key": "A",
-                  "text": "It has no effect at all on the rest of the forest."
+                  "text": "明確劃分兩者、使界線更清楚"
                 },
                 {
                   "key": "B",
-                  "text": "It may harm the wider forest by breaking a helpful living connection."
+                  "text": "使兩者之間的界線變得模糊、不再分明"
                 },
                 {
                   "key": "C",
-                  "text": "It always makes the remaining trees grow much faster."
+                  "text": "完全切斷兩者之間的任何關係"
                 },
                 {
                   "key": "D",
-                  "text": "It is the only way to keep a forest healthy."
+                  "text": "在兩者之間畫上一條全新的紅線"
+                },
+                {
+                  "key": "E",
+                  "text": "強迫兩者互相激烈競爭"
                 }
               ],
               "answer": "B",
-              "explanation": "【題幹中譯】就砍倒一棵老樹，末段可推論出什麼？【線索句】原文：「we may be losing far more than its wood; we may be cutting a living thread that once helped an entire forest survive.」（失去的可能遠不只木材，而是切斷曾幫助整片森林存活的活連結。）【正解B】由「損失遠不只木材、切斷活連結」可推：砍老樹可能因破壞有益連結而傷及整片森林。【辨析】(A) 與「損失遠不只木材」相反；(C) 讓其他樹長更快文中無據；(D)「唯一保持健康之道」與全文護林旨意相反。【評析】推論（infer）題，須從 far more than its wood 的暗示延伸；屬偏難閱讀題。",
+              "explanation": "【題幹中譯】畫線片語 blurring the line 最接近哪個意思？【線索句】原文：「the fungi even carry food from a tree of one species to a tree of another, quietly blurring the line between competitor and partner」（真菌把養分從一樹種送到另一樹種，悄悄模糊了競爭者與夥伴的界線）。【正解B】blur the line 意為「使界線模糊、不再分明」，因原本被視為競爭者的樹木其實互相供養，故競爭者與夥伴的分界變模糊。【辨析】(A) 與 blur（模糊）語意相反，界線並非更清楚；(C) 「切斷關係」與原文『互相供養』的連結相反；(D) 「畫新紅線」是製造新界線，與模糊界線相反；(E) 「強迫競爭」與本段強調『競爭者其實也是夥伴』的合作意涵相反。【評析】字義／片語推義題，須由上下文（跨物種供養）推得 blur the line＝『使界線模糊』；屬中等題。",
               "review_advice": "推論題抓末段『cutting a living thread...helped an entire forest survive』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
