@@ -73,7 +73,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "空格動詞受詞是 pain，句意「無法根治但能大幅減輕疼痛」。diminish（減少、減輕）最合語境。amplify 是「放大、增強」，與 significantly 減痛的語意相反；preserve 是「保存、維持」，會變成維持疼痛，不通；inherit 是「繼承」，與疼痛無搭配。",
+              "explanation": "【句意中譯】雖然這款新藥無法完全治癒疾病，卻能在數小時內大幅______病人的疼痛。→【正解C】前有讓步連接詞 Although 與 significantly，語意需與「無法根治」相對、朝正面走：diminish（減少、減輕）與 pain 搭配，正好表「減輕疼痛」。→【辨析】(A) amplify 是「放大、增強」，會變成加重疼痛，與 significantly 減痛語意相反；(B) preserve「保存、維持」等於維持疼痛，不通；(D) inherit「繼承」與 pain 無搭配。→【評析】考點為近義／反義動詞辨析與 Although 讓步語境判讀，屬中等難度。",
               "review_advice": "先抓句首 Although 的轉折與 pain 這個受詞，鎖定表『減輕』的動詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -135,7 +135,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "後半 fill the position（補上職缺）點出空格是「職缺」。vacancy 正是「空缺、職缺」。currency 是「貨幣」、laundry 是「待洗衣物／洗衣店」、ceremony 是「典禮」，都無法被 fill the position 的語境接受。",
+              "explanation": "【句意中譯】公司刊登了一則助理______的招募，希望在旺季前補齊這個職位。→【正解A】後半 fill the position（補上職缺）與 hoping to fill 點出空格是「空缺、職缺」：vacancy 正是可被 post（刊登）與 fill（補上）的招募職缺。→【辨析】(B) currency「貨幣」、(C) laundry「待洗衣物／洗衣店」、(D) ceremony「典禮」，皆無法被 post…for a bilingual assistant、fill the position 的招募語境接受。→【評析】考點為情境搭配詞（招募用語）與 -cy／-ry 結尾名詞辨義，屬中等難度。",
               "review_advice": "看 fill the position 這個線索，推出空格與『職缺』同義。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -197,7 +197,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "常受邀國際演講，代表她在領域中地位「傑出、著名」。prominent（傑出的、著名的）最貼切。reluctant 是「不情願的」、previous 是「先前的」、sensitive 是「敏感的」，都無法解釋『常被邀請演講』的因果。",
+              "explanation": "【句意中譯】身為海洋生物學界一位______的人物，林博士經常受邀到國際研討會演講。→【正解D】「常受邀國際演講」暗示她地位崇高、聲名卓著：prominent（傑出的、著名的）與 figure（人物）搭配成 a prominent figure，因果最順。→【辨析】(A) reluctant「不情願的」、(B) previous「先前的」、(C) sensitive「敏感的」，都無法解釋「常被邀請演講」的原因。→【評析】考點為形容詞語意與因果推理，屬中等難度。",
               "review_advice": "由『常受邀國際演講』回推形容詞應表『知名、重要』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -259,7 +259,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "句意「過量『攝取』含糖飲料會提高糖尿病風險」。consumption（消耗、攝取）符合。其餘為形近字陷阱：constitution 是「憲法／體質」、construction 是「建造」、conservation 是「保育」，皆與『喝進飲料』無關。",
+              "explanation": "【句意中譯】醫生警告，過量______含糖飲料可能提高罹患糖尿病的風險。→【正解B】句意為「過量攝取」含糖飲料：consumption（消耗、攝取）與 excessive、sugary drinks 搭配，指飲食攝取量。→【辨析】皆為 con- 形近字陷阱：(A) constitution「憲法／體質」、(C) construction「建造」、(D) conservation「保育」，都與「把飲料喝進體內」無關。→【評析】考點為 con- 系列形近字辨義與健康情境搭配，屬中等難度。",
               "review_advice": "本題考形近字辨義，抓 sugary drinks + risk of diabetes 鎖定『攝取』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -322,7 +322,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "help them ______ the stress，需要能『處理／應付壓力』的片語。cope with（應付、處理）正確。give away 是「贈送、洩漏」、count on 是「依賴」（依賴壓力不通）、do without 是「沒有…也行」（沒有壓力也行，與 need a mentor 的求助語境矛盾）。",
+              "explanation": "【句意中譯】新手教師常需要一位有經驗的導師，協助他們______首次帶班的壓力。→【正解A】help them ______ the stress 需能「處理、應付壓力」的片語：cope with（應付、處理）與 stress 為固定搭配。→【辨析】(B) give away「贈送、洩漏」；(C) count on「依賴」，依賴壓力不通；(D) do without「沒有…也行」，與 need a mentor 求助的語境矛盾。→【評析】考點為動詞片語搭配（cope with stress），屬中等難度。",
               "review_advice": "片語題先看受詞 the stress，選能與『壓力』搭配表『應付』的片語。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -384,7 +384,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "空格前 can、後接 a luxury，指『負擔得起』這種奢侈。can afford 是固定用法。refuse（拒絕）、donate（捐贈）、borrow（借入）都無法與『一種奢侈』構成合理語意。",
+              "explanation": "【句意中譯】起初，這個點子聽起來像只有富裕社區才______得起的奢侈。→【正解A】空格前為 can、後接 a luxury：can afford（負擔得起）為固定用法，afford a luxury 指「負擔得起這種奢侈」，與下文 However 轉出「其實人人受惠」呼應。→【辨析】(B) refuse「拒絕」、(C) donate「捐贈」、(D) borrow「借入」一種奢侈，皆與語境不合。→【評析】克漏字考 can afford 搭配與語段轉折鋪陳，屬中等難度。",
               "review_advice": "克漏字先判空格詞性(動詞)，再由 a luxury 決定語意。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -446,7 +446,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "前句說植物讓頂樓更涼，which 引導的結果自然是『減少』冷氣用電。reduces 正確。raises（提高）與『更涼』矛盾；predicts（預測）、repeats（重複）與用電量無邏輯關係。",
+              "explanation": "【句意中譯】夏天厚厚一層植物讓頂樓更涼，這______了冷氣用電量。→【正解D】前句說植物讓頂樓更涼，which 引導的結果應是「減少」冷氣用電：reduces 與 the amount of electricity 搭配，符合「更涼→少開冷氣」的因果。→【辨析】(A) raises「提高」與「更涼」矛盾；(B) predicts「預測」、(C) repeats「重複」用電量，皆無邏輯關係。→【評析】克漏字考因果邏輯與動詞語意，屬中等難度。",
               "review_advice": "抓 keeps the top floor cooler 的因果，涼→耗電變少。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -508,7 +508,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "前句描述員工上頂樓休息，本句進一步舉出『公司回報員工更平靜專注』這個佐證，屬於補強、加碼語氣，In fact（事實上）最合。By contrast、On the contrary 表相反，但前後語意一致並無對比；For example 需前句先有可舉例的通則，此處是延伸結果而非例證。",
+              "explanation": "【句意中譯】______，好幾家公司回報員工在戶外短暫休息後，顯得更平靜、更專注。→【正解C】前句描述員工上頂樓休息，本句進一步提出「公司回報員工更平靜專注」作為佐證、加碼補強：In fact（事實上）語氣最合。→【辨析】(A) By contrast、(D) On the contrary 皆表相反，但前後語意一致並無對比；(B) For example 需前句先給出可舉例的通則，此處是延伸結果而非例證。→【評析】克漏字考轉承詞（連貫 vs. 轉折 vs. 舉例）辨析，屬中偏難。",
               "review_advice": "轉折詞題先判前後句是『同向補強』還是『相反對比』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -570,7 +570,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "空格後緊接『屋頂要夠堅固、要有人固定澆水』說明需要付出勞力，故 is not effortless（並非毫不費力）最貼合下文。expensive 偏談花費，但下文講的是工夫與維護而非金錢；harmful（有害）、necessary（必要）與後句的『工作量』無關。",
+              "explanation": "【句意中譯】當然，打造屋頂花園並非______。→【正解D】空格後緊接「屋頂要夠堅固、要有人固定澆水」，說明需付出勞力與維護：is not effortless（並非毫不費力）與下文的工作量最貼合。→【辨析】(A) expensive 偏指金錢花費，但下文談的是工夫與維護而非錢；(B) harmful「有害」、(C) necessary「必要」皆與後句「維護負擔」無關。→【評析】克漏字考形容詞語意與下文舉證的呼應，屬中偏難。",
               "review_advice": "看 not 之後由下一句舉的『麻煩事』回推被否定的形容詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -632,7 +632,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "a warmer future（更炎熱的未來）是要去『面對』的挑戰，face a warmer future 語意通順。forget（忘記）、waste（浪費）、delay（延遲）都無法與『未來』構成『因應挑戰』的正向語意，也與前文『實用工具』矛盾。",
+              "explanation": "【句意中譯】它們正成為幫助社區______更炎熱未來的實用工具。→【正解B】a warmer future（更炎熱的未來）是要去「面對、因應」的挑戰：face a warmer future 語意通順，且呼應前文「實用工具」的正向定位。→【辨析】(A) forget「忘記」、(C) waste「浪費」、(D) delay「延遲」未來，皆無法構成「因應挑戰」的正向語意，也與「實用工具」矛盾。→【評析】克漏字考動詞語意與全段主旨收束，屬中等難度。",
               "review_advice": "由受詞 a warmer future 選能表『因應、面對』的動詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -742,7 +742,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "空格前 a、需名詞，句意『遺忘並非單純的記憶“失敗”』。failure（失敗）語意與後文『而是主動歷程』形成對比，最合。importance/connections/reminder 雖為名詞，但『記憶的重要性/連結/提醒』都無法與 not simply a ___ of memory 的貶抑語氣銜接。",
+              "explanation": "【句意中譯】然而科學家如今主張，遺忘並非單純是記憶的一種______。→【正解A】空格前有冠詞 a、需名詞，且 not simply a ___ of memory 帶貶抑語氣，與後文「而是一種主動有用的歷程」形成對比：failure（失敗）最合，呼應開頭「多數人把遺忘當成腦力衰弱」。→【辨析】(B) importance、(E) connections、(H) reminder 雖為名詞，但「記憶的重要性／連結／提醒」都接不上此處的否定與貶抑語氣。→【評析】文意選填考名詞語意與 not…but 對比結構，屬中等難度。",
               "review_advice": "先定詞性(名詞)，再由 not simply...Instead 的對比選貶意詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -820,7 +820,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "with equal ______ 需名詞，句意『若以同等“重要性”儲存每個細節』。importance 正確。failure/connections/reminder 代入『同等失敗/連結/提醒』皆不成句意。",
+              "explanation": "【句意中譯】若大腦以同等的______儲存每個細節，我們很快就會被無用的事實淹沒。→【正解B】with equal ______ 需名詞，句意為「以同等『重要性』儲存」：importance 說明若一視同仁地重視每個細節就會資訊過載，語意通順。→【辨析】(A) failure、(E) connections、(H) reminder 代入「同等失敗／連結／提醒」皆不成句意。→【評析】文意選填考 with equal + 抽象名詞的搭配與語境，屬中等難度。",
               "review_advice": "抓 with equal + 名詞，且下文舉『無用瑣事』說明不該一視同仁。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -898,7 +898,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "which memories to keep and which ones to ______ 需與 keep（保留）相對的動詞，discard（捨棄）正好對立。preserve（保存）與 keep 同義、無對比；recognize（辨識）語意不對；且此處要動詞，failure/connections/importance 詞性不符。",
+              "explanation": "【句意中譯】大腦不斷決定要保留哪些記憶、要______哪些記憶。→【正解C】which memories to keep and which ones to ______ 需與 keep（保留）相對的動詞：discard（捨棄）正好與 keep 對立，呼應下文「像心智的清掃，移除不再重要之物」。→【辨析】(F) preserve「保存」與 keep 同義、無對比；(D) recognize「辨識」語意不對；(A)(B)(E) 為名詞、(G) obvious 為形容詞，詞性皆不符。→【評析】文意選填考 keep vs. discard 反義配對與詞性判斷，屬中等難度。",
               "review_advice": "看 keep...and...to ___ 的『保留 vs. ?』對立結構。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -976,7 +976,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "the brain can more easily ______ the general patterns 需動詞，recognize（辨識、看出）patterns 語意通順。preserve（保存）patterns 雖為動詞卻不合『思考更靈活、看出通則』的語境；discard 與『看出通則』相反；importance 等非動詞。",
+              "explanation": "【句意中譯】當瑣碎舊細節淡去，大腦更容易______經驗中隱藏的通則。→【正解D】the brain can more easily ______ the general patterns 需動詞，recognize（辨識、看出）patterns 語意通順，呼應「思考更靈活、看出通則」（如醫師掌握共同症狀）。→【辨析】(F) preserve「保存」patterns 雖為動詞卻不合「看出通則」的語境；(C) discard 與「看出通則」相反；(A)(B)(E) 非動詞。→【評析】文意選填考 recognize patterns 搭配與段落主旨連貫，屬中等難度。",
               "review_advice": "動詞題，受詞 the general patterns 搭配『辨識、看出』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1054,7 +1054,7 @@
                 }
               ],
               "answer": "E",
-              "explanation": "forming useful ______ between them 需名詞，connections（連結）與 between them 搭配、呼應『建立事件間關聯』。reminder（提醒）between them 不通；importance/failure 語意不合；preserve/recognize/discard 為動詞、obvious 為形容詞，詞性都不符。",
+              "explanation": "【句意中譯】藉由放下單一事件，心智更擅長在事件之間建立有用的______。→【正解E】forming useful ______ between them 需名詞，connections（連結）與 form…between them 搭配，呼應「在事件間建立有用關聯」。→【辨析】(H) reminder「提醒」between them 不通；(B) importance、(A) failure 語意不合；(F) preserve、(D) recognize、(C) discard 為動詞、(G) obvious 為形容詞，詞性皆不符。→【評析】文意選填考 form connections 搭配與 between them 的呼應，屬中等難度。",
               "review_advice": "看 forming useful ___ between them，需可與 between 搭配的名詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1116,7 +1116,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "空格前提出『大家以為 QWERTY 是為打最快而設計』的假設，空格後 The real story, however 立刻轉折要糾正它。(A) 先說『這聽來合理，卻幾乎與事實相反』正好承接假設、預告下文翻案。(B) 是解釋卡鍵機制，屬第 32 格；(C) 建議初學者同時學多種排列，與全文『QWERTY 難被取代』矛盾；(D) 談字母排列鍵盤留給印刷工，屬虛構且與上下文無關。",
+              "explanation": "【前後文連貫】空格前提出「許多人以為 QWERTY 是為了讓人打字最快而精心設計」，空格後 The real story, however 立刻要轉折糾正這個看法。→【正解A】(A)「這種看法聽來十分合理，卻幾乎與事實相反」正好承接前面的假設、預告下文翻案，形成 belief→but the opposite 的過渡。→【辨析】(B) 解釋「把字母分開以降低卡鍵」，屬第 32 格的機制說明；(C) 建議初學者同時學多種排列，與全文「QWERTY 難被取代」矛盾；(D) 談字母排列鍵盤留給印刷工，與上下文無關且屬虛構細節。→【評析】篇章結構考過渡句與轉折語氣（belief vs. truth）的定位，屬中偏難。",
               "review_advice": "插入句題先看空格前後的邏輯鉤子：此處是『假設→糾正』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1178,7 +1178,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "空格前說發明者『把最常連打的字母分開』，空格後 In other words 用『放慢打字以保護機器』重述其效果。(B)『把它們分得很開，迫使金屬桿從不同方向靠近，大幅降低卡鍵機率』正是把『分開字母』與『保護機器』接起來的機制說明。(A) 是引出翻案的過渡句屬第 31 格；(C)、(D) 與此處因果無關。",
+              "explanation": "【前後文連貫】空格前說發明者「刻意把最常連打的字母分開」，空格後 In other words 用「放慢打字以保護機器」重述其效果，中間需填入解釋此舉「如何」奏效的機制句。→【正解B】(B)「把它們分得很開，迫使金屬桿從不同方向靠近，大幅降低卡鍵機率」正好把「分開字母」與「保護機器」接起來，讓 In other words 的總結有所依據。→【辨析】(A) 是引出翻案的過渡句，屬第 31 格；(C) 建議初學者學多種排列、(D) 談字母鍵盤留給印刷工，皆與此處「分開字母→減少卡鍵」的因果無關。→【評析】篇章結構考機制說明句與 In other words 前後的因果銜接，屬中偏難。",
               "review_advice": "看空格後 In other words 重述的是什麼因果，往前補其機制。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1272,7 +1272,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "全文主軸是介紹『珊瑚園藝』這個修復受損珊瑚礁的方法及其侷限，(A) 最能涵蓋。(B) 只是第一段的背景，非全文重點；(C) 珊瑚園藝與『便宜海鮮』無關，屬曲解；(D) 文章沒有敘述珊瑚礁的完整歷史。",
+              "explanation": "【題幹中譯】這篇文章主要在談什麼？→【線索句】「In a technique called coral gardening, divers break healthy corals into small fragments…」（在一種名為珊瑚園藝的技術中，潛水員把健康珊瑚折成小段…），全文並以末段「a way to buy time」收束其侷限。→【正解A】全文主軸是介紹「珊瑚園藝」這個修復受損珊瑚礁的方法及其限制，(A) A method that helps damaged coral reefs recover 最能涵蓋。→【辨析】(B) 物種消失原因只是第一段背景，非全文重點；(C) 珊瑚園藝與「便宜海鮮」無關，屬曲解；(D) 文章並未敘述珊瑚礁的完整歷史。→【評析】主旨題，須辨別「全文重點」與「單段背景／過度延伸」，屬中等難度。",
               "review_advice": "主旨題找貫穿全篇、涵蓋各段的選項，別被單段細節帶走。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1334,7 +1334,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "由下文『失去藻類就轉白、餓死』可推知珊瑚是把藻類『排出』體外，故 expel 意近 push out（驅出、排出）。attract（吸引）與『失去藻類』矛盾；feed（餵養）方向相反；hide（藏起）則珊瑚仍保有藻類，無法解釋隨後的白化與飢餓。",
+              "explanation": "【題幹中譯】第一段中，expel 一字的意思最接近______。→【線索句】「corals expel the tiny algae that live inside them… Without these algae, the corals turn ghostly white」（珊瑚 expel 體內的微藻…失去這些藻類後便轉為慘白），可推知珊瑚是把藻類「排出」體外。→【正解B】由「失去藻類就轉白、餓死」可知 expel 意近 push out（驅出、排出）。→【辨析】(A) attract「吸引」與「失去藻類」矛盾；(C) feed「餵養」方向相反；(D) hide「藏起」則珊瑚仍保有藻類，無法解釋隨後的白化與飢餓。→【評析】字義題，須靠上下文（前後因果）推斷生字，屬中等難度。",
               "review_advice": "字義猜測題用上下文結果回推：排出藻類→轉白→餓死。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1396,7 +1396,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "第二段明說潛水員把珊瑚碎片養在『苗圃』再移植到礁區，『much as a gardener transplants seedlings』正是與農耕類比的原因，(B) 正確。(A) 文中未提大型農田與昂貴機器；(C) 沒有使用化學藥劑加速生長；(D) 農夫與潛水員同隊為無中生有。",
+              "explanation": "【題幹中譯】根據本文，為何珊瑚園藝被比喻為農耕？→【線索句】「the young corals are strong enough to be moved and cemented onto a damaged reef, much as a gardener transplants seedlings into a field」（幼珊瑚夠強壯後便移植、固定到受損礁區，如同園丁把幼苗移植到田裡）。→【正解B】潛水員在「苗圃」養珊瑚碎片再移植，正如農夫育苗、移苗，(B) 正確。→【辨析】(A) 文中未提大型農田與昂貴機器；(C) 沒有使用化學藥劑加速生長；(D) 農夫與潛水員同隊為無中生有。→【評析】細節題，須鎖定 much as… 的類比原句，屬中等難度。",
               "review_advice": "細節題回定位到第二段的類比句 much as a gardener transplants seedlings。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1458,7 +1458,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "末段強調園藝『無法為海洋降溫』、只是『爭取時間』，真正關鍵在『減少使海洋升溫的碳排放』，故 (C) 可推得。(A)、(B) 與文中『緩慢昂貴、只能修復小片、無法降溫』相反；(D) 直接牴觸『海溫續升，最健康的移植珊瑚仍會再白化』。",
+              "explanation": "【題幹中譯】關於珊瑚礁的未來，可從本文推論出下列何者？→【線索句】「it does nothing to cool the ocean itself. If sea temperatures keep climbing, even the healthiest transplanted coral will bleach again.」（它無法為海洋降溫；若海溫續升，最健康的移植珊瑚仍會再度白化），末段並稱其為 a way to buy time while the world works on… cutting the carbon emissions。→【正解C】長遠拯救珊瑚礁取決於「減少使海洋升溫的碳排放」，(C) 可推得。→【辨析】(A)(B) 與「緩慢昂貴、只能修復小片、無法降溫」相反；(D) 直接牴觸「海溫續升，最健康的移植珊瑚仍會再白化」。→【評析】推論題，須整合末兩段的限制與呼籲，屬中偏難。",
               "review_advice": "推論題須有文本依據：抓 buy time 與 cutting carbon emissions。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1520,7 +1520,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "全文介紹四天工作週的試驗、成效與爭議，並點出它挑戰『週工時天經地義』的舊觀念，(B) 最為周全。(A) 與『多數公司營收持平甚至微升』相反；(C) 文中明說醫院餐廳難全放，非主張立即改；(D) 完全非本文論點。",
+              "explanation": "【題幹中譯】這篇文章的主旨是什麼？→【線索句】「the experiments have already changed the conversation… employers and governments… are asking whether the familiar schedule is truly the most productive one—or simply the one we have always known.」（實驗已改變了討論，各方開始質疑熟悉的工時制度是否真的最有效率）。→【正解B】全文介紹四天工作週的試驗、成效與爭議，並點出它挑戰「週工時天經地義」的舊觀念，(B) 最周全。→【辨析】(A) 與「多數公司營收持平甚至微升」相反；(C) 文中明說醫院餐廳難全放，並未主張立即改；(D) 完全非本文論點。→【評析】主旨題，須綜合全文正反論點與收尾，屬中等難度。",
               "review_advice": "主旨題涵蓋『試驗＋挑戰舊觀念』兩層，勿選片面或牴觸內文者。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1582,7 +1582,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "第三段明載試驗結束後『絕大多數公司選擇保留四天制』，(C) 正確。(A) 與『營收持平或微升』相反；(B) 與『壓力與疲勞下降』相反；(D) 與『離職大減』相反。",
+              "explanation": "【題幹中譯】根據本文，英國的試驗發現了什麼？→【線索句】「the great majority of the companies chose to keep the four-day week rather than return to the old schedule.」（絕大多數公司選擇保留四天制，而非回到舊班表）。→【正解C】第三段明載試驗結束後絕大多數公司選擇保留四天制，(C) 正確。→【辨析】(A) 與「營收持平或微升」相反；(B) 與「壓力與疲勞下降」相反；(D) 與「離職大減（far fewer quit）」相反。→【評析】細節題，選項多為原文事實的反向陷阱，屬中等難度。",
               "review_advice": "細節題逐一對照第三段數據，三個錯選都與原文相反。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1644,7 +1644,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "第四段開頭 the model is not a perfect fit for every workplace，承接前文一直討論的『四天工作週』，故 the model 指 (A)。(B) 政府是後文才提到的另一角色；(C) 醫院班表是被舉來說明限制的例子、非 the model 本身；(D) 五天制是被取代的舊制，非此處所指的新模式。",
+              "explanation": "【題幹中譯】第四段中，the model 指的是______。→【線索句】「Still, the model is not a perfect fit for every workplace.」（不過，這個模式並不適合每一種職場），承接前文一路討論的四天工作週。→【正解A】the model 回指前文主題「四天工作週（the four-day work week）」，(A) 正確。→【辨析】(B) 政府是後文才登場的另一角色；(C) 醫院班表是被舉來說明限制的例子，非 the model 本身；(D) 五天制是被挑戰的舊制，非此處所指的新模式。→【評析】指代題，須回溯前文核心名詞，屬中等難度。",
               "review_advice": "指涉題往前找最近且語意相符的名詞：整段都在談四天制。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1706,7 +1706,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "作者一面呈現正面成效、一面列出『不適用所有職場』與『六個月看不出長期』的保留，語氣平衡，故最可能認同 (C)。(A) 與全文『重新質疑舊制』相反；(B) 與『並非適合所有職場』相反；(D) 與作者引述『短期試驗看不出長期』的保留相反。",
+              "explanation": "【題幹中譯】作者最可能同意下列何者？→【線索句】「the experiments have already changed the conversation」搭配「a trial lasting only six months cannot show what might happen over many years」與「the model is not a perfect fit for every workplace」，語氣持平。→【正解C】作者一面呈現正面成效、一面列出「不適用所有職場」與「六個月看不出長期」的保留，故最可能認同 (C)：前景看好但仍需更多研究才能適用所有職場。→【辨析】(A) 與全文「重新質疑舊制」相反；(B) 與「並非適合所有職場」相反；(D) 與「短期試驗看不出長期」的保留相反。→【評析】推論／態度題，須抓住作者平衡、審慎的語氣，屬中偏難。",
               "review_advice": "推論作者立場題，抓文末平衡語氣：看好但仍需更多研究。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1754,7 +1754,7 @@
                 "1. With the growing popularity of online shopping, many traditional bookstores have found it hard to attract customers.",
                 "2. The government encourages people to reduce their use of disposable tableware in order to protect our shared environment."
               ],
-              "explanation": "參考譯文：1) With the growing popularity of online shopping, many traditional bookstores have found it hard to attract customers. 2) The government encourages people to reduce their use of disposable tableware (in order) to protect our shared environment.\n評分要點：第1句 keywords＝『網路購物普及』(the popularity of online shopping)＋『難以吸引顧客』(find it hard to attract customers)；第2句＝『鼓勵民眾減少使用』(encourage people to reduce the use of)＋『一次性餐具』(disposable tableware)＋『以保護環境』(to protect the environment)。時態、主謂一致、拼字正確即可，句型不必與參考譯文完全相同。",
+              "explanation": "【評分導向解析】本題為手寫中譯英，每句 4 分、共 8 分，句型可與參考譯文不同，重在關鍵句型正確與拼字、時態、主謂一致。參考譯文：1) With the growing popularity of online shopping, many traditional bookstores have found it hard to attract customers. 2) The government encourages people to reduce their use of disposable tableware (in order) to protect our shared environment。【第1句評分點】(a)「網路購物越來越普及」→ with the growing popularity of online shopping／as online shopping becomes more popular（介系詞片語或 as 子句擇一）；(b)「很難吸引顧客上門」→ find it hard to attract customers（find it + adj. + to V 句型是關鍵，時態用現在完成 have found 佳）。【第2句評分點】(a)「鼓勵民眾減少使用」→ encourage people to reduce the use of（encourage sb. to V）；(b)「一次性餐具」→ disposable tableware／single-use utensils；(c)「以保護我們共同的環境」→ (in order) to protect our shared environment（不定詞表目的）。常見扣分：漏 to（encourage 後不定詞）、動名詞與名詞混用、tableware 不可數卻加 s、時態不一致。",
               "review_advice": "先框出中文關鍵詞組再組句，注意 encourage sb. to V、find it + adj. + to V 句型。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1848,7 +1848,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "由 so many users felt confused 可知說明書『不夠充分、不足以』讓新手看懂，adequate（足夠的、充分的）最合。hollow（空心的）、violent（暴力的）、curious（好奇的）都無法解釋『看不懂而困惑』的因果。",
+              "explanation": "【句意中譯】那份安裝說明對新手來說不夠______，所以許多首次使用者對如何啟動裝置感到困惑。【正解B】adequate 意為『足夠的、充分的』；後半 so many first-time users felt confused 點出說明不足以讓新手看懂，因果上須填『不夠充分』，not adequate（不夠周全）最合語境。【辨析】(A)hollow 空心的；(C)violent 暴力的；(D)curious 好奇的——三者皆無法解釋『看不懂而困惑』的因果關係。【評析】考點為由結果（confused）反推形容詞語意的詞彙題，屬中等；掌握 adequate 與 enough 同義即可穩答。",
               "review_advice": "抓 not ______ 與 felt confused 的因果，選表『足夠』的字。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1910,7 +1910,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "『因塞車出名、要等二十分鐘』是負面名聲，notorious（惡名昭彰的）貼切。grateful（感激的）用於人；optional（可選擇的）、portable（可攜帶的）與『路口以塞車聞名』語意不搭。",
+              "explanation": "【句意中譯】那個路口以車流壅塞______；駕駛人常要等超過二十分鐘才能通過。【正解A】notorious 意為『惡名昭彰的、以壞事聞名的』；『因塞車出名、要等二十分鐘』屬負面名聲，be notorious for（因……惡名遠播）為固定搭配，切合語境。【辨析】(B)grateful 感激的，只能形容人；(C)optional 可選擇的；(D)portable 可攜帶的——皆與『路口以塞車聞名』語意不搭。【評析】考點在 notorious 的負面內涵與 for 的搭配，屬偏難；須辨別 famous 與 notorious 褒貶差異。",
               "review_advice": "notorious for＋負面事物是固定搭配，抓『因…出名』的貶意。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -1972,7 +1972,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "to its original appearance（回復原貌）點出是『修復』，restore（修復、使恢復）正確。postpone（延期）、exhaust（使精疲力竭）、resemble（相似）都無法接『使廟宇回復原貌』。",
+              "explanation": "【句意中譯】地震後，志工工作了數月，只為把老廟______成原本的樣貌。【正解D】restore 意為『修復、使恢復原狀』；受詞後接 to its original appearance（回復原貌）明白指向『修復』，語意與搭配皆合。【辨析】(A)postpone 延期；(B)exhaust 使精疲力竭；(C)resemble 相似（且為狀態動詞不接 to）——三者都無法接『使廟宇回復原貌』。【評析】考點為由 to its original appearance 定位『修復』語意，屬中等；記住 restore … to … 句型是關鍵。",
               "review_advice": "看 to its original appearance，鎖定『恢復、修復』的動詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2034,7 +2034,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "『聽到快睡著』代表演講單調乏味，monotonous（單調的）最合。hilarious（爆笑的）會讓人清醒；temporary（暫時的）、generous（慷慨的）與『想睡』無因果。",
+              "explanation": "【句意中譯】那場兩小時的演講如此______，好幾個學生幾乎睜不開眼睛。【正解C】monotonous 意為『單調乏味的』；『聽到快睡著』正是演講單調的結果，so…that 因果句填 monotonous 最順。【辨析】(A)hilarious 爆笑的，反而使人清醒；(B)temporary 暫時的；(D)generous 慷慨的——皆與『昏昏欲睡』無因果連結。【評析】考點在由 could hardly keep their eyes open 反推形容詞，屬偏難；易誤選 hilarious 而忽略語意方向。",
               "review_advice": "由 could hardly keep their eyes open 反推形容詞是『單調無聊』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2097,7 +2097,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "hoping it would cut waste 顯示委員會『贊成』此案，vote in favor of（投票贊成）為固定用法。in charge of（負責）、in place of（取代）、in need of（需要）都無法與 voted 及『希望減廢』的正面立場搭配。",
+              "explanation": "【句意中譯】經過長時間討論，委員會終於投票______這項新回收計畫，希望能減少校園垃圾。【正解A】in favor of 意為『贊成、支持』；hoping it would cut waste 顯示委員會持正面立場，vote in favor of（投票贊成）為固定用法。【辨析】(B)in charge of 負責；(C)in place of 取代；(D)in need of 需要——皆無法與 voted 及『希望減廢』的支持態度搭配。【評析】考點為 in + 名詞 的介系詞片語辨義，屬偏難；四者結構相仿，須靠語意（贊成）定奪。",
               "review_advice": "vote in favor of 表『投票贊成』，由後半的正面期待判定。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2159,7 +2159,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "下文說騎士仍要 pedaling、只是變輕鬆，馬達是『輔助』踩踏，assists（協助）正確。replaces（取代）會變成不用踩，與 the rider’s own pedaling 矛盾；ignores（忽略）、measures（測量）語意不通。",
+              "explanation": "【句意中譯】靠著一具能______騎士自身踩踏的小馬達，電動自行車讓人騎得更遠、爬陡坡也不會滿身大汗。【正解B】assists 意為『協助、輔助』；下文強調騎士仍要 pedaling、只是變輕鬆，馬達是『輔助』而非取代踩踏，assists 最合。【辨析】(A)replaces 取代，會變成不用踩，與 the rider’s own pedaling 矛盾；(C)ignores 忽略、(D)measures 測量——語意皆不通。【評析】考點為由 the rider’s own pedaling 判斷『輔助 vs 取代』，屬中等；抓住『仍需踩踏』即可排除 replaces。",
               "review_advice": "抓 the rider’s own pedaling，馬達是輔助非取代。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2221,7 +2221,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "前句是通則『更多人把車留家』，本句舉『某些通勤者省一半時間』作為具體例證，For example（例如）最合。However、In contrast 表轉折對比，但前後同向；By chance（偶然）語意不符。",
+              "explanation": "【前後文連貫／句意中譯】前句是通則『更多人把車留在家』，本句舉『某些通勤者省下一半時間』作為具體例證。【正解C】For example（例如）用來引出具體事例，承接上文通則，前後同向。【辨析】(A)However、(B)In contrast 皆表轉折對比，但前後語意一致並無反差；(D)By chance（偶然）與『舉例說明』的邏輯不符。【評析】考點為轉承詞辨析（舉例 vs 轉折），屬偏難；關鍵在判斷前後句是同向舉例而非對比。",
               "review_advice": "前通則、後具體案例＝舉例關係。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2283,7 +2283,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "拓寬車道的目的是讓大量騎士保持『安全』，keep ... riders safe 語意通順。silent（安靜）、hidden（隱藏）、asleep（睡著）都與『拓寬車道』的目的無關。",
+              "explanation": "【句意中譯】市政府注意到此趨勢，正拓寬自行車道，以讓愈來愈多的騎士保持______。【正解A】safe 意為『安全的』；拓寬車道的目的正是讓大量騎士保持安全，keep … riders safe 語意通順。【辨析】(B)silent 安靜、(C)hidden 隱藏、(D)asleep 睡著——皆與『拓寬車道』的目的無邏輯關聯。【評析】考點為由『拓寬車道』的目的反推受詞補語，屬中等；扣住 keep O + adj. 的目的語意即可。",
               "review_advice": "由 widening bike lanes 的目的推『安全』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2345,7 +2345,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "電池 charged again and again and eventually ______，講電池壽命，最終要『更換』，replaced（被更換）正確。invited（邀請）、forgotten（遺忘）、celebrated（慶祝）與電池壽命無關。",
+              "explanation": "【句意中譯】電池必須一再充電，最終還是得被______。【正解D】replaced 意為『被更換』；charged again and again and eventually ______ 談的是電池壽命，用完最終須更換，replaced 正確。【辨析】(A)invited 邀請、(B)forgotten 遺忘、(C)celebrated 慶祝——皆與電池壽命耗盡的語境無關。【評析】考點為由『電池壽命』語境選被動動詞，屬中等；抓住 eventually 暗示『最終結局＝更換』。",
               "review_advice": "電池反覆充電到壽命終了→『更換』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2407,7 +2407,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "may ______ to be one of the smartest ways 需能接不定詞、表『結果證實』的動詞，prove to be（證明是）為固定用法。refuse to（拒絕）、pretend to（假裝）、hesitate to（猶豫）語意都不合對自行車的正面評價。",
+              "explanation": "【句意中譯】加了安靜馬達的自行車，或許會______是城市中最聰明的移動方式之一。【正解C】prove 意為『證明是、結果證實』；may ______ to be one of the smartest ways 需能接不定詞、表結果的動詞，prove to be（證明是）為固定用法。【辨析】(A)refuse to 拒絕、(B)pretend to 假裝、(D)hesitate to 猶豫——語意皆與對自行車的正面評價相衝突。【評析】考點為 prove to be 句型與正面語氣的搭配，屬偏難；須同時判斷結構（接不定詞）與語意（褒義結論）。",
               "review_advice": "prove to be＝『證明是』，符合對 e-bike 的正面總結。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2517,7 +2517,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "moving in a particular ______ 需名詞，指以特定『模式』擺動，pattern（模式、樣式）正確。sample/decision/reminder 雖為名詞，但『特定的樣本/決定/提醒』無法描述動作方式。",
+              "explanation": "【句意中譯】蜜蜂藉由以特定______擺動身體，精準告訴同伴食物的方位。【正解A pattern】moving in a particular ______ 需名詞，指以特定『模式、樣式』擺動，pattern 描述動作型態最合，in a … pattern 為常見搭配。【辨析】同為名詞的 (D)sample 樣本、(E)decision 決定、(H)reminder 提醒，皆無法形容『動作方式』；precise/distant 為形容詞、indicates 為動詞、delay 語意不符，皆先由詞性排除。【評析】考點為先定詞性（名詞）再定語意，屬偏難；本文可用字有 5 個名詞，須靠 in a … pattern 語感鎖定。",
               "review_advice": "先定詞性(名詞)，a particular ___ 描述動作型態。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2595,7 +2595,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "Few animal signals are so ______ 需形容詞，呼應下句『能傳如此細節』，precise（精確的）最合。distant（遙遠的）是唯一另一形容詞卻語意不符；其餘皆非形容詞。",
+              "explanation": "【句意中譯】很少有動物訊號如此______，多年來研究者難以相信這麼小的腦能傳如此細節的訊息。【正解B precise】Few animal signals are so ______ 需形容詞，呼應下句『能傳如此細節』，precise（精確的）最合。【辨析】字庫中另一形容詞 (G)distant（遙遠的）語意不符；pattern/sample/decision/reminder 為名詞、indicates 為動詞、delay 詞性不合，皆排除。【評析】考點為 so + 形容詞 的空格判斷，屬偏難；先鎖定『唯二形容詞』再以『細節精準』的語意選 precise。",
               "review_advice": "so ___ 接形容詞，對應『細節精準』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2673,7 +2673,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "the length of the waggle ______ how far away 需動詞，indicates（指出、顯示）距離，語意與結構皆合。delay（延遲）為另一動詞但語意不通；pattern 等非動詞。",
+              "explanation": "【句意中譯】擺動的長度則______花有多遠；舞愈長代表路程愈遠。【正解C indicates】the length of the waggle ______ how far away 主詞為單數 length，需第三人稱單數動詞，indicates（指出、顯示）語意與結構皆合。【辨析】字庫另一動詞 (F)delay（延遲）語意不通；pattern/sample 等名詞與 precise/distant 形容詞皆非動詞，先由詞性刪去。【評析】考點為主詞後需動詞、且第三單數 -s，屬偏難；同時檢查詞性與主謂一致是本題關鍵。",
               "review_advice": "主詞 the length＋受詞子句 how far，需『顯示』類動詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2751,7 +2751,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "tasting the tiny ______ of nectar 需名詞，指嚐一點花蜜『樣本』，sample（樣本、少量）正確。decision/reminder 名詞但不能被 taste；distant/delay 詞性不符。",
+              "explanation": "【句意中譯】其他蜜蜂甚至嚐舞者身上帶回的一點花蜜______。【正解D sample】tasting the tiny ______ of nectar 需名詞，指嚐『一小份樣本、少量』花蜜，sample 正確，tiny sample of 搭配自然。【辨析】名詞 (E)decision、(H)reminder 皆不能被 taste（嚐）；(G)distant 形容詞、(F)delay 語意不符，皆排除。【評析】考點為由動詞 taste 反推可被品嚐的具體名詞，屬偏難；『一小份花蜜』的意象是選 sample 的依據。",
               "review_advice": "tasting the tiny ___ of nectar，可被『嚐』的少量名詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2829,7 +2829,7 @@
                 }
               ],
               "answer": "E",
-              "explanation": "reaches a good ______ about where to send 需名詞，蜂群做出『決定』，decision 正確且與 reach a decision 搭配。reminder（提醒）不與 reach 及 about where 搭；其餘詞性不符。",
+              "explanation": "【句意中譯】訊息一隻傳一隻，直到整個蜂群做出該把工蜂派往何處的好______。【正解E decision】reaches a good ______ about where to send 需名詞，蜂群『做出決定』，reach a decision（做出決定）為固定搭配，且 decision about 語意通順。【辨析】(H)reminder（提醒）不與 reach 及 about where 搭配；pattern/sample 已他用或不合，其餘詞性不符，皆排除。【評析】考點為 reach a decision 慣用搭配，屬偏難；字庫僅剩此名詞可用，兼由 collocation 驗證。",
               "review_advice": "reach a good ___ about... 需可與 reach 搭配的名詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2891,7 +2891,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "空格前說傘『幾乎與防雨無關』，空格後接『起源於炎熱國度、最初為擋烈日而非擋雨』。(A)『數千年來它真正的功能是為權貴遮擋烈日』正好把『不是防雨』導向下文『擋太陽』。(B) 談男性撐傘被嘲笑，屬第 32 格；(C) 談現代塑膠傘的結論與此處起源脈絡無關；(D) 雨靴之說為虛構且不合邏輯。",
+              "explanation": "【前後文連貫】空格前說『傘的多數歷史幾乎與防雨無關』，空格後接『它起源於古埃及、中國、印度的炎熱國度，最初是為擋烈日而非擋雨』。【正解A】『數千年來，它真正的功能是為權貴遮擋烈日』正好承接『不是防雨』並導向下文『擋太陽、遮陽』的脈絡，前後語意連貫。【辨析】(B) 談男性公開撐傘被嘲笑，屬第 32 格的『不受歡迎』脈絡；(C) 談現代塑膠傘的結論句，與此處『起源』無關；(D) 雨靴之說既與傘無關又不合邏輯。【評析】考點為以『去防雨→擋太陽』的語意橋接還原句子，屬偏難；抓住空格後 the burning sun 的關鍵詞即可定位。",
               "review_advice": "空格前後是『不是防雨→而是遮陽』的銜接。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -2953,7 +2953,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "空格前說『公開撐傘未必受歡迎』，空格後舉 Hanway 因撐傘被嘲笑為例。(B)『事實上，最早敢公開撐傘的男性常被笑為軟弱或古怪』正好承接『不受歡迎』並帶出 Hanway 例證。(A) 屬第 31 格的遮陽脈絡；(C)、(D) 與『撐傘被嘲笑』的因果無關。",
+              "explanation": "【前後文連貫】空格前說『即便如此，公開撐傘也未必受歡迎』，空格後舉十八世紀倫敦 Jonas Hanway 因雨天撐傘被嘲笑為例。【正解B】『事實上，最早敢公開撐傘的男性常被笑為軟弱或古怪』正好承接『不受歡迎』並帶出 Hanway 的具體例證，語意一氣呵成。【辨析】(A) 屬第 31 格的『遮陽起源』脈絡；(C) 現代塑膠傘、(D) 雨靴之說皆與『撐傘被嘲笑』的因果無關。【評析】考點為以『撐傘不受歡迎→被嘲笑』的邏輯還原句子，屬偏難；空格後 mocked、laughed 的呼應是判斷關鍵。",
               "review_advice": "空格後是 Hanway 被嘲笑的例子，往前補『男性撐傘被笑』的通則。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3047,7 +3047,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "全文以『快時尚低價背後的隱藏代價』為主軸，分述環境與人力兩大代價並談消費者可做的改變，(A) 最能總括。(B) 恰與文旨相反，文章在批判低價模式；(C) 只是環境段的一個細節；(D) 商場只是開場鋪陳，非主題。",
+              "explanation": "【題幹中譯】這篇文章主要在談什麼？【線索句】Behind the low price tags, however, lies a chain of hidden costs（低價背後藏著一連串看不見的代價），下文再分述 The first cost is environmental… The second cost is human…。【正解A】文章以『快時尚低價背後的隱藏代價』為主軸，兼談環境與人力兩大代價及消費者可做的改變，(A) 環境與人力代價最能總括全文。【辨析】(B) 與文旨相反，文章在批判低價模式而非教人壓低成本；(C) 只是環境段的一個細節；(D) 商場僅是開場鋪陳，非主題。【評析】此為主旨題，屬中等；須找能同時貫穿『環境＋人力』兩段的統括選項，避免被局部細節誤導。",
               "review_advice": "主旨題找貫穿環境＋人力兩段的統括選項。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3109,7 +3109,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "第二段明說快時尚衣服『被設計成只穿幾次』，於是大量幾乎沒穿的衣服進垃圾場，(C) 正確。(A) 文中兩千公升是講耗水非成本致廢；(B) 與『多由合成纖維製成』相反；(D) 修補衣服會減少而非增加浪費，與文意相反。",
+              "explanation": "【題幹中譯】根據本文，快時尚為何製造出這麼多廢棄物？【線索句】because fast-fashion garments are designed to be worn only a few times, mountains of barely used clothing end up in landfills（因被設計成只穿幾次，成山幾乎沒穿的衣服進垃圾場）。【正解C】原文明說衣服『被設計成只穿幾次』就丟棄，故大量廢棄物，(C) 完全對應線索句。【辨析】(A) 兩千公升是講耗水非成本致廢；(B) 與『多由合成纖維製成』相反；(D) 修補衣服會減少而非增加浪費，與文意相反。【評析】此為細節題，屬中等；答案須回原文 designed to be worn only a few times 一句照抄比對。",
               "review_advice": "細節題定位第二段『worn only a few times』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3171,7 +3171,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "『rarely share in the profits their labor creates』指工人幾乎分不到他們創造的利潤，share in 意近『receive a part of（分得一部分）』，故 (D)。(A) give away 是『送出』方向相反；(B) complain about（抱怨）與 profits 不搭；(C) hide from（躲避）語意不合。",
+              "explanation": "【題幹中譯】第三段中片語 “share in” 意思最接近下列何者？【線索句】the people who actually sew our clothes rarely share in the profits their labor creates（縫衣的人幾乎分不到他們勞動所創造的利潤）。【正解D】share in 意為『分得一部分、共享』，與 receive a part of（分得一部分）最接近，代入語意通順。【辨析】(A)give away 送出，方向相反；(B)complain about 抱怨，與 profits 不搭；(C)hide from 躲避，語意不合。【評析】此為字義題，屬偏難；須由 profits 及 rarely 的語境判斷 share in 為『分得』而非『抱怨或送出』。",
               "review_advice": "由 profits their labor creates 推 share in＝『分得』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3233,7 +3233,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "末段說二手店與換衣活動『especially among the young people who once drove the demand』，可推部分年輕人正反過來幫忙減緩快時尚需求，(B) 正確。(A) 過度推論，文中未說他們不再在乎流行；(C) 與『正在改變』矛盾；(D) 與『修補而非丟棄』的趨勢相反。",
+              "explanation": "【題幹中譯】關於年輕人，可從本文推論出下列何者？【線索句】Second-hand shops and clothing swaps are becoming popular, especially among the young people who once drove the demand for fast fashion（二手店與換衣活動盛行，尤其在曾帶動快時尚需求的年輕人間）。【正解B】由此可推部分年輕人正反過來幫忙減緩快時尚需求，(B)『其中一些人正協助減緩需求』最合理。【辨析】(A) 過度推論，文中未說他們不再在乎流行；(C) 與『正在改變』矛盾；(D) 與『修補而非丟棄』的趨勢相反。【評析】此為推論題，屬偏難；關鍵在 once drove… 與 now becoming popular 的今昔對比，避免 (A)(C) 的過度延伸。",
               "review_advice": "推論要有依據：抓『once drove the demand』的轉向。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3295,7 +3295,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "全文說明『公民科學』如何讓一般人協助真實研究、對科學家與志工雙方的益處，(B) 最貼主旨。(A) 過度，文中說志工是『額外』眼睛耳朵而非取代專家；(C) 賞鳥只是舉例；(D) 與『若無業餘大軍幾乎不可能』相反。",
+              "explanation": "【題幹中譯】這篇文章的主旨是什麼？【線索句】This fast-growing movement is known as citizen science… Volunteers act as thousands of extra eyes and ears（這股風潮稱為公民科學……志工成了數千雙額外的眼睛耳朵）。【正解B】全文說明公民科學如何讓一般人協助真實研究，並談對科學家與志工雙方的益處，(B)『一般人能透過公民科學協助真正的科學研究』最貼主旨。【辨析】(A) 過度，文中說志工是『額外』眼耳而非取代專家；(C) 賞鳥只是舉例；(D) 與『若無業餘大軍幾乎不可能』相反。【評析】此為主旨題，屬中等；須選能涵蓋『一般人＋協助研究』兩要素的統括選項。",
               "review_advice": "主旨題涵蓋『一般人協助研究』的核心。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3357,7 +3357,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "第二段明說賞鳥者用免費 App 回報『每種鳥及日期、確切地點』，(D) 正確。(A) 文中未提自建實驗室；(B) 志工是義務參與、非領薪；(C) 聽蛙是別的專案，且賞鳥回報的是鳥。",
+              "explanation": "【題幹中譯】根據本文，賞鳥者如何參與公民科學？【線索句】Birdwatchers… use a free app to report every species they spot, along with the date and the exact location（賞鳥者用免費 App 回報看到的每種鳥及日期、確切地點）。【正解D】原文明說賞鳥者用免費 App 回報鳥種、日期與地點，(D) 完全對應線索句。【辨析】(A) 文中未提自建實驗室；(B) 志工是義務參與、非領薪；(C) 聽蛙是別的專案，且賞鳥回報的是鳥而非蛙。【評析】此為細節題，屬中等；答案須回原文 report every species… date… location 逐一比對，慎防 (C) 張冠李戴。",
               "review_advice": "細節題定位第二段的 App 回報內容。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3419,7 +3419,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "第三段把志工比作『數千雙額外的眼睛耳朵』，緊接的 this army of amateurs（這支業餘大軍）即指眾多志工，故 (A)。(B) 專業科學家正是與業餘者相對的一方；(C) 經費非人；(D) 老師是末段才出現的另一角色。",
+              "explanation": "【題幹中譯】第三段中 “this army of amateurs” 指的是什麼？【線索句】Volunteers act as thousands of extra eyes and ears… Some discoveries… would have been almost impossible without this army of amateurs（志工像數千雙額外的眼睛耳朵……若無這支業餘大軍幾乎不可能）。【正解A】this army of amateurs（這支業餘大軍）緊接在志工描述之後，即指眾多志工，(A)『為數眾多的志工』正確。【辨析】(B) 專業科學家正是與業餘者相對的一方；(C) 經費非人；(D) 老師是末段才登場的另一角色。【評析】此為指代／字義題，屬偏難；抓住 amateurs 與前文 volunteers 的呼應即可定指代對象。",
               "review_advice": "指涉題往前找 this 所代的名詞：眾多志工。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3481,7 +3481,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "第三段說再有錢的團隊也無法同時遍佈各地，志工像數千雙眼耳，蒐集遠超專家小組的資訊，(C) 正確。(A) 文中未主張志工比專家更準；(B) 誇大，志工補的是人力覆蓋非取代設備；(D) 『從不休息』無中生有。",
+              "explanation": "【題幹中譯】根據本文，志工為何對科學家有價值？【線索句】No research team, however well funded, could place trained observers in every forest, park, and backyard… Volunteers act as thousands of extra eyes and ears, gathering far more information than a small group of experts ever could。【正解C】原文說再有錢的團隊也無法同時遍佈各地，志工像數千雙眼耳、蒐集遠超專家小組的資訊，(C)『能跨越眾多地點蒐集遠多於小型專家團隊的資料』正確。【辨析】(A) 文中未主張志工比專家更準；(B) 誇大，志工補的是人力覆蓋而非取代設備；(D)『從不休息』無中生有。【評析】此為推論／細節題，屬偏難；關鍵在 far more information 與 every forest, park, and backyard 的覆蓋廣度。",
               "review_advice": "抓第三段『extra eyes and ears, gathering far more information』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3526,7 +3526,7 @@
               "stem": "【英文作文・手寫】Many students today spend a large part of their free time on smartphones. Write an English essay of at least 120 words in two paragraphs. In the first paragraph, describe how you or the students around you usually use smartphones in daily life. In the second paragraph, explain whether you think smartphones do more good or more harm to students, and give reasons or examples to support your opinion.",
               "options": [],
               "answer": "參考範文（約 150 字，僅供對照，非唯一寫法）",
-              "explanation": "【評分方式・20 分制】內容(切題、想法充分具體) 5 分＋組織(兩段分明、句意連貫、有轉承) 5 分＋文法句構(時態、主謂一致、句型多樣) 5 分＋字彙拼字(用字得當、拼寫正確) 5 分；字數未達 120 字酌扣。\n【參考範文】Like most of my classmates, I use my smartphone almost every hour of the day. In the morning it wakes me up; on the bus I review English vocabulary or listen to music; and at night I chat with friends and watch short videos to relax. The phone has quietly become my notebook, my camera, and a small library all at once.\nIn my opinion, smartphones do more good than harm, as long as we control how we use them. They let me look up information in seconds and stay close to family who live far away. Of course, spending too many hours on games or social media can waste time and hurt our eyes. The real problem, however, is not the phone itself but the way we use it. If we set clear limits, the smartphone can be a powerful tool rather than a harmful habit.",
+              "explanation": "【評分方式・20 分制】內容 5 分（切題、想法充分具體，兩段各答一問）＋組織 5 分（兩段分明、句意連貫、善用 for example / in my opinion / however 等轉承）＋文法句構 5 分（時態一致、主謂一致、句型多樣）＋字彙拼字 5 分（用字得當、拼寫正確）；未達 120 字酌扣。【寫作導向】第一段用現在簡單式描述日常使用情境（起床、通勤、夜間放鬆）並具體舉例；第二段亮明立場（利多於弊或弊多於利），以 look up information、stay connected 等好處與 waste time、hurt eyes 等壞處對比，末句用 if we set clear limits 收束、呼應立場。【參考範文】Like most of my classmates, I use my smartphone almost every hour of the day. In the morning it wakes me up; on the bus I review English vocabulary or listen to music; and at night I chat with friends and watch short videos to relax. The phone has quietly become my notebook, my camera, and a small library all at once. In my opinion, smartphones do more good than harm, as long as we control how we use them. They let me look up information in seconds and stay close to family who live far away. Of course, spending too many hours on games or social media can waste time and hurt our eyes. The real problem, however, is not the phone itself but the way we use it. If we set clear limits, the smartphone can be a powerful tool rather than a harmful habit.",
               "review_advice": "先想兩段的重點句，再用具體例子(早上、通車、晚上)撐開內容；立場要明確並給理由。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3620,7 +3620,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "『撐不過三天、緊急求援』代表補給『不足』，sufficient（足夠的）正確。transparent（透明的）、reluctant（不情願的）、narrow（狹窄的）都無法形容食物與水的『量夠不夠』。",
+              "explanation": "【句意中譯】救援隊沒有足夠的食物和水撐過三天以上，因此無線電請求緊急補給。【正解D】sufficient「足夠的」直接修飾 food and water，呼應後文「撐不過三天、緊急求援」代表補給量不足，常見搭配 sufficient food/time/evidence。【辨析】(A) transparent「透明的」形容物體通透，不能講量夠不夠；(B) reluctant「不情願的」形容人的態度；(C) narrow「狹窄的」形容寬度或範圍。三者皆無法評斷「數量是否充足」。【評析】考點為抽象形容詞的語境搭配，由 last more than three days 與求援反推「不足」。屬偏難，須靠上下文因果推量。",
               "review_advice": "由 last more than three days 與求援判斷『數量足夠』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3682,7 +3682,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "老師在爭吵升級成打架前必須『介入、出面調停』，intervene 正確。apologize（道歉）、hesitate（猶豫）、celebrate（慶祝）都與『制止衝突』的動作不符。",
+              "explanation": "【句意中譯】當兩名學生開始大聲爭吵，老師必須介入調停，以免口角演變成打架。【正解C】intervene「介入、出面調停」正符合老師在衝突升級前主動制止的動作，語意與 before the quarrel turned into a fight 相扣。【辨析】(A) apologize「道歉」對象錯，該道歉的不是老師；(B) hesitate「猶豫」與「必須立即制止」矛盾；(D) celebrate「慶祝」語境完全不合。【評析】考點為動詞語意辨析，關鍵在抓住 before...turned into a fight 的「防止惡化」線索。屬中等，選項語意區隔明顯。",
               "review_advice": "抓 before the quarrel turned into a fight 的目的：出面制止。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3744,7 +3744,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "缺乏維修、最後為安全封橋，說明橋況『惡化、變壞』，deteriorate 正確。accelerate（加速）、decorate（裝飾）、illustrate（說明、圖解）皆與橋樑劣化無關。",
+              "explanation": "【句意中譯】缺乏定期維修，這座老木橋開始劣化，地方政府最終基於安全將它封閉。【正解A】deteriorate「惡化、變壞」貼合「無維修→為安全封橋」的因果，主詞為橋梁狀況逐漸敗壞。【辨析】(B) accelerate「加速」語意不合，橋不會「加速」；(C) decorate「裝飾」與劣化相反；(D) illustrate「說明、圖解」屬表達動詞，與橋況無關。三者皆為 -ate 結尾的形近字陷阱。【評析】考點為易混形近動詞辨義，須辨 de-/ac-/deco-/illu- 字首與語意。屬偏難，重點在因果邏輯與字義精準。",
               "review_advice": "由 Without regular repairs 與 closed it for safety 推『惡化』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3806,7 +3806,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "prohibit sb. from V-ing（禁止某人做…）與後半『人類食物會讓動物生病』的理由相符，故 prohibit。require（要求）語意相反；remind（提醒）、persuade（說服）都不搭 from feeding 的禁止結構。",
+              "explanation": "【句意中譯】新的公園規定嚴格禁止遊客餵食動物，因為人類食物會使牠們嚴重生病。【正解B】prohibit sb. from V-ing「禁止某人做…」為固定句型，與後半「人類食物會害動物生病」的理由一致，故用 prohibit。【辨析】(A) require「要求」語意相反，會變成「要求遊客餵食」；(C) remind sb. to V「提醒」不接 from；(D) persuade sb. to V「說服」句型與 from feeding 不搭。三者皆無法構成「禁止」語意與正確句構。【評析】考點結合動詞語意與 prohibit...from V-ing 句型，須同時判斷語意與介系詞搭配。屬偏難。",
               "review_advice": "prohibit / stop sb. from V-ing 是固定句型，語意為『禁止』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3869,7 +3869,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "一直浪費紙、月底前『用完』耗材，run out of（用完、耗盡）正確。look up to（景仰）、catch up with（趕上）、get along with（和睦相處）語意都與『耗材見底』無關。",
+              "explanation": "【句意中譯】如果我們照這個速度一直浪費紙張，辦公室會在月底前用完列印耗材。【正解D】run out of「用完、耗盡」呼應前句「一直浪費紙」與 before the end of the month，指耗材見底，主詞 the office 用完 printing supplies。【辨析】(A) look up to「景仰」對象須為人；(B) catch up with「趕上」語意不合；(C) get along with「和睦相處」用於人際關係。三者皆與「耗材用盡」無關。【評析】考點為片語動詞辨義，關鍵在 keep wasting 與時間限定所暗示的「資源耗盡」。屬偏難，四個片語形似但語意迥異。",
               "review_advice": "抓 keep wasting...before the end of the month，選『用完』片語。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3931,7 +3931,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "後文說它同時應付好幾個現代問題，tackles（著手處理、應付）正確。creates（製造）會變成『製造問題』與正面語氣相反；ignores（忽視）、hides（隱藏）都與『解決問題』矛盾。",
+              "explanation": "【句意中譯】維修咖啡館的點子看似平凡，卻同時悄悄「處理」了好幾個現代問題。【正解C】tackles「著手處理、應付」與後文 several modern problems 搭配，且全文對維修咖啡館持肯定語氣，tackle problems 為常見搭配。【辨析】(A) creates「製造」會變成「製造問題」，與正面基調相反；(B) ignores「忽視」、(D) hides「隱藏」皆與「解決問題」矛盾，無法呼應下文列舉的種種好處。【評析】克漏字考動詞語意與全文褒貶一致性，須抓住短文對 repair café 的正面立場。屬偏難。",
               "review_advice": "由 several modern problems 判斷是『處理』而非製造。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -3993,7 +3993,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "前句講『丟掉買新』的方便，本句轉而點出它造成的垃圾與資源浪費，屬語意轉折，However（然而）最合。Therefore（因此）、Similarly（同樣地）為順承；For example（例如）需前句可舉例，皆不符。",
+              "explanation": "【前後文連貫】前句講「東西壞就丟掉買新」的方便省事，本句轉而指出這習慣堆出如山垃圾、耗盡資源。【正解D】However「然而」標示語意轉折，由「方便」轉到「代價」，與空格後的負面結果一致。【辨析】(A) Therefore「因此」、(C) Similarly「同樣地」皆為順承，與轉折語氣不符；(B) For example「例如」需前句可供舉例，但此處是對比而非例證。【評析】考轉折連接詞判讀，關鍵在辨識「便利 vs. 惡果」的語意反差。屬偏難，須通讀前後句掌握邏輯關係。",
               "review_advice": "前『方便』後『壞處』＝轉折，用 However。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4055,7 +4055,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "主題是『修理』，dead lamp/broken zipper 二十分鐘能被『修好』，repaired 正確。replaced（更換）與『維修』相反；purchased（購買）、forgotten（遺忘）與 in twenty minutes 的修復語境不合。",
+              "explanation": "【句意中譯】維修咖啡館證明一盞壞燈或壞拉鍊往往二十分鐘內就能被「修好」。【正解A】repaired「被修好」呼應全文「維修」主題與 in twenty minutes 的短時修復語境，且與後文「壞了不等於沒用」相扣。【辨析】(B) replaced「被更換」與「修理而非丟棄」的主旨相反；(C) purchased「被購買」、(D) forgotten「被遺忘」皆與快速修復語境不合。【評析】克漏字考被動語態動詞語意，須連結全文 repair 主題。屬中等，選項語意區隔清楚。",
               "review_advice": "全篇談 repair，空格是被動『被修好』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4117,7 +4117,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "年長者傳授技術，否則這些技術可能『失傳』，skills might otherwise be lost 正確。sold（被賣）、hidden（被藏）、copied（被複製）都無法表達『技藝消失』之意。",
+              "explanation": "【句意中譯】年長志工傳授那些否則可能永遠「失傳」的實用技術。【正解D】lost「失傳的」與 might otherwise be lost forever 搭配，指技藝若無人傳承便會消失，呼應「傳授」的對比。【辨析】(A) sold「被賣」、(B) hidden「被藏」、(C) copied「被複製」皆無法表達「技藝消失」之意，且與 pass on skills「傳承技術」的正面對照不合。【評析】克漏字考動詞語意與 otherwise 所暗示的假設對比。屬偏難，關鍵在 otherwise 的反向推理。",
               "review_advice": "otherwise be ___ 指若不傳承會怎樣：失傳。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4179,7 +4179,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "前句說鄰居因共修而成朋友，故維修咖啡館也『強化』社區，strengthen 正確。divide（分裂）語意相反；ignore（忽視）、sell（販賣）與『凝聚社區』無關。",
+              "explanation": "【句意中譯】維修咖啡館修的遠不只是機器，久而久之也「強化」了整個社區。【正解B】strengthen「強化、凝聚」承接前句「本不相識的鄰居一起修鐘而成朋友」，指社區關係因此更緊密。【辨析】(A) divide「分裂」語意完全相反；(C) ignore「忽視」、(D) sell「販賣」皆與「凝聚社區」無關。【評析】克漏字考動詞語意與段落收尾的正面昇華，須連結前句「鄰居變朋友」的線索。屬偏難。",
               "review_advice": "由 neighbours...become friends 推對社區是『強化』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4289,7 +4289,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "blamed it on ______ 需名詞，指把拖延怪罪於『懶惰』，laziness 正確且與下句『與意志薄弱有關』呼應。threat/reward 名詞但語意不合『怪罪於』；managing 等詞性不符。",
+              "explanation": "【句意中譯】長久以來人們只是把拖延怪罪於「懶惰」。【正解A】blamed it on ______ 需填名詞當受詞，laziness「懶惰」正符合「怪罪於…」的語意，並與下句「與其說是意志薄弱」形成對照鋪陳。【辨析】(B) threat、(H) reward 雖為名詞但「怪罪於威脅/獎賞」語意不通；(E) managing 為動名詞、(D)(C)(G) 為形容詞、(F) reduce 為動詞，詞性皆不符 on 後需名詞的結構。【評析】文意選填先判詞性（介系詞 on 後接名詞）再定語意。屬偏難，須排除同為名詞的干擾選項。",
               "review_advice": "blamed it on＋名詞，且下文對比 weak will。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4367,7 +4367,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "reacts almost as if to a small ______ 需名詞，大腦像遇到『威脅』般想逃避，threat 正確。reward（獎賞）語意相反（獎賞令人趨近而非逃避）；laziness 不與 react to 搭；其餘詞性不符。",
+              "explanation": "【句意中譯】當面對無聊、困難或可怕的任務，大腦幾乎像遇到小小「威脅」般反應。【正解B】reacts almost as if to a small ______ 需名詞，threat「威脅」符合大腦想逃避的反應機制，與後文「turn to something easier 求即時舒緩」相扣。【辨析】(H) reward「獎賞」語意相反，獎賞令人趨近而非逃避；(A) laziness 不與 react to 搭配；(E) 動名詞、(C)(D)(G) 形容詞、(F) 動詞，詞性均不符。【評析】考名詞語意與情緒反應邏輯，關鍵在「逃避」語境排除 reward。屬偏難。",
               "review_advice": "由『想逃避不舒服』判斷是遇到 threat。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4445,7 +4445,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "this relief is only ______ 需形容詞，與下句『任務不會消失』對比，舒緩只是『暫時的』，temporary 正確。permanent（永久的）語意相反；overwhelming 不修飾 relief；其餘非形容詞。",
+              "explanation": "【句意中譯】問題在於這種舒緩只是「暫時的」。【正解C】this relief is only ______ 為 be 動詞後的主詞補語需形容詞，temporary「暫時的」與下句「任務不會消失、罪惡感反增」形成對比。【辨析】(G) permanent「永久的」語意相反；(D) overwhelming 通常不修飾 relief，語意不合；(A)(B)(H) 為名詞、(E) 動名詞、(F) 動詞，詞性皆不符。【評析】考形容詞語意，關鍵在 The task itself does not disappear 的反差線索。屬偏難，須辨 temporary/permanent 對比。",
               "review_advice": "與 the task does not disappear 對比，舒緩是短暫的。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4523,7 +4523,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "no longer feels ______ 需形容詞，把第一步縮小讓它不再『難以承受』，overwhelming 正確。permanent 不合『feels＋感受』；temporary 語意不符；其餘非形容詞。",
+              "explanation": "【句意中譯】把第一步縮到極小，讓它不再感覺「難以承受」——例如先寫一句話而非整篇作文。【正解D】no longer feels ______ 中 feel 為連綴動詞後接形容詞，overwhelming「令人難以承受的」符合「把步驟縮小以降低壓迫感」的語境。【辨析】(G) permanent 不搭 feel 的主觀感受；(C) temporary「暫時的」語意不合；(A)(B)(H) 名詞、(E) 動名詞、(F) 動詞，詞性均不符 feel 後接形容詞的結構。【評析】考連綴動詞後形容詞及語意，須連結 writing a single sentence 的縮小策略。屬偏難。",
               "review_advice": "由『把第一步縮到極小』反推原本感覺 overwhelming。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4601,7 +4601,7 @@
                 }
               ],
               "answer": "E",
-              "explanation": "a wiser way of ______ the feelings 介系詞 of 後需動名詞，managing（管理）the feelings 正確。reduce 為原形、須 reducing 才合語法故不選；其餘為名詞或形容詞，詞性不符。",
+              "explanation": "【句意中譯】拖延的解藥不是更嚴厲的自律，而是更溫柔明智地「管理」那些讓我們想逃的情緒。【正解E】a wiser way of ______ the feelings 中介系詞 of 後須接動名詞，managing「管理」the feelings 語法與語意皆合。【辨析】(F) reduce 語意雖近，但為原形動詞須改為 reducing 才合語法，故不選；(A)(B)(H) 名詞、(C)(D)(G) 形容詞，詞性皆不符 of 後需動名詞。【評析】考 way of + V-ing 句型與情緒管理主旨。屬偏難，陷阱在 reduce 語意近卻詞形不符。",
               "review_advice": "way of + V-ing，且受詞是 feelings→managing。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4663,7 +4663,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "空格前說茶曾是『最珍貴、被嚴密看守的祕密』，空格後接『近兩千年幾乎全屬於中國』。(A)『為了這些小綠葉，人們發動戰爭、賺取財富、進行大膽竊取』正好把『珍貴祕密』的份量鋪陳出來，銜接下文的中國壟斷。(B) 談商人想自種茶，屬第 32 格；(C) 說今日茶只產於中國，與後文印度農場矛盾；(D) 談咖啡，與主題無關。",
+              "explanation": "【前後文連貫】空格前說茶曾是「地表最珍貴、被嚴密看守的祕密之一」，空格後接「近兩千年茶樹與製茶知識幾乎全屬於中國」。【正解A】(A)「為了這些小綠葉，人們發動戰爭、賺取財富、進行大膽竊取」正好把「珍貴祕密」的份量具體鋪陳，並預告下文中國壟斷與英國偷茶的情節。【辨析】(B) 談商人渴望自種茶，屬第 32 格前「付白銀」之後的動機，位置不符；(C) 說今日茶只產於中國，與後文印度大農場種茶矛盾；(D) 談咖啡，與本文主題無關。【評析】篇章結構考句子與上下文的主題銜接，關鍵在 A 句總綰全文的戰爭/財富/竊取三主線。屬偏難。",
               "review_advice": "空格前後是『珍貴祕密→中國壟斷』，找強化其珍貴的句子。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4725,7 +4725,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "空格前說商人得用白銀買每片茶葉，空格後接『因此英國公司派間諜偷茶樹』。(B)『商人自然渴望自己種茶、不再把大量財富交給中國』正好承接『付白銀』並帶出『派人偷茶』的動機。(A) 是鋪陳茶之珍貴屬第 31 格；(C)、(D) 與『商人動機→派間諜』的因果無關。",
+              "explanation": "【前後文連貫】空格前說外國商人得用白銀支付每一片茶葉，空格後接「因此十九世紀英國公司派人如間諜潛入中國偷茶樹」。【正解B】(B)「商人自然渴望自己種茶、不再把大量財富交給中國」承接「付白銀」的痛點，並帶出下文「派間諜偷茶」的動機，因果連貫。【辨析】(A) 是鋪陳茶之珍貴的總起句，屬第 31 格；(C) 說茶只產於中國、(D) 談咖啡，皆與「商人動機→派間諜」的因果鏈無關。【評析】篇章結構考因果承接，關鍵在 therefore 前需有「想擺脫依賴中國」的動機句。屬偏難。",
               "review_advice": "空格後有 therefore 引出派間諜，往前補其『動機』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4819,7 +4819,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "全文介紹『去滅絕』——用基因技術讓長毛象等絕種動物復活的計畫，並呈現支持與批評兩方爭論，(A) 最能總括。(B) 文中未細談長毛象當初滅絕原因；(C) 亞洲象只是作為 DNA 比對對象被提及；(D) 全文非談基因學學科史。",
+              "explanation": "【題幹中譯】這篇文章主要在講什麼？【線索句】全文首段 a bold and controversial project known as de-extinction（一項大膽且具爭議、名為「去滅絕」的計畫），末段 the debate is far from settled（爭論遠未定案）。【正解A】(A)「一項讓絕種動物復活的科學努力及其相關爭論」同時涵蓋「復活絕種動物」與「支持/批評兩方爭辯」，最能總括全文。【辨析】(B) 長毛象當初滅絕的原因文中未細談；(C) 亞洲象僅作 DNA 比對對象被提及，非主題；(D) 全文非談基因學作為學科的歷史。【評析】屬主旨/標題題，須綜合首末段抓「計畫＋爭論」雙核心，避免被細節選項誤導。難度中等。",
               "review_advice": "主旨題涵蓋『復活絕種動物＋爭議』兩層。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4881,7 +4881,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "『單向門』搭配下句『gone forever，只留骨骸與故事』，意指滅絕過去被視為『無法逆轉』，(B) 正確。(A) 恰與 one-way（單向、回不去）相反；(C) 文中未說滅絕僅由人類造成；(D) 把滅絕說成『自然獎賞』與哀悼語氣不符。",
+              "explanation": "【題幹中譯】第一段中，「一扇單向門」暗示滅絕在傳統上一直是______。【線索句】When the last member of a species died, that animal was gone forever, surviving only in bones...（某物種最後一員死去便永遠消失，只留在骨骸中）。【正解B】one-way door（單向門，回不去）搭配 gone forever，意指滅絕過去被視為「無法逆轉」，故選 impossible to undo。【辨析】(A) easy to reverse 與 one-way「回不去」正好相反；(C) 文中未說滅絕僅由人類造成；(D) 把滅絕說成「自然獎賞」與哀悼語氣不符。【評析】屬字詞/比喻推義題，關鍵在以 gone forever 詮釋 one-way door 的引申義。屬偏難。",
               "review_advice": "字義猜測：one-way door＋gone forever＝不可逆。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -4943,7 +4943,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "第二段明說研究者比對古 DNA 後『編輯象細胞使其帶有長毛象關鍵特徵（濃密長毛、耐寒）』，(D) 正確。(A) 冷凍活象、(B) 特殊飲食、(C) 訓練耐寒都非文中方法，屬曲解。",
+              "explanation": "【題幹中譯】根據本文，科學家希望如何造出類似長毛象的動物？【線索句】researchers aim to edit elephant cells until they carry key mammoth features, such as thick shaggy hair and the ability to survive extreme cold（研究者設法編輯象細胞，使其帶有長毛象關鍵特徵，如濃密長毛與耐極寒的能力）。【正解D】(D)「編輯象細胞使其帶有濃密長毛等長毛象關鍵特徵」與原文完全吻合。【辨析】(A) 冷凍活象、(B) 特殊北方飲食、(C) 訓練象耐寒，皆非文中方法，屬張冠李戴的曲解。【評析】屬細節/事實題，答案幾乎照抄原句，須定位第二段的具體做法。難度中等。",
               "review_advice": "細節題定位第二段 edit elephant cells...key mammoth features。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5005,7 +5005,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "作者先陳述支持者的益處、再列批評者的難題，並以『爭論遠未定案』收尾，語氣平衡，(C) 正確。(A) 過度樂觀，文末明言未定；(B) 作者並未全然反對，也寫了正面理由；(D) 文中對科學細節（DNA、細胞編輯）描述詳盡，非不感興趣。",
+              "explanation": "【題幹中譯】下列何者最能描述作者對「去滅絕」的態度？【線索句】Supporters argue that de-extinction could do real good... Critics, however, raise hard questions... the debate is far from settled（支持者主張有真實好處…但批評者提出難題…爭論遠未定案）。【正解C】(C)「持平呈現真實希望與嚴肅疑慮」符合作者先列益處、再列質疑、以「未定案」收尾的平衡筆調。【辨析】(A) 過度樂觀，文末明言未定；(B) 作者並未全然反對，亦寫了正面理由；(D) 文中對 DNA、細胞編輯描述詳盡，非不感興趣。【評析】屬語氣/態度推論題，關鍵在辨識 Supporters...Critics...far from settled 的平衡結構。屬偏難。",
               "review_advice": "推論作者態度看全文是否兩面並陳＋結尾定調。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5067,7 +5067,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "全文論證無聊並非全然無用，反而可能帶來創意與自我理解，勸人別急著逃避，(C) 最貼主旨。(A) 與全文立場相反；(B) 文章正是質疑一有空就滑手機；(D) 慢車只是舉例、且原文用 some/said to，非『全部』。",
+              "explanation": "【題幹中譯】這篇文章的主旨是什麼？【線索句】we may be quietly losing something valuable when we never once allow ourselves to be bored（若從不讓自己無聊，我們或許正悄悄失去珍貴之物），末段 the most useful thing we can possibly do is nothing at all。【正解C】(C)「讓自己無聊其實可能有真正的價值」貼合全文為「無聊」翻案、論其創意與自省益處的立場。【辨析】(A) 與全文立場相反；(B) 文章正是質疑一有空就滑手機；(D) 慢車只是舉例，原文用 some/said to，並非「全部」。【評析】屬主旨/標題題，須抓「無聊有價值」的核心論點，避開以偏概全的干擾項。難度中等。",
               "review_advice": "主旨題抓作者為無聊『翻案』的核心立場。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5129,7 +5129,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "第二段說心智無事時會漫遊、飄過各種念頭，而這正是產生新點子的狀態，(A) 正確。(B) 與『無所事事』相反；(C) 文中談的是清醒漫遊非入睡；(D) 第三段反而說被逃避的問題會浮現，並非移除不適念頭。",
+              "explanation": "【題幹中譯】根據本文，無聊為何能幫助創造力？【線索句】When the mind is unoccupied and a little restless, it tends to wander... the mental state in which many people come up with fresh ideas（當心智無所事事又略帶焦躁，便會漫遊…正是許多人想出新點子的狀態）。【正解A】(A)「因為無所事事的心智會漫遊並產生新點子」與原文因果一致。【辨析】(B) 與「無所事事」相反；(C) 文中談的是清醒漫遊而非入睡休息；(D) 第三段反而說被逃避的問題會浮現，非移除不適念頭。【評析】屬細節/因果題，關鍵在定位第二段 wander→fresh ideas 的推理鏈。屬偏難。",
               "review_advice": "細節題定位第二段 wander→fresh ideas 的因果。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5191,7 +5191,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "this wandering 緊接前句『心智漫遊、從一念飄向另一念』，故指『心思的遊走』，(B) 正確。(A) 把 wander 誤解為實體旅行；(C) 誤為到處走動；(D) 上網找點子與『放空漫遊』相反。",
+              "explanation": "【題幹中譯】第二段中，「this wandering」指的是______。【線索句】it tends to wander, drifting freely from one loose thought to another. This wandering is exactly the mental state...（心智傾向漫遊，自由地從一個念頭飄向另一個。這種漫遊正是…的心理狀態）。【正解B】this wandering 緊承前句，指「心思從一念飄向另一念的遊走」，故選 the mind drifting from one loose thought to another。【辨析】(A) 把 wander 誤解為搭火車實體旅行；(C) 誤為到處走動；(D) 上網找點子與「放空漫遊」相反。【評析】屬指代/字詞題，關鍵在回指前句同義描述，勿被 wander 的字面「遊走、旅行」誤導。屬偏難。",
               "review_advice": "指涉題回看前句 it tends to wander, drifting...。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5253,7 +5253,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "作者末段惋惜『一有空虛就抓螢幕』會換走心智休息漫遊的時刻，故最可能建議偶爾放下手機、讓思緒遊走，(D) 正確。(A) 與文旨相反；(B) 作者明言並非每個乏味午後都通向天才，用詞保留；(C) 文中肯定獨處自省的價值，非要避免。",
+              "explanation": "【題幹中譯】作者最可能提出什麼建議？【線索句】When we reach for a screen at the very first hint of emptiness, we may be trading away quiet moments in which the mind could rest, wander, and surprise us（一有空虛就抓螢幕，可能換走了讓心智休息、漫遊並帶來驚喜的安靜時刻）。【正解D】(D)「人們有時該放下螢幕、讓思緒漫遊」正是作者末段惋惜語氣所暗示的建議。【辨析】(A) 與文旨相反；(B) 作者明言並非每個乏味午後都通向天才，用詞保留；(C) 文中肯定獨處自省的價值，非要避免。【評析】屬推論/延伸題，關鍵在由末段的惋惜與 do nothing at all 反推作者立場。屬偏難。",
               "review_advice": "推論建議題呼應末段『the most useful thing...is nothing at all』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5301,7 +5301,7 @@
                 "1. It took this scientist nearly ten years to prove that her theory was correct.",
                 "2. More and more young people choose to commute by bicycle in order to reduce air pollution."
               ],
-              "explanation": "參考譯文：1) It took this scientist nearly ten years to prove (that) her theory was correct. / This scientist spent nearly ten years proving her theory (to be) correct. 2) More and more young people choose to commute by bicycle (in order) to reduce air pollution.\n評分要點：第1句 keywords＝『花了將近十年』(It took... nearly ten years / spent nearly ten years)＋『證明她的理論正確』(prove her theory correct)；第2句＝『越來越多年輕人』(More and more young people)＋『騎自行車通勤』(commute by bicycle)＋『以減少空氣污染』(to reduce air pollution)。時態、主謂一致、拼字正確即可，句型不必與參考譯文完全相同。",
+              "explanation": "【中譯英・評分導向】本題兩句各 4 分共 8 分，重在句型、關鍵字與文法正確，不必與參考譯文逐字相同。參考譯文：1) It took this scientist nearly ten years to prove (that) her theory was correct.／亦可 This scientist spent nearly ten years proving her theory (to be) correct. 2) More and more young people choose to commute by bicycle (in order) to reduce air pollution.【評分要點】第1句得分關鍵：「花了將近十年」須用 It took...nearly ten years 或 spent nearly ten years 句型（勿漏 nearly），＋「證明她的理論正確」prove (that) her theory was correct／prove her theory correct。第2句關鍵：「越來越多年輕人」More and more young people（主詞複數，動詞 choose 一致）＋「騎自行車通勤」commute by bicycle／by bike＋「以減少空氣污染」(in order) to reduce air pollution 表目的。【常見扣分】時態誤用、主謂不一致（people 用 chooses）、by a bicycle 冠詞誤置、拼字（pollution/commute）錯誤。句型正確即給分。",
               "review_advice": "第1句用 It took sb. time to V 或 spend time (in) V-ing；第2句注意 more and more＋複數、to V 表目的。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5395,7 +5395,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "『不是仿冒品』代表要確認畫作是『真品、真的』，genuine（真正的、非偽造的）正確。fragile（易碎的）、hollow（空心的）、temporary（暫時的）都無法與『不是複製品』構成對比。",
+              "explanation": "【句意中譯】博物館花了數月確認這幅古畫是______，而非現代畫家精心製作的仿本。【正解C genuine】語境以 not a clever copy（不是仿冒品）作對照，與其相反的正是「真品、非偽造的」→genuine。【辨析】(A) fragile 易碎的，講材質而非真偽；(B) hollow 空心的，語意不合；(D) temporary 暫時的，講時間性，皆無法與「不是複製品」構成對比。【評析】考點為真偽對照詞的辨義，善用 and not a copy 的反向線索即可鎖定；屬偏難詞彙題。",
               "review_advice": "由 not a clever copy 反推需『真品』的形容詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5457,7 +5457,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "每日小額儲蓄經年『累積』成大筆金錢，accumulate（累積、積聚）正確。evaporate（蒸發）方向相反（會變少）；apologize（道歉）、hesitate（猶豫）與金額增長無關。",
+              "explanation": "【句意中譯】多年下來，每日的小額儲蓄能慢慢______成一筆驚人的大錢。【正解D accumulate】small savings→a large sum 呈現由少變多的堆疊過程，「累積、積聚」→accumulate 最貼切，常搭配時間副詞 slowly/over years。【辨析】(A) evaporate 蒸發，方向相反（會變少）；(B) apologize 道歉、(C) hesitate 猶豫，皆與金額增長無關。【評析】考點為表「增長趨勢」的動詞，關鍵在辨識 small→large 的量變方向；屬偏難詞彙題。",
               "review_advice": "抓 small daily savings...large sum 的『積少成多』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5519,7 +5519,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "without collapsing（不倒塌）說明橋要能『承受、抵擋』強震與颱風，withstand 正確。postpone（延期）、resemble（相似）、exhaust（使耗盡）都無法接『地震颱風而不倒』。",
+              "explanation": "【句意中譯】工程師設計這座新橋，使其能______強震與颱風而不倒塌。【正解C withstand】without collapsing（不倒塌）點出橋必須「承受、抵擋」外力→withstand，後常接 earthquakes/pressure 等破壞力。【辨析】(A) postpone 延期、(B) resemble 相似、(D) exhaust 使耗盡，皆無法接「地震颱風而不倒」的抗力語意。【評析】考點為「抵禦外力」動詞，靠 without collapsing 的結果子句反推即可；屬偏難詞彙題。",
               "review_advice": "由 without collapsing 判斷需『承受、抵擋』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5581,7 +5581,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "『離最近城鎮數百公里』表示地處『偏遠』，remote（偏遠的）正確。crowded（擁擠的）與人煙罕至矛盾；temporary（暫時的）、transparent（透明的）與地理位置無關。",
+              "explanation": "【句意中譯】科學家整個冬天待在一座______研究站，距最近的城鎮數百公里。【正解B remote】hundreds of kilometers from the nearest town 明示地處「偏遠」→remote。【辨析】(A) crowded 擁擠的，與「人煙罕至」矛盾；(C) temporary 暫時的、(D) transparent 透明的，皆與地理位置無關。【評析】考點為描述「地理偏遠」的形容詞，同位語距離資訊即為線索；屬中等詞彙題。",
               "review_advice": "由 hundreds of kilometers from the nearest town 推『偏遠』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5644,7 +5644,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "公司因公眾憂慮『而回應』停止排廢，In response to（回應、因應）正確。In charge of（負責）、By means of（藉由）、Regardless of（不顧）都無法連接『公眾憂慮』與『停止排廢』的因應關係。",
+              "explanation": "【句意中譯】______日益高漲的污染民怨，公司終於同意停止向河中傾倒廢棄物。【正解D In response to】民怨（原因）→停止排廢（回應行動），需表「因應、回應」的片語→In response to。【辨析】(A) In charge of 負責、(B) By means of 藉由、(C) Regardless of 不顧（甚至反向），皆無法連接「民怨」與「停止排廢」的因應因果。【評析】考點為介系詞片語辨義，須抓「壓力→回應」的邏輯關係；屬偏難片語題。",
               "review_advice": "In response to＝回應某事，抓『因公眾憂慮而讓步』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5706,7 +5706,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "光亮把星星『遮蔽』於視線外，hide sth from view，hidden 正確。invited（邀請）、collected（收集）、repeated（重複）都無法與 the stars from view 構成合理語意。",
+              "explanation": "【句意中譯】城市燈光向夜空蔓延，這片亮光慢慢把星星______於視線之外。【正解D hidden】固定用法 hide sth from view（使某物看不見）；燈光使星星消失於視線，故 hidden。【辨析】(A) invited 邀請、(B) collected 收集、(C) repeated 重複，皆無法與 the stars from view 構成合理語意。【評析】考點為 hide...from view 搭配與語境，掌握 from view 即可定位；屬偏難克漏字。",
               "review_advice": "hidden ... from view＝從視線中遮蔽。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5768,7 +5768,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "前句說光射向天空散射成暗光，本句『整個世代看不到星星』是其結果，As a result（結果）最合。However、By contrast 表轉折但前後同向；For instance 需舉具體個例，而本句是概括性後果非單一例子。",
+              "explanation": "【前後語連貫】前句說多餘光線射向天空散射成橙色暗光，本句接「一整個世代看不到星星」，屬前因後果。【正解C As a result】兩句同向且為因果，用「結果」的 As a result 承接最順。【辨析】(A) However、(B) By contrast 表轉折，但前後語意同向，不成對比；(D) For instance 須舉單一具體例子，而本句是概括性後果，非例證。【評析】考點為轉承語辨義，關鍵在判斷前後句是「因果」而非「轉折/舉例」；屬偏難克漏字。",
               "review_advice": "前因後果：光散射→看不到星，用 As a result。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5830,7 +5830,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "海龜被明亮沙灘『誤導』而爬錯方向，misled（誤導）正確。rescued（獲救）語意相反；fed（餵食）、counted（計數）與『爬錯方向』無因果。",
+              "explanation": "【句意中譯】許多動物依賴自然黑暗：剛孵化的海龜會被明亮沙灘______而爬錯方向。【正解D misled】crawl the wrong way（爬錯方向）是被「誤導」的結果→misled（mislead 過去分詞）。【辨析】(A) rescued 獲救，語意相反；(B) fed 餵食、(C) counted 計數，皆與「爬錯方向」無因果。【評析】考點為因果動詞，靠 the wrong way 反推被誤導；屬偏難克漏字。",
               "review_advice": "由 crawl the wrong way 反推是被『誤導』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5892,7 +5892,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "後句說關燈朝下一夜就能讓星星回來，可見光害幾乎能立即『被解決』，solved 正確。ignored（被忽視）、increased（被增加）、forgotten（被遺忘）都與『能快速改善』矛盾。",
+              "explanation": "【句意中譯】好消息是，光害是極少數幾乎能立刻______的環境問題。【正解C solved】後句舉例「把燈朝下、關掉招牌，一夜就能讓星星回來」，說明問題能被「解決」→solved。【辨析】(A) ignored 被忽視、(B) increased 被增加、(D) forgotten 被遺忘，皆與「能快速改善」的正向語意矛盾。【評析】考點為配合下文舉例的正向動詞，須讀懂 almost instantly 與後句解方；屬中等克漏字。",
               "review_advice": "由下句『一夜就能讓星回來』推『被解決』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -5954,7 +5954,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "within our reach（在我們能力所及範圍）為固定用法，指目標仍可達成，reach 正確。sleep（睡眠）、doubt（懷疑）、past（過去）都無法與 within our 構成『能力可及』的慣用語意。",
+              "explanation": "【句意中譯】已有城鎮這麼做，證明更暗的星空仍是我們能力所______的目標。【正解A reach】固定用法 within our reach（在能力/範圍所及之內），指目標仍可達成→reach。【辨析】(B) sleep 睡眠、(C) doubt 懷疑、(D) past 過去，皆無法與 within our 構成「能力可及」的慣用語意。【評析】考點為 within one's reach 片語，須熟記固定搭配；屬偏難克漏字。",
               "review_advice": "within one’s reach＝能力所及，呼應『目標可達成』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6064,7 +6064,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "begun to ______ how we feel 需動詞，色彩開始『影響』我們的感受，influence 正確。persuade 需接人(persuade us)而非 how we feel；ignore、depends 語意或用法不合；其餘非動詞。",
+              "explanation": "【句意中譯】早在讀到包裝上任何文字之前，色彩已開始______我們對所見之物的感受。【正解A influence】begun to ______ how we feel 需及物動詞接名詞子句，色彩「影響」我們的感受→influence。【辨析】(E) persuade 須接人（persuade us）而非 how we feel；(C) ignore、(D) depends 語意或用法不合；(B)(F)(G)(H) 詞性不符（非適用動詞）。【評析】考點為動詞語意＋接續結構，先鎖詞性再依語意排除；屬偏難文意選填。",
               "review_advice": "受詞是 how we feel，選能『左右感受』的動詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6142,7 +6142,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "tend to feel ______ and exciting 需形容詞，暖色讓人覺得『有活力』，energetic 與 exciting 並列同向。calm（平靜）與 exciting 矛盾，且下段才用來形容冷色；其餘非形容詞。",
+              "explanation": "【句意中譯】紅、橙等暖色多讓人覺得______又興奮。【正解B energetic】tend to feel ______ and exciting 需形容詞，與 exciting 並列同向，暖色給人「有活力」感→energetic。【辨析】(F) calm 平靜的與 exciting 矛盾，且下文才用來形容冷色；其餘選項多為動詞，詞性不符。【評析】考點為並列形容詞的同向語意，靠 and exciting 判斷褒貶方向；屬偏難文意選填。",
               "review_advice": "與 exciting 並列，需同為正向活潑的形容詞。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6220,7 +6220,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "so very hard to ______ 需動詞，紅色作為警示色『極難忽視』，ignore 正確。increases、persuade 語意不合『hard to＋V』；depends 用法不符；其餘非動詞。",
+              "explanation": "【句意中譯】紅色也是警示與特價標籤的顏色，正因它極難______。【正解C ignore】so very hard to ______ 需動詞，紅色作為警示色「極難忽視」→ignore，扣合其醒目特性。【辨析】(G) increases、(E) persuade 語意不合「hard to＋原形」的結構與語境；(D) depends 用法不符；其餘非動詞。【評析】考點為 hard to＋V 的語意搭配，須連結「警示色→醒目」的邏輯；屬偏難文意選填。",
               "review_advice": "警示色的特點是『難以忽視』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6298,7 +6298,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "much of it ______ on culture 需動詞且與 on 搭配，depend on（取決於）正確，故 depends。increases on 不成搭配；influence/persuade/ignore 不接 on 表『取決』；其餘非動詞。",
+              "explanation": "【句意中譯】但顏色的意義並非固定，多半______於文化與個人經驗。【正解D depends】much of it ______ on culture，需與介系詞 on 搭配的動詞，depend on（取決於）→depends（主詞 much of it 視為單數）。【辨析】increases on 不成搭配；(A) influence、(E) persuade、(C) ignore 皆不接 on 表「取決」；其餘非動詞。【評析】考點為 depend on 固定搭配與主謂一致，抓 on 即可定位；屬偏難文意選填。",
               "review_advice": "空格後有 on，鎖定 depend on。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6376,7 +6376,7 @@
                 }
               ],
               "answer": "E",
-              "explanation": "trying to ______ us 需動詞、受詞為 us，顏色試圖『說服』我們，persuade 正確。influence 雖也及物但已用於第 21 格（每字限用一次）；increases us 不通；其餘非合適動詞。",
+              "explanation": "【句意中譯】一旦察覺紅色按鈕或藍色牆面正試圖______我們，我們就能停下來自己做選擇。【正解E persuade】trying to ______ us 需及物動詞接受詞 us，顏色試圖「說服」我們→persuade。【辨析】(A) influence 雖也及物，但已用於第 21 格（每字限用一次，故排除）；increases us 不通；其餘非合適動詞。【評析】考點為動詞＋受詞結構，並須留意「字不重複」的選填規則；屬偏難文意選填。",
               "review_advice": "受詞是 us、且 influence 已用過，選 persuade。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6438,7 +6438,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "空格前說我們很少想到一顆不起眼的塊莖，空格後以 Yet 轉折『少有東西像馬鈴薯這樣深刻重塑歐洲』。(A)『這種東西看似太平凡、對帝王軍隊無足輕重』正好鋪陳『不起眼』，與後句 Yet 的『其實影響巨大』形成對比。(B) 解釋馬鈴薯優勢，屬第 32 格；(C) 說今日只產於南美，與史實及下文矛盾；(D) 講小麥無法在歐洲生長為虛構。",
+              "explanation": "【前後文連貫】空格前說「我們很少想到一顆在冷土下生長、其貌不揚的塊莖」，空格後以 Yet 轉折「少有東西像馬鈴薯這樣深刻重塑歐洲」。空格須承接「不起眼」以便與 Yet 形成對比。【正解A】(A)「這種東西看似太平凡、對帝王軍隊無足輕重」正好延續「其貌不揚」，與後句 Yet 的「其實影響巨大」構成強烈反差。【辨析】(B) 講馬鈴薯勝過舊作物的優勢，應歸第 32 格；(C) 說今日只產於南美，與史實及下文農家普遍種植矛盾；(D) 稱小麥無法在歐洲生長為虛構，皆不合此處脈絡。【評析】篇章結構「鋪陳—轉折」題，鎖定 Yet 的對比信號即可判斷；屬偏難。",
               "review_advice": "空格與後句 Yet 構成『看似不重要→其實影響巨大』的對比。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6500,7 +6500,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "空格前說統治者看出馬鈴薯的潛力，空格後接『同一塊地能養活比小麥更多的人、又耐貧瘠寒冷』——正是在說明那份潛力。(B)『它勝過舊作物的最大優勢很簡單，卻威力驚人』恰好承上啟下、引出後面的優勢說明。(A) 屬第 31 格的鋪陳；(C)、(D) 與『說明優勢』的脈絡無關且與史實矛盾。",
+              "explanation": "【前後文連貫】空格前說「統治者看出馬鈴薯的潛力」，空格後接「同一塊地能養活比小麥更多的人、又耐貧瘠寒冷」——正是在具體說明那份潛力。【正解B】(B)「它勝過舊作物的最大優勢很簡單，卻威力驚人」承上（潛力）啟下（引出後面的優勢細節），銜接最順。【辨析】(A) 屬第 31 格的「不起眼」鋪陳；(C) 說今日只產南美、(D) 稱小麥不能在歐洲生長，皆與「說明優勢」的脈絡無關且與史實矛盾。【評析】篇章結構「總起—細節」題，抓「advantage→後文優勢舉例」的承接關係；屬偏難。",
               "review_advice": "空格後是在條列『優勢』，往前補一句總述其優勢。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6594,7 +6594,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "全文介紹『培養肉』——用動物細胞培養真肉、不養不殺，並談其好處與挑戰，(A) 最能總括。(B) 植物仿肉只是被拿來對比的配角；(C) 開頭一句提到養殖史只是引子；(D) 超市便宜與主題無關。",
+              "explanation": "【題幹中譯】本文主旨為何？【線索句】原文：「they are learning to grow real meat directly from animal cells, without raising or slaughtering any animal at all.」（他們學會直接用動物細胞培養真肉，完全不飼養或屠宰動物。）全文並依序談其好處與挑戰。【正解A】「一種用動物細胞培養真肉、不飼養或宰殺動物的方法」正好總括通篇。【辨析】(B) 植物仿肉僅是被拿來對比的配角；(C) 開頭一句提養殖史只是引子；(D) 讓超市變便宜與主題無關。【評析】主旨（main idea）題，須綜觀全篇而非抓單段；屬中等閱讀題。",
               "review_advice": "主旨題抓『用細胞培養真肉』的核心。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6656,7 +6656,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "第二段明說過程始於『從活體動物無痛採取的一小撮細胞』，(C) 正確。(A) 混合植物是植物仿肉、非培養肉；(B) 全篇強調『不屠宰』，與宰殺相反；(D) 鋼槽是用來培養增殖、非冷凍。",
+              "explanation": "【題幹中譯】依本文，這個製程如何開始？【線索句】原文：「The process begins with a tiny sample of cells taken painlessly from a living animal.」（過程始於從活體動物無痛採取的一小撮細胞。）【正解C】「從活體動物無痛採取的一小撮細胞」與原文完全吻合。【辨析】(A) 混合植物是植物仿肉、非培養肉；(B) 全篇強調「不屠宰」，與宰殺相反；(D) 鋼槽是用來培養增殖、非冷凍。【評析】細節（detail）題，定位 begins with 一句即可作答；屬中等閱讀題。",
               "review_advice": "細節題定位第二段開頭 begins with a tiny sample of cells。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6718,7 +6718,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "第三段說養殖耗費大量土地、水、穀物並排放暖化氣體，而槽中培養能省下這些資源，(D) 正確。(A) 與『不養動物』矛盾；(B) 文中未提廚餘變食物；(C) 文末反而說培養肉目前極貴，並非更便宜。",
+              "explanation": "【題幹中譯】依本文，培養肉為何可能有助於環境？【線索句】原文：「Raising animals for food uses enormous amounts of land, water, and grain... Growing meat in tanks could, in theory, use far fewer of these resources.」（養殖耗費大量土地、水、穀物；槽中培養理論上能省下許多資源。）【正解D】「相較於養殖，培養肉能使用遠更少的土地、水與穀物」正是原文所述之環境效益。【辨析】(A) 與「不養動物」矛盾；(B) 文中未提廚餘變食物；(C) 文末反指培養肉目前極貴，並非更便宜。【評析】推論（infer）兼細節題，須對照「養殖耗資源 vs 培養省資源」的因果；屬偏難閱讀題。",
               "review_advice": "抓第三段資源與氣體的對比：培養肉用得更少。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6780,7 +6780,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "costly＝昂貴、curiosity＝稀奇少見之物，故 a costly curiosity 指『昂貴又不普及』，(B) 正確。(A) 與 costly 相反；(C) 好吃健康與該片語無關；(D) 工廠培養與『自然傳統』相反。",
+              "explanation": "【題幹中譯】末段中「a costly curiosity」暗示培養肉可能仍是一種______的東西。【線索句】原文：「Whether cultured meat becomes an everyday food or remains a costly curiosity...」（培養肉會成為日常食物、或仍是昂貴的稀奇物。）與 everyday food 形成對比。【正解B】costly＝昂貴、curiosity＝稀奇少見之物，故指「昂貴又不普及」→expensive and unusual。【辨析】(A) cheap and common 與 costly 相反；(C) 好吃健康與該片語無關；(D) 工廠培養與「自然傳統」相反。【評析】字義／片語（vocabulary in context）題，靠與 everyday food 的對比推義；屬偏難閱讀題。",
               "review_advice": "拆解 costly（貴）＋curiosity（稀奇物）＝昂貴罕見。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6842,7 +6842,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "全文說明森林透過地下真菌網路相連，樹木藉此分享養分、水與警訊，像合作社群，(C) 最貼主旨。(A) 與全文『其實會合作』相反；(B) 文中真菌是互利夥伴而非害樹寄生蟲；(D) 砍樹安全法非主題。",
+              "explanation": "【題幹中譯】本文的主旨為何？【線索句】原文：「the trees are quietly connected and share far more than anyone had ever imagined.」（樹木其實悄悄相連、分享的遠比想像多）並詳述地下真菌網路傳送養分、水與警訊。【正解C】「森林在地下相連，樹木分享資源甚至警訊」最貼主旨。【辨析】(A) 與全文「其實會合作」相反；(B) 文中真菌是互利夥伴而非害樹寄生蟲；(D) 砍樹安全法非本文主題。【評析】主旨（main idea）題，須抓「連結、合作」的核心論點；屬中等閱讀題。",
               "review_advice": "主旨題抓『地下相連＋分享資源與警訊』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6904,7 +6904,7 @@
                 }
               ],
               "answer": "D",
-              "explanation": "第二段明說多數樹根被極細真菌絲包覆、穿過土壤把樹連起來，(D) 正確。(A) 葉子相觸、(B) 鳥傳種子、(C) 河流經過都非文中所述的連結方式，屬無中生有。",
+              "explanation": "【題幹中譯】依本文，樹木彼此如何相連？【線索句】原文：「The roots of most trees are wrapped in extremely fine threads of fungus... which spread through the soil and link one tree to another.」（多數樹根被極細真菌絲包覆，穿過土壤把樹連起來。）【正解D】「透過包覆樹根的地下真菌絲」與原文完全一致。【辨析】(A) 葉子相觸、(B) 鳥傳種子、(C) 河流經過皆非文中所述連結方式，屬無中生有。【評析】細節（detail）題，定位 roots...wrapped in...fungus 一句；屬中等閱讀題。",
               "review_advice": "細節題定位第二段 fine threads of fungus...link one tree to another。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -6966,7 +6966,7 @@
                 }
               ],
               "answer": "A",
-              "explanation": "第三段說被蟲攻擊的樹會透過真菌與空氣送出化學訊號，鄰樹收到便『在昆蟲到來前先備好防禦』，(A) 正確。(B) 誇大且與『合作存活』相反；(C) 一夜長新根為虛構；(D) 真菌消失文中未提且與互利關係矛盾。",
+              "explanation": "【題幹中譯】依本文，當昆蟲攻擊一棵樹時可能發生什麼事？【線索句】原文：「nearby trees, receiving the message, start to prepare their own chemical defences before the insects even arrive.」（鄰近樹木收到訊息，便在昆蟲到來前先備好化學防禦。）【正解A】「鄰近樹木收到警訊並開始準備防禦」與原文吻合。【辨析】(B) 一起死亡誇大且與「合作存活」相反；(C) 一夜長新根為虛構；(D) 真菌消失文中未提且與互利關係矛盾。【評析】細節（detail）題，鎖定「送訊號→鄰樹備防禦」的因果鏈；屬偏難閱讀題。",
               "review_advice": "細節題定位第三段的警訊傳遞與鄰樹備防。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -7028,7 +7028,7 @@
                 }
               ],
               "answer": "B",
-              "explanation": "末段說砍掉一棵老樹，可能失去的『遠不只是木材』，而是切斷曾幫助整片森林存活的活連結，故可推(B)。(A) 與『損失遠不只木材』相反；(C) 讓其他樹長更快文中無據；(D) 『唯一保持健康之道』與全文護林旨意相反。",
+              "explanation": "【題幹中譯】就砍倒一棵老樹，末段可推論出什麼？【線索句】原文：「we may be losing far more than its wood; we may be cutting a living thread that once helped an entire forest survive.」（失去的可能遠不只木材，而是切斷曾幫助整片森林存活的活連結。）【正解B】由「損失遠不只木材、切斷活連結」可推：砍老樹可能因破壞有益連結而傷及整片森林。【辨析】(A) 與「損失遠不只木材」相反；(C) 讓其他樹長更快文中無據；(D)「唯一保持健康之道」與全文護林旨意相反。【評析】推論（infer）題，須從 far more than its wood 的暗示延伸；屬偏難閱讀題。",
               "review_advice": "推論題抓末段『cutting a living thread...helped an entire forest survive』。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
@@ -7076,7 +7076,7 @@
                 "1. Although he failed many times, he never gave up his determination to realize his dream.",
                 "2. The city is building more green spaces so that residents can have room to relax."
               ],
-              "explanation": "參考譯文：1) Although/Even though he failed many times, he never gave up his determination to realize (fulfill) his dream. 2) The city is building more green spaces so that residents can have (a) space/room to relax.\n評分要點：第1句 keywords＝『儘管失敗很多次』(Although he failed many times)＋『從未放棄實現夢想的決心』(never gave up his determination to realize his dream)；第2句＝『正在興建更多綠地』(is building more green spaces)＋『好讓居民有空間放鬆』(so that residents can have room to relax)。注意 Although 引導子句、so that 表目的、時態與主謂一致。",
+              "explanation": "【評分導向解析】本題兩句各 4 分，逐一比對關鍵結構與詞彙給分。第1句「儘管失敗了很多次，他從未放棄實現夢想的決心」：得分點① 讓步子句 Although/Even though he failed many times；② 主句 he never gave up his determination to realize (fulfill) his dream；「決心」用 determination＋不定詞 to realize，「實現夢想」realize/fulfill his dream。第2句「這座城市正在興建更多綠地，好讓居民有休閒放鬆的空間」：得分點① 現在進行式 The city is building more green spaces；② 目的子句 so that residents can have room/space to relax。【常見扣分】Although 與 but 不可同句連用；so that 後須完整子句且用 can/could；主謂一致與時態（is building）正確；green spaces 用複數。參考譯文：1) Although he failed many times, he never gave up his determination to realize his dream. 2) The city is building more green spaces so that residents can have room to relax.",
               "review_advice": "第1句用 Although＋主要子句，注意 give up 後接名詞/動名詞；第2句用 so that 表目的，動詞用現在進行式。",
               "review_notes": [
                 "Claude 重做把關：已檢查答案唯一、文法/語意正確、解析含正解依據＋逐一錯選辨析。"
