@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI學測考總複習｜數學題庫 v0.1</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui07" />
-    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui07" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260815-ui08" />
+    <link rel="stylesheet" href="../assets/css/ui-refresh.css?v=20260815-ui08" />
     <style>
       .bank-page {
         background:
@@ -348,7 +348,7 @@
     </main>
 
     <script>
-      const DATA_VERSION = "20260815-ui07";
+      const DATA_VERSION = "20260815-ui08";
       const LOCAL_DATA_URL = `../../data/banks/math.json?v=${DATA_VERSION}`;
       const REMOTE_DATA_URL = `http://139.224.229.242/data/banks/math.json?v=${DATA_VERSION}`;
       const weekdayLabels = {
@@ -481,6 +481,49 @@
           .trim();
       }
 
+      function buildCurveSegments(fn, options) {
+        const { xMin, xMax, yMin, yMax, mapX, mapY } = options;
+        const samples = options.samples || 240;
+        const inRange = (y) => Number.isFinite(y) && y >= yMin && y <= yMax;
+        const edgeX = (outX, inX) => {
+          let lo = outX;
+          let hi = inX;
+          for (let i = 0; i < 24; i += 1) {
+            const mid = (lo + hi) / 2;
+            if (inRange(fn(mid))) hi = mid;
+            else lo = mid;
+          }
+          return hi;
+        };
+        const toPoint = (x) => `${mapX(x).toFixed(1)},${mapY(fn(x)).toFixed(1)}`;
+        const segments = [];
+        let current = [];
+        let prevX = null;
+        let prevIn = false;
+        for (let i = 0; i <= samples; i += 1) {
+          const x = xMin + (xMax - xMin) * i / samples;
+          const nowIn = inRange(fn(x));
+          if (nowIn) {
+            if (!prevIn && prevX !== null) current.push(toPoint(edgeX(prevX, x)));
+            current.push(toPoint(x));
+          } else if (prevIn) {
+            current.push(toPoint(edgeX(x, prevX)));
+            segments.push(current);
+            current = [];
+          }
+          prevIn = nowIn;
+          prevX = x;
+        }
+        if (current.length > 1) segments.push(current);
+        return segments;
+      }
+
+      function renderCurvePolylines(segments) {
+        return segments
+          .map((segment) => `<polyline points="${segment.join(" ")}" fill="none" stroke="#155e75" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />`)
+          .join("");
+      }
+
       function renderQuadraticGraph(spec) {
         const width = 520;
         const height = 260;
@@ -493,17 +536,11 @@
         const yScale = (height - pad * 2) / (yMax - yMin);
         const mapX = (x) => pad + (x - xMin) * xScale;
         const mapY = (y) => height - pad - (y - yMin) * yScale;
-        const clampY = (y) => Math.max(pad, Math.min(height - pad, mapY(y)));
         const vertex = spec.vertex || [2, -3];
         const h = Number(spec.h ?? vertex[0] ?? 2);
         const k = Number(spec.k ?? vertex[1] ?? -3);
         const a = Number(spec.a ?? (spec.opens === "down" ? -1 : 1));
-        const points = [];
-        for (let i = 0; i <= 80; i += 1) {
-          const x = xMin + (xMax - xMin) * i / 80;
-          const y = a * (x - h) ** 2 + k;
-          points.push(`${mapX(x).toFixed(1)},${clampY(y).toFixed(1)}`);
-        }
+        const curve = buildCurveSegments((x) => a * (x - h) ** 2 + k, { xMin, xMax, yMin, yMax, mapX, mapY });
         const vertexX = mapX(vertex[0]);
         const vertexY = mapY(vertex[1]);
         const axisLabelY = spec.opens === "down" ? height - 44 : pad + 16;
@@ -512,7 +549,7 @@
             <line x1="${pad}" y1="${mapY(0)}" x2="${width - pad}" y2="${mapY(0)}" stroke="#8aa2b2" stroke-width="1" />
             <line x1="${mapX(0)}" y1="${pad}" x2="${mapX(0)}" y2="${height - pad}" stroke="#8aa2b2" stroke-width="1" />
             <line x1="${mapX(h)}" y1="${pad}" x2="${mapX(h)}" y2="${height - pad}" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="5 5" />
-            <polyline points="${points.join(" ")}" fill="none" stroke="#155e75" stroke-width="3" stroke-linejoin="round" />
+            ${renderCurvePolylines(curve)}
             <circle cx="${vertexX}" cy="${vertexY}" r="5" fill="#c2410c" />
             <text x="${vertexX + 16}" y="${vertexY - 14}" fill="#17212b" font-size="14">頂點 (${vertex.join(",")})</text>
             <text x="${mapX(h) + 16}" y="${axisLabelY}" fill="#c2410c" font-size="13">對稱軸 x=${h}</text>
@@ -701,13 +738,7 @@
         const yMax = 7;
         const mapX = (x) => pad + (x - xMin) * (width - pad * 2) / (xMax - xMin);
         const mapY = (y) => height - pad - (y - yMin) * (height - pad * 2) / (yMax - yMin);
-        const clampY = (y) => Math.max(pad, Math.min(height - pad, mapY(y)));
-        const points = [];
-        for (let i = 0; i <= 100; i += 1) {
-          const x = xMin + (xMax - xMin) * i / 100;
-          const y = (x - axisValue) ** 2 - 4;
-          points.push(`${mapX(x).toFixed(1)},${clampY(y).toFixed(1)}`);
-        }
+        const curve = buildCurveSegments((x) => (x - axisValue) ** 2 - 4, { xMin, xMax, yMin, yMax, mapX, mapY });
         const leftRoot = mapX(axisValue - 2);
         const rightRoot = mapX(axisValue + 2);
         const axisX = mapX(axisValue);
@@ -719,7 +750,7 @@
             <line x1="${pad}" y1="${axisY}" x2="${width - pad}" y2="${axisY}" stroke="#8aa2b2" />
             <line x1="${mapX(0)}" y1="${pad}" x2="${mapX(0)}" y2="${height - pad}" stroke="#8aa2b2" />
             <line x1="${axisX}" y1="${pad}" x2="${axisX}" y2="${height - pad}" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="6 5" />
-            <polyline points="${points.join(" ")}" fill="none" stroke="#155e75" stroke-width="3" stroke-linejoin="round" />
+            ${renderCurvePolylines(curve)}
             <line x1="${leftRoot}" y1="${axisY - 18}" x2="${rightRoot}" y2="${axisY - 18}" stroke="#0f766e" stroke-width="3" />
             <circle cx="${leftRoot}" cy="${axisY}" r="4" fill="#0f766e" />
             <circle cx="${rightRoot}" cy="${axisY}" r="4" fill="#0f766e" />
